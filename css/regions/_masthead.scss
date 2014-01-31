@@ -1,0 +1,133 @@
+#masthead {
+	margin-top: 93px;
+	background: $grey;
+	min-height: 500px;
+	position: relative;
+	margin-top: 82px;
+	
+	/*
+&:before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: 100%;
+		height: 10px;
+		-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+		-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+		z-index: 2;
+	}
+*/
+	
+	.wrapper {
+		position: relative;
+	}
+	
+	ul.featured-posts {
+		li {
+			width: 366px;
+			height: 166px;
+			top: 0;
+			left: 0;
+			position: absolute;
+			background-size: cover;
+			background-position: center center;
+			@include transitions();
+			
+			&.tall {
+				height: 333px;
+				
+				a {
+					height: 333px - 30px;
+					hgroup {
+						h2 {
+							font-size: 1.4em;
+						}
+					}
+				}
+				
+			}
+			
+			a {
+				position: relative;
+				display: block;
+				padding: 15px;
+				color: white;
+				height: 166px - 30px;
+				@include transitions();
+				@include gradient-trans($start_color:#1E2933,$start_alpha:.1,$end_color:#1E2933,$end_alpha:.66);
+				
+				&:hover {
+					@include gradient-trans($start_color:#1E2933,$start_alpha:.3,$end_color:#1E2933,$end_alpha:.6);
+					hgroup {
+						//bottom: 25px;
+					}
+				}
+				
+				hgroup {
+					width: 90%;
+					position: absolute;
+					bottom: 15px;
+					display: block;
+					@include transitions(200ms);
+					
+					h3 {
+						text-transform: uppercase;
+						font-weight: 400;
+						font-size: .6em;
+						text-shadow: 1px 1px 3px black;
+            color: #FF9B37;
+            letter-spacing: 0.2px;
+					}
+					h2 {
+						font-weight: 500;
+            text-shadow: 1px 1px 7px #222;
+					}
+				}	
+			}
+			
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+				border-bottom: 1px solid white;
+				border-right: 1px solid white;
+			}
+			
+			&:nth-child(2) {
+				top: 334px;
+				border-right: 1px solid white;
+			}
+			
+			&:nth-child(3) {
+				left: 367px;
+				border-bottom: 1px solid white;
+				border-right: 1px solid white;
+			}
+			
+			&:nth-child(4) {
+				left: 367px;
+				top: 167px;
+				border-right: 1px solid white;
+			}
+			
+			&:nth-child(5) {
+				left: 367px*2;
+				border-bottom: 1px solid white;
+			}
+			
+			&:nth-child(6) {
+				left: 367px*2;
+				top: 167px;
+				border-bottom: 1px solid white;
+			}
+			
+			&:nth-child(7) {
+				left: 367px*2;
+				top: 167px * 2;
+			}
+			
+		}
+	}
+}
+	

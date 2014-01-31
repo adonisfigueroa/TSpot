@@ -1,0 +1,523 @@
+header {
+	$line-height: 43px;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	line-height: $line-height;
+	height: $line-height;
+	
+	.header-top {
+		background: $dark-blue;
+		position: relative;
+		z-index: 2;
+		.wrapper {
+			padding: 0;
+			line-height: $line-height;
+		}
+		
+		.right-links {
+			float: right;
+			line-height: $line-height;
+			ul {
+				li {
+					display: inline-block;
+					line-height: $line-height;
+					a {
+						font-size: .7em;
+						font-weight: 300;
+						color: white;
+					}
+					
+					&.login {
+						background-image: url(/images/badge-right.png);
+						background-repeat: no-repeat;
+						background-position: 10px center;
+						padding-right: 20px;
+						position: relative;
+						@include break(v-mobile) {
+								padding-right: 0px;
+								background-position: 8px center;
+							}
+						
+						&:hover {
+							background-image: url(/images/badge-right-active.png);
+							background-color: $orange;
+							.login-dropdown {
+								display: block;
+							}
+						}
+						a {
+							display: block;
+							padding-left: 38px;
+							text-transform: uppercase;
+							font-weight: 400;
+							@include break(v-mobile) {
+								padding-left: 0px;
+								text-indent: -9999px;
+							}
+							
+						}
+						.login-dropdown {
+							display: none;
+							position: absolute;
+							width: 280px;
+							left: 50%;
+							margin-left: -140px;
+							background: white;
+							text-indent: 0;
+							line-height: 25px;
+							z-index: 100;
+							@include break(mobile){
+								right: 0%;
+								left: 0%;
+								margin-left: -175px;
+							}
+							@include break(v-mobile){
+								margin-left: -212px;
+								width: 250px;
+							}
+							.pad {
+								display: block;
+								padding: 10px;
+							}
+							
+							h4 {
+								font-weight: 400;
+								line-height: 25px;
+							}
+							
+							small {
+								font-size: .5em;
+							}
+							
+							a {
+								color: $blue;
+								font-size: 1em;
+								line-height: normal;
+								padding: 0;
+								text-transform: none;
+								display: inline;
+							}
+							
+							.login {
+								background: #EAEAEA;
+								
+								form {
+									padding: 5px 0;
+									
+									label {
+										display: block;
+										margin-bottom: 5px;
+									}
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+					&.social {
+						background-image: url(/images/social-sprite.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+						text-indent: -9999px;
+						width: 17px;
+						
+						a {
+							display: block;
+						} 
+						
+						&.group {
+							background-position: center center;
+							width: 80px;
+							margin-right: 20px;
+							position: relative;
+							@include break(mobile){
+								display: none;
+							}
+							&:hover {
+								background-color: $orange;
+								.dropdown {
+									display: block;
+								}
+							}
+							
+							.social-dropdown {
+								display: none;
+								position: absolute;
+								width: 250px;
+								left: 50%;
+								margin-left: -125px;
+								background: white;
+								text-indent: 0;
+								line-height: 25px;
+								z-index: 100;
+								
+								.pad {
+									display: block;
+									padding: 15px 20px;
+								}
+								.social {
+									h4 {
+										font-weight: 400;
+										font-size: .8em;
+									}
+								}
+								.rss {
+									background-color: #EEEEEE;									
+									a {
+										background-image: url(/images/rss-icon.png);
+										background-repeat: no-repeat;
+										background-position: 5px center;
+										background-size: 23px;
+										padding-left: 35px;
+										color: $dark-grey;
+										font-weight: 400;
+									}
+									
+								}
+								.newsletter {
+									background-color: #DDDDDD;
+									text-align: center;
+									font-size: .7em;
+								}
+							}
+							
+						}
+						
+						&.google_plus {
+							background-position: -17px center;
+						}
+						
+						&.twitter {
+							background-position: -40px center;
+						}
+						
+						&.google_play {
+							background-position: -63px center;
+						}
+						
+						&.rss {
+							background-position: -83px center;
+							margin-right: 20px;
+						}
+						
+						&.search {
+							background-image: url(/images/search-icon.png);
+							background-position: center center;
+							width: 32px;
+							background-color: black;
+							position: relative;
+							
+							&:hover,
+							&.active {
+								background-color: $orange;
+								
+								form {
+									display: block;
+								}
+								
+							}
+							
+							form {
+								display: none;
+								position: absolute;
+								right: 0;
+								top: $line-height;
+								width: 220px;
+								height: $line-height;
+								z-index: 100;
+								input {
+									display: block;
+									width: 100%;
+									background: white;
+									border: none;
+									color: darken($dark-grey,10%);
+									padding: 0 15px;
+									font-size: .81em;
+									line-height: 40px;
+									//height: 30px;
+									@include border-radius(0);
+									&:focus {
+										outline: none;
+									}
+									
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+			}
+		}
+		
+	}
+	
+	&.interior{
+		$small-line-height: 32px;
+		line-height: $small-line-height;
+		height: $small-line-height;
+		.header-top {
+			.wrapper {
+				line-height: $small-line-height;
+			}
+			.right-links {
+				line-height: $small-line-height;
+				ul {
+					li {
+						line-height: $small-line-height;
+						&.search {
+							form {
+								top: $small-line-height;
+							}
+						}
+					}
+				}
+			}
+		}
+		#MobileMenu a {
+		    svg {
+		    	@include opacity(0);
+		    	display: none;
+				text-decoration: none;
+				fill: white;
+				float: left;
+				height: $small-line-height;
+				line-height:$small-line-height; 
+				margin-top:3px;
+				width: 20px;
+				@include transitions (0.1s);
+				@include break(mobile){
+					display: block;
+					@include opacity(1);	
+				}
+				&:hover {
+					fill: $orange;
+				}
+			}
+		}
+		h1#logo {
+			background-size: contain;
+			line-height: $small-line-height;
+			height: $small-line-height;
+			padding-bottom: 3px;
+			width: 160px;
+			@include break(v-mobile){
+				width: 150px;
+			}
+			a {
+				line-height: $small-line-height;
+			}
+		}
+		
+		.menu {
+  		font-size: .75em;
+      line-height: 50px;
+		}
+		
+	}
+	
+	.menu {
+		background: $blue;
+		font-size: .75em;
+		line-height: 50px;
+		position: relative;
+		z-index: 1;
+		box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+		font-size: .70em;
+		line-height: 38px;
+		@include break(mobile) {
+			display: none;
+		}
+		.wrapper {
+			& > ul {
+			  margin-left: 5px;
+				& > li {
+					display: inline-block;
+					text-transform: uppercase;
+					font-weight: 400;
+					margin-right: 10px;
+					@include break(v-tablet) {
+						margin-right: 0px;
+					}
+					
+					& > a {
+						margin-top: 5px;
+						color: white;
+						position: relative;
+						display: block;
+						padding: 0 30px 0 15px;
+						margin-top: 0px;
+            /* color: #F4F8FC; */
+            padding: 0 35px 0 0px; 
+            letter-spacing: 0.333px;
+						
+						&:after {
+							content:"";
+							position: absolute;
+							right: 15px;
+							top: 50%;
+							margin-top: -2px;
+							width: 15px; height: 15px;
+							@include triangle(down,white,5,5);
+						}
+						
+						&.active {
+							background: #777D82;
+						}
+						
+					}
+					
+					&:hover {
+  					background-color: lighten($blue,15%);
+					}
+					
+					.nav-submenu {
+						position: absolute;
+						left: 0; top: 38px;
+						width: 100%;
+						background: #777D82;
+						height: 200px;
+						
+						.wrapper {
+							padding: 15px 0;
+						}
+						
+					}
+					
+					.submenu {
+						position: relative;
+						
+						li {
+							width: 25%;
+							line-height: 180%;
+							display: block;
+							font-weight: 500;
+							//position: relative;
+							
+							a {
+								text-transform: none;
+								&:after {
+									display: none;
+								}
+							}
+							
+							&.active {
+								@include trans-bg(black,.7);
+								& > a {
+									position: relative;
+									
+									&:after {
+										position: absolute;
+										content:"";
+										display: block;
+										width: 7px; height: 7px;
+										top: 50%; right: 5px;
+										margin-top: -5px;
+										@include triangle(right,$orange,5,7);
+									}
+								}
+								
+								ul.recent-items {
+									display: block;
+								}
+								
+							}
+							
+							ul.recent-items {
+								display: none;
+								position: absolute;
+								left: 25%;
+								top: 0;
+								width: 75%;
+								
+								li {
+									@include col(1,4,2);
+									
+									a {
+										display: block;
+										color: white;
+										line-height: 120%;
+										padding: 10px;
+										@include transitions();
+										
+										&:hover {
+											@include trans-bg(black,.2);
+										}
+										
+									}
+									
+									img {
+										width: 100%;
+										height: auto;
+										margin-bottom: 15px;
+									}
+									
+									&:nth-child(4) {
+										@include col-last(1,4,2);
+									}
+									
+								}
+							}
+							
+						}
+						
+					}
+					
+				}
+			}
+		}
+		
+		
+	}
+	#MobileMenu a {
+	    svg {
+	    	@include opacity(0);
+	    	display: none;
+			text-decoration: none;
+			fill: white;
+			float: left;
+			height: $line-height;
+			line-height:$line-height; 
+			margin-top:2px;
+			width: 20px;
+			@include transitions (0.1s);
+			@include break(mobile){
+				display: block;
+				@include opacity(1);
+			}
+			&:hover {
+				fill: $orange;
+			}
+		}
+	}
+	h1#logo {
+		text-indent: -9999px;
+		background-image: url(../images/logo-header.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		width: 189px; height: $line-height;
+		line-height: $line-height;
+		background-image: url(../images/logo-header-highres1.png);
+	    background-size: contain;
+	    height: 45px;
+	    line-height: 45px;
+	    width: 185px;
+	    margin-left: 5px;
+	    @include transitions (0.1s);
+	    @include break(mobile){
+		    margin-left: 32px;
+	    }
+		a {
+			display: block;
+			width: 189px; height: 27px;
+			line-height: $line-height;
+		}
+		
+	}
+}
