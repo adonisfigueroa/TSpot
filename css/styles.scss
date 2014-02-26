@@ -414,7 +414,7 @@ h3.section-header {
 	text-align: center;
 	padding-left: 20px;
 	text-indent: -25px;
-	font-size: 1.6em;
+	font-size: 1.7em;
 	@include break(tablet) {
 		font-size: 150%;
 	}
@@ -489,6 +489,7 @@ h3.longtype {
 				}
 				p {
 					font-size: .8em;
+					font-weight: 500;
 					padding-top: 8px;
 					@include col-last(6,11,5);
 				}
@@ -503,7 +504,7 @@ h3.longtype {
 		&.reviews {
 			li {
 				p {
-					font-weight: 400;
+					font-weight: 500;
 					
 					span.rating_bar {
 						margin-top: 8px;
