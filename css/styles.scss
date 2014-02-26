@@ -291,18 +291,18 @@ h1 {
 
 .download-list,
 .forum-list {
-	margin-bottom: 30px;
-	padding: 15px 0;
+	margin-bottom: 25px;
+	padding: 10px 0;
 	
 	li {
 		font-size: .8em;
-		padding: 0 0 0 25%;
-		margin: 5px 0;
+		padding: 0 0 0 20%;
+		margin: 10px 0;
 		line-height: 220%;
 		
 		& > a {
 			line-height: 140%;
-			font-weight: bold;
+			font-weight: 500;
 			color: $blue;
 			display: block;
 		}
@@ -351,7 +351,7 @@ h1 {
 .download-list {
 	li {
 		background-image: url(/images/download-arrow.svg);
-		background-position: 10% center;
+		background-position: 8% center;
 		background-repeat: no-repeat;
 		
 	}
@@ -360,9 +360,9 @@ h1 {
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 10% center;
+		background-position: 8.5% center;
 		background-repeat: no-repeat;
-		background-size: 27px;
+		background-size: 26px;
 		& > a {
   		color: #333;
 		}
