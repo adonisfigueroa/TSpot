@@ -4,7 +4,6 @@
 	require_once("_inc/_header.php");
 ?>
 
-x
 <div class="cta grey top-adverbox">
 	<div class="wrapper">
 		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
@@ -96,12 +95,12 @@ x
 			
 			<nav class="page-nav prev-next">
 				<a href="#" class="prev">
-					<span>Prev</span>
-					<strong>Software: Enter Andriod 4.4 'KitKat'</strong>
+					<span>Prev<p><</p></span>
+					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
 				</a>
 				<a href="#" class="next">
-					<span>Next</span>
-					<strong>Software: Enter Andriod 4.4 'KitKat'</strong>
+					<span>Next<p>></p></span>
+					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
 				</a>
 			</nav><!-- /.page-nav -->
 			
@@ -144,7 +143,7 @@ x
 		</div><!-- /.col-2-3 -->
 		
 		<aside id="sidebar" class="right">
-			<img src="images/tmp/ad-le-web.jpg" alt="ad-le-web" class="SideRectAd" width="100%" height="auto" style="margin-bottom: 50px;" />
+			<img src="images/tmp/ad-le-web.jpg" alt="ad-le-web" class="SideRectAd" width="100%" height="auto" />
 			<div class="SidebarOtherSelector">
 			<?php include("_inc/blocks/_most-popular.php"); ?>
 			
@@ -152,13 +151,17 @@ x
 			
 			<?php include("_inc/blocks/_forums.php"); ?>
 			
-			<img src="images/tmp/ford-ad.jpg" alt="ford-ad" width="300" height="600" />
+			<!--<img src="images/tmp/ford-ad.jpg" alt="ford-ad" width="300" height="600" />-->
 			</div>
 		</aside><!-- /#sidebar -->
 		<div class="clearfix"></div>
 	</div><!-- /.wrapper -->
 </section><!-- /#content -->
-
+<section id="mobComBut">
+	<div class="wrapper">
+		<a class="ComBut" href="">Load Comments... <span id="CommNumCirl">4</span></a>
+	</div>
+</section>
 <section id="comments">
   <div class="wrapper">
     <div class="col-2-3">
@@ -187,6 +190,9 @@ x
       <?php endfor; ?>
       
     </div><!-- /.col-2-3 -->
+	<div class="col-1-3-last">
+		<img src="images/tmp/ad-le-web.jpg" alt="ad-le-web" class="SideRectAd" width="300" height="250" style="float: right;"/>
+	</div>
     
     
     <div class="clearfix"></div>
@@ -195,6 +201,12 @@ x
   <div class="recently-commented-stories">
     <div class="wrapper">
       <div class="col-2-3">
+      	<nav>
+        	<ul>
+				<li><a href="#">Recently commented stories</a></li>
+				<li><a href="#">Jump to forum mode</a></li>
+			</ul>
+      </nav>
       </div>
     </div><!-- /.wrapper -->
   </div>
@@ -206,6 +218,20 @@ x
         <form action="" method="post">
           <textarea class="textarea" name="comment"></textarea>
         </form>
+		<div class="CommentOpt">
+			<div class="ontheleft">
+				<span>Please double-check your post before submitting - no HTML allowed
+			</div>
+			<div class="ontheright">
+				<form>
+				  <input type="checkbox" name="Watch" value="Bike" checked>Watch this topic...<br>
+				  <input type="checkbox" name="Email" value="Car">...and receive email notification<br>
+				</form>
+			</div>
+			<a class="ComBut">
+				Post Comment
+			</a>
+		</div>
       </div><!-- /.col-2-3 -->
       
       <div class="clearfix"></div>
@@ -213,7 +239,5 @@ x
   </div>
   
 </section>
-
-
 
 <?php include("_inc/_footer.php"); ?>

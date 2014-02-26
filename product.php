@@ -5,9 +5,9 @@
 ?>
 
 
-<div class="cta grey top-ad">
+<div class="cta grey top-adverbox">
 	<div class="wrapper">
-		<img src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
 	</div><!-- /.wrapper -->
 </div><!-- /.cta -->
 
@@ -27,7 +27,13 @@
 <section id="product_info">
   <div class="wrapper">
     <figure>
-      <img src="/images/product-photo.jpg" alt="product-photo" width="663" height="453" />
+    	<div class="imgwrap">
+    		<ul class="slides">
+    			<li><img src="/images/product-photo.jpg" alt="product-photo" width="663" height="453" /></li>
+    			<li><img src="/images/product-photo.jpg" alt="product-photo" width="663" height="453" /></li>
+				<li><img src="/images/product-photo.jpg" alt="product-photo" width="663" height="453" /></li>
+    		</ul>
+    	</div>
     </figure>
     
     <div class="product-desc">
@@ -68,8 +74,11 @@
 					</ul>
 				</div>
 			</div>
-      
-      <div class="pros">
+      <div class="ProdComment">
+      	<h3><a href="#">TechRadar</a> said:</h3>
+      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus nec purus ac tristique. Pellentesque et lectus facilisis, rhoncus lorem quis, convallis quam. Nam aliquet sollicitudin lectus, sed rhoncus nibh lacinia non. Phasellus ac diam libero. Donec vitae consectetur enim.</p>
+      </div>
+      <!--<div class="pros">
         <h3>Pros:</h3>
         <ul>
           <li>Improved image quality over Hero3+</li>
@@ -77,22 +86,30 @@
           <li>Superview mode</li>
         </ul>
       </div>
-      
       <div class="cons">
         <h3>Cons:</h3>
         <ul>
           <li>Relatively expersive</li>
           <li>External mic requires USB adapter</li>
         </ul>
-      </div>
-      
+      </div>-->
       <nav>
         <ul>
           <li><a href="#">See more <span class="blue">Pros</span> &amp; <span class="red">Cons</span></a></li>
           <li><a href="#">See all reviews</a></li>
         </ul>
       </nav>
-      
+      <ul class="social-widget">
+		<li class="social-count">Like this product?</li>
+		<div class="social-int">
+			<ul>
+			<span><li class="social facebook"><a href="#">Facebook</a></li></span>
+			<span><li class="social twitter"><a href="#">Twitter</a></li></span>
+			<span><li class="social google_plus"><a href="#">Google Plus</a></li></span>
+			</ul>
+		</div>
+		<li id="artificialBorder"></li>
+	</ul>
     </div>
     <div class="clearfix"></div>
   </div><!-- /.wrapper -->
@@ -102,7 +119,9 @@
 	<div class="wrapper">
 		
 		<div class="col-2-3">
+			<div class="wrapperMobileOnly">
 			<article>
+			
 				<div class="col-1-2 wide-gut">
   				<h3 class="section-header blue"><a href="#"><span>Editors</span> Liked</a></h3>
   				<ul class="pros">
@@ -188,7 +207,7 @@
   			<a href="#" class="wide-button">Show more...</a>
   			
 			</section>
-			
+			</div>
 		</div><!-- /.col-2-3 -->
 		
 		<aside id="sidebar" class="right">

@@ -47,14 +47,30 @@
 	<script type="text/javascript" src="/js/jquery.sticky-kit.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.countup.js"></script>
 	<script type="text/javascript" src="/js/custom.js"></script>
-	
+	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,500italic,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	
 </head>
 <body class="<?php echo implode(" ",$body_classes); ?>">
-
+<div id="Mobileheader">
+	<nav id="flyout-main-menu">
+		<h1 id="logo"><a href="#">TechSpot</a></h1>
+		<div class="wrapper">
+			<ul>
+				<li><a href="#" data-source="trending">Trending</a></li>
+				<li><a href="#" data-source="reviews">Reviews</a></li>
+				<li><a href="#" data-source="features">Features</a></li>
+				<li><a href="#" data-source="product-finder">Product Finder</a></li>
+				<li><a href="#" data-source="downloads">Downloads</a></li>
+				<li><a href="#" data-source="forums">Forums</a></li>
+				<li></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div id="GlobalWrapper" class="flyout">
 <header id="header"<?php if (in_array('interior', $body_classes)) : ?> class="interior"<?php endif; ?>>
 	<div class="header-top">
 		<div class="wrapper">
@@ -62,7 +78,7 @@
 					<rect class="a" width="50" height="7"></rect>
 					<rect class="b" y="20" width="50" height="7"></rect>
 					<rect class="c" y="40" width="50" height="7"></rect>
-				</svg></a></div>
+				</svg></a></div>  
 			<div class="right-links">
 				<ul>
 					<li class="login">
@@ -96,6 +112,24 @@
 							<div class="pad social">
 								<h4>Find TechSpot on...</h4>
 							</div>
+							<div class="social socialrow fb">
+								<h4>Facebook</h4>
+								<div class="WidgetArea"></div>
+							</div>
+							<div class="social socialrow gp">
+								<h4>Google+</h4>
+								<div class="WidgetArea"></div>
+							</div>
+							<div class="social socialrow tw">
+								<h4>Twitter</h4>
+								<div class="WidgetArea"></div>
+							</div>
+							<div class="social socialrow yt">
+								<a href="#"><h4>Youtube</h4></a>
+							</div>
+							<div class="social socialrow st">
+								<a href="#"><h4>Steam</h4></a>
+							</div>
 							<div class="pad rss">
 								<a href="#">Subscribe to our RSS feed</a>
 							</div>
@@ -120,12 +154,12 @@
 	</div>
 	<nav id="main-menu" class="menu">
 		<div class="wrapper">
-			<ul>
+			<ul id="dk_menu">
 				<li><a href="#" data-source="trending">Trending</a></li>
 				<li><a href="#" data-source="reviews">Reviews</a></li>
 				<li><a href="#" data-source="features">Features</a></li>
 				<li><a href="#" data-source="product-finder">Product Finder</a></li>
-				<li><a href="#" data-source="forums">Forums</a></li>
+				<li id="SpecialHeightF"><a href="#" data-source="forums">Forums</a></li>
 				<li><a href="#" data-source="downloads">Downloads</a></li>
 			</ul>
 		</div><!-- /.wrapper -->

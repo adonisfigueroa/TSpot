@@ -49,7 +49,6 @@ footer {
 	.menu {
 		@include col(2.2,14,5);
 		font-size: .8em;
-		
 		ul {
 			margin-top: 15px;
 			font-size: .8em;
@@ -65,11 +64,43 @@ footer {
 				}
 			}
 		}
+	}
+	@include break(tablet){
+		#Comm {
+			display: none;
+		}
+		.menu {
+		@include col(3,14,5);	
+		}
 		
+	}
+	@include break(v-tablet){
+		#Usef {
+			display: none;
+		}
+		.menu{
+		@include col(3,14,5);	
+		}
+	}
+	@include break(mobile){
+		#Main {
+			display: none;
+		}
+		.menu{
+		@include col(1,3,0);	
+		}
+	}
+	@include break(v-mobile){
+		#Main {
+			display: none;
+		}
+		.menu{
+		@include col(1,1,0);	
+		}
 	}
 	
 	.follow-subscribe {
-		@include col-last(3.7,14,5);
+		@include col-last(4.3,14,5);
 		.menu {
 			width: 100%;
 			float: none;
@@ -77,52 +108,91 @@ footer {
 			ul {
 				li {
 					display: inline-block;
-					background-image: url(/images/footer-social.png);
-					width: 50px; height: 26px;
+					width: 40px; height: 40px;
 					text-indent: -9999px;
-					margin: 0 2px 5px 0;
-					@include transitions();
+					margin: 0px 12.5px 12.5px 0px;
+					@include transitions(0.2s);
+					background-size: 25px 25px;
+					background-repeat: no-repeat;
+					background-position: center center;
 					
 					&:hover {
-						@include opacity(.7)
+						@include opacity(.9);
+						-webkit-transform: rotate(10deg);
 					}
-					
+					&.facebook {
+						background-image: url('/images/social/06-facebook.svg');
+						background-color: #39559F;
+					}
 					&.twitter {
-						background-position: -56px top;
+						background-image: url('/images/social/03-twitter.svg');
+						background-color: #1DA0D7;
 					}
 					
 					&.google-plus {
-						background-position: -56px*2 top;
+						background-image: url('/images/social/40-google-plus.svg');
+						background-color: #E63D28;
 					}
 					
 					&.youtube {
-						background-position: -56px*3 top;
+						background-image: url('/images/social/18-youtube.svg');
+						background-color: #E63D28;
 					}
 					
 					&.instagram {
-						background-position: left bottom;
+						background-image: url('/images/social/38-instagram.svg');
+						background-color: #C0B09F;
 					}
-					
-					&.tumblr {
-						background-position: -56px bottom;
+					&.rss {
+						background-image: url('/images/social/20-rss.svg');
+						background-color: #FF7F00;
+					}
+					&.steam {
+						background-image: url('/images/social/steam.svg');
+						background-color: #444444;
+					}
+					&.windows {
+						background-image: url('/images/social/32-windows8.svg');
+						background-color: #01C5F3;
+					}
+					&.android {
+						background-image: url('/images/social/36-android.svg');
+						background-color: #97CD00;
+					}
+					/**&.tumblr {
+						background-image: url('/images/social/15-tumblr.svg');
 					}
 					
 					&.pinterest {
-						background-position: -56px*2 bottom;
+						background-image: url('/images/social/33-pinterest.svg');
 					}
 					
 					&.linkedin {
-						background-position: -56px*3 bottom;
-					}
+						background-image: url('/images/social/11-linkedin.svg');
+					}*/
 					
 					a {
 						display: block;
-						line-height: 26px;
+						line-height: 40px;
 					}
 				}
 			}
 			
 		}
+		@include break(tablet){
+			@include col-last(5,14,5);
+		}
+		@include break(v-tablet) {
+			@include col-last(6,14,5);
+		}
+		@include break(mobile) {
+			@include col-last(1,2,0);
+		}
+		@include break(v-mobile) {
+			@include col-last(1,1,0);
+			padding-top: 20px;
+		}
+		
 	}
 	
 	.copyright {
@@ -148,7 +218,7 @@ footer {
 		height: 50px;
 		text-indent: -9999px;
 		margin-left: -25px;
-		background-image: url(/images/glyph-back-to-top.png);
+		background-image: url(/images/glyph-back-to-top.svg);
 		background-repeat: no-repeat;
 		
 		&:hover {

@@ -1,11 +1,30 @@
 body.home {
   #content {
     .wrapper {
-      padding: 20px 0;
+      padding: 30px 0;
+      .col-2-3 {
+	      width: 70%;
+	      @include break(tablet){
+		      @include col(2,3,2);
+	      }
+	      @include break(mobile){
+			  width: 100%;
+			  .wrapperMobileOnly {
+				  width:  94%;
+				  padding: 0 3%;
+			}
+			
+		}
+
+      }
     }
     
     #sidebar {
-      padding-top: 50px;
+      padding-top: 5px;
+      width: 305px;
+      @include break(tablet){
+		    width: 32%;
+	   }
     }
     
   }

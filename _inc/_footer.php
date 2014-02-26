@@ -2,7 +2,7 @@
 	
 	<div class="wrapper">
 		
-		<nav class="menu">
+		<nav id="Main" class="menu">
 			<h3>Main Sections</h3>
 			<ul>
 				<li><a href="#">Technology News</a></li>
@@ -14,7 +14,7 @@
 			</ul>
 		</nav><!-- /.menu -->
 		
-		<nav class="menu">
+		<nav id="Comm" class="menu">
 			<h3>Community</h3>
 			<ul>
 				<li><a href="#">TechSpot Forums</a></li>
@@ -24,7 +24,7 @@
 			</ul>
 		</nav><!-- /.menu -->
 		
-		<nav class="menu">
+		<nav id="Usef" class="menu">
 			<h3>Useful Resources</h3>
 			<ul>
 				<li><a href="#">Trending Topics</a></li>
@@ -36,7 +36,7 @@
 			</ul>
 		</nav><!-- /.menu -->
 		
-		<nav class="menu">
+		<nav id="Abou" class="menu">
 			<h3>About TechSpot</h3>
 			<ul>
 				<li><a href="#">About Us</a></li>
@@ -54,10 +54,14 @@
 					<li class="twitter"><a href="#">Twitter</a></li>
 					<li class="google-plus"><a href="#">Google Plus</a></li>
 					<li class="youtube"><a href="#">YouTube</a></li>
+					<li class="rss"><a href="#">RSS</a></li>
+					<li class="steam"><a href="#">Steam</a></li>
+					<li class="android"><a href="#">Android</a></li>
 					<li class="instagram"><a href="#">Instagram</a></li>
-					<li class="tumblr"><a href="#">Tumblr</a></li>
+					<li class="windows"><a href="#">Windows</a></li>
+					<!--<li class="tumblr"><a href="#">Tumblr</a></li>
 					<li class="pinterest"><a href="#">Pinterest</a></li>
-					<li class="linkedin"><a href="#">Linked-In</a></li>
+					<li class="linkedin"><a href="#">Linked-In</a></li>-->
 				</ul>
 			</nav>
 			
@@ -78,7 +82,7 @@
 		<a href="#" class="back-to-top">Back to Top</a>
 		
 	</div><!-- /.wrapper -->
-	
+	</div><!-- /.GlobalWrapper -->
 </footer>
 	
 </body>

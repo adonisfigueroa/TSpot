@@ -59,6 +59,19 @@
 	background: linear-gradient(to bottom, $rgba_start 0%,$rgba_end 100%); // W3C
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$rgba_start}', endColorstr='#{$rgba_end}',GradientType=0 ); // IE6-9
 }
+@mixin gradient-trans-percent($start_color:darken($grey,20%),$start_cent:0%,$start_alpha:0,$end_color:darken($grey,60%),$end_cent:100%,$end_alpha:.5) {
+  	$rgba_start: rgba($start_color,$start_alpha);
+  	$rgba_end: rgba($end_color,$end_alpha);
+	background: $start_color; // Old browsers
+	background: -moz-linear-gradient(top, $rgba_start $start_cent, $rgba_end $end_cent); // FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop($start_cent,$start_color), color-stop($end_cent,$rgba_end)); // Chrome,Safari4+
+	background: -webkit-linear-gradient(top, $rgba_start $start_cent,$rgba_end $end_cent); // Chrome10+,Safari5.1+
+	background: -o-linear-gradient(top, $rgba_start $start_cent,$rgba_end $end_cent); // Opera 11.10+
+	background: -ms-linear-gradient(top, $rgba_start $start_cent,$rgba_end $end_cent); // IE10+
+	background: linear-gradient(to bottom, $rgba_start $start_cent,$rgba_end $end_cent); // W3C
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$rgba_start}', endColorstr='#{$rgba_end}',GradientType=0 ); // IE6-9
+}
+
 
 @mixin noselect() {
 	-webkit-touch-callout: none;

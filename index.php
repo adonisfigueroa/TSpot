@@ -3,7 +3,11 @@
 	$body_classes = array('home');
 	include("_inc/_header.php");
 ?>
-
+<div class="cta">
+	<div class="wrapper index"> 
+		<img class="TopAd Mobile" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+	</div><!-- /.wrapper -->
+</div>
 <section id="masthead">
 	<div class="wrapper">
 		
@@ -15,6 +19,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 			<li style="background-image:url('images/tmp/amd.jpg');">
 				<a href="#">
@@ -23,6 +31,11 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
+				
 			</li>
 			<li style="background-image:url('images/tmp/iphone.jpg');">
 				<a href="#">
@@ -31,6 +44,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 			<li class="tall" style="background-image:url('images/tmp/nokia.jpg');">
 				<a href="#">
@@ -39,6 +56,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 			<li style="background-image:url('images/tmp/windows8.jpg');">
 				<a href="#">
@@ -47,6 +68,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 			<li style="background-image:url('images/tmp/amazon.jpg');">
 				<a href="#">
@@ -55,6 +80,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 			<li style="background-image:url('images/tmp/batman.jpg');">
 				<a href="#">
@@ -63,6 +92,10 @@
 						<h2>AMD Radeon R9 290X Review: Titan-class performance at half the price</h2>
 					</hgroup>
 				</a>
+				<div class="FGheadCom">
+					<span>22</span>
+					<span class="triangle"></span>
+				</div>
 			</li>
 		</ul>
 		
@@ -72,14 +105,14 @@
 
 <div class="cta">
 	<div class="wrapper">
-		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+		<img class="TopAd Desktop" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
 	</div><!-- /.wrapper -->
 </div>
 
 <section id="content">
 	<div class="wrapper">
 		<div class="col-2-3">
-			
+			<div class="wrapperMobileOnly">
 			<section class="slide-sort-selector">
 				<nav class="post-type-selector">
 					<ul>
@@ -121,6 +154,7 @@
 			
 			</div><!-- /.post-list -->
 			
+		</div>
 		</div>
 		<div id="sidebar">
 			<img src="images/tmp/ford-ad.jpg" alt="ford-ad" width="300" height="600" style="margin-bottom: 30px;" />
@@ -202,7 +236,6 @@
 					</a>
 				</li>
 			</ul>
-			
 		</div>
 		<div class="clearfix"></div>
 	</div><!-- /.wrapper -->

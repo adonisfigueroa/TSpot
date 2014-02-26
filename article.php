@@ -3,7 +3,11 @@
 	$body_classes = array('interior','article');
 	require_once("_inc/_header.php");
 ?>
-
+<div class="cta grey top-adverbox">
+	<div class="wrapper">
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
+	</div><!-- /.wrapper -->
+</div><!-- /.cta -->
 <hgroup class="featured-image" style="background-image: url(images/tmp/bg-cpu.jpg);">
 	<div class="wrapper">
 	
@@ -32,17 +36,15 @@
 
 <div class="cta">
 	<div class="wrapper">
-		<img src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+		<img class="TopAd Desktop" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
 	</div><!-- /.wrapper -->
 </div>
-
 <section id="content">
 	<div class="wrapper">
-		
 		<aside id="sidebar" class="left">
 			<img src="images/tmp/ad-le-web.jpg" alt="ad-le-web" width="300" height="250" style="margin-bottom: 50px;" />
 			
-			<h3 class="section-header orange"><a href="#">Also in Smartphones</a></h3>
+			<h3 class="section-header orange longtype"><a href="#">Also in Smartphones</a></h3>
 			<ul class="teaser-list reviews">
 				<li>
 					<a href="#">
@@ -87,9 +89,17 @@
 			</ul>
 			
 			<img src="images/tmp/ford-ad.jpg" alt="ford-ad" width="300" height="600" />
+			<div class="TopScrollElement"></div>
 		</aside><!-- /#sidebar -->
-		
+		<div class="wrapperMobileOnly">
+		<div class="social-column">
+			<div class="scroll">
+				<?php include("_inc/_article-index.php"); ?>
+				<?php include("_inc/_social-widget.php"); ?>
+			</div>
+		</div><!-- /.social-column -->
 		<div class="col-2-3-last">
+		
 			<article>
 				
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
@@ -109,12 +119,19 @@
 					<li>Windows Phone 8</li>
 					<li>139 grams, 8.5mm thick</li>
 				</ul>
-			</div>
+				</div>
 				
 				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 				
 				<h3>Header 3</h3>
-				
+				<div class="side-object">
+					<blockquote>
+						<strong>
+							Compared to the Lumia 20, the Lumia 925 is a huge step forward in the design department, producing a phone that's ergonomic and decently attractive.
+						</strong>
+					</blockquote>
+				</div>
+
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
 				
 				<h4>Header 4</h4>
@@ -122,6 +139,30 @@
 				<p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 				
 				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+				
+				<img class="big" src="images/tmp/bg-cpu.jpg">
+				
+				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+					Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+								
+				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+				
+				<div class="side-object">
+					<blockquote>
+						<strong>
+							Compared to the Lumia 20, the Lumia 925 is a huge step forward in the design department, producing a phone that's ergonomic and decently attractive.
+						</strong>
+					</blockquote>
+				</div>
+				
+				
+				<p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+				
+				<img src="images/tmp/bg-cpu.jpg">
+				
+				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+				 
+				<img class="big" src="images/tmp/bg-cpu.jpg">
 				
 				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 			</article>
@@ -137,12 +178,7 @@
 		
 		<div class="clearfix"></div>
 		
-		<div class="social-column">
-			<div class="scroll">
-				<?php include("_inc/_article-index.php"); ?>
-				<?php include("_inc/_social-widget.php"); ?>
-			</div>
-		</div><!-- /.social-column -->
+		</div>
 	</div><!-- /.wrapper -->
 </section>
 

@@ -11,38 +11,52 @@
 "_home.scss",
 "_interior.scss",
 "_download.scss",
-
 "_post-list.scss",
-
+"_products.scss",
+"_features.scss",
+"_reviews.scss",
 "regions/_header.scss",
 "regions/_masthead.scss",
-"regions/_footer.scss"
-;
+"regions/_footer.scss";
+
 
 // ! Basic/Generic Styles ===========================================
 
 body {
 	background: white;
 	font-family: $f-primary;
-	font-size: 120%;
-	
-	@include break(tablet) {
-  	background: red;
-	}
-	@include break(v-tablet) {
-  	background: green;
-	}
-	
-	@include break(mobile) {
-  	background: blue;
-	}
-	
-	@include break(v-mobile) {
-		background: yellow;
-	}
+	font-size: 120%; 
 	
 }
+#Content {
+		padding-bottom: 30px;
+	}
+.rating {
+	font-family: helvatica, Ariel, sans-serif;
+}
+#GlobalWrapper {
+	width: 100%;
+    left:0px;
+    top:0px;
+    z-index: 1;
+    @include break(mobile){
+	    position: absolute;
+    }
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+	.activebar {
+		transform: translate3d(0,0,0);
+	}
+}
 
+.flyout {
+	-webkit-transition:all .5s ease-in-out;
+    
+}
+.activebar  {
+	@include break(mobile){
+	-webkit-transform: translate3d(250px,0,0);
+	}
+}
 article, aside, section {
 	display: block;
 }
@@ -66,10 +80,12 @@ ul,ol {
 		max-width: 970px;
 		width: 100%;
 		height: auto;
+		@include break(mobile){
+			border-bottom: 1px solid white;
+		}
 	}
 	@include break(tablet) {
 		width: 94%;
-		padding: 0 3%;
 	}
 }
 
@@ -126,7 +142,7 @@ h1 {
 	
 	&.badge {
 		line-height: 50px;
-		background-image: url(../images/badge.png);
+		background-image: url(../images/badge.svg);
 		background-repeat: no-repeat;
 		background-position: 25px top;
 		padding-left: 110px;
@@ -138,7 +154,7 @@ h1 {
 	background: $light-grey;
 	font-weight: 200;
 	.wrapper {
-		padding: 50px 0;
+		padding: 25px 0;
 		@include break(mobile) {
 		width: 100%;
 		padding: 0px;
@@ -169,21 +185,30 @@ h1 {
 		border-bottom: 1px solid #DDD;
 		
 		.article-img {
-			@include col(2,5,2);
-			width: 33.8%;
-			
+			@include col(2,5,0);
+			width: 30%;
+			margin-top: 3px;
+			@include break (v-mobile){
+				width: 100%;
+				margin-bottom: 15px;
+				margin-top: 0px;
+			}
 			img {
 				max-width: 100%;
-        max-height: 100%;
-        height: 160px;
-        width: 230px;
+				height: auto;
+				width: 230px;
+				@include break(v-mobile){
+					width: 100%;
+				}
 			}
 		}
 		
 		.article-content {
 			@include col-last(3,5,2);
-			width: 64.2%;
-			
+			width: 68.2%;
+			@include break(v-mobile) {
+				width: 100%;
+			}
 			h2 {
 				a {
 				  font-family: $f-helvetica;
@@ -205,11 +230,15 @@ h1 {
 			
 			p {
 				font-size: .75em;
-        padding: 2px 0 !important;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        color: #333;
+		        padding: 2px 0 !important;
+		        font-weight: 400;
+		        -webkit-font-smoothing: antialiased;
+		        color: #333;
+		        @include break(mobile){
+					display: none;		
+				}
 			}
+			
 			
 			.post-meta {
 				line-height: 25px;
@@ -226,11 +255,11 @@ h1 {
 					margin-right: 10px;
 					
 					&.read-more {
-						background-image: url(../images/read-more-arrow.png);
+						background-image: url(../images/read-more-arrow.svg);
 					}
 					
 					&.comment-count {
-						background-image: url(../images/comment-icon.png);
+						background-image: url(../images/comment-icon.svg);
 						padding-left: 20px;
 						
 						span {
@@ -321,17 +350,19 @@ h1 {
 
 .download-list {
 	li {
-		background-image: url(/images/download-arrow.png);
+		background-image: url(/images/download-arrow.svg);
 		background-position: 10% center;
 		background-repeat: no-repeat;
+		
 	}
 }
 
 .forum-list {
 	li {
-		background-image: url(/images/forum-icon.png);
+		background-image: url(/images/forum-icon.svg);
 		background-position: 10% center;
 		background-repeat: no-repeat;
+		background-size: 27px;
 		& > a {
   		color: #333;
 		}
@@ -348,22 +379,45 @@ h1 {
 	.wrapper {
 		padding: 20px 0;
 		text-align: center;
+		.Mobile{
+			display: none;
+		}
 	}
+	@include break(mobile){
+		.wrapper {
+		padding: 0px 0px 0px 0px;
+		text-align: center;
+		width: 100%;
+		}
+		.Desktop {
+			display: none;
+		}
+		.index {
+			margin-top: 46px;
+			.Mobile {
+				display: block;
+			}
+		}
+	}
+
 }
 
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
 	border-left: 15px solid $red;
-	padding-left: 25px;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-size: 180%;
 	white-space: nowrap;
-	line-height: 180%;
+	line-height: 45px;
 	text-align: center;
+	padding-left: 20px;
 	text-indent: -25px;
-	
+	font-size: 1.6em;
+	@include break(tablet) {
+		font-size: 150%;
+	}
 	a {
   	color: #333;
 	}
@@ -393,12 +447,25 @@ h3.section-header {
 	}
 	
 }
+h3.longtype {
+	font-size: 130%;
+	@include break (v-tablet){
+		font-size: 100%;
+	}
+}
 
 #sidebar {
-	width: 300px;
+	width: 305px;
 	float: right;
 	@include break(tablet){
-		width: 32%;
+		width: 29%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	@include break(mobile){
+		display: none;
 	}
 	
 	
@@ -479,15 +546,16 @@ h3.section-header {
 }
 
 .related-products {
-  margin-top: 25px;
+  margin-top: 90px;
   @include break(v-tablet){
 	  display: none;
   }
   
   & > h3 {
-    line-height: 300%;
-    font-size: 1.2em;
+    line-height: 270%;
+    font-size: 1.0em;
     font-weight: 200;
+    
     
     strong {
       font-weight: 600;
@@ -495,6 +563,7 @@ h3.section-header {
   }
   
   ul.teaser-list {
+  	width: 95%;
     li {
       font-size: .7em;
       background: white;
@@ -571,7 +640,7 @@ h3.section-header {
     
     &:before {
       position: absolute;
-      background-image: url(/images/icon-comments-lg.png);
+      background-image: url(/images/icon-comments-lg.svg);
       background-size: contain;
       background-repeat: no-repeat;
       content:"";
@@ -585,17 +654,24 @@ h3.section-header {
     }
     
   }
+  .col-2-3 {
+	  width: 63%;
+	  @include break(v-tablet) {
+		  width: 100%;
+	  }
+  }
   
   h3 {
     color: #4484D0;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 450;
   }
+  background: white;
   
   a.post-new-comment {
     display: inline-block;
     line-height: 400%;
-    background-image: url(../images/glyph-orange.png);
+    background-image: url(/images/glyph-orange.svg);
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 28px;
@@ -606,7 +682,7 @@ h3.section-header {
   
   .comment {
     font-size: .7em;
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD!important;
     padding: 0 0 15px 0;
     
     cite {
@@ -666,13 +742,53 @@ h3.section-header {
   
   .recently-commented-stories {
     background-color: #E0E0E0;
+    height: 50px;
+    ul {
+    	text-align: center;
+    	li {
+	    display: inline-block;
+	    color: $blue;
+	    font-size: 0.7em;
+	    margin: 18px 0px;
+	    padding: 0px 5px 0px 0px;
+	    line-height: 13px;
+		    &:first-child {
+			    border-right: 1px solid $blue;
+		    }
+		}
+	}
   }
+  .CommentOpt {
+  	font-size: 0.7em;
+  	position: relative;
+  	height: 100px;
+		.ontheleft {
+			float: left;
+			display: inline-block;
+			line-height: 30px;
+		}
+		.ontheright {
+			float: right;
+			display: inline-block;
+			line-height: 30px;
+		}
+		.ComBut {
+			font-size: 1.2em;
+			width: 300px;
+			text-align: center;
+			float: left;
+			position: absolute;
+			bottom: 0;
+			color: black;
+		}
+	}
   
   #add-new-comment {
     background-color: #F5F5F5;
     
     h3 {
       line-height: 200%;
+      font-weight: 500;
     }
     
     .wrapper {
@@ -709,7 +825,7 @@ span.rating_bar {
 
 hgroup.featured-image {
 	display: block;
-	min-height: 40vh;
+	min-height: 400px;
 	max-height: 600px;
 	margin-top: 83px;
 	position: relative;
@@ -717,11 +833,20 @@ hgroup.featured-image {
 	background-repeat: no-repeat;
 	background-position: center center;
 	
+	@include break(mobile){
+		min-height: 200px;
+		max-height: 300px;
+	}
 	
 	.wrapper {
 		position: relative;
-		min-height: 40vh;
+		min-height: 400px;
 		max-height: 600px;
+		@include break(mobile){
+			width: 100%;
+			min-height: 300px;
+			
+		}
 	}
 	
 	&:before {
@@ -741,6 +866,9 @@ hgroup.featured-image {
 			text-shadow: 1px 1px 5px black;
 			font-size: 3em;
 			font-family: $f-secondary;
+			@include break(v-mobile){
+				font-size: 2em;
+			}
 		}
 		
 		em {
@@ -776,6 +904,13 @@ hgroup.featured-image {
 		span {
 			
 		}
+		@include break(mobile){
+			bottom: 0px;
+			@include border-radius(0px);
+			font-size: 2em;
+			line-height: 80px;
+			padding: 0 20px;
+		}
 		
 	}
 	
@@ -796,7 +931,7 @@ ul.category-chicklets {
 			text-transform: uppercase;
 			font-style: $f-condensed;
 			font-size: .55em;
-			font-weight: 500;
+			font-weight: 450;
 			letter-spacing: 0.50px;
 		}
 		
@@ -816,50 +951,125 @@ ul.category-chicklets {
 	margin: 0 auto;
 	background: white;
 	border-bottom: 5px solid $orange;
+	@include break(v-mobile){
+		width: 238px;
+		height: 35px;
+		border-bottom: 0px solid $orange;
+		margin: 0px 0px 0px 1px;
+	} 
 	li {
 	
 		&.social-count {
 			background-color: $orange;
 			color: white;
 			font-weight: 600;
-			margin-bottom: 15px;
 			text-align: center;
-			font-size: .7em;
+			font-size: 0.7em;
 			line-height: 25px;
+			@include break(v-mobile) {
+				display: inline-block;
+				height: inherit;
+				width: 70px;
+				margin-bottom: 0px;
+				font-size: 1.0em;
+				line-height: 33px;
+			}
 		}
 		
 		&.social {
-			background-image: url(../images/social-widget-bg.jpg);
+			background-image: url(/images/social-widget-bg.svg);
 			background-repeat: no-repeat;
 			background-position: center top;
 			line-height: 16px;
-			
-			&.facebook {
+			position: relative;
+			@include break (v-mobile){
+				background-image: url(/images/social-widget-bg-90.svg);
+				margin-left: 70px;
+				margin-top: -30px;
+				width: 32px;
 				
+			}
+			.SocialHover{
+				display: none;
+			}
+			&.facebook {
+				background-position: center 9px;
 			}
 			
 			&.twitter {
-				background-position: center -35px;
+				background-position: center -25px;
 			}
 			
 			&.google_plus {
-				background-position: center -68px;
+				background-position: center -58px;
 			}
 			
 			&.rss {
-				background-position: center -102px;
+				background-position: center -93px;
 			}
 			
 			&.comments {
-				background-position: center -139px;
+				background-position: center -130px;
 			}
 			
 			a {
 				display: block;
 				text-indent: -9999px;
-				line-height: 30px;
+				line-height: 35px;
+			}
+			&:hover {
+				.SocialHover {
+				width: 100px;
+				height: 100%;
+				position: absolute;
+				z-index: 99999999;
+				background-color: white;
+				right: 60px;
+				top: 0;
+				display: block;
+				@include break(mobile){
+					right: auto !important;
+					top:auto !important;
+				}
+				}
+			}
+			@include break(v-mobile){
+				&.facebook {
+					width: 32px;
+					background-position: 0px 1px;
+				}
+				&.twitter {
+					width: 32px;
+					margin-left: 103px;
+					background-position: -32px 1px;
+				}
+				
+				&.google_plus {
+					width: 32px;
+					margin-left: 135px;
+					background-position: -65px 1px;
+				}
+				
+				&.rss {
+					width: 30px;
+					margin-left: 167px;
+					background-position: -97px 1px;
+				}
+				
+				&.comments {
+					width: 32px;
+					margin-left: 200px;
+					background-position: -125px 2px;
+				}
+				
+				a {
+					display: block;
+					text-indent: -9999px;
+					line-height: 30px;
+				}
 			}
 		}
+		
 		
 	} 
 }
@@ -887,7 +1097,7 @@ ul.category-chicklets {
 		background: white;
 		border-top: 5px solid $orange;
 		font-size: .7em;
-		
+		z-index: 10;
 		.pad {
 			padding: 10px 20px 20px 20px;
 		}
@@ -945,14 +1155,14 @@ ul.category-chicklets {
 		float: left;
 		ul {
 			li {
-			  font-weight: 500;
+			  font-weight: 450;
 				font-size: .9em;
 				margin-right: 30px;
 				text-shadow: 0 1px 0 #fff;
 				
 				a {
 					color: $grey;
-					font-weight: 500;
+					font-weight: 450;
 				}
 				
 				&.active {
@@ -969,7 +1179,7 @@ ul.category-chicklets {
 		float: right;
 		li {
 			font-size: .6em;
-			font-weight: 500;
+			font-weight: 400;
 			//position: relative;
 			
 			&.standard,
@@ -980,7 +1190,7 @@ ul.category-chicklets {
 					display: block;
 					position: relative;
 					padding-left: 15px;
-					color: $dark-grey;
+					color: $grey;
 					&:before {
 						content:"";
 						display: block;
@@ -988,8 +1198,13 @@ ul.category-chicklets {
 						left: 0px; top: 50%;
 						margin-top: -3px;
 						width: 10px; height: 7px;
-						background-image: url(../images/icons-layout.png);
+						background-image: url(/images/icons-layout.png);
 					}
+				}
+			}
+			&.active {
+				a{
+					color: $dark-grey;
 				}
 			}
 			
@@ -1010,6 +1225,9 @@ ul.category-chicklets {
 				
 			}
 		}
+		@include break(mobile){
+			display: none;
+		}
 	}
 }
 
@@ -1026,10 +1244,27 @@ ul.category-chicklets {
 
 .col-2-3 {
 	@include col(2,3,2);
+	@include break(mobile){
+	width: 100%;
+	.wrapperMobileOnly {
+		width:  94%;
+		padding: 0 3%;
+		}
+	}
 }
 
 .col-2-3-last {
 	@include col-last(2,3,8);
+	@include break(tablet){
+		@include col-last(2,3,8);
+	}
+	@include break(mobile){
+	width: 100%;
+	.wrapperMobileOnly {
+		width:  94%;
+		padding: 0 3%;
+		}
+	}
 }
 
 .col-1-3-last {
@@ -1040,6 +1275,9 @@ ul.category-chicklets {
 	@include col(1,2,2);
 	&.wide-gut {
   	@include col(1,2,5);
+  	@include break(v-mobile){
+	  	width: 100%;
+  	}
 	}
 }
 
@@ -1047,6 +1285,9 @@ ul.category-chicklets {
 	@include col-last(1,2,2);
 	&.wide-gut {
   	@include col-last(1,2,5);
+  	@include break(v-mobile){
+	  	width: 100%;
+  	}
 	}
 }
 
@@ -1058,7 +1299,8 @@ input[type=password] {
 	line-height: 25px;
 	padding: 0 8px;
 	@include outer-glow(5);
-	@include border-radius(3px);
+	@include border-radius(0px);
+	font-style: normal!important;
 	
 	&:focus {
 		outline: none;
@@ -1074,20 +1316,284 @@ input[type=submit] {
 	color: white;
 	text-align: center;
 	border: none;
-	@include border-radius(3px);
+	@include border-radius(0px);
 }
 
 #product_info {
   figure {
     @include col(6,10,5);
+    @include break(tablet){
+    	margin-right: 2%;
+	    img{
+		    width: 100%;
+		    height: auto;
+	    }
+    }
+    .imgwrap .flex-direction-nav a{
+	    opacity: 0;
+	    @include transitions(1s);
+    }
+    .imgwrap:hover .flex-direction-nav a{
+	    opacity: 0.1;
+	   	@include transitions(1s);
+    }
+    .imgwrap:hover .flex-direction-nav a:hover{
+	    opacity: 0.9;
+	   	@include transitions(0.2s);
+    }
+    
+    
+    
+    .imgwrap .flex-viewport ul li{
+	    display: block;
+	    max-height: 453px;
+	    padding: 0;
+	    position: relative;
+	    overflow: hidden;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	    img{
+		  height: auto;
+		  width: 100%;
+		  margin: 0 auto; 
+		  display: block;
+	    }
+    }
+    .flex-control-nav {
+			width: 100%;
+			position: absolute;
+			bottom: -20px;
+			text-align: center;
+			cursor: pointer;
+			li {
+				margin: 0 6px;
+				display: inline-block;
+				zoom: 1;
+				cursor: pointer;
+			}
+	}
+	.flex-control-paging li a {
+		width: 11px;
+		height: 11px;
+		display: block;
+		background: #333;
+		background: rgba(0,0,0,0.5);
+		cursor: pointer;
+		text-indent: -9999px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		-o-border-radius: 20px;
+		border-radius: 20px;
+		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+		-moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+		-o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+		box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	}
+	.flex-active{
+		background: #525252!important;
+	}
+		
+    .flex-direction-nav {
+	    margin: 0;
+		padding: 0;
+		list-style: none;
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		li {
+			
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			&:before {
+				box-shadow: none;
+			}
+		}
+		a {
+			text-indent: -9999px;
+			position: absolute;
+			display: block;
+			background: url(/images/photoarrow.svg) no-repeat center center;
+			background-size: 30px;
+			width: 30px;
+			height: 60px;
+			
+		}
+		
+		.flex-prev{
+			transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			display: block;	
+			top:50%;
+			left: 10px;
+		}
+		.flex-next{
+			top:50%;
+			right: 10px;
+		}
+    }
+    .imgwrap .flex-viewport ul li::before {
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+	}
+
+   	    @include break(v-tablet){
+	    @include col(1,2,5);
+    }
+    @include break(mobile){
+	    width: 100%;
+    }
   }
+ @include break(mobile){
+	 background: white;
+ }
   
   .product-desc {
     @include col-last(4,10,5);
-    
+    @include break(tablet){
+	  width: 40%;
+    }
+    @include break(v-tablet){
+	    @include col-last(1,2,5);
+    }
+    @include break(mobile){
+	    width: 100%;
+	    margin-top: 20px;
+    }
+    .Prodcomment {
+    	margin-top: 30px;
+    	@include break(mobile){
+	    	margin-top: 100px; 
+    	}
+		h3 {
+			padding-left: 20px;
+			margin-bottom: 5px;
+			font-family: "Roboto Condensed", sans-serif;
+			font-weight: 450;
+			a {
+				border-bottom: solid 3px;
+				
+			}
+		}
+		p {
+			border-left: 10px solid $grey; 
+			padding: 5px 0px 5px 10px;
+			font-size: 0.8em;
+			font-weight: 300;
+			
+		}
+	}
+	.social-widget {
+		width: 100%;
+		margin: 0px 0px 0px 1px;
+		border-bottom: 0px solid $orange;
+		@include break(mobile) {
+			margin-bottom: 130px;
+		}
+		.social-count {
+			display: inline-block;
+			height: inherit;
+			width: 20%;
+			margin-bottom: 0px;
+			font-size: 0.7em;
+			line-height: 17px;
+			padding: 8px 0;
+			float: left;
+			@include break(mobile){
+				width: 30%;
+			}
+			@include break(v-mobile){
+				width: 20%;
+			}
+		}
+		.social-int {
+			width: 78%;
+			height: 50px;
+			@include break(mobile){
+				height: 33px;
+				width: 68%;
+			}
+			@include break(v-mobile){
+				height: 50px;
+				width: 78%;
+			}
+			display: inline;
+			float: left;
+			background: $light-grey;
+			span {
+				@include col(1,3,0);
+				display: block;
+			}
+		}
+		.social {
+			background-image: url(/images/social-widget-bg-90.svg);
+			position: relative;
+			left: 50%;
+			margin-left: -16px;
+			line-height: 50px;
+			margin-top: 12px;
+			@include break(mobile){
+				margin-top: 4px;
+			}			
+			@include break(v-mobile){
+				margin-top: 12px;
+			}
+			&.facebook {
+				width: 32px;
+				background-position: 0px 1px;
+			}
+			&.twitter {
+				width: 32px;
+				background-position: -32px 1px;
+			}
+			
+			&.google_plus {
+				width: 32px;
+				background-position: -65px 1px;
+			}			
+			a {
+				display: block;
+				text-indent: -9999px;
+				line-height: 30px;
+			}
+		}
+		#artificialBorder {
+			width: 2%;
+			height: 50px;
+			display: inline-block;
+			float: left;
+			background: $orange;
+			@include break(mobile){
+				height: 33px;
+			}
+			@include break(v-mobile){
+				height: 50px;
+			}
+		}
+		
+	}
     nav {
       font-family: $f-condensed;
       font-size: .9em;
+      text-align: left;
+	  padding: 25px 0px;
+      @include break(mobile){
+	      width: 100%;
+		  text-align: center;
+		  float: left;
+		  
+      }
       ul {
         li {
           display: inline-block;
@@ -1128,9 +1634,24 @@ input[type=submit] {
       width: 100px;
       background: #075BC0;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      @include break(v-tablet){
+	      width: 80px;  
+	  }
+	  @include break(mobile){
+		  width: 15%;
+		  float: left;
+		  line-height: 78px;
+		  height: 78px;
+	  }
+	  @include break(v-mobile){
+		  font-size: 30px;
+	  }
     }
     .excellent {
-      background-color: #00BE15;
+      background-color: #00bf17;
+    }
+    .good {
+	    background-color: rgba(7,91,192,0.85);
     }
     .average {
       background-color: #6F22A0;
@@ -1142,6 +1663,14 @@ input[type=submit] {
       background-color: #999;
     }
     .breakdown {
+	  @include break(v-tablet){
+	       margin-left: 90px;
+	  }    
+	  @include break(mobile){
+		  width: 80%;
+		  float: right;
+		  margin-left: 0;
+	  }
       margin-left: 110px;
       font-size: 12px;
       a {
@@ -1164,13 +1693,31 @@ input[type=submit] {
         font-size: 11px;
         margin: 0;
         width: 60px;
+        @include break(mobile){
+	        width: 15%;
+        }
+        @include break(v-mobile){
+	        width: 23%;
+        }
       }
       .count {
         margin-left: 5px;
         font-size: 11px;
+        text-align: right;
+	      @include break(mobile){
+		      margin-left: 0;
+		      width: 10%;
+	      }
       }
       .bar {
         width: 150px;
+        @include break(mobile){
+	        width: 80%;
+        }
+         @include break(v-mobile){
+	        width: 67%;
+        }
+
         div {
           background: $c-good;
           height: 8px;
@@ -1194,7 +1741,7 @@ input[type=submit] {
     border-left: 15px solid $red;
     padding-left: 10px;
     margin-bottom: 20px;
-    
+    margin-top: 10px;
     h3 {
       font-family: $f-condensed;
       font-weight: 400;
@@ -1208,11 +1755,29 @@ input[type=submit] {
     &.pros {
       border-left: 15px solid #0250C5;
     }
-    
+  }  
+  .pros {
+      @include break(mobile){
+	      @include col(1,2,5);
+      }
   }
-  
-  
-  
+  .cons {
+      @include break(mobile){
+	      @include col-last(1,2,5);
+      }
+  }
+  .pros {
+      @include break(v-mobile){
+	      @include col(1,1,0);
+	      margin-bottom: 0px;
+      }
+  }
+  .cons {
+      @include break(v-mobile){
+	      @include col(1,1,0);
+	      margin-bottom: 20px;
+      }
+  }
 }
 
 .also-looked-at,
@@ -1222,6 +1787,9 @@ input[type=submit] {
     font-weight: 400;
     border-bottom: 2px solid $blue;
     line-height: 230%;
+    @include break(v-mobile){
+	     line-height: 130%;
+    }
     
     span {
       position: relative;
@@ -1232,9 +1800,13 @@ input[type=submit] {
         content:"";
         display: block;
         left: 50%; bottom: 0;
-  			width: 5px; height: 7px;
-  			margin-left: -5px;
-  			@include triangle(up,$blue,4,6);
+  		width: 5px; height: 7px;
+  		margin-left: -5px;
+  		@include triangle(up,$blue,4,6);
+  		@include break (v-mobile){
+	  		display: none;
+  		}
+  		
       }
     }
   }
@@ -1317,6 +1889,7 @@ input[type=submit] {
   .comment {
     position: relative;
     padding: 10px 100px 10px 10px;
+    border-bottom: 1px solid #DDDDDD!important;
     
     &:nth-child(odd) {
       background: white;
@@ -1358,9 +1931,145 @@ input[type=submit] {
     p {
       padding: 15px 0 0;
       font-size: .7em;
-      font-weight: 500;
+      font-weight: 450;
     }
     
   }
   
+}
+//Related products or Products.php
+.product .also-looked-at .teaser-list li{
+	@include break(v-mobile){
+		@include col(1,1,0);
+		margin-bottom: 15px;
+	}
+	&:nth-child(4){
+	@include break(v-mobile){
+		@include col(1,1,0);
+		}
+	}
+}
+
+//Article Mobile
+.article #content {
+	@include break(mobile){
+	.wrapperMobileOnly {
+		width:  94%;
+		padding: 0 3%;
+		}
+	}
+}
+
+//Footer Page Nav
+.comments-pager{
+	margin: 35px 0px 100px 0px;
+	width: 100%;
+	a:nth-last-child(2) li {
+		border-right: 1px solid $grey;
+	}
+	ol { 
+	    counter-reset: item;
+	    list-style-type: none;
+	    margin: 0 auto;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+        width: fit-content;
+		li{
+			float: left;
+			display: block;
+			background: white;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-top: 1px solid $grey;
+			border-left: 1px solid $grey;
+			border-bottom: 1px solid $grey;
+			font-size: 0.7em;
+			font-weight: 600;
+			text-align: center;
+			&:hover,
+			&.active {
+				color: white;
+				background: $blue;
+			}
+		}
+	}
+	#NextButton {
+		list-style-type: none;
+		margin-left: 5px;
+		width: 50px;
+		padding-left: 10px;
+		border: 1px solid $grey;
+		text-align: left;
+		&:hover {
+			a{
+			color: white;
+			}
+		}
+		.triangle {
+			margin-top: 12px;
+			margin-left: 7px;
+			width: 6px; height: 4px;
+			position: absolute;
+			@include triangle(right,$orange,4,6);
+		}
+	}
+	.pagenum:before { 
+	    content: counter(item) "  "; 
+	    counter-increment: item 
+	}
+	
+}
+.product {
+	#sidebar {
+		margin-top: 40px !important;
+		@include break(tablet){
+			margin-top: 50px !important;
+		}
+	}
+	#content {
+		@include break(mobile){
+			margin-top: 0px !important;
+		}
+	}
+}
+
+ul.pills {
+  li {
+    display: inline-block;
+    line-height: 1;
+    font-family: $f-arial;
+    padding: 4px;
+    font-weight: 600;
+    font-size: .8em;
+    @include border-radius(2px);
+    
+    a {
+      color: white;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    }
+    
+    &.checked {
+      padding-right: 0px;
+      a {
+        padding-right: 17px;
+        background: url(/images/pf_filter_remove_small.png) right center no-repeat;
+      }
+    }
+        
+    &.blue {
+      background: $blue;
+      &:hover {
+        background: #05408f;
+      }
+    }
+    
+    &.grey {
+      background: #888;
+      &:hover {
+        background: #27333D;
+      }
+    }
+    
+  }
 }

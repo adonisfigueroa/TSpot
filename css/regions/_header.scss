@@ -6,7 +6,14 @@ header {
 	top: 0;
 	line-height: $line-height;
 	height: $line-height;
-	
+	#main-menu #dk_menu #SpecialHeightF {
+		.withHeader {
+			height: 335px !important;
+			@include break(tablet) {
+				height: 455px !important;
+			}
+		}
+	}
 	.header-top {
 		background: $dark-blue;
 		position: relative;
@@ -15,7 +22,6 @@ header {
 			padding: 0;
 			line-height: $line-height;
 		}
-		
 		.right-links {
 			float: right;
 			line-height: $line-height;
@@ -30,18 +36,18 @@ header {
 					}
 					
 					&.login {
-						background-image: url(/images/badge-right.png);
+						background-image: url(/images/badge-right.svg);
 						background-repeat: no-repeat;
 						background-position: 10px center;
-						padding-right: 20px;
+						padding-right: 10px;
 						position: relative;
-						@include break(v-mobile) {
+						@include break(mobile) {
 								padding-right: 0px;
-								background-position: 8px center;
+								background-position: 8px 9px;
 							}
 						
 						&:hover {
-							background-image: url(/images/badge-right-active.png);
+							background-image: url(/images/badge-right-active.svg);
 							background-color: $orange;
 							.login-dropdown {
 								display: block;
@@ -52,7 +58,7 @@ header {
 							padding-left: 38px;
 							text-transform: uppercase;
 							font-weight: 400;
-							@include break(v-mobile) {
+							@include break(mobile) {
 								padding-left: 0px;
 								text-indent: -9999px;
 							}
@@ -119,7 +125,7 @@ header {
 					}
 					
 					&.social {
-						background-image: url(/images/social-sprite.png);
+						background-image: url(/images/social-sprite.svg);
 						background-repeat: no-repeat;
 						background-position: left center;
 						text-indent: -9999px;
@@ -163,12 +169,46 @@ header {
 									h4 {
 										font-weight: 400;
 										font-size: .8em;
+										display: inline-block;
+									}
+									a {
+										font-size: 0.9em;
+									}
+									.WidgetArea{
+										width: 55px;
+										height: 20px;
+										border: 1px solid $dark-grey;
+										background-color: $grey;
+										float: right;
+										display: inline;
+										@include border-radius(3px);
+										margin-right:  80px;
 									}
 								}
+								.fb {
+									color: #0059B2;
+								}
+								.gp {
+									color: #B21A00;
+								}
+								.tw {
+									color: #00A3D8;
+								}
+								.yt a {
+									color: #8C2200;
+								}
+								.st a{
+									color: #326600;
+								}
+								.socialrow {
+									padding: 0px 0px 5px 20px;
+									font-family: "Roboto Condensed", sans-serif;
+								}
+								
 								.rss {
 									background-color: #EEEEEE;									
 									a {
-										background-image: url(/images/rss-icon.png);
+										background-image: url(/images/rss-icon.svg);
 										background-repeat: no-repeat;
 										background-position: 5px center;
 										background-size: 23px;
@@ -205,11 +245,14 @@ header {
 						}
 						
 						&.search {
-							background-image: url(/images/search-icon.png);
+							background-image: url(/images/search-icon.svg);
 							background-position: center center;
 							width: 32px;
 							background-color: black;
 							position: relative;
+							@include break(v-mobile){
+								background-position: center 10px;
+							}
 							
 							&:hover,
 							&.active {
@@ -232,14 +275,29 @@ header {
 								input {
 									display: block;
 									width: 100%;
+									height: 34px;
 									background: white;
 									border: none;
 									color: darken($dark-grey,10%);
 									padding: 0 15px;
 									font-size: .81em;
-									line-height: 40px;
+									line-height: 25px;
 									//height: 30px;
 									@include border-radius(0);
+									
+									&::-webkit-input-placeholder { /* WebKit browsers */
+                    color:    darken($dark-grey,10%);
+                  }
+                  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                      color:    darken($dark-grey,10%);
+                  }
+                  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                      color:    darken($dark-grey,10%);
+                  }
+                  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+                      color:    darken($dark-grey,10%);
+                  }
+									
 									&:focus {
 										outline: none;
 									}
@@ -271,14 +329,26 @@ header {
 				ul {
 					li {
 						line-height: $small-line-height;
-						&.search {
-							form {
-								top: $small-line-height;
+						&.login {
+							@include break(mobile) {
+								padding-right: 0px;
+								background-position: 8px 6px;
+							}
+						}
+						&.social {
+							&.search {
+								@include break(mobile){
+									background-position: center 7px;
+								}
+								form {
+									top: $small-line-height;
+								}
 							}
 						}
 					}
 				}
 			}
+            
 		}
 		#MobileMenu a {
 		    svg {
@@ -298,7 +368,7 @@ header {
 				}
 				&:hover {
 					fill: $orange;
-				}
+				}	
 			}
 		}
 		h1#logo {
@@ -316,8 +386,23 @@ header {
 		}
 		
 		.menu {
-  		font-size: .75em;
+  		font-size: .70em;
       line-height: 50px;
+  
+      .wrapper {
+        & > ul {
+  				& > li {
+  				  
+  				  a.active {
+  				    height: 61px;
+  				  }
+
+    				.nav-submenu {
+  						top: 48px;
+            }
+  				}
+				}
+      }
 		}
 		
 	}
@@ -334,9 +419,98 @@ header {
 		@include break(mobile) {
 			display: none;
 		}
+		.SubHeader {
+			background: #777D82; 
+			text-align: center;
+			box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15);
+			li {
+				text-align: center;
+				margin: 0px 15px;
+				padding-bottom: 0!important;
+				display: inline-block;
+				text-transform: none;
+				color: white;
+				line-height: 20px;
+				a:after {
+					left: 0;
+					top: 7px!important;
+				}
+				a {
+					padding: 0 0 0 15px!important;
+				}
+			}
+			li:hover {
+				border-bottom: 1px solid white;
+			}
+			.OArrow{
+				a:after {
+					@include triangle(right,$orange,5,5);
+				
+				}
+			}
+			.GArrow{
+				a:after {
+					@include triangle(right,#77E805,5,5);
+				}
+			}
+			.NoArrow {
+				a {
+					padding: 0 0 0 0 !important;
+				}
+				a:after {
+					border: 0!important;
+				}
+			}	
+		}
+		#download {
+			li:first-child {
+				margin-left: 330px;
+				@include break(tablet){
+					margin-left: 580px;
+				}
+				@include break(v-tablet){
+					margin-left: 0
+				}
+			}
+			li:last-child {
+				@include break(v-tablet){
+					margin-right: 8%;
+				}
+					
+			}
+			@include break (tablet){
+				text-align: left;
+			}
+			@include break (v-tablet){
+				text-align: right;
+			}
+		}
+		#forums {
+			li:first-child {
+				margin-left: 60px;
+				@include break(tablet){
+					margin-left: 450px;
+				}
+				@include break(v-tablet){
+					margin-left: 390px;
+				}
+			}
+			@include break (tablet){
+				text-align: left;
+			}
+		}
+		.withHeader {
+			background-color: #8B9296 !important;
+			height: 300px !important;
+			
+		}
+		
 		.wrapper {
+			@include break(v-tablet){
+				width: 94%;
+			}
 			& > ul {
-			  margin-left: 5px;
+			  
 				& > li {
 					display: inline-block;
 					text-transform: uppercase;
@@ -346,16 +520,18 @@ header {
 						margin-right: 0px;
 					}
 					
-					& > a {
+					a {
 						margin-top: 5px;
 						color: white;
 						position: relative;
 						display: block;
 						padding: 0 30px 0 15px;
 						margin-top: 0px;
-            /* color: #F4F8FC; */
-            padding: 0 35px 0 0px; 
-            letter-spacing: 0.333px;
+			            /* color: #F4F8FC; */ 
+			            letter-spacing: 0.333px;
+						@include break(tablet){
+							padding: 0 30px 0 10px;
+						}
 						
 						&:after {
 							content:"";
@@ -369,6 +545,13 @@ header {
 						
 						&.active {
 							background: #777D82;
+							height: 50px;
+							z-index: 10;
+							
+							&:after {
+  							margin-top: -8px;
+							}
+							
 						}
 						
 					}
@@ -380,22 +563,63 @@ header {
 					.nav-submenu {
 						position: absolute;
 						left: 0; top: 38px;
-						width: 100%;
+						width: 110%;
+						margin-left: -5%;
+						
 						background: #777D82;
-						height: 200px;
+						height: 250px;
+						box-shadow:0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15);
 						
 						.wrapper {
-							padding: 15px 0;
+							padding: 30px 0;
+							@include break(tablet){
+								width: 85%;
+							}
 						}
 						
 					}
+					.submenu-mini{
+						position: relative;
+						margin-top: -15px;
+						li {
+							line-height: 240%;
+							font-weight: 500;	
+							width: 89px;
+							height: 120px;
+							float: left;
+							text-align: center;
+							display: inline-block;	
+							padding: 5px 10px 0px 10px;
+							margin-left: 10px;
+							&:hover {
+								@include trans-bg(black,.2);
+							}
+							img {
+								@include border-radius(5px);
+							}
+							h3 {
+								display: block;
+								font-family: $f-condensed;
+								line-height: 15px;
+								margin-top: 10px;
+							}
+						}
+						
+						a {
+							padding: 0;
+							text-transform: none;
+							&:after {
+								display: none;
+							}
+						}
 					
+					}
 					.submenu {
 						position: relative;
 						
 						li {
-							width: 25%;
-							line-height: 180%;
+							width: 20%;
+							line-height: 240%;
 							display: block;
 							font-weight: 500;
 							//position: relative;
@@ -432,19 +656,23 @@ header {
 							ul.recent-items {
 								display: none;
 								position: absolute;
-								left: 25%;
+								left: 20%;
 								top: 0;
-								width: 75%;
+								width: 80%;
 								
 								li {
 									@include col(1,4,2);
+									
 									
 									a {
 										display: block;
 										color: white;
 										line-height: 120%;
-										padding: 10px;
+										padding: 0px;
 										@include transitions();
+										font-size: 1.05em;
+										text-align: center;
+										padding-bottom: 10px;
 										
 										&:hover {
 											@include trans-bg(black,.2);
@@ -513,11 +741,55 @@ header {
 	    @include break(mobile){
 		    margin-left: 32px;
 	    }
+	    @include break(v-mobile){
+		    width: 150px;
+	    }
 		a {
 			display: block;
 			width: 189px; height: 27px;
 			line-height: $line-height;
 		}
 		
+	}
+}
+#Mobileheader {
+	width: 250px;
+	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+	position: fixed;
+	background: $dark-grey;
+	display: none;
+	z-index: 0;
+	@include break(mobile){
+		display: block
+	}
+	#flyout-main-menu {
+		padding: 0px 10px;
+		#logo {
+			text-indent: -9999px;
+			background-image: url(../images/logo-header.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+			width: 189px; height: auto;
+			background-image: url(../images/logo-header-highres1.png);
+		    background-size: contain;
+		    height: 45px;
+		    line-height: 45px;
+		    width: 185px;
+		    margin-left: 5px;
+		    margin-bottom: 20px;
+			a {
+				display: block;
+				width: 189px; height: 40px;
+			}
+	
+		}	
+		.wrapper ul li{
+			line-height: 50px;
+			width: 100%;
+			border-top: 1px solid $grey;
+			a {color: white;}
+		}
 	}
 }

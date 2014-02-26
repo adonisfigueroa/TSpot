@@ -5,9 +5,9 @@
 ?>
 
 
-<div class="cta grey top-ad">
+<div class="cta grey top-adverbox">
 	<div class="wrapper">
-		<img src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
 	</div><!-- /.wrapper -->
 </div><!-- /.cta -->
 
@@ -62,10 +62,20 @@
 	<div class="wrapper">
 
 		<div class="col-2-3">
+		<div class="wrapperMobileOnly">
 			<article>
-			  <div class="article-menu pub-description">
-			    <div class="menu-items"><a id="pub-description" class="active" href="#" slider="pub-desc">Publisher's Description</a><a id="similar-soft" href="#" slider="sim-soft">Similar Software</a><span class="number">10</span></div>
-			  </div>
+			  <section class="slide-sort-selector menu-items">
+				<nav class="post-type-selector">
+					<ul>
+						<li class="indicator"></li>
+						<li class="active" id="pub-description" slider="pub-desc"><a href="#">Publisher's Description</a></li>
+						<li id="similar-soft" slider="sim-soft"><a href="#">Similar Software</a><span class="number">10</span></li>
+					</ul>
+				</nav>
+				<div class="clearfix"></div>	
+			  </section>
+			  <!--<div class="article-menu pub-description">
+			    <div class="menu-items"><a id="pub-description" class="active" href="#" slider="pub-desc">Publisher's Description</a><a id="similar-soft" href="#" slider="sim-soft">Similar Software</a><span class="number">10</span></div>-->
 			  <div id="pub-desc" class="ps-item publisher-description">
 			    <p>With a new audio core, hardware decoding and encoding, port to mobile platforms, preparation for Ultra-HD video and a special care to support more formats, 2.1 is a major upgrade for VLC  Rincewind has a new rendering pipeline for audio, with better effiency, volume and device management, to improve VLC audio support.</p>
 
@@ -156,10 +166,10 @@
 
 			  </div>
 			  <div id="sim-soft" class="ps-item similar-software hide">
-          <p> Similar software</p>
+				  <p> Similar software</p>
 			  </div>
 			</article>
-
+			</div>
 		</div><!-- /.col-2-3 -->
 
 		<aside id="sidebar" class="right">
