@@ -22,14 +22,14 @@
 			<figure>
   		  <img src="/images/cone.png" alt="cone" width="73" height="83" />
   		</figure>
-			<h1 class="large">VLC MEdia Player 2.1.2</h1>
+			<h1 class="large">VLC Media Player 2.1.2</h1>
 			<h2>A highly portable and popular multimedia player for multiple audio and video formats.</h2>
 		</section>
 		<section id="product_info" class="clearfix">
 		  <div class="product-wrapper">
   		  <div class="product-details">
           <div class="developer"><div class="items"><label>Developer:</label></div><div class="item"><a href="#">UltraRech Internet Corp.</a></div></div>
-          <div class="last-updated"><div class="items"><label>Last Updated:</label></div><div class="item"> December 23, 2013 <br /> test</div></div>
+          <div class="last-updated"><div class="items"><label>Last Updated:</label></div><div class="item"> December 23, 2013</div></div>
           <div class="license"><div class="items"><label>License:</label></div><div class="item">Freeware</div></div>
           <div class="os-support"><div class="items"><label>OS Support:</label></div><div class="item">Windows (all)</div></div>
           <div class="file-size"><div class="items"><label>File size:</label></div><div class="item">1.9MB</div></div>
