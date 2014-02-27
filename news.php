@@ -95,11 +95,11 @@
 			
 			<nav class="page-nav prev-next">
 				<a href="#" class="prev">
-					<span>Prev<p><</p></span>
+					<span>Prev</span>
 					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
 				</a>
 				<a href="#" class="next">
-					<span>Next<p>></p></span>
+					<span>Next</span>
 					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
 				</a>
 			</nav><!-- /.page-nav -->

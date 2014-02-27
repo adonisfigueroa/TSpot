@@ -116,7 +116,7 @@
 							</div><!-- /.article-img -->
 							<div class="ProdListInfo">
 								<h4><a href="#">Amazon Kindle Fire</a></h4>
-								<div class="ProdListCat">Tablets</div>
+								<div class="ProdListCat"><a href="#">Tablets</a></div>
 								<time>Last Review: January 17, 2014</time>
 							</div>
 							<div class="prod-meta">

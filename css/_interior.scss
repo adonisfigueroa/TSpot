@@ -1,6 +1,8 @@
 body.interior {
 	background: white;
-	
+	.score {
+		font-family: Ariel, Helvatica, sans-serif !important;
+	}
 	.ListHeader {
 		background: $dark-blue;
 		padding: 0px 2%;
@@ -93,7 +95,7 @@ body.interior {
 	
 	nav.page-nav {
 		text-align: right;
-		width: 95%;
+		width: 100%;
 		float: left;
 		@include break(v-tablet){
 			@include col(2,3,0);
@@ -136,19 +138,26 @@ body.interior {
 		&.prev-next {
 			
 			a {
-				line-height: 40px;
+				line-height: 65px;
 				background: white;
-				font-size: .7em;
+				font-size: .6em;
 				color: #666666;
-				p {
-					line-height: 0;
-				}
 				
 				&.prev {
 					@include col(1,2,3);
 					span {
 						background: #676767;
 						@include col(1,6,0);
+						&:after {
+								margin-left: 5px;
+								top: 55%;
+								content:"";
+								display: block;
+								position: absolute;
+								width: 5px; height: 6px;
+								@include triangle(left,white,4,6);
+
+						}
 						@include break(v-mobile){
 							font-size: 0;	
 						}
@@ -165,6 +174,7 @@ body.interior {
 						@include col(1,2,3);
 						margin-bottom: 0px;
 					}
+					
 				}
 				
 				&.next {
@@ -173,7 +183,15 @@ body.interior {
 						background: #676767;
 						@include col-last(1,6,0);
 						&:after {
-							left: 0;
+								margin-right: 5px;
+								right: 0;
+								top: 55%;
+								content:"";
+								display: block;
+								position: absolute;
+								width: 5px; height: 6px;
+								@include triangle(right,white,4,6);
+
 						}
 						@include break(v-mobile){
 							font-size: 0;	
@@ -625,10 +643,10 @@ body.interior {
 					}
 
 				}
-				.ProdListCat {
+				.ProdListCat a {
 					font-size: 0.6em;
 					text-transform: uppercase;
-					margin-top: 8px;
+					margin-top: 1px;
 					line-height: 20px;
 					background-color: $grey;
 					width: 95px;
@@ -641,6 +659,9 @@ body.interior {
 					@include break(v-tablet){
 						width: 80px;
 						margin-right: 5px;
+					}
+					&:hover {
+						background-color: darken($grey,10%);	
 					}
 					@include break(mobile){
 						font-size: 0.5em;
@@ -870,7 +891,7 @@ body.interior {
 						left: -10px;
 						width: 6px; height: 4px;
 						@include triangle(right,$orange,4,6);
-						@include transitions(0.1s);
+						
 						}
 					}
 					a:hover,
@@ -1284,7 +1305,7 @@ body.interior {
 	}
 }
 .article nav.page-nav {
-	width: 100% !important;
+	width: 90% !important;
 	a span {
 		&:after {
 					content:"";
