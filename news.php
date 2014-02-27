@@ -19,7 +19,7 @@
 		
 		<section class="title-group">
 			<h1 class="large">Chrome used more than Firefox, Opera and Internet Explorer combined</h1>
-			<em><a href="#">By Steven Walton</a> on October 24, 2013</em>
+			<em>By <a href="#">Steven Walton</a> on January 10, 2014, 6:45 PM</em>
 		</section>
 	</div><!-- /.wrapper -->
 </hgroup>
