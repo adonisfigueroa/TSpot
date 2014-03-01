@@ -36,6 +36,33 @@
 			</ul>
 		</nav><!-- /.menu -->
 		
+		<div class="follow-subscribe mobile">
+			<nav class="menu">
+				<h3>Follow TechSpot</h3>
+				<ul>
+					<li class="facebook"><a href="#">Facebook</a></li>
+					<li class="twitter"><a href="#">Twitter</a></li>
+					<li class="google-plus"><a href="#">Google Plus</a></li>
+					<li class="youtube"><a href="#">YouTube</a></li>
+					<li class="rss"><a href="#">RSS</a></li>
+					<li class="steam"><a href="#">Steam</a></li>
+					<li class="android"><a href="#">Android</a></li>
+					<li class="instagram"><a href="#">Instagram</a></li>
+					<li class="windows"><a href="#">Windows</a></li>
+					<!--<li class="tumblr"><a href="#">Tumblr</a></li>
+					<li class="pinterest"><a href="#">Pinterest</a></li>
+					<li class="linkedin"><a href="#">Linked-In</a></li>-->
+				</ul>
+			</nav>
+			
+			<form action="">
+				<h3>Subscribe to the TechSpot Newsletter</h3>
+				<div class="form-email"><input type="text" name="email" placeholder="email address"></div>
+				<div class="form-submit"><input type="submit" name="action" value="subscribe"></div>
+			</form>
+			
+		</div>
+		
 		<nav id="Abou" class="menu">
 			<h3>About TechSpot</h3>
 			<ul>
@@ -46,7 +73,7 @@
 			</ul>
 		</nav><!-- /.menu -->
 		
-		<div class="follow-subscribe">
+		<div class="follow-subscribe desktop">
 			<nav class="menu">
 				<h3>Follow TechSpot</h3>
 				<ul>

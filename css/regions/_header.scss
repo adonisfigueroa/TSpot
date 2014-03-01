@@ -281,26 +281,26 @@ header {
 									height: 34px;
 									background: white;
 									border: none;
-									color: darken($dark-grey,10%);
+									color: #333;
 									padding: 0 15px;
 									font-size: .81em;
 									line-height: 25px;
 									//height: 30px;
 									@include border-radius(0);
-									
 									&::-webkit-input-placeholder { /* WebKit browsers */
-                    color:    darken($dark-grey,10%);
-                  }
-                  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-                      color:    darken($dark-grey,10%);
-                  }
-                  &::-moz-placeholder { /* Mozilla Firefox 19+ */
-                      color:    darken($dark-grey,10%);
-                  }
-                  &:-ms-input-placeholder { /* Internet Explorer 10+ */
-                      color:    darken($dark-grey,10%);
-                  }
-									
+							            color:    #DFDFD0;
+							          }
+							          &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+							              color:    #DFDFD0;
+							          }
+							          &::-moz-placeholder { /* Mozilla Firefox 19+ */
+							              color:    #DFDFD0;
+							          }
+							          &:-ms-input-placeholder { /* Internet Explorer 10+ */
+							              color:    #DFDFD0;
+							          }
+
+																		
 									&:focus {
 										outline: none;
 									}
@@ -394,17 +394,12 @@ header {
   
       .wrapper {
         & > ul {
-  				& > li {
-  				  
-  				  a.active {
-  				    height: 61px;
-  				  }
-
-    				.nav-submenu {
-  						top: 48px;
-            }
+  			& > li {
+  				.nav-submenu {
+  					top: 48px;
   				}
-				}
+  			}
+		}
       }
 		}
 		
@@ -467,7 +462,7 @@ header {
 		}
 		#download {
 			li:first-child {
-				margin-left: 220px;
+				margin-left: 180px;
 				@include break(tablet){
 					margin-left: 580px;
 				}
@@ -490,7 +485,7 @@ header {
 		}
 		#forums {
 			li:first-child {
-				margin-left: -20px;
+				margin-left: -50px;
 				@include break(tablet){
 					margin-left: 450px;
 				}
@@ -548,11 +543,13 @@ header {
 						
 						&.active {
 							background: #777D82;
-							height: 50px;
+							height: 45px;
+							line-height: 30px;
 							z-index: 10;
+							border-top: solid 3px $blue;
 							
 							&:after {
-  							margin-top: -8px;
+  							margin-top: -9px;
 							}
 							
 						}

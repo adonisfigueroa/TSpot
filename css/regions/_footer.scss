@@ -4,6 +4,22 @@ footer {
 	
 	.wrapper {
 		padding: 80px 0 50px;
+		@include break(v-mobile){
+			padding: 30px 0px 10px 0px; 
+		}
+	}
+	.desktop {
+		display: block!important;
+		@include break(v-mobile){
+			display: none!important;
+		}
+	}
+	.mobile {
+		display: none !important;
+		@include break(v-mobile){
+			display: block!important;
+			margin-bottom: 40px;
+		}
 	}
 	
 	form {

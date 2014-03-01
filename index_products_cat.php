@@ -71,6 +71,209 @@
 						<input class="ProdSearch" type="text" name="productsearch" placeholder="Search here...">
 					</form>
 				</div>	
+				<div id="CategoryListMobile">
+					<ul>
+				    <li class="has_more">
+				        <a href="#" class="SideToggle">
+				           <div class="SideTitle">
+							   <h3>Computer Hardware</h3>
+							   <span class="arrow"></span>
+						   </div>													
+				        </a>
+				        
+				        <div class="SideProdContent CompHard">
+					        <ul class="sub">
+					        	<div class="col-1-2">
+					            <li class="">
+					                <a href="/products/cases/">
+					                    <span class="arrow"></span> Cases																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/cooling/">
+					                    <span class="arrow"></span> Cooling																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/graphics-cards/">
+					                    <span class="arrow"></span> Graphics Cards																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/keyboards/">
+					                    <span class="arrow"></span> Keyboards																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/mice/">
+					                    <span class="arrow"></span> Mice																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/monitors/">
+					                    <span class="arrow"></span> Monitors																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/motherboards/">
+					                    <span class="arrow"></span> Motherboards																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/power-supplies/">
+					                    <span class="arrow"></span> Power Supplies																
+					                </a>
+					            </li>
+					        	</div>
+					        	<div class="col-1-2-last">
+					            <li class="">
+					                <a href="/products/printers/">
+					                    <span class="arrow"></span> Printers																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/processors/">
+					                    <span class="arrow"></span> Processors																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/routers/">
+					                    <span class="arrow"></span> Routers																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/scanners/">
+					                    <span class="arrow"></span> Scanners																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/sound-cards/">
+					                    <span class="arrow"></span> Sound Cards																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/speakers/">
+					                    <span class="arrow"></span> Speakers																
+					                </a>
+					            </li>
+					            <li class="">
+					                <a href="/products/storage/">
+					                    <span class="arrow"></span> Storage																
+					                </a>
+					            </li>
+					        	</div>
+					        </ul>
+				        </div>
+				    </li>
+				    <li class="has_more">
+				        <a href="#" class="SideToggle">
+				           <div class="SideTitle">
+							   <h3>Desktop & Mobile</h3>
+							   <span class="arrow"></span>
+						   </div>													
+				        </a>
+				        <div class="SideProdContent DeskMobi">
+				        <ul class="sub">
+				        	<div class="col-1-2">
+				            <li class="">
+				                <a href="/products/desktop-pcs/">
+				                    <span class="arrow"></span> Desktop PCs																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/laptops/">
+				                    <span class="arrow"></span> Laptops																
+				                </a>
+				            </li>
+				        	</div>
+				            <div class="col-1-2-last">
+				            <li class="">
+				                <a href="/products/servers/">
+				                    <span class="arrow"></span> Servers																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/tablets/">
+				                    <span class="arrow"></span> Tablets																
+				                </a>
+				            </li>
+				            </div>
+				        </ul>
+				        </div>
+				    </li>
+				    <li class="has_more">
+				        <a href="#">
+				           <div class="SideTitle">
+							   <h3>PC Gaming</h3>
+						   </div>													
+				        </a>
+				        <div class="SideProdContent"></div>
+				       	   <div class="col-1-2"></div>
+				       	   <div class="col-1-2-last"></div>
+				    </li>
+				    <li class="has_more">
+				       <a href="#" class="SideToggle">
+				           <div class="SideTitle">
+							   <h3>Electronics</h3>
+							   <span class="arrow"></span>
+						   </div>													
+				        </a>
+				        <div class="SideProdContent Elec">
+				        <ul class="sub">
+				        	<div class="col-1-2">
+				            <li class="">
+				                <a href="/products/camcorders/">
+				                    <span class="arrow"></span> Camcorders																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/cameras/">
+				                    <span class="arrow"></span> Cameras																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/gps/">
+				                    <span class="arrow"></span> GPS																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/headsets/">
+				                    <span class="arrow"></span> Headsets																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/audio-video/">
+				                    <span class="arrow"></span> Home Audio & Video																
+				                </a>
+				            </li>
+				        	</div>
+				        	<div class="col-1-2-last">
+				            <li class="">
+				                <a href="/products/mp3-players/">
+				                    <span class="arrow"></span> MP3 Players																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/projectors/">
+				                    <span class="arrow"></span> Projectors																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/remotes/">
+				                    <span class="arrow"></span> Remotes																
+				                </a>
+				            </li>
+				            <li class="">
+				                <a href="/products/tvs/">
+				                    <span class="arrow"></span> TVs																
+				                </a>
+				            </li>
+				        	</div>
+				        </ul>
+				        </div>
+				    </li>
+				</ul>
+				</div>
 				<div class="ListHeader">
 					<h3>Popular in Laptops</h3>
 				</div>

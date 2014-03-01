@@ -6,6 +6,9 @@ body.home {
 	      width: 70%;
 	      @include break(tablet){
 		      @include col(2,3,2);
+		      @media screen and (orientation:portrait) { 
+				 width: 100%;
+		     }
 	      }
 	      @include break(mobile){
 			  width: 100%;
@@ -24,6 +27,10 @@ body.home {
       width: 305px;
       @include break(tablet){
 		    width: 32%;
+		     @media screen and (orientation:portrait) { 
+				 display: none;
+		     }
+		    
 	   }
     }
     

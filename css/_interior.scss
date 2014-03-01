@@ -1,4 +1,10 @@
 body.interior {
+	header .menu .wrapper > ul > li a.active {
+		height: 55px !important;
+		&:after {
+  			margin-top: -14px !important;
+  		}
+	}
 	background: white;
 	.score {
 		font-family: Ariel, Helvatica, sans-serif !important;
@@ -140,23 +146,27 @@ body.interior {
 			a {
 				line-height: 65px;
 				background: white;
-				font-size: .6em;
+				font-size: .7em;
 				color: #666666;
 				
 				&.prev {
 					@include col(1,2,3);
 					span {
-						background: #676767;
+						background: #aeaeae;
+						@include transitions(0.1s);
 						@include col(1,6,0);
 						&:after {
-								margin-left: 5px;
-								top: 55%;
+								right: 0;
+								top: 50%;
 								content:"";
 								display: block;
 								position: absolute;
-								width: 5px; height: 6px;
-								@include triangle(left,white,4,6);
+								width: 8px; height: 10px;
+								@include triangle(left,white,8,10);
 
+						}
+						&:hover {
+							background-color: #666666;
 						}
 						@include break(v-mobile){
 							font-size: 0;	
@@ -180,18 +190,20 @@ body.interior {
 				&.next {
 					@include col-last(1,2,3);
 					span {
-						background: #676767;
+						background: #aeaeae;
 						@include col-last(1,6,0);
 						&:after {
-								margin-right: 5px;
-								right: 0;
-								top: 55%;
+								
+								left: 0;
+								top: 50%;
 								content:"";
 								display: block;
 								position: absolute;
-								width: 5px; height: 6px;
-								@include triangle(right,white,4,6);
-
+								width: 8px; height: 10px;
+								@include triangle(right,white,8,10);
+						}
+						&:hover {
+							background-color: #666666;
 						}
 						@include break(v-mobile){
 							font-size: 0;	
@@ -237,7 +249,7 @@ body.interior {
 	&.product,
 	&.download {
 		.top-adverbox {
-			margin-top: 85px;
+			margin-top: 77px;
 			@include break(mobile){
 				margin-top: 34px;
 				.wrapper {
@@ -250,7 +262,7 @@ body.interior {
 			background-color: white;
 			
 			.wrapper {
-				padding: 10px 0 45px;
+				padding: 20px 0 45px;
 			}
 			
 			.title-group {
@@ -277,9 +289,10 @@ body.interior {
 					
 					a {
 						color: black;
-						/*font-weight: 450;*/
-						/*border-bottom: 1px solid #ccc;
-						padding-bottom: 2px;*/
+						font-weight: 500;
+						border-bottom: 1px solid #ccc;
+						padding-bottom: 3px;
+						
             
             &:hover {
               border-bottom: 1px solid #ff7f00;
@@ -470,7 +483,7 @@ body.interior {
 		&.product {
   		hgroup {
     	  .wrapper {
-      	  	padding: 15px 0 15px;
+      	  	padding: 20px 0 15px;
     	  }
 		}
   	  	  
@@ -497,7 +510,7 @@ body.interior {
 	          	font-size: 1.8em;
           	}
           	@include break(v-mobile){
-	          	font-size: 0.9em;
+	          	font-size: 1.5em;
           	}
         	}
         	
@@ -769,13 +782,138 @@ body.interior {
 				border: none;
 				box-shadow: none;
 				font-family: "Roboto Condensed", sans-serif;
-				line-height: 10px;
+				line-height: 30px;
 				font-size: 0.9em;
 				font-weight: 600;
 				padding: 0px 2%;
-				color: #DFDFD0;
+				color: #333;
 			}
 			margin-bottom:10px;
+		}
+		#CategoryListMobile {
+			background: #304456;
+			margin-bottom: 10px;
+			display: none;
+			width: 100%;
+			text-transform: uppercase;
+			font-family: "Roboto Condensed", sans-serif;
+			color: white;
+			font-size: 0.7em;
+			@include break(v-tablet){
+				font-size: 0.6em;
+			}
+			#CategoryList{
+				background: #304456;
+			}
+			li {
+				padding: 0px 0px;
+				line-height: 40px;
+				a {
+					color: white;
+					display: block;
+					width: 100%;
+					text-decoration: none;
+				}
+				.arrow {
+					opacity: 0;
+				}				
+			}
+			.SideTitle{
+				line-height: 31px;
+				background-color: $blue;
+				padding: 0px 15px;
+				@include break(v-tablet){
+					padding: 0px 10px;
+				}
+				.arrow {
+					@include triangle(down,white,4,6);
+					@include transitions(0.1s);
+					float: right;
+					margin-right: 4px;
+					margin-top: 12px;
+					opacity: 1;
+				}
+			}
+			.has_more{
+				.SideTitle{
+					.arrow{
+					@include triangle(left,white,4,6);
+					@include transitions(0.1s);
+					float: right;
+					margin-top: -18px;
+					}
+				}
+				.SideProdContent{
+					display: none;
+				}
+			}
+			.open{
+				.SideTitle{
+					.arrow{
+  					@include triangle(down,white,4,6);
+  					@include transitions(0.1s);
+  					float: right;
+  					margin-top: -18px;
+					}
+				}
+				.SideProdContent{
+					display: block;
+				}
+			}
+			.col-1-2 {
+				width: 45%;
+				
+			}
+			.col-1-2-last{
+				width: 45%;
+				
+			}
+			.SideProdContent {
+				padding: 17px;
+				@include break(v-tablet){
+						padding: 10px 0px 10px 10px;
+				}
+				background-color:#324455;
+				li {
+					line-height: 10px;
+					margin-bottom: 14px;
+					a {
+						.arrow {
+						margin: 0 !important;
+						opacity: 0;
+						position: absolute;
+						left: -10px;
+						width: 6px; height: 4px;
+						@include triangle(right,$orange,4,6);
+						
+						}
+					}
+					a:hover,
+					a.active {
+						.arrow {
+  						margin: 0 !important;
+  						opacity: 1;
+  						left: -10px;
+  						width: 6px; height: 4px;
+  						@include triangle(right,$orange,4,6);
+						}
+					}
+				}
+			}
+			.CompHard {
+				height: 185px;
+			}
+			.DeskMobi {
+				height: 40px;
+			}
+			.Elec {
+				height: 110px;
+			}
+
+
+			@include break(mobile){
+				display: block;
+			}
 		}
 		#sidebar {
 			@include break(mobile){
@@ -850,9 +988,9 @@ body.interior {
 					font-family: "Roboto Condensed", sans-serif;
 					line-height: 64px;
 					font-size: 2em;
-					font-weight: 550;
+					font-weight: 500;
 					padding: 0px 17px;
-					color: #DFDFD0;
+					color: #333;
 					
 					&::-webkit-input-placeholder { /* WebKit browsers */
 			            color:    #DFDFD0;
@@ -1091,10 +1229,45 @@ body.interior {
 				width: 100%;
 				padding: 10px 3% 0px 3%;
 			}
+			.has_more{
+				.SideTitle{
+					.arrow{
+					@include triangle(left,white,4,6);
+					@include transitions(0.1s);
+					float: right;
+					margin-top: -19px;
+					display: none;
+					@include break(mobile){
+						display: block;
+					}
+					}
+				}
+				.sub{
+					@include break(mobile){
+					display: none;
+					}
+				}
+			}
+			.open{
+				.SideTitle{
+					.arrow{
+  					@include triangle(down,white,4,6);
+  					@include transitions(0.1s);
+  					float: right;
+  					margin-top: -18px;
+  					display: none;
+  					@include break(mobile){
+						display: block;
+					}
+					}
+				}
+				.sub{
+					display: block;
+				}
+			}
 			#CategoryList{
 				background: #304456;
-			}
-			li {
+				li {
 				padding: 0px 15px;
 				@include break(v-tablet){
 				padding: 0px 10px;
@@ -1125,9 +1298,11 @@ body.interior {
 				}
 				
 			}
+			}
 			.SideTitle{
 				line-height: 31px;
 				background-color: $blue;
+				color: white;
 				padding: 0px 15px;
 				@include break(v-tablet){
 					padding: 0px 10px;
@@ -1136,8 +1311,8 @@ body.interior {
 					@include triangle(down,white,4,6);
 					@include transitions(0.1s);
 					float: right;
-					margin-right: 4px;
-					margin-top: 12px;
+					
+					margin-top: -18px;
 					opacity: 1;
 				}
 			}
@@ -1190,7 +1365,7 @@ body.interior {
 		}
 		hgroup {
   		&.featured-image {
-    		margin-top: 82px;
+    		margin-top: 77px;
     		@include break(mobile){
 	    		margin-top:0px;
     		}
@@ -1198,14 +1373,14 @@ body.interior {
     		.title-group {
       		h1.large {
         		font-family: Roboto, Arial, Helvetica, sans-serif;
-				font-weight: 450;
+				font-weight: 500;
 				-webkit-font-smoothing: antialiased;
 				text-shadow: 1px 1px 5px #333;
 	            @include break (mobile){
 		            font-size: 50px;
 	            }
 	            @include break (v-mobile){
-		            font-size: 40px;
+		            font-size: 38px;
 	            }
       		}
       		
@@ -1247,6 +1422,9 @@ body.interior {
 						right: 0;
 						strong {
 							line-height: 28px;
+						}
+						@include break(v-mobile){
+							display: none;
 						}
 					}					
 				}

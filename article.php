@@ -11,7 +11,7 @@
 <hgroup class="featured-image" style="background-image: url(images/tmp/bg-cpu.jpg);">
 	<div class="wrapper">
 	
-		<section class="title-group centered">
+		<section class="title-group">
 			<h1 class="large">AMD Radeon R9 290X Review</h1>
 			<em>By Steven Walton on October 24, 2013</em>
 		</section>

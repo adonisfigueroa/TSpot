@@ -43,8 +43,10 @@
             <div class="facebook-like"><a href="#" class="fb-like"></a></div>
           </div>
           <div class="mirror-wrapper clearfix">
-            <div class="mirror"><a href="#" class="mirror-1">Mirror #1</a></div>
-            <div class="mirror"><a href="#" class="mirror-2">Mirror #2</a></div>
+            <ul class="inline">
+            	<li><a href="#"><span></span>Mirror #1</a></li>
+				<li><a href="#"><span></span>Mirror #2</a></li>
+            </ul>
           </div>
 
           <div class="google-ads">

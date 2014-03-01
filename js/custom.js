@@ -1,3 +1,13 @@
+/*!
+ * hoverIntent r7 // 2013.03.11 // jQuery 1.9.1+
+ * http://cherne.net/brian/resources/jquery.hoverIntent.html
+ *
+ * You may use hoverIntent under the terms of the MIT license.
+ * Copyright 2007, 2013 Brian Cherne
+ */
+(function(e){e.fn.hoverIntent=function(t,n,r){var i={interval:100,sensitivity:7,timeout:0};if(typeof t==="object"){i=e.extend(i,t)}else if(e.isFunction(n)){i=e.extend(i,{over:t,out:n,selector:r})}else{i=e.extend(i,{over:t,out:t,selector:n})}var s,o,u,a;var f=function(e){s=e.pageX;o=e.pageY};var l=function(t,n){n.hoverIntent_t=clearTimeout(n.hoverIntent_t);if(Math.abs(u-s)+Math.abs(a-o)<i.sensitivity){e(n).off("mousemove.hoverIntent",f);n.hoverIntent_s=1;return i.over.apply(n,[t])}else{u=s;a=o;n.hoverIntent_t=setTimeout(function(){l(t,n)},i.interval)}};var c=function(e,t){t.hoverIntent_t=clearTimeout(t.hoverIntent_t);t.hoverIntent_s=0;return i.out.apply(t,[e])};var h=function(t){var n=jQuery.extend({},t);var r=this;if(r.hoverIntent_t){r.hoverIntent_t=clearTimeout(r.hoverIntent_t)}if(t.type=="mouseenter"){u=n.pageX;a=n.pageY;e(r).on("mousemove.hoverIntent",f);if(r.hoverIntent_s!=1){r.hoverIntent_t=setTimeout(function(){l(n,r)},i.interval)}}else{e(r).off("mousemove.hoverIntent",f);if(r.hoverIntent_s==1){r.hoverIntent_t=setTimeout(function(){c(n,r)},i.timeout)}}};return this.on({"mouseenter.hoverIntent":h,"mouseleave.hoverIntent":h},i.selector)}})(jQuery)
+
+
 $(document).ready(function() {
 		$(window).load(function(){
 			$(".slide-sort-selector ul li.active").each(function() {
@@ -87,7 +97,8 @@ $(document).ready(function() {
 	$("#masthead ul.variation-5").parent().parent().addClass("BigHead");
 	
 	//main menu
-	//$("#main-menu .wrapper > ul > li").hoverIntent(xmenuHoverB,xmenuHoverOutB);
+	$("#main-menu .wrapper > ul > li").hoverIntent(xmenuHover,xmenuHoverOut);
+	
   
 	$('.blink').each(function() {
 	    var elem = $(this);
@@ -114,7 +125,7 @@ $(document).ready(function() {
 		$(this).parent().parent().parent().parent().find('.ps-item').addClass('hide');
 		$(this).parent().parent().parent().parent().find('#' + slider).removeClass('hide');
 	});
-		$('.SideToggle').click(function(e)
+	$('.SideToggle').click(function(e)
 	{
 		if($(this).attr('href') == '#')
 		e.preventDefault()
@@ -181,11 +192,12 @@ $(document).ready(function() {
 
 function xmenuHover() {
   var $this = $(this);
-  var delay = 200, setTimeoutConst;
-  var wasVisible = $('.nav-submenu').is(":visible");
+  var delay = 0, setTimeoutConst;
+  var wasVisible = $(".nav-submenu").is(":visible");
   if ($this.children("a").hasClass("active")) {
     return false;
   } 
+  
   
   setTimeoutConst = setTimeout(function() {
 		$this.stop(true,true).siblings("li").removeClass("active").children("a").removeClass("active").siblings(".nav-submenu").hide();
@@ -195,22 +207,21 @@ function xmenuHover() {
 		}
 		
 		$this.children(".nav-submenu").load(
-		  "../_inc/nav-submenus/"+$this.children("a").data("source")+'.html', 
+		  "../_inc/nav-submenus/"+$this.children("a").data("source")+'.html', $(".nav-submenu > ul.SubHeader").parent().addClass("withHeader"),
 		  function() {
   			$this.children("a").addClass("active");
-  			$(".nav-submenu > ul.SubHeader").parent().addClass("withHeader");
-  			if (!wasVisible) {
-	  			$this.children(".nav-submenu").slideDown("fast");
-	  			setTimeout(check, 500);
-  			}
-  			else{
-	  			$this.children(".nav-submenu").show(0);
-  			}
   			$(".submenu > li > a").hover(function(e) {
   				e.preventDefault();
   				$(this).parent("li").addClass("active").siblings("li").removeClass("active");
   				//$(this).siblings("ul.recent-items").show();
   			});
+  			if (!wasVisible) {
+  				
+	  			$this.children(".nav-submenu").slideDown(200);
+  			}
+  			else {
+	  			$this.children(".nav-submenu").slideDown(0);
+  			}
   		});
   }, delay);
   return false;
@@ -219,16 +230,8 @@ function xmenuHover() {
 function xmenuHoverOut() {
 	var $this = $(this);
 	setTimeout(function() {
-		$this.children("a").removeClass("active").siblings(".nav-submenu").hide();
+		$this.children("a").removeClass("active").siblings(".nav-submenu").fadeOut(50);
 		clearTimeout(setTimeoutConst);
 		return false
-		});	
+		},800);	
 }
-/*function xmenuHoverB() {
-	var $this = $(this);
-	var wasVisible = $('.nav-submenu').is(":visible");
-	if ($this.children("a").hasClass("active")) {
-    return false;
-  } 
-
-}*/

@@ -138,7 +138,7 @@
 				
 				<div class="article-content">
 					<h2><a href="#">Amazon's trio of biospheres gets two thumbs up fro Seattle Design Review Board</a></h2>
-					<time>Posted 4 hours ago by Shawn Knight | Filed in <a href="#">Industry News</a>, <a href="#">The Web</a></time>
+					<time>Posted 4 hours ago by Shawn Knight <em>Filed in <a href="#">Industry News</a>, <a href="#">The Web</a></em></time>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					
 					<div class="post-meta">

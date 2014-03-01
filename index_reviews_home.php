@@ -89,92 +89,98 @@
 <section id="content">
 	<div class="wrapper">
 		<div id="sidebar">
-			<div class="SideTitle">
-				<h3>Categories</h3>
-			</div>
-			<div id="CategoryList">
-				<ul class="sub">
-					<li class="">
-					<a href="/reviews/cpu/">
-						<span class="arrow"></span>
-						<span>CPU</span>
+			<ul>
+				<li class="has_more">
+					<a href="#" class="SideToggle">
+						<div class="SideTitle">
+							<h3>Categories</h3>
+							<span class="arrow"></span>
+						</div>
 					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/motherboards/">
-						<span class="arrow"></span>
-						<span>Motherboards</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/graphics-cards/">
-						<span class="arrow"></span>
-						<span>Graphics Cards</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/laptops/">
-						<span class="arrow"></span>
-						<span>Laptops</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/desktop-pcs/">
-						<span class="arrow"></span>
-						<span>Desktop PCs</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/tablets/">
-						<span class="arrow"></span>
-						<span>Tablets</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/smartphones/">
-						<span class="arrow"></span>
-						<span>Smartphones</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/storage/">
-						<span class="arrow"></span>
-						<span>Storage</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/input-devices/">
-						<span class="arrow"></span>
-						<span>Input Devices</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/cases/">
-						<span class="arrow"></span>
-						<span>Cases</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/audio/">
-						<span class="arrow"></span>
-						<span>Audio</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/software/">
-						<span class="arrow"></span>
-						<span>Software</span>
-					</a>
-				</li>
-					<li class="">
-					<a href="/reviews/games/">
-						<span class="arrow"></span>
-						<span>Games</span>
-					</a>
-				</li>
-				
+					<div id="CategoryList">
+						<ul class="sub">
+							<li class="">
+							<a href="/reviews/cpu/">
+								<span class="arrow"></span>
+								<span>CPU</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/motherboards/">
+								<span class="arrow"></span>
+								<span>Motherboards</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/graphics-cards/">
+								<span class="arrow"></span>
+								<span>Graphics Cards</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/laptops/">
+								<span class="arrow"></span>
+								<span>Laptops</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/desktop-pcs/">
+								<span class="arrow"></span>
+								<span>Desktop PCs</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/tablets/">
+								<span class="arrow"></span>
+								<span>Tablets</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/smartphones/">
+								<span class="arrow"></span>
+								<span>Smartphones</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/storage/">
+								<span class="arrow"></span>
+								<span>Storage</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/input-devices/">
+								<span class="arrow"></span>
+								<span>Input Devices</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/cases/">
+								<span class="arrow"></span>
+								<span>Cases</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/audio/">
+								<span class="arrow"></span>
+								<span>Audio</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/software/">
+								<span class="arrow"></span>
+								<span>Software</span>
+							</a>
+						</li>
+							<li class="">
+							<a href="/reviews/games/">
+								<span class="arrow"></span>
+								<span>Games</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
 			</ul>
-			</div>
 		</div>
 		<div class="col-2-3">
 			<div class="wrapperMobileOnly">

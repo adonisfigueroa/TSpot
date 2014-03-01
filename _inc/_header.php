@@ -42,12 +42,12 @@
 	<link rel="icon" type="image/x-icon" href="http://static.techspot.com/favicon.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="http://static.techspot.com/favicon.png" />
 	
-	<script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
-	<script type="type/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="/js/jquery.sticky-kit.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.countup.js"></script>
-	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="/js/custom.js"></script>
+	
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,500italic,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
