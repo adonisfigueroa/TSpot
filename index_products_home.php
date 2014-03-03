@@ -3,10 +3,10 @@
 	$body_classes = array('interior','products');
 	include("_inc/_header.php");
 ?>
-<div class="cta">
-	<div class="wrapper index">
-		<img class="TopAd Mobile" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
-	</div><!-- /.wrapper -->
+<div class="cta grey top-adverbox">
+	<!--<div class="wrapper">
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
+	</div>-->
 </div>
 <section id="masthead">
 	<div class="featured-posts-title">

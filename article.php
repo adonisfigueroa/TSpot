@@ -4,10 +4,10 @@
 	require_once("_inc/_header.php");
 ?>
 <div class="cta grey top-adverbox">
-	<div class="wrapper">
+	<!--<div class="wrapper">
 		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
-	</div><!-- /.wrapper -->
-</div><!-- /.cta -->
+	</div>-->
+</div>
 <hgroup class="featured-image" style="background-image: url(images/tmp/bg-cpu.jpg);">
 	<div class="wrapper">
 	

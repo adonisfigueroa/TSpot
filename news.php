@@ -5,10 +5,10 @@
 ?>
 
 <div class="cta grey top-adverbox">
-	<div class="wrapper">
+	<!--<div class="wrapper">
 		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
-	</div><!-- /.wrapper -->
-</div><!-- /.cta -->
+	</div>-->
+</div>
 
 <hgroup>
 	<div class="wrapper">
@@ -41,6 +41,10 @@
 						<li><a href="#">Fujitsu</a></li>
 						<li><a href="#">Camera</a></li>
 						<li><a href="#">Electronics</a></li>
+						<li><a href="#">Fujitsu</a></li>
+						<li><a href="#">Camera</a></li>
+						<li><a href="#">Electronics</a></li>
+						<li><a href="#">Fujitsu</a></li>
 					</ul>
 				</div>
 				

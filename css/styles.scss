@@ -30,11 +30,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 	
 }
+.activebar #MobileMenu a svg {
+	fill: $orange !important;
+}
 #Content {
-		padding-bottom: 30px;
+		//padding-bottom: 30px;
 	}
 .rating {
-	font-family: helvatica, Ariel, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 #GlobalWrapper {
 	width: 100%;
@@ -52,7 +55,7 @@ body {
 }
 
 .flyout {
-	-webkit-transition:all .5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
     
 }
 .activebar  {
@@ -139,6 +142,7 @@ h1 {
 	color: #1e2833;
 	font-weight: 300;
 	font-size: 1.3em;
+	
 	&.lined {
 		border-bottom: 2px solid #c3c3c3;
 	}
@@ -160,7 +164,7 @@ h1 {
 		padding: 25px 0;
 		@include break(mobile) {
 		width: 100%;
-		padding: 0px;
+		padding: 25px 0px 0px 0px;
 		.comment-count-block{
 			display: none;
 		}
@@ -186,9 +190,7 @@ h1 {
 		padding-bottom: 20px;
 		margin-bottom: 25px;
 		border-bottom: 1px solid #DDD;
-		@include break (v-mobile){
-			border-bottom: none;
-		}
+		
 		.article-img {
 			@include col(2,5,0);
 			width: 30%;
@@ -851,7 +853,7 @@ hgroup.featured-image {
 	background-repeat: no-repeat;
 	background-position: center center;
 	@include break(tablet){
-		
+		min-height: 400px;
 	}
 	@include break(mobile){
 		min-height: 200px;
@@ -862,6 +864,9 @@ hgroup.featured-image {
 		position: relative;
 		min-height: 70vh;
 		max-height: 600px;
+		@include break(tablet){
+		min-height: 400px;
+		}	
 		@include break(mobile){
 			width: 100%;
 			min-height: 300px;
@@ -897,7 +902,7 @@ hgroup.featured-image {
 			font-size: 3em;
 			font-family: $f-secondary;
 			@include break(v-mobile){
-				font-size: 2em;
+				font-size: 28px;
 			}
 		}
 		
@@ -943,7 +948,7 @@ hgroup.featured-image {
 ul.category-chicklets {
 	line-height: 20px;
 	@include break(mobile){
-		display: none;
+		margin-bottom: 10px;
 	}
 	li {
 		display: inline-block;
@@ -976,7 +981,7 @@ ul.category-chicklets {
 	background: white;
 	border-bottom: 5px solid $orange;
 	@include break(v-mobile){
-		width: 238px;
+		width: 100%;
 		height: 35px;
 		border-bottom: 0px solid $orange;
 		margin: 0px 0px 0px 1px;
@@ -993,7 +998,7 @@ ul.category-chicklets {
 			@include break(v-mobile) {
 				display: inline-block;
 				height: inherit;
-				width: 70px;
+				width: 25%;
 				margin-bottom: 0px;
 				font-size: 1.0em;
 				line-height: 33px;
@@ -1008,7 +1013,7 @@ ul.category-chicklets {
 			position: relative;
 			@include break (v-mobile){
 				background-image: url(/images/social-widget-bg-90.svg);
-				margin-left: 70px;
+				margin-left: 30%;
 				margin-top: -30px;
 				width: 32px;
 				
@@ -1051,8 +1056,8 @@ ul.category-chicklets {
 				right: 60px;
 				top: 0;
 				display: block;
-				@include break(mobile){
-					right: auto !important;
+				@include break(v-mobile){
+					right: 0 !important;
 					top:auto !important;
 				}
 				}
@@ -1060,29 +1065,30 @@ ul.category-chicklets {
 			@include break(v-mobile){
 				&.facebook {
 					width: 32px;
+					margin-left: 30%;
 					background-position: 0px 1px;
 				}
 				&.twitter {
 					width: 32px;
-					margin-left: 103px;
+					margin-left: 30%+13.5*1;
 					background-position: -32px 1px;
 				}
 				
 				&.google_plus {
 					width: 32px;
-					margin-left: 135px;
+					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
 				}
 				
 				&.rss {
 					width: 30px;
-					margin-left: 167px;
+					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
 				}
 				
 				&.comments {
 					width: 32px;
-					margin-left: 200px;
+					margin-left: 30%+13.5*4;
 					background-position: -125px 2px;
 				}
 				
@@ -2000,6 +2006,35 @@ input[type=submit] {
 	width: 100%;
 	a:nth-last-child(2) li {
 		border-right: 1px solid $grey;
+	}
+	@include break(v-mobile){
+		a{
+			display: none;
+		}
+		a:nth-child(1){
+			display: inline;
+		}
+		a:nth-child(2){
+			display: inline;
+		}
+		a:nth-child(3){
+			display: inline;
+		}
+		a:nth-child(4){
+			display: inline;
+		}
+		a:nth-child(5){
+			display: inline;
+			li {
+				border-right: 1px solid $grey;
+			}
+			
+		}
+		a:nth-last-child(1){
+			display: inline;
+		}
+		
+		
 	}
 	ol { 
 	    counter-reset: item;

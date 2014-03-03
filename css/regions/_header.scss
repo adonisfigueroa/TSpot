@@ -1,4 +1,7 @@
 header {
+	.hoverOrange {
+		background-color: $orange;
+	}
 	$line-height: 43px;
 	position: fixed;
 	z-index: 10;
@@ -6,13 +9,26 @@ header {
 	top: 0;
 	line-height: $line-height;
 	height: $line-height;
-	#main-menu #dk_menu #SpecialHeightF {
-		.withHeader {
-			height: 335px !important;
-			@include break(tablet) {
-				height: 455px !important;
+	#main-menu #dk_menu{
+		#SpecialHeightF {
+			.nav-submenu {
+				height: 335px;
+				@include break(tablet) {
+					height: 455px;
+				}
+			}
+		}	
+		#SpecialHeightD {
+			.nav-submenu {
+				height: 300px
 			}
 		}
+	} 
+	.withHeader {
+		background-color: #8B9296 !important;	
+	}
+	#dk_menu {
+		height: 42px;
 	}
 	#main-menu #dk_menu > li {
 		margin-right: -4px;
@@ -21,6 +37,9 @@ header {
 		background: $dark-blue;
 		position: relative;
 		z-index: 2;
+		@include break(v-mobile){
+			border-bottom: 5px solid #105ab2;
+		}
 		.wrapper {
 			padding: 0;
 			line-height: $line-height;
@@ -32,6 +51,9 @@ header {
 				li {
 					display: inline-block;
 					line-height: $line-height;
+					@include break(mobile){
+							line-height: 52px;
+					}
 					a {
 						font-size: .7em;
 						font-weight: 300;
@@ -46,7 +68,7 @@ header {
 						position: relative;
 						@include break(mobile) {
 								padding-right: 0px;
-								background-position: 8px 9px;
+								background-position: 8px 15px;
 							}
 						
 						&:hover {
@@ -254,7 +276,7 @@ header {
 							background-color: black;
 							position: relative;
 							@include break(v-mobile){
-								background-position: center 10px;
+								background-position: center center;
 							}
 							
 							&:hover,
@@ -354,6 +376,11 @@ header {
             
 		}
 		#MobileMenu a {
+			padding-left:15px;
+			padding-right: 15px;
+			margin-left: -15px;
+			position: relative;
+			float: left;
 		    svg {
 		    	@include opacity(0);
 		    	display: none;
@@ -363,14 +390,12 @@ header {
 				height: $small-line-height;
 				line-height:$small-line-height; 
 				margin-top:3px;
-				width: 20px;
+				width: 15px;
+				height: 30px;
 				@include transitions (0.1s);
 				@include break(mobile){
 					display: block;
 					@include opacity(1);	
-				}
-				&:hover {
-					fill: $orange;
 				}	
 			}
 		}
@@ -396,7 +421,7 @@ header {
         & > ul {
   			& > li {
   				.nav-submenu {
-  					top: 48px;
+  					top: 42px;
   				}
   			}
 		}
@@ -497,11 +522,7 @@ header {
 				text-align: left;
 			}
 		}
-		.withHeader {
-			background-color: #8B9296 !important;
-			height: 300px !important;
-			
-		}
+		
 		
 		.wrapper {
 			@include break(v-tablet){
@@ -624,7 +645,7 @@ header {
 							font-weight: 500;
 							//position: relative;
 							&:first-child a {
-								padding: 0 30px 0 15px;
+								padding: 0 30px 0 10px;
 							}
 							a {
 								text-transform: none;
@@ -706,6 +727,11 @@ header {
 		
 	}
 	#MobileMenu a {
+		padding-left:15px;
+		padding-right: 15px;
+		margin-left: -15px;
+		position: relative;
+		float: left;
 	    svg {
 	    	@include opacity(0);
 	    	display: none;
@@ -715,15 +741,16 @@ header {
 			height: $line-height;
 			line-height:$line-height; 
 			margin-top:2px;
-			width: 20px;
+			width: 15px;
 			@include transitions (0.1s);
 			@include break(mobile){
+				height: 49px;
 				display: block;
 				@include opacity(1);
 			}
-			&:hover {
+			/*&:hover {
 				fill: $orange;
-			}
+			}*/
 		}
 	}
 	h1#logo {
@@ -742,6 +769,7 @@ header {
 	    @include transitions (0.1s);
 	    @include break(mobile){
 		    margin-left: 32px;
+		    height: 52px;
 	    }
 	    @include break(v-mobile){
 		    width: 150px;
@@ -760,14 +788,14 @@ header {
 	overflow: scroll;
 	overflow-x: hidden;
 	position: fixed;
-	background: $dark-grey;
+	background: #30373D;
 	display: none;
 	z-index: 0;
 	@include break(mobile){
 		display: block
 	}
 	#flyout-main-menu {
-		padding: 0px 10px;
+		padding: 0px 0px;
 		#logo {
 			text-indent: -9999px;
 			background-image: url(../images/logo-header.png);
@@ -776,22 +804,35 @@ header {
 			width: 189px; height: auto;
 			background-image: url(../images/logo-header-highres1.png);
 		    background-size: contain;
-		    height: 45px;
+		    height: 55px;
 		    line-height: 45px;
-		    width: 185px;
-		    margin-left: 5px;
-		    margin-bottom: 20px;
+		    width: 150px;
+		    margin-left: 14px;
+		    
 			a {
 				display: block;
 				width: 189px; height: 40px;
 			}
 	
 		}	
+		.wrapper {
+			width: 100%;
+		}
 		.wrapper ul li{
 			line-height: 50px;
 			width: 100%;
-			border-top: 1px solid $grey;
+			font-size: 0.95em;
+			font-weight: 600;
+			padding-left: 15px;
+			font-family: $f-condensed;
+			text-transform: uppercase;
+			border-top: 1px solid #555;
 			a {color: white;}
 		}
 	}
+}
+.activebar #MobileMenu a {
+	width: 100%;
+	height: 1000px;
+	position: absolute !important;
 }

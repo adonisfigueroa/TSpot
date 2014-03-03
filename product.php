@@ -6,10 +6,10 @@
 
 
 <div class="cta grey top-adverbox">
-	<div class="wrapper">
-		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
-	</div><!-- /.wrapper -->
-</div><!-- /.cta -->
+	<!--<div class="wrapper">
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
+	</div>-->
+</div>
 
 <hgroup>
 	<div class="wrapper">

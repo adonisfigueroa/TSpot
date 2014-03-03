@@ -44,7 +44,7 @@
 	
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="/js/jquery.sticky-kit.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.countup.js"></script>
+	<!--<script type="text/javascript" src="/js/jquery.countup.js"></script>-->
 	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="/js/custom.js"></script>
 	
@@ -74,7 +74,7 @@
 <header id="header"<?php if (in_array('interior', $body_classes)) : ?> class="interior"<?php endif; ?>>
 	<div class="header-top">
 		<div class="wrapper">
-			<div id="MobileMenu"><a href="#"><svg id="Stripes" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 50 50" xml:space="preserve">
+			<div id="MobileMenu"><a href="#"><svg id="Stripes" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 50 50" xml:space="preserve">
 					<rect class="a" width="50" height="7"></rect>
 					<rect class="b" y="20" width="50" height="7"></rect>
 					<rect class="c" y="40" width="50" height="7"></rect>
@@ -160,7 +160,7 @@
 				<li><a href="#" data-source="features">Features</a></li>
 				<li><a href="#" data-source="product-finder">Product Finder</a></li>
 				<li id="SpecialHeightF"><a href="#" data-source="forums">Forums</a></li>
-				<li><a href="#" data-source="downloads">Downloads</a></li>
+				<li id="SpecialHeightD"><a href="#" data-source="downloads">Downloads</a></li>
 			</ul>
 		</div><!-- /.wrapper -->
 		

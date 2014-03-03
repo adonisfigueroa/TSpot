@@ -62,6 +62,7 @@
 			</form>
 			
 		</div>
+		<!-- /.follow-subscribe -->
 		
 		<nav id="Abou" class="menu">
 			<h3>About TechSpot</h3>
@@ -98,7 +99,8 @@
 				<div class="form-submit"><input type="submit" name="action" value="subscribe"></div>
 			</form>
 			
-		</div><!-- /.follow-subscribe -->
+		</div>
+		<!-- /.follow-subscribe -->
 		
 		<div class="clearfix"></div>
 		

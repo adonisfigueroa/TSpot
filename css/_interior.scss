@@ -1,8 +1,8 @@
 body.interior {
 	header .menu .wrapper > ul > li a.active {
-		height: 55px !important;
+		height: 50px !important;
 		&:after {
-  			margin-top: -14px !important;
+  			margin-top: -13px !important;
   		}
 	}
 	background: white;
@@ -111,7 +111,7 @@ body.interior {
 			@include col(1,1,0);
 			margin-left: 0px;
 			padding-bottom: 20px;
-			border-bottom: 1px solid $grey;
+			
 		}
 		a {
 			font-weight: 400;
@@ -148,9 +148,17 @@ body.interior {
 				background: white;
 				font-size: .7em;
 				color: #666666;
+				&.prev, &.next{
+					&:hover {
+						span {
+							background-color: #666666;
+						}
+					}
+				}
 				
 				&.prev {
 					@include col(1,2,3);
+					
 					span {
 						background: #aeaeae;
 						@include transitions(0.1s);
@@ -164,9 +172,6 @@ body.interior {
 								width: 8px; height: 10px;
 								@include triangle(left,white,8,10);
 
-						}
-						&:hover {
-							background-color: #666666;
 						}
 						@include break(v-mobile){
 							font-size: 0;	
@@ -277,7 +282,7 @@ body.interior {
 				        margin-top: 0;
 			        }
 			        @include break(v-mobile) {
-				        font-size: 1.75em;
+				        font-size: 28px;
 			        }
 				}
 				em {
@@ -345,25 +350,34 @@ body.interior {
 					}
 					li {
 						overflow: visible;
-
+						display: none;
 						a {
 							color: #AAAAAA;
 							font-weight: 400;
 						}
-						
 						&:nth-child(2) {
 							a {
 								color: darken(#AAAAAA,30%);
 							}
+							display: block;
 						}
 						
 						&:nth-child(3) {
 							a {
 								color: darken(#AAAAAA,10%);
 							}
+							display: block;
 						}
-						
 					}
+					&:hover {
+						li {
+							display: block;
+							a {
+								color: #000;
+							}
+						}
+					}
+					
 				}
 				
 			}
@@ -419,8 +433,8 @@ body.interior {
 			  .social:hover {
 	      		  .SocialHover {
 					right: -100px;
-					@include break(mobile){
-						right: auto !important;
+					@include break(v-mobile){
+						right: 0 !important;
 						top:auto !important;
 					}
 				}
@@ -443,10 +457,10 @@ body.interior {
 	  		}
   		}
   		#mobComBut {
-  			
+  			/*border-top: 1px solid $grey;*/
 	  		display: none;
 	  		text-align: center;
-	  		padding-top: 5px;
+	  		padding-top: 20px;
 	  		padding-bottom: 50px;
 	  		background-color: $light-grey;
 	  		@include break(mobile){
@@ -1477,7 +1491,13 @@ body.interior {
 					width: 250px;
 				}
 			}
-			
+			.page-nav{
+				@include break(tablet){
+					a {
+					font-size: 24px;
+					}
+				}
+			}
 			
 		}
 	}
