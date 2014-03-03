@@ -788,7 +788,7 @@ header {
 	overflow: scroll;
 	overflow-x: hidden;
 	position: fixed;
-	background: #30373D;
+	background: #2F373D;
 	display: none;
 	z-index: 0;
 	@include break(mobile){
@@ -806,28 +806,30 @@ header {
 		    background-size: contain;
 		    height: 55px;
 		    line-height: 45px;
-		    width: 150px;
+		    width: 160px;
 		    margin-left: 14px;
-		    
+		    margin-bottom: 6px;
+		    margin-top: 5px; 
 			a {
 				display: block;
 				width: 189px; height: 40px;
 			}
 	
-		}	
+		}
 		.wrapper {
 			width: 100%;
 		}
-		.wrapper ul li{
+    		.wrapper ul li{
 			line-height: 50px;
 			width: 100%;
-			font-size: 0.95em;
-			font-weight: 600;
-			padding-left: 15px;
-			font-family: $f-condensed;
-			text-transform: uppercase;
 			border-top: 1px solid #555;
-			a {color: white;}
+			padding-left: 15px;
+			a {
+				color: white;
+				text-transform: uppercase;
+				font-size: 0.95em;
+				font-family: Roboto Condensed;
+			}
 		}
 	}
 }
