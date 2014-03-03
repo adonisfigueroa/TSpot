@@ -280,9 +280,10 @@ body.interior {
 			        letter-spacing: -0.333px;
 			        @include break(mobile) {
 				        margin-top: 0;
+				        font-size: 1.9em;
 			        }
 			        @include break(v-mobile) {
-				        font-size: 28px;
+				        font-size: 1.6em;
 			        }
 				}
 				em {
