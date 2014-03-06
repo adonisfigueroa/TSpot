@@ -232,7 +232,7 @@ body.interior {
 					text-align: center;
 					color: white;
 					background: #676767;
-					@include transitions();
+					
 					&:after {
 						//display: none;
 						margin-top: -7px;
@@ -365,7 +365,13 @@ body.interior {
 						
 						&:nth-child(3) {
 							a {
-								color: darken(#AAAAAA,10%);
+								color: darken(#AAAAAA,15%);
+							}
+							display: block;
+						}
+						&:nth-child(4) {
+							a {
+								color: darken(#AAAAAA,5%);
 							}
 							display: block;
 						}
@@ -570,7 +576,7 @@ body.interior {
         	color: black;
         	font-weight: 300;
         	font-size: 1.1em;
-        	@include transitions();
+        	
         	
         	&:hover {
           	background: darken(#F8F8F8,5%);
@@ -641,7 +647,10 @@ body.interior {
 			width: 100%;
 			article {
 				padding: 0px 2%;
-				height: 80px;
+				height: 70px;
+				@include break(v-mobile){
+					padding: 7px 2%
+				}
 				/*width: 100%;*/
 				border-bottom: 1px solid #F1F1F1;
 				border-top: 1px solid #EAEAEA;
@@ -659,17 +668,20 @@ body.interior {
 				float: left;
 				margin-left: 8px;
 				h4 {
-					margin-top: 17px;
+					margin-top: 14px;
 					font-size: 1.1em;
 					@include break(mobile){
 						font-size:1em;
 						margin-top: 8px;
 					}
 					@include break(v-mobile){
-						font-size:0.7em;
+						font-size:0.8em;
 						margin-top: 8px;
 					}
 
+				}
+				.ProdListCat {
+					display: inline-block;
 				}
 				.ProdListCat a {
 					font-size: 0.6em;
@@ -682,7 +694,7 @@ body.interior {
 					font-weight: 800;
 					color: white;
 					@include border-radius(2px);
-					display: inline-block;
+					display: block;
 					margin-right: 10px;
 					@include break(v-tablet){
 						width: 80px;
@@ -695,19 +707,20 @@ body.interior {
 						font-size: 0.5em;
 						margin-top: 4px;
 						margin-bottom: 4px;
-						display: block;
+						
 					}
 				}
 				time {
 					font-size: 0.7em;
 					color: #666666;
+					display: inline-block;
 					@include break(v-tablet){
 						font-size: 0.6em;
 					}
-					@include break(v-mobile){
+					@media screen and (max-width:530px){
 						position: absolute;
-						left: 4%;
 						margin-top: 11px;
+						display: none;
 					}
 					
 				}
@@ -715,8 +728,8 @@ body.interior {
 			.prod-meta{
 				float: right;
 				display: inline-block;
-				line-height: 80px;
-				height: 80px;
+				line-height: 70px;
+				height: 70px;
 				.intRank{
 					color:$purple;
 					font-weight: 600;
@@ -748,19 +761,22 @@ body.interior {
 					@include break(v-mobile){
 						right: 90px;
 						position: absolute;
+						display: none;
 					}
 				}
 				.review_score{
 					width: 65px;
-					margin-top: 12px;
+					margin-top: 7px;
 					height: 55px;
 					float: right;
 					display: inline-block;
 					text-align: center;
 					@include border-radius(4px);
+					
 					.score {
 						color: white;
 						line-height: 40px;
+						font-family: Arial, Helvetica, sans-serif;
 					}
 					.review{
 						color: white;
@@ -1083,7 +1099,7 @@ body.interior {
 			font-size: 0.7em;
 			font-weight: 600;
 			line-height: 31px;
-			
+			overflow: hidden;
 			span {
   			margin-right: 5px;
 			}

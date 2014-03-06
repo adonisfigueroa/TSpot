@@ -4,6 +4,16 @@ body.interior.download {
       width: 100%;
       float: none;
     }
+    .title-group {
+    	@include break(mobile){
+	 	h1 {
+		 	font-size: 1.5em !important;
+	 	}   
+	 	h2 {
+		 	font-size: 0.9em !important;
+	 	}
+	 	}
+    }
     .publisher-description {
       ul {
         margin-left: 0;

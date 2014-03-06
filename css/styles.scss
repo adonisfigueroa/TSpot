@@ -221,7 +221,7 @@ h1 {
 				  font-family: $f-helvetica;
 				  line-height: 1.333;
 				  font-size: 105%;
-					@include transitions();
+					
 					&:hover {
 						color: $red;
 					}
@@ -497,7 +497,7 @@ h3.longtype {
 			@include clearfix(after);
 			
 			a {
-				@include transitions();
+				
 				
 				span.img-wrap {
 					img {
@@ -641,7 +641,7 @@ h3.longtype {
       
       h3 {
         font-size: 1.1em;
-        @include transitions();
+        
       }
       
       strong {
@@ -1977,7 +1977,7 @@ input[type=submit] {
   }
   
 }
-//Related products or Products.php
+//Related products or Product.php
 .product .also-looked-at .teaser-list li{
 	@include break(v-mobile){
 		@include col(1,1,0);
@@ -2102,6 +2102,9 @@ input[type=submit] {
 		}
 	}
 }
+.products-cat time{
+	display: block !important;
+}
 
 ul.pills {
   li {
@@ -2142,3 +2145,4 @@ ul.pills {
     
   }
 }
+
