@@ -37,6 +37,14 @@
 		
 		border-right: #{$height}px solid $color; // determines height
 	}
+	@else if $direction == 'downComm' {
+		width: 0; 
+		height: 0; 
+		border-left: 0px solid transparent;
+		border-right: #{$width}px solid transparent;
+		
+		border-top: #{$height}px solid $color; // determines height
+	} 
 }
 
 
