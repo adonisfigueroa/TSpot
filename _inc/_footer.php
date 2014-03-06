@@ -105,7 +105,8 @@
 		<div class="clearfix"></div>
 		
 		<div class="copyright">
-			&copy; 2013 TechSpot, Inc. All Rights Reserved <a href="#">Terms of Use</a> <a href="#">Privacy Policy</a><a href="#">Powered by Turbobytes CDN</a>
+			<p>&copy; 2013 TechSpot, Inc. All Rights Reserved.</p>
+			<p>TechSpot is a registered trademark. <a href="#">Terms of Use</a> <a href="#">Privacy Policy</a><a href="#">Powered by Turbobytes CDN</a></p>
 		</div>
 		
 		<a href="#" class="back-to-top">Back to Top</a>

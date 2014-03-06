@@ -962,6 +962,7 @@ ul.category-chicklets {
 			font-size: .55em;
 			font-weight: 450;
 			letter-spacing: 0.50px;
+			-webkit-font-smoothing: subpixel-antialiased;
 		}
 		
 		&.electronics {

@@ -3,7 +3,7 @@ footer {
 	position: relative;
 	
 	.wrapper {
-		padding: 80px 0 50px;
+		padding: 80px 0 30px;
 		@include break(v-mobile){
 			padding: 30px 0px 10px 0px; 
 		}
@@ -26,7 +26,7 @@ footer {
 		font-size: .8em;
 		
 		h3 {
-			margin-top: 30px;
+			margin: 30px 0 10px 0;
 		}
 		.form-email {
 			@include col(2,3,1);
@@ -36,15 +36,16 @@ footer {
 				padding: 0;
 				border: none;
 				border: 1px solid $grey;
-				padding: 0 5%;
+				padding: 0 4%;
 				font-style: italic;
+				font-size: 0.8em;
 				@include outer-glow(0);
 			}
 		}
 		.form-submit {
 			@include col-last(1,3,1);
 			input {
-				line-height: 31px;
+				line-height: 30px;
 				padding: 0;
 				display: block;
 				background: $blue;
@@ -52,8 +53,9 @@ footer {
 				border: none;
 				width: 100%;
 				padding: 0 5%;
+				margin-top: 3px;
 				text-transform: uppercase;
-				font-size: 0.85em
+				font-size: 0.8em
 			}
 		}
 	}
@@ -73,10 +75,10 @@ footer {
 				line-height: 25px;
 				a {
 					font-weight: 200;
-					@include transitions();
+					/* @include transitions(); */
 					&:hover {
-						color: black;
-						padding-left: 5px;
+						border-bottom: 1px solid #3470AA;
+						padding-bottom: 1px;
 					}
 				}
 			}
@@ -128,13 +130,13 @@ footer {
 					width: 40px; height: 40px;
 					text-indent: -9999px;
 					margin: 0px 12.5px 12.5px 0px;
-					@include transitions(0.2s);
+					@include transitions(0.1s);
 					background-size: 25px 25px;
 					background-repeat: no-repeat;
 					background-position: center center;
 					
 					&:hover {
-						@include opacity(.9);
+						/* @include opacity(.9); */
 						-webkit-transform: rotate(-10deg);
 						-moz-transform: rotate(-10deg);
 						transform: rotate(-10deg);
@@ -215,15 +217,21 @@ footer {
 	}
 	
 	.copyright {
-		margin-top: 75px;
+		margin-top: 65px;
 		font-size: .6em;
+		font-weight: 100;
 		
+		p {
+			margin: 10px 0;
+		}
 		a {
 			display: inline-block;
-			margin-left: 50px;
+			margin-left: 20px;
 			color: black;
 			&:hover {
-				text-decoration: underline;
+				border-bottom: 1px solid #555;
+				padding-bottom: 1px;
+				text-decoration: none;
 			}
 		}
 		

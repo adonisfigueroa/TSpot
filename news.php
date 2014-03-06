@@ -6,7 +6,7 @@
 
 <div class="cta grey top-adverbox">
 	<div class="wrapper">
-		<!--<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />-->
+		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
 	</div>
 </div>
 
@@ -18,7 +18,7 @@
 		</ul>
 		
 		<section class="title-group">
-			<h1 class="large">Chrome used more than Firefox, Opera and Internet Explorer combined</h1>
+			<h1 class="large">Apple unveils CarPlay, calls it "the best iPhone experience on four wheels"</h1>
 			<em>By <a href="#">Steven Walton</a> on January 10, 2014, 6:45 PM</em>
 		</section>
 	</div><!-- /.wrapper -->
@@ -27,7 +27,7 @@
 <section id="content">
 	<div class="wrapper">
 		<div class="col-2-3">
-			<img src="images/samsung.jpg" alt="samsung" width="759" height="407" class="intro-image" />
+			<img src="http://static.techspot.com/images2/news/bigimage/2014-03-03-image-6.jpg" alt="samsung" width="759" height="407" class="intro-image" />
 			<div class="wrapperMobileOnly">
 			<div class="clearfix"></div>
 			
@@ -51,25 +51,19 @@
 			</div><!-- /.social-column -->
 			
 			<article>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-				
-				<div class="highlights">
-				<h3>Nokia Lumia 925 - <a href="#">$590 (unlocked)</a></h3>
-				
-				<ul>
-					<li>4.5-inch, 1280 x 768 AMOLED display (334 ppi)</li>
-					<li>Super sensitive touch, Gorilla Glass 2</li>
-					<li>Qualcomm Snapdragon S4 MSM8960 chipset</li>
-					<li>1.5 GHz dual-core CPU, Adreno 225 GPU, 1 GB RAM</li>
-					<li>16 GB internal <a href="#" id="itxthook1" rel="nofollow" class="itxtrst itxtrsta itxthook" style="font-weight: normal; font-size: 100%; font-style: normal; text-decoration: none; border: 0px none transparent; padding: 0px; background-color: transparent; background-image: none; display: inline;"><span id="itxthook1w" class="itxtrst itxtrstspan itxtnowrap" style="font-weight: normal; font-size: 100%; text-decoration: underline; border-bottom-color: rgb(0, 74, 175); border-bottom-width: 0.075em; border-bottom-style: solid; padding-bottom: 1px !important; color: rgb(0, 74, 175); background-color: transparent;">storage</span></a></li>
-					<li>8.7 MP camera, Zeiss f/2.0 lens, dual LED flash, OIS, 1080p video</li>
-					<li> 2,000 mAh, 8.4 Wh internal battery</li>
-					<li> LTE, Wi-Fi a/b/g/n, Bluetooth 3.0, NFC</li>
-					<li>Windows Phone 8</li>
-					<li>139 grams, 8.5mm thick</li>
-				</ul>
-			</div>
-				
+<p>
+	Today at the Geneva Motor Show Apple <a href="http://www.apple.com/pr/library/2014/03/03Apple-Rolls-Out-CarPlay-Giving-Drivers-a-Smarter-Safer-More-Fun-Way-to-Use-iPhone-in-the-Car.html">unveiled</a> a new service that aims to provide better connectivity between the car and the driver&#39;s iPhone. Dubbed <a href="https://www.apple.com/ios/carplay/">CarPlay</a>, the service allows drivers to make calls, access contacts, use maps, listen to music, and more, without taking their hands from the steering wheel.&nbsp;Ferrari, Mercedes-Benz, and Volvo are showcasing the service at Geneva this week with CarPlay-enabled vehicles shipping this same month.</p>
+<p>
+	&ldquo;iPhone users always want their content at their fingertips and CarPlay lets drivers use their iPhone in the car with minimized distraction&quot;, said Greg Joswiak, Apple&rsquo;s vice president of iPhone and iOS Product Marketing.</p>
+<p>
+	Drivers can read messages and dictate responses through Apple&#39;s voice-activated Siri software, which is activated by pressing the voice control button on the car&#39;s steering wheel. The service can also predict destinations based upon addresses found in your email, texts, contacts, and calendars.</p>
+<p>
+	The service also allows you to play music through the car&#39;s speakers. Besides iTunes Radio, you can also access a number of third-party music-streaming apps including Spotify, Stitcher, iHeartRadio, and Beats Radio. You can also control CarPlay from the car&rsquo;s native interface.</p>
+<p>
+	According to Apple, in addition to the three car companies aforementioned BMW, Ford, General Motors, Honda, Hyundai, Jaguar, Land Rover, Kia, Mitsubishi, Nissan, Peugeot, Citro&euml;n, Subaru, Suzuki and Toyota will also integrate the service &quot;down the road.&quot; The CarPlay service is available as an update to iOS 7 and works with Lightning-enabled iPhones including iPhone 5s, iPhone 5c, and iPhone 5.</p>
+<p>
+	<img src="http://static.techspot.com/images2/news/bigimage/2014-03-03_11-31-08.jpg" /></p>
+
 				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 				
 				<h3>Header 3</h3>
@@ -79,11 +73,7 @@
 				<h4>Header 4</h4>
 				
 				<p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-				
-				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-				
-				<P>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-				
+
 				<div class="comment-count-block">
 					<a href="#">
 						<span class="comment-count">15 comments</span>
@@ -100,11 +90,11 @@
 			<nav class="page-nav prev-next">
 				<a href="#" class="prev">
 					<span>Prev</span>
-					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
+					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Mt. Gox sets up call center after $400 million Bitcoin go missing</div></div></strong>
 				</a>
 				<a href="#" class="next">
 					<span>Next</span>
-					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Software: Enter Andriod 4.4 'KitKat'</div></div></strong>
+					<strong><div class="page-nav-wrapper"><div class="page-nav-interior">Cortana is Microsoft's answer to Siri, will arrive in Windows Phone 8.1 update</div></div></strong>
 				</a>
 			</nav><!-- /.page-nav -->
 			
