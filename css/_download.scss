@@ -5,13 +5,11 @@ body.interior.download {
       float: none;
     }
     .title-group {
-    	@include break(mobile){
 	 	h1 {
-		 	font-size: 1.5em !important;
+		 	font-size: 1.5em;
 	 	}   
 	 	h2 {
-		 	font-size: 0.9em !important;
-	 	}
+		 	font-size: 0.9em;
 	 	}
     }
     .publisher-description {
