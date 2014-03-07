@@ -216,6 +216,11 @@ h1 {
 			@include break(v-mobile) {
 				width: 100%;
 			}
+			
+			.no_image {
+			width: 98.2%;
+			}
+			
 			h2 {
 				a {
 				  font-family: $f-helvetica;
