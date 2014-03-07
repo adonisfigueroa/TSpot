@@ -772,11 +772,11 @@ header {
 		    height: 52px;
 	    }
 	    @include break(v-mobile){
-		    width: 150px;
+		    width: 160px;
 	    }
 		a {
 			display: block;
-			width: 189px; height: 27px;
+			width: 189px; height: $line-height;
 			line-height: $line-height;
 		}
 		
