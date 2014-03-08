@@ -2395,6 +2395,10 @@ header {
                   display: block;
                   margin-bottom: 5px;
                   margin-right: 15px; }
+                header .header-top .right-links ul li.login .login-dropdown .login form .login_error {
+                  color: #c00;
+                  font-size: 12px;
+                  padding: 15px 0px 0px; }
         header .header-top .right-links ul li.social {
           background-image: url(/images/social-sprite.svg);
           background-repeat: no-repeat;
@@ -2439,11 +2443,11 @@ header {
                 float: right;
                 display: inline;
                 margin: 5px 80px 0 0; }
-              header .header-top .right-links ul li.social.group .social-dropdown .fb {
+              header .header-top .right-links ul li.social.group .social-dropdown .fb a {
                 color: #0059B2; }
-              header .header-top .right-links ul li.social.group .social-dropdown .gp {
+              header .header-top .right-links ul li.social.group .social-dropdown .gp a {
                 color: #B21A00; }
-              header .header-top .right-links ul li.social.group .social-dropdown .tw {
+              header .header-top .right-links ul li.social.group .social-dropdown .tw a {
                 color: #00A3D8; }
               header .header-top .right-links ul li.social.group .social-dropdown .yt a {
                 color: #8C2200; }
@@ -5757,10 +5761,16 @@ hgroup.featured-image {
     hgroup.featured-image .title-group em {
       color: white;
       text-shadow: 1px 1px 5px black;
-      font-weight: 100;
-      font-size: .8em;
+      font-weight: 400;
+      font-size: .7em;
       font-style: normal;
-      font-family: "Myriad Pro", Verdana, sans-serif; }
+      font-family: "Myriad Pro", Verdana, sans-serif;
+      padding-left: 5px a;
+        padding-left-color: white;
+        padding-left-border-bottom: 1px solid #ccc;
+        padding-left-padding-bottom: 3px; }
+      hgroup.featured-image .title-group em:hover {
+        border-bottom: 1px solid #ff7f00; }
   hgroup.featured-image .rating {
     font-family: "Helvetica Neue", Arial, Helvetica;
     position: absolute;
@@ -7003,3 +7013,7 @@ ul.pills li {
     background: #888; }
     ul.pills li.grey:hover {
       background: #27333D; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important; }

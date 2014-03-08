@@ -954,10 +954,20 @@ hgroup.featured-image {
 		em {
 			color: white;
 			text-shadow: 1px 1px 5px black;
-			font-weight: 100;
-			font-size: .8em;
+			font-weight: 400;
+			font-size: .7em;
 			font-style: normal;
 			font-family: $f-secondary;
+			padding-left: 5px
+
+			a {
+				color: white;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 3px;
+			}
+			&:hover {
+				border-bottom: 1px solid $orange;
+			}
 		}		
 	}
 	
@@ -2205,4 +2215,7 @@ ul.pills {
     
   }
 }
-
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
