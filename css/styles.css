@@ -476,14 +476,6 @@ body.interior {
     body.interior .ListHeader h3 {
       color: white;
       line-height: 35px; }
-  body.interior .post-load-more {
-    margin: 20px 0px;
-    width: 100%;
-    border: 1px solid #BABEC1;
-    line-height: 45px;
-    text-align: center;
-    font-weight: 200;
-    background-color: #F8F8F8; }
   body.interior .ShowOnly {
     max-width: 660px;
     width: 96%;
@@ -2381,9 +2373,9 @@ header {
                 width: 250px; } }
             header .header-top .right-links ul li.login .login-dropdown .pad {
               display: block;
-              padding: 9px 12px; }
-              header .header-top .right-links ul li.login .login-dropdown .pad .top {
-                margin-top: 12px; }
+              padding: 10px 13px; }
+            header .header-top .right-links ul li.login .login-dropdown .top {
+              margin-top: 12px; }
             header .header-top .right-links ul li.login .login-dropdown h4 {
               font-size: 0.9em;
               font-weight: 400;
@@ -6860,6 +6852,15 @@ input[type=submit] {
   .article #content .wrapperMobileOnly {
     width: 94%;
     padding: 0 3%; } }
+
+.post-load-more {
+  margin: 20px 0px;
+  width: 100%;
+  border: 1px solid #BABEC1;
+  line-height: 45px;
+  text-align: center;
+  font-weight: 200;
+  background-color: #F8F8F8; }
 
 .comments-pager {
   margin: 35px 0px 100px 0px;
