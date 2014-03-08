@@ -958,15 +958,18 @@ hgroup.featured-image {
 			font-size: .7em;
 			font-style: normal;
 			font-family: $f-secondary;
-			padding-left: 5px
+			padding-left: 5px;
 
-			a {
-				color: white;
-				border-bottom: 1px solid #ccc;
-				padding-bottom: 3px;
-			}
-			&:hover {
-				border-bottom: 1px solid $orange;
+			.author {
+				a {
+					color: white;
+					border-bottom: 1px solid #ccc;
+					padding-bottom: 3px;
+				}
+				&:hover {
+					padding-bottom: 3px;
+					border-bottom: 1px solid $orange;
+				}
 			}
 		}		
 	}
@@ -976,12 +979,12 @@ hgroup.featured-image {
 		position: absolute;
 		bottom: 25px;
 		right: 0;
-		font-size: 3.333em;
-		font-weight: 600;
+		font-size: 3.1em;
+		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 115px;
-		padding: 0 28px;
+		line-height: 105px;
+		padding: 0 24px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
 		span {

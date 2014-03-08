@@ -5765,23 +5765,25 @@ hgroup.featured-image {
       font-size: .7em;
       font-style: normal;
       font-family: "Myriad Pro", Verdana, sans-serif;
-      padding-left: 5px a;
-        padding-left-color: white;
-        padding-left-border-bottom: 1px solid #ccc;
-        padding-left-padding-bottom: 3px; }
-      hgroup.featured-image .title-group em:hover {
+      padding-left: 5px; }
+      hgroup.featured-image .title-group em .author a {
+        color: white;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 3px; }
+      hgroup.featured-image .title-group em .author:hover {
+        padding-bottom: 3px;
         border-bottom: 1px solid #ff7f00; }
   hgroup.featured-image .rating {
     font-family: "Helvetica Neue", Arial, Helvetica;
     position: absolute;
     bottom: 25px;
     right: 0;
-    font-size: 3.333em;
-    font-weight: 600;
+    font-size: 3.1em;
+    font-weight: 500;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    line-height: 115px;
-    padding: 0 28px;
+    line-height: 105px;
+    padding: 0 24px;
     background-color: rgba(22, 176, 41, 0.8);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC16B029,endColorstr=#CC16B029);
     -webkit-border-radius: 5px 5px 5px 5px;
