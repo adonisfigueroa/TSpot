@@ -210,10 +210,6 @@ h1 {
 			}
 		}
 		
-		.no_image {
-			width: 98.2%;
-		}
-		
 		.article-content {
 			@include col-last(3,5,2);
 			width: 68.2%;
@@ -311,6 +307,10 @@ h1 {
 				}
 			}
 			
+		}
+		
+		.no_image {
+			width: 100% !important;
 		}
 		
 	}
