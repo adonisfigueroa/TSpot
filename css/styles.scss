@@ -455,8 +455,7 @@ h1 {
 	width: 300px;
 	text-align: center;
 	padding-top: 5px;
-	padding-bottom: 0px;
-	margin-bottom: 15px;
+	padding-bottom: 25px;
 }
 
 h3.section-header {
@@ -527,8 +526,7 @@ h3.longtype {
 	
 	
 	ul.teaser-list {
-		padding-top: 15px;
-		padding-bottom: 30px;
+		padding: 10px 0 15px;
 		li {
 			margin-bottom: 15px;
 			@include clearfix(before);
@@ -543,9 +541,9 @@ h3.longtype {
 					@include col(5,11,5);
 				}
 				span {
-					font-size: .8em;
+					font-size: .85em;
 					font-weight: 500;
-					padding: 8px 0;
+					padding: 8px 0 0;
 					@include col-last(6,11,5);
 				}
 				
@@ -556,9 +554,9 @@ h3.longtype {
 			}
 			span {
 				a {
-					font-size: .8em;
+					font-size: .7em;
 					font-weight: 500;
-					color: #222;
+					color: #666;
 				}
 			}
 		}
