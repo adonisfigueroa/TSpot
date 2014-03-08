@@ -276,6 +276,10 @@ h1 {
 					padding-left: 15px;
 					margin-right: 10px;
 					
+					&:hover {
+						color: $red;
+					}
+					
 					&.read-more {
 						background-image: url(../images/read-more-arrow.svg);
 					}
@@ -313,6 +317,9 @@ h1 {
 			width: 100% !important;
 		}
 		
+	}
+	article:last-of-type {
+		border-bottom: none;
 	}
 }
 
@@ -442,7 +449,14 @@ h1 {
 			}
 		}
 	}
+}
 
+.adblock {
+	width: 300px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
 }
 
 h3.section-header {
@@ -2029,11 +2043,15 @@ input[type=submit] {
 .post-load-more {
 	margin: 20px 0px;
 	width: 100%;
-	border: 1px solid #BABEC1;
+	border: 1px solid #dcdcdc;
 	line-height: 45px;
 	text-align: center;
-	font-weight: 200;
+	font-weight: 400;
 	background-color: #F8F8F8;
+}
+.post-load-more:hover {
+	background: #f6f6f6;
+	border: 1px solid #ccc;
 }
 
 .comments-pager{
