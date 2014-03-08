@@ -5162,6 +5162,8 @@ h1 {
       @media only screen and (max-width: 500px) {
         .post-list article .article-img img {
           width: 100%; } }
+  .post-list article .no_image {
+    width: 98.2%; }
   .post-list article .article-content {
     width: 59.2%;
     margin-right: 0%;
@@ -5176,8 +5178,6 @@ h1 {
     @media only screen and (max-width: 500px) {
       .post-list article .article-content {
         width: 100%; } }
-    .post-list article .article-content .no_image {
-      width: 98.2%; }
     .post-list article .article-content h2 a {
       font-family: "Helvetica Neue", Arial, Helvetica;
       line-height: 1.333;
@@ -5242,7 +5242,24 @@ h1 {
               font-family: "Helvetica Neue", Arial, Helvetica;
               font-size: 90%;
               background: #105ab2;
-              color: white; }
+              color: white;
+              -webkit-font-smoothing: subpixel-antialiased; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .download-list,
 .forum-list {
