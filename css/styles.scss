@@ -535,8 +535,6 @@ h3.longtype {
 			@include clearfix(after);
 			
 			a {
-				
-				
 				span.img-wrap {
 					img {
 						width: 100%;
@@ -544,10 +542,10 @@ h3.longtype {
 					}
 					@include col(5,11,5);
 				}
-				p {
+				span {
 					font-size: .8em;
 					font-weight: 500;
-					padding-top: 8px;
+					padding: 8px 0;
 					@include col-last(6,11,5);
 				}
 				
@@ -555,6 +553,13 @@ h3.longtype {
 					color: $red;
 				}
 				
+			}
+			span {
+				a {
+					font-size: .8em;
+					font-weight: 500;
+					color: #222;
+				}
 			}
 		}
 		
