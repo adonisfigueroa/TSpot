@@ -539,7 +539,7 @@ header {
 					text-transform: uppercase;
 					font-weight: 400;
 					&:first-child a{
-						padding: 0 34px 0 5px;
+						padding: 0 32px 0 5px;
 					}
 					@include break(v-tablet) {
 						margin-right: 0px;
@@ -548,11 +548,11 @@ header {
 						color: white;
 						position: relative;
 						display: block;
-						padding: 0 30px 0 15px;
+						padding: 0 32px 0 15px;
 						margin-top: 0px;
 						
 						@include break(tablet){
-							padding: 0 34px 0 10px;
+							padding: 0 32px 0 10px;
 						}
 						
 						&:after {
