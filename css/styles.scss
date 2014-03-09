@@ -965,10 +965,11 @@ hgroup.featured-image {
 					color: white;
 					border-bottom: 1px solid #ccc;
 					padding-bottom: 3px;
-				}
-				&:hover {
-					padding-bottom: 3px;
-					border-bottom: 1px solid $orange;
+
+					&:hover {
+						border-bottom: 1px solid $orange;
+						padding-bottom: 3px;
+					}
 				}
 			}
 		}		
@@ -1106,6 +1107,10 @@ ul.category-chicklets {
 				line-height: 35px;
 			}
 			&:hover {
+
+				background-color: #FFECD8;
+				transition: background 0.15s;
+
 				.SocialHover {
 				width: 100px;
 				height: 100%;
@@ -1209,6 +1214,7 @@ ul.category-chicklets {
 		strong {
 			color: white;
 			background: $orange;
+			transition: background 0.1s;
 		}
 		section {
 			display: block;

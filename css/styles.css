@@ -2607,7 +2607,7 @@ header {
     header .menu .SubHeader {
       background: #777D82;
       text-align: center;
-      /*box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15); */ }
+      box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15); }
       header .menu .SubHeader li {
         text-align: center;
         margin: 0px 15px;
@@ -2717,7 +2717,7 @@ header {
         margin-left: -5%;
         background: #777D82;
         height: 250px;
-        /*box-shadow:0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15); */ }
+        box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 3px 5px 1px rgba(0, 0, 0, 0.15); }
         header .menu .wrapper > ul > li .nav-submenu .wrapper {
           padding: 30px 0; }
           @media only screen and (max-width: 1100px) {
@@ -5770,9 +5770,9 @@ hgroup.featured-image {
         color: white;
         border-bottom: 1px solid #ccc;
         padding-bottom: 3px; }
-      hgroup.featured-image .title-group em .author:hover {
-        padding-bottom: 3px;
-        border-bottom: 1px solid #ff7f00; }
+        hgroup.featured-image .title-group em .author a:hover {
+          border-bottom: 1px solid #ff7f00;
+          padding-bottom: 3px; }
   hgroup.featured-image .rating {
     font-family: "Helvetica Neue", Arial, Helvetica;
     position: absolute;
@@ -5879,19 +5879,22 @@ ul.category-chicklets {
       display: block;
       text-indent: -9999px;
       line-height: 35px; }
-    .social-widget li.social:hover .SocialHover {
-      width: 100px;
-      height: 100%;
-      position: absolute;
-      z-index: 99999999;
-      background-color: white;
-      right: 60px;
-      top: 0;
-      display: block; }
-      @media only screen and (max-width: 500px) {
-        .social-widget li.social:hover .SocialHover {
-          right: 0 !important;
-          top: auto !important; } }
+    .social-widget li.social:hover {
+      background-color: #FFECD8;
+      transition: background 0.15s; }
+      .social-widget li.social:hover .SocialHover {
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        z-index: 99999999;
+        background-color: white;
+        right: 60px;
+        top: 0;
+        display: block; }
+        @media only screen and (max-width: 500px) {
+          .social-widget li.social:hover .SocialHover {
+            right: 0 !important;
+            top: auto !important; } }
     @media only screen and (max-width: 500px) {
       .social-widget li.social.facebook {
         width: 32px;
@@ -5952,7 +5955,8 @@ ul.category-chicklets {
         list-style-type: decimal-leading-zero; }
   .article-index:hover strong {
     color: white;
-    background: #ff7f00; }
+    background: #ff7f00;
+    transition: background 0.1s; }
   .article-index:hover section {
     display: block; }
 
