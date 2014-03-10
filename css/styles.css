@@ -519,14 +519,25 @@ body.interior {
     font-weight: 400;
     color: #222; }
     body.interior article h2 {
-      font-weight: 600;
-      font-size: 180%;
-      line-height: 2.5;
-      color: #222; }
+      font-weight: 500;
+      font-size: 1.8em;
+      line-height: 1.4;
+      color: #222;
+      padding: 10px 0 20px; }
     body.interior article h3 {
-      color: #105ab2; }
+      /* color: $blue; */
+      font-weight: 500;
+      font-size: 1.5em;
+      line-height: 1.4;
+      color: #222;
+      padding: 5px 0 10px; }
     body.interior article h4 {
-      color: #bbbbbb; }
+      color: #105ab2;
+      font-weight: 400;
+      font-size: 1.3em;
+      line-height: 1.4;
+      color: #222;
+      padding: 5px 0 10px; }
     body.interior article ul {
       margin-left: 5%; }
       body.interior article ul li {
@@ -5820,10 +5831,36 @@ ul.category-chicklets {
       font-weight: 450;
       letter-spacing: 0.50px;
       -webkit-font-smoothing: subpixel-antialiased; }
-    ul.category-chicklets li.electronics {
-      background-color: #00B22D; }
+    ul.category-chicklets li.apple {
+      background-color: #A1B8D9; }
+    ul.category-chicklets li.gaming {
+      background-color: #990000; }
     ul.category-chicklets li.hardware {
-      background-color: #D90000; }
+      background-color: #00B22D; }
+    ul.category-chicklets li.industry {
+      background-color: #2A288A; }
+    ul.category-chicklets li.security {
+      background-color: #CBA746; }
+    ul.category-chicklets li.microsoft {
+      background-color: #00A2F2; }
+    ul.category-chicklets li.mobile {
+      background-color: #CC3333; }
+    ul.category-chicklets li.software {
+      background-color: #5A00B5; }
+    ul.category-chicklets li.web {
+      background-color: #FF7F00; }
+    ul.category-chicklets li.techspot {
+      background-color: #1E2933; }
+    ul.category-chicklets li.blog {
+      background-color: #AAAAAA; }
+    ul.category-chicklets li.dotw {
+      background-color: #00B22D; }
+    ul.category-chicklets li.natw {
+      background-color: #BBBBBB; }
+    ul.category-chicklets li.deals {
+      background-color: #779954; }
+    ul.category-chicklets li.wof {
+      background-color: #00B22D; }
 
 .social-widget {
   width: 60px;
@@ -5881,7 +5918,7 @@ ul.category-chicklets {
       line-height: 35px; }
     .social-widget li.social:hover {
       background-color: #FFECD8;
-      transition: background 0.15s; }
+      transition: background 0.1s; }
       .social-widget li.social:hover .SocialHover {
         width: 100px;
         height: 100%;
@@ -5947,12 +5984,16 @@ ul.category-chicklets {
       padding: 10px 20px 20px 20px; }
     .article-index section h3 {
       font-size: 1.5em;
-      line-height: 180%; }
+      line-height: 180%;
+      font-weight: 400; }
     .article-index section ol {
-      margin-left: 10%;
-      line-height: 170%; }
+      margin: 10px 10px 0 10%;
+      line-height: 200%; }
       .article-index section ol li {
-        list-style-type: decimal-leading-zero; }
+        list-style-type: decimal-leading-zero;
+        font-weight: 400; }
+        .article-index section ol li a:hover {
+          color: #cc0000; }
   .article-index:hover strong {
     color: white;
     background: #ff7f00;
@@ -7023,3 +7064,7 @@ ul.pills li {
 .hidden {
   display: none !important;
   visibility: hidden !important; }
+
+.repartner {
+  float: right;
+  margin: 30px 0px 0px 20px; }

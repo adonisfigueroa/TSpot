@@ -61,18 +61,29 @@ body.interior {
 		color: #222;
     
 	    h2 {
-	      font-weight: 600;
-	      font-size: 180%;
-	      line-height: 2.5;
-	      color: #222;
-    }
+	    	font-weight: 500;
+			font-size: 1.8em;
+			line-height: 1.4;
+			color: #222;
+			padding: 10px 0 20px;
+	    }
     
 		h3 {
-			color: $blue;
+			/* color: $blue; */
+	    	font-weight: 500;
+			font-size: 1.5em;
+			line-height: 1.4;
+			color: #222;
+			padding: 5px 0 10px;
 		}
 		
 		h4 {
-			color: $grey;
+			color: $blue;
+	    	font-weight: 400;
+			font-size: 1.3em;
+			line-height: 1.4;
+			color: #222;
+			padding: 5px 0 10px;
 		}
 		
 		ul {
@@ -84,7 +95,11 @@ body.interior {
 		}
 		
 		img {
-  		max-width: 100%;
+  			max-width: 100%;
+
+  			.big {
+  				
+  			}
 		}
 	
 	}
