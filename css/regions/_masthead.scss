@@ -1,10 +1,9 @@
 .home {
 #masthead {
-	margin-top: 93px;
+	margin-top: 82px;
 	background: $grey;
 	height: 500px;
 	position: relative;
-	margin-top: 37px;
 	@include break(mobile){
 		@media screen and (orientation:portrait){
 			margin-top: 52px;

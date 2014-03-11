@@ -216,6 +216,7 @@ h1 {
 			@include break(v-mobile) {
 				width: 100%;
 			}
+			
 			h2 {
 				a {
 				  font-family: $f-helvetica;
@@ -235,14 +236,16 @@ h1 {
 				line-height: 2.5;
 				em {
 					font-style: normal;
-					padding-left: 3px;
+					padding-left: 5px;
+					margin-left: 3px;
 					border-left: 1px solid #7d7d7d;
 					display: inline-block;
-					line-height: 14px;
+					line-height: 11px;
 					@include break(mobile){
 						display: block;
 						border-left: none;
 						padding-left: 0px;
+						margin: 0;
 					}
 				}
 			}
@@ -273,6 +276,10 @@ h1 {
 					padding-left: 15px;
 					margin-right: 10px;
 					
+					&:hover {
+						color: $red;
+					}
+					
 					&.read-more {
 						background-image: url(../images/read-more-arrow.svg);
 					}
@@ -294,6 +301,7 @@ h1 {
 							  font-size: 90%;
 								background: $blue;
 								color: white;
+								-webkit-font-smoothing: subpixel-antialiased;
 							}
 							
 						}
@@ -305,22 +313,45 @@ h1 {
 			
 		}
 		
+		.no_image {
+			width: 100% !important;
+		}
+		
 	}
+	article:last-of-type {
+		border-bottom: none;
+	}
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; overflow: hidden;
+    margin-bottom: 20px;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .download-list,
 .forum-list {
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	padding: 10px 0;
 	
 	li {
 		font-size: .8em;
 		padding: 0 0 0 20%;
 		margin: 10px 0;
-		line-height: 220%;
+		line-height: 150%;
 		
 		& > a {
-			line-height: 140%;
+			line-height: 120%;
 			font-weight: 500;
 			color: $blue;
 			display: block;
@@ -328,13 +359,14 @@ h1 {
 		span {
 			line-height: 150%;
 			color: #333333;
-			font-weight: bold;
+			font-weight: 400;
 			font-size: .8em;
 			a {
 				color: inherit;
 				&.similar,
 				&.replies {
 					color: #7393C8;
+					font-weight: 500;
 				}
 			}
 		}
@@ -346,11 +378,13 @@ h1 {
 			font-weight: normal;
 			&.editors-pick {
 				background-color: #FFCA00;
+				font-weight: 500;
 			}
 			
 			&.popular {
 				background-color: #5A00B5;
 				color: white;
+				font-weight: 500;
 				a {
   				color: white;
 				}
@@ -358,6 +392,7 @@ h1 {
 			&.popular-topic {
 				background-color: $orange;
 				color: white;
+				font-weight: 500;
 				a {
   				color: white;
 				}
@@ -379,7 +414,7 @@ h1 {
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 8.5% center;
+		background-position: 8% center;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
@@ -418,7 +453,13 @@ h1 {
 			}
 		}
 	}
+}
 
+.adblock {
+	width: 300px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 25px;
 }
 
 h3.section-header {
@@ -489,16 +530,13 @@ h3.longtype {
 	
 	
 	ul.teaser-list {
-		padding-top: 15px;
-		padding-bottom: 30px;
+		padding: 10px 0 15px;
 		li {
 			margin-bottom: 15px;
 			@include clearfix(before);
 			@include clearfix(after);
 			
 			a {
-				
-				
 				span.img-wrap {
 					img {
 						width: 100%;
@@ -506,10 +544,10 @@ h3.longtype {
 					}
 					@include col(5,11,5);
 				}
-				p {
-					font-size: .8em;
+				span {
+					font-size: .85em;
 					font-weight: 500;
-					padding-top: 8px;
+					padding: 8px 0 0;
 					@include col-last(6,11,5);
 				}
 				
@@ -517,6 +555,13 @@ h3.longtype {
 					color: $red;
 				}
 				
+			}
+			span {
+				a {
+					font-size: .7em;
+					font-weight: 500;
+					color: #666;
+				}
 			}
 		}
 		
@@ -909,10 +954,24 @@ hgroup.featured-image {
 		em {
 			color: white;
 			text-shadow: 1px 1px 5px black;
-			font-weight: 100;
-			font-size: .8em;
+			font-weight: 400;
+			font-size: .7em;
 			font-style: normal;
 			font-family: $f-secondary;
+			padding-left: 5px;
+
+			.author {
+				a {
+					color: white;
+					border-bottom: 1px solid #ccc;
+					padding-bottom: 3px;
+
+					&:hover {
+						border-bottom: 1px solid $orange;
+						padding-bottom: 3px;
+					}
+				}
+			}
 		}		
 	}
 	
@@ -921,12 +980,12 @@ hgroup.featured-image {
 		position: absolute;
 		bottom: 25px;
 		right: 0;
-		font-size: 3.333em;
-		font-weight: 600;
+		font-size: 3.1em;
+		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 115px;
-		padding: 0 28px;
+		line-height: 105px;
+		padding: 0 24px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
 		span {
@@ -965,14 +1024,21 @@ ul.category-chicklets {
 			-webkit-font-smoothing: subpixel-antialiased;
 		}
 		
-		&.electronics {
-			background-color: #00B22D;
-		}
-		
-		&.hardware {
-			background-color: #D90000;
-		}
-		
+		&.apple 	{ background-color: #A1B8D9; }
+		&.gaming 	{ background-color: #990000; }
+		&.hardware 	{ background-color: #00B22D; }
+		&.industry 	{ background-color: #2A288A; }
+		&.security 	{ background-color: #CBA746; }
+		&.microsoft	{ background-color: #00A2F2; }
+		&.mobile 	{ background-color: #CC3333; }
+		&.software 	{ background-color: #5A00B5; }
+		&.web 		{ background-color: #FF7F00; }
+		&.techspot 	{ background-color: #1E2933; }
+		&.blog	 	{ background-color: #AAAAAA; }
+		&.dotw	 	{ background-color: #00B22D; }
+		&.natw	 	{ background-color: #BBBBBB; }
+		&.deals 	{ background-color: #779954; }
+		&.wof	 	{ background-color: #00B22D; }
 	}
 }
 
@@ -1048,6 +1114,10 @@ ul.category-chicklets {
 				line-height: 35px;
 			}
 			&:hover {
+
+				background-color: #FFECD8;
+				transition: background 0.1s;
+
 				.SocialHover {
 				width: 100px;
 				height: 100%;
@@ -1136,21 +1206,28 @@ ul.category-chicklets {
 		h3 {
 			font-size: 1.5em;
 			line-height: 180%;
+			font-weight: 400;
 		}
 		
 		ol {
-			margin-left: 10%;
-			line-height: 170%;
+			margin: 10px 10px 0 10%;
+			line-height: 200%;
 			li {
 				list-style-type: decimal-leading-zero;
+				font-weight: 400;
+
+				a {
+				&:hover {	color: $red;	}
+				}
 			}
 		}
-	}
+	} 
 	
 	&:hover {
 		strong {
 			color: white;
 			background: $orange;
+			transition: background 0.1s;
 		}
 		section {
 			display: block;
@@ -2002,6 +2079,20 @@ input[type=submit] {
 }
 
 //Footer Page Nav
+.post-load-more {
+	margin: 20px 0px;
+	width: 100%;
+	border: 1px solid #dcdcdc;
+	line-height: 45px;
+	text-align: center;
+	font-weight: 400;
+	background-color: #F8F8F8;
+}
+.post-load-more:hover {
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
 .comments-pager{
 	margin: 35px 0px 100px 0px;
 	width: 100%;
@@ -2146,4 +2237,11 @@ ul.pills {
     
   }
 }
-
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+.repartner {
+    float:right;
+    margin: 30px 0px 0px 20px;
+}

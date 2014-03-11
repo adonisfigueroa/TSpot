@@ -29,6 +29,7 @@ header {
 	}
 	#dk_menu {
 		height: 42px;
+		margin-left: -8px;
 	}
 	#main-menu #dk_menu > li {
 		margin-right: -4px;
@@ -108,18 +109,24 @@ header {
 								margin-left: -212px;
 								width: 250px;
 							}
+							
 							.pad {
 								display: block;
-								padding: 10px;
+								padding: 10px 13px;
+							}
+							
+							.top {
+								margin-top: 12px;
 							}
 							
 							h4 {
+								font-size: 0.9em;
 								font-weight: 400;
-								line-height: 25px;
+								line-height: 10px;
 							}
 							
 							small {
-								font-size: .5em;
+								font-size: .55em;
 							}
 							
 							a {
@@ -140,6 +147,12 @@ header {
 									label {
 										display: block;
 										margin-bottom: 5px;
+										margin-right: 15px;
+									}
+									.login_error {
+										color: #c00;
+										font-size: 12px;
+										padding: 15px 0px 0px;
 									}
 								}
 								
@@ -190,6 +203,7 @@ header {
 									display: block;
 									padding: 15px 20px;
 								}
+								
 								.social {
 									h4 {
 										font-weight: 400;
@@ -200,23 +214,19 @@ header {
 										font-size: 0.9em;
 									}
 									.WidgetArea{
-										width: 55px;
-										height: 20px;
-										border: 1px solid $dark-grey;
-										background-color: $grey;
+										width: 70px;
 										float: right;
 										display: inline;
-										@include border-radius(3px);
-										margin-right:  80px;
+										margin: 5px 80px 0 0;
 									}
 								}
-								.fb {
+								.fb a {
 									color: #0059B2;
 								}
-								.gp {
+								.gp a {
 									color: #B21A00;
 								}
-								.tw {
+								.tw a {
 									color: #00A3D8;
 								}
 								.yt a {
@@ -226,7 +236,7 @@ header {
 									color: #326600;
 								}
 								.socialrow {
-									padding: 0px 0px 5px 20px;
+									padding: 0px 0px 7px 20px;
 									font-family: "Roboto Condensed", sans-serif;
 								}
 								
@@ -445,7 +455,7 @@ header {
 		.SubHeader {
 			background: #777D82; 
 			text-align: center;
-			/*box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15); */
+			box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15);
 			li {
 				text-align: center;
 				margin: 0px 15px;
@@ -534,6 +544,7 @@ header {
 					display: inline-block;
 					text-transform: uppercase;
 					font-weight: 400;
+
 					&:first-child{
 						a{
 							padding: 0 34px 0 5px;
@@ -550,12 +561,11 @@ header {
 						color: white;
 						position: relative;
 						display: block;
-						padding: 0 30px 0 15px;
+						padding: 0 32px 0 15px;
 						margin-top: 0px;
-			            /* color: #F4F8FC; */ 
-			            letter-spacing: 0.333px;
+						
 						@include break(tablet){
-							padding: 0 34px 0 10px;
+							padding: 0 32px 0 10px;
 						}
 						
 						&:after {
@@ -580,7 +590,7 @@ header {
 							}
 							
 						}
-						
+					
 					}
 					
 					&:hover {
@@ -595,7 +605,7 @@ header {
 						
 						background: #777D82;
 						height: 250px;
-						/*box-shadow:0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15); */
+						box-shadow:0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 3px 5px 1px rgba(0, 0, 0, 0.15);
 						
 						.wrapper {
 							padding: 30px 0;
@@ -778,11 +788,11 @@ header {
 		    height: 52px;
 	    }
 	    @include break(v-mobile){
-		    width: 150px;
+		    width: 160px;
 	    }
 		a {
 			display: block;
-			width: 189px; height: 27px;
+			width: 189px; height: $line-height;
 			line-height: $line-height;
 		}
 		

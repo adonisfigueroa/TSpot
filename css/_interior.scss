@@ -17,15 +17,6 @@ body.interior {
 			line-height: 35px;		
 		}
 	}
-	.post-load-more {
-		margin: 20px 0px;
-		width: 100%;
-		border: 1px solid #BABEC1;
-		line-height: 45px;
-		text-align: center;
-		font-weight: 200;
-		background-color: #F8F8F8;
-	}
 	.ShowOnly {
 		max-width: 660px;
 		width: 96%;
@@ -67,22 +58,32 @@ body.interior {
 	article {
 		font-size: .9em;
 		font-weight: 400;
-		-webkit-font-smoothing: antialiased;
-		color: #333;
+		color: #222;
     
 	    h2 {
-	      font-weight: 600;
-	      font-size: 180%;
-	      line-height: 2.5;
-	      color: #333;
-    }
+	    	font-weight: 500;
+			font-size: 1.8em;
+			line-height: 1.4;
+			color: #222;
+			padding: 10px 0 20px;
+	    }
     
 		h3 {
-			color: $blue;
+			/* color: $blue; */
+	    	font-weight: 500;
+			font-size: 1.5em;
+			line-height: 1.4;
+			color: #222;
+			padding: 5px 0 10px;
 		}
 		
 		h4 {
-			color: $grey;
+			color: $blue;
+	    	font-weight: 400;
+			font-size: 1.3em;
+			line-height: 1.4;
+			color: #222;
+			padding: 5px 0 10px;
 		}
 		
 		ul {
@@ -94,7 +95,11 @@ body.interior {
 		}
 		
 		img {
-  		max-width: 100%;
+  			max-width: 100%;
+
+  			.big {
+  				
+  			}
 		}
 	
 	}
@@ -1144,15 +1149,14 @@ body.interior {
 					p {
 						font-weight: 400;
 						font-size: .6em;
-						color: #666666;
+						color: #666;
 						padding: 0 !important;
 					}
 					.desc {
 						font-size: .75em;
 						padding: 2px 0 !important;
 						font-weight: 400;
-						-webkit-font-smoothing: antialiased;
-						color: #333; 
+						color: #222; 
 					}
 					.more_info {
 						float: right;
@@ -1404,9 +1408,8 @@ body.interior {
     		.title-group {
       		h1.large {
         		font-family: Roboto, Arial, Helvetica, sans-serif;
-				font-weight: 500;
-				-webkit-font-smoothing: antialiased;
-				text-shadow: 1px 1px 5px #333;
+			font-weight: 500;
+			text-shadow: 1px 1px 5px #333;
 	            @include break (mobile){
 		            font-size: 50px;
 	            }
