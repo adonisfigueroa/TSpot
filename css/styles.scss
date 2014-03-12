@@ -763,8 +763,9 @@ h3.longtype {
     
     cite {
       display: block;
-      line-height: 70px;
+      line-height: 50px;
       font-style: normal;
+      padding-top: 10px;
     }
     
     
@@ -772,7 +773,11 @@ h3.longtype {
       display: inline-block;
       float: right;
       font-size: .9em;
-      color: #666;
+      color: #888;
+      
+      a {
+      	color: #888;
+      }
     }
     
     img.user-avatar {
@@ -790,14 +795,16 @@ h3.longtype {
     }
     
     p {
-      font-size: 1.05em;
-      display: block;
-      padding: 0 0 15px;
+	font-size: 1.1em;
+	display: block;
+	padding: 0 0 15px;
+	font-family: $f-helvetica;
+	line-height: 1.5;
     }
     
     ul.action-links {
       text-align: right;
-      margin-top: 25px;
+      margin-top: 10px;
       li {
         display: inline-block;
         line-height: 100%;
