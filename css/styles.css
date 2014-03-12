@@ -524,27 +524,27 @@ body.interior {
       line-height: 1.4;
       color: #222;
       padding: 10px 0 20px; }
-    body.interior article h3 {
-      /* color: $blue; */
+    body.interior article ul {
+      margin-left: 5%;
+      font-size: 0.8em; }
+      body.interior article ul li {
+        list-style-type: square;
+        margin-bottom: 5px; }
+    body.interior article img {
+      max-width: 100%; }
+    body.interior article #news h3, body.interior article #feature h3 {
       font-weight: 500;
       font-size: 1.5em;
       line-height: 1.4;
       color: #222;
       padding: 5px 0 10px; }
-    body.interior article h4 {
+    body.interior article #news h4, body.interior article #feature h4 {
       color: #105ab2;
       font-weight: 400;
       font-size: 1.3em;
       line-height: 1.4;
       color: #222;
       padding: 5px 0 10px; }
-    body.interior article ul {
-      margin-left: 5%; }
-      body.interior article ul li {
-        list-style-type: square;
-        margin-bottom: 5px; }
-    body.interior article img {
-      max-width: 100%; }
   body.interior nav.page-nav {
     text-align: right;
     width: 100%;
@@ -1014,8 +1014,7 @@ body.interior {
           list-style-type: none;
           position: relative;
           line-height: 200%;
-          font-size: .75em;
-          font-weight: 450;
+          font-size: 0.95em;
           padding-left: 10px; }
           body.interior.news.product #content article ul.pros li:before,
           body.interior.news.product #content article ul.cons li:before, body.interior.product.product #content article ul.pros li:before,
@@ -1748,8 +1747,7 @@ body.interior {
       padding-left: 60px; }
       body.interior .comment-count-block a span {
         display: block;
-        font-size: 1.1em;
-        font-weight: 450; }
+        font-size: 1.1em; }
         body.interior .comment-count-block a span.comment-count {
           color: #cc0000; }
         body.interior .comment-count-block a span.interactions-count {
@@ -2311,7 +2309,7 @@ header {
     background-color: #8B9296 !important; }
   header #dk_menu {
     height: 42px;
-    margin-left: -8px; }
+    margin-left: -10px; }
   header #main-menu #dk_menu > li {
     margin-right: -4px; }
   header .header-top {
@@ -2685,8 +2683,6 @@ header {
       display: inline-block;
       text-transform: uppercase;
       font-weight: 400; }
-      header .menu .wrapper > ul > li:first-child a {
-        padding: 0 34px 0 5px; }
       header .menu .wrapper > ul > li:first-child .nav-submenu li a {
         padding: 0 30px 0 15px; }
       @media only screen and (max-width: 960px) {
@@ -5255,9 +5251,17 @@ h1 {
             .post-list article .article-content .post-meta a.comment-count span.highlight {
               font-family: "Helvetica Neue", Arial, Helvetica;
               font-size: 90%;
-              background: #105ab2;
+              background: #CCC;
               color: white;
               -webkit-font-smoothing: subpixel-antialiased; }
+              .post-list article .article-content .post-meta a.comment-count span.highlight.no {
+                display: none; }
+              .post-list article .article-content .post-meta a.comment-count span.highlight.big {
+                background: #0a5499 !important; }
+              .post-list article .article-content .post-meta a.comment-count span.highlight.bigger {
+                background: #075bc0 !important; }
+              .post-list article .article-content .post-meta a.comment-count span.highlight.biggest {
+                background: #c00 !important; }
   .post-list article .no_image {
     width: 100% !important; }
 .post-list article:last-of-type {
@@ -5592,8 +5596,7 @@ h3.longtype {
         width: 100%; } }
   #comments h3 {
     color: #4484D0;
-    font-size: 1.3em;
-    font-weight: 450; }
+    font-size: 1.3em; }
   #comments a.post-new-comment {
     display: inline-block;
     line-height: 400%;
@@ -5832,13 +5835,12 @@ ul.category-chicklets {
       text-transform: uppercase;
       font-style: "Roboto Condensed", sans-serif;
       font-size: .55em;
-      font-weight: 450;
       letter-spacing: 0.50px;
       -webkit-font-smoothing: subpixel-antialiased; }
     ul.category-chicklets li.apple {
       background-color: #A1B8D9; }
     ul.category-chicklets li.gaming {
-      background-color: #990000; }
+      background-color: #CC0000; }
     ul.category-chicklets li.hardware {
       background-color: #00B22D; }
     ul.category-chicklets li.industry {
@@ -5849,22 +5851,24 @@ ul.category-chicklets {
       background-color: #00A2F2; }
     ul.category-chicklets li.mobile {
       background-color: #CC3333; }
-    ul.category-chicklets li.software {
-      background-color: #5A00B5; }
+    ul.category-chicklets li.software, ul.category-chicklets li.electronics {
+      background-color: #50039C; }
     ul.category-chicklets li.web {
       background-color: #FF7F00; }
     ul.category-chicklets li.techspot {
-      background-color: #1E2933; }
+      background-color: #105AB2; }
     ul.category-chicklets li.blog {
       background-color: #AAAAAA; }
-    ul.category-chicklets li.dotw {
-      background-color: #00B22D; }
+    ul.category-chicklets li.dotw, ul.category-chicklets li.pc {
+      background-color: #B25900; }
     ul.category-chicklets li.natw {
       background-color: #BBBBBB; }
     ul.category-chicklets li.deals {
       background-color: #779954; }
     ul.category-chicklets li.wof {
-      background-color: #00B22D; }
+      background-color: #85B200; }
+    ul.category-chicklets li.products {
+      background-color: #00366F; }
 
 .social-widget {
   width: 60px;
@@ -6034,8 +6038,7 @@ ul.category-chicklets {
       margin-right: 30px;
       text-shadow: 0 1px 0 #fff; }
       .slide-sort-selector .post-type-selector ul li a {
-        color: #bbbbbb;
-        font-weight: 450; }
+        color: #bbbbbb; }
       .slide-sort-selector .post-type-selector ul li.active a {
         color: #353535 !important;
         text-shadow: none !important; }
@@ -6456,21 +6459,25 @@ input[type=submit] {
       width: 100%;
       margin-top: 40px; } }
   #product_info .product-desc .Prodcomment {
-    margin-top: 30px; }
+    margin-top: 25px; }
     @media only screen and (max-width: 760px) {
       #product_info .product-desc .Prodcomment {
         margin-top: 100px; } }
     #product_info .product-desc .Prodcomment h3 {
       padding-left: 20px;
       margin-bottom: 5px;
-      font-family: "Roboto Condensed", sans-serif;
-      font-weight: 450; }
+      font-family: "Roboto Condensed", sans-serif; }
       #product_info .product-desc .Prodcomment h3 a {
         border-bottom: solid 3px; }
     #product_info .product-desc .Prodcomment p {
       border-left: 10px solid #bbbbbb;
       padding: 5px 0px 5px 10px;
       font-size: 0.8em;
+      font-weight: 300; }
+    #product_info .product-desc .Prodcomment .editorial p {
+      border-left: none;
+      padding: 0;
+      font-size: 0.85em;
       font-weight: 300; }
   #product_info .product-desc .social-widget {
     width: 100%;
@@ -6608,7 +6615,7 @@ input[type=submit] {
   #product_info .score .excellent {
     background-color: #00bf17; }
   #product_info .score .good {
-    background-color: rgba(7, 91, 192, 0.85); }
+    background-color: #075BC0; }
   #product_info .score .average {
     background-color: #6F22A0; }
   #product_info .score .bad {
@@ -6631,7 +6638,7 @@ input[type=submit] {
     #product_info .score .breakdown ul {
       list-style: none;
       margin: 0;
-      padding: 0; }
+      padding: 5px 20px 0 0; }
     #product_info .score .breakdown li {
       height: 16px;
       overflow: hidden; }
@@ -6850,7 +6857,7 @@ input[type=submit] {
   .also-looked-at.expert-reviews-and-ratings > h3,
   .expert-reviews-and-ratings.expert-reviews-and-ratings > h3 {
     position: relative;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
     .also-looked-at.expert-reviews-and-ratings > h3:after,
     .expert-reviews-and-ratings.expert-reviews-and-ratings > h3:after {
       position: absolute;
@@ -6869,7 +6876,7 @@ input[type=submit] {
   .also-looked-at .comment,
   .expert-reviews-and-ratings .comment {
     position: relative;
-    padding: 10px 100px 10px 10px;
+    padding: 15px 100px 0px 10px;
     border-bottom: 1px solid #dddddd !important; }
     .also-looked-at .comment:nth-child(odd),
     .expert-reviews-and-ratings .comment:nth-child(odd) {
@@ -6884,7 +6891,7 @@ input[type=submit] {
       display: inline-block;
       padding: 0 15px;
       line-height: 160%;
-      top: 10px;
+      top: 20px;
       right: 10px; }
       .also-looked-at .comment .rating.excellent,
       .expert-reviews-and-ratings .comment .rating.excellent {
@@ -6904,15 +6911,16 @@ input[type=submit] {
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6CC0000,endColorstr=#E6CC0000); }
     .also-looked-at .comment cite,
     .expert-reviews-and-ratings .comment cite {
-      line-height: 200%;
-      font-weight: 600;
+      line-height: 220%;
+      font-weight: 500;
       font-style: normal;
       font-size: .8em; }
     .also-looked-at .comment p,
     .expert-reviews-and-ratings .comment p {
-      padding: 15px 0 0;
+      padding: 5px 0 15px;
+      line-height: 1.5;
       font-size: .7em;
-      font-weight: 450; }
+      font-weight: 400; }
 
 @media only screen and (max-width: 500px) {
   .product .also-looked-at .teaser-list li {
