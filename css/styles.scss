@@ -286,7 +286,6 @@ h1 {
 					
 					&.comment-count {
 						background-image: url(../images/comment-icon.svg);
-						padding-left: 20px;
 						
 						span {
 							display: inline-block;
@@ -1030,7 +1029,6 @@ ul.category-chicklets {
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-style: $f-condensed;
 			font-size: .55em;
 			
 			letter-spacing: 0.50px;
@@ -1618,6 +1616,9 @@ input[type=submit] {
 				border-bottom: solid 3px;
 				
 			}
+		}
+		.proscons h3 {
+			padding-left: 0;
 		}
 		p {
 			border-left: 10px solid $grey; 
