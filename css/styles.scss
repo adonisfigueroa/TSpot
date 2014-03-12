@@ -712,7 +712,7 @@ h3.longtype {
 
 #comments {
   & > .wrapper {
-    padding: 30px 0;
+    padding: 30px 0 10px 7px;
     position: relative;
     
     &:before {
@@ -723,7 +723,7 @@ h3.longtype {
       content:"";
       display: block;
       width: 55px; height: 45px;
-      top: 40px; left: -80px;
+      top: 35px; left: -65px;
       @include break(tablet){
 	      background-image: none;
       }
@@ -732,7 +732,7 @@ h3.longtype {
     
   }
   .col-2-3 {
-	  width: 63%;
+	  width: 66%;
 	  @include break(v-tablet) {
 		  width: 100%;
 	  }
@@ -740,26 +740,26 @@ h3.longtype {
   
   h3 {
     color: #4484D0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     
   }
   background: white;
   
   a.post-new-comment {
-    display: inline-block;
-    line-height: 400%;
-    background-image: url(/images/glyph-orange.svg);
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
-    font-size: .75em;
-    color: $dark-grey;
-    
+		display: inline-block;
+		background-image: url(/images/glyph-orange.svg);
+		background-position: left center;
+		background-repeat: no-repeat;
+		font-size: .80em;
+		color: $dark-grey;
+		margin-bottom: 10px;
+		padding: 15px 0 15px 28px;
+		font-family: Roboto Condensed;
   }
   
   .comment {
     font-size: .7em;
-    border-top: 1px solid #DDDDDD!important;
+    border-top: 1px solid #eee !important;
     padding: 0 0 15px 0;
     
     cite {
@@ -779,9 +779,9 @@ h3.longtype {
     img.user-avatar {
       background: #eaeaea;
       width: 28px; height: 28px;
-      margin-right: 5px;
       border: 1px solid #ddd;
       @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
+	  margin: 0 10px 0 -43px;
     }
     
     a.user {
@@ -808,7 +808,7 @@ h3.longtype {
         font-weight: bold;
         
         &:first-child {
-          border-right: 1px solid #333;
+          /* border-right: 1px solid #ccc; */
         }
         a {
           color: $blue;
@@ -818,7 +818,7 @@ h3.longtype {
   }
   
   .recently-commented-stories {
-    background-color: #E0E0E0;
+    background-color: #fff;
     height: 50px;
     ul {
     	text-align: center;
@@ -855,8 +855,9 @@ h3.longtype {
 			text-align: center;
 			float: left;
 			position: absolute;
-			bottom: 0;
+			margin-top: 40px;
 			color: black;
+			cursor: pointer;
 		}
 	}
   
@@ -869,7 +870,7 @@ h3.longtype {
     }
     
     .wrapper {
-      padding: 25px 0 40px;
+      padding: 25px 0 50px;
     }
     
     .textarea {
@@ -1083,6 +1084,11 @@ ul.category-chicklets {
 				font-size: 1.0em;
 				line-height: 33px;
 			}
+
+			&.zero {
+				border-top: 5px solid #ff7f00;
+			}
+
 		}
 		
 		&.social {

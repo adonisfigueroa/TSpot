@@ -5573,7 +5573,7 @@ h3.longtype {
 #comments {
   background: white; }
   #comments > .wrapper {
-    padding: 30px 0;
+    padding: 30px 0 10px 7px;
     position: relative; }
     #comments > .wrapper:before {
       position: absolute;
@@ -5584,31 +5584,32 @@ h3.longtype {
       display: block;
       width: 55px;
       height: 45px;
-      top: 40px;
-      left: -80px; }
+      top: 35px;
+      left: -65px; }
       @media only screen and (max-width: 1100px) {
         #comments > .wrapper:before {
           background-image: none; } }
   #comments .col-2-3 {
-    width: 63%; }
+    width: 66%; }
     @media only screen and (max-width: 960px) {
       #comments .col-2-3 {
         width: 100%; } }
   #comments h3 {
     color: #4484D0;
-    font-size: 1.3em; }
+    font-size: 1.2em; }
   #comments a.post-new-comment {
     display: inline-block;
-    line-height: 400%;
     background-image: url(/images/glyph-orange.svg);
     background-position: left center;
     background-repeat: no-repeat;
-    padding-left: 28px;
-    font-size: .75em;
-    color: #353535; }
+    font-size: .80em;
+    color: #353535;
+    margin-bottom: 10px;
+    padding: 15px 0 15px 28px;
+    font-family: Roboto Condensed; }
   #comments .comment {
     font-size: .7em;
-    border-top: 1px solid #dddddd !important;
+    border-top: 1px solid #eee !important;
     padding: 0 0 15px 0; }
     #comments .comment cite {
       display: block;
@@ -5623,11 +5624,11 @@ h3.longtype {
       background: #eaeaea;
       width: 28px;
       height: 28px;
-      margin-right: 5px;
       border: 1px solid #ddd;
       -webkit-box-shadow: 2px 2px 0px #dddddd;
       -moz-box-shadow: 2px 2px 0px #dddddd;
-      box-shadow: 2px 2px 0px #dddddd; }
+      box-shadow: 2px 2px 0px #dddddd;
+      margin: 0 10px 0 -43px; }
     #comments .comment a.user {
       color: #105ab2;
       font-weight: bold;
@@ -5647,11 +5648,11 @@ h3.longtype {
         font-size: .8em;
         font-weight: bold; }
         #comments .comment ul.action-links li:first-child {
-          border-right: 1px solid #333; }
+          /* border-right: 1px solid #ccc; */ }
         #comments .comment ul.action-links li a {
           color: #105ab2; }
   #comments .recently-commented-stories {
-    background-color: #E0E0E0;
+    background-color: #fff;
     height: 50px; }
     #comments .recently-commented-stories ul {
       text-align: center; }
@@ -5682,15 +5683,16 @@ h3.longtype {
       text-align: center;
       float: left;
       position: absolute;
-      bottom: 0;
-      color: black; }
+      margin-top: 40px;
+      color: black;
+      cursor: pointer; }
   #comments #add-new-comment {
     background-color: #F5F5F5; }
     #comments #add-new-comment h3 {
       line-height: 200%;
       font-weight: 500; }
     #comments #add-new-comment .wrapper {
-      padding: 25px 0 40px; }
+      padding: 25px 0 50px; }
     #comments #add-new-comment .textarea {
       width: 100%;
       min-height: 150px;
@@ -5896,6 +5898,8 @@ ul.category-chicklets {
         margin-bottom: 0px;
         font-size: 1.0em;
         line-height: 33px; } }
+    .social-widget li.social-count.zero {
+      border-top: 5px solid #ff7f00; }
   .social-widget li.social {
     background-image: url(/images/social-widget-bg.svg);
     background-repeat: no-repeat;
