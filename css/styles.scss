@@ -1878,6 +1878,10 @@ input[type=submit] {
     }
   }
   
+  #pros_cons.collapsed li:nth-child(n+6){
+	display: none;
+  }
+  
   .pros,
   .cons {
     border-left: 15px solid $red;
