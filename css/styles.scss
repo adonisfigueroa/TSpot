@@ -672,7 +672,7 @@ h3.longtype {
           height: auto;
         }
         
-        .rating {
+        . {
           font-family: $f-arial;
           font-weight: 900;
           color: white;
@@ -890,7 +890,7 @@ h3.longtype {
   
 }
 
-span.rating_bar {
+span._bar {
 	display: block;
 	width: 100%;
 	line-height: 7px;
@@ -1007,6 +1007,20 @@ hgroup.featured-image {
 		padding: 0 24px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
+		
+		&.excellent: {
+			trans-bg(#00be15,.8);
+		}
+		&.good: {
+			trans-bg(#075bc0,.8);
+		}
+		&.average: {
+			trans-bg(#6f22a0,.8);
+		}
+		&.bad: {
+			trans-bg(#cc0000,.8);
+		}
+		
 		span {
 			
 		}
