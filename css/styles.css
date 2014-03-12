@@ -5236,8 +5236,7 @@ h1 {
         .post-list article .article-content .post-meta a.read-more {
           background-image: url(../images/read-more-arrow.svg); }
         .post-list article .article-content .post-meta a.comment-count {
-          background-image: url(../images/comment-icon.svg);
-          padding-left: 20px; }
+          background-image: url(../images/comment-icon.svg); }
           .post-list article .article-content .post-meta a.comment-count span {
             display: inline-block;
             background: #e3e3e3;
@@ -5835,7 +5834,6 @@ ul.category-chicklets {
       color: white;
       text-decoration: none;
       text-transform: uppercase;
-      font-style: "Roboto Condensed", sans-serif;
       font-size: .55em;
       letter-spacing: 0.50px;
       -webkit-font-smoothing: subpixel-antialiased; }
@@ -6473,6 +6471,8 @@ input[type=submit] {
       font-family: "Roboto Condensed", sans-serif; }
       #product_info .product-desc .Prodcomment h3 a {
         border-bottom: solid 3px; }
+    #product_info .product-desc .Prodcomment .proscons h3 {
+      padding-left: 0; }
     #product_info .product-desc .Prodcomment p {
       border-left: 10px solid #bbbbbb;
       padding: 5px 0px 5px 10px;
@@ -6686,6 +6686,8 @@ input[type=submit] {
         background: #6f22a0; }
       #product_info .score .breakdown .bar .bad {
         background: #cc0000; }
+#product_info #pros_cons.collapsed li:nth-child(n+6) {
+  display: none; }
 #product_info .pros,
 #product_info .cons {
   border-left: 15px solid #cc0000;
