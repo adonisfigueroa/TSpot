@@ -28,8 +28,16 @@ body {
 	font-size: 120%; 
 	-webkit-backface-visibility: hidden;
 	-webkit-font-smoothing: antialiased;
+	-webkit-transition: none;
+	transition: none;
+	
 	
 }
+//Temp
+.top-adverbox {
+	height: 0;
+}
+//temp end
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
 }

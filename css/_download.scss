@@ -4,14 +4,7 @@ body.interior.download {
       width: 100%;
       float: none;
     }
-    .title-group {
-	 	h1 {
-		 	font-size: 1.5em;
-	 	}   
-	 	h2 {
-		 	font-size: 0.9em;
-	 	}
-    }
+    
     .publisher-description {
       ul {
         margin-left: 0;
@@ -85,10 +78,27 @@ body.interior.download {
       display: none;
     }
   }
+  .wrapper {
+	  .title-group{
+	 	h1 {
+	 		@include break(mobile){
+		 		font-size: 1.5em !important;
+	 		}
+	 	}   
+	 	h2 {
+		 	@include break(mobile){
+		 		font-size: 0.9em !important;
+	 		}
+	 	}
+    }
+  }
+  
   #product_info {
     margin-top: 30px;
     font-size: .7em;
-    
+	@include break(v-mobile){
+		margin-top: 15px;
+	}    
     .product-details {
       div {
         line-height: 180%;
@@ -112,18 +122,28 @@ body.interior.download {
       }
       @include break(v-mobile){
 	      @include col(1,1,0);
-	      border-right: none;
+	      border: none;
+	      margin-top: 120px;
+	      
       }
     }
     .google-ads {
       margin-top: 45px;
     }
     .mirror-wrapper {
-    
       margin-top: 30px;
+      @include break(v-mobile){
+	      margin: 0;
+      }
       .multi_line{
 	      max-width: 190px;
 	      width: 100%;
+      }
+      ul {
+      	@include break(v-mobile){
+	      	text-align: center;
+		  width: 94%;
+      	}
       }
       .inline {
 	      li {
@@ -226,15 +246,19 @@ body.interior.download {
        padding: 15px 10px;
        @include break(v-mobile){
 	       @include col(1,1,0);
-	       border-top: 2px solid #dddddd;
-	       border-left: 0px solid #dddddd;
-	       margin-top: 10px;
-	       padding-top: 10px;
-	       
+	       border: 0;
+	       padding: 0;
+	       margin-top: 15px;
+	       position: absolute;
        }
       .download-wrapper {
         margin-bottom: 15px;
         margin-top: 0px;
+        @include break(v-mobile){
+	        left: 50%;
+			position: relative;
+			margin-left: -150px;
+        }
         .download-link {
           	float: left;
 			list-style-type: none;
