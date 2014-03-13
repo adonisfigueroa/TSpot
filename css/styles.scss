@@ -286,6 +286,7 @@ h1 {
 					
 					&.comment-count {
 						background-image: url(../images/comment-icon.svg);
+						padding-left: 20px;
 						
 						span {
 							display: inline-block;
@@ -672,7 +673,7 @@ h3.longtype {
           height: auto;
         }
         
-        . {
+        .rating {
           font-family: $f-arial;
           font-weight: 900;
           color: white;
@@ -1008,17 +1009,17 @@ hgroup.featured-image {
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
 		
-		&.excellent: {
-			trans-bg(#00be15,.8);
+		&.excellent {
+			@include trans-bg(#00be15,.8);
 		}
-		&.good: {
-			trans-bg(#075bc0,.8);
+		&.good {
+			@include trans-bg(#075bc0,.8);
 		}
-		&.average: {
-			trans-bg(#6f22a0,.8);
+		&.average {
+			@include trans-bg(#6f22a0,.8);
 		}
-		&.bad: {
-			trans-bg(#cc0000,.8);
+		&.bad {
+			@include trans-bg(#cc0000,.8);
 		}
 		
 		span {
