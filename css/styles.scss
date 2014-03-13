@@ -772,8 +772,9 @@ h3.longtype {
     
     cite {
       display: block;
-      line-height: 70px;
+      line-height: 50px;
       font-style: normal;
+      padding-top: 10px;
     }
     
     
@@ -781,7 +782,11 @@ h3.longtype {
       display: inline-block;
       float: right;
       font-size: .9em;
-      color: #666;
+      color: #888;
+      
+      a {
+      	color: #888;
+      }
     }
     
     img.user-avatar {
@@ -799,14 +804,16 @@ h3.longtype {
     }
     
     p {
-      font-size: 1.05em;
-      display: block;
-      padding: 0 0 15px;
+	font-size: 1.1em;
+	display: block;
+	padding: 0 0 15px;
+	font-family: $f-helvetica;
+	line-height: 1.5;
     }
     
     ul.action-links {
       text-align: right;
-      margin-top: 25px;
+      margin-top: 10px;
       li {
         display: inline-block;
         line-height: 100%;
@@ -892,7 +899,7 @@ h3.longtype {
   
 }
 
-span.rating_bar {
+span._bar {
 	display: block;
 	width: 100%;
 	line-height: 7px;
@@ -1009,6 +1016,20 @@ hgroup.featured-image {
 		padding: 0 24px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
+		
+		&.excellent {
+			@include trans-bg(#00be15,.8);
+		}
+		&.good {
+			@include trans-bg(#075bc0,.8);
+		}
+		&.average {
+			@include trans-bg(#6f22a0,.8);
+		}
+		&.bad {
+			@include trans-bg(#cc0000,.8);
+		}
+		
 		span {
 			
 		}
@@ -1038,7 +1059,6 @@ ul.category-chicklets {
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-style: $f-condensed;
 			font-size: .55em;
 			
 			letter-spacing: 0.50px;
@@ -1627,6 +1647,9 @@ input[type=submit] {
 				
 			}
 		}
+		.proscons h3 {
+			padding-left: 0;
+		}
 		p {
 			border-left: 10px solid $grey; 
 			padding: 5px 0px 5px 10px;
@@ -1884,6 +1907,10 @@ input[type=submit] {
         }
       }
     }
+  }
+  
+  #pros_cons.collapsed li:nth-child(n+6){
+	display: none;
   }
   
   .pros,
