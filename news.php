@@ -4,12 +4,6 @@
 	require_once("_inc/_header.php");
 ?>
 
-<div class="cta grey top-adverbox">
-	<div class="wrapper">
-		<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />
-	</div>
-</div>
-
 <hgroup>
 	<div class="wrapper">
 		<ul class="category-chicklets">

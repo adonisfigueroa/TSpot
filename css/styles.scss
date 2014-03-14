@@ -90,7 +90,8 @@ ul,ol {
 		width: 100%;
 		height: auto;
 		@include break(mobile){
-			border-bottom: 1px solid white;
+			width: auto;
+			
 		}
 	}
 	@include break(tablet) {
@@ -442,15 +443,28 @@ h1 {
 	text-align: center;
 	
 	&.top-adverbox {
-		min-height: 130px;
+		margin-top: 84px;
+		@include break(mobile){
+			margin-top: 58px; 
+		}
 	}
-
+	.mobile-only {
+		display: none;
+		@include break(mobile) {
+			display: block;
+		}
+	}
+	.desk-only {
+		@include break(mobile) {
+			display: none;
+		}
+	}
 	&.grey {
 		background-color: #F5F5F5;
 	}
 	
 	.wrapper {
-		padding: 20px 0 15px;
+		padding: 20px 0 20px;
 		text-align: center;
 		.Mobile{
 			display: none;

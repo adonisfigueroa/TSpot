@@ -464,6 +464,11 @@ body.home #content #sidebar {
 
 body.interior {
   background: white; }
+  body.interior .top-adverbox {
+    margin-top: 77px !important; }
+    @media only screen and (max-width: 760px) {
+      body.interior .top-adverbox {
+        margin-top: 58px !important; } }
   body.interior header .menu .wrapper > ul > li a.active {
     height: 50px !important; }
     body.interior header .menu .wrapper > ul > li a.active:after {
@@ -763,14 +768,10 @@ body.interior {
         text-align: left;
         padding: 0 10px 0 10px;
         color: #666666; }
-  body.interior.news .top-adverbox, body.interior.product .top-adverbox, body.interior.download .top-adverbox {
-    margin-top: 77px; }
-    @media only screen and (max-width: 760px) {
-      body.interior.news .top-adverbox, body.interior.product .top-adverbox, body.interior.download .top-adverbox {
-        margin-top: 34px; }
-        body.interior.news .top-adverbox .wrapper, body.interior.product .top-adverbox .wrapper, body.interior.download .top-adverbox .wrapper {
-          width: 100%;
-          padding: 1px 0px 0px 0px; } }
+  @media only screen and (max-width: 760px) {
+    body.interior.news .top-adverbox .wrapper, body.interior.product .top-adverbox .wrapper, body.interior.download .top-adverbox .wrapper {
+      width: 100%;
+      padding: 1px 0px 0px 0px; } }
   body.interior.news hgroup, body.interior.product hgroup, body.interior.download hgroup {
     background-color: white; }
     body.interior.news hgroup .wrapper, body.interior.product hgroup .wrapper, body.interior.download hgroup .wrapper {
@@ -1777,6 +1778,12 @@ body.interior {
     @media only screen and (max-width: 760px) {
       body.interior.article hgroup.featured-image {
         margin-top: 0px; } }
+    body.interior.article hgroup.featured-image .wrapper {
+      max-width: 1100px;
+      width: 94%; }
+      @media only screen and (max-width: 760px) {
+        body.interior.article hgroup.featured-image .wrapper {
+          width: 100%; } }
     body.interior.article hgroup.featured-image .title-group h1.large {
       font-family: Roboto, Arial, Helvetica, sans-serif;
       font-weight: 500;
@@ -2357,9 +2364,6 @@ header {
       header .header-top .right-links ul li {
         display: inline-block;
         line-height: 43px; }
-        @media only screen and (max-width: 760px) {
-          header .header-top .right-links ul li {
-            line-height: 52px; } }
         header .header-top .right-links ul li a {
           font-size: .7em;
           font-weight: 300;
@@ -2397,7 +2401,8 @@ header {
             background: white;
             text-indent: 0;
             line-height: 25px;
-            z-index: 100; }
+            z-index: 100;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4); }
             @media only screen and (max-width: 760px) {
               header .header-top .right-links ul li.login .login-dropdown {
                 right: 0%;
@@ -2466,7 +2471,8 @@ header {
               background: white;
               text-indent: 0;
               line-height: 25px;
-              z-index: 100; }
+              z-index: 100;
+              box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4); }
               header .header-top .right-links ul li.social.group .social-dropdown .pad {
                 display: block;
                 padding: 15px 20px; }
@@ -2569,27 +2575,39 @@ header {
   header.interior {
     line-height: 32px;
     height: 32px; }
+    @media only screen and (max-width: 760px) {
+      header.interior {
+        line-height: 52px;
+        height: 52px; } }
     header.interior .header-top .wrapper {
       line-height: 32px; }
       @media only screen and (max-width: 760px) {
         header.interior .header-top .wrapper {
-          line-height: 43px; } }
-      @media only screen and (max-width: 500px) {
-        header.interior .header-top .wrapper {
-          line-height: 43px; } }
+          line-height: 52px; } }
     header.interior .header-top .right-links {
       line-height: 32px; }
+      @media only screen and (max-width: 760px) {
+        header.interior .header-top .right-links {
+          line-height: 52px; } }
       header.interior .header-top .right-links ul li {
         line-height: 32px; }
         @media only screen and (max-width: 760px) {
+          header.interior .header-top .right-links ul li {
+            line-height: 52px; } }
+        @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.login {
             padding-right: 0px;
-            background-position: 8px 6px; } }
+            background-position: center center;
+            line-height: 52px; } }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.social.search {
-            background-position: center 7px; } }
+            background-position: center center;
+            line-height: 52px; } }
         header.interior .header-top .right-links ul li.social.search form {
           top: 32px; }
+          @media only screen and (max-width: 760px) {
+            header.interior .header-top .right-links ul li.social.search form {
+              top: 52px; } }
     @media only screen and (max-width: 760px) {
       header.interior .header-top {
         border-bottom: 5px solid #105ab2; } }
@@ -2990,12 +3008,11 @@ header {
       height: auto;
       background-image: url(../images/logo-header-highres1.png);
       background-size: contain;
-      height: 55px;
+      height: 52px;
       line-height: 45px;
       width: 160px;
       margin-left: 14px;
-      margin-bottom: 6px;
-      margin-top: 5px; }
+      margin-bottom: 6px; }
       #Mobileheader #flyout-main-menu #logo a {
         display: block;
         width: 189px;
@@ -3018,8 +3035,10 @@ header {
   height: 1000px;
   position: absolute !important; }
 
+.home header .menu .wrapper > ul > li a.active {
+  line-height: 26px; }
+
 .home #masthead {
-  margin-top: 82px;
   background: #bbbbbb;
   height: 500px;
   position: relative;
@@ -5081,7 +5100,7 @@ ul, ol {
     height: auto; }
     @media only screen and (max-width: 760px) {
       .wrapper .TopAd {
-        border-bottom: 1px solid white; } }
+        width: auto; } }
   @media only screen and (max-width: 1100px) {
     .wrapper {
       width: 94%; } }
@@ -5415,11 +5434,22 @@ h1 {
 .cta {
   text-align: center; }
   .cta.top-adverbox {
-    min-height: 130px; }
+    margin-top: 84px; }
+    @media only screen and (max-width: 760px) {
+      .cta.top-adverbox {
+        margin-top: 58px; } }
+  .cta .mobile-only {
+    display: none; }
+    @media only screen and (max-width: 760px) {
+      .cta .mobile-only {
+        display: block; } }
+  @media only screen and (max-width: 760px) {
+    .cta .desk-only {
+      display: none; } }
   .cta.grey {
     background-color: #F5F5F5; }
   .cta .wrapper {
-    padding: 20px 0 15px;
+    padding: 20px 0 20px;
     text-align: center; }
     .cta .wrapper .Mobile {
       display: none; }

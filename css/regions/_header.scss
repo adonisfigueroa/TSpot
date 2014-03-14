@@ -55,9 +55,6 @@ header {
 				li {
 					display: inline-block;
 					line-height: $line-height;
-					@include break(mobile){
-							line-height: 52px;
-					}
 					a {
 						font-size: .7em;
 						font-weight: 300;
@@ -103,6 +100,7 @@ header {
 							text-indent: 0;
 							line-height: 25px;
 							z-index: 100;
+							box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 							@include break(mobile){
 								right: 0%;
 								left: 0%;
@@ -201,6 +199,7 @@ header {
 								text-indent: 0;
 								line-height: 25px;
 								z-index: 100;
+								box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 								
 								.pad {
 									display: block;
@@ -356,37 +355,50 @@ header {
 	
 	&.interior{
 		$small-line-height: 32px;
+		$small-line-height-mobile: 52px;
 		line-height: $small-line-height;
 		height: $small-line-height;
+		@include break(mobile){
+			line-height: $small-line-height-mobile;
+			height: $small-line-height-mobile;
+		}
 		.header-top {
 			.wrapper {
 				line-height: $small-line-height;
-
 			    @include break(mobile){
-				    line-height: 43px;
-			    }
-			    @include break(v-mobile){
-				    line-height: 43px;
+				    line-height: $small-line-height-mobile;
 			    }
 			}
 			.right-links {
 				line-height: $small-line-height;
+				@include break(mobile){
+					line-height: $small-line-height-mobile;
+				}
 				ul {
 					li {
 						line-height: $small-line-height;
+						@include break(mobile){
+							line-height: $small-line-height-mobile;
+						}
 						&.login {
 							@include break(mobile) {
 								padding-right: 0px;
-								background-position: 8px 6px;
+								background-position: center center;
+								line-height: $small-line-height-mobile;
 							}
 						}
 						&.social {
 							&.search {
 								@include break(mobile){
-									background-position: center 7px;
+									background-position: center center;
+									line-height:$small-line-height-mobile ;
 								}
 								form {
 									top: $small-line-height;
+									@include break(mobile){
+										top: $small-line-height-mobile;
+									}
+									
 								}
 							}
 						}
@@ -850,12 +862,11 @@ header {
 			width: 189px; height: auto;
 			background-image: url(../images/logo-header-highres1.png);
 		    background-size: contain;
-		    height: 55px;
+		    height: 52px;
 		    line-height: 45px;
 		    width: 160px;
 		    margin-left: 14px;
 		    margin-bottom: 6px;
-		    margin-top: 5px; 
 			a {
 				display: block;
 				width: 189px; height: 40px;
@@ -883,4 +894,7 @@ header {
 	width: 100%;
 	height: 1000px;
 	position: absolute !important;
+}
+.home header .menu .wrapper > ul > li a.active {
+	line-height: 26px;
 }

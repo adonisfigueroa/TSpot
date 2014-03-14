@@ -1,4 +1,10 @@
 body.interior {
+	.top-adverbox {
+		margin-top: 77px !important; 
+		@include break(mobile){
+			margin-top: 58px !important;
+		}
+	}
 	header .menu .wrapper > ul > li a.active {
 		height: 50px !important;
 		&:after {
@@ -264,9 +270,8 @@ body.interior {
 	&.product,
 	&.download {
 		.top-adverbox {
-			margin-top: 77px;
+			
 			@include break(mobile){
-				margin-top: 34px;
 				.wrapper {
 					width: 100%;
 					padding: 1px 0px 0px 0px;
@@ -1418,7 +1423,13 @@ body.interior {
     		@include break(mobile){
 	    		margin-top:0px;
     		}
-    		
+    		.wrapper {
+	    		max-width: 1100px;
+	    		width: 94%;
+	    		@include break(mobile){
+		    		width: 100%;
+	    		}
+    		}
     		.title-group {
       		h1.large {
         		font-family: Roboto, Arial, Helvetica, sans-serif;

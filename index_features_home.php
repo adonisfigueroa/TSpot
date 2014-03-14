@@ -3,11 +3,6 @@
 	$body_classes = array('interior','features');
 	include("_inc/_header.php");
 ?>
-<div class="cta grey top-adverbox">
-	<div class="wrapper">
-		<!--<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1"  />-->
-	</div>
-</div>
 <section id="masthead">
 	<div class="featured-posts-title">
 		<h1>Features and Guides</h1>
