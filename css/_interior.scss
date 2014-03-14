@@ -532,6 +532,10 @@ body.interior {
         	@include break(mobile){
 	        	padding-top: 10px;
         	}
+
+        	#pros_cons {
+               	padding-top: 70px; 		
+        	}
         	
         	h3.section-header {
           	text-transform: none;
@@ -1439,7 +1443,8 @@ body.interior {
 		}
 		
 		.cta {
-			background: white;
+			.wrapper { padding-bottom: 0px; }
+
 			.Desktop {
 			width: 100%;
 			}
