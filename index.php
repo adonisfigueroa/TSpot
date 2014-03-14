@@ -99,10 +99,10 @@
 	<div class="clearfix"></div>
 </section>
 
-<div class="cta">
-	<div class="wrapper">
-		<img class="TopAd Desktop" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
-	</div><!-- /.wrapper -->
+<div class="cta mobile-hide">
+		<div class="wrapper">
+			<img class="TopAd" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
+		</div>
 </div>
 
 <section id="content">

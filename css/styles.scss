@@ -449,15 +449,20 @@ h1 {
 			margin-top: 57px; 
 		}
 	}
-	.mobile-only {
-		display: none;
-		@include break(mobile) {
-			display: block;
-		}
-	}
-	.desk-only {
-		@include break(mobile) {
+	&.mobile-only {
+		.wrapper {
 			display: none;
+			@include break(mobile) {
+			display: block;
+			}
+		}
+		
+	}
+	&.mobile-hide {
+		.wrapper {
+			@include break(mobile) {
+			display: none;
+			}
 		}
 	}
 	&.grey {
@@ -476,9 +481,6 @@ h1 {
 		padding: 0px 0px 0px 0px;
 		text-align: center;
 		width: 100%;
-		}
-		.Desktop {
-			display: none;
 		}
 		.index {
 			margin-top: 46px;
