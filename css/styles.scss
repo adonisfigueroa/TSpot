@@ -91,6 +91,7 @@ ul,ol {
 		height: auto;
 		@include break(mobile){
 			width: auto;
+			padding: 10px 0px;
 			
 		}
 	}
@@ -445,7 +446,7 @@ h1 {
 	&.top-adverbox {
 		margin-top: 84px;
 		@include break(mobile){
-			margin-top: 58px; 
+			margin-top: 57px; 
 		}
 	}
 	.mobile-only {

@@ -468,7 +468,8 @@ body.interior {
     margin-top: 77px !important; }
     @media only screen and (max-width: 760px) {
       body.interior .top-adverbox {
-        margin-top: 58px !important; } }
+        margin-top: 57px !important;
+        padding: 10px 0px; } }
   body.interior header .menu .wrapper > ul > li a.active {
     height: 50px !important; }
     body.interior header .menu .wrapper > ul > li a.active:after {
@@ -3061,7 +3062,7 @@ header {
       margin-top: 0px; } }
     @media only screen and (max-width: 760px) and (orientation: portrait) {
       .home #masthead {
-        margin-top: 52px; } }
+        /*margin-top: 52px;*/ } }
   @media only screen and (max-width: 760px) {
     .home #masthead {
       height: 270px !important; } }
@@ -5100,7 +5101,8 @@ ul, ol {
     height: auto; }
     @media only screen and (max-width: 760px) {
       .wrapper .TopAd {
-        width: auto; } }
+        width: auto;
+        padding: 10px 0px; } }
   @media only screen and (max-width: 1100px) {
     .wrapper {
       width: 94%; } }
@@ -5437,7 +5439,7 @@ h1 {
     margin-top: 84px; }
     @media only screen and (max-width: 760px) {
       .cta.top-adverbox {
-        margin-top: 58px; } }
+        margin-top: 57px; } }
   .cta .mobile-only {
     display: none; }
     @media only screen and (max-width: 760px) {
