@@ -41,6 +41,9 @@ header {
 		@include break(v-mobile){
 			border-bottom: 5px solid #105ab2;
 		}
+		@include break(mobile){
+			border-bottom: 5px solid #105ab2;
+		}
 		.wrapper {
 			padding: 0;
 			line-height: $line-height;
@@ -358,6 +361,13 @@ header {
 		.header-top {
 			.wrapper {
 				line-height: $small-line-height;
+
+			    @include break(mobile){
+				    line-height: 43px;
+			    }
+			    @include break(v-mobile){
+				    line-height: 43px;
+			    }
 			}
 			.right-links {
 				line-height: $small-line-height;
@@ -383,7 +393,12 @@ header {
 					}
 				}
 			}
-            
+		    @include break(mobile){
+			    border-bottom: 5px solid #105ab2;
+		    }
+		    @include break(v-mobile){
+			    border-bottom: 5px solid #105ab2;
+		    }
 		}
 		#MobileMenu a {
 			padding-left:15px;
@@ -405,7 +420,8 @@ header {
 				@include transitions (0.1s);
 				@include break(mobile){
 					display: block;
-					@include opacity(1);	
+					@include opacity(1);
+					height: 49px;
 				}	
 			}
 		}
@@ -415,29 +431,39 @@ header {
 			height: $small-line-height;
 			padding-bottom: 3px;
 			width: 160px;
-			@include break(v-mobile){
-				width: 150px;
-			}
 			a {
 				line-height: $small-line-height;
 			}
+		    @include break(mobile){
+			    margin-left: 32px;
+			    height: 49px !important;
+		    }
+		    @include break(v-mobile){
+			    height: 49px !important;
+		    }
 		}
 		
 		.menu {
-  		font-size: .70em;
-      line-height: 42px;
+	  		font-size: .70em;
+	      	line-height: 42px;
   
-      .wrapper {
-        & > ul {
-  			& > li {
-  				.nav-submenu {
-  					top: 42px;
-  				}
-  			}
+		    .wrapper {
+		        & > ul {
+		  			& > li {
+		  				.nav-submenu {
+		  					top: 42px;
+		  				}
+		  			}
+				}
+		      }
 		}
-      }
-		}
-		
+
+	    @include break(mobile){
+		    line-height: 43px;
+	    }
+	    @include break(v-mobile){
+		    line-height: 43px;
+	    }
 	}
 	
 	.menu {
@@ -759,9 +785,12 @@ header {
 			width: 15px;
 			@include transitions (0.1s);
 			@include break(mobile){
-				height: 49px;
+				height: 47px !important;
 				display: block;
 				@include opacity(1);
+			}
+			@include break(mobile){
+				height: 47px !important;
 			}
 			/*&:hover {
 				fill: $orange;
@@ -784,10 +813,12 @@ header {
 	    @include transitions (0.1s);
 	    @include break(mobile){
 		    margin-left: 32px;
+		    width: 160px;
 		    height: 52px;
 	    }
 	    @include break(v-mobile){
 		    width: 160px;
+		    height: 52px;
 	    }
 		a {
 			display: block;

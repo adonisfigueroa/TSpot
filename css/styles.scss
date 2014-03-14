@@ -361,7 +361,7 @@ h1 {
 
 .download-list,
 .forum-list {
-	margin-bottom: 10px;
+	margin: 0 5px 10px -5px;
 	padding: 10px 0;
 	
 	li {
@@ -1049,7 +1049,10 @@ hgroup.featured-image {
 ul.category-chicklets {
 	line-height: 20px;
 	@include break(mobile){
-		margin-bottom: 10px;
+		margin: 20px 0 10px;
+	}
+	@include break(v-mobile){
+		margin: 20px 0 10px;
 	}
 	li {
 		display: inline-block;
@@ -1316,7 +1319,7 @@ ul.category-chicklets {
 				text-shadow: 0 1px 0 #fff;
 				
 				a {
-					color: $grey;
+					color: #AAA;
 					
 				}
 				
@@ -1345,7 +1348,7 @@ ul.category-chicklets {
 					display: block;
 					position: relative;
 					padding-left: 15px;
-					color: $grey;
+					color: #999;
 					&:before {
 						content:"";
 						display: block;
@@ -1909,10 +1912,6 @@ input[type=submit] {
     }
   }
   
-  #pros_cons.collapsed li:nth-child(n+6){
-	display: none;
-  }
-  
   .pros,
   .cons {
     border-left: 15px solid $red;
@@ -2025,6 +2024,7 @@ input[type=submit] {
           
           &.excellent {
             @include trans-bg($c-excellent,.9);
+            &.perfect { padding: 0 5px !important; }
           }
           &.average {
             @include trans-bg($c-average,.9);
@@ -2249,6 +2249,10 @@ input[type=submit] {
 		}
 	}
 	#content {
+		#pros_cons.collapsed li:nth-child(n+6){
+			display: none;
+		}
+
 		@include break(mobile){
 			margin-top: 0px !important;
 		}
