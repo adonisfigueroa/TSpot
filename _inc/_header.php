@@ -169,8 +169,3 @@
 	<div class="clearfix"></div>
 	
 </header>
-<div class="cta grey top-adverbox mobile-only">
-		<div class="wrapper">
-			<img class="TopAd" src="http://placehold.it/320x50" alt="cta1"  />
-		</div>
-</div>

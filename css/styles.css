@@ -464,8 +464,12 @@ body.home #content #sidebar {
 
 body.interior {
   background: white; }
+  body.interior .cta .wrapper {
+    padding: 20px 0 15px;
+    text-align: center; }
   body.interior .top-adverbox {
-    margin-top: 77px !important; }
+    margin-top: 77px !important;
+    min-height: 130px; }
     @media only screen and (max-width: 760px) {
       body.interior .top-adverbox {
         margin-top: 57px !important; } }
@@ -771,11 +775,11 @@ body.interior {
   body.interior.news hgroup, body.interior.product hgroup, body.interior.download hgroup {
     background-color: white; }
     body.interior.news hgroup .wrapper, body.interior.product hgroup .wrapper, body.interior.download hgroup .wrapper {
-      padding: 20px 0 45px; }
+      padding: 25px 0 50px; }
     body.interior.news hgroup .title-group h1.large, body.interior.product hgroup .title-group h1.large, body.interior.download hgroup .title-group h1.large {
       font-weight: 500;
-      font-size: 2.35em;
-      line-height: 1.25;
+      font-size: 2.4em;
+      line-height: 1.4;
       margin-top: 15px;
       letter-spacing: -0.333px; }
       @media only screen and (max-width: 760px) {
@@ -989,8 +993,6 @@ body.interior {
       @media only screen and (max-width: 760px) {
         body.interior.news.product #content article, body.interior.product.product #content article, body.interior.download.product #content article {
           padding-top: 10px; } }
-      body.interior.news.product #content article #pros_cons, body.interior.product.product #content article #pros_cons, body.interior.download.product #content article #pros_cons {
-        padding-top: 70px; }
       body.interior.news.product #content article h3.section-header, body.interior.product.product #content article h3.section-header, body.interior.download.product #content article h3.section-header {
         text-transform: none;
         font-size: 2.2em;
@@ -1095,7 +1097,7 @@ body.interior {
       text-align: center;
       height: 50px;
       line-height: 50px;
-      /*background: #fff;*/ }
+      background: #fff; }
       body.interior.products .post-list-product .product-img img {
         max-width: 100%;
         max-height: 100%; }
@@ -1392,6 +1394,8 @@ body.interior {
       @media only screen and (max-width: 960px) {
         body.interior.products #sidebar .SideTitle {
           padding: 0px 10px; } }
+    body.interior.products #sidebar .tab_box {
+      margin-bottom: 21px; }
     body.interior.products #sidebar .has_more .SideTitle .arrow {
       width: 0;
       height: 0;
@@ -1434,7 +1438,7 @@ body.interior {
       body.interior.products #sidebar #LookUp input[type=text] {
         border: none;
         height: 64px;
-        width: 100%;
+        width: 89%;
         border-radius: 0;
         border: none;
         box-shadow: none;
@@ -1492,11 +1496,11 @@ body.interior {
           border-top: 4px solid transparent;
           border-bottom: 4px solid transparent;
           border-left: 6px solid #ff7f00; }
-    body.interior.products #sidebar .CompHard {
+    body.interior.products #sidebar .computer-hardware {
       height: 185px; }
-    body.interior.products #sidebar .DeskMobi {
+    body.interior.products #sidebar .pcs-laptops-tablets {
       height: 40px; }
-    body.interior.products #sidebar .Elec {
+    body.interior.products #sidebar .electronics {
       height: 110px; }
   body.interior.products-cat #AddFilter {
     height: 31px;
@@ -3044,6 +3048,7 @@ header {
   line-height: 26px; }
 
 .home #masthead {
+  margin-top: 82px;
   background: #bbbbbb;
   height: 500px;
   position: relative;
@@ -4100,10 +4105,9 @@ header {
       width: 94%;
       padding: 0px 3%; } }
 .products #masthead {
-  margin-top: 93px;
+  margin-top: 75px;
   min-height: 416px;
-  position: relative;
-  margin-top: 37px; }
+  position: relative; }
   @media only screen and (max-width: 760px) {
     .products #masthead {
       margin-top: 0px; } }
@@ -5455,7 +5459,7 @@ h1 {
   .cta.grey {
     background-color: #F5F5F5; }
   .cta .wrapper {
-    padding: 20px 0 20px;
+    padding: 20px 0 5px;
     text-align: center; }
     .cta .wrapper .Mobile {
       display: none; }
@@ -5472,7 +5476,6 @@ h1 {
 .adblock {
   width: 300px;
   text-align: center;
-  padding-top: 5px;
   padding-bottom: 25px; }
 
 h3.section-header {
@@ -6473,23 +6476,14 @@ input[type=submit] {
       zoom: 1;
       cursor: pointer; }
   #product_info figure .flex-control-paging li a {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     display: block;
-    background: #333;
-    background: rgba(0, 0, 0, 0.5);
+    background: #aaa;
     cursor: pointer;
-    text-indent: -9999px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
-    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
+    text-indent: -9999px; }
   #product_info figure .flex-active {
-    background: #525252 !important; }
+    background: #ff7f00 !important; }
   #product_info figure .flex-direction-nav {
     margin: 0;
     padding: 0;
@@ -6590,14 +6584,14 @@ input[type=submit] {
       font-family: "Roboto Condensed", sans-serif; }
       #product_info .product-desc .Prodcomment h3 a {
         border-bottom: solid 3px; }
-    #product_info .product-desc .Prodcomment .proscons h3 {
-      padding-left: 0; }
+    #product_info .product-desc .Prodcomment .pros h3, #product_info .product-desc .Prodcomment .cons h3 {
+      padding-left: 0 !important; }
     #product_info .product-desc .Prodcomment p {
       border-left: 10px solid #bbbbbb;
       padding: 5px 0px 5px 10px;
       font-size: 0.8em;
       font-weight: 300; }
-    #product_info .product-desc .Prodcomment .editorial p {
+    #product_info .product-desc .Prodcomment.editorial p {
       border-left: none;
       padding: 0;
       font-size: 0.85em;
@@ -7168,6 +7162,8 @@ input[type=submit] {
   @media only screen and (max-width: 1100px) {
     .product #sidebar {
       margin-top: 50px !important; } }
+.product #content #pros_cons {
+  padding-top: 70px !important; }
 .product #content #pros_cons.collapsed li:nth-child(n+6) {
   display: none; }
 @media only screen and (max-width: 760px) {
