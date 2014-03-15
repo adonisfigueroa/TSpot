@@ -772,6 +772,15 @@ body.interior {
         text-align: left;
         padding: 0 10px 0 10px;
         color: #666666; }
+  body.interior.white #content {
+    background: white; }
+  body.interior.normal #content h1 {
+    color: #1e2833;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 1.4;
+    margin-top: 15px;
+    letter-spacing: -0.333px; }
   body.interior.news hgroup, body.interior.product hgroup, body.interior.download hgroup {
     background-color: white; }
     body.interior.news hgroup .wrapper, body.interior.product hgroup .wrapper, body.interior.download hgroup .wrapper {
@@ -1983,22 +1992,21 @@ body.interior.download #content article {
   width: 100%;
   float: none; }
 body.interior.download #content .publisher-description ul {
-  margin-left: 0; }
-  body.interior.download #content .publisher-description ul li {
-    list-style: none;
-    padding-left: 0; }
+  padding-bottom: 25px; }
 body.interior.download #content .slide-sort-selector {
   border-bottom: 2px solid #105ab2; }
   body.interior.download #content .slide-sort-selector span.number {
     background: url("../images/blue-ellipse.svg") no-repeat scroll 0 0 transparent;
     text-align: center;
-    line-height: 27px;
+    line-height: 26px;
     color: #fff;
     display: inline-block;
     width: 27px;
     height: 27px;
-    font-size: .8em;
-    margin-left: 10px; }
+    font-size: 1.1em;
+    margin-left: 10px;
+    font-weight: 400;
+    font-family: Arial, Verdana, sans-serif; }
     @media only screen and (max-width: 500px) {
       body.interior.download #content .slide-sort-selector span.number {
         display: none; } }
@@ -2027,7 +2035,7 @@ body.interior.download #content .slide-sort-selector {
       body.interior.download #content .slide-sort-selector .post-type-selector ul li a {
         color: #aaaaaa;
         height: 27px;
-        font-size: 1.1em; }
+        font-size: 1.4em; }
         @media only screen and (max-width: 500px) {
           body.interior.download #content .slide-sort-selector .post-type-selector ul li a {
             font-size: 1.1em; } }
@@ -2096,9 +2104,13 @@ body.interior.download #product_info {
         border: none;
         margin-top: 120px; } }
   body.interior.download #product_info .google-ads {
-    margin-top: 45px; }
+    margin-top: 10px; }
+  body.interior.download #product_info .options {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 15px 0 0px; }
   body.interior.download #product_info .mirror-wrapper {
-    margin-top: 30px;
+    margin: 0 0 15px;
       /*.mirror {
         margin-right: 0%;
 		display: block;
@@ -2132,16 +2144,15 @@ body.interior.download #product_info {
       body.interior.download #product_info .mirror-wrapper {
         margin: 0; } }
     body.interior.download #product_info .mirror-wrapper .multi_line {
-      max-width: 190px;
+      max-width: 90%;
       width: 100%; }
     @media only screen and (max-width: 500px) {
       body.interior.download #product_info .mirror-wrapper ul {
         text-align: center;
         width: 94%; } }
     body.interior.download #product_info .mirror-wrapper .inline li {
-      width: 90px;
-      margin-right: 5px;
-      margin-top: 5px;
+      margin-right: 8px;
+      margin-top: 8px;
       display: inline-block; }
     body.interior.download #product_info .mirror-wrapper li {
       list-style: none;
@@ -2151,16 +2162,13 @@ body.interior.download #product_info {
         position: relative;
         color: #0851AD !important;
         display: block;
-        font-weight: bold;
-        padding-right: 3px;
-        height: 24px;
-        line-height: 24px;
-        font-size: 12px;
+        font-weight: 500;
+        padding: 0px 10px 1px 5px;
+        height: 27px;
+        line-height: 28px;
+        font-size: 14px;
         text-decoration: none;
         border: 1px solid #d3d3d3;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
         -webkit-transition: all 0.1s linear;
         -moz-transition: all 0.1s linear;
         transition: all 0.1s linear;
@@ -2194,7 +2202,7 @@ body.interior.download #product_info {
           display: block;
           width: 10px;
           height: inherit;
-          left: 5px; }
+          left: 8px; }
   body.interior.download #product_info .download-product {
     border-left: 2px solid #dddddd;
     width: 33.33333%;
@@ -2206,7 +2214,8 @@ body.interior.download #product_info {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 15px 10px; }
+    padding: 5px 0 0 50px;
+    min-height: 250px; }
     @media only screen and (max-width: 500px) {
       body.interior.download #product_info .download-product {
         width: 100%;
@@ -2266,7 +2275,7 @@ body.interior.download #product_info {
           background: url("../images/tmp/facebook-link.png") no-repeat scroll 0 0 transparent; }
 
 body.interior.download #sidebar {
-  margin-top: -280px; }
+  margin-top: -290px; }
   @media only screen and (max-width: 960px) {
     body.interior.download #sidebar {
       width: 30%; }
@@ -5740,6 +5749,11 @@ h3.longtype {
       padding: 0 0 15px;
       font-family: "Helvetica Neue", Arial, Helvetica;
       line-height: 1.5; }
+    #comments .comment .quote {
+      color: #666;
+      padding: 4px 10px 4px;
+      border-left: 5px solid #eee;
+      font-size: 1.1em; }
     #comments .comment ul.action-links {
       text-align: right;
       margin-top: 10px; }

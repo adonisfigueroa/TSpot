@@ -273,6 +273,26 @@ body.interior {
 			
 		}
 	}
+
+	&.white {
+		#content {
+			background: white;
+		}
+	}
+
+	&.normal {
+		#content {	
+			h1 {
+				color: #1e2833;
+				font-weight: 500;
+				font-size: 2em;
+				line-height: 1.4;
+				margin-top: 15px;
+				letter-spacing: -0.333px;
+			}
+		}
+	}
+
 	&.news,
 	&.product,
 	&.download {
