@@ -2368,13 +2368,13 @@ header {
         header .header-top .right-links ul li.login {
           background-image: url(/images/badge-right.svg);
           background-repeat: no-repeat;
-          background-position: 10px center;
+          background-position: 8px center;
           padding-right: 10px;
           position: relative; }
           @media only screen and (max-width: 760px) {
             header .header-top .right-links ul li.login {
               padding-right: 0px;
-              background-position: 8px 15px; } }
+              background-position: center center; } }
           header .header-top .right-links ul li.login:hover {
             background-image: url(/images/badge-right-active.svg);
             background-color: #ff7f00; }
@@ -2574,37 +2574,37 @@ header {
     height: 32px; }
     @media only screen and (max-width: 760px) {
       header.interior {
-        line-height: 52px;
-        height: 52px; } }
+        line-height: 43px;
+        height: 43px; } }
     header.interior .header-top .wrapper {
       line-height: 32px; }
       @media only screen and (max-width: 760px) {
         header.interior .header-top .wrapper {
-          line-height: 52px; } }
+          line-height: 43px; } }
     header.interior .header-top .right-links {
       line-height: 32px; }
       @media only screen and (max-width: 760px) {
         header.interior .header-top .right-links {
-          line-height: 52px; } }
+          line-height: 43px; } }
       header.interior .header-top .right-links ul li {
         line-height: 32px; }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li {
-            line-height: 52px; } }
+            line-height: 43px; } }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.login {
             padding-right: 0px;
             background-position: center center;
-            line-height: 52px; } }
+            line-height: 43px; } }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.social.search {
             background-position: center center;
-            line-height: 52px; } }
+            line-height: 43px; } }
         header.interior .header-top .right-links ul li.social.search form {
           top: 32px; }
           @media only screen and (max-width: 760px) {
             header.interior .header-top .right-links ul li.social.search form {
-              top: 52px; } }
+              top: 43px; } }
     @media only screen and (max-width: 760px) {
       header.interior .header-top {
         border-bottom: 5px solid #105ab2; } }
@@ -2664,10 +2664,10 @@ header {
         top: 42px; }
     @media only screen and (max-width: 760px) {
       header.interior {
-        line-height: 43px; } }
+        line-height: 48px; } }
     @media only screen and (max-width: 500px) {
       header.interior {
-        line-height: 43px; } }
+        line-height: 48px; } }
   header .menu {
     background: #105ab2;
     font-size: .75em;
@@ -2894,14 +2894,22 @@ header {
                 transition-delay: 0;
                 font-size: 1.05em;
                 text-align: center;
-                padding-bottom: 10px; }
-                header .menu .wrapper > ul > li .submenu li ul.recent-items li a:hover {
-                  background-color: rgba(0, 0, 0, 0.2);
-                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); }
+                padding-bottom: 10px;
+                /*&:hover {
+                	@include trans-bg(black,.2);
+                }*/ }
+              header .menu .wrapper > ul > li .submenu li ul.recent-items li:hover {
+                border: solid #ff7f00 3px; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li img {
                 width: 100%;
                 height: auto;
-                margin-bottom: 15px; }
+                margin-bottom: 15px;
+                -webkit-box-sizing: border-box;
+                /* Safari/Chrome, other WebKit */
+                -moz-box-sizing: border-box;
+                /* Firefox, other Gecko */
+                box-sizing: border-box;
+                /* Opera/IE 8+ */ }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li:nth-child(4) {
                 width: 23.5%;
                 margin-right: 0%;
@@ -6446,6 +6454,7 @@ input[type=submit] {
     background-size: cover; }
     #product_info figure .imgwrap .flex-viewport ul li img {
       max-height: 100%;
+      max-width: 100%;
       width: auto;
       margin: 0 auto;
       display: block; }

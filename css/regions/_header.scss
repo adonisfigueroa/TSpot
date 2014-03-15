@@ -64,12 +64,12 @@ header {
 					&.login {
 						background-image: url(/images/badge-right.svg);
 						background-repeat: no-repeat;
-						background-position: 10px center;
+						background-position: 8px center;
 						padding-right: 10px;
 						position: relative;
 						@include break(mobile) {
 								padding-right: 0px;
-								background-position: 8px 15px;
+								background-position: center center;
 							}
 						
 						&:hover {
@@ -355,7 +355,7 @@ header {
 	
 	&.interior{
 		$small-line-height: 32px;
-		$small-line-height-mobile: 52px;
+		$small-line-height-mobile: 43px;
 		line-height: $small-line-height;
 		height: $small-line-height;
 		@include break(mobile){
@@ -471,10 +471,10 @@ header {
 		}
 
 	    @include break(mobile){
-		    line-height: 43px;
+		    line-height: 48px;
 	    }
 	    @include break(v-mobile){
-		    line-height: 43px;
+		    line-height: 48px;
 	    }
 	}
 	
@@ -750,16 +750,21 @@ header {
 										text-align: center;
 										padding-bottom: 10px;
 										
-										&:hover {
+										/*&:hover {
 											@include trans-bg(black,.2);
-										}
+										}*/
 										
 									}
-									
+									&:hover {
+										border: solid $orange 3px;
+									}
 									img {
 										width: 100%;
 										height: auto;
 										margin-bottom: 15px;
+										-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+										-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+										box-sizing: border-box;         /* Opera/IE 8+ */
 									}
 									
 									&:nth-child(4) {

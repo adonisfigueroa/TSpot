@@ -3,7 +3,6 @@ body.interior {
 		margin-top: 77px !important; 
 		@include break(mobile){
 			margin-top: 57px !important;
-			padding: 10px 0px;
 		}
 	}
 	header .menu .wrapper > ul > li a.active {
