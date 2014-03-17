@@ -279,7 +279,7 @@ function xmenuHover() {
 		  		});
 		} else {
 			$this.children(".nav-submenu").children(".wrapper").load(
-			  "../static/nav-submenus/"+$this.children("a").data("source")+'.html',
+			  "../_inc/nav-submenus/"+$this.children("a").data("source")+'.html',
 			  function() {
 	  			$this.children("a").addClass("active");
 	  			$(".submenu > li > a").hover(function(e) {
@@ -308,6 +308,6 @@ function xmenuHoverOut() {
 		clearTimeout(setTimeoutConst);
 		var SlideTime = 200;
 		return false
-		},0);	
+		},50);	
 	});
 }

@@ -1893,6 +1893,20 @@ body.interior {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 10px solid black; }
+  .article nav.page-nav a:hover span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 10px;
+    height: 7px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid #ff7f00; }
 
 .sorter {
   float: right;

@@ -1576,6 +1576,20 @@ body.interior {
 					@include triangle(right,black,8,10);
 				}
 	}
+	a:hover {
+		span {
+		&:after {
+					content:"";
+					display: block;
+					position: absolute;
+					right: 0; top: 50%;
+					margin-top: -5px;
+					width: 10px; height: 7px;
+					@include triangle(right,$orange,8,10);
+				}
+			}
+	}
+	
 }
 
 .sorter {
