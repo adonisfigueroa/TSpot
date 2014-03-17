@@ -673,7 +673,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin-top: 90px;
+  margin-top: 0px;
   @include break(v-tablet){
 	  display: none;
   }
@@ -733,15 +733,23 @@ h3.longtype {
           padding: 0 15px;
           line-height: 160%;
           bottom: 0; right: -4px;
-          
-          &.red {
-            @include trans-bg($red,.9);
+
+          &.excellent {
+            @include trans-bg($c-excellent,.9);
           }
-          
-          &.purple {
-            @include trans-bg($purple,.9);
+          &.good {
+            @include trans-bg($c-good,.9);
           }
-          
+          &.average {
+            @include trans-bg($c-average,.9);
+          }
+          &.bad {
+            @include trans-bg($c-bad,.9);
+          }
+          &.none {
+            display: none;
+          }
+
         }
         
       }
@@ -1066,16 +1074,16 @@ hgroup.featured-image {
 		@include border-radius(5px);
 		
 		&.excellent {
-			@include trans-bg(#00be15,.8);
+			@include trans-bg($c-excellent,.8);
 		}
 		&.good {
-			@include trans-bg(#075bc0,.8);
+			@include trans-bg($c-good,.8);
 		}
 		&.average {
-			@include trans-bg(#6f22a0,.8);
+			@include trans-bg($c-average,.8);
 		}
 		&.bad {
-			@include trans-bg(#cc0000,.8);
+			@include trans-bg($c-bad,.8);
 		}
 		
 		span {
