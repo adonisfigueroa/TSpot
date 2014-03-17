@@ -4455,10 +4455,9 @@ header {
       width: 94%;
       padding: 0px 3%; } }
 .features #masthead, .reviews #masthead {
-  margin-top: 93px;
+  margin-top: 75px;
   min-height: 416px;
-  position: relative;
-  margin-top: 37px; }
+  position: relative; }
   @media only screen and (max-width: 760px) {
     .features #masthead, .reviews #masthead {
       margin-top: 0px; } }
@@ -6063,6 +6062,9 @@ ul.category-chicklets {
         line-height: 33px; } }
     .social-widget li.social-count.zero {
       border-top: 5px solid #ff7f00; }
+      @media only screen and (max-width: 500px) {
+        .social-widget li.social-count.zero {
+          border-top: none; } }
   .social-widget li.social {
     background-image: url(/images/social-widget-bg.svg);
     background-repeat: no-repeat;

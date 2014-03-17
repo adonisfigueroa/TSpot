@@ -1430,7 +1430,7 @@
 	}
 	
 }
-#masthead {
+  #masthead {
 	margin-top: 75px;
 	min-height: 416px;
 	position: relative;
@@ -1792,11 +1792,10 @@
 	}
 	
 }
-#masthead {
-	margin-top: 93px;
+  #masthead {
+	margin-top: 75px;
 	min-height: 416px;
 	position: relative;
-	margin-top: 37px;
 	@include break(mobile){
 		margin-top: 0px;
 	}
