@@ -1166,6 +1166,9 @@ ul.category-chicklets {
 
 			&.zero {
 				border-top: 5px solid #ff7f00;
+				@include break(v-mobile) {
+					border-top: none;
+				}
 			}
 
 		}
