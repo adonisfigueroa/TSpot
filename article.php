@@ -29,7 +29,7 @@
 	</div><!-- /.wrapper -->
 </hgroup>
 
-<div class="cta">
+<div class="cta mobile-hide">
 	<div class="wrapper">
 		<img class="TopAd Desktop" src="images/tmp/cta1.jpg" alt="cta1" width="970" height="90" />
 	</div><!-- /.wrapper -->

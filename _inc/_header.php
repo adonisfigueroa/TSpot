@@ -46,8 +46,9 @@
 	<script type="text/javascript" src="/js/jquery.sticky-kit.min.js"></script>
 	<!--<script type="text/javascript" src="/js/jquery.countup.js"></script>-->
 	<script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="/js/afterresize.min.js"></script>
 	<script type="text/javascript" src="/js/custom.js"></script>
-	
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,500italic,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
@@ -70,11 +71,11 @@
 		</div>
 	</nav>
 </div>
-<div id="GlobalWrapper" class="flyout">
+<div id="GlobalWrapper">
 <header id="header"<?php if (in_array('interior', $body_classes)) : ?> class="interior"<?php endif; ?>>
 	<div class="header-top">
 		<div class="wrapper">
-			<div id="MobileMenu"><a href="#"><svg id="Stripes" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 50 50" xml:space="preserve">
+			<div id="MobileMenu"><a><svg id="Stripes" class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 50 50" xml:space="preserve">
 					<rect class="a" width="50" height="7"></rect>
 					<rect class="b" y="20" width="50" height="7"></rect>
 					<rect class="c" y="40" width="50" height="7"></rect>
@@ -82,7 +83,7 @@
 			<div class="right-links">
 				<ul>
 					<li class="login">
-						<a href="#">Login <span class="blink">_</span></a>
+						<a style="cursor:pointer">Login <span class="blink">_</span></a>
 						<div class="login-dropdown dropdown">
 							<div class="pad why-register">
 								<h4>Welcome to TechSpot</h4>
@@ -107,7 +108,7 @@
 							
 						</div>
 					</li>
-					<li class="group social"><a href="#">Social Sharing</a>
+					<li class="group social"><a style="cursor:pointer;">Social Sharing</a>
 						<div class="social-dropdown dropdown">
 							<div class="pad social">
 								<h4>Find TechSpot on...</h4>
@@ -141,7 +142,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="search social"><a href="#">Search</a>
+					<li class="search social"><a style="cursor:pointer">Search</a>
 						<form class="search_form">
 							<input type="text" name="search" id="search_field" value="" placeholder="what are you looking for?" />
 						</form>
@@ -155,12 +156,76 @@
 	<nav id="main-menu" class="menu">
 		<div class="wrapper">
 			<ul id="dk_menu">
-				<li><a href="#" data-source="trending">Trending</a></li>
-				<li><a href="#" data-source="reviews">Reviews</a></li>
-				<li><a href="#" data-source="features">Features</a></li>
-				<li><a href="#" data-source="product-finder">Product Finder</a></li>
-				<li id="SpecialHeightF"><a href="#" data-source="forums">Forums</a></li>
-				<li id="SpecialHeightD"><a href="#" data-source="downloads">Downloads</a></li>
+				<li>
+					<a href="#" data-source="trending">Trending</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" data-source="reviews">Reviews</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" data-source="features">Features</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" data-source="product-finder">Product Finder</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">
+						</div>
+					</div>
+				</li>
+				<li id="SpecialHeightF">
+					<a href="#" data-source="forums">Forums</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<ul class="SubHeader" id="forums">
+							<li class="NoArrow"><a href="">Recent Activity</a></li>
+							<li class="OArrow"><a href="">Most Recent Topics</a></li>
+							<li class="NoArrow"><a href="">Watched Topics</a></li>
+						</ul>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">	
+						</div>
+					</div>
+				</li>
+				<li id="SpecialHeightD">
+					<a href="#" data-source="downloads">Downloads</a>
+					<div class='nav-submenu ' style='display: none;'>
+						<ul class="SubHeader" id="download">
+							<li class="NoArrow"><a href="">Most Popular</a></li>
+							<li class="OArrow"><a href="">Editors Choice</a></li>
+							<li class="GArrow"><a href="">Latest Drivers</a></li>
+						</ul>
+						<div class="loadAnim">
+								<img src="images/loading.gif" alt="loading gif">
+							</div>
+						<div class="wrapper">
+						</div>
+					</div>
+				</li>
 			</ul>
 		</div><!-- /.wrapper -->
 		

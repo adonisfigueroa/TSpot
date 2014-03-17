@@ -71,7 +71,6 @@ body.interior {
 			font-size: 1.8em;
 			line-height: 1.4;
 			color: #222;
-			padding: 10px 0 20px;
 	    }
     
 		h3 {
@@ -652,6 +651,10 @@ body.interior {
 				width: 100%;
 			}		
 		}
+		.SideTitle, .SideProdContent li a{
+			color: white;
+		}
+		
 		.post-list-product{
 			width: 100%;
 			article {
@@ -969,15 +972,14 @@ body.interior {
 			width: 27%;
 			text-transform: uppercase;
 			font-family: "Roboto Condensed", sans-serif;
-			color: white;
 			font-size: 0.7em;
 			@include break(v-tablet){
 				font-size: 0.6em;
 			}
-			a {
+			/*a {
 				color: white;
 				text-decoration: none;
-			}
+			}*/
 			.SideTitle{
 				line-height: 31px;
 				background-color: $blue;
@@ -1138,7 +1140,7 @@ body.interior {
 		.col-2-3{
 			@include col-last(2,3,0);
 			width: 80%;
-			padding: 0px 2% 0px 0px;
+			//padding: 0px 2% 0px 0px;
 			@include break(mobile){
 				width: 100%;
 				padding: 0;		
@@ -1265,7 +1267,7 @@ body.interior {
 			width: 16%;
 			text-transform: uppercase;
 			font-family: "Roboto Condensed", sans-serif;
-			color: white;
+			
 			font-size: 0.7em;
 			@include break(v-tablet){
 				font-size: 0.6em;
@@ -1444,9 +1446,8 @@ body.interior {
   		}
 		}
 		
-		.cta {
-			.wrapper { padding-bottom: 0px; }
-		}
+		
+		
 		
 		#content {
 			position: relative;

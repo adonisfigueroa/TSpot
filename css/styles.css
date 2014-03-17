@@ -527,8 +527,7 @@ body.interior {
       font-weight: 500;
       font-size: 1.8em;
       line-height: 1.4;
-      color: #222;
-      padding: 10px 0 20px; }
+      color: #222; }
     body.interior article ul {
       margin-left: 5%;
       font-size: 0.8em; }
@@ -1075,6 +1074,8 @@ body.interior {
     @media only screen and (max-width: 760px) {
       body.interior.products .col-2-3 {
         width: 100%; } }
+  body.interior.products .SideTitle, body.interior.products .SideProdContent li a {
+    color: white; }
   body.interior.products .post-list-product {
     width: 100%; }
     body.interior.products .post-list-product article {
@@ -1374,17 +1375,17 @@ body.interior {
     width: 27%;
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
-    color: white;
-    font-size: 0.7em; }
+    font-size: 0.7em;
+    /*a {
+    	color: white;
+    	text-decoration: none;
+    }*/ }
     @media only screen and (max-width: 760px) {
       body.interior.products #sidebar {
         display: none; } }
     @media only screen and (max-width: 960px) {
       body.interior.products #sidebar {
         font-size: 0.6em; } }
-    body.interior.products #sidebar a {
-      color: white;
-      text-decoration: none; }
     body.interior.products #sidebar .SideTitle {
       line-height: 31px;
       background-color: #105ab2;
@@ -1527,8 +1528,7 @@ body.interior {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 80%;
-    padding: 0px 2% 0px 0px; }
+    width: 80%; }
     @media only screen and (max-width: 760px) {
       body.interior.features .col-2-3, body.interior.reviews .col-2-3, body.interior.reviews-cat .col-2-3 {
         width: 100%;
@@ -1636,7 +1636,6 @@ body.interior {
     width: 16%;
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
-    color: white;
     font-size: 0.7em; }
     @media only screen and (max-width: 960px) {
       body.interior.features #sidebar, body.interior.reviews #sidebar, body.interior.reviews-cat #sidebar {
@@ -1796,8 +1795,6 @@ body.interior {
       body.interior.article hgroup.featured-image .title-group em {
         font-family: "Roboto", sans-serif;
         font-size: 0.75em; }
-    body.interior.article .cta .wrapper {
-      padding-bottom: 0px; }
     body.interior.article #content {
       position: relative;
       padding-bottom: 30px; }
@@ -2361,6 +2358,9 @@ header {
       header .header-top .right-links ul li {
         display: inline-block;
         line-height: 43px; }
+        @media only screen and (max-width: 760px) {
+          header .header-top .right-links ul li {
+            line-height: 52px; } }
         header .header-top .right-links ul li a {
           font-size: .7em;
           font-weight: 300;
@@ -2375,10 +2375,10 @@ header {
             header .header-top .right-links ul li.login {
               padding-right: 0px;
               background-position: center center; } }
-          header .header-top .right-links ul li.login:hover {
+          header .header-top .right-links ul li.login.hover {
             background-image: url(/images/badge-right-active.svg);
             background-color: #ff7f00; }
-            header .header-top .right-links ul li.login:hover .login-dropdown {
+            header .header-top .right-links ul li.login.hover .login-dropdown {
               display: block; }
           header .header-top .right-links ul li.login a {
             display: block;
@@ -2455,9 +2455,9 @@ header {
             @media only screen and (max-width: 760px) {
               header .header-top .right-links ul li.social.group {
                 display: none; } }
-            header .header-top .right-links ul li.social.group:hover {
+            header .header-top .right-links ul li.social.group.hover {
               background-color: #ff7f00; }
-              header .header-top .right-links ul li.social.group:hover .dropdown {
+              header .header-top .right-links ul li.social.group.hover .dropdown {
                 display: block; }
             header .header-top .right-links ul li.social.group .social-dropdown {
               display: none;
@@ -2529,9 +2529,9 @@ header {
             @media only screen and (max-width: 500px) {
               header .header-top .right-links ul li.social.search {
                 background-position: center center; } }
-            header .header-top .right-links ul li.social.search:hover, header .header-top .right-links ul li.social.search.active {
+            header .header-top .right-links ul li.social.search.active, header .header-top .right-links ul li.social.search.hover {
               background-color: #ff7f00; }
-              header .header-top .right-links ul li.social.search:hover form, header .header-top .right-links ul li.social.search.active form {
+              header .header-top .right-links ul li.social.search.active form, header .header-top .right-links ul li.social.search.hover form {
                 display: block; }
             header .header-top .right-links ul li.social.search form {
               display: none;
@@ -2590,16 +2590,16 @@ header {
         line-height: 32px; }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li {
-            line-height: 43px; } }
+            line-height: 52px; } }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.login {
             padding-right: 0px;
             background-position: center center;
-            line-height: 43px; } }
+            line-height: 52px; } }
         @media only screen and (max-width: 760px) {
           header.interior .header-top .right-links ul li.social.search {
             background-position: center center;
-            line-height: 43px; } }
+            line-height: 52px; } }
         header.interior .header-top .right-links ul li.social.search form {
           top: 32px; }
           @media only screen and (max-width: 760px) {
@@ -2898,18 +2898,15 @@ header {
                 /*&:hover {
                 	@include trans-bg(black,.2);
                 }*/ }
-              header .menu .wrapper > ul > li .submenu li ul.recent-items li:hover {
-                border: solid #ff7f00 3px; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li img {
                 width: 100%;
                 height: auto;
-                margin-bottom: 15px;
-                -webkit-box-sizing: border-box;
-                /* Safari/Chrome, other WebKit */
-                -moz-box-sizing: border-box;
-                /* Firefox, other Gecko */
-                box-sizing: border-box;
-                /* Opera/IE 8+ */ }
+                margin-bottom: 15px; }
+              header .menu .wrapper > ul > li .submenu li ul.recent-items li:hover img {
+                border: solid #FDA82A 3px;
+                margin-left: -3px;
+                margin-top: -3px;
+                margin-bottom: 12px; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li:nth-child(4) {
                 width: 23.5%;
                 margin-right: 0%;
@@ -3037,7 +3034,7 @@ header {
 
 .activebar #MobileMenu a {
   width: 100%;
-  height: 1000px;
+  height: 1000000000px;
   position: absolute !important; }
 
 .home header .menu .wrapper > ul > li a.active {
@@ -5055,8 +5052,25 @@ body {
   -webkit-transition: none;
   transition: none; }
 
+.social-column {
+  overflow: hidden; }
+
 .activebar #MobileMenu a svg {
   fill: #ff7f00 !important; }
+
+.loadAnim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100000;
+  background: #777D82; }
+  .loadAnim img {
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    z-index: 1000000; }
 
 .rating {
   font-family: Helvetica, Arial, sans-serif; }
@@ -5110,6 +5124,9 @@ ul, ol {
   @media only screen and (max-width: 1100px) {
     .wrapper {
       width: 94%; } }
+
+.article article h2, .news article h2 {
+  padding: 10px 0 20px; }
 
 img.responsive {
   width: 100%;
@@ -5514,7 +5531,8 @@ h3.longtype {
 
 #sidebar {
   width: 305px;
-  float: right; }
+  float: right;
+  overflow: hidden; }
   @media only screen and (max-width: 1100px) {
     #sidebar {
       width: 29%; }

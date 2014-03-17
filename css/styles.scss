@@ -33,8 +33,27 @@ body {
 	
 	
 }
+.social-column {
+	overflow: hidden;
+}
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
+}
+.loadAnim {
+width: 100%;
+height: 100%;
+position: absolute;
+z-index: 100000;
+background: #777D82;
+
+	img {
+		left: 50%;
+		top: 50%;
+		margin-left: -16px;
+		margin-top: -16px;
+		position: absolute;
+		z-index: 1000000;
+	}
 }
 #Content {
 		//padding-bottom: 30px;
@@ -99,7 +118,14 @@ ul,ol {
 		width: 94%;
 	}
 }
-
+//styling title for article&news
+.article, .news { 
+ 	article {
+	    h2 {
+			padding: 10px 0 20px;
+	    }
+	}
+}
 
 img.responsive {
 	width: 100%;
@@ -553,6 +579,7 @@ h3.longtype {
 #sidebar {
 	width: 305px;
 	float: right;
+	overflow: hidden;
 	@include break(tablet){
 		width: 29%;
 		img {
