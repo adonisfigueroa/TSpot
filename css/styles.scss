@@ -479,7 +479,7 @@ h1 {
 		.wrapper {
 			display: none;
 			@include break(mobile) {
-			display: block;
+				display: block;
 			}
 		}
 		
@@ -496,7 +496,7 @@ h1 {
 	}
 	
 	.wrapper {
-		padding: 20px 0 20px;
+		padding: 20px 0 5px;
 		text-align: center;
 		.Mobile{
 			display: none;
@@ -520,7 +520,6 @@ h1 {
 .adblock {
 	width: 300px;
 	text-align: center;
-	padding-top: 5px;
 	padding-bottom: 25px;
 }
 
@@ -820,7 +819,6 @@ h3.longtype {
       padding-top: 10px;
     }
     
-    
     time {
       display: inline-block;
       float: right;
@@ -852,6 +850,13 @@ h3.longtype {
 	padding: 0 0 15px;
 	font-family: $f-helvetica;
 	line-height: 1.5;
+    }
+
+    .quote {
+		color: #666;
+		padding: 4px 10px 4px;
+		border-left: 5px solid #eee;
+		font-size: 1.1em;
     }
     
     ul.action-links {
@@ -1580,25 +1585,15 @@ input[type=submit] {
 			}
 	}
 	.flex-control-paging li a {
-		width: 10px;
-		height: 10px;
+		width: 5px;
+		height: 5px;
 		display: block;
-		background: #333;
-		background: rgba(0,0,0,0.5);
+		background: #aaa;
 		cursor: pointer;
 		text-indent: -9999px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		border-radius: 20px;
-		-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-		-moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-		-o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-		box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-		
 	}
 	.flex-active{
-		background: #525252!important;
+		background: $orange !important;
 	}
 		
     .flex-direction-nav {
@@ -1693,8 +1688,8 @@ input[type=submit] {
 				border-bottom: solid 3px;
 			}
 		}
-		.proscons h3 {
-			padding-left: 0;
+		.pros h3, .cons h3 {
+			padding-left: 0 !important;
 		}
 		p {
 			border-left: 10px solid $grey; 
@@ -1702,11 +1697,18 @@ input[type=submit] {
 			font-size: 0.8em;
 			font-weight: 300;
 		}
-		.editorial p {
+		&.editorial p {
 			border-left: none;
 			padding: 0;
 			font-size: 0.85em;
 			font-weight: 300;
+		}
+    	ul {
+        	li {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 	}
 	.social-widget {
@@ -2292,10 +2294,12 @@ input[type=submit] {
 		}
 	}
 	#content {
+    	#pros_cons {
+       		padding-top: 70px !important;
+		}
 		#pros_cons.collapsed li:nth-child(n+6){
 			display: none;
 		}
-
 		@include break(mobile){
 			margin-top: 0px !important;
 		}
@@ -2351,4 +2355,29 @@ ul.pills {
 .repartner {
     float:right;
     margin: 30px 0px 0px 20px;
+    @include break(mobile){
+		display: none;
+	}
+	@include break(v-mobile){
+		display: none;
+	}
+}
+.loading {
+	background: #fff url(http://static.techspot.com/images/loading.gif) no-repeat center top;
+	height: 50px;
+	text-indent: -10000px;
+	overflow: hidden;
+	margin: 10px 0;
+}
+.waiting div {
+	background-image: url(http://static.techspot.com/images/loading_small.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: transparent !important;
+	overflow: hidden;
+	text-indent: -2000px !important;
+	pointer-events: none;
+}
+.waiting span {
+	visibility: hidden
 }
