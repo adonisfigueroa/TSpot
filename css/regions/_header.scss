@@ -462,7 +462,7 @@ header {
 		
 		.menu {
 	  		font-size: .70em;
-	      	line-height: 42px;
+	      		line-height: 42px;
   
 		    .wrapper {
 		        & > ul {
@@ -636,7 +636,7 @@ header {
 					}
 					
 					&:hover {
-  					background-color: lighten($blue,15%);
+  					 background-color: #136BD7;
 					}
 					
 					.nav-submenu {
@@ -679,8 +679,9 @@ header {
 							h3 {
 								display: block;
 								font-family: $f-condensed;
-								line-height: 15px;
-								margin-top: 10px;
+								line-height: 16px;
+								margin-top: 8px;
+								font-weight: 400;
 							}
 						}
 						
@@ -759,18 +760,24 @@ header {
 											@include trans-bg(black,.2);
 										}*/
 										
+										h3 {
+											font-weight: 400;
+											padding: 0 5px;
+											line-height: 1.25;
+										}
+										
 									}
 									img {
 										width: 100%;
 										height: auto;
-										margin-bottom: 15px;
+										margin-bottom: 10px;
 									}
 									&:hover {
 										img {
 											border: solid #FDA82A 3px;
 											margin-left: -3px;
 											margin-top: -3px;
-											margin-bottom: 12px;
+											margin-bottom: 7px;
 										}
 									}
 									
@@ -908,5 +915,5 @@ header {
 	position: absolute !important;
 }
 .home header .menu .wrapper > ul > li a.active {
-	line-height: 26px;
+	line-height: 32px;
 }

@@ -545,6 +545,13 @@
 				    </li>
 				</ul>
 			</div>
+			<div class="SidebarOtherSelector">
+			<?php include("_inc/blocks/_most-popular.php"); ?>
+			
+			<?php include("_inc/blocks/_downloads.php"); ?>
+			
+			<?php include("_inc/blocks/_forums.php"); ?>
+			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div><!-- /.wrapper -->

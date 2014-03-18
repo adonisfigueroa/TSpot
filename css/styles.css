@@ -1116,10 +1116,25 @@ body.interior {
         max-height: 100%; }
     body.interior.products .post-list-product .ProdListInfo {
       float: left;
-      margin-left: 8px; }
+      margin-left: 8px;
+      max-width: 65%; }
+      @media only screen and (max-width: 960px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 55%; } }
+      @media only screen and (max-width: 760px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 52%; } }
+      @media only screen and (max-width: 500px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 56%; } }
       body.interior.products .post-list-product .ProdListInfo h4 {
         margin-top: 14px;
         font-size: 1em; }
+        body.interior.products .post-list-product .ProdListInfo h4 a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block; }
         @media only screen and (max-width: 760px) {
           body.interior.products .post-list-product .ProdListInfo h4 {
             font-size: 1em;
@@ -1176,22 +1191,18 @@ body.interior {
       height: 70px; }
       body.interior.products .post-list-product .prod-meta .intRank {
         color: #6f22a0;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.8em;
         float: left;
-        width: 50px;
+        width: 35px;
         text-align: right;
-        margin-right: 18px; }
+        margin-right: 5px; }
         @media only screen and (max-width: 960px) {
-          body.interior.products .post-list-product .prod-meta .intRank {
-            margin-right: 5px;
-            width: 40px; } }
-        @media only screen and (max-width: 500px) {
           body.interior.products .post-list-product .prod-meta .intRank {
             display: none; } }
       body.interior.products .post-list-product .prod-meta .price {
         color: #cc0000;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.8em;
         float: left;
         width: 50px;
@@ -2816,7 +2827,7 @@ header {
           header .menu .wrapper > ul > li a.active:after {
             margin-top: -9px; }
       header .menu .wrapper > ul > li:hover {
-        background-color: #237feb; }
+        background-color: #136BD7; }
       header .menu .wrapper > ul > li .nav-submenu {
         position: absolute;
         left: 0;
@@ -2855,8 +2866,9 @@ header {
           header .menu .wrapper > ul > li .submenu-mini li h3 {
             display: block;
             font-family: "Roboto Condensed", sans-serif;
-            line-height: 15px;
-            margin-top: 10px; }
+            line-height: 16px;
+            margin-top: 8px;
+            font-weight: 400; }
         header .menu .wrapper > ul > li .submenu-mini a {
           padding: 0;
           text-transform: none; }
@@ -2928,15 +2940,19 @@ header {
                 /*&:hover {
                 	@include trans-bg(black,.2);
                 }*/ }
+                header .menu .wrapper > ul > li .submenu li ul.recent-items li a h3 {
+                  font-weight: 400;
+                  padding: 0 5px;
+                  line-height: 1.25; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li img {
                 width: 100%;
                 height: auto;
-                margin-bottom: 15px; }
+                margin-bottom: 10px; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li:hover img {
                 border: solid #FDA82A 3px;
                 margin-left: -3px;
                 margin-top: -3px;
-                margin-bottom: 12px; }
+                margin-bottom: 7px; }
               header .menu .wrapper > ul > li .submenu li ul.recent-items li:nth-child(4) {
                 width: 23.5%;
                 margin-right: 0%;
@@ -3068,7 +3084,7 @@ header {
   position: absolute !important; }
 
 .home header .menu .wrapper > ul > li a.active {
-  line-height: 26px; }
+  line-height: 32px; }
 
 .home #masthead {
   margin-top: 82px;
@@ -5659,8 +5675,8 @@ h3.longtype {
       display: none; } }
   .related-products > h3 {
     line-height: 270%;
-    font-size: 1.0em;
-    font-weight: 200; }
+    font-size: 1em;
+    font-weight: 400; }
     .related-products > h3 strong {
       font-weight: 600; }
   .related-products ul.teaser-list {
@@ -5733,7 +5749,7 @@ h3.longtype {
 #comments {
   background: white; }
   #comments > .wrapper {
-    padding: 30px 0 10px 7px;
+    padding: 30px 0 10px 8px;
     position: relative; }
     #comments > .wrapper:before {
       position: absolute;
@@ -5745,15 +5761,20 @@ h3.longtype {
       width: 55px;
       height: 45px;
       top: 35px;
-      left: -65px; }
+      left: -63px; }
       @media only screen and (max-width: 1100px) {
         #comments > .wrapper:before {
           background-image: none; } }
   #comments .col-2-3 {
-    width: 66%; }
+    width: 69%; }
     @media only screen and (max-width: 960px) {
       #comments .col-2-3 {
         width: 100%; } }
+  #comments .col-1-3-last {
+    width: 28%; }
+    @media only screen and (max-width: 960px) {
+      #comments .col-1-3-last {
+        display: none; } }
   #comments h3 {
     color: #4484D0;
     font-size: 1.2em; }
@@ -5796,17 +5817,21 @@ h3.longtype {
       color: #105ab2;
       font-weight: bold;
       font-size: 1.1em; }
-    #comments .comment p {
-      font-size: 1.1em;
+    #comments .comment .commentText {
       display: block;
-      padding: 0 0 15px;
-      font-family: "Helvetica Neue", Arial, Helvetica;
+      font-size: 14px;
       line-height: 1.5; }
-    #comments .comment .quote {
-      color: #666;
-      padding: 4px 10px 4px;
-      border-left: 5px solid #eee;
-      font-size: 1.1em; }
+      #comments .comment .commentText p {
+        padding: 2px 0; }
+      #comments .comment .commentText .quote {
+        color: #666;
+        padding: 6px 10px 6px;
+        margin-bottom: 10px;
+        border-left: 5px solid #eee;
+        font-size: 13px;
+        line-height: 1.5; }
+        #comments .comment .commentText .quote p {
+          font-size: 13px; }
     #comments .comment ul.action-links {
       text-align: right;
       margin-top: 10px; }
@@ -5838,7 +5863,8 @@ h3.longtype {
   #comments .CommentOpt {
     font-size: 0.7em;
     position: relative;
-    height: 100px; }
+    height: 100px;
+    color: #444; }
     #comments .CommentOpt .ontheleft {
       float: left;
       display: inline-block;
@@ -5848,13 +5874,14 @@ h3.longtype {
       display: inline-block;
       line-height: 30px; }
     #comments .CommentOpt .ComBut {
-      font-size: 1.2em;
+      font-size: 1.1em;
       width: 300px;
       text-align: center;
       float: left;
       position: absolute;
       margin-top: 40px;
       color: black;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
       cursor: pointer; }
   #comments #add-new-comment {
     background-color: #F5F5F5; }
@@ -5864,13 +5891,18 @@ h3.longtype {
     #comments #add-new-comment .wrapper {
       padding: 25px 0 50px; }
     #comments #add-new-comment .textarea {
-      width: 100%;
       min-height: 150px;
+      padding: 8px;
+      line-height: 1.3;
+      font-size: 0.8em;
       border: 1px solid #AAAAAA;
       -webkit-border-radius: 5px 5px 5px 5px;
       -moz-border-radius: 5px 5px 5px 5px;
       -khtml-border-radius: 5px 5px 5px 5px;
-      border-radius: 5px 5px 5px 5px; }
+      border-radius: 5px 5px 5px 5px;
+      -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+      -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset; }
 
 span._bar {
   display: block;
@@ -6101,6 +6133,9 @@ ul.category-chicklets {
         width: 32px; } }
     .social-widget li.social .SocialHover {
       display: none; }
+      .social-widget li.social .SocialHover .WidgetArea {
+        padding: 7px 0 0 7px;
+        z-index: 999; }
     .social-widget li.social.facebook {
       background-position: center 9px; }
     .social-widget li.social.twitter {

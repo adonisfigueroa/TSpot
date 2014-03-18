@@ -711,9 +711,32 @@ body.interior {
 			.ProdListInfo {
 				float: left;
 				margin-left: 8px;
+				max-width: 65%;
+
+				@include break(v-tablet){
+					max-width: 55%;
+				}
+				@include break(mobile){
+					max-width: 52%;
+				}
+				@include break(v-mobile){
+					max-width: 56%;
+				}
+				@include break(sm-mobile){
+					max-width: 39%;
+				}
+
 				h4 {
 					margin-top: 14px;
 					font-size: 1em;
+
+					a {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: block;
+					}
+
 					@include break(mobile){
 						font-size:1em;
 						margin-top: 8px;
@@ -776,24 +799,19 @@ body.interior {
 				height: 70px;
 				.intRank{
 					color:$purple;
-					font-weight: 600;
+					font-weight: 500;
 					font-size: 0.8em;
 					float: left;
-					width: 50px;
+					width: 35px;
 					text-align: right;
-					margin-right: 18px;
+					margin-right: 5px;
 					@include break(v-tablet){
-						margin-right: 5px;
-						width: 40px;
-					}
-					@include break(v-mobile){
-					display: none;
-					
+						display: none;
 					}
 				}
 				.price{
 					color: $red;
-					font-weight: 600;
+					font-weight: 500;
 					font-size: 0.8em;
 					float: left;
 					width: 50px;
