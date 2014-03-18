@@ -1113,10 +1113,25 @@ body.interior {
         max-height: 100%; }
     body.interior.products .post-list-product .ProdListInfo {
       float: left;
-      margin-left: 8px; }
+      margin-left: 8px;
+      max-width: 65%; }
+      @media only screen and (max-width: 960px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 55%; } }
+      @media only screen and (max-width: 760px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 52%; } }
+      @media only screen and (max-width: 500px) {
+        body.interior.products .post-list-product .ProdListInfo {
+          max-width: 56%; } }
       body.interior.products .post-list-product .ProdListInfo h4 {
         margin-top: 14px;
         font-size: 1em; }
+        body.interior.products .post-list-product .ProdListInfo h4 a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block; }
         @media only screen and (max-width: 760px) {
           body.interior.products .post-list-product .ProdListInfo h4 {
             font-size: 1em;
@@ -1173,22 +1188,18 @@ body.interior {
       height: 70px; }
       body.interior.products .post-list-product .prod-meta .intRank {
         color: #6f22a0;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.8em;
         float: left;
-        width: 50px;
+        width: 35px;
         text-align: right;
-        margin-right: 18px; }
+        margin-right: 5px; }
         @media only screen and (max-width: 960px) {
-          body.interior.products .post-list-product .prod-meta .intRank {
-            margin-right: 5px;
-            width: 40px; } }
-        @media only screen and (max-width: 500px) {
           body.interior.products .post-list-product .prod-meta .intRank {
             display: none; } }
       body.interior.products .post-list-product .prod-meta .price {
         color: #cc0000;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.8em;
         float: left;
         width: 50px;
@@ -5650,8 +5661,8 @@ h3.longtype {
       display: none; } }
   .related-products > h3 {
     line-height: 270%;
-    font-size: 1.0em;
-    font-weight: 200; }
+    font-size: 1em;
+    font-weight: 400; }
     .related-products > h3 strong {
       font-weight: 600; }
   .related-products ul.teaser-list {
