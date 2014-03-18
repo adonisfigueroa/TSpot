@@ -2327,10 +2327,11 @@ input[type=submit] {
 			@include triangle(right,$orange,4,6);
 		}
 	}
-	.pagenum:before { 
+/*	.pagenum:before { 
 	    content: counter(item) "  "; 
 	    counter-increment: item 
 	}
+*/
 	
 }
 .product {

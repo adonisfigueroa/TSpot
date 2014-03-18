@@ -279,15 +279,28 @@ body.interior {
 		}
 	}
 
-	&.normal {
+	&.download-index {
 		#content {	
 			h1 {
 				color: #1e2833;
 				font-weight: 500;
-				font-size: 2em;
+				font-size: 1.8em;
 				line-height: 1.4;
 				margin-top: 15px;
 				letter-spacing: -0.333px;
+			}
+
+			.page-intro {
+				font-size: 0.8em;
+				font-weight: 300;
+				margin: 10px 0;
+			}
+
+			.downloads-table {
+				margin: 25px 5px;
+				color: #05408F;
+				font-weight: 500;
+				font-size: 0.8em;
 			}
 		}
 	}
