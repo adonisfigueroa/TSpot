@@ -92,8 +92,15 @@ $(document).ready(function() {
 	  
 	
 	$(window).load(function(){
-		$(window).afterResize( function() {
+		$(window).resize( function (){
+			$(".social-column").addClass('flowglitch');
+			setTimeout(function() {
+			    $(".social-column").removeClass('flowglitch');
+			}, 1000);
 			
+		});
+		
+		$(window).afterResize( function() {
 			if (($(window).width())>500) {
 				$("body.article .social-column").css({
 					// Used to stretch the social widget column container
@@ -266,21 +273,26 @@ function xmenuHover() {
 		}
 		if ($this.children(".nav-submenu").children(".wrapper").children().length > 0){
 			$this.children("a").addClass("active");
-	  			$(".submenu > li > a").hover(function(e) {
-	  				e.preventDefault();
-	  				$(this).parent("li").addClass("active").siblings("li").removeClass("active");
-	
-	  				//$(this).siblings("ul.recent-items").show();
-	  			});
-	  			$("ul.SubHeader").parent().addClass("withHeader");
-	  			$this.children(".nav-submenu").slideDown(SlideTime);
-	  			$this.imagesLoaded( function() {
-		  			$(".loadAnim").hide();	
-		  		});
+			/*$this.imagesLoaded( function() {
+	  			$(".loadAnim").hide();	
+	  		});*/
+  			$(".submenu > li > a").hover(function(e) {
+  				e.preventDefault();
+  				$(this).parent("li").addClass("active").siblings("li").removeClass("active");
+
+  				//$(this).siblings("ul.recent-items").show();
+  			});
+  			$("ul.SubHeader").parent().addClass("withHeader");
+  			$this.children(".nav-submenu").slideDown(SlideTime);
 		} else {
 			$this.children(".nav-submenu").children(".wrapper").load(
 			  "../_inc/nav-submenus/"+$this.children("a").data("source")+'.html',
 			  function() {
+			  	/*
+			  	$this.imagesLoaded( function() {
+		  			$(".loadAnim").hide();	
+		  		});
+		  		*/
 	  			$this.children("a").addClass("active");
 	  			$(".submenu > li > a").hover(function(e) {
 	  				e.preventDefault();
@@ -290,9 +302,6 @@ function xmenuHover() {
 	  			});
 	  			$("ul.SubHeader").parent().addClass("withHeader");
 	  			$this.children(".nav-submenu").slideDown(SlideTime);
-	  			$this.imagesLoaded( function() {
-		  			$(".loadAnim").hide();	
-		  		});
 	  		});
 		}		
   }, delay);

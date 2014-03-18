@@ -78,7 +78,9 @@
 				<div class="clearfix"></div>
 				
 			</article>
-			
+			<div class="social-column mobile-only-social">			
+				<?php include("_inc/_social-widget.php"); ?>
+			</div>
 			<div class="clearfix"></div>
 			
 			<nav class="page-nav prev-next">

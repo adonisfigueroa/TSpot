@@ -929,6 +929,9 @@ body.interior {
         display: none; } }
   body.interior.news.news #content article, body.interior.product.news #content article, body.interior.download.news #content article {
     margin-bottom: 45px; }
+    @media only screen and (max-width: 500px) {
+      body.interior.news.news #content article, body.interior.product.news #content article, body.interior.download.news #content article {
+        margin-bottom: 0px; } }
   body.interior.news.news #content .social-column, body.interior.product.news #content .social-column, body.interior.download.news #content .social-column {
     z-index: 1; }
     body.interior.news.news #content .social-column .tags, body.interior.product.news #content .social-column .tags, body.interior.download.news #content .social-column .tags {
@@ -5078,8 +5081,11 @@ body {
   -webkit-transition: none;
   transition: none; }
 
+.flowglitch {
+  overflow: hidden !important; }
+
 .social-column {
-  overflow: hidden; }
+  overflow: visible; }
 
 .activebar #MobileMenu a svg {
   fill: #ff7f00 !important; }
@@ -5089,7 +5095,8 @@ body {
   height: 100%;
   position: absolute;
   z-index: 100000;
-  background: #777D82; }
+  background: #777D82;
+  display: none; }
   .loadAnim img {
     left: 50%;
     top: 50%;
@@ -5100,6 +5107,13 @@ body {
 
 .rating {
   font-family: Helvetica, Arial, sans-serif; }
+
+.mobile-only-social {
+  display: none !important; }
+  @media only screen and (max-width: 500px) {
+    .mobile-only-social {
+      display: block !important;
+      margin-bottom: 45px !important; } }
 
 #GlobalWrapper {
   width: 100%;
@@ -5483,10 +5497,10 @@ h1 {
 .cta {
   text-align: center; }
   .cta.top-adverbox {
-    margin-top: 84px; }
-    @media only screen and (max-width: 760px) {
-      .cta.top-adverbox {
-        margin-top: 57px; } }
+    /*margin-top: 84px;
+    @include break(mobile){
+    	margin-top: 57px; 
+    }*/ }
   .cta.mobile-only .wrapper {
     display: none; }
     @media only screen and (max-width: 760px) {
@@ -5498,7 +5512,7 @@ h1 {
   .cta.grey {
     background-color: #F5F5F5; }
   .cta .wrapper {
-    padding: 20px 0 5px;
+    padding: 20px 0 20px;
     text-align: center; }
     .cta .wrapper .Mobile {
       display: none; }
@@ -5639,7 +5653,7 @@ h3.longtype {
     float: left; }
 
 .related-products {
-  margin-top: 90px; }
+  margin-top: 0px; }
   @media only screen and (max-width: 960px) {
     .related-products {
       display: none; } }
@@ -5697,12 +5711,20 @@ h3.longtype {
           line-height: 160%;
           bottom: 0;
           right: -4px; }
-          .related-products ul.teaser-list li span.img-wrap .rating.red {
-            background-color: rgba(204, 0, 0, 0.9);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6CC0000,endColorstr=#E6CC0000); }
-          .related-products ul.teaser-list li span.img-wrap .rating.purple {
+          .related-products ul.teaser-list li span.img-wrap .rating.excellent {
+            background-color: rgba(0, 190, 21, 0.9);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E600BE15,endColorstr=#E600BE15); }
+          .related-products ul.teaser-list li span.img-wrap .rating.good {
+            background-color: rgba(7, 91, 192, 0.9);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6075BC0,endColorstr=#E6075BC0); }
+          .related-products ul.teaser-list li span.img-wrap .rating.average {
             background-color: rgba(111, 34, 160, 0.9);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E66F22A0,endColorstr=#E66F22A0); }
+          .related-products ul.teaser-list li span.img-wrap .rating.bad {
+            background-color: rgba(204, 0, 0, 0.9);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6CC0000,endColorstr=#E6CC0000); }
+          .related-products ul.teaser-list li span.img-wrap .rating.none {
+            display: none; }
       .related-products ul.teaser-list li h3 {
         font-size: 1.1em; }
       .related-products ul.teaser-list li strong {

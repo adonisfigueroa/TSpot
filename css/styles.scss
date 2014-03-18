@@ -33,8 +33,11 @@ body {
 	
 	
 }
+.flowglitch {
+	overflow: hidden !important;
+}
 .social-column {
-	overflow: hidden;
+	overflow: visible;
 }
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
@@ -45,7 +48,7 @@ height: 100%;
 position: absolute;
 z-index: 100000;
 background: #777D82;
-
+display: none;
 	img {
 		left: 50%;
 		top: 50%;
@@ -60,6 +63,13 @@ background: #777D82;
 	}
 .rating {
 	font-family: Helvetica, Arial, sans-serif;
+}
+.mobile-only-social {
+	display: none !important;
+	@include break(v-mobile){
+		display: block !important;
+		margin-bottom:45px !important;
+	}
 }
 #GlobalWrapper {
 	width: 100%;
@@ -470,10 +480,11 @@ h1 {
 	text-align: center;
 	
 	&.top-adverbox {
-		margin-top: 84px;
+	//what is this? break the design!
+		/*margin-top: 84px;
 		@include break(mobile){
 			margin-top: 57px; 
-		}
+		}*/
 	}
 	&.mobile-only {
 		.wrapper {
@@ -496,7 +507,7 @@ h1 {
 	}
 	
 	.wrapper {
-		padding: 20px 0 5px;
+		padding: 20px 0 20px;
 		text-align: center;
 		.Mobile{
 			display: none;

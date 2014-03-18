@@ -462,6 +462,9 @@ body.interior {
   		#content {
     		article {
       		margin-bottom: 45px;
+      		@include break(v-mobile){
+	      		margin-bottom: 0px;
+      		}
     		}
     		
     		.social-column {

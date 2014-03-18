@@ -170,9 +170,11 @@
 			</nav>
 			
 		</div><!-- /.col-2-3-last -->
-		
 		<div class="clearfix"></div>
-		
+		<div class="social-column mobile-only-social">			
+				<?php include("_inc/_social-widget.php"); ?>
+		</div>
+
 		</div>
 	</div><!-- /.wrapper -->
 </section>
