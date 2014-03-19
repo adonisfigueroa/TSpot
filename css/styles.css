@@ -2556,7 +2556,43 @@ header {
       line-height: 43px; }
     header .header-top .right-links {
       float: right;
-      line-height: 43px; }
+      line-height: 43px;
+      @-webkit-keyframes count_appear {
+        from {
+          opacity: 0;
+          -webkit-transform: scale(0.3); }
+
+        70% {
+          -webkit-transform: scale(1.15); }
+
+        to {
+          opacity: 1;
+          -webkit-transform: scale(1); } }
+
+      @-moz-keyframes count_appear {
+        from {
+          opacity: 0;
+          -moz-transform: scale(0.3); }
+
+        70% {
+          -moz-transform: scale(1.15); }
+
+        to {
+          opacity: 1;
+          -moz-transform: scale(1); } }
+
+      @-ms-keyframes count_appear {
+        from {
+          opacity: 0;
+          -moz-transform: scale(0.3); }
+
+        70% {
+          -moz-transform: scale(1.15); }
+
+        to {
+          opacity: 1;
+          -moz-transform: scale(1); } }
+ }
       header .header-top .right-links ul li {
         display: inline-block;
         line-height: 43px; }
@@ -2572,7 +2608,43 @@ header {
           background-repeat: no-repeat;
           background-position: 8px center;
           padding-right: 10px;
-          position: relative; }
+          position: relative;
+          @-webkit-keyframes count_appear {
+            from {
+              opacity: 0;
+              -webkit-transform: scale(0.3); }
+
+            70% {
+              -webkit-transform: scale(1.15); }
+
+            to {
+              opacity: 1;
+              -webkit-transform: scale(1); } }
+
+          @-moz-keyframes count_appear {
+            from {
+              opacity: 0;
+              -moz-transform: scale(0.3); }
+
+            70% {
+              -moz-transform: scale(1.15); }
+
+            to {
+              opacity: 1;
+              -moz-transform: scale(1); } }
+
+          @-ms-keyframes count_appear {
+            from {
+              opacity: 0;
+              -moz-transform: scale(0.3); }
+
+            70% {
+              -moz-transform: scale(1.15); }
+
+            to {
+              opacity: 1;
+              -moz-transform: scale(1); } }
+ }
           @media only screen and (max-width: 760px) {
             header .header-top .right-links ul li.login {
               padding-right: 0px;
@@ -2591,6 +2663,27 @@ header {
               header .header-top .right-links ul li.login a {
                 padding-left: 0px;
                 text-indent: -9999px; } }
+          header .header-top .right-links ul li.login .loggedin {
+            text-transform: none !important; }
+          header .header-top .right-links ul li.login .count {
+            position: absolute;
+            right: -5px;
+            top: 1px;
+            padding: 1px 5px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: normal;
+            background: #c00;
+            color: #fff;
+            text-shadow: 0 1px 0 #900;
+            -webkit-animation: count_appear 0.35s linear;
+            -moz-animation: count_appear 0.35s linear;
+            -webkit-border-radius: 20 20 20 20;
+            -moz-border-radius: 20 20 20 20;
+            -khtml-border-radius: 20 20 20 20;
+            border-radius: 20 20 20 20;
+            border-radius: 20px;
+            box-shadow: 0 1px 0 #900; }
           header .header-top .right-links ul li.login .login-dropdown {
             display: none;
             position: absolute;
@@ -2601,6 +2694,7 @@ header {
             text-indent: 0;
             line-height: 25px;
             z-index: 100;
+            border-bottom: 4px solid #105AB2;
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4); }
             @media only screen and (max-width: 760px) {
               header .header-top .right-links ul li.login .login-dropdown {
@@ -2614,12 +2708,59 @@ header {
             header .header-top .right-links ul li.login .login-dropdown .pad {
               display: block;
               padding: 10px 13px; }
+              header .header-top .right-links ul li.login .login-dropdown .pad.header {
+                padding-right: 68px; }
+                header .header-top .right-links ul li.login .login-dropdown .pad.header .image {
+                  position: absolute;
+                  background: #fff;
+                  top: 10px;
+                  right: 10px;
+                  border: 1px solid #eee;
+                  box-shadow: 3px 3px 0 #ddd; }
+                header .header-top .right-links ul li.login .login-dropdown .pad.header h3 {
+                  margin: 3px 0 0;
+                  font-weight: 400;
+                  font-size: 1em;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap; }
+                header .header-top .right-links ul li.login .login-dropdown .pad.header p {
+                  color: #888;
+                  margin: 4px 0 0px;
+                  line-height: 1.5;
+                  font-size: 0.6em; }
+              header .header-top .right-links ul li.login .login-dropdown .pad.subcontent {
+                padding: 0 13px 5px;
+                font-size: 0.55em;
+                max-height: 500px;
+                overflow: auto;
+                background: #f5f5f5; }
+                header .header-top .right-links ul li.login .login-dropdown .pad.subcontent.last {
+                  padding-bottom: 6px; }
+                header .header-top .right-links ul li.login .login-dropdown .pad.subcontent ul {
+                  padding: 5px 0 5px;
+                  margin: 0; }
+                  header .header-top .right-links ul li.login .login-dropdown .pad.subcontent ul li {
+                    float: left;
+                    width: 125px;
+                    line-height: 2;
+                    font-family: "Helvetica Neue", Arial, Helvetica; }
+              header .header-top .right-links ul li.login .login-dropdown .pad p {
+                line-height: 1.5;
+                color: #666;
+                margin: 8px 0 5px; }
+            header .header-top .right-links ul li.login .login-dropdown .separator {
+              height: 0;
+              font-size: 0;
+              line-height: 0;
+              border-top: 1px solid #ddd;
+              /* border-bottom: 1px solid #fff; */ }
             header .header-top .right-links ul li.login .login-dropdown .top {
               margin-top: 12px; }
             header .header-top .right-links ul li.login .login-dropdown h4 {
-              font-size: 0.9em;
+              font-size: 0.95em;
               font-weight: 400;
-              line-height: 10px; }
+              line-height: 12px; }
             header .header-top .right-links ul li.login .login-dropdown small {
               font-size: .55em; }
             header .header-top .right-links ul li.login .login-dropdown a {
@@ -2677,7 +2818,7 @@ header {
                 padding: 15px 20px; }
               header .header-top .right-links ul li.social.group .social-dropdown .social h4 {
                 font-weight: 400;
-                font-size: .8em;
+                font-size: .85em;
                 display: inline-block; }
               header .header-top .right-links ul li.social.group .social-dropdown .social a {
                 font-size: 0.9em; }
