@@ -773,10 +773,13 @@ body.interior {
         color: #666666; }
   body.interior.white #content {
     background: white; }
+  body.interior.white h2 {
+    font-size: 1.6em;
+    line-height: 2; }
   body.interior.download-index #content h1 {
     color: #1e2833;
     font-weight: 500;
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: 1.4;
     margin-top: 15px;
     letter-spacing: -0.333px; }
@@ -785,14 +788,149 @@ body.interior {
     font-weight: 300;
     margin: 10px 0; }
   body.interior.download-index #content .downloads-table {
-    margin: 25px 5px;
+    margin: 0 3px 25px;
     color: #05408F;
-    font-weight: 500;
-    font-size: 0.8em; }
+    font-size: 0.9em; }
+    body.interior.download-index #content .downloads-table td {
+      height: 48px; }
+    body.interior.download-index #content .downloads-table h2 {
+      line-height: 35px;
+      font-weight: 500;
+      padding-left: 12px; }
+      body.interior.download-index #content .downloads-table h2 a:hover {
+        border-bottom: 1px solid #3470AA;
+        padding-bottom: 1px; }
+  body.interior.download-index #content h3 {
+    font-size: 1.15em;
+    color: #c00; }
+  body.interior.download-index .downloads-list, body.interior.download .downloads-list {
+    padding: 35px 0 0; }
+    body.interior.download-index .downloads-list .subcats, body.interior.download .downloads-list .subcats {
+      margin-top: -20px;
+      padding: 0 0 25px 2px; }
+      body.interior.download-index .downloads-list .subcats h4, body.interior.download .downloads-list .subcats h4 {
+        font-weight: 400;
+        font-size: 0.7em;
+        line-height: 1.8; }
+      body.interior.download-index .downloads-list .subcats ul, body.interior.download .downloads-list .subcats ul {
+        font-size: 0.95em; }
+        body.interior.download-index .downloads-list .subcats ul li, body.interior.download .downloads-list .subcats ul li {
+          margin-bottom: 5px; }
+    body.interior.download-index .downloads-list ul, body.interior.download .downloads-list ul {
+      list-style-image: none;
+      list-style-type: none;
+      font-size: 13px;
+      margin: 0;
+      padding: 0; }
+      body.interior.download-index .downloads-list ul li, body.interior.download .downloads-list ul li {
+        margin-bottom: 25px;
+        line-height: 22px; }
+        body.interior.download-index .downloads-list ul li .title a, body.interior.download .downloads-list ul li .title a {
+          color: #05408f;
+          font-weight: 500;
+          font-size: 1.5em; }
+          body.interior.download-index .downloads-list ul li .title a:hover, body.interior.download .downloads-list ul li .title a:hover {
+            border-bottom: 1px solid #3470AA;
+            padding-bottom: 1px; }
+        body.interior.download-index .downloads-list ul li .bio, body.interior.download .downloads-list ul li .bio {
+          line-height: 1.6;
+          padding: 3px 0;
+          font-weight: 400;
+          color: #333; }
+        body.interior.download-index .downloads-list ul li i, body.interior.download .downloads-list ul li i {
+          font-style: normal;
+          color: #555; }
+        body.interior.download-index .downloads-list ul li .download_rating, body.interior.download .downloads-list ul li .download_rating {
+          float: right;
+          width: 100px;
+          padding: 12px 0 0 10px;
+          min-height: 40px;
+          line-height: 1.5; }
+    body.interior.download-index .downloads-list .subdown, body.interior.download .downloads-list .subdown {
+      list-style-type: none;
+      font-size: 12px;
+      font-weight: 400;
+      color: #888; }
+      body.interior.download-index .downloads-list .subdown li, body.interior.download .downloads-list .subdown li {
+        display: inline;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #bbb;
+        padding-left: 14px;
+        padding-right: 14px; }
+        body.interior.download-index .downloads-list .subdown li.left, body.interior.download .downloads-list .subdown li.left {
+          padding-left: 0px; }
+        body.interior.download-index .downloads-list .subdown li.right, body.interior.download .downloads-list .subdown li.right {
+          border: none; }
+    body.interior.download-index .downloads-list .sorter, body.interior.download .downloads-list .sorter {
+      float: right;
+      font-size: 12px;
+      position: relative;
+      color: #333;
+      text-align: right;
+      z-index: 999; }
+      body.interior.download-index .downloads-list .sorter p, body.interior.download .downloads-list .sorter p {
+        padding: 0; }
+      body.interior.download-index .downloads-list .sorter p a:hover, body.interior.download .downloads-list .sorter p a:hover {
+        background-color: #27333D;
+        text-decoration: none; }
+      body.interior.download-index .downloads-list .sorter #sorted_by, body.interior.download .downloads-list .sorter #sorted_by {
+        font-weight: bold;
+        text-transform: lowercase; }
+      body.interior.download-index .downloads-list .sorter ul, body.interior.download .downloads-list .sorter ul {
+        position: absolute;
+        display: none;
+        right: 0;
+        top: 18px;
+        width: 120px;
+        background: #F4F5F7;
+        text-align: left;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 2px 2px 2px 2px;
+        -moz-border-radius: 2px 2px 2px 2px;
+        -khtml-border-radius: 2px 2px 2px 2px;
+        border-radius: 2px 2px 2px 2px;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); }
+      body.interior.download-index .downloads-list .sorter .arrow, body.interior.download .downloads-list .sorter .arrow {
+        width: 10px;
+        height: 10px;
+        background: url(http://static.techspot.com/images/pf_show_sorter.png);
+        display: inline-block;
+        zoom: 1;
+        *display: inline; }
+      body.interior.download-index .downloads-list .sorter a, body.interior.download .downloads-list .sorter a {
+        color: #333;
+        background: none !important;
+        padding: 0;
+        text-shadow: none !important; }
+      body.interior.download-index .downloads-list .sorter li, body.interior.download .downloads-list .sorter li {
+        background: none;
+        display: block;
+        border: 0;
+        height: 25px;
+        line-height: 25px;
+        margin: 0;
+        padding: 0; }
+        body.interior.download-index .downloads-list .sorter li .smaller, body.interior.download .downloads-list .sorter li .smaller {
+          font-size: 11px; }
+        body.interior.download-index .downloads-list .sorter li a, body.interior.download .downloads-list .sorter li a {
+          display: block;
+          padding: 0 5px;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -ms-transition: none;
+          -o-transition: none;
+          transition: none; }
+          body.interior.download-index .downloads-list .sorter li a:hover, body.interior.download .downloads-list .sorter li a:hover {
+            background: #32404D !important;
+            color: #fff;
+            text-decoration: none; }
   body.interior.news hgroup, body.interior.product hgroup, body.interior.download hgroup {
     background-color: white; }
     body.interior.news hgroup .wrapper, body.interior.product hgroup .wrapper, body.interior.download hgroup .wrapper {
-      padding: 25px 0 50px; }
+      padding: 25px 0 35px; }
     body.interior.news hgroup .title-group h1.large, body.interior.product hgroup .title-group h1.large, body.interior.download hgroup .title-group h1.large {
       font-weight: 500;
       font-size: 2.4em;
@@ -806,6 +944,19 @@ body.interior {
       @media only screen and (max-width: 500px) {
         body.interior.news hgroup .title-group h1.large, body.interior.product hgroup .title-group h1.large, body.interior.download hgroup .title-group h1.large {
           font-size: 1.6em; } }
+    body.interior.news hgroup .title-group h1.medium, body.interior.product hgroup .title-group h1.medium, body.interior.download hgroup .title-group h1.medium {
+      font-weight: 500;
+      font-size: 1.9em;
+      margin-top: -15px;
+      line-height: 1.4;
+      letter-spacing: -0.333px; }
+      @media only screen and (max-width: 760px) {
+        body.interior.news hgroup .title-group h1.medium, body.interior.product hgroup .title-group h1.medium, body.interior.download hgroup .title-group h1.medium {
+          margin-top: 0;
+          font-size: 1.75em; } }
+      @media only screen and (max-width: 500px) {
+        body.interior.news hgroup .title-group h1.medium, body.interior.product hgroup .title-group h1.medium, body.interior.download hgroup .title-group h1.medium {
+          font-size: 1.5em; } }
     body.interior.news hgroup .title-group em, body.interior.product hgroup .title-group em, body.interior.download hgroup .title-group em {
       font-style: normal;
       font-size: .7em;
@@ -1581,16 +1732,18 @@ body.interior {
       min-height: 110px;
       border-bottom: 1px solid #E5E5E5;
       position: relative; }
+      body.interior.features .category ul li h3, body.interior.reviews .category ul li h3, body.interior.reviews-cat .category ul li h3 {
+        line-height: 1.5; }
       body.interior.features .category ul li p, body.interior.reviews .category ul li p, body.interior.reviews-cat .category ul li p {
         font-weight: 400;
         font-size: .6em;
         color: #666;
-        padding: 0 !important; }
+        padding: 2px 0 !important; }
       body.interior.features .category ul li .desc, body.interior.reviews .category ul li .desc, body.interior.reviews-cat .category ul li .desc {
         font-size: .75em;
-        padding: 2px 0 !important;
+        padding: 5px 0 !important;
         font-weight: 400;
-        color: #222; }
+        color: #333; }
       body.interior.features .category ul li .more_info, body.interior.reviews .category ul li .more_info, body.interior.reviews-cat .category ul li .more_info {
         float: right;
         right: 20px;
@@ -1610,7 +1763,7 @@ body.interior {
         body.interior.features .category ul li .more_info .average, body.interior.reviews .category ul li .more_info .average, body.interior.reviews-cat .category ul li .more_info .average {
           background-color: #7021a1; }
         body.interior.features .category ul li .more_info .bad, body.interior.reviews .category ul li .more_info .bad, body.interior.reviews-cat .category ul li .more_info .bad {
-          background-color: rgba(204, 0, 0, 0.1); }
+          background-color: #cc0000; }
         body.interior.features .category ul li .more_info .none, body.interior.reviews .category ul li .more_info .none, body.interior.reviews-cat .category ul li .more_info .none {
           background-color: #999999; }
         body.interior.features .category ul li .more_info .score, body.interior.reviews .category ul li .more_info .score, body.interior.reviews-cat .category ul li .more_info .score {
@@ -1937,8 +2090,7 @@ body.interior {
   position: relative;
   color: #333;
   text-align: right;
-  z-index: 1;
-  font-weight: 200; }
+  z-index: 1; }
   .sorter.active ul {
     display: block !important; }
   .sorter #sorted_by {
@@ -5264,7 +5416,7 @@ img.responsive {
 
 h1 {
   color: #1e2833;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.3em; }
   h1.lined {
     border-bottom: 2px solid #c3c3c3; }
@@ -6080,7 +6232,7 @@ ul.category-chicklets {
       background-color: #CC3333; }
     ul.category-chicklets li.software, ul.category-chicklets li.electronics {
       background-color: #50039C; }
-    ul.category-chicklets li.web {
+    ul.category-chicklets li.web, ul.category-chicklets li.home {
       background-color: #FF7F00; }
     ul.category-chicklets li.techspot {
       background-color: #105AB2; }
@@ -6094,7 +6246,7 @@ ul.category-chicklets {
       background-color: #779954; }
     ul.category-chicklets li.wof {
       background-color: #85B200; }
-    ul.category-chicklets li.products {
+    ul.category-chicklets li.products, ul.category-chicklets li.downloads {
       background-color: #00366F; }
 
 .social-widget {
@@ -7252,16 +7404,16 @@ input[type=submit] {
       .comments-pager ol li:hover, .comments-pager ol li.active {
         color: white;
         background: #105ab2; }
-  .comments-pager #NextButton {
+  .comments-pager #PrevButton, .comments-pager #NextButton {
     list-style-type: none;
     margin-left: 5px;
     width: 50px;
     padding-left: 10px;
     border: 1px solid #bbbbbb;
     text-align: left; }
-    .comments-pager #NextButton:hover a {
+    .comments-pager #PrevButton:hover a, .comments-pager #NextButton:hover a {
       color: white; }
-    .comments-pager #NextButton .triangle {
+    .comments-pager #PrevButton .triangle, .comments-pager #NextButton .triangle {
       margin-top: 12px;
       margin-left: 7px;
       width: 6px;
@@ -7288,6 +7440,28 @@ input[type=submit] {
 
 .products-cat time {
   display: block !important; }
+
+.search-box {
+  margin: 35px 0;
+  padding: 15px 0;
+  border: 1px solid #dcdcdc;
+  background-color: #F8F8F8;
+  line-height: 45px;
+  font-weight: 400;
+  width: 100%; }
+  .search-box h4 {
+    font-weight: 500;
+    color: #0a5499;
+    padding-left: 20px;
+    font-size: 19px; }
+  .search-box input[type=text] {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-top: 6px; }
+  .search-box input[type=submit] {
+    font-size: 0.85em;
+    line-height: 2.4;
+    margin-left: 30px; }
 
 ul.pills li {
   display: inline-block;

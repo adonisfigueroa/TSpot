@@ -277,6 +277,12 @@ body.interior {
 		#content {
 			background: white;
 		}
+		
+		h2 {
+			font-size: 1.6em;
+			line-height: 2;
+		}
+
 	}
 
 	&.download-index {
@@ -284,7 +290,7 @@ body.interior {
 			h1 {
 				color: #1e2833;
 				font-weight: 500;
-				font-size: 1.8em;
+				font-size: 2em;
 				line-height: 1.4;
 				margin-top: 15px;
 				letter-spacing: -0.333px;
@@ -297,10 +303,198 @@ body.interior {
 			}
 
 			.downloads-table {
-				margin: 25px 5px;
+				margin: 0 3px 25px;
 				color: #05408F;
-				font-weight: 500;
-				font-size: 0.8em;
+				font-size: 0.9em;
+
+				td {
+					height: 48px;
+				}
+
+				h2 {
+					line-height: 35px;
+					font-weight: 500;
+					padding-left: 12px;
+
+					a {
+						&:hover {
+							border-bottom: 1px solid #3470AA;
+							padding-bottom: 1px;
+						}
+					}
+				}
+			}
+
+			h3 {
+				font-size: 1.15em;
+				color: #c00;
+			}
+		}
+	}
+
+	&.download-index,
+	&.download {
+		.downloads-list {
+			padding: 35px 0 0;
+
+			.subcats {
+				margin-top: -20px;
+				padding: 0 0 25px 2px;
+
+				h4 {
+					font-weight: 400;
+					font-size: 0.7em;
+					line-height: 1.8;
+				}
+
+				ul {
+					font-size: 0.95em;
+					li {
+				    	margin-bottom: 5px;
+				    }
+				}
+			}
+
+			ul {
+			  list-style-image: none;
+			  list-style-type: none;
+			  font-size: 13px;
+			  margin: 0;
+			  padding: 0;
+
+			  li {
+			    margin-bottom: 25px;
+			    line-height: 22px;
+
+			    .title {
+				      a {
+				        color: #05408f;
+				        font-weight: 500;
+						font-size: 1.5em;
+
+						&:hover {
+							border-bottom: 1px solid #3470AA;
+							padding-bottom: 1px;
+						}
+				      }
+			    }
+
+			    .bio {
+			    	line-height: 1.6;
+					padding: 3px 0;
+					font-weight: 400;
+					color: #333;
+			    }
+
+			    i {
+			      font-style: normal;
+			      color: #555;
+			    }
+
+				.download_rating {
+					float: right;
+					width: 100px;
+					padding: 12px 0 0 10px;
+					min-height: 40px;
+					line-height: 1.5;
+				}
+
+			  }
+			}
+
+			.subdown {
+			  list-style-type: none;
+			  font-size: 12px;
+			  font-weight: 400;
+			  color: #888;
+			  li {
+			    display: inline;
+			    border-right-width: 1px;
+			    border-right-style: solid;
+			    border-right-color: #bbb;
+			    padding-left: 14px;
+			    padding-right: 14px;
+			    &.left {
+			      padding-left: 0px;
+			    }
+			    &.right {
+			      border: none;
+			    }
+			  }
+			}
+
+			.sorter {
+			  p {
+			  	padding: 0;
+			  }
+			  p a:hover {
+			    background-color: #27333D;
+			    text-decoration: none;
+			  }
+			  float: right;
+			  font-size: 12px;
+			  position: relative;
+			  color: #333;
+			  text-align: right;
+			  z-index: 999;
+			  #sorted_by {
+			    font-weight: bold;
+			    text-transform: lowercase;
+			  }
+			  ul {
+			    position: absolute;
+			    display: none;
+			    right: 0;
+			    top: 18px;
+			    width: 120px;
+			    background: #F4F5F7;
+			    text-align: left;
+			    border: 1px solid #ccc;
+			    @include border-radius(2px);
+			    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+			    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+			    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+			  }
+			  .arrow {
+			    width: 10px;
+			    height: 10px;
+			    background: url(http://static.techspot.com/images/pf_show_sorter.png);
+			    display: inline-block;
+			    zoom: 1;
+			    *display: inline;
+			  }
+			  a {
+			    color: #333;
+			    background: none !important;
+			    padding: 0;
+			    text-shadow: none !important;
+			  }
+			  li {
+			    background: none;
+			    display: block;
+			    border: 0;
+			    height: 25px;
+			    line-height: 25px;
+			    margin: 0;
+			    padding: 0;
+			    .smaller {
+			      font-size: 11px;
+			    }
+			    a {
+			      display: block;
+			      padding: 0 5px;
+			      -webkit-transition: none;
+			      -moz-transition: none;
+			      -ms-transition: none;
+			      -o-transition: none;
+			      transition: none;
+			      &:hover {
+			        background: #32404D !important;
+			        color: #fff;
+			        text-decoration: none;
+			      }
+			    }
+			  }
 			}
 		}
 	}
@@ -312,7 +506,7 @@ body.interior {
 			background-color: white;
 			
 			.wrapper {
-				padding: 25px 0 50px;
+				padding: 25px 0 35px;
 			}
 			
 			.title-group {
@@ -331,6 +525,22 @@ body.interior {
 				        font-size: 1.6em;
 			        }
 				}
+
+				h1.medium {
+					font-weight: 500;
+					font-size: 1.9em;
+					margin-top: -15px;
+			        line-height: 1.4;
+			        letter-spacing: -0.333px;
+			        @include break(mobile) {
+				        margin-top: 0;
+				        font-size: 1.75em;
+			        }
+			        @include break(v-mobile) {
+				        font-size: 1.5em;
+			        }
+				}
+
 				em {
 					font-style: normal;
 					font-size: .7em;
@@ -1219,17 +1429,20 @@ body.interior {
 				padding: 0;
 				margin: 0;
 				li {
+					h3{
+						line-height: 1.5;
+					}
 					p {
 						font-weight: 400;
 						font-size: .6em;
 						color: #666;
-						padding: 0 !important;
+						padding: 2px 0 !important;
 					}
 					.desc {
 						font-size: .75em;
-						padding: 2px 0 !important;
+						padding: 5px 0 !important;
 						font-weight: 400;
-						color: #222; 
+						color: #333; 
 					}
 					.more_info {
 						float: right;
@@ -1253,7 +1466,7 @@ body.interior {
 					      background-color: rgba(112,33,161,1);
 					    }
 					    .bad {
-					      background-color: rgba(204,0,0,0.1);
+					      background-color: rgba(204,0,0,1);
 					    }
 					    .none {
 					      background-color: rgba(153,153,153,1);
@@ -1633,7 +1846,6 @@ body.interior {
 	color: #333;
 	text-align: right;
 	z-index: 1;
-	font-weight: 200;
 	
 	&.active {
   	ul {
