@@ -11,7 +11,7 @@
 
 /* End plugin */
 $(document).ready(function() {
-	
+	var preloaded = false;
 	// 	desktop-only ad removal on mobile (on load, the window much be inferior to 760px on width
     if (($(window).width())<760) {
     		$(".mobile-hide").empty();
@@ -317,6 +317,15 @@ function xmenuHover() {
   			$("ul.SubHeader").parent().addClass("withHeader");
   			$this.children(".nav-submenu").slideDown(SlideTime);
 		} else {
+		  if (!preloaded) {
+  		  $.get( "../_inc/nav-submenus/downloads.html");
+  		  $.get( "../_inc/nav-submenus/features.html");
+  		  $.get( "../_inc/nav-submenus/forums.html");
+  		  $.get( "../_inc/nav-submenus/product-finder.html");
+  		  $.get( "../_inc/nav-submenus/reviews.html");
+  		  $.get( "../_inc/nav-submenus/trending.html");
+  		  var preloaded = true;
+		  }
 			$this.children(".nav-submenu").children(".wrapper").load(
 			  "../_inc/nav-submenus/"+$this.children("a").data("source")+'.html',
 			  function() {
