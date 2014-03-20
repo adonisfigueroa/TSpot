@@ -3,6 +3,8 @@ header {
 		background-color: $orange;
 	}
 	$line-height: 43px;
+	-webkit-transition: 0;
+	transition: 0;
 	position: fixed;
 	z-index: 10;
 	width: 100%;
@@ -423,6 +425,7 @@ header {
 			margin-left: -15px;
 			position: relative;
 			float: left;
+			cursor: pointer;
 		    svg {
 		    	@include opacity(0);
 		    	display: none;
@@ -671,7 +674,13 @@ header {
 							padding: 5px 10px 0px 10px;
 							margin-left: 10px;
 							&:hover {
-								@include trans-bg(black,.2);
+								background-color: rgba(0, 0, 0, 0);
+								img {
+									border: $orange solid 3px;
+									margin-top: -3px;
+									margin-left: -3px;
+									margin-bottom: -3px;
+								}
 							}
 							img {
 								@include border-radius(5px);
@@ -804,6 +813,7 @@ header {
 		margin-left: -15px;
 		position: relative;
 		float: left;
+		cursor: pointer;
 	    svg {
 	    	@include opacity(0);
 	    	display: none;

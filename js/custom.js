@@ -71,9 +71,39 @@ $(document).ready(function() {
 			})
 		});
 	if (($(window).width())<760) {
-			$(".login").click(function(){$(this).toggleClass('hover');});
-			$(".group").click(function(){$(this).toggleClass('hover');});
-			$(".search").click(function(){$(this).toggleClass('hover');});
+			$(".login > a").click(function(){$(this).parent().toggleClass('hover');});
+			$(".group > a").click(function(){$(this).parent().toggleClass('hover');});
+			$(".search > a").click(function(){$(this).parent().toggleClass('hover');});
+			$(document).mouseup(function (e)
+			{
+			    var container = $(".login");
+		
+			    if (!container.is(e.target) // if the target of the click isn't the container...
+			        && container.has(e.target).length === 0) // ... nor a descendant of the container
+			    {
+			        container.removeClass('hover');
+			    }
+			});
+			$(document).mouseup(function (e)
+			{
+			    var container = $(".group");
+		
+			    if (!container.is(e.target) // if the target of the click isn't the container...
+			        && container.has(e.target).length === 0) // ... nor a descendant of the container
+			    {
+			        container.removeClass('hover');
+			    }
+			});
+			$(document).mouseup(function (e)
+			{
+			    var container = $(".search");
+		
+			    if (!container.is(e.target) // if the target of the click isn't the container...
+			        && container.has(e.target).length === 0) // ... nor a descendant of the container
+			    {
+			        container.removeClass('hover');
+			    }
+			});
 		} else {
 			$(".login").mouseenter(function(){$(this).addClass('hover');});
 			$(".login").mouseleave(function(){$(this).removeClass('hover');});
@@ -94,11 +124,13 @@ $(document).ready(function() {
 	$(window).load(function(){
 		$(window).resize( function (){
 			$(".social-column").addClass('flowglitch');
-			setTimeout(function() {
-			    $(".social-column").removeClass('flowglitch');
-			}, 1000);
-			
 		});
+		$(".social-widget").mouseenter( function (){
+			$(this).parent().parent(".social-column").removeClass('flowglitch');
+		});
+		$(".social-widget").mouseleave( function (){
+			$(this).parent().parent(".social-column").addClass('flowglitch');
+		})
 		
 		$(window).afterResize( function() {
 			if (($(window).width())>500) {
@@ -203,7 +235,7 @@ $(document).ready(function() {
 	$(window).load(function(){
     $(window).on("resize", function () {
 	    if (($(window).width())>760) {
-	   	var SidePos = $('.TopScrollElement').offset().top;   
+	   	var SidePos = $(".TopScrollElement").offset().top;   
 			$(".big").each(function (){
 				var BigImgPos = $(this).offset().top,
 					FullWidth = $('body #GlobalWrapper #content > .wrapper').width(),
@@ -229,7 +261,7 @@ $(document).ready(function() {
 	
 	$(window).on("resize", function () {
 	    if (($(window).width())>760) {
-	   	var SidePos = $('.TopScrollElement').offset().top;   
+	   	var SidePos = $(".TopScrollElement").offset().top;   
 			$(".side-object").each(function (){
 				var QuotePos = $(this).offset().top;
 				if (QuotePos < SidePos) {
@@ -311,6 +343,7 @@ function xmenuHover() {
 
 function xmenuHoverOut() {
 	var $this = $(this);
+	var delay = 0, setTimeoutConst;
 	$this.parent().parent().parent().mouseleave(function(){
 		setTimeout(function() {
 		$this.children("a").removeClass("active").siblings(".nav-submenu").hide(10);

@@ -2,6 +2,13 @@ body.home {
   #dk_menu {
 	  height: 38px;
   }	
+  header .menu .wrapper > ul > li a.active {
+	  border-top: solid 1px #777D82;
+	  &:after {
+		  margin-top: -8px;
+	  }
+  }
+  
   #content {
     .wrapper {
 		@include break(v-mobile){
