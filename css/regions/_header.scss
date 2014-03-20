@@ -53,6 +53,47 @@ header {
 		.right-links {
 			float: right;
 			line-height: $line-height;
+
+			@-webkit-keyframes count_appear {
+			    from {
+			        opacity: 0;
+			        -webkit-transform: scale(0.3);
+			    }
+			    70% {
+			        -webkit-transform: scale(1.15)
+			    }
+			    to {
+			        opacity: 1;
+			        -webkit-transform: scale(1);
+			    }
+			}
+			@-moz-keyframes count_appear {
+			    from {
+			        opacity: 0;
+			        -moz-transform: scale(0.3);
+			    }
+			    70% {
+			        -moz-transform: scale(1.15)
+			    }
+			    to {
+			        opacity: 1;
+			        -moz-transform: scale(1);
+			    }
+			}
+			@-ms-keyframes count_appear {
+			    from {
+			        opacity: 0;
+			        -moz-transform: scale(0.3);
+			    }
+			    70% {
+			        -moz-transform: scale(1.15)
+			    }
+			    to {
+			        opacity: 1;
+			        -moz-transform: scale(1);
+			    }
+			}
+
 			ul {
 				li {
 					display: inline-block;
@@ -94,8 +135,70 @@ header {
 								padding-left: 0px;
 								text-indent: -9999px;
 							}
-							
 						}
+
+						.loggedin {
+							text-transform: none !important;
+						}
+
+	@-webkit-keyframes count_appear {
+	    from {
+	        opacity: 0;
+	        -webkit-transform: scale(0.3);
+	    }
+	    70% {
+	        -webkit-transform: scale(1.15)
+	    }
+	    to {
+	        opacity: 1;
+	        -webkit-transform: scale(1);
+	    }
+	}
+	@-moz-keyframes count_appear {
+	    from {
+	        opacity: 0;
+	        -moz-transform: scale(0.3);
+	    }
+	    70% {
+	        -moz-transform: scale(1.15)
+	    }
+	    to {
+	        opacity: 1;
+	        -moz-transform: scale(1);
+	    }
+	}
+	@-ms-keyframes count_appear {
+	    from {
+	        opacity: 0;
+	        -moz-transform: scale(0.3);
+	    }
+	    70% {
+	        -moz-transform: scale(1.15)
+	    }
+	    to {
+	        opacity: 1;
+	        -moz-transform: scale(1);
+	    }
+	}
+
+						.count {
+						    position: absolute;
+							right: -5px;
+							top: 1px;
+							padding: 1px 5px;
+							font-size: 12px;
+							font-weight: 600;
+						    line-height: normal;
+						    background: #c00;
+						    color: #fff;
+						    text-shadow: 0 1px 0 #900;
+						    -webkit-animation: count_appear 0.35s linear;
+						    -moz-animation: count_appear 0.35s linear;
+							@include border-radius(20);
+						    border-radius: 20px;
+						    box-shadow: 0 1px 0 #900;
+						}
+
 						.login-dropdown {
 							display: none;
 							position: absolute;
@@ -106,6 +209,7 @@ header {
 							text-indent: 0;
 							line-height: 25px;
 							z-index: 100;
+							border-bottom: 4px solid #105AB2;
 							box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 							@include break(mobile){
 								right: 0%;
@@ -120,6 +224,73 @@ header {
 							.pad {
 								display: block;
 								padding: 10px 13px;
+
+								&.header {
+									padding-right: 68px;
+
+									.image {
+										position: absolute;
+										background: #fff;
+										top: 10px;
+										right: 10px;
+										border: 1px solid #eee;
+										box-shadow: 3px 3px 0 #ddd;
+									}
+
+									h3 {
+										margin: 3px 0 0;
+										font-weight: 400;
+										font-size: 1em;
+										overflow: hidden;
+										text-overflow: ellipsis;
+										white-space: nowrap;
+									}
+
+									p {
+										color: #888;
+										margin: 4px 0 0px;
+										line-height: 1.5;
+										font-size: 0.6em;
+									}
+								}
+
+								&.subcontent {
+									padding: 0 13px 5px;
+									font-size: 0.55em;
+									max-height: 500px;
+									overflow: auto;
+									background: #f5f5f5;
+
+									&.last {
+										padding-bottom: 6px;
+									}
+
+									ul {
+										padding: 5px 0 5px;
+										margin: 0;
+
+										li {
+											float: left;
+											width: 125px;
+											line-height: 2;
+											font-family: $f-helvetica;
+										}
+									}
+								}
+
+								p {
+									line-height: 1.5;
+									color: #666;
+									margin: 8px 0 5px;
+								}
+							}
+
+							.separator {
+								height: 0;
+								font-size: 0;
+								line-height: 0;
+								border-top: 1px solid #ddd;
+								/* border-bottom: 1px solid #fff; */
 							}
 							
 							.top {
@@ -127,9 +298,9 @@ header {
 							}
 							
 							h4 {
-								font-size: 0.9em;
+								font-size: 0.95em;
 								font-weight: 400;
-								line-height: 10px;
+								line-height: 12px;
 							}
 							
 							small {
@@ -215,7 +386,7 @@ header {
 								.social {
 									h4 {
 										font-weight: 400;
-										font-size: .8em;
+										font-size: .85em;
 										display: inline-block;
 									}
 									a {
