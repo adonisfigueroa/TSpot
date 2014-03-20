@@ -18,7 +18,6 @@ body.interior {
   			margin-top: -13px !important;
   		}
 	}
-	background: white;
 	.score {
 		font-family: $f-helvetica !important;
 	}
@@ -282,8 +281,61 @@ body.interior {
 			font-size: 1.6em;
 			line-height: 2;
 		}
-
 	}
+
+
+	&.category {
+		article {
+			h2 {
+				font-size: 20px;
+				font-weight: bold;
+			}
+			time {
+				font-size: 12px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+
+		hgroup {
+			background-color: white;
+			
+			.wrapper {
+				padding: 25px 0 35px;
+			}
+			
+			.title-group {
+				margin-top: 25px !important;
+
+	      	  	figure {
+		      	  	float: left!important;
+		      	  	padding-right: 10px;
+	      	  	}
+				
+				h1.large {
+					font-weight: 500;
+					font-size: 2.4em; 
+			        line-height: 1.2;
+			        letter-spacing: -0.333px;
+			        padding-bottom: 10px;
+			        @include break(mobile) {
+				        margin-top: 0;
+				        font-size: 1.9em;
+			        }
+			        @include break(v-mobile) {
+				        font-size: 1.6em;
+			        }
+				}
+
+	        	h2 {
+		          	font-size: 0.9em;
+		          	font-weight: 300;
+	        	}
+			}
+		}
+	}
+
 
 	&.download-index {
 		#content {	
@@ -552,12 +604,11 @@ body.interior {
 						color: black;
 						font-weight: 500;
 						border-bottom: 1px solid #ccc;
-						padding-bottom: 3px;
-						
+						padding-bottom: 3px;	
             
-            &:hover {
-              border-bottom: 1px solid #ff7f00;
-            }
+			            &:hover {
+			              border-bottom: 1px solid #ff7f00;
+			            }
 					}
 				}
 			}
