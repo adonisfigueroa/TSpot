@@ -318,12 +318,24 @@ function xmenuHover() {
   			$this.children(".nav-submenu").slideDown(SlideTime);
 		} else {
 		  if (!preloaded) {
-  		  $.get( "../_inc/nav-submenus/downloads.html");
-  		  $.get( "../_inc/nav-submenus/features.html");
-  		  $.get( "../_inc/nav-submenus/forums.html");
-  		  $.get( "../_inc/nav-submenus/product-finder.html");
-  		  $.get( "../_inc/nav-submenus/reviews.html");
-  		  $.get( "../_inc/nav-submenus/trending.html");
+  		  $.get( "../_inc/nav-submenus/downloads.html", function() {
+    		  $("a").find("[data-source='downloads']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
+  		  $.get( "../_inc/nav-submenus/features.html", function() {
+    		  $("a").find("[data-source='features']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
+  		  $.get( "../_inc/nav-submenus/forums.html", function() {
+    		  $("a").find("[data-source='forums']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
+  		  $.get( "../_inc/nav-submenus/product-finder.html", function() {
+    		  $("a").find("[data-source='product-finder']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
+  		  $.get( "../_inc/nav-submenus/reviews.html", function() {
+    		  $("a").find("[data-source='reviews']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
+  		  $.get( "../_inc/nav-submenus/trending.html", function() {
+    		  $("a").find("[data-source='trending']").parent("li").children(".nav-submenu").children(".wrapper").load(data);
+  		  });
   		  preloaded = true;
 		  }
 			$this.children(".nav-submenu").children(".wrapper").load(
