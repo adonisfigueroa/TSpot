@@ -964,7 +964,7 @@ body.interior.download-index .downloads-list, body.interior.download .downloads-
 body.interior.news hgroup, body.interior.product hgroup, body.interior.download hgroup {
   background-color: white; }
   body.interior.news hgroup .wrapper, body.interior.product hgroup .wrapper, body.interior.download hgroup .wrapper {
-    padding: 25px 0 35px; }
+    padding: 25px 0 50px; }
   body.interior.news hgroup .title-group h1.large, body.interior.product hgroup .title-group h1.large, body.interior.download hgroup .title-group h1.large {
     font-weight: 500;
     font-size: 2.4em;
@@ -1004,6 +1004,13 @@ body.interior.news hgroup, body.interior.product hgroup, body.interior.download 
       padding-bottom: 3px; }
       body.interior.news hgroup .title-group em a:hover, body.interior.product hgroup .title-group em a:hover, body.interior.download hgroup .title-group em a:hover {
         border-bottom: 1px solid #ff7f00; }
+    body.interior.news hgroup .title-group em span.sponsored, body.interior.product hgroup .title-group em span.sponsored, body.interior.download hgroup .title-group em span.sponsored {
+      background-color: #495693;
+      margin: 0 4px 0 0;
+      padding: 4px 10px;
+      text-align: center;
+      color: white;
+      font-weight: 600 !important; }
 body.interior.news .col-2-3, body.interior.product .col-2-3, body.interior.download .col-2-3 {
   width: 69%; }
   @media only screen and (max-width: 960px) {
@@ -1254,6 +1261,8 @@ body.interior.news.product #sidebar, body.interior.product.product #sidebar, bod
   margin-top: 0; }
 body.interior.news.download hgroup .title-group, body.interior.product.download hgroup .title-group, body.interior.download.download hgroup .title-group {
   margin-top: 30px !important; }
+  body.interior.news.download hgroup .title-group .wrapper, body.interior.product.download hgroup .title-group .wrapper, body.interior.download.download hgroup .title-group .wrapper {
+    padding: 25px 0 35px; }
   body.interior.news.download hgroup .title-group figure, body.interior.product.download hgroup .title-group figure, body.interior.download.download hgroup .title-group figure {
     width: 100px !important;
     float: left !important; }
@@ -1272,7 +1281,7 @@ body.interior.products .good {
 body.interior.products .average {
   background-color: #7021a1; }
 body.interior.products .bad {
-  background-color: rgba(204, 0, 0, 0.1); }
+  background-color: #cc0000; }
 body.interior.products .none {
   background-color: #999999; }
 body.interior.products .alternate {
@@ -1286,10 +1295,12 @@ body.interior.products .SideTitle, body.interior.products .SideProdContent li a 
   color: white; }
 body.interior.products .post-list-product {
   width: 100%; }
+  body.interior.products .post-list-product.pfindex .ProdListInfo h4 {
+    margin-top: 12px;
+    margin-bottom: 3px; }
   body.interior.products .post-list-product article {
     padding: 0px 2%;
     height: 70px;
-    /*width: 100%;*/
     border-bottom: 1px solid #F1F1F1;
     border-top: 1px solid #EAEAEA; }
     @media only screen and (max-width: 500px) {
@@ -1310,10 +1321,26 @@ body.interior.products .post-list-product {
       max-height: 100%; }
   body.interior.products .post-list-product .ProdListInfo {
     float: left;
-    margin-left: 8px; }
+    margin-left: 8px;
+    max-width: 65%; }
+    @media only screen and (max-width: 960px) {
+      body.interior.products .post-list-product .ProdListInfo {
+        max-width: 55%; } }
+    @media only screen and (max-width: 760px) {
+      body.interior.products .post-list-product .ProdListInfo {
+        max-width: 52%; } }
+    @media only screen and (max-width: 500px) {
+      body.interior.products .post-list-product .ProdListInfo {
+        max-width: 56%; } }
     body.interior.products .post-list-product .ProdListInfo h4 {
-      margin-top: 14px;
-      font-size: 1em; }
+      margin-top: 16px;
+      font-size: 0.95em;
+      font-family: "Helvetica Neue", Arial, Helvetica; }
+      body.interior.products .post-list-product .ProdListInfo h4 a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block; }
       @media only screen and (max-width: 760px) {
         body.interior.products .post-list-product .ProdListInfo h4 {
           font-size: 1em;
@@ -1329,7 +1356,7 @@ body.interior.products .post-list-product {
       text-transform: uppercase;
       margin-top: 1px;
       line-height: 20px;
-      background-color: #bbbbbb;
+      background-color: #61798E;
       width: 95px;
       text-align: center;
       font-weight: 800;
@@ -1339,13 +1366,16 @@ body.interior.products .post-list-product {
       -khtml-border-radius: 2px 2px 2px 2px;
       border-radius: 2px 2px 2px 2px;
       display: block;
-      margin-right: 10px; }
+      margin-right: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
       @media only screen and (max-width: 960px) {
         body.interior.products .post-list-product .ProdListInfo .ProdListCat a {
           width: 80px;
           margin-right: 5px; } }
       body.interior.products .post-list-product .ProdListInfo .ProdListCat a:hover {
-        background-color: #a2a2a2; }
+        background-color: #4c5f70; }
       @media only screen and (max-width: 760px) {
         body.interior.products .post-list-product .ProdListInfo .ProdListCat a {
           font-size: 0.5em;
@@ -1354,6 +1384,7 @@ body.interior.products .post-list-product {
     body.interior.products .post-list-product .ProdListInfo time {
       font-size: 0.7em;
       color: #666666;
+      line-height: 1.7;
       display: inline-block; }
       @media only screen and (max-width: 960px) {
         body.interior.products .post-list-product .ProdListInfo time {
@@ -1378,26 +1409,14 @@ body.interior.products .post-list-product {
       margin-right: 18px; }
       @media only screen and (max-width: 960px) {
         body.interior.products .post-list-product .prod-meta .intRank {
-          margin-right: 5px;
-          width: 40px; } }
-      @media only screen and (max-width: 500px) {
-        body.interior.products .post-list-product .prod-meta .intRank {
           display: none; } }
     body.interior.products .post-list-product .prod-meta .price {
       color: #cc0000;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 0.8em;
-      float: left;
-      width: 50px;
-      text-align: right;
-      margin-right: 5px; }
+      float: left; }
       @media only screen and (max-width: 960px) {
         body.interior.products .post-list-product .prod-meta .price {
-          margin-right: 5px; } }
-      @media only screen and (max-width: 500px) {
-        body.interior.products .post-list-product .prod-meta .price {
-          right: 90px;
-          position: absolute;
           display: none; } }
     body.interior.products .post-list-product .prod-meta .review_score {
       width: 65px;
@@ -1561,11 +1580,11 @@ body.interior.products #CategoryListMobile {
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
         border-left: 6px solid #ff7f00; }
-  body.interior.products #CategoryListMobile .CompHard {
+  body.interior.products #CategoryListMobile .computer-hardware {
     height: 185px; }
-  body.interior.products #CategoryListMobile .DeskMobi {
+  body.interior.products #CategoryListMobile .pcs-laptops-tablets {
     height: 40px; }
-  body.interior.products #CategoryListMobile .Elec {
+  body.interior.products #CategoryListMobile .electronics {
     height: 110px; }
   @media only screen and (max-width: 760px) {
     body.interior.products #CategoryListMobile {
@@ -1712,11 +1731,11 @@ body.interior.products #sidebar {
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
         border-left: 6px solid #ff7f00; }
-  body.interior.products #sidebar .CompHard {
+  body.interior.products #sidebar .computer-hardware {
     height: 185px; }
-  body.interior.products #sidebar .DeskMobi {
+  body.interior.products #sidebar .pcs-laptops-tablets {
     height: 40px; }
-  body.interior.products #sidebar .Elec {
+  body.interior.products #sidebar .electronics {
     height: 110px; }
 body.interior.products-cat #AddFilter {
   height: 31px;
@@ -5637,14 +5656,13 @@ h1 {
             border-left: none;
             padding-left: 0px;
             margin: 0; } }
-    .post-list article .article-content p {
+    .post-list article .article-content .intro {
       font-size: .75em;
       padding: 2px 0 !important;
       font-weight: 400;
-      -webkit-font-smoothing: antialiased;
       color: #333; }
       @media only screen and (max-width: 760px) {
-        .post-list article .article-content p {
+        .post-list article .article-content .intro {
           display: none; } }
     .post-list article .article-content .post-meta {
       line-height: 25px;
@@ -5693,6 +5711,18 @@ h1 {
     width: 100% !important; }
 .post-list article:last-of-type {
   border-bottom: none; }
+.post-list.fullview {
+  max-width: 98%; }
+  .post-list.fullview h2 {
+    font-size: 30px; }
+  .post-list.fullview time {
+    font-size: 13px !important; }
+  .post-list.fullview p {
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.45; }
+  .post-list.fullview img {
+    max-width: 100% !important; }
 
 .video-container {
   position: relative;
@@ -6043,7 +6073,6 @@ h3.longtype {
           position: absolute;
           width: 100%;
           height: 140px;
-          background: #eee;
           border: 1px solid #ddd;
           background-position: center center;
           background-repeat: no-repeat;
@@ -6396,37 +6425,69 @@ ul.category-chicklets {
       letter-spacing: 0.50px;
       -webkit-font-smoothing: subpixel-antialiased; }
     ul.category-chicklets li.apple {
-      background-color: #A1B8D9; }
+      background-color: #7d9dca; }
+      ul.category-chicklets li.apple:hover {
+        background-color: #96b0d4; }
     ul.category-chicklets li.gaming {
       background-color: #CC0000; }
+      ul.category-chicklets li.gaming:hover {
+        background-color: #e60000; }
     ul.category-chicklets li.hardware {
       background-color: #00B22D; }
+      ul.category-chicklets li.hardware:hover {
+        background-color: #00cb33; }
     ul.category-chicklets li.industry {
       background-color: #2A288A; }
+      ul.category-chicklets li.industry:hover {
+        background-color: #3633b2; }
     ul.category-chicklets li.security {
       background-color: #CBA746; }
+      ul.category-chicklets li.security:hover {
+        background-color: #d6ba6e; }
     ul.category-chicklets li.microsoft {
       background-color: #00A2F2; }
+      ul.category-chicklets li.microsoft:hover {
+        background-color: #26b7ff; }
     ul.category-chicklets li.mobile {
       background-color: #CC3333; }
+      ul.category-chicklets li.mobile:hover {
+        background-color: #d65c5c; }
     ul.category-chicklets li.software, ul.category-chicklets li.electronics {
       background-color: #50039C; }
+      ul.category-chicklets li.software:hover, ul.category-chicklets li.electronics:hover {
+        background-color: #5f04ba; }
     ul.category-chicklets li.web, ul.category-chicklets li.home {
       background-color: #FF7F00; }
+      ul.category-chicklets li.web:hover, ul.category-chicklets li.home:hover {
+        background-color: #ff9124; }
     ul.category-chicklets li.techspot {
       background-color: #105AB2; }
+      ul.category-chicklets li.techspot:hover {
+        background-color: #1472e1; }
     ul.category-chicklets li.blog {
       background-color: #AAAAAA; }
+      ul.category-chicklets li.blog:hover {
+        background-color: #c3c3c3; }
     ul.category-chicklets li.dotw, ul.category-chicklets li.pc {
       background-color: #B25900; }
+      ul.category-chicklets li.dotw:hover, ul.category-chicklets li.pc:hover {
+        background-color: #e57200; }
     ul.category-chicklets li.natw {
       background-color: #BBBBBB; }
+      ul.category-chicklets li.natw:hover {
+        background-color: #d4d4d4; }
     ul.category-chicklets li.deals {
       background-color: #779954; }
+      ul.category-chicklets li.deals:hover {
+        background-color: #90b070; }
     ul.category-chicklets li.wof {
       background-color: #85B200; }
+      ul.category-chicklets li.wof:hover {
+        background-color: #94c600; }
     ul.category-chicklets li.products, ul.category-chicklets li.downloads {
       background-color: #00366F; }
+      ul.category-chicklets li.products:hover, ul.category-chicklets li.downloads:hover {
+        background-color: #004fa2; }
 
 .social-widget {
   width: 60px;
