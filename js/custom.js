@@ -70,6 +70,12 @@ $(document).ready(function() {
 				animate_slide(e, $(this))
 			})
 		});
+	function disableLink(e) {
+	    // cancels the event
+	    e.preventDefault();
+	
+	    return false;
+	}
 	if (($(window).width())<760) {
 			$(".login > a").click(function(){$(this).parent().toggleClass('hover');});
 			$(".group > a").click(function(){$(this).parent().toggleClass('hover');});
@@ -104,7 +110,9 @@ $(document).ready(function() {
 			        container.removeClass('hover');
 			    }
 			});
+			$(".login > a").bind('click', disableLink);
 		} else {
+			$(".login > a").unbind('click', disableLink);
 			$(".login").mouseenter(function(){$(this).addClass('hover');});
 			$(".login").mouseleave(function(){$(this).removeClass('hover');});
 			$(".group").mouseenter(function(){$(this).addClass('hover');});
@@ -172,8 +180,19 @@ $(document).ready(function() {
 	});
 	//mobile menu part
 	$("#Stripes").parent().click(function(){
-		$("#GlobalWrapper").children().addClass('flyout');
-		$("#GlobalWrapper").children().toggleClass('activebar');
+		var wrap = $("#GlobalWrapper");
+		
+		wrap.children().addClass('flyout');
+		if ( wrap.children('header').hasClass('activebar')){
+			wrap.removeClass('WrapperLayering');
+			wrap.parent().children("#Mobileheader").removeClass('MenuLayering');
+		} else {
+			setTimeout(function(){
+				wrap.addClass('WrapperLayering');
+				wrap.parent().children("#Mobileheader").addClass('MenuLayering');
+			},700);
+		};
+		wrap.children().toggleClass('activebar');
 	});
 	//MastHead height Variator
 	$("#masthead ul.variation-1").parent().parent().addClass("SmallHead");
@@ -305,9 +324,9 @@ function xmenuHover() {
 		}
 		if ($this.children(".nav-submenu").children(".wrapper").children().length > 0){ // if the content has been loaded just show it
 			$this.children("a").addClass("active");
-			/*$this.imagesLoaded( function() {
+			$this.imagesLoaded( function() {
 	  			$(".loadAnim").hide();	
-	  		});*/
+	  		});
   			$(".submenu > li > a").hover(function(e) {
   				e.preventDefault();
   				$(this).parent("li").addClass("active").siblings("li").removeClass("active");
@@ -341,11 +360,11 @@ function xmenuHover() {
 		  }
 			$this.children(".nav-submenu").children(".wrapper").load("../_inc/nav-submenus/"+$this.children("a").data("source")+'.html',
 			  function() {
-			  	/*
+			  	
 			  	$this.imagesLoaded( function() {
 		  			$(".loadAnim").hide();	
 		  		});
-		  		*/
+		  		
 	  			$this.children("a").addClass("active");
 	  			$(".submenu > li > a").hover(function(e) {
 	  				e.preventDefault();

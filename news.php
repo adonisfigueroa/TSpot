@@ -3,7 +3,13 @@
 	$body_classes = array('interior','news');
 	require_once("_inc/_header.php");
 ?>
-
+<div class="cta mobile-hide grey top-adverbox">
+	<div class="wrapper">
+		<center>
+			<img src="http://placehold.it/728x90">
+		</center>
+	</div>
+</div>
 <hgroup>
 	<div class="wrapper">
 		<ul class="category-chicklets">

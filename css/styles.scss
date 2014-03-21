@@ -31,9 +31,16 @@ body {
 	-webkit-transition: none;
 	transition: none;
 }
-
+.MenuLayering {
+	z-index: 1 !important;
+}
+.WrapperLayering {
+	z-index: 0 !important;
+}
 .flowglitch {
 	overflow: hidden !important;
+	overflow-x :hidden !important;
+	overflow-y: hidden !important;
 }
 .social-column {
 	overflow: visible;
@@ -47,7 +54,6 @@ height: 100%;
 position: absolute;
 z-index: 100000;
 background: #777D82;
-display: none;
 	img {
 		left: 50%;
 		top: 50%;
@@ -495,10 +501,8 @@ h1 {
 		
 	}
 	&.mobile-hide {
-		.wrapper {
-			@include break(mobile) {
-			display: none;
-			}
+		@include break(mobile) {
+		display: none;
 		}
 	}
 	&.grey {
@@ -1042,7 +1046,11 @@ span._bar {
 		background: $purple;
 	}			
 }
-
+hgroup {
+	@include break(mobile){
+		margin-top: 30px;
+	}	
+}
 hgroup.featured-image {
 	display: block;
 	min-height: 70vh;

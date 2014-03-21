@@ -83,7 +83,7 @@
 			<div class="right-links">
 				<ul>
 					<li class="login">
-						<a style="cursor:pointer">Login <span class="blink">_</span></a>
+						<a style="cursor:pointer" href="http://google.com">Login <span class="blink">_</span></a>
 						<div class="login-dropdown dropdown">
 							<div class="pad why-register">
 								<h4>Welcome to TechSpot</h4>
