@@ -4538,7 +4538,9 @@ header {
           .products #masthead ul.featured-posts li a hgroup h2 {
             font-weight: 500;
             text-shadow: 1px 1px 7px #222;
-            font-size: 1.4em; }
+            font-size: 1.4em;
+            max-height: 100px;
+            overflow: hidden; }
       .products #masthead ul.featured-posts li:nth-child(1) {
         top: 0;
         left: 0;
