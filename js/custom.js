@@ -133,10 +133,10 @@ $(document).ready(function() {
 		$(window).resize( function (){
 			$(".social-column").addClass('flowglitch');
 		});
-		$(".social-widget").mouseenter( function (){
+		$(".social-widget, .article-index").mouseenter( function (){
 			$(this).parent().parent(".social-column").removeClass('flowglitch');
 		});
-		$(".social-widget").mouseleave( function (){
+		$(".social-widget, .article-index").mouseleave( function (){
 			$(this).parent().parent(".social-column").addClass('flowglitch');
 		})
 		
