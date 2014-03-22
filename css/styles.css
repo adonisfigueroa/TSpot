@@ -3430,13 +3430,15 @@ header {
     #Mobileheader #flyout-main-menu .wrapper ul li {
       line-height: 50px;
       width: 100%;
-      border-top: 1px solid #555;
-      padding-left: 15px; }
+      border-top: 1px solid #555; }
       #Mobileheader #flyout-main-menu .wrapper ul li a {
         color: white;
         text-transform: uppercase;
         font-size: 0.95em;
-        font-family: Roboto Condensed; }
+        font-family: Roboto Condensed;
+        width: 100%;
+        display: block;
+        padding-left: 15px; }
 
 .activebar #MobileMenu a {
   width: 100%;
