@@ -2113,7 +2113,7 @@
 		}
 	}
 }
-.reviews-cat #masthead {
+.reviews-cat #masthead, .features-cat #masthead {
 	min-height: 248px;
 	@include break(tablet){
 		.wrapper {

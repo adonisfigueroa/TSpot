@@ -1131,7 +1131,7 @@ hgroup.featured-image {
 			bottom: 50px;
 		}
 		@include break(v-mobile){
-			bottom: 75px;
+			bottom: 55px;
 		}
 		
 		h1.large {
@@ -1581,8 +1581,8 @@ ul.category-chicklets {
 	@include break(mobile){
 	width: 100%;
 	.wrapperMobileOnly {
-		width:  94%;
-		padding: 0 3%;
+		width:  96%;
+		padding: 0 2%;
 		}
 	}
 }
@@ -1592,11 +1592,17 @@ ul.category-chicklets {
 	@include break(tablet){
 		@include col-last(2,3,8);
 	}
+	&.special{
+		width: 100%;
+		article {
+			width: 94% !important;
+		}		
+	}
 	@include break(mobile){
 	width: 100%;
 	.wrapperMobileOnly {
-		width:  94%;
-		padding: 0 3%;
+		width:  96%;
+		padding: 0 2%;
 		}
 	}
 }
@@ -2305,8 +2311,8 @@ input[type=submit] {
 .article #content {
 	@include break(mobile){
 	.wrapperMobileOnly {
-		width:  94%;
-		padding: 0 3%;
+		width:  96%;
+		padding: 0 2%;
 		}
 	}
 }
@@ -2446,6 +2452,10 @@ input[type=submit] {
 	line-height: 45px;
 	font-weight: 400;
 	width: 100%;
+
+	@include break(v-mobile) {
+    	display: none;
+	}
 
 	h4 {
 		font-weight: 500;

@@ -86,7 +86,8 @@ body.interior.download {
 	 	}   
 	 	h2 {
 		 	@include break(mobile){
-		 		font-size: 0.9em !important;
+		 		font-size: 0.8em !important;
+		 		margin-top: 5px;
 	 		}
 	 	}
     }
@@ -122,7 +123,7 @@ body.interior.download {
       @include break(v-mobile){
 	      @include col(1,1,0);
 	      border: none;
-	      margin-top: 120px;
+	      margin-top: 240px;
 	      
       }
     }
@@ -133,6 +134,12 @@ body.interior.download {
     	font-size: 1em;
 		font-weight: 500;
 		margin: 15px 0 0px;
+
+		&.report-link {
+	      @include break(mobile){
+		      display: none;
+	      }
+		}
     }
     .mirror-wrapper {
       margin: 0 0 15px;
@@ -145,8 +152,8 @@ body.interior.download {
       }
       ul {
       	@include break(v-mobile){
-	      	text-align: center;
-		  width: 94%;
+	      /* text-align: center;
+		  width: 94%; */
       	}
       }
       .inline {
@@ -256,9 +263,9 @@ body.interior.download {
         margin-bottom: 15px;
         margin-top: 0px;
         @include break(v-mobile){
-	        left: 50%;
 			position: relative;
-			margin-left: -150px;
+			/* left: 50%;
+			margin-left: -150px; */
         }
         .download-link {
           	float: left;
@@ -328,7 +335,7 @@ body.interior.download .col-2-3{
 }
 body.interior.download #pub-description, #similar-soft {
 	@include break(v-mobile){
-		font-size: 13px;
+		font-size: 14px;
 	}
 }
 body.interior.download article .col-1-2.wide-gut{
