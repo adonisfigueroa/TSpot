@@ -1840,6 +1840,33 @@ body.interior {
 					}					
 				}
 			}
+			.index-mobile {
+				.article-index {
+					display: none;
+					@include break(v-mobile){
+						display: block;
+					}
+					margin-bottom: 15px;
+					width: 100%;
+					strong {
+						line-height: 30px;
+						background: #ff7f00;
+						font-size: 0.9em;
+						color: white;
+					}
+					section {
+						display: block;
+						width: 100%;
+						position:relative;
+						left: 0;
+						z-index: 0;
+						h3 {
+							display: none;
+						}
+						
+					}
+				}
+			}
 			article {
 				width: 90%;
 				float: left;
