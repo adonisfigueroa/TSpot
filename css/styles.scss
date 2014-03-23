@@ -109,6 +109,8 @@ a {
 	color: #0a5499;
 }
 
+a.offset { display: block; position: relative; top: -90px; visibility: hidden; }
+
 ul,ol {
 	margin: 0; padding: 0;
 	li {
@@ -1042,7 +1044,20 @@ h3.longtype {
 	}
     
   }
-  
+
+  .staff {
+		display: inline-block;
+		zoom: 1;
+		vertical-align: middle;
+		margin-right: 10px;
+		background: url(http://static.techspot.com/images/staff_badge.png) no-repeat;
+		width: 59px;
+		height: 22px;
+		overflow: hidden;
+		text-indent: -1000px;
+		float: right;
+		margin-top: 15px;
+  }
 }
 
 span._bar {
@@ -1293,6 +1308,10 @@ ul.category-chicklets {
 				.WidgetArea {
 					padding: 7px 0 0 7px;
 					z-index: 999;
+
+					&.gplus {
+						padding: 4px 0 0 7px;
+					}
 				}
 			}
 			&.facebook {
