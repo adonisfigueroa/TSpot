@@ -133,7 +133,7 @@ body.interior.download {
     .options {
     	font-size: 1em;
 		font-weight: 500;
-		margin: 15px 0 0px;
+		margin: 10px 0 0px;
 
 		&.report-link {
 	      @include break(mobile){
@@ -267,46 +267,58 @@ body.interior.download {
 			/* left: 50%;
 			margin-left: -150px; */
         }
-        .download-link {
-          	float: left;
+
+		.download_button {
+		  float: left;
+		  margin-bottom: 8px;
+		  display: inline-block;
+		  width: 170px;
+		  height: 35px;
+		  background: url(http://static.techspot.com/images/download_button_sprites.png) no-repeat;
+		  position: relative;
+		  span {
+		    text-indent: -1000px;
+		    overflow: hidden;
+		    position: absolute;
+		    width: 32px;
+		    left: 8px;
+		    height: 35px;
+		    background: url(http://static.techspot.com/images/download_button_arrow.png) 0 0;
+		    -webkit-transition: all 0.15s linear;
+		    -moz-transition: all 0.15s linear;
+		    -ms-transition: all 0.15s linear;
+		    -o-transition: all 0.15s linear;
+		    transition: all 0.15s linear;
+		  }
+		  &:hover {
+		    background-position: left bottom;
+		    span {
+		      background-position: 0 35px;
+		    }
+		  }
+		}
+
+        .facebook-like {
+	        margin-right: 0%;
+			display: block;
+			float: left;
 			list-style-type: none;
-			position: relative;
+			position: relative;  
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
-			margin-right: 10px; 
-			display: inline-block;
-          @include break(mobile){
-	          
-          }
-          a {
-            display: block;
-            width: 170px;
-            height: 36px;
-            background: url('../images/tmp/download-button.png') no-repeat scroll 0 0 transparent;
-            text-indent: -9999px;
-          }
-        }
-        .facebook-like {
-        margin-right: 0%;
-		display: block;
-		float: left;
-		list-style-type: none;
-		position: relative;  
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		padding-top: 8px;        
-		@include break(mobile){
-	          width: 50%;
-          }
-          padding-top: 8px;
-          a {
-            display: block;
-            width: 77px;
-            height: 20px;
-            background: url('../images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
-          }
+			padding: 8px 0 0 15px;
+
+			@include break(mobile){
+		          width: 50%;
+	        }
+
+			a {
+	            display: block;
+	            width: 77px;
+	            height: 20px;
+	            background: url('../images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
+	        }
         }
       }
     }

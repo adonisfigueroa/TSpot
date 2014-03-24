@@ -106,7 +106,8 @@ article, aside, section {
 
 a {
 	text-decoration: none;
-	color: #0a5499;
+	color: #105ab2;
+	&:hover { color: $red; }
 }
 
 a.offset { display: block; position: relative; top: -90px; visibility: hidden; }
@@ -135,11 +136,16 @@ ul,ol {
 		width: 94%;
 	}
 }
-//styling title for article&news
+
+// styling title for article & news
 .article, .news { 
  	article {
 	    h2 {
 			padding: 10px 0 20px;
+
+			@include break(mobile) {
+				font-size: 1.5em !important;
+			}
 	    }
 	}
 }
@@ -359,7 +365,7 @@ h1 {
 								    background: #075bc0 !important;
 								}
 								&.biggest {
-								    background: #c00 !important;
+								    background: $red !important;
 								}
 							}							
 						}
@@ -443,6 +449,8 @@ h1 {
 				&.replies {
 					color: #7393C8;
 					font-weight: 500;
+
+					&:hover { text-decoration: underline; }
 				}
 			}
 		}
@@ -483,7 +491,9 @@ h1 {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 8% center;
 		background-repeat: no-repeat;
-		
+		& > a {
+  			&:hover { color: $red; }
+		}
 	}
 }
 
@@ -495,6 +505,7 @@ h1 {
 		background-size: 26px;
 		& > a {
   		color: #333;
+  			&:hover { color: $red; }
 		}
 	}
 }
@@ -2010,7 +2021,7 @@ input[type=submit] {
       background-color: #6F22A0;
     }
     .bad {
-      background-color: #c00;
+      background-color: $red;
     }
     .none {
       background-color: #999;

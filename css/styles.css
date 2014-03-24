@@ -583,7 +583,9 @@ body.interior nav.page-nav {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 0px;
-      padding-bottom: 20px; } }
+      float: right;
+      margin-right: 3%;
+      padding-bottom: 40px; } }
   body.interior nav.page-nav a {
     font-weight: 400;
     font-size: 1.8em; }
@@ -1183,7 +1185,6 @@ body.interior.news.news .ComBut, body.interior.product.news .ComBut, body.interi
   font-size: 0.8em;
   font-weight: 700;
   display: block;
-  height: 36px;
   font-family: "Helvetica Neue", Arial, Helvetica;
   border: solid 1px #AAAAAA;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -1473,7 +1474,9 @@ body.interior.products #LookUpMobile {
         padding: 0px 10px; } }
   body.interior.products #LookUpMobile h3 {
     color: white;
-    line-height: 35px; }
+    line-height: 35px;
+    font-family: Roboto Condensed;
+    font-size: 0.9em; }
   @media only screen and (max-width: 760px) {
     body.interior.products #LookUpMobile {
       display: block; } }
@@ -1487,7 +1490,7 @@ body.interior.products #LookUpMobile {
     font-family: "Roboto Condensed", sans-serif;
     line-height: 30px;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0px 2%;
     color: #333; }
 body.interior.products #CategoryListMobile {
@@ -2048,8 +2051,13 @@ body.interior.article hgroup.featured-image {
   body.interior.article hgroup.featured-image.second-page {
     margin-top: -80px;
     background-position-y: 50px; }
-    body.interior.article hgroup.featured-image.second-page .title-group h1.large {
-      font-size: 2.4em; }
+    body.interior.article hgroup.featured-image.second-page .title-group {
+      bottom: 15px; }
+      body.interior.article hgroup.featured-image.second-page .title-group h1.large {
+        font-size: 2.4em; }
+        @media only screen and (max-width: 760px) {
+          body.interior.article hgroup.featured-image.second-page .title-group h1.large {
+            font-size: 1.5em; } }
     body.interior.article hgroup.featured-image.second-page .rating {
       display: none; }
 body.interior.article hgroup.featured-image.second-page:before {
@@ -2096,7 +2104,8 @@ body.interior.article #content {
       body.interior.article #content .index-mobile .article-index {
         display: block; } }
     body.interior.article #content .index-mobile .article-index strong {
-      line-height: 30px;
+      line-height: 25px;
+      padding-bottom: 5px;
       background: #ff7f00;
       font-size: 0.9em;
       color: white; }
@@ -2459,7 +2468,7 @@ body.interior.download #product_info {
   body.interior.download #product_info .options {
     font-size: 1em;
     font-weight: 500;
-    margin: 15px 0 0px; }
+    margin: 10px 0 0px; }
     @media only screen and (max-width: 760px) {
       body.interior.download #product_info .options.report-link {
         display: none; } }
@@ -2593,21 +2602,31 @@ body.interior.download #product_info {
           position: relative;
           /* left: 50%;
           margin-left: -150px; */ } }
-      body.interior.download #product_info .download-product .download-wrapper .download-link {
+      body.interior.download #product_info .download-product .download-wrapper .download_button {
         float: left;
-        list-style-type: none;
-        position: relative;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        margin-right: 10px;
-        display: inline-block; }
-        body.interior.download #product_info .download-product .download-wrapper .download-link a {
-          display: block;
-          width: 170px;
-          height: 36px;
-          background: url("../images/tmp/download-button.png") no-repeat scroll 0 0 transparent;
-          text-indent: -9999px; }
+        margin-bottom: 8px;
+        display: inline-block;
+        width: 170px;
+        height: 35px;
+        background: url(http://static.techspot.com/images/download_button_sprites.png) no-repeat;
+        position: relative; }
+        body.interior.download #product_info .download-product .download-wrapper .download_button span {
+          text-indent: -1000px;
+          overflow: hidden;
+          position: absolute;
+          width: 32px;
+          left: 8px;
+          height: 35px;
+          background: url(http://static.techspot.com/images/download_button_arrow.png) 0 0;
+          -webkit-transition: all 0.15s linear;
+          -moz-transition: all 0.15s linear;
+          -ms-transition: all 0.15s linear;
+          -o-transition: all 0.15s linear;
+          transition: all 0.15s linear; }
+        body.interior.download #product_info .download-product .download-wrapper .download_button:hover {
+          background-position: left bottom; }
+          body.interior.download #product_info .download-product .download-wrapper .download_button:hover span {
+            background-position: 0 35px; }
       body.interior.download #product_info .download-product .download-wrapper .facebook-like {
         margin-right: 0%;
         display: block;
@@ -2617,8 +2636,7 @@ body.interior.download #product_info {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        padding-top: 8px;
-        padding-top: 8px; }
+        padding: 8px 0 0 15px; }
         @media only screen and (max-width: 760px) {
           body.interior.download #product_info .download-product .download-wrapper .facebook-like {
             width: 50%; } }
@@ -3113,7 +3131,6 @@ header {
       cursor: pointer; }
       header.interior #MobileMenu a svg {
         zoom: 1;
-        filter: alpha(opacity=0);
         opacity: 0;
         display: none;
         text-decoration: none;
@@ -3133,7 +3150,6 @@ header {
           header.interior #MobileMenu a svg {
             display: block;
             zoom: 1;
-            filter: alpha(opacity=100);
             opacity: 1;
             height: 49px; } }
     header.interior h1#logo {
@@ -3453,7 +3469,6 @@ header {
     cursor: pointer; }
     header #MobileMenu a svg {
       zoom: 1;
-      filter: alpha(opacity=0);
       opacity: 0;
       display: none;
       text-decoration: none;
@@ -3476,7 +3491,6 @@ header {
           height: 47px !important;
           display: block;
           zoom: 1;
-          filter: alpha(opacity=100);
           opacity: 1; } }
       @media only screen and (max-width: 760px) {
         header #MobileMenu a svg {
@@ -5361,7 +5375,8 @@ footer {
           /* @include transitions(); */ }
           footer .menu ul li a:hover {
             border-bottom: 1px solid #3470AA;
-            padding-bottom: 1px; }
+            padding-bottom: 1px;
+            color: #105ab2; }
   @media only screen and (max-width: 1100px) {
     footer #Comm {
       display: none; }
@@ -5635,7 +5650,9 @@ article, aside, section {
 
 a {
   text-decoration: none;
-  color: #0a5499; }
+  color: #105ab2; }
+  a:hover {
+    color: #cc0000; }
 
 a.offset {
   display: block;
@@ -5668,6 +5685,9 @@ ul, ol {
 
 .article article h2, .news article h2 {
   padding: 10px 0 20px; }
+  @media only screen and (max-width: 760px) {
+    .article article h2, .news article h2 {
+      font-size: 1.5em !important; } }
 
 img.responsive {
   width: 100%;
@@ -5900,7 +5920,7 @@ h1 {
               .post-list article .article-content .post-meta a.comment-count span.highlight.bigger {
                 background: #075bc0 !important; }
               .post-list article .article-content .post-meta a.comment-count span.highlight.biggest {
-                background: #c00 !important; }
+                background: #cc0000 !important; }
   .post-list article .no_image {
     width: 100% !important; }
 .post-list article:last-of-type {
@@ -5964,6 +5984,10 @@ h1 {
         .forum-list li span a.replies {
           color: #7393C8;
           font-weight: 500; }
+          .download-list li span a.similar:hover, .download-list li span a.replies:hover,
+          .forum-list li span a.similar:hover,
+          .forum-list li span a.replies:hover {
+            text-decoration: underline; }
     .download-list li em,
     .forum-list li em {
       display: inline-block;
@@ -5995,6 +6019,8 @@ h1 {
   background-image: url(/images/download-arrow.svg);
   background-position: 8% center;
   background-repeat: no-repeat; }
+  .download-list li > a:hover {
+    color: #cc0000; }
 
 .forum-list li {
   background-image: url(/images/forum-icon.svg);
@@ -6003,6 +6029,8 @@ h1 {
   background-size: 26px; }
   .forum-list li > a {
     color: #333; }
+    .forum-list li > a:hover {
+      color: #cc0000; }
 
 .cta {
   text-align: center; }
@@ -7452,7 +7480,7 @@ input[type=submit] {
   #product_info .score .average {
     background-color: #6F22A0; }
   #product_info .score .bad {
-    background-color: #c00; }
+    background-color: #cc0000; }
   #product_info .score .none {
     background-color: #999; }
   #product_info .score .breakdown {

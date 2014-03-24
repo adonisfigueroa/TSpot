@@ -131,7 +131,9 @@ body.interior {
 		@include break(mobile){
 			@include col(1,1,0);
 			margin-left: 0px;
-			padding-bottom: 20px;
+			float:right;
+			margin-right: 3%;
+			padding-bottom: 40px;
 			
 		}
 		a {
@@ -821,7 +823,6 @@ body.interior {
 	  	 	font-size: 0.8em;
 	  	 	font-weight: 700;
 	  	 	display: block;
-	  	 	height: 36px;
 	  	 	font-family: $f-helvetica;
 	  	 	border: solid 1px #AAAAAA;
 	  	 	@include border-radius(5px);
@@ -1188,7 +1189,9 @@ body.interior {
 			display: none;
 			h3{
 				color: white;
-				line-height: 35px;		
+				line-height: 35px;
+				font-family: Roboto Condensed;
+				font-size: 0.9em;
 			}
 			text-decoration: none;
 			@include break(mobile){
@@ -1204,7 +1207,7 @@ body.interior {
 				font-family: "Roboto Condensed", sans-serif;
 				line-height: 30px;
 				font-size: 0.9em;
-				font-weight: 600;
+				font-weight: 500;
 				padding: 0px 2%;
 				color: #333;
 			}
@@ -1826,8 +1829,12 @@ body.interior {
     			background-position-y: 50px;
 
 	    		.title-group {
+	    			bottom: 15px;
 		      		h1.large {
 		        		font-size: 2.4em;
+						@include break(mobile){
+							font-size: 1.5em;
+						}		        		
 		        	}
 	    		}
 
@@ -1882,7 +1889,8 @@ body.interior {
 					margin-bottom: 15px;
 					width: 100%;
 					strong {
-						line-height: 30px;
+						line-height: 25px;
+						padding-bottom: 5px;
 						background: #ff7f00;
 						font-size: 0.9em;
 						color: white;
@@ -2102,7 +2110,6 @@ body.interior {
 }
 
 /* Review box */
-
 .review_box {
 	  margin: 20px 0 50px;
 	  font-size: 0.9em;
