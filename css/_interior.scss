@@ -156,6 +156,10 @@ body.interior {
 			display: table; 
 			height: 65px;	
 			overflow: hidden;
+
+			@include break(v-mobile){
+				height: 100px;
+			}
 			
 		}
 		.page-nav-interior {
@@ -195,7 +199,8 @@ body.interior {
 
 						}
 						@include break(v-mobile){
-							font-size: 0;	
+							font-size: 0;
+							height: 100px;
 						}
 					}
 					strong {
@@ -232,7 +237,8 @@ body.interior {
 							background-color: #666666;
 						}
 						@include break(v-mobile){
-							font-size: 0;	
+							font-size: 0;
+							height: 100px;
 						}
 					}
 					strong {
@@ -338,7 +344,18 @@ body.interior {
 
 
 	&.download-index {
-		#content {	
+		#content {
+			.wrapper{
+		        @include break(v-mobile) {
+			        margin-top: 30px;
+		        }
+		        .col-2-3 {
+					@include break(v-mobile) {
+			        	width: 96%;
+						margin: 0 2%;
+		        	}
+		        }
+			}
 			h1 {
 				color: #1e2833;
 				font-weight: 500;
@@ -373,6 +390,10 @@ body.interior {
 							border-bottom: 1px solid #3470AA;
 							padding-bottom: 1px;
 						}
+
+						@include break(v-mobile) {
+				        	font-size: .75em;
+			        	}
 					}
 				}
 			}
@@ -633,8 +654,8 @@ body.interior {
 			@include break(mobile){
 			width: 100%;
 			.wrapperMobileOnly {
-				width:  94%;
-				padding: 0 3%;
+				width:  96%;
+				padding: 0 2%;
 				}
 			}
 		}
@@ -990,7 +1011,7 @@ body.interior {
 				padding: 0px 2%;
 				height: 70px;
 				@include break(v-mobile){
-					padding: 7px 2%
+					padding: 7px 1%
 				}
 				border-bottom: 1px solid #F1F1F1;
 				border-top: 1px solid #EAEAEA;
@@ -1045,7 +1066,7 @@ body.interior {
 						margin-top: 8px;
 					}
 					@include break(v-mobile){
-						font-size:0.8em;
+						font-size:0.85em;
 						margin-top: 8px;
 					}
 
@@ -1102,16 +1123,16 @@ body.interior {
 			.prod-meta{
 				float: right;
 				display: inline-block;
-				line-height: 70px;
 				height: 70px;
 				.intRank{
 					color:$purple;
-					font-weight: 600;
-					font-size: 0.8em;
+					font-weight: 500;
+					font-size: 0.7em;
 					float: left;
 					width: 50px;
 					text-align: right;
 					margin-right: 18px;
+					line-height: 70px;
 					@include break(v-tablet){
 						display: none;				
 					}
@@ -1119,8 +1140,9 @@ body.interior {
 				.price{
 					color: $red;
 					font-weight: 500;
-					font-size: 0.8em;
+					font-size: 0.75em;
 					float: left;
+					line-height: 70px;
 					@include break(v-tablet){
 						display: none;
 					}
@@ -1134,15 +1156,21 @@ body.interior {
 					text-align: center;
 					@include border-radius(4px);
 					
+					@include break(v-mobile){
+						width: 60px;
+					}
+
 					.score {
 						color: white;
 						line-height: 40px;
-						font-family: Arial, Helvetica, sans-serif;
+						font-size: 1.7em;
+						font-weight: 500;
 					}
 					.review{
 						color: white;
 						font-size: 0.6em;
-						line-height: 2px;
+						line-height: 5px;
+						display: block;
 					}
 				}
 				
@@ -1489,7 +1517,7 @@ body.interior {
 			
 		}
 	}
-	&.features, &.reviews, &.reviews-cat {
+	&.features, &.reviews, &.reviews-cat, &.features-cat {
 		.cta{
 			@include break(mobile){
 			margin-top: -11px;
@@ -1764,7 +1792,7 @@ body.interior {
   		 &.featured-image {
     		margin-top: 77px;
     		@include break(mobile){
-	    		margin-top:0px;
+	    		margin-top:55px;
     		}
     		.wrapper {
 	    		max-width: 1100px;
@@ -1779,10 +1807,10 @@ body.interior {
 				font-weight: 500;
 				text-shadow: 1px 1px 5px #333;
 		            @include break (mobile){
-			            font-size: 50px;
+			            font-size: 30px;
 		            }
 		            @include break (v-mobile){
-			            font-size: 38px;
+			            font-size: 30px;
 		            }
 	      		}
 	      		
