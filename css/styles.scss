@@ -6,7 +6,7 @@
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-"_icons.scss",
+/*"_icons.scss",*/
 "_inherited.scss",
 "_home.scss",
 "_interior.scss",
@@ -276,6 +276,7 @@ h1 {
 				  font-family: $f-helvetica;
 				  line-height: 1.333;
 				  font-size: 105%;
+				  color: #0a5499;
 					
 					&:hover {
 						color: $red;
@@ -306,8 +307,9 @@ h1 {
 			
 			.intro{
 				font-size: .75em;
-		        padding: 2px 0 !important;
 		        font-weight: 400;
+		        line-height: 1.5;
+		        padding: 2px 0 !important;
 		        color: #333;
 		        @include break(mobile){
 					display: none;		
@@ -1253,9 +1255,8 @@ ul.category-chicklets {
 		&.microsoft					{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
 		&.mobile 					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,10%); } }
 		&.software, &.electronics	{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
-		&.web, &.home				{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
+		&.web, &.home, &.blog		{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
 		&.techspot 					{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
-		&.blog	 					{ background-color: #AAAAAA; &:hover { background-color: lighten(#AAAAAA,10%); } }
 		&.dotw, &.pc				{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
 		&.natw	 					{ background-color: #BBBBBB; &:hover { background-color: lighten(#BBBBBB,10%); } }
 		&.deals 					{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
