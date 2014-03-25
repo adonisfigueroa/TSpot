@@ -55,7 +55,7 @@ body.interior {
 		}
 	}
 	.highlights {
-		@include col-last(1,2,5);
+		@include col-last(1,2,2);
 		margin-left: 40px;
 		font-size: .95em;
 		@include break(mobile){
@@ -63,7 +63,8 @@ body.interior {
 		}
 		h3 {
 			color: $dark-grey;
-			line-height: 40px;
+			line-height: 1.5;
+			padding-bottom: 15px;
 		}
 	}
 	
@@ -1856,7 +1857,7 @@ body.interior {
 			position: relative;
 			.wrapper {
 				overflow: visible;
-				padding-top: 40px;
+				padding-top: 40px 0;
 			}
 			padding-bottom: 30px;
 			.social-column {

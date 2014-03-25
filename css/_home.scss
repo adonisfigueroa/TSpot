@@ -14,7 +14,7 @@ body.home {
 		@include break(v-mobile){
 			padding: 15px 0;
 		}
-      padding: 10px 0 30px;
+      padding: 20px 0 30px;
       .col-2-3 {
 	      width: 70%;
 	      @include break(tablet){
