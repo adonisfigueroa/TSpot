@@ -929,6 +929,16 @@ h3.longtype {
       	color: #888;
       }
     }
+
+    span.comment_likes {
+    	float: right;
+		display: inline-block;
+		font-size: 0.9em;
+		color: #888;
+		margin-right: 5px;
+
+		a { color:#888; }
+    }
     
     img.user-avatar {
       background: #eaeaea;
