@@ -312,6 +312,8 @@ h1 {
 		        @include break(mobile){
 					display: none;		
 				}
+				p { padding: 0 0 15px !important; }
+				p:last-child { padding: 0 !important; }
 			}
 			
 			.post-meta {

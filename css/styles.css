@@ -5878,6 +5878,10 @@ h1 {
       @media only screen and (max-width: 760px) {
         .post-list article .article-content .intro {
           display: none; } }
+      .post-list article .article-content .intro p {
+        padding: 0 0 15px !important; }
+      .post-list article .article-content .intro p:last-child {
+        padding: 0 !important; }
     .post-list article .article-content .post-meta {
       line-height: 25px;
       padding: 0; }
