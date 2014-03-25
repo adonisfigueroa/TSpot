@@ -210,10 +210,19 @@ header {
 											width: 125px;
 											line-height: 2;
 											font-family: $f-helvetica;
+
+											@include break(v-mobile){
+												width: 110px;
+											}
 										}
 									}
 
 									&.alerts {
+
+										@include break(v-mobile){
+											max-height: 180px;
+										}
+
 									    ul {
 									        margin: 0;
 									    }
@@ -225,6 +234,11 @@ header {
 									        &:last-child .list_item {
 									          border-bottom: 0 !important;
 									        }
+
+											@include break(v-mobile){
+												width: 210px;
+											}
+
 									    }
 										.loading {
 									      float: right;
