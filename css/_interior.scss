@@ -669,7 +669,7 @@ body.interior {
 				margin-bottom: 30px;
 				width: 100%;
 				height: auto;
-				
+				border: 1px solid #f5f5f5;
 			}
 			
 			.social-column {
@@ -1826,8 +1826,13 @@ body.interior {
     		}
 
     		&.second-page {
-    			margin-top: -100px;
-    			background-position-y: center;
+    			min-height: 300px;
+    			max-height: 300px;
+
+    			.wrapper {
+    		    	min-height: 300px;
+    				max-height: 300px;		
+    			}
 
 	    		.title-group {
 	    			bottom: 25px;

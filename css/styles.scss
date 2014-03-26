@@ -950,10 +950,10 @@ h3.longtype {
     
     img.user-avatar {
       background: #eaeaea;
-      width: 28px; height: 28px;
+      width: 32px; height: 32px;
       border: 1px solid #ddd;
       @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
-	  margin: 0 10px 0 -43px;
+	  margin: 0 10px -10px -48px;
     }
     
     a.user {
@@ -968,7 +968,12 @@ h3.longtype {
 		line-height: 1.5;
 
 		p {
-			padding: 2px 0;
+			padding: 3px 0;
+		}
+
+		img {
+			max-width: 100%;
+			padding: 10px 0;
 		}
 
 	    .quote {
