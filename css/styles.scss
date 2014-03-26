@@ -641,6 +641,11 @@ h3.longtype {
 			height: auto;
 		}
 	}
+
+	@include break(v-tablet){
+		display: none !important;
+	}
+
 	@include break(mobile){
 		display: none;
 	}
@@ -1149,9 +1154,14 @@ hgroup.featured-image {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+
 	@include break(tablet){
-		min-height: 400px;
+		min-height: 600px;
 	}
+	@include break(v-tablet){
+		min-height: 700px;
+	}
+
 	@include break(mobile){
 		min-height: 200px;
 		max-height: 300px;
@@ -1161,9 +1171,14 @@ hgroup.featured-image {
 		position: relative;
 		min-height: 70vh;
 		max-height: 600px;
+
 		@include break(tablet){
-		min-height: 400px;
-		}	
+			min-height: 600px;
+		}
+		@include break(v-tablet){
+			min-height: 700px;
+		}
+
 		@include break(mobile){
 			width: 100%;
 			min-height: 300px;
@@ -1183,6 +1198,9 @@ hgroup.featured-image {
 		position: absolute;
 		bottom: 35px;
 		width: 85%;
+		@include break(tablet){
+			bottom: 50px;
+		}
 		@include break(mobile){
 			width: 90%;
 			margin-left: 5%;
@@ -1198,8 +1216,17 @@ hgroup.featured-image {
 			text-shadow: 1px 1px 5px black;
 			font-size: 3em;
 			font-family: $f-secondary;
+			@include break(tablet){
+				font-size: 2.5em;
+			}
+			@include break(v-tablet){
+				font-size: 2.5em;
+			}
+			@include break(mobile){
+				font-size: 1.6em;
+			}
 			@include break(v-mobile){
-				font-size: 28px;
+				font-size: 1.4em;
 			}
 		}
 		
@@ -1494,14 +1521,17 @@ ul.category-chicklets {
 		}
 		
 		ol {
-			margin: 10px 10px 0 10%;
+			margin: 10px 10px 0 12%;
 			line-height: 200%;
 			li {
 				list-style-type: decimal-leading-zero;
 				font-weight: 400;
+				font-size: 1.05em;
+				line-height: 1.6;
+				padding-bottom: 5px;
 
 				a {
-				&:hover {	color: $red;	}
+					&:hover {	color: $red;	}
 				}
 			}
 		}
@@ -1636,11 +1666,19 @@ ul.category-chicklets {
 
 .col-2-3 {
 	@include col(2,3,2);
+
+	@include break(v-tablet){
+		width: 100% !important;
+		.wrapperMobileOnly {
+			width:  96%;
+			padding: 0 2%;
+		}
+	}
 	@include break(mobile){
-	width: 100%;
-	.wrapperMobileOnly {
-		width:  96%;
-		padding: 0 2%;
+		width: 100%;
+		.wrapperMobileOnly {
+			width:  96%;
+			padding: 0 2%;
 		}
 	}
 }
@@ -1656,12 +1694,15 @@ ul.category-chicklets {
 			width: 94% !important;
 		}		
 	}
+	@include break(v-tablet){
+		width: 100%;
+	}
 	@include break(mobile){
-	width: 100%;
-	.wrapperMobileOnly {
-		width:  96%;
-		padding: 0 2%;
-		}
+		width: 100%;
+		.wrapperMobileOnly {
+			width:  96%;
+			padding: 0 2%;
+			}
 	}
 }
 
