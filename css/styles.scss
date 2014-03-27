@@ -97,7 +97,7 @@ background: #777D82;
 }
 .activebar  {
 	@include break(mobile){
-	-webkit-transform: translate3d(250px,0,0);
+	-webkit-transform: translate3d(250px,0,0) !important;
 	}
 }
 article, aside, section {

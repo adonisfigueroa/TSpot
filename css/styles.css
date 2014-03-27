@@ -3586,6 +3586,15 @@ header {
 .home header .menu .wrapper > ul > li a.active {
   line-height: 32px; }
 
+@-moz-document url-prefix() {
+  header h1#logo {
+    height: 44px;
+    line-height: 45px; }
+
+  header.interior h1#logo {
+    line-height: 32px;
+    height: 31px; } }
+
 .home #masthead {
   margin-top: 82px;
   background: #bbbbbb;
@@ -5643,7 +5652,7 @@ body {
 
 @media only screen and (max-width: 760px) {
   .activebar {
-    -webkit-transform: translate3d(250px, 0, 0); } }
+    -webkit-transform: translate3d(250px, 0, 0) !important; } }
 
 article, aside, section {
   display: block; }

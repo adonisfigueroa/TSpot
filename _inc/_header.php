@@ -10,6 +10,7 @@
      \ \_\ \ \____/\ \____/ \ \_\ \_\ `\____\ \_\   \ \_____\ \ \_\
       \/_/  \/___/  \/___/   \/_/\/_/\/_____/\/_/    \/_____/  \/_/
 -->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml">
@@ -144,7 +145,7 @@
 					</li>
 					<li class="search social"><a style="cursor:pointer">Search</a>
 						<form class="search_form">
-							<input type="text" name="search" id="search_field" value="" placeholder="what are you looking for?" />
+							<input autofocus type="text" name="search" id="search_field" value="" placeholder="what are you looking for?" />
 						</form>
 					</li>
 				</ul>
