@@ -399,12 +399,11 @@ function xmenuHover() {
 function xmenuHoverOut() {
 	var $this = $(this);
 	var delay = 0, setTimeoutConst;
-	$this.parent().parent().parent().mouseleave(function(){
 		setTimeout(function() {
 		$this.children("a").removeClass("active").siblings(".nav-submenu").hide(10);
 		clearTimeout(setTimeoutConst);
 		var SlideTime = 200;
 		return false
 		},50);	
-	});
+	
 }
