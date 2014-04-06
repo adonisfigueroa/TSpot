@@ -130,9 +130,19 @@ $(document).ready(function() {
 	  
 	
 	$(window).load(function(){
+		if (navigator.userAgent.search("Firefox") >= 0) {
+			$(window).resize( function (){
+			$('social-column').hide();
+				setTimeout(function() { 
+					$('social-column').trigger("sticky_kit:recalc");
+					$('social-column').show(); 
+				}, 500);
+			});
+		}
 		$(window).resize( function (){
 			$(".social-column").addClass('flowglitch');
 			$(".social-column").children().hide();
+			$('social-column').trigger("sticky_kit:recalc");
 		});
 		$(".social-widget, .article-index").hover( function (){
 			$(this).parent().parent(".social-column").toggleClass('flowglitch');
@@ -399,12 +409,11 @@ function xmenuHover() {
 function xmenuHoverOut() {
 	var $this = $(this);
 	var delay = 0, setTimeoutConst;
-	$this.parent().parent().parent().mouseleave(function(){
 		setTimeout(function() {
 		$this.children("a").removeClass("active").siblings(".nav-submenu").hide(10);
 		clearTimeout(setTimeoutConst);
 		var SlideTime = 200;
 		return false
 		},50);	
-	});
+	
 }
