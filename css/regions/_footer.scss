@@ -137,10 +137,11 @@ footer {
 					background-position: center center;
 					
 					&:hover {
-						/* @include opacity(.9); */
+						background-size: 75%;
+						/* @include opacity(.9); 
 						-webkit-transform: rotate(-10deg);
 						-moz-transform: rotate(-10deg);
-						transform: rotate(-10deg);
+						transform: rotate(-10deg);*/
 					}
 					&.facebook {
 						background-image: url('/images/social/06-facebook.svg');
@@ -169,7 +170,7 @@ footer {
 						background-image: url('/images/social/20-rss.svg');
 						background-color: #FF7F00;
 					}
-					&.steam {
+					/*&.steam {
 						background-image: url('/images/social/steam.svg');
 						background-color: #444444;
 					}
@@ -181,7 +182,7 @@ footer {
 						background-image: url('/images/social/36-android.svg');
 						background-color: #97CD00;
 					}
-					/**&.tumblr {
+					&.tumblr {
 						background-image: url('/images/social/15-tumblr.svg');
 					}
 					

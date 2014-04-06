@@ -283,7 +283,23 @@ h1 {
 					}
 				}
 			}
-			
+
+			&.featured {
+				h2 {
+					a {
+					  font-size: 120%;
+					}
+				}
+			}
+
+			&.fullview {
+				h2 {
+					a {
+					  font-size: 100%;
+					}
+				}
+			}
+
 			time {
 				color: #666666;
 				font-weight: 400;
@@ -663,13 +679,14 @@ h3.longtype {
 					img {
 						width: 100%;
 						height: auto;
+						padding: 8px 0 18px;
 					}
 					@include col(5,11,5);
 				}
 				span {
 					font-size: .85em;
 					font-weight: 500;
-					padding: 8px 0 0;
+					padding: 6px 0 0;
 					@include col-last(6,11,5);
 				}
 				
@@ -1369,6 +1386,7 @@ ul.category-chicklets {
 				border-top: 5px solid #ff7f00;
 				@include break(v-mobile) {
 					border-top: none;
+					display: block;
 				}
 			}
 
@@ -1413,10 +1431,16 @@ ul.category-chicklets {
 			
 			&.rss {
 				background-position: center -93px;
+				&:hover {
+					background-color: #E3F2FF;
+				}
 			}
 			
 			&.comments {
 				background-position: center -130px;
+				&:hover {
+					background-color: #E3F2FF;
+				}
 			}
 			
 			a {
@@ -1425,7 +1449,6 @@ ul.category-chicklets {
 				line-height: 35px;
 			}
 			&:hover {
-
 				background-color: #FFECD8;
 				transition: background 0.1s;
 
@@ -1647,7 +1670,7 @@ ul.category-chicklets {
 				
 			}
 		}
-		@include break(mobile){
+		@include break(v-mobile){
 			display: none;
 		}
 	}
@@ -1735,8 +1758,8 @@ input[type=password] {
 	width: 100%;
 	background: white;
 	border: none;
-	line-height: 25px;
-	padding: 0 8px;
+	line-height: 18px;
+	padding: 6px 8px;
 	@include outer-glow(5);
 	@include border-radius(0px);
 	font-style: normal!important;
@@ -1750,8 +1773,8 @@ input[type=password] {
 input[type=submit] {
 	display: inline-block;
 	background: $blue;
-	line-height: 25px;
-	padding: 0 20px;
+	line-height: 14px;
+	padding: 6px 20px;
 	color: white;
 	text-align: center;
 	border: none;
@@ -1984,6 +2007,16 @@ input[type=submit] {
 			span {
 				@include col(1,3,0);
 				display: block;
+
+				li {
+					margin: 15px 0 0 15px;
+					@include break(mobile){
+						margin: 7px 0 0 15px;
+					}
+					@include break(v-mobile){
+						margin: 15px 0 0 15px;
+					}
+				}
 			}
 		}
 		.social {
@@ -2550,7 +2583,7 @@ input[type=submit] {
 	background-color: #F8F8F8;
 	line-height: 45px;
 	font-weight: 400;
-	width: 100%;
+	width: 98%;
 
 	@include break(v-mobile) {
     	display: none;

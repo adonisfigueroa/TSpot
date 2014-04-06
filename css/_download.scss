@@ -126,7 +126,7 @@ body.interior.download {
       @include break(v-mobile){
 	      @include col(1,1,0);
 	      border: none;
-	      margin-top: 240px;
+	      margin-top: 280px;
 	      
       }
     }
@@ -150,10 +150,6 @@ body.interior.download {
       @include break(v-mobile){
 	      margin: 0;
       }
-      .multi_line{
-	      max-width: 90%;
-	      width: 100%;
-      }
       ul {
       	@include break(v-mobile){
 	      /* text-align: center;
@@ -165,6 +161,13 @@ body.interior.download {
 		      margin-right: 8px;
 		      margin-top: 8px;
 		      display: inline-block;
+	      }
+
+	      &.multi_line {
+	      	li {
+		      max-width: 90%;
+		      width: 100%;
+	      	}
 	      }
       }
       li {
@@ -221,35 +224,6 @@ body.interior.download {
 				}
 			  }
       }
-      /*.mirror {
-        margin-right: 0%;
-		display: block;
-		padding-right: 20px;
-		float: left;
-		list-style-type: none;
-		position: relative;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		margin: 0;
-        @include break(mobile){
-	        width:50%;
-        }
-        a.mirror-1 {
-          display: block;
-          width: 84px;
-          height: 27px;
-          background: url('../images/tmp/mirror.png') no-repeat scroll 0 0 transparent;
-          text-indent: -9999px;
-        }
-        a.mirror-2 {
-          display: block;
-          width: 84px;
-          height: 27px;
-          background: url('../images/tmp/mirror.png') no-repeat scroll 0 0 transparent;
-          text-indent: -9999px;
-        }
-      }*/
     }
     .download-product {
     	border-left: 2px solid #dddddd;
@@ -266,11 +240,17 @@ body.interior.download {
       .download-wrapper {
         margin-bottom: 15px;
         margin-top: 0px;
-        @include break(v-mobile){
-			position: relative;
-			/* left: 50%;
-			margin-left: -150px; */
-        }
+	        @include break(v-mobile){
+				position: relative;
+				/* left: 50%;
+				margin-left: -150px; */
+	        }
+
+	    .download_options {
+	    	padding: 10px;
+			margin: -10px;
+			width: 90%;
+	    }
 
 		.download_button {
 		  float: left;
