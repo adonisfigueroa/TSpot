@@ -630,7 +630,7 @@ header {
 			}
 		}
 		h1#logo {
-			background-size: contain;
+			background-size: 175px;
 			line-height: $small-line-height;
 			height: $small-line-height;
 			padding-bottom: 3px;
@@ -1063,13 +1063,11 @@ header {
 	}
 	h1#logo {
 		text-indent: -9999px;
-		background-image: url(../images/logo-header.png);
+		background-image: url(../images/logo.svg);
 		background-repeat: no-repeat;
-		background-position: left center;
-		width: 189px; height: $line-height;
+		background-position: -8px center;
 		line-height: $line-height;
-		background-image: url(../images/logo-header-highres1.png);
-	    background-size: contain;
+	    background-size: 200px;
 	    height: 45px;
 	    line-height: 45px;
 	    width: 185px;
@@ -1079,6 +1077,7 @@ header {
 		    margin-left: 32px;
 		    width: 160px;
 		    height: 52px;
+		    background-size: 175px;
 	    }
 	    @include break(v-mobile){
 		    width: 160px;
@@ -1108,11 +1107,10 @@ header {
 		padding: 0px 0px;
 		#logo {
 			text-indent: -9999px;
-			background-image: url(../images/logo-header.png);
+			background-image: url(../images/logo.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
-			background-image: url(../images/logo-header-highres1.png);
 		    background-size: contain;
 		    height: 52px;
 		    line-height: 45px;
@@ -1154,7 +1152,7 @@ header {
 .home header .menu .wrapper > ul > li a.active {
 	line-height: 32px;
 }
-@-moz-document url-prefix() {
+/*@-moz-document url-prefix() {
 	header h1#logo {
 		height: 44px;
 		line-height: 45px;
@@ -1163,4 +1161,4 @@ header {
 		line-height: 32px;
 		height: 31px;
 	}
-}
+}*/

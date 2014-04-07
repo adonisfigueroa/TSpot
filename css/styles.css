@@ -3162,7 +3162,7 @@ header {
             opacity: 1;
             height: 49px; } }
     header.interior h1#logo {
-      background-size: contain;
+      background-size: 175px;
       line-height: 32px;
       height: 32px;
       padding-bottom: 3px;
@@ -3509,14 +3509,11 @@ header {
           height: 47px !important; } }
   header h1#logo {
     text-indent: -9999px;
-    background-image: url(../images/logo-header.png);
+    background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-position: left center;
-    width: 189px;
-    height: 43px;
+    background-position: -8px center;
     line-height: 43px;
-    background-image: url(../images/logo-header-highres1.png);
-    background-size: contain;
+    background-size: 200px;
     height: 45px;
     line-height: 45px;
     width: 185px;
@@ -3530,7 +3527,8 @@ header {
       header h1#logo {
         margin-left: 32px;
         width: 160px;
-        height: 52px; } }
+        height: 52px;
+        background-size: 175px; } }
     @media only screen and (max-width: 500px) {
       header h1#logo {
         width: 160px;
@@ -3557,12 +3555,11 @@ header {
     padding: 0px 0px; }
     #Mobileheader #flyout-main-menu #logo {
       text-indent: -9999px;
-      background-image: url(../images/logo-header.png);
+      background-image: url(../images/logo.svg);
       background-repeat: no-repeat;
       background-position: left center;
       width: 189px;
       height: auto;
-      background-image: url(../images/logo-header-highres1.png);
       background-size: contain;
       height: 52px;
       line-height: 45px;
@@ -3598,15 +3595,16 @@ header {
 .home header .menu .wrapper > ul > li a.active {
   line-height: 32px; }
 
-@-moz-document url-prefix() {
-  header h1#logo {
-    height: 44px;
-    line-height: 45px; }
-
-  header.interior h1#logo {
-    line-height: 32px;
-    height: 31px; } }
-
+/*@-moz-document url-prefix() {
+	header h1#logo {
+		height: 44px;
+		line-height: 45px;
+	}
+	header.interior h1#logo {
+		line-height: 32px;
+		height: 31px;
+	}
+}*/
 .home #masthead {
   margin-top: 82px;
   background: #bbbbbb;
