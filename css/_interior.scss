@@ -6,7 +6,7 @@ body.interior {
 		}
 	}
 	.top-adverbox {
-		margin-top: 77px !important; 
+		margin-top: 75px !important; 
 		min-height: 130px;
 		@include break(mobile){
 			margin-top: 57px !important;
@@ -135,7 +135,6 @@ body.interior {
 			float:right;
 			margin-right: 3%;
 			padding-bottom: 40px;
-			
 		}
 		a {
 			font-weight: 400;
@@ -143,11 +142,11 @@ body.interior {
 			span {
 				display: block;
 				color: #333;
+				font-weight: 500;
 				position: relative;
 				text-transform: none;
-				padding-right: 15px;
-	
-				
+				padding-right: 20px;
+				font-size: 0.8em;	
 			}
 			strong {
 				display: block;
@@ -284,11 +283,27 @@ body.interior {
 	&.white {
 		#content {
 			background: white;
+
+			@include break(mobile) {
+				margin-top: 50px;
+				font-size: .95em;
+
+				#new_social_box {
+					display: none !important;
+				}
+			}
 		}
 		
 		h2 {
 			font-size: 1.6em;
 			line-height: 2;
+			font-weight: 600;
+
+			@include break(mobile) {
+				font-size: 1.5em;
+				line-height: 1.3;
+				padding: 10px 0;
+			}
 		}
 	}
 
@@ -402,7 +417,6 @@ body.interior {
 			}
 
 			h3 {
-				font-size: 1.15em;
 				color: #c00;
 			}
 		}
@@ -1657,6 +1671,7 @@ body.interior {
 			@include break(mobile){
 				width: 100%;
 				padding: 10px 3% 0px 3%;
+				display: block !important;
 			}
 			.has_more{
 				.SideTitle{
@@ -1783,7 +1798,7 @@ body.interior {
 
 		hgroup {
   		 &.featured-image {
-    		margin-top: 77px;
+    		margin-top: 75px;
     		@include break(mobile){
 	    		margin-top:55px;
     		}
@@ -1845,7 +1860,7 @@ body.interior {
 			position: relative;
 			.wrapper {
 				overflow: visible;
-				padding-top: 40px 0;
+				padding: 40px 0;
 			}
 			padding-bottom: 30px;
 			.social-column {
@@ -1904,7 +1919,7 @@ body.interior {
 					width: 100%
 				}
 				img {
-					padding: 0 0 25px; 
+					/* padding: 0 0 25px; */
 				}
 				.big {
 					@include break(mobile){
@@ -1946,9 +1961,9 @@ body.interior {
 				}
 			}
 			.page-nav{
-				@include break(tablet){
+				@include break(mobile){
 					a {
-					font-size: 24px;
+					font-size: 1.4em;
 					}
 				}
 			}
