@@ -2738,6 +2738,9 @@ ul.pills {
 		display: none;
 	}
 }
+.itxtrst, .itxtrstspan, .itxtrst span {
+    text-decoration: none !important;
+}
 .loading {
 	background: #fff url(http://static.techspot.com/images/loading.gif) no-repeat center top;
 	height: 50px;
