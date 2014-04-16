@@ -1099,7 +1099,7 @@ header {
 	position: fixed;
 	background: #2F373D;
 	display: none;
-	z-index: 0;
+	z-index: -1;
 	@include break(mobile){
 		display: block
 	}

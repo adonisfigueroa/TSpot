@@ -6,10 +6,24 @@ body.interior.download {
     }
     
     .publisher-description {
-      ul {
-        padding-bottom: 25px;
-      }
-    }
+    	ol {
+	    	padding-bottom: 25px;
+	    	font-size: 15px;
+
+	    	li {
+	    		list-style-type: decimal;
+				margin-bottom: 5px;
+	    	}
+	    }
+    	ul {
+	    	padding-bottom: 25px;
+	    	font-size: 15px;
+
+	    	li {
+				margin-bottom: 5px;
+	    	}
+	    }
+	}
 
  	.slide-sort-selector {
 		border-bottom: 2px solid $blue;

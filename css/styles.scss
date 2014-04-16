@@ -6,7 +6,6 @@
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-/*"_icons.scss",*/
 "_inherited.scss",
 "_home.scss",
 "_interior.scss",
@@ -23,7 +22,7 @@
 // ! Basic/Generic Styles ===========================================
 
 body {
-	background: white;
+	background-color: $light-grey;
 	font-family: $f-primary;
 	font-size: 120%; 
 	-webkit-backface-visibility: hidden;
@@ -36,6 +35,9 @@ body {
 }
 .WrapperLayering {
 	z-index: 0 !important;
+}
+.WrapperTrans {
+	background: transparent !important;
 }
 .flowglitch {
 	overflow: hidden !important;
@@ -63,9 +65,6 @@ background: #777D82;
 		z-index: 1000000;
 	}
 }
-#Content {
-		//padding-bottom: 30px;
-	}
 .rating {
 	font-family: Helvetica, Arial, sans-serif;
 }
@@ -82,10 +81,12 @@ background: #777D82;
     top:0px;
     z-index: 1;
     overflow: hidden;
+    background-color: $light-grey;
+    min-height: 1000px;
     @include break(mobile){
 	    position: absolute;
     }
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    /* box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5); */
 	.activebar {
 		transform: translate3d(0,0,0);
 	}
@@ -212,8 +213,9 @@ h1 {
 }
 
 #content {
-	background: $light-grey;
+	background-color: $light-grey;
 	font-weight: 200;
+	z-index: 1;
 	.wrapper {
 		padding: 25px 0;
 		@include break(mobile) {
@@ -240,37 +242,55 @@ h1 {
 }
 
 .post-list {
+	background-color: $light-grey;
+
 	article {
 		padding-bottom: 20px;
 		margin-bottom: 25px;
 		border-bottom: 1px solid #DDD;
+		z-index: 1;
 		
 		.article-img {
 			@include col(2,5,0);
 			width: 30%;
 			margin-top: 3px;
+
+/*			
+// Homepage movil con imagenes grandes
 			@include break (v-mobile){
 				width: 100%;
 				margin-bottom: 15px;
 				margin-top: 0px;
 			}
+*/
 			img {
 				max-width: 100%;
 				height: auto;
 				width: 230px;
+/*				
+// Homepage movil con imagenes grandes
 				@include break(v-mobile){
 					width: 100%;
 				}
+*/
 			}
 		}
 		
 		.article-content {
 			@include col-last(3,5,2);
 			width: 68.2%;
+
+			@include break(v-mobile) {
+				padding-left: 5px;
+			}
+
+/*				
+// Homepage movil con imagenes grandes
 			@include break(v-mobile) {
 				width: 100%;
 			}
-			
+*/
+
 			h2 {
 				a {
 				  font-family: $f-helvetica;
@@ -280,6 +300,10 @@ h1 {
 					
 					&:hover {
 						color: $red;
+					}
+
+					@include break(v-mobile) {
+						font-size: 100%;
 					}
 				}
 			}
@@ -318,6 +342,9 @@ h1 {
 						padding-left: 0px;
 						margin: 0;
 					}
+					@include break(v-mobile){
+						display: none;
+					}
 				}
 			}
 			
@@ -344,7 +371,11 @@ h1 {
 			
 			.post-meta {
 				line-height: 25px;
-				//padding-top: 10px;
+
+				@include break(mobile){
+					line-height: 18px;
+				}
+
 				padding: 0;
 				a {
 					display: inline-block;
@@ -358,6 +389,10 @@ h1 {
 					
 					&:hover {
 						color: $red;
+					}
+
+			        @include break(mobile){
+						font-size: .6em;
 					}
 					
 					&.read-more {
@@ -540,6 +575,7 @@ h1 {
 
 .cta {
 	text-align: center;
+	background-color: white;
 	
 	&.top-adverbox {
 	//what is this? break the design!
@@ -1178,10 +1214,13 @@ hgroup.featured-image {
 	@include break(v-tablet){
 		min-height: 700px;
 	}
-
 	@include break(mobile){
-		min-height: 200px;
-		max-height: 300px;
+		min-height: 245px;
+		max-height: 245px;
+	}
+	@include break(v-mobile){
+		min-height: 355px;
+		max-height: 355px;
 	}
 	
 	.wrapper {
@@ -1195,11 +1234,12 @@ hgroup.featured-image {
 		@include break(v-tablet){
 			min-height: 700px;
 		}
-
 		@include break(mobile){
 			width: 100%;
-			min-height: 300px;
-			
+			min-height: 245px;
+		}
+		@include break(v-mobile){
+			min-height: 355px;
 		}
 	}
 	
@@ -1225,14 +1265,13 @@ hgroup.featured-image {
 			bottom: 50px;
 		}
 		@include break(v-mobile){
-			bottom: 55px;
+			bottom: 75px;
 		}
 		
 		h1.large {
 			color: white;
 			text-shadow: 1px 1px 5px black;
 			font-size: 3em;
-			font-family: $f-secondary;
 			@include break(tablet){
 				font-size: 2.5em;
 			}
@@ -1253,7 +1292,6 @@ hgroup.featured-image {
 			font-weight: 400;
 			font-size: .7em;
 			font-style: normal;
-			font-family: $f-secondary;
 			padding-left: 5px;
 
 			.author {
@@ -1306,7 +1344,7 @@ hgroup.featured-image {
 			right: 10px;
 			@include border-radius(4px);
 			font-size: 1.7em;
-			line-height: 65px;
+			line-height: 60px;
 			padding: 0 15px;
 		}
 		
@@ -1779,9 +1817,15 @@ input[type=submit] {
 	text-align: center;
 	border: none;
 	@include border-radius(0px);
+
+	&:hover {
+		background: lighten($blue,6%);
+	}
 }
 
 #product_info {
+  background: white;
+
   figure {
   	max-height: 435px;
   	background: white;
@@ -1793,6 +1837,16 @@ input[type=submit] {
 		    height: auto;
 	    }
     }
+    .imgwrap ul li {
+    	img {
+	    	max-height: 100%;
+			max-width: 100%;
+			width: auto;
+			margin: 0 auto;
+			display: block;
+    	}
+    }
+
     .imgwrap .flex-direction-nav a{
 	    opacity: 0;
 	    @include transitions(0.1s);
@@ -1865,7 +1919,6 @@ input[type=submit] {
 			display: none;
 		}
 		li {
-			
 			box-shadow: none;
 			-webkit-box-shadow: none;
 			&:before {
@@ -1897,14 +1950,14 @@ input[type=submit] {
 		}
     }
     .imgwrap .flex-viewport ul li::after {
-    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
-    box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
+	    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    content: "";
 	}
 
    	    @include break(v-tablet){
@@ -2003,7 +2056,7 @@ input[type=submit] {
 			}
 			display: inline;
 			float: left;
-			background: $light-grey;
+			background-color: $light-grey;
 			span {
 				@include col(1,3,0);
 				display: block;
@@ -2598,12 +2651,12 @@ input[type=submit] {
 
 	input[type=text] {
 		font-size: 1.1em;
-		line-height: 1.8;
 		margin-top: 6px;
 	}
 	input[type=submit] {
 		font-size: 0.85em;
-		line-height: 2.4;
+		line-height: 1.7;
+		cursor: pointer;
 		margin-left: 30px;
 	}
 }
@@ -2759,4 +2812,9 @@ ul.pills {
 }
 .waiting span {
 	visibility: hidden
+}
+.ad_block_leader2 {
+	@include break(mobile){
+		display: none;
+	}
 }
