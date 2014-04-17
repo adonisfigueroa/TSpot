@@ -37,16 +37,12 @@ body {
 .WrapperLayering {
 	z-index: 0 !important;
 }
-.flowglitch {
-	overflow: hidden !important;
-	overflow-x :hidden !important;
-	overflow-y: hidden !important;
-}
-.social-column {
-	overflow: visible;
-}
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
+}
+.scroll {
+	-webkit-transform: translateZ(0); 
+	transform: translateZ(0);
 }
 .loadAnim {
 width: 100%;
