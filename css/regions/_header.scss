@@ -1063,7 +1063,7 @@ header {
 	}
 	h1#logo {
 		text-indent: -9999px;
-		background-image: url(../images/logo.svg);
+		background-image: url(../images/logo-techspot.svg);
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $line-height;
@@ -1099,7 +1099,7 @@ header {
 	position: fixed;
 	background: #2F373D;
 	display: none;
-	z-index: 0;
+	z-index: -1;
 	@include break(mobile){
 		display: block
 	}
@@ -1107,7 +1107,7 @@ header {
 		padding: 0px 0px;
 		#logo {
 			text-indent: -9999px;
-			background-image: url(../images/logo.svg);
+			background-image: url(../images/logo-techspot.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;

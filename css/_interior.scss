@@ -133,7 +133,6 @@ body.interior {
 			@include col(1,1,0);
 			margin-left: 0px;
 			float:right;
-			margin-right: 3%;
 			padding-bottom: 40px;
 		}
 		a {
@@ -684,6 +683,10 @@ body.interior {
 				width: 100%;
 				height: auto;
 				border: 1px solid #f5f5f5;
+
+				@include break(mobile){
+					border: none;
+				}
 			}
 			
 			.social-column {
@@ -1811,7 +1814,6 @@ body.interior {
     		}
     		.title-group {
 	      		h1.large {
-	        		font-family: Roboto, Arial, Helvetica, sans-serif;
 					font-weight: 500;
 					text-shadow: 1px 1px 5px #333;
 	      		}
@@ -1827,9 +1829,27 @@ body.interior {
     			min-height: 300px;
     			max-height: 300px;
 
+    			@include break(mobile){
+	    			min-height: 120px;
+	    			max-height: 120px;
+    			}
+    			@include break(v-mobile){
+	    			min-height: 180px;
+	    			max-height: 180px;
+    			}
+
     			.wrapper {
     		    	min-height: 300px;
-    				max-height: 300px;		
+    				max-height: 300px;
+
+	    			@include break(mobile){
+		    			min-height: 120px;
+		    			max-height: 120px;
+	    			}
+	    			@include break(v-mobile){
+		    			min-height: 180px;
+		    			max-height: 180px;
+	    			}
     			}
 
 	    		.title-group {
@@ -1839,6 +1859,11 @@ body.interior {
 						@include break(mobile){
 							font-size: 1.5em;
 						}		        		
+		        	}
+		        	em {
+				        @include break(mobile){
+			    			display: none;
+		    			}
 		        	}
 	    		}
 
@@ -1886,12 +1911,15 @@ body.interior {
 			}
 			.index-mobile {
 				.article-index {
-					display: none;
+					display: block;
+					margin: 50px 0 0;
+					width: 94%;
+
 					@include break(v-mobile){
-						display: block;
+						margin: 0 0 15px;
+						width: 100%;
 					}
-					margin-bottom: 15px;
-					width: 100%;
+
 					strong {
 						line-height: 25px;
 						padding-bottom: 5px;
@@ -1908,7 +1936,6 @@ body.interior {
 						h3 {
 							display: none;
 						}
-						
 					}
 				}
 			}
@@ -1969,6 +1996,67 @@ body.interior {
 			}
 			
 		}
+
+		&.about {
+			.col-2-3 {
+				width: 100%;
+				margin-right: 0;
+			}
+
+			#content {
+				.wrapper {
+
+					@include break(mobile){
+						padding-top: 0;
+					}
+
+				}
+
+				.article {
+					width: 94%;
+
+					@include break(mobile){
+						font-size: 0.8em;
+					}
+
+				}
+
+				h1 {
+					font-weight: 500;
+					font-size: 1.8em;
+					padding: 25px 0 20px;
+
+					@include break(mobile){
+						padding-top: 10px;
+					}
+
+				}
+				h2 {
+					font-size: 1.4em;
+				}
+
+				.index-mobile {
+					float: right;
+					width: 200px;
+
+					.article-index {
+						display: block;
+						margin: 0 0 25% 25%;
+						width: 100%;
+
+						.pad ul {
+							font-size: 1.1em;
+							margin: 5% 0 0 14%;
+						}
+					}
+					@include break(mobile){
+						display: none;
+					}
+				}
+
+			}
+		}
+
 	}
 }
 .article nav.page-nav {
