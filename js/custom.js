@@ -11,6 +11,7 @@
 
 /* End plugin */
 $(document).ready(function() {
+	
 	preloaded = false;
 	// 	desktop-only ad removal on mobile (on load, the window much be inferior to 760px on width
     if (($(window).width())<760) {
@@ -118,16 +119,24 @@ $(document).ready(function() {
 			$(".group").mouseenter(function(){$(this).addClass('hover');});
 			$(".group").mouseleave(function(){$(this).removeClass('hover');});
 			$(".search").mouseenter(function(){$(this).addClass('hover');});
-			$(".search").mouseleave(function(){$(this).removeClass('hover');});
+			window.setInterval(function(){
+				if(!$("#search_field").val()){
+					$(".search").mouseleave(function(){$(this).removeClass('hover');});
+				}
+				else {
+					$(this).addClass('hover');
+				}
+			}, 500);
 	}	
 	$(".rating_bar").each(function(i) {
 		$(this).css("width", $(this).data("score")+'%');
 	});
   
-	  $(".right-links .search a").hover(function() {
-	    $("#search_field").focus();
+	  $('header .header-top .right-links ul li.social.search').hover(function() {
+	    setTimeout(function(){
+			$("#search_field").focus();
+		}, 0);
 	  });
-	  
 	
 	$(window).load(function(){
 		$('social-column').trigger("sticky_kit:recalc");
@@ -279,7 +288,6 @@ $(document).ready(function() {
 	}).resize();
 	
 	//compute if the Article.php .side-object should overflow or not when the sidebar is next to it.
-	
 	$(window).on("resize", function () {
 	    if (($(window).width())>760) {
 	   	var SidePos = $(".TopScrollElement").offset().top;   
