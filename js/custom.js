@@ -119,14 +119,27 @@ $(document).ready(function() {
 			$(".group").mouseenter(function(){$(this).addClass('hover');});
 			$(".group").mouseleave(function(){$(this).removeClass('hover');});
 			$(".search").mouseenter(function(){$(this).addClass('hover');});
+			$(".search").mouseleave(function(){$(".Val").removeClass('hover');});
 			window.setInterval(function(){
 				if(!$("#search_field").val()){
-					$(".search").mouseleave(function(){$(this).removeClass('hover');});
+					$(".search").addClass('Val');
 				}
 				else {
-					$(this).addClass('hover');
+					$(".search").removeClass('Val');
+					$(document).mouseup(function (e)
+					{
+						var container = $(".search");
+		
+					if (!container.is(e.target) // if the target of the click isn't the container...
+			        && container.has(e.target).length === 0) // ... nor a descendant of the container
+					{
+			        container.addClass('Val').removeClass('hover');
+			        $("#search_field").val('');
+			        
+					}
+					});
 				}
-			}, 500);
+			}, 10);
 	}	
 	$(".rating_bar").each(function(i) {
 		$(this).css("width", $(this).data("score")+'%');
