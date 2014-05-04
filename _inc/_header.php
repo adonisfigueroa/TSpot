@@ -145,7 +145,7 @@
 					</li>
 					<li class="search social"><a style="cursor:pointer">Search</a>
 						<form class="search_form">
-							<input autofocus autofocus="focus" type="text" name="search" id="search_field" value="" placeholder="what are you looking for?" />
+							<input autofocus autofocus="" type="text" name="search" id="search_field" value="" placeholder="what are you looking for?" />
 							<script>
     							$(function() {$('[autofocus]').focus()});
     							if (!("autofocus" in document.createElement("input"))) {

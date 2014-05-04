@@ -30,6 +30,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-transition: none;
 	transition: none;
+    
 }
 .MenuLayering {
 	z-index: 1 !important;
@@ -37,6 +38,7 @@ body {
 .WrapperLayering {
 	z-index: 0 !important;
 }
+
 .WrapperTrans {
 	background: transparent !important;
 }
@@ -48,8 +50,13 @@ body {
 .social-column {
 	overflow: visible;
 }
+
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
+}
+.scroll {
+	-webkit-transform: translateZ(0); 
+	transform: translateZ(0);
 }
 .loadAnim {
 width: 100%;
