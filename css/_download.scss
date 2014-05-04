@@ -140,7 +140,7 @@ body.interior.download {
       @include break(v-mobile){
 	      @include col(1,1,0);
 	      border: none;
-	      margin-top: 280px;
+	      margin-top: 450px;
 	      
       }
     }
@@ -272,8 +272,9 @@ body.interior.download {
 		  display: inline-block;
 		  width: 170px;
 		  height: 35px;
-		  background: url(http://static.techspot.com/images/download_button_sprites.png) no-repeat;
+		  background: url(http://static.techspot.com/images/download_button_3h.png) no-repeat;
 		  position: relative;
+		  background-size: 170px 70px;
 		  span {
 		    text-indent: -1000px;
 		    overflow: hidden;
@@ -281,7 +282,8 @@ body.interior.download {
 		    width: 32px;
 		    left: 8px;
 		    height: 35px;
-		    background: url(http://static.techspot.com/images/download_button_arrow.png) 0 0;
+		    background: url(http://static.techspot.com/images/download_button_arrow3.png) 0 0;
+		    background-size: contain;
 		    -webkit-transition: all 0.15s linear;
 		    -moz-transition: all 0.15s linear;
 		    -ms-transition: all 0.15s linear;
