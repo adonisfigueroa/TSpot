@@ -1,8 +1,8 @@
 body.interior {
 	.cta {
 		.wrapper {
-		padding: 20px 0 15px;
-		text-align: center;
+			padding: 20px 0 15px;
+			text-align: center;
 		}
 	}
 	.top-adverbox {
@@ -77,13 +77,18 @@ body.interior {
 	    	font-weight: 500;
 			font-size: 1.8em;
 			line-height: 1.4;
-			color: #222;
 	    }
     
 		h3 {
+	    	font-weight: 500;
+			font-size: 1.4em;
+			line-height: 1.4;
 		}
 		
 		h4 {
+	    	font-weight: 500;
+			font-size: 1.25em;
+			line-height: 1.4;
 		}
 		
 		ul {
@@ -953,15 +958,21 @@ body.interior {
 
 	      	  	figure {
 	      	  		width: 100px!important;
-		      	  	float: left!important; 
+		      	  	float: left!important;
+		      	  	margin: -10px 25px 0px -10px;
+
+		      	  	img {
+			      	  	max-width: 100%;
+		      	  	}
 	      	  	}
+
 	        	h1 {
-	          	line-height: 120%;
+	          		line-height: 120%;
 	        	}
 	        	
 	        	h2 {
-	          	font-size: 1em;
-	          	font-weight: 300;
+	          		font-size: 1em;
+	          		font-weight: 300;
 	        	}
 	      	}
     	}
