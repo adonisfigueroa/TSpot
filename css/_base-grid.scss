@@ -8,6 +8,9 @@
 // 		$point options: desk, tablet, v-tablet, mobile, v-mobile
 
 @mixin break($point) {  
+	@if $point == big-desk {
+		@media screen and (min-width: $big-desk) { @content }
+	}
 	@if $point == desk {
 		@media screen { @content }
 	}

@@ -146,19 +146,6 @@ ul,ol {
 	}
 }
 
-// styling title for article & news
-.article, .news { 
- 	article {
-	    h2 {
-			padding: 10px 0 20px;
-
-			@include break(mobile) {
-				font-size: 1.5em !important;
-			}
-	    }
-	}
-}
-
 img.responsive {
 	width: 100%;
 	height: auto;
@@ -219,6 +206,39 @@ h1 {
 		padding: 0 0 25px;
 	}
 	
+}
+
+// styling title for article & news
+.article, .news { 
+ 	article {
+	    h2 {
+			padding: 10px 0 20px;
+
+			&.subtitle {
+				padding: 0 0 20px;
+			}
+
+			@include break(mobile) {
+				font-size: 1.5em !important;
+			}
+	    }
+
+	    h3 {
+			padding: 10px 0 20px;
+
+			@include break(mobile) {
+				font-size: 1.25em !important;
+			}
+	    }
+
+	    h4 {
+			padding: 6px 0 12px;
+
+			@include break(mobile) {
+				font-size: 1.1em !important;
+			}
+	    }
+	}
 }
 
 .post-list {
@@ -762,6 +782,7 @@ h3.longtype {
 	
 	&.left {
 		float: left;
+		padding-top: 5px;
 	}
 	
 }
@@ -1726,7 +1747,7 @@ ul.category-chicklets {
 }
 
 .col-2-3-last {
-	@include col-last(2,3,2);
+	@include col-last(2,3,-4);
 	@include break(tablet){
 		@include col-last(2,3,8);
 	}

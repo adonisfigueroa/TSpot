@@ -98,6 +98,10 @@ body.interior {
 			font-size: 1.25em;
 			line-height: 1.4;
 		}
+
+		.blue {
+			color: $blue !important;
+		}
 		
 		ul {
 			margin-left: 5%;
@@ -1274,6 +1278,7 @@ body.interior {
 				line-height: 31px;
 				background-color: $blue;
 				padding: 0px 15px;
+				margin-top: -5px;
 				@include break(v-tablet){
 					padding: 0px 10px;
 				}
@@ -1964,6 +1969,9 @@ body.interior {
 			article {
 				width: 90%;
 				float: left;
+				@include break(big-desk){
+					width: 100%
+				}
 				@include break(v-mobile){
 					width: 100%
 				}

@@ -6,6 +6,7 @@ $f-helvetica: 'Helvetica Neue', Arial, Helvetica;
 $f-helvetica-roboto: 'Helvetica Neue', 'Roboto', sans-serif;
 // !GLOBAL RESPONSIVE VARIABLES
 
+$big-desk: 1300px;
 $desk: 1100px;
 $tablet: 1100px; // This number needs to be the same as $desk to prevent a "no-mans-land" in breakpoints
 $v-tablet: 960px;
