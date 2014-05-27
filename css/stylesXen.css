@@ -519,7 +519,7 @@ body.interior .highlights {
   body.interior .highlights h3 {
     color: #353535;
     line-height: 1.5;
-    padding-bottom: 15px;
+    padding: 0 0 15px 0;
     font-size: 1em; }
   body.interior .highlights ul {
     font-size: 0.85em;
@@ -553,6 +553,18 @@ body.interior article {
       margin-bottom: 10px; }
   body.interior article img {
     max-width: 100%; }
+  body.interior article img.big {
+    margin-left: -350px;
+    max-width: none;
+    width: 1020px; }
+    @media screen and (min-width: 1300px) {
+      body.interior article img.big {
+        width: 1100px; } }
+    @media only screen and (max-width: 960px) {
+      body.interior article img.big {
+        margin-left: 0 !important;
+        max-width: 100%;
+        width: 100% !important; } }
   body.interior article #news h3, body.interior article #feature h3 {
     font-weight: 500;
     font-size: 1.5em;
@@ -1542,8 +1554,7 @@ body.interior.products #CategoryListMobile {
   body.interior.products #CategoryListMobile .SideTitle {
     line-height: 31px;
     background-color: #105ab2;
-    padding: 0px 15px;
-    margin-top: -5px; }
+    padding: 0px 15px; }
     @media only screen and (max-width: 960px) {
       body.interior.products #CategoryListMobile .SideTitle {
         padding: 0px 10px; } }
@@ -2011,7 +2022,8 @@ body.interior.features #sidebar, body.interior.reviews #sidebar, body.interior.r
     line-height: 31px;
     background-color: #105ab2;
     color: white;
-    padding: 0px 15px; }
+    padding: 0px 15px;
+    margin-top: -5px; }
     @media only screen and (max-width: 960px) {
       body.interior.features #sidebar .SideTitle, body.interior.reviews #sidebar .SideTitle, body.interior.reviews-cat #sidebar .SideTitle, body.interior.features-cat #sidebar .SideTitle {
         padding: 0px 10px; } }
@@ -2140,6 +2152,9 @@ body.interior.article #content {
     display: block;
     margin: 50px 0 0;
     width: 94%; }
+    @media screen and (min-width: 1300px) {
+      body.interior.article #content .index-mobile .article-index {
+        width: 100%; } }
     @media only screen and (max-width: 500px) {
       body.interior.article #content .index-mobile .article-index {
         margin: 0 0 15px;
@@ -2169,11 +2184,6 @@ body.interior.article #content {
         width: 100%; } }
     body.interior.article #content article img {
       /* padding: 0 0 25px; */ }
-    @media only screen and (max-width: 760px) {
-      body.interior.article #content article .big {
-        max-width: 100%;
-        width: 100% !important;
-        margin-left: none !important; } }
     body.interior.article #content article .side-object {
       width: 350px;
       padding: 0px 50px 0px 0px;
@@ -2241,6 +2251,9 @@ body.interior.article.about #content .index-mobile {
 
 .article nav.page-nav {
   width: 90% !important; }
+  @media screen and (min-width: 1300px) {
+    .article nav.page-nav {
+      width: 100% !important; } }
   .article nav.page-nav a span:after {
     content: "";
     display: block;

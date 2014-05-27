@@ -64,7 +64,7 @@ body.interior {
 		h3 {
 			color: $dark-grey;
 			line-height: 1.5;
-			padding-bottom: 15px;
+			padding: 0 0 15px 0;
 			font-size: 1em;
 		}
 		ul {
@@ -115,7 +115,22 @@ body.interior {
 		
 		img {
   			max-width: 100%;
-  			.big {}
+		}
+
+		img.big {
+			margin-left: -350px;
+			max-width: none;
+			width: 1020px;
+
+			@include break(big-desk){
+				width: 1100px;
+			}
+			
+			@include break(v-tablet){
+				margin-left: 0 !important;
+				max-width: 100%;
+				width: 100% !important;
+			}
 		}
 
 		#news, #feature {
@@ -1278,7 +1293,6 @@ body.interior {
 				line-height: 31px;
 				background-color: $blue;
 				padding: 0px 15px;
-				margin-top: -5px;
 				@include break(v-tablet){
 					padding: 0px 10px;
 				}
@@ -1778,6 +1792,7 @@ body.interior {
 				background-color: $blue;
 				color: white;
 				padding: 0px 15px;
+				margin-top: -5px;
 				@include break(v-tablet){
 					padding: 0px 10px;
 				}
@@ -1942,6 +1957,10 @@ body.interior {
 					margin: 50px 0 0;
 					width: 94%;
 
+					@include break(big-desk){
+						width: 100%;
+					}
+
 					@include break(v-mobile){
 						margin: 0 0 15px;
 						width: 100%;
@@ -1977,13 +1996,6 @@ body.interior {
 				}
 				img {
 					/* padding: 0 0 25px; */
-				}
-				.big {
-					@include break(mobile){
-						max-width: 100%;
-						width: 100% !important;
-						margin-left: none !important;
-					}
 				}
 				.side-object {
 					width: 350px;
@@ -2091,6 +2103,11 @@ body.interior {
 }
 .article nav.page-nav {
 	width: 90% !important;
+
+	@include break(big-desk){
+		width: 100% !important;
+	}
+
 	a span {
 		&:after {
 					content:"";
