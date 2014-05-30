@@ -17,7 +17,6 @@
 		display: none;
 	}
 	
-	
 	/*
 &:before {
 		content: "";
@@ -93,6 +92,7 @@
 			            letter-spacing: 0.2px;
 					}
 					h2 {
+						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
 					}
@@ -603,6 +603,7 @@
 			            letter-spacing: 0.2px;
 					}
 					h2 {
+						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
 					}
@@ -1525,9 +1526,9 @@
 			            letter-spacing: 0.2px;
 					}
 					h2 {
+						font-size: 1.4em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
-						font-size: 1.4em;
 						max-height: 100px;
 						overflow: hidden;
 					}
@@ -1626,9 +1627,9 @@
 						}
 					}
 					h2 {
+						font-size: 1.2em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
-						font-size: 1.2em;
 						@include break(v-tablet){
 							font-size: 1.0em;
 						}
@@ -1883,6 +1884,7 @@
 			            letter-spacing: 0.2px;
 					}
 					h2 {
+						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
 					}

@@ -24,6 +24,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-transition: none;
 	transition: none;
+    
 }
 .MenuLayering {
 	z-index: 1 !important;
@@ -31,6 +32,7 @@ body {
 .WrapperLayering {
 	z-index: 0 !important;
 }
+
 .WrapperTrans {
 	background: transparent !important;
 }
@@ -42,8 +44,13 @@ body {
 .social-column {
 	overflow: visible;
 }
+
 .activebar #MobileMenu a svg {
 	fill: $orange !important;
+}
+.scroll {
+	-webkit-transform: translateZ(0); 
+	transform: translateZ(0);
 }
 .loadAnim {
 width: 100%;
@@ -133,19 +140,6 @@ ul,ol {
 	}
 }
 
-// styling title for article & news
-.article, .news { 
- 	article {
-	    h2 {
-			padding: 10px 0 20px;
-
-			@include break(mobile) {
-				font-size: 1.5em !important;
-			}
-	    }
-	}
-}
-
 img.responsive {
 	width: 100%;
 	height: auto;
@@ -158,6 +152,20 @@ img.responsive {
 .clearfix {
 	@include clearfix(before);
 	@include clearfix(after);
+}
+
+.menuSpacerBig {
+	height: 82px;
+	@include break(mobile){
+		height: 0px;
+	}
+}
+
+.menuSpacerNormal {
+	height: 78px;
+	@include break(mobile){
+		height: 0px;
+	}
 }
 
 h1 {
@@ -204,8 +212,45 @@ h1 {
 	
 	p {
 		padding: 0 0 25px;
+
+		.small {
+			font-size: 0.8em;
+		}
 	}
 	
+}
+
+// styling title for article & news
+.article, .news { 
+ 	article {
+	    h2 {
+			padding: 10px 0 20px;
+
+			&.subtitle {
+				padding: 0 0 20px;
+			}
+
+			@include break(mobile) {
+				font-size: 1.5em !important;
+			}
+	    }
+
+	    h3 {
+			padding: 10px 0 20px;
+
+			@include break(mobile) {
+				font-size: 1.25em !important;
+			}
+	    }
+
+	    h4 {
+			padding: 6px 0 12px;
+
+			@include break(mobile) {
+				font-size: 1.1em !important;
+			}
+	    }
+	}
 }
 
 .post-list {
@@ -326,6 +371,11 @@ h1 {
 				}
 
 				&.feat{
+					img {
+						max-width: 100%;
+						padding: 6px 0;
+					}
+
 			        @include break(mobile){
 						display: inline;
 				        p { padding: 7px 0 !important; } 	
@@ -593,8 +643,9 @@ h1 {
 
 .adblock {
 	width: 300px;
+	margin-bottom: 25px;
 	text-align: center;
-	padding-bottom: 25px;
+	background-color: #f5f5f5;
 }
 
 h3.section-header {
@@ -748,6 +799,7 @@ h3.longtype {
 	
 	&.left {
 		float: left;
+		padding-top: 5px;
 	}
 	
 }
@@ -1712,7 +1764,7 @@ ul.category-chicklets {
 }
 
 .col-2-3-last {
-	@include col-last(2,3,2);
+	@include col-last(2,3,-4);
 	@include break(tablet){
 		@include col-last(2,3,8);
 	}
@@ -2581,7 +2633,8 @@ ul.category-chicklets {
 		font-weight: 500;
 		color: #0a5499;
 		padding-left: 20px;
-		font-size: 19px;
+		font-size: 1.1em !important;
+		padding-top: 10px;
 	}
 
 	input[type=text] {
@@ -2718,7 +2771,7 @@ ul.pills {
 }
 .repartner {
     float:right;
-    margin: 30px 0px 0px 20px;
+    margin: 10px 0px 0px 20px;
     @include break(mobile){
 		display: none;
 	}

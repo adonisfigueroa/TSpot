@@ -6,11 +6,13 @@ body.interior {
 		}
 	}
 	.top-adverbox {
-		margin-top: 75px !important; 
 		min-height: 130px;
+		/*
+		margin-top: 75px !important; 
 		@include break(mobile){
 			margin-top: 57px !important;
 		}
+		*/
 	}
 	header .menu .wrapper > ul > li a.active {
 		height: 50px !important;
