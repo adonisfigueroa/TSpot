@@ -728,17 +728,16 @@ body.interior {
 				position: relative;
 				z-index: 1;
 				@include col(2,10,2);
-				@include break(v-mobile){
+				@include break(mobile){
 					@include col(1,1,0);
 				}
-				//border: 1px solid red;
 				
 				.tags {
 					width: 60px;
 					margin: 25px auto;
 					font-size: .7em;
 					line-height: 184%;
-					@include break(v-mobile){
+					@include break(mobile){
 						display: none;
 					}
 					li {
@@ -784,7 +783,7 @@ body.interior {
 			article {
 				@include col-last(8,10,2);
 				margin-bottom: 30px;
-				@include break(v-mobile){
+				@include break(mobile){
 					@include col-last(1,1,0);
 				}
 				
@@ -810,21 +809,21 @@ body.interior {
 		&.news {
   		#content {
     		article {
-      		margin-bottom: 45px;
-      		@include break(v-mobile){
-	      		margin-bottom: 0px;
-      		}
+	      		margin-bottom: 45px;
+	      		@include break(mobile) {
+		      		margin-bottom: 0px;
+	      		}
     		}
     		
     		.social-column {
     		  z-index: 1;
     		  .tags {
-      		  margin: 25px auto 60px;
+      		  	margin: 25px auto 60px;
     		  }
 			  .social:hover {
 	      		  .SocialHover {
 					right: -100px;
-					@include break(v-mobile){
+					@include break(mobile){
 						right: 0 !important;
 						top:auto !important;
 					}
@@ -995,6 +994,7 @@ body.interior {
 
 		      	  	img {
 			      	  	max-width: 100%;
+			      	  	max-height: 110px;
 		      	  	}
 	      	  	}
 
@@ -1937,7 +1937,7 @@ body.interior {
 				right: 0;
 				top: 50px;
 				z-index: 1;
-				@include break(v-mobile){
+				@include break(mobile){
 					position: relative;
 					top: 0;
 					margin-bottom: 20px;
@@ -1947,7 +1947,7 @@ body.interior {
 						strong {
 							line-height: 28px;
 						}
-						@include break(v-mobile){
+						@include break(mobile){
 							display: none;
 						}
 					}					
@@ -1963,7 +1963,7 @@ body.interior {
 						width: 100%;
 					}
 
-					@include break(v-mobile){
+					@include break(mobile){
 						margin: 0 0 15px;
 						width: 100%;
 					}
@@ -1993,7 +1993,7 @@ body.interior {
 				@include break(big-desk){
 					width: 100%
 				}
-				@include break(v-mobile){
+				@include break(mobile){
 					width: 100%
 				}
 				img {

@@ -78,7 +78,7 @@ background: #777D82;
 }
 .mobile-only-social {
 	display: none !important;
-	@include break(v-mobile){
+	@include break(mobile){
 		display: block !important;
 		margin-bottom:45px !important;
 	}
@@ -377,15 +377,15 @@ h1 {
 				}
 
 				&.feat{
-					img {
-						max-width: 100%;
-						padding: 6px 0;
-					}
-
 			        @include break(mobile){
 						display: inline;
 				        p { padding: 7px 0 !important; } 	
 					}
+				}
+
+				img {
+					max-width: 100%;
+					padding: 6px 0;
 				}
 
 				p { padding: 0 0 15px !important; }
@@ -1421,7 +1421,7 @@ ul.category-chicklets {
 	margin: 0 auto;
 	background: white;
 	border-bottom: 5px solid $orange;
-	@include break(v-mobile){
+	@include break(mobile){
 		width: 100%;
 		height: 35px;
 		border-bottom: 0px solid $orange;
@@ -1436,7 +1436,7 @@ ul.category-chicklets {
 			text-align: center;
 			font-size: 0.7em;
 			line-height: 25px;
-			@include break(v-mobile) {
+			@include break(mobile) {
 				display: inline-block;
 				height: inherit;
 				width: 25%;
@@ -1447,7 +1447,7 @@ ul.category-chicklets {
 
 			&.zero {
 				border-top: 5px solid #ff7f00;
-				@include break(v-mobile) {
+				@include break(mobile) {
 					border-top: none;
 					display: block;
 				}
@@ -1461,7 +1461,7 @@ ul.category-chicklets {
 			background-position: center top;
 			line-height: 16px;
 			position: relative;
-			@include break (v-mobile){
+			@include break (mobile){
 				background-image: url(/images/social-widget-bg-90.svg);
 				margin-left: 30%;
 				margin-top: -30px;
@@ -1524,13 +1524,13 @@ ul.category-chicklets {
 				right: 60px;
 				top: 0;
 				display: block;
-				@include break(v-mobile){
+				@include break(mobile){
 					right: 0 !important;
 					top:auto !important;
 				}
 				}
 			}
-			@include break(v-mobile){
+			@include break(mobile){
 				&.facebook {
 					width: 32px;
 					margin-left: 30%;
