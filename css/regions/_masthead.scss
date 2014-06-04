@@ -1,15 +1,8 @@
 .home {
 #masthead {
-	margin-top: 82px;
 	background: $grey;
 	height: 500px;
 	position: relative;
-	@include break(mobile){
-		@media screen and (orientation:portrait){
-			margin-top: 52px;
-		}
-		margin-top: 0px;
-	}
 	@include break(mobile) {
 		height: 270px !important;
 	}
@@ -1429,15 +1422,13 @@
 		width: 94%; 
 		padding: 0px 3%;
 	}
-	
+	@include break(mobile){
+		display: none;
+	}
  }
   #masthead {
-	margin-top: 75px;
 	min-height: 416px;
 	position: relative;
-	@include break(mobile){
-		margin-top: 0px;
-	}
 	@include break(mobile) {
 		min-height: 270px;
 	}
@@ -1792,15 +1783,13 @@
 		width: 94%; 
 		padding: 0px 3%;
 	}
-	
+	@include break(mobile){
+		display: none;
+	}
 }
   #masthead {
-	margin-top: 75px;
 	min-height: 416px;
 	position: relative;
-	@include break(mobile){
-		margin-top: 0px;
-	}
 	@include break(mobile) {
 		min-height: 270px;
 	}
