@@ -25,7 +25,7 @@ header {
 				height: 300px
 			}
 		}
-	} 
+	}
 	.withHeader {
 		background-color: #8B9296 !important;	
 	}
@@ -303,8 +303,7 @@ header {
 								height: 0;
 								font-size: 0;
 								line-height: 0;
-								border-top: 1px solid #ddd;
-								/* border-bottom: 1px solid #fff; */
+								border-top: 1px solid #e8e8e8;
 							}
 							
 							.top {
@@ -390,6 +389,7 @@ header {
 								text-indent: 0;
 								line-height: 25px;
 								z-index: 100;
+								border-bottom: 4px solid #105AB2;
 								box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 								
 								.pad {
@@ -434,7 +434,8 @@ header {
 								}
 								
 								.rss {
-									background-color: #EEEEEE;									
+									background-color: #EEEEEE;
+									border-top: 1px solid #e8e8e8;								
 									a {
 										background-image: url(/images/rss-icon.svg);
 										background-repeat: no-repeat;
@@ -678,7 +679,7 @@ header {
 		line-height: 50px;
 		position: relative;
 		z-index: 1;
-		box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+		box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
 		font-size: .70em;
 		line-height: 38px;
 		@include break(mobile) {
@@ -687,7 +688,7 @@ header {
 		.SubHeader {
 			background: #777D82; 
 			text-align: center;
-			box-shadow: inset 0px 6px 5px 1px rgba(0, 0, 0, 0.15);
+			box-shadow: inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 			li {
 				text-align: center;
 				margin: 0px 15px;
@@ -836,7 +837,7 @@ header {
 						
 						background: #777D82;
 						height: 260px;
-						box-shadow:0px 5px 7px 1px rgba(0, 0, 0, 0.15), inset 0px 3px 5px 1px rgba(0, 0, 0, 0.15);
+						box-shadow:0 2px 2px rgba(34, 25, 25, 0.20),inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 						
 						.wrapper {
 							padding: 30px 0;

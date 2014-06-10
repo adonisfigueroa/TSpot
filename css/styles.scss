@@ -232,8 +232,18 @@ h1 {
 	p {
 		padding: 0 0 25px;
 
-		.small {
+		&.small, &.byline {
 			font-size: 0.8em;
+		}
+		&.grey {
+			font-size: 0.8em;
+			color: #555;
+			a {
+				color: #555;
+				padding-bottom: 1px;
+				border-bottom: 1px solid #555;
+			}
+			
 		}
 	}
 	
