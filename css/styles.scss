@@ -981,8 +981,8 @@ h3.longtype {
         }
         
         .rating {
-          font-family: $f-arial;
-          font-weight: 900;
+          font-family: $f-helvetica;
+          font-weight: 500;
           color: white;
           font-size: 1.9em;
           position: absolute;
@@ -2232,14 +2232,15 @@ ul.category-chicklets {
     margin: 0 0 20px;
     .number {
       float: left;
-      font-size: 45px;
+      font-size: 46px;
       color: #fff;
       text-align: center;
-      font-weight: bold;
+      font-weight: 500;
       height: 80px;
       line-height: 81px;
       width: 100px;
       background: #075BC0;
+      @include border-radius(3px);
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
       @include break(v-tablet){
 	      width: 95px;
@@ -2447,8 +2448,8 @@ ul.category-chicklets {
         position: relative;
         
         .rating {
-          font-family: $f-arial;
-          font-weight: 900;
+          font-family: $f-helvetica;
+          font-weight: 500;
           color: white;
           font-size: 1.9em;
           position: absolute;
@@ -2456,10 +2457,10 @@ ul.category-chicklets {
           padding: 0 15px;
           line-height: 160%;
           bottom: 0; right: 0px;
+          @include border-radius(2px);
           
           &.excellent {
             @include trans-bg($c-excellent,.9);
-            &.perfect { padding: 0 5px !important; }
           }
           &.average {
             @include trans-bg($c-average,.9);
@@ -2470,6 +2471,7 @@ ul.category-chicklets {
           &.bad {
             @include trans-bg($c-bad,.9);
           }
+          &.perfect { padding: 0 8px !important }
           
         }
       }
@@ -2508,8 +2510,8 @@ ul.category-chicklets {
     }
     
     .rating {
-      font-family: $f-arial;
-      font-weight: 900;
+      font-family: $f-helvetica;
+      font-weight: 500;
       color: white;
       font-size: 1.5em;
       position: absolute;
@@ -2517,6 +2519,7 @@ ul.category-chicklets {
       padding: 0 15px;
       line-height: 160%;
       top: 20px; right: 10px;
+      @include border-radius(2px);
       
       &.excellent {
         @include trans-bg($c-excellent,.9);
@@ -2530,6 +2533,7 @@ ul.category-chicklets {
       &.bad {
         @include trans-bg($c-bad,.9);
       }
+      &.perfect { padding: 0 8px !important }
       
     }
     
@@ -2776,7 +2780,7 @@ ul.pills {
 /* PF widgets para noticias y reviews */
 .pf_score {
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   background: #075BC0;
   text-align: center;
