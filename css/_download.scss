@@ -329,7 +329,7 @@ body.interior.download {
 }
 
 body.interior.download #sidebar {
-	margin-top: -290px; 
+	margin-top: -315px;
 	@include break(v-tablet){
 		display: none;
 	}

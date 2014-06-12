@@ -995,6 +995,14 @@ body.interior {
 			      	  	max-width: 100%;
 			      	  	max-height: 110px;
 		      	  	}
+
+					@include break(mobile){
+						margin: 0 15px 0 -10px;
+					}
+
+					@include break(v-mobile){
+						margin: 0 10px 0 -5px;
+					}
 	      	  	}
 
 	        	h1 {

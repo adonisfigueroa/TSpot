@@ -815,10 +815,10 @@ header {
 							height: 45px;
 							line-height: 31px;
 							z-index: 10;
-							border-top: solid 4px #777D82;
+							border-top: solid 6px #777D82;
 							
 							&:after {
-  							margin-top: -9px;
+  								margin-top: -9px;
 							}
 							
 						}
@@ -1155,13 +1155,3 @@ header {
 .home header .menu .wrapper > ul > li a.active {
 	line-height: 32px;
 }
-/*@-moz-document url-prefix() {
-	header h1#logo {
-		height: 44px;
-		line-height: 45px;
-	}
-	header.interior h1#logo {
-		line-height: 32px;
-		height: 31px;
-	}
-}*/
