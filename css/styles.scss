@@ -1476,7 +1476,7 @@ ul.category-chicklets {
 		
 		&.apple 					{ background-color: #7d9dca; &:hover { background-color: lighten(#7d9dca,7%); } } 
 		&.gaming 					{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
-		&.hardware 					{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
+		&.hardware, &.drivers		{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
 		&.industry					{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
 		&.security 					{ background-color: #CBA746; &:hover { background-color: lighten(#CBA746,10%); } }
 		&.microsoft					{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
@@ -1484,7 +1484,7 @@ ul.category-chicklets {
 		&.software, &.electronics	{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
 		&.web, &.home, &.blog		{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
 		&.techspot 					{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
-		&.dotw, &.pc				{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
+		&.dotw, &.pc, &.driverscat	{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
 		&.natw	 					{ background-color: #BBBBBB; &:hover { background-color: lighten(#BBBBBB,10%); } }
 		&.deals 					{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
 		&.wof	 					{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
@@ -1897,7 +1897,7 @@ ul.category-chicklets {
 
   figure {
   	max-height: 435px;
-  	/* background: white; */
+  	background: white;
     @include col(6,10,5);
     @include break(tablet){
     	margin-right: 2%;
@@ -2237,7 +2237,7 @@ ul.category-chicklets {
       text-align: center;
       font-weight: 500;
       height: 80px;
-      line-height: 81px;
+      line-height: 80px;
       width: 100px;
       background: #075BC0;
       @include border-radius(3px);
@@ -2503,7 +2503,8 @@ ul.category-chicklets {
   .comment {
     position: relative;
     padding: 15px 100px 0px 10px;
-    border-bottom: 1px solid #DDDDDD!important;
+    border-bottom: 1px solid #DDDDDD !important;
+    min-height: 100px;
     
     &:nth-child(odd) {
       background: white;
@@ -2517,8 +2518,8 @@ ul.category-chicklets {
       position: absolute;
       display: inline-block;
       padding: 0 15px;
-      line-height: 160%;
-      top: 20px; right: 10px;
+      line-height: 180%;
+      top: 30px; right: 15px;
       @include border-radius(2px);
       
       &.excellent {

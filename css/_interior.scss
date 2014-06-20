@@ -530,21 +530,42 @@ body.interior {
 			  font-weight: 400;
 			  color: #888;
 			  li {
-			    display: inline;
-			    border-right-width: 1px;
-			    border-right-style: solid;
-			    border-right-color: #bbb;
-			    padding-left: 14px;
-			    padding-right: 14px;
-			    &.left {
-			      padding-left: 0px;
-			    }
-			    &.right {
-			      border: none;
-			    }
+				display: inline;
+				border-right-width: 1px;
+				border-right-style: solid;
+				border-right-color: #bbb;
+				padding-left: 14px;
+				padding-right: 14px;
+				&.left {
+				  padding-left: 0px;
+				}
+				&.right {
+				  border: none;
+				}
+				&.wide {
+				  width: 25% !important;
+				}
 			  }
+
+			  &.drivers {
+			  	background: white;
+				font-size: 13px;
+			  	margin: 8px 20px 2px 0px;
+				padding: 8px 5px;
+				border: 1px solid #eee;
+
+				li {
+					display: inline-block;
+					margin-bottom: 0;
+					text-align: center;
+					width: 19%;
+					border-right-color: #ddd;
+				}
+			  }
+
 			}
 
+		/*
 			.sorter {
 			  p {
 			  	padding: 0;
@@ -618,6 +639,7 @@ body.interior {
 			    }
 			  }
 			}
+			*/
 		}
 	}
 
@@ -1651,7 +1673,7 @@ body.interior {
 							font-size: 1.5em;
 							color: #fff;
 							text-align: center;
-							font-weight: bold;
+							font-weight: 500;
 							height: 55px;
 							line-height: 55px;
 							width: 65px;
@@ -2312,7 +2334,7 @@ body.interior {
 		text-align: center;
 		line-height: 1.2;
 		padding-bottom: 10px;
-		border-radius: 3px;
+		@include border-radius(3px);
 	  }
 	  ul {
 	    margin: 0 0 10px !important;
@@ -2381,7 +2403,7 @@ body.interior {
 	      text-align: center;
 	      width: 40px;
 	      height: 32px;
-	      line-height: 33px;
+	      line-height: 32px;
 	      color: #fff !important;
 	      margin: 10px 10px 0 5px;
 	      @include border-radius(2px);
