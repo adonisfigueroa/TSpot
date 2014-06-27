@@ -1,12 +1,12 @@
 body.home {
   #dk_menu {
 	  height: 38px;
-  }	
+  }
   header .menu .wrapper > ul > li a.active {
-	  border-top: solid 3px #777D82;
-	  &:after {
-		  margin-top: -9px;
-	  }
+	line-height: 38px;
+		&:after {
+			margin-top: -5px;
+		}
   }
   
   #content {

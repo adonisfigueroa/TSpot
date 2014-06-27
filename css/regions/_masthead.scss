@@ -47,6 +47,10 @@
 					hgroup {
 						h2 {
 							font-size: 1.4em;
+
+							@include break(v-tablet) {
+								font-size: 1.2em !important;
+							}
 						}
 					}
 				}
@@ -88,6 +92,10 @@
 						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
+
+						@include break(v-tablet) {
+							font-size: 0.95em;
+						}
 					}
 				}	
 			}
@@ -599,6 +607,10 @@
 						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
+
+						@include break(v-tablet) {
+							font-size: 0.95em;
+						}
 					}
 				}	
 			}
@@ -1876,6 +1888,10 @@
 						font-size: 1.05em;
 						font-weight: 500;
 						text-shadow: 1px 1px 7px #222;
+
+						@include break(v-tablet) {
+							font-size: 0.95em;
+						}
 					}
 				}	
 			}

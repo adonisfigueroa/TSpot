@@ -173,7 +173,7 @@ img.responsive {
 .menuSpacerFeat {
 	height: 76px;
 	@include break(mobile){
-		height: 0px;
+		height: 55px;
 	}
 	@include break(v-mobile){
 		height: 55px;
