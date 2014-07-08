@@ -7,7 +7,7 @@
 "_mixin.scss",
 "_slider.scss",
 "_inherited.scss",
-"_home.scss",
+"_home.scss",	
 "_interior.scss",
 "_download.scss",
 "_post-list.scss",
@@ -59,11 +59,11 @@ body {
 	transform: translateZ(0);
 }
 .loadAnim {
-width: 100%;
-height: 100%;
-position: absolute;
-z-index: 100000;
-background: #777D82;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100000;
+	background: #777D82;
 	img {
 		left: 50%;
 		top: 50%;
@@ -74,7 +74,7 @@ background: #777D82;
 	}
 }
 .rating {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: $f-helvetica-roboto;
 }
 .mobile-only-social {
 	display: none !important;
@@ -213,11 +213,11 @@ h1 {
 	.wrapper {
 		padding: 25px 0;
 		@include break(mobile) {
-		width: 100%;
-		padding: 25px 0px 0px 0px;
-		.comment-count-block{
-			display: none;
-		}
+			width: 100%;
+			padding: 25px 0px 0px 0px;
+			.comment-count-block{
+				display: none;
+			}
 	}
 }
 	
@@ -247,10 +247,11 @@ h1 {
 			
 		}
 
-		.img-white {
+		&.img-white {
 			background: #fff;
 			margin: 0 0 25px;
 			padding: 30px 0 !important;
+			text-align: center;
 			border-top: 4px solid #eee;
 			border-bottom: 4px solid #eee;
 
@@ -692,64 +693,6 @@ h1 {
 	}
 }
 
-.cta {
-	text-align: center;
-	background-color: white;
-	
-	&.top-adverbox {
-	//what is this? break the design!
-		/*margin-top: 84px;
-		@include break(mobile){
-			margin-top: 57px; 
-		}*/
-	}
-	&.mobile-only {
-		.wrapper {
-			display: none;
-			@include break(mobile) {
-				display: block;
-			}
-		}
-		
-	}
-	&.mobile-hide {
-		@include break(mobile) {
-		display: none;
-		}
-	}
-	&.grey {
-		background-color: #F5F5F5;
-	}
-	
-	.wrapper {
-		padding: 20px 0 20px;
-		text-align: center;
-		.Mobile{
-			display: none;
-		}
-	}
-	@include break(mobile){
-		.wrapper {
-		padding: 0px 0px 0px 0px;
-		text-align: center;
-		width: 100%;
-		}
-		.index {
-			margin-top: 46px;
-			.Mobile {
-				display: block;
-			}
-		}
-	}
-}
-
-.adblock {
-	width: 300px;
-	margin-bottom: 25px;
-	text-align: center;
-	background-color: #f5f5f5;
-}
-
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
@@ -907,7 +850,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin-top: 0px;
+  margin: 35px 0 10px;
   @include break(v-tablet){
 	  display: none;
   }
@@ -933,6 +876,7 @@ h3.longtype {
       font-size: .7em;
       background: white;
       height: 235px;
+      @include border-radius(2px);
 
       &.one {
 		@include col(1,1,0);
@@ -995,7 +939,7 @@ h3.longtype {
         }
         
         .rating {
-          font-family: $f-helvetica;
+          font-family: $f-helvetica-roboto;
           font-weight: 500;
           color: white;
           font-size: 1.9em;
@@ -1132,7 +1076,7 @@ h3.longtype {
       width: 32px; height: 32px;
       border: 1px solid #ddd;
       @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
-	  margin: 0 10px -10px -48px;
+	  margin: 0 10px 5px 0px;
     }
     
     a.user {
@@ -1143,6 +1087,7 @@ h3.longtype {
     
     .commentText {
 		display: block;
+		margin-top: 5px;
 		font-size: 14px;
 		line-height: 1.5;
 
@@ -1330,8 +1275,8 @@ hgroup.featured-image {
 		min-height: 700px;
 	}
 	@include break(mobile){
-		min-height: 290px;
-		max-height: 290px;
+		min-height: 260px;
+		max-height: 260px;
 	}
 	@include break(v-mobile){
 		min-height: 355px;
@@ -1351,7 +1296,7 @@ hgroup.featured-image {
 		}
 		@include break(mobile){
 			width: 100%;
-			min-height: 290px;
+			min-height: 260px;
 		}
 		@include break(v-mobile){
 			min-height: 355px;
@@ -1368,7 +1313,7 @@ hgroup.featured-image {
 	
 	.title-group {
 		position: absolute;
-		bottom: 35px;
+		bottom: 50px;
 		width: 85%;
 		@include break(tablet){
 			bottom: 50px;
@@ -1385,7 +1330,7 @@ hgroup.featured-image {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px black;
+			text-shadow: 1px 1px 5px #333;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -1425,30 +1370,30 @@ hgroup.featured-image {
 	}
 	
 	.rating {
-		font-family: $f-helvetica;
+		font-family: $f-helvetica-roboto;
 		position: absolute;
-		bottom: 25px;
+		bottom: 45px;
 		right: 0;
-		font-size: 3.1em;
+		font-size: 2.8em;
 		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 105px;
-		padding: 0 24px;
+		line-height: 100px;
+		padding: 0 22px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
 		
 		&.excellent {
-			@include trans-bg($c-excellent,.8);
+			@include trans-bg($c-excellent,.7);
 		}
 		&.good {
-			@include trans-bg($c-good,.8);
+			@include trans-bg($c-good,.7);
 		}
 		&.average {
-			@include trans-bg($c-average,.8);
+			@include trans-bg($c-average,.7);
 		}
 		&.bad {
-			@include trans-bg($c-bad,.8);
+			@include trans-bg($c-bad,.7);
 		}
 		
 		span {
@@ -1532,7 +1477,7 @@ ul.category-chicklets {
 				height: inherit;
 				width: 25%;
 				margin-bottom: 0px;
-				font-size: 1.0em;
+				font-size: 1em;
 				line-height: 33px;
 			}
 
@@ -1848,7 +1793,6 @@ ul.category-chicklets {
 		width: 100% !important;
 		.wrapperMobileOnly {
 			width:  96%;
-			padding: 0 2%;
 		}
 	}
 	@include break(mobile){
@@ -2122,9 +2066,11 @@ ul.category-chicklets {
 			float: left;
 			@include break(mobile){
 				width: 30%;
+				height: 17px;
 			}
 			@include break(v-mobile){
 				width: 20%;
+				height: inherit;
 			}
 		}
 		.social-int {
@@ -2289,10 +2235,10 @@ ul.category-chicklets {
     }
     .breakdown {
 	  @include break(v-tablet){
-	       margin-left: 90px;
+	  	//margin-left: 90px;
 	  }    
 	  @include break(mobile){
-		  width: 70%;
+		  width: 65%;
 		  float: left;
 		  margin-left: 6%;
 	  }
@@ -2323,6 +2269,7 @@ ul.category-chicklets {
         }
         @include break(v-mobile){
 	        width: 23%;
+	        min-width: 54px;
         }
       }
       .count {
@@ -2339,10 +2286,10 @@ ul.category-chicklets {
       .bar {
         width: 150px;
         @include break(mobile){
-	        width: 80%;
+	        width: 70%;
         }
          @include break(v-mobile){
-	        width: 67%;
+	        width: 60%;
         }
 
         div {
@@ -2463,7 +2410,7 @@ ul.category-chicklets {
         position: relative;
         
         .rating {
-          font-family: $f-helvetica;
+          font-family: $f-helvetica-roboto;
           font-weight: 500;
           color: white;
           font-size: 1.9em;
@@ -2526,7 +2473,7 @@ ul.category-chicklets {
     }
     
     .rating {
-      font-family: $f-helvetica;
+      font-family: $f-helvetica-roboto;
       font-weight: 500;
       color: white;
       font-size: 1.5em;
@@ -2888,14 +2835,14 @@ ul.pills {
     text-decoration: none !important;
 }
 .loading {
-	background: #fff url(http://static.techspot.com/images/loading.gif) no-repeat center top;
+	background: #f5f5f5 url(http://static.techspot.com/images/loading_blue2.gif) no-repeat center top;
 	height: 50px;
 	text-indent: -10000px;
 	overflow: hidden;
 	margin: 10px 0;
 }
 .waiting div {
-	background-image: url(http://static.techspot.com/images/loading_small.gif);
+	background-image: url(http://static.techspot.com/images/loading_blue_small.gif);
 	background-position: center center;
 	background-repeat: no-repeat;
 	color: transparent !important;
@@ -2906,9 +2853,77 @@ ul.pills {
 .waiting span {
 	visibility: hidden
 }
+
+// ! ads ===========================================
+
+.mobile-hide {
+	@include break(mobile) {
+		display: none;
+	}
+}
+
+.cta {
+	text-align: center;
+	background-color: white;
+	
+	&.mobile-only {
+		.wrapper {
+			display: none;
+			@include break(mobile) {
+				display: block;
+			}
+		}
+	}
+	&.mobile-hide {
+		@include break(mobile) {
+			display: none;
+		}
+	}
+	&.grey {
+		background-color: #F5F5F5;
+	}	
+	.wrapper {
+		padding: 20px 0 20px;
+		text-align: center;
+		.Mobile{
+			display: none;
+		}
+	}
+
+	@include break(mobile){
+		.wrapper {
+			padding: 0px 0px 0px 0px;
+			text-align: center;
+			width: 100%;
+		}
+		.index {
+			margin-top: 46px;
+			.Mobile {
+				display: block;
+			}
+		}
+	}
+}
+
+.adblock {
+	width: 300px;
+	margin-bottom: 25px;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+
+.ad_block_news {
+	margin-top: 15px;
+
+	@include break(mobile){
+		margin: -25px auto 35px;
+		text-align: center;
+	}
+}
+
 .ad_block_leader2 {
 	background-color: $light-grey;
-	@include break(mobile){
+	@include break(tablet){
 		display: none;
 	}
 }

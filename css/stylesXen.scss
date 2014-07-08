@@ -8,7 +8,6 @@
 "_slider.scss",
 "_inherited.scss",
 "_home.scss",
-"_interior.scss",
 "regions/_header.scss",
 "regions/_masthead.scss",
 "regions/_footer.scss";
@@ -53,11 +52,11 @@ body {
 	transform: translateZ(0);
 }
 .loadAnim {
-width: 100%;
-height: 100%;
-position: absolute;
-z-index: 100000;
-background: #777D82;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100000;
+	background: #777D82;
 	img {
 		left: 50%;
 		top: 50%;
@@ -68,7 +67,7 @@ background: #777D82;
 	}
 }
 .rating {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: $f-helvetica-roboto;
 }
 .mobile-only-social {
 	display: none !important;
@@ -167,7 +166,7 @@ img.responsive {
 .menuSpacerFeat {
 	height: 76px;
 	@include break(mobile){
-		height: 0px;
+		height: 55px;
 	}
 	@include break(v-mobile){
 		height: 55px;
@@ -207,11 +206,11 @@ h1 {
 	.wrapper {
 		padding: 25px 0;
 		@include break(mobile) {
-		width: 100%;
-		padding: 25px 0px 0px 0px;
-		.comment-count-block{
-			display: none;
-		}
+			width: 100%;
+			padding: 25px 0px 0px 0px;
+			.comment-count-block{
+				display: none;
+			}
 	}
 }
 	
@@ -226,9 +225,34 @@ h1 {
 	p {
 		padding: 0 0 25px;
 
-		.small {
+		&.small, &.byline {
 			font-size: 0.8em;
 		}
+
+		&.grey {
+			font-size: 0.8em;
+			color: #555;
+			a {
+				color: #555;
+				padding-bottom: 1px;
+				border-bottom: 1px solid #555;
+			}
+			
+		}
+
+		&.img-white {
+			background: #fff;
+			margin: 0 0 25px;
+			padding: 30px 0 !important;
+			text-align: center;
+			border-top: 4px solid #eee;
+			border-bottom: 4px solid #eee;
+
+			img {
+				max-width: 92% !important;
+			}
+		}
+		
 	}
 	
 }
@@ -662,64 +686,6 @@ h1 {
 	}
 }
 
-.cta {
-	text-align: center;
-	background-color: white;
-	
-	&.top-adverbox {
-	//what is this? break the design!
-		/*margin-top: 84px;
-		@include break(mobile){
-			margin-top: 57px; 
-		}*/
-	}
-	&.mobile-only {
-		.wrapper {
-			display: none;
-			@include break(mobile) {
-				display: block;
-			}
-		}
-		
-	}
-	&.mobile-hide {
-		@include break(mobile) {
-		display: none;
-		}
-	}
-	&.grey {
-		background-color: #F5F5F5;
-	}
-	
-	.wrapper {
-		padding: 20px 0 20px;
-		text-align: center;
-		.Mobile{
-			display: none;
-		}
-	}
-	@include break(mobile){
-		.wrapper {
-		padding: 0px 0px 0px 0px;
-		text-align: center;
-		width: 100%;
-		}
-		.index {
-			margin-top: 46px;
-			.Mobile {
-				display: block;
-			}
-		}
-	}
-}
-
-.adblock {
-	width: 300px;
-	margin-bottom: 25px;
-	text-align: center;
-	background-color: #f5f5f5;
-}
-
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
@@ -877,7 +843,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin-top: 0px;
+  margin: 35px 0 10px;
   @include break(v-tablet){
 	  display: none;
   }
@@ -903,6 +869,7 @@ h3.longtype {
       font-size: .7em;
       background: white;
       height: 235px;
+      @include border-radius(2px);
 
       &.one {
 		@include col(1,1,0);
@@ -965,8 +932,8 @@ h3.longtype {
         }
         
         .rating {
-          font-family: $f-arial;
-          font-weight: 900;
+          font-family: $f-helvetica-roboto;
+          font-weight: 500;
           color: white;
           font-size: 1.9em;
           position: absolute;
@@ -1102,7 +1069,7 @@ h3.longtype {
       width: 32px; height: 32px;
       border: 1px solid #ddd;
       @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
-	  margin: 0 10px -10px -48px;
+	  margin: 0 10px 5px 0px;
     }
     
     a.user {
@@ -1113,6 +1080,7 @@ h3.longtype {
     
     .commentText {
 		display: block;
+		margin-top: 5px;
 		font-size: 14px;
 		line-height: 1.5;
 
@@ -1300,8 +1268,8 @@ hgroup.featured-image {
 		min-height: 700px;
 	}
 	@include break(mobile){
-		min-height: 290px;
-		max-height: 290px;
+		min-height: 260px;
+		max-height: 260px;
 	}
 	@include break(v-mobile){
 		min-height: 355px;
@@ -1321,7 +1289,7 @@ hgroup.featured-image {
 		}
 		@include break(mobile){
 			width: 100%;
-			min-height: 290px;
+			min-height: 260px;
 		}
 		@include break(v-mobile){
 			min-height: 355px;
@@ -1338,7 +1306,7 @@ hgroup.featured-image {
 	
 	.title-group {
 		position: absolute;
-		bottom: 35px;
+		bottom: 50px;
 		width: 85%;
 		@include break(tablet){
 			bottom: 50px;
@@ -1355,7 +1323,7 @@ hgroup.featured-image {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px black;
+			text-shadow: 1px 1px 5px #333;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -1395,30 +1363,30 @@ hgroup.featured-image {
 	}
 	
 	.rating {
-		font-family: $f-helvetica;
+		font-family: $f-helvetica-roboto;
 		position: absolute;
-		bottom: 25px;
+		bottom: 45px;
 		right: 0;
-		font-size: 3.1em;
+		font-size: 2.8em;
 		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 105px;
-		padding: 0 24px;
+		line-height: 100px;
+		padding: 0 22px;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
 		
 		&.excellent {
-			@include trans-bg($c-excellent,.8);
+			@include trans-bg($c-excellent,.7);
 		}
 		&.good {
-			@include trans-bg($c-good,.8);
+			@include trans-bg($c-good,.7);
 		}
 		&.average {
-			@include trans-bg($c-average,.8);
+			@include trans-bg($c-average,.7);
 		}
 		&.bad {
-			@include trans-bg($c-bad,.8);
+			@include trans-bg($c-bad,.7);
 		}
 		
 		span {
@@ -1454,13 +1422,14 @@ ul.category-chicklets {
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: .55em;
+			font-weight: 400;
 			letter-spacing: 0.50px;
 			-webkit-font-smoothing: subpixel-antialiased;
 		}
 		
 		&.apple 					{ background-color: #7d9dca; &:hover { background-color: lighten(#7d9dca,7%); } } 
 		&.gaming 					{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
-		&.hardware 					{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
+		&.hardware, &.drivers		{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
 		&.industry					{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
 		&.security 					{ background-color: #CBA746; &:hover { background-color: lighten(#CBA746,10%); } }
 		&.microsoft					{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
@@ -1468,7 +1437,7 @@ ul.category-chicklets {
 		&.software, &.electronics	{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
 		&.web, &.home, &.blog		{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
 		&.techspot 					{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
-		&.dotw, &.pc				{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
+		&.dotw, &.pc, &.driverscat	{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
 		&.natw	 					{ background-color: #BBBBBB; &:hover { background-color: lighten(#BBBBBB,10%); } }
 		&.deals 					{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
 		&.wof	 					{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
@@ -1501,7 +1470,7 @@ ul.category-chicklets {
 				height: inherit;
 				width: 25%;
 				margin-bottom: 0px;
-				font-size: 1.0em;
+				font-size: 1em;
 				line-height: 33px;
 			}
 
@@ -1817,7 +1786,6 @@ ul.category-chicklets {
 		width: 100% !important;
 		.wrapperMobileOnly {
 			width:  96%;
-			padding: 0 2%;
 		}
 	}
 	@include break(mobile){
@@ -1881,7 +1849,7 @@ ul.category-chicklets {
 
   figure {
   	max-height: 435px;
-  	/* background: white; */
+  	background: white;
     @include col(6,10,5);
     @include break(tablet){
     	margin-right: 2%;
@@ -2091,9 +2059,11 @@ ul.category-chicklets {
 			float: left;
 			@include break(mobile){
 				width: 30%;
+				height: 17px;
 			}
 			@include break(v-mobile){
 				width: 20%;
+				height: inherit;
 			}
 		}
 		.social-int {
@@ -2216,14 +2186,15 @@ ul.category-chicklets {
     margin: 0 0 20px;
     .number {
       float: left;
-      font-size: 45px;
+      font-size: 46px;
       color: #fff;
       text-align: center;
-      font-weight: bold;
+      font-weight: 500;
       height: 80px;
-      line-height: 81px;
+      line-height: 80px;
       width: 100px;
       background: #075BC0;
+      @include border-radius(3px);
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
       @include break(v-tablet){
 	      width: 95px;
@@ -2257,10 +2228,10 @@ ul.category-chicklets {
     }
     .breakdown {
 	  @include break(v-tablet){
-	       margin-left: 90px;
+	  	//margin-left: 90px;
 	  }    
 	  @include break(mobile){
-		  width: 70%;
+		  width: 65%;
 		  float: left;
 		  margin-left: 6%;
 	  }
@@ -2291,6 +2262,7 @@ ul.category-chicklets {
         }
         @include break(v-mobile){
 	        width: 23%;
+	        min-width: 54px;
         }
       }
       .count {
@@ -2307,10 +2279,10 @@ ul.category-chicklets {
       .bar {
         width: 150px;
         @include break(mobile){
-	        width: 80%;
+	        width: 70%;
         }
          @include break(v-mobile){
-	        width: 67%;
+	        width: 60%;
         }
 
         div {
@@ -2431,8 +2403,8 @@ ul.category-chicklets {
         position: relative;
         
         .rating {
-          font-family: $f-arial;
-          font-weight: 900;
+          font-family: $f-helvetica-roboto;
+          font-weight: 500;
           color: white;
           font-size: 1.9em;
           position: absolute;
@@ -2440,10 +2412,10 @@ ul.category-chicklets {
           padding: 0 15px;
           line-height: 160%;
           bottom: 0; right: 0px;
+          @include border-radius(2px);
           
           &.excellent {
             @include trans-bg($c-excellent,.9);
-            &.perfect { padding: 0 5px !important; }
           }
           &.average {
             @include trans-bg($c-average,.9);
@@ -2454,6 +2426,7 @@ ul.category-chicklets {
           &.bad {
             @include trans-bg($c-bad,.9);
           }
+          &.perfect { padding: 0 8px !important }
           
         }
       }
@@ -2485,22 +2458,24 @@ ul.category-chicklets {
   .comment {
     position: relative;
     padding: 15px 100px 0px 10px;
-    border-bottom: 1px solid #DDDDDD!important;
+    border-bottom: 1px solid #DDDDDD !important;
+    min-height: 100px;
     
     &:nth-child(odd) {
       background: white;
     }
     
     .rating {
-      font-family: $f-arial;
-      font-weight: 900;
+      font-family: $f-helvetica-roboto;
+      font-weight: 500;
       color: white;
       font-size: 1.5em;
       position: absolute;
       display: inline-block;
       padding: 0 15px;
-      line-height: 160%;
-      top: 20px; right: 10px;
+      line-height: 180%;
+      top: 30px; right: 15px;
+      @include border-radius(2px);
       
       &.excellent {
         @include trans-bg($c-excellent,.9);
@@ -2514,6 +2489,7 @@ ul.category-chicklets {
       &.bad {
         @include trans-bg($c-bad,.9);
       }
+      &.perfect { padding: 0 8px !important }
       
     }
     
@@ -2698,11 +2674,12 @@ ul.category-chicklets {
 	}
 
 	h4 {
-		font-weight: 500;
+		padding-top: 10px;
 		color: #0a5499;
 		padding-left: 20px;
 		font-size: 1.1em !important;
-		padding-top: 10px;
+		font-weight: 500;
+		line-height: 1.4;
 	}
 
 	input[type=text] {
@@ -2760,7 +2737,7 @@ ul.pills {
 /* PF widgets para noticias y reviews */
 .pf_score {
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   background: #075BC0;
   text-align: center;
@@ -2851,14 +2828,14 @@ ul.pills {
     text-decoration: none !important;
 }
 .loading {
-	background: #fff url(http://static.techspot.com/images/loading.gif) no-repeat center top;
+	background: #f5f5f5 url(http://static.techspot.com/images/loading_blue2.gif) no-repeat center top;
 	height: 50px;
 	text-indent: -10000px;
 	overflow: hidden;
 	margin: 10px 0;
 }
 .waiting div {
-	background-image: url(http://static.techspot.com/images/loading_small.gif);
+	background-image: url(http://static.techspot.com/images/loading_blue_small.gif);
 	background-position: center center;
 	background-repeat: no-repeat;
 	color: transparent !important;
@@ -2869,9 +2846,77 @@ ul.pills {
 .waiting span {
 	visibility: hidden
 }
+
+// ! ads ===========================================
+
+.mobile-hide {
+	@include break(mobile) {
+		display: none;
+	}
+}
+
+.cta {
+	text-align: center;
+	background-color: white;
+	
+	&.mobile-only {
+		.wrapper {
+			display: none;
+			@include break(mobile) {
+				display: block;
+			}
+		}
+	}
+	&.mobile-hide {
+		@include break(mobile) {
+			display: none;
+		}
+	}
+	&.grey {
+		background-color: #F5F5F5;
+	}	
+	.wrapper {
+		padding: 20px 0 20px;
+		text-align: center;
+		.Mobile{
+			display: none;
+		}
+	}
+
+	@include break(mobile){
+		.wrapper {
+			padding: 0px 0px 0px 0px;
+			text-align: center;
+			width: 100%;
+		}
+		.index {
+			margin-top: 46px;
+			.Mobile {
+				display: block;
+			}
+		}
+	}
+}
+
+.adblock {
+	width: 300px;
+	margin-bottom: 25px;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+
+.ad_block_news {
+	margin-top: 15px;
+
+	@include break(mobile){
+		margin: -25px auto 35px;
+		text-align: center;
+	}
+}
+
 .ad_block_leader2 {
 	background-color: $light-grey;
-	@include break(mobile){
+	@include break(tablet){
 		display: none;
 	}
 }

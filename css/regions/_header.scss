@@ -32,6 +32,9 @@ header {
 	#dk_menu {
 		height: 42px;
 		margin-left: -10px;
+		@include break(v-tablet){
+			margin-left: -5px;
+		}
 	}
 	#main-menu #dk_menu > li {
 		margin-right: -4px;
@@ -622,7 +625,7 @@ header {
 				height: $small-line-height;
 				line-height:$small-line-height; 
 				margin-top:3px;
-				width: 15px;
+				width: 13px;
 				height: 30px;
 				@include transitions (0.1s);
 				@include break(mobile){
@@ -1060,7 +1063,7 @@ header {
 			height: $line-height;
 			line-height:$line-height; 
 			margin-top:2px;
-			width: 15px;
+			width: 13px;
 			@include transitions (0.1s);
 			@include break(mobile){
 				height: 47px !important;
