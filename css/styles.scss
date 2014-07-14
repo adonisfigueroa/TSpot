@@ -1330,7 +1330,7 @@ hgroup.featured-image {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px #333;
+			text-shadow: 1px 1px 5px #222;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -2020,9 +2020,11 @@ ul.category-chicklets {
 			padding-left: 20px;
 			margin-bottom: 5px;
 			font-family: "Roboto Condensed", sans-serif;
+			font-weight: 400;
 			
 			a {
-				border-bottom: solid 3px;
+				border-bottom: solid 1px;
+				padding-bottom: 3px;
 			}
 		}
 		.pros h3, .cons h3 {
@@ -2866,41 +2868,19 @@ ul.pills {
 	text-align: center;
 	background-color: white;
 	
-	&.mobile-only {
-		.wrapper {
-			display: none;
-			@include break(mobile) {
-				display: block;
-			}
-		}
-	}
-	&.mobile-hide {
-		@include break(mobile) {
-			display: none;
-		}
-	}
 	&.grey {
 		background-color: #F5F5F5;
 	}	
 	.wrapper {
-		padding: 20px 0 20px;
+		padding: 20px 0 15px;
 		text-align: center;
-		.Mobile{
-			display: none;
-		}
 	}
 
 	@include break(mobile){
 		.wrapper {
-			padding: 0px 0px 0px 0px;
+			padding: 0;
 			text-align: center;
 			width: 100%;
-		}
-		.index {
-			margin-top: 46px;
-			.Mobile {
-				display: block;
-			}
 		}
 	}
 }

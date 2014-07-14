@@ -1,13 +1,4 @@
 body.interior {
-	.cta {
-		.wrapper {
-			padding: 20px 0 15px;
-			text-align: center;
-		}
-	}
-	.top-adverbox {
-		min-height: 130px;
-	}
 	header .menu .wrapper > ul > li a.active {
 		height: 47px !important;
 		line-height: 42px;
@@ -354,7 +345,6 @@ body.interior {
 			background: white;
 
 			@include break(mobile) {
-				margin-top: 30px;
 				font-size: .95em;
 
 				#new_social_box {
@@ -456,7 +446,7 @@ body.interior {
 			}
 
 			.downloads-table {
-				margin: 0 3px 25px;
+				margin: 25px 3px 25px;
 				color: #05408F;
 				font-size: 0.9em;
 
@@ -1077,11 +1067,6 @@ body.interior {
 		
 	}
 	&.products {
-		.cta{
-			@include break(mobile){
-			margin-top: -11px;
-			}
-		}
 		.excellent {
 	      background-color: rgba(0,191,23,1);
 	    }
@@ -1636,11 +1621,6 @@ body.interior {
 		}
 	}
 	&.features, &.reviews, &.reviews-cat, &.features-cat {
-		.cta{
-			@include break(mobile){
-			margin-top: -11px;
-			}
-		}
 		.col-2-3{
 			@include col-last(2,3,0);
 			width: 80%;

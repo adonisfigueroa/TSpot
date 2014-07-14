@@ -7,7 +7,8 @@
 "_mixin.scss",
 "_slider.scss",
 "_inherited.scss",
-"_home.scss",
+"_home.scss",	
+"_interior.scss",
 "regions/_header.scss",
 "regions/_masthead.scss",
 "regions/_footer.scss";
@@ -2859,41 +2860,19 @@ ul.pills {
 	text-align: center;
 	background-color: white;
 	
-	&.mobile-only {
-		.wrapper {
-			display: none;
-			@include break(mobile) {
-				display: block;
-			}
-		}
-	}
-	&.mobile-hide {
-		@include break(mobile) {
-			display: none;
-		}
-	}
 	&.grey {
 		background-color: #F5F5F5;
 	}	
 	.wrapper {
-		padding: 20px 0 20px;
+		padding: 20px 0 15px;
 		text-align: center;
-		.Mobile{
-			display: none;
-		}
 	}
 
 	@include break(mobile){
 		.wrapper {
-			padding: 0px 0px 0px 0px;
+			padding: 0;
 			text-align: center;
 			width: 100%;
-		}
-		.index {
-			margin-top: 46px;
-			.Mobile {
-				display: block;
-			}
 		}
 	}
 }

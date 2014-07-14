@@ -47,9 +47,9 @@
 					hgroup {
 						h2 {
 							font-size: 1.4em;
-
+							
 							@include break(v-tablet) {
-								font-size: 1.2em !important;
+								font-size: 1.2em;
 							}
 						}
 					}
@@ -84,17 +84,20 @@
 						text-transform: uppercase;
 						font-weight: 900;
 						font-size: .6em;
-						text-shadow: 0px 0px 3px black;
+						text-shadow: 0px 0px 3px #333;
 			            color: #FF9B37;
 			            letter-spacing: 0.2px;
 					}
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 7px #222;
+						text-shadow: 1px 1px 4px #444;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;
+						}
+						@include break(mobile) {
+							font-size: 1.2em;
 						}
 					}
 				}	
@@ -599,18 +602,21 @@
 						text-transform: uppercase;
 						font-weight: 900;
 						font-size: .6em;
-						text-shadow: 0px 0px 3px black;
+						text-shadow: 0px 0px 3px #333;
 			            color: #FF9B37;
 			            letter-spacing: 0.2px;
 					}
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 7px #222;
+						text-shadow: 1px 1px 4px #444;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;
 						}
+						@include break(mobile) {
+							font-size: 1.2em;
+						}						
 					}
 				}	
 			}
@@ -1214,7 +1220,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1263,7 +1269,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1285,7 +1291,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1306,7 +1312,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1327,7 +1333,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1348,7 +1354,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1370,7 +1376,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1391,7 +1397,7 @@
 							h2 {
 								font-size: 1.2em;
 								@include break(v-mobile){
-									font-size: 1.0em;
+									font-size: 1.1em;
 								}
 							}
 						}
@@ -1513,7 +1519,6 @@
 				}
 				
 				hgroup {
-					
 					width: 70%;
 					position: absolute;
 					bottom: 15px;
@@ -1524,14 +1529,14 @@
 						text-transform: uppercase;
 						font-weight: 900;
 						font-size: .6em;
-						text-shadow: 0px 0px 3px black;
+						text-shadow: 0px 0px 3px #333;
 			            color: #FF9B37;
 			            letter-spacing: 0.2px;
 					}
 					h2 {
 						font-size: 1.4em;
 						font-weight: 500;
-						text-shadow: 1px 1px 7px #222;
+						text-shadow: 1px 1px 4px #444;
 						max-height: 100px;
 						overflow: hidden;
 					}
@@ -1622,7 +1627,7 @@
 						text-transform: uppercase;
 						font-weight: 800;
 						font-size: .5em;
-						text-shadow: 0px 0px 3px black;
+						text-shadow: 0px 0px 3px #333;
 			            color: #FF8D00;
 			            letter-spacing: 0.2px;
 			            @include break(v-tablet){
@@ -1632,7 +1637,7 @@
 					h2 {
 						font-size: 1.2em;
 						font-weight: 500;
-						text-shadow: 1px 1px 7px #222;
+						text-shadow: 1px 1px 4px #444;
 						@include break(v-tablet){
 							font-size: 1.0em;
 						}
@@ -1640,7 +1645,7 @@
 							font-size: 1.2em;
 						}
 						@include break(v-mobile){
-							font-size: 1.0em;
+							font-size: 1.1em;
 						}
 
 					}
@@ -1880,17 +1885,20 @@
 						text-transform: uppercase;
 						font-weight: 900;
 						font-size: .6em;
-						text-shadow: 0px 0px 3px black;
+						text-shadow: 0px 0px 3px #333;
 			            color: #FF9B37;
 			            letter-spacing: 0.2px;
 					}
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 7px #222;
+						text-shadow: 1px 1px 4px #444;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;
+						}
+						@include break(mobile) {
+							font-size: 1.2em;
 						}
 					}
 				}	
@@ -2025,9 +2033,6 @@
 						hgroup {
 							h2 {
 								font-size: 1.2em;
-								@include break(v-mobile){
-									font-size: 1.0em;
-								}
 							}
 						}
 					}
@@ -2174,7 +2179,5 @@
 			}
 
 	}
-	}
-	
+	}	
 }
-

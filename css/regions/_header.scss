@@ -32,8 +32,8 @@ header {
 	#dk_menu {
 		height: 42px;
 		margin-left: -10px;
-		@include break(v-tablet){
-			margin-left: -5px;
+		@include break(tablet){
+			margin-left: -4px;
 		}
 	}
 	#main-menu #dk_menu > li {
