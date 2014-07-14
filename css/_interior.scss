@@ -100,13 +100,6 @@ body.interior {
 				margin-bottom: 10px;
 			}
 		}
-
-		blockquote {
-			background: white;
-			margin: 5px 20px 25px 0px;
-			padding: 15px 10px 0px 15px;
-			border-left: 3px solid #ccc;
-		}
 		
 		img {
   			max-width: 100%;
@@ -831,7 +824,13 @@ body.interior {
 				@include break(mobile){
 					@include col-last(1,1,0);
 				}
-				
+
+				blockquote {
+					background: white;
+					margin: 5px 20px 25px 0px;
+					padding: 15px 10px 0px 15px;
+					border-left: 3px solid #ccc;
+				}
 			}
 			
 		}
@@ -934,10 +933,10 @@ body.interior {
 		}
 		
 		&.product {
-  		hgroup {
-    	  .wrapper {
-      	  	padding: 20px 0 15px;
-    	  }
+	  		hgroup {
+	    	  .wrapper {
+	      	  	padding: 20px 0 15px;
+	    	  }
 		}
   	  	  
     	#content {
@@ -2081,6 +2080,7 @@ body.interior {
 			article {
 				width: 90%;
 				float: left;
+
 				@include break(big-desk){
 					width: 100%
 				}
@@ -2090,6 +2090,14 @@ body.interior {
 				img {
 					/* padding: 0 0 25px; */
 				}
+
+				blockquote {
+					background: white;
+					margin: 5px 20px 25px 0px;
+					padding: 15px 10px 0px 15px;
+					border-left: 3px solid #ccc;
+				}
+
 				.blue-quote {
 					color: #105ab2;
 					font-size: 1.7em;
@@ -2097,6 +2105,8 @@ body.interior {
 					text-align: center;
 					margin: 20px 10px 40px;
 				}
+
+
 				/*
 				.side-object {
 					width: 350px;

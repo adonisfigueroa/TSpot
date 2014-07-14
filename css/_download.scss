@@ -144,14 +144,16 @@ body.interior.download {
 					width: 170px;
 					white-space: nowrap;
 					overflow: hidden;
-					line-height: 11px;
 					text-overflow: ellipsis;
+					line-height: 10px;
+					height: 12px;
+					margin-bottom: -2px;
 
 					&:hover {
 						text-overflow:inherit;
 						overflow:visible;
 						background: #fff;
-						z-index: 999;
+						z-index: 100;
 					}
 				}
 			}
