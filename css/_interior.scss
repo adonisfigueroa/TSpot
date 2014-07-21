@@ -385,7 +385,7 @@ body.interior {
 				margin-top: 25px !important;
 
 	      	  	figure {
-		      	  	float: left!important;
+		      	  	float: left !important;
 		      	  	padding-right: 10px;
 	      	  	}
 				
@@ -1034,8 +1034,8 @@ body.interior {
 				}
 
 	      	  	figure {
-	      	  		width: 100px!important;
-		      	  	float: left!important;
+	      	  		width: 100px !important;
+		      	  	float: left !important;
 		      	  	margin: 0 25px 0 -10px;
 
 		      	  	img {
@@ -1048,7 +1048,8 @@ body.interior {
 					}
 
 					@include break(v-mobile){
-						margin: 0 10px 0 -5px;
+						float: right !important;
+		      	  		margin: 0 0 0 10px;
 					}
 	      	  	}
 
