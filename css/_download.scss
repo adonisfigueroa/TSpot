@@ -181,8 +181,11 @@ body.interior.download {
       }
     }
     .google-ads {
-      margin-top: 20px;
-      img { margin-top: -40px; }
+		margin: 20px 0 0 -10px;
+		@include break(mobile){
+			margin: 20px 0 0 0;
+		}
+		img { margin-top: -40px; }
     }
     .options {
     	font-size: 1em;

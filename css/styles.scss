@@ -2656,6 +2656,9 @@ ul.category-chicklets {
 	#content {
     	#pros_cons {
        		padding-top: 70px !important;
+			@include break(mobile){
+				padding-top: 0px !important;
+			}
 		}
 		#pros_cons.collapsed li:nth-child(n+6){
 			display: none;

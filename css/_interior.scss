@@ -143,10 +143,6 @@ body.interior {
 	}
 	
 	nav.page-nav {
-		//text-align: right;
-		//width: 100%;
-		//float: left;
-
 		margin-left: 330px;
 		margin-top: -255px;
 		@include break(v-tablet){
@@ -159,7 +155,7 @@ body.interior {
 			margin-left: 0px;
 			margin-top: 0px;
 			float:right;
-			padding-bottom: 40px;
+			padding-bottom: 0px;
 		}
 		a {
 			font-weight: 400;
@@ -2221,6 +2217,9 @@ body.interior {
 
 	@include break(big-desk){
 		width: 100% !important;
+	}
+	@include break(mobile){
+		padding-bottom: 30px;
 	}
 
 	a span {
