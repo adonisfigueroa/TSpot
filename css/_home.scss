@@ -36,16 +36,14 @@ body.home {
     }
     
     #sidebar {
-      padding-top: 5px;
-      width: 305px;
-	    @include break(tablet){
-			    width: 32%;
-			     @media screen and (orientation:portrait) { 
-					 display: none;
-			     }
-			    
+		padding-top: 50px;
+		@include break(tablet){
+			width: 32%;
+			@media screen and (orientation:portrait) { 
+				display: none;
+			}
+
 		}
-    }
-    
+	}
   }
 }

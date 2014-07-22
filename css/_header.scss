@@ -246,10 +246,10 @@ header {
 									    }
 										.loading {
 									      float: right;
-									      margin: 5px 0 0;
+									      margin: 9px 0 0;
 									      width: 16px;
 									      height: 16px;
-									      background: url(http://static.techspot.com/images/loading_small.gif);
+									      background: url(http://static.techspot.com/images/loading_blue_small.gif);
 									    }
 									}
 
@@ -827,6 +827,7 @@ header {
 						
 						&.active {
 							background: #777D82;
+							transition: 0.15s linear;
 							height: 43px;
 							line-height: 38px;
 							z-index: 10;
@@ -840,7 +841,9 @@ header {
 					}
 					
 					&:hover {
-  					 background-color: #136BD7;
+						/* background-color: #136BD7; */
+						background-color: #777D82;
+						transition: 0.3s linear;
 					}
 					
 					.nav-submenu {
@@ -925,6 +928,7 @@ header {
 							
 							&.active {
 								@include trans-bg(black,.7);
+								transition: 0.1s linear;
 								& > a {
 									position: relative;
 									
@@ -983,6 +987,19 @@ header {
 										margin-bottom: 10px;
 										position: relative;
 
+										&.back1 {
+											background-image: url(http://www.techspot.com/images/menu/back1.png);
+											background-size: auto 100%;
+										}
+										&.back2 {
+											background-image: url(http://www.techspot.com/images/menu/back2.png);
+											background-size: auto 100%;
+										}
+										&.back3 {
+											background-image: url(http://www.techspot.com/images/menu/back3.png);
+											background-size: auto 100%;
+										}
+
 										.image {
 										    position: absolute;
 											width: 100%;
@@ -991,6 +1008,10 @@ header {
 											background-repeat: no-repeat;
 											overflow: hidden;
 											background-size: 150% auto;
+
+											&.icon {
+												background-size: 120px auto;
+											}
 
 											&:hover {
 												border: solid #FDA82A 3px;

@@ -1,23 +1,18 @@
 /* !!! Generated via SASS/SCSS, please do not modify !!! */
-@import 
+@import
 "_reset.scss",
 "_variables.scss", 
 "_base-grid.scss", 
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-"_inherited.scss",
 "_home.scss",	
 "_interior.scss",
 "_download.scss",
-"_post-list.scss",
-"_products.scss",
-"_features.scss",
-"_reviews.scss",
 "_input-n-button.scss",
-"regions/_header.scss",
-"regions/_masthead.scss",
-"regions/_footer.scss";
+"_header.scss",
+"_masthead.scss",
+"_footer.scss";
 
 
 // ! Basic/Generic Styles ===========================================
@@ -261,10 +256,54 @@ h1 {
 		}
 		
 	}
-	
 }
 
-// styling title for article & news
+
+// ! Special body styles ===========================================
+
+body.reviews {
+  #masthead{
+	  background-color: #1E2933;
+	  background-image: url(../images/reviewmasthead.png);
+	  background-position: center 28px;
+	  background-repeat: no-repeat;
+  }
+  #content {
+    .wrapper {
+      padding: 40px 0;
+    }
+  }
+}
+
+body.features {
+  #masthead{
+	  background-color: #237A3C;
+	  background-image: url(../images/featuremasthead.png);
+	  background-position: center 28px;
+	  background-repeat: no-repeat;
+  }
+  #content {
+    .wrapper {
+      padding: 20px 0;
+    }
+  }
+}
+
+body.products {
+  #masthead{
+	  background: $dark-blue2;
+  }
+  #content {
+    .wrapper {
+      padding: 20px 0;
+    }
+  }
+}
+
+// ! END Special body styles ===========================================
+
+
+// Styling title for article & news
 .article, .news { 
  	article {
 	    h2 {
@@ -2857,6 +2896,16 @@ ul.pills {
 }
 .waiting span {
 	visibility: hidden
+}
+
+.post-list {
+	.wrapper {
+		//padding: 50px 0;
+	}
+	.group-left {
+		margin: 50px 0 0 0;
+		//@include col(2,3,0);
+	}
 }
 
 // ! ads ===========================================
