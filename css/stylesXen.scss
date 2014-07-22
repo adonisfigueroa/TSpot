@@ -1,17 +1,16 @@
 /* !!! Generated via SASS/SCSS, please do not modify !!! */
-@import 
+@import
 "_reset.scss",
 "_variables.scss", 
 "_base-grid.scss", 
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-"_inherited.scss",
 "_home.scss",	
 "_interior.scss",
-"regions/_header.scss",
-"regions/_masthead.scss",
-"regions/_footer.scss";
+"_header.scss",
+"_masthead.scss",
+"_footer.scss";
 
 
 // ! Basic/Generic Styles ===========================================
@@ -255,10 +254,54 @@ h1 {
 		}
 		
 	}
-	
 }
 
-// styling title for article & news
+
+// ! Special body styles ===========================================
+
+body.reviews {
+  #masthead{
+	  background-color: #1E2933;
+	  background-image: url(../images/reviewmasthead.png);
+	  background-position: center 28px;
+	  background-repeat: no-repeat;
+  }
+  #content {
+    .wrapper {
+      padding: 40px 0;
+    }
+  }
+}
+
+body.features {
+  #masthead{
+	  background-color: #237A3C;
+	  background-image: url(../images/featuremasthead.png);
+	  background-position: center 28px;
+	  background-repeat: no-repeat;
+  }
+  #content {
+    .wrapper {
+      padding: 20px 0;
+    }
+  }
+}
+
+body.products {
+  #masthead{
+	  background: $dark-blue2;
+  }
+  #content {
+    .wrapper {
+      padding: 20px 0;
+    }
+  }
+}
+
+// ! END Special body styles ===========================================
+
+
+// Styling title for article & news
 .article, .news { 
  	article {
 	    h2 {
@@ -1324,7 +1367,7 @@ hgroup.featured-image {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px #333;
+			text-shadow: 1px 1px 5px #222;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -2014,9 +2057,11 @@ ul.category-chicklets {
 			padding-left: 20px;
 			margin-bottom: 5px;
 			font-family: "Roboto Condensed", sans-serif;
+			font-weight: 400;
 			
 			a {
-				border-bottom: solid 3px;
+				border-bottom: solid 1px;
+				padding-bottom: 3px;
 			}
 		}
 		.pros h3, .cons h3 {
@@ -2848,6 +2893,16 @@ ul.pills {
 	visibility: hidden
 }
 
+.post-list {
+	.wrapper {
+		//padding: 50px 0;
+	}
+	.group-left {
+		margin: 50px 0 0 0;
+		//@include col(2,3,0);
+	}
+}
+
 // ! ads ===========================================
 
 .mobile-hide {
@@ -2862,6 +2917,9 @@ ul.pills {
 	
 	&.grey {
 		background-color: #F5F5F5;
+	}
+	&.dark {
+		background-color: #1e2933;
 	}	
 	.wrapper {
 		padding: 20px 0 15px;
