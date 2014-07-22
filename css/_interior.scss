@@ -2220,7 +2220,7 @@ body.interior {
 		width: 100% !important;
 	}
 	@include break(mobile){
-		padding-bottom: 30px;
+		padding-bottom: 30px !important;
 	}
 
 	a span {
