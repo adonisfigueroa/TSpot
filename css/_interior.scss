@@ -2007,6 +2007,20 @@ body.interior {
 			}
 		}
 
+		.col-2-3{
+			width: 69%;
+			@include break(v-tablet) {
+				width: 100%;
+			}
+			
+			@include break(mobile) {
+				width: 100%;
+				.wrapperMobileOnly {
+					width:  96%;
+					padding: 0 2%;
+				}
+			}
+		}
 		
 		#content {
 			position: relative;
