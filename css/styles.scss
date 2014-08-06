@@ -882,16 +882,24 @@ h3.longtype {
 	}
 	
 	&.left {
-		/* float: left; */
+		float: left;
 		padding-top: 5px;
+	}
 
-		padding-right: 45px;
+	&.article-special {
+		padding-top: 5px;
+		margin-right: 66px;
 
 		@include break(big-desk){
-			padding-right: 0;
+			margin-right: 0;
+		}
+		@include break(plus-desk){
+			margin-right: 50px;
+		}
+		@include break(tablet){
+			margin-right: 62px;
 		}
 	}
-	
 }
 
 .related-products {
@@ -952,6 +960,7 @@ h3.longtype {
       a {
         display: block;
         padding: 12px;
+        background: white;
         
         &:hover {
           h3 {

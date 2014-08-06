@@ -11,6 +11,9 @@
 	@if $point == big-desk {
 		@media screen and (min-width: $big-desk) { @content }
 	}
+	@if $point == plus-desk {
+		@media screen and (min-width: $plus-desk) and (max-width: $big-desk) { @content }
+	}
 	@if $point == desk {
 		@media screen { @content }
 	}
@@ -45,7 +48,6 @@
 		@media only screen and (max-width: $v-mobile) { @content }
 	}
 }
-
 
 
 

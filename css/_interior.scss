@@ -106,7 +106,7 @@ body.interior {
 		}
 
 		img.big {
-			margin-left: -350px;
+			/* margin-left: -350px; */
 			max-width: none;
 			width: 1020px;
 
@@ -327,6 +327,34 @@ body.interior {
 			}
 			
 		}
+	}
+
+	.article-table {
+	  margin: 15px 0 30px;
+	  font-size: 0.85em;
+	  tr {
+	    padding: 3px 0 3px 10px;
+	  }
+	  td {
+	    padding: inherit;
+	    text-align: center;
+	  }
+	  tr {
+	    &.title {
+	      background-color: #105ab2;
+	      color: #ffffff;
+	      a {
+	        color: #ffffff;
+	      }
+	    }
+	    &.alt {
+	      background-color: white;
+	    }
+	  }
+	  td.cat {
+	    font-weight: bold;
+	    text-align: left;
+	  }
 	}
 
 	&.white {
@@ -2007,18 +2035,18 @@ body.interior {
 			}
 		}
 
-		.col-2-3{
-			width: 69%;
+		.col-2-3-last{
+			float: left !important;
+			width: 66%;
+
+			@include break(big-desk){
+				width: 68%;
+			}
+			@include break(tablet) {
+				width: 64%;
+			}
 			@include break(v-tablet) {
 				width: 100%;
-			}
-			
-			@include break(mobile) {
-				width: 100%;
-				.wrapperMobileOnly {
-					width:  96%;
-					padding: 0 2%;
-				}
 			}
 		}
 		
@@ -2089,11 +2117,14 @@ body.interior {
 				}
 			}
 			article {
-				width: 90%;
+				width: 94%;
 				float: left;
 
 				@include break(big-desk){
 					width: 100%
+				}
+				@include break(v-tablet){
+					width: 90%
 				}
 				@include break(mobile){
 					width: 100%
@@ -2221,13 +2252,12 @@ body.interior {
 
 			}
 		}
-
 	}
 }
 .article nav.page-nav {
 	text-align: right;
 	float: left;
-	width: 90% !important;
+	width: 94% !important;
 	margin: 0 !important;
 
 	@include break(big-desk){
@@ -2238,6 +2268,7 @@ body.interior {
 	}
 
 	a span {
+		font-size: 0.75em;
 		&:after {
 					content:"";
 					display: block;
@@ -2260,6 +2291,9 @@ body.interior {
 					@include triangle(right,$orange,8,10);
 				}
 			}
+	}
+	a strong {
+		font-size: 0.85em;
 	}
 	
 }
