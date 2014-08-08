@@ -331,7 +331,7 @@ body.interior {
 
 	.article-table {
 	  margin: 15px 0 30px;
-	  font-size: 0.85em;
+	  font-size: 0.9em;
 	  tr {
 	    padding: 3px 0 3px 10px;
 	  }
@@ -350,9 +350,12 @@ body.interior {
 	    &.alt {
 	      background-color: white;
 	    }
+	    &.sub {
+	      background-color: #ddd;
+	    }
 	  }
 	  td.cat {
-	    font-weight: bold;
+	    font-weight: 500;
 	    text-align: left;
 	  }
 	}
