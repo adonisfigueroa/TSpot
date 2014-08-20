@@ -205,16 +205,14 @@ h1 {
 	background-color: $light-grey;
 	font-weight: 200;
 	z-index: 1;
+
 	.wrapper {
 		padding: 25px 0;
 		@include break(mobile) {
 			width: 100%;
 			padding: 25px 0px 0px 0px;
-			.comment-count-block{
-				display: none;
-			}
+		}
 	}
-}
 	
 	.group-left {
 		@include col(2,3,2);
@@ -1040,6 +1038,9 @@ h3.longtype {
 }
 
 #comments {
+
+  background: white;
+
   & > .wrapper {
     padding: 30px 0 10px 8px;
     position: relative;
@@ -1076,9 +1077,12 @@ h3.longtype {
   h3 {
     color: #4484D0;
     font-size: 1.2em;
-    
+
+	span.small {
+		font-size: 0.55em;
+	}
+
   }
-  background: white;
   
   a.post-new-comment {
 		display: inline-block;
@@ -1235,11 +1239,19 @@ h3.longtype {
 			width: 300px;
 			text-align: center;
 			float: left;
-			position: absolute;
-			margin-top: 40px;
+			margin-top: 10px;
 			color: black;
 			text-shadow: 0 1px 0 rgba(255,255,255,0.9);
 			cursor: pointer;
+
+	  	 	padding-top: 5px;
+	  	 	height: 30px;
+	  	 	line-height: 25px;
+	  	 	font-weight: 700;
+	  	 	font-family: $f-helvetica;
+	  	 	border: solid 1px #AAAAAA;
+	  	 	@include border-radius(5px);
+	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
 
 			&.post {
 				height: 36px;

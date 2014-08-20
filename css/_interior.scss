@@ -181,7 +181,7 @@ body.interior {
 			overflow: hidden;
 
 			@include break(mobile){
-				height: 100px;
+				height: 120px;
 			}
 			
 		}
@@ -228,20 +228,20 @@ body.interior {
 						}
 						@include break(mobile){
 							font-size: 0;
-							height: 100px;
+							height: 120px;
 						}
 					}
 					strong {
 						@include col-last(5,6,0);
 						height: 90px;
 						@include break(mobile){
-							height: 100px;
+							height: 120px;
 						}
 					}
 					.page-nav-wrapper {
 						height: 90px;
 						@include break(mobile){
-							height: 100px;
+							height: 120px;
 						}
 					}
 
@@ -278,14 +278,14 @@ body.interior {
 						}
 						@include break(mobile){
 							font-size: 0;
-							height: 100px;
+							height: 120px;
 						}
 					}
 					strong {
 						@include col-last(5,6,0);
 						height: 105px;
 						@include break(mobile){
-							height: 100px;
+							height: 120px;
 						}
 					}
 
@@ -874,89 +874,82 @@ body.interior {
 			}
 		}
 		
-		
-		
-		
 		&.news {
-  		#content {
-    		article {
-	      		margin-bottom: 45px;
-	      		@include break(mobile) {
-		      		margin-bottom: 0px;
-	      		}
-    		}
-    		
-    		.social-column {
-    		  z-index: 1;
-    		  .tags {
-      		  	margin: 25px auto 60px;
-    		  }
-			  .social:hover {
-	      		  .SocialHover {
-					right: -100px;
-					@include break(mobile){
-						right: 0 !important;
-						top:auto !important;
+	  		#content {
+	    		article {
+		      		margin-bottom: 45px;
+		      		@include break(mobile) {
+			      		margin-bottom: 5px;
+		      		}
+	    		}
+	    		
+	    		.social-column {
+	    		  z-index: 1;
+	    		  .tags {
+	      		  	margin: 25px auto 60px;
+	    		  }
+				  .social:hover {
+		      		  .SocialHover {
+						right: -100px;
+						@include break(mobile){
+							right: 0 !important;
+							top:auto !important;
+						}
 					}
-				}
-    		  }
-    		}
-    		
-  		}
-  		.col-1-3-last {
-	  		@include break(v-tablet){
-		  		display: none;
+	    		  }
+	    		}
+	    		
 	  		}
-	  		.SideRectAd{
-			  		padding-top: 40px;
+	  		.col-1-3-last {
+		  		@include break(v-tablet){
+			  		display: none;
 		  		}
-  		}
-  		#comments{
-	  		@include break(mobile){
-		  		display: none;
-		  		
+		  		.SideRectAd{
+				  		padding-top: 40px;
+			  		}
 	  		}
-  		}
-  		#mobComBut {
-	  		display: none;
-	  		text-align: center;
-	  		padding-top: 20px;
-	  		padding-bottom: 50px;
-	  		background-color: $light-grey;
-	  		@include break(mobile){
-		  		display: block;
-		  	}
-  		}
-  		.ComBut {
-	  	 	padding-top: 5px;
-	  	 	color: $blue;
-	  	 	height: 30px;
-	  	 	line-height: 25px;
-	  	 	font-size: 0.8em;
-	  	 	font-weight: 700;
-	  	 	display: block;
-	  	 	font-family: $f-helvetica;
-	  	 	border: solid 1px #AAAAAA;
-	  	 	@include border-radius(5px);
-	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
-	
-			span {
-				margin-top: -2px;
-				display: block;
-			}
-	  	 	
-	  	 	span.count {
-		  	 	background: grey;
-				border-radius: 100px;
-				min-width: 15px;
-				display: inline-block;
-				color: white;
-				padding-left: 5px;
-				padding-right: 5px;
-	  	 	}
-	  	 	
-	  	 	
-  		}
+	  		#comments{
+		  		@include break(mobile){
+			  		display: none;
+		  		}
+	  		}
+	  		#mobComBut {
+		  		display: none;
+		  		text-align: center;
+		  		padding-top: 20px;
+		  		padding-bottom: 50px;
+		  		background-color: $light-grey;
+		  		@include break(mobile){
+			  		display: block;
+			  	}
+	  		}
+	  		.ComBut {
+	  			font-size: 0.9em;
+	  			display: block;
+		  	 	padding-top: 5px;
+		  	 	height: 30px;
+		  	 	line-height: 25px;
+		  	 	font-weight: 700;
+		  	 	font-family: $f-helvetica;
+		  	 	border: solid 1px #AAAAAA;
+		  	 	@include border-radius(5px);
+		  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
+		
+				span {
+					margin-top: -2px;
+					display: block;
+				}
+		  	 	
+		  	 	span.count {
+			  	 	background: grey;
+					border-radius: 100px;
+					min-width: 15px;
+					display: inline-block;
+					color: white;
+					padding-left: 5px;
+					padding-right: 5px;
+		  	 	}
+	  		}
 		}
 		
 		&.product {
@@ -1935,11 +1928,9 @@ body.interior {
 				display: block;
 				font-size: 1.1em;
 				
-				
 				&.comment-count {
 					color: $red;
 				}
-				
 				&.interactions-count {
 					color: #39579D;
 					font-size: .9em;
@@ -1947,7 +1938,36 @@ body.interior {
 				}
 			}
 		}
-		
+
+		@include break(mobile) {
+			display: none;
+		}
+
+		/*
+		@include break(mobile) {
+			background-position: 3px 0px;
+			background-size: contain;
+			height: 25px;
+
+			a {
+				padding-left: 48px;
+
+				span {
+					&.comment-count {
+						color: #105ab2;
+						line-height: 1.4em;
+						font-size: 0.9em;
+						font-weight: 500;
+					}
+					
+					&.interactions-count {
+						display: none;
+					}
+				}
+			}
+		}
+		*/
+
 	}
 	
 	&.article {
