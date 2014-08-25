@@ -1,5 +1,4 @@
-.home {
-#masthead {
+#masthead, #related {
 	background: $grey;
 	height: 500px;
 	position: relative;
@@ -1406,7 +1405,7 @@
 			}
 		}
 	}
-}
+
 .BigHead {
 	height: 500px !important;
 	@include break (mobile){
@@ -2179,5 +2178,5 @@
 			}
 
 	}
-	}	
+	}
 }
