@@ -501,6 +501,9 @@ body.products {
 					
 					&.read-more {
 						background-image: url(../images/read-more-arrow.svg);
+						@include break(mobile){
+							display: none;
+						}
 					}
 					
 					&.comment-count {
