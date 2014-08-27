@@ -1900,7 +1900,7 @@ body.interior {
 			font-weight: 400;
 			line-height: 2 !important;
 			height: 100px;
-			padding-bottom: 40px;
+			/* padding-bottom: 10px; */
 
 			.count {
 				font-size: 1.2em;
@@ -2061,6 +2061,7 @@ body.interior {
 		.col-2-3-last{
 			float: left !important;
 			width: 66%;
+			padding-bottom: 20px;
 
 			@include break(big-desk){
 				width: 68%;
@@ -2108,7 +2109,7 @@ body.interior {
 			.index-mobile {
 				.article-index {
 					display: block;
-					margin: 50px 0 0;
+					margin: 30px 0 0;
 					width: 94%;
 
 					@include break(big-desk){

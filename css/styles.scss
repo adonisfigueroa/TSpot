@@ -401,6 +401,7 @@ body.products {
 				}
 			}
 
+			/*
 			&.featured {
 				h2 {
 					a {
@@ -408,11 +409,12 @@ body.products {
 					}
 				}
 			}
+			*/
 
 			&.fullview {
 				h2 {
 					a {
-					  font-size: 100%;
+					  font-size: 1.3em;
 					}
 				}
 			}
@@ -559,7 +561,6 @@ body.products {
 	&.fullview {
 		max-width: 98%;
 		h2 {
-			font-size: 30px;
 		}
 		time {
 			font-size: 13px !important;
@@ -571,6 +572,7 @@ body.products {
 		}
 		img {
 			max-width: 100% !important;
+			padding-top: 20px;
 		}
 	}
 }
