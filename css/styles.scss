@@ -809,9 +809,9 @@ h3.longtype {
 	
 	
 	ul.teaser-list {
-		padding: 10px 0 25px;
+		padding: 0 0 28px;
 		li {
-			/* margin-bottom: 15px; */
+			padding: 20px 0 0;
 			@include clearfix(before);
 			@include clearfix(after);
 			
@@ -820,14 +820,13 @@ h3.longtype {
 					img {
 						width: 100%;
 						height: auto;
-						padding: 8px 0 18px;
+						padding: 4px 0 0;
 					}
 					@include col(5,11,5);
 				}
 				span {
-					font-size: .85em;
+					font-size: .80em;
 					font-weight: 500;
-					padding: 6px 0 0;
 					@include col-last(6,11,5);
 				}
 				
