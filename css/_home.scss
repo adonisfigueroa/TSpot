@@ -1,11 +1,11 @@
 body.home {
   #dk_menu {
-	  height: 38px;
+	  height: 38px !important;
   }
-  header .menu .wrapper > ul > li a.active {
-	line-height: 38px;
+  #header-ts .menu .wrapper > ul > li a.active {
+	line-height: 38px !important;
 		&:after {
-			margin-top: -5px;
+			margin-top: -5px !important;
 		}
   }
   

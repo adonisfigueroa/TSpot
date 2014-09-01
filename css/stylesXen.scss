@@ -203,16 +203,14 @@ h1 {
 	background-color: $light-grey;
 	font-weight: 200;
 	z-index: 1;
+
 	.wrapper {
 		padding: 25px 0;
 		@include break(mobile) {
 			width: 100%;
 			padding: 25px 0px 0px 0px;
-			.comment-count-block{
-				display: none;
-			}
+		}
 	}
-}
 	
 	.group-left {
 		@include col(2,3,2);
@@ -303,7 +301,7 @@ body.products {
 
 // Styling title for article & news
 .article, .news { 
- 	article {
+ 	.articleBody {
 	    h2 {
 			padding: 10px 0 20px;
 
@@ -356,6 +354,7 @@ body.products {
 				margin-top: 0px;
 			}
 */
+
 			img {
 				max-width: 100%;
 				height: auto;
@@ -401,6 +400,7 @@ body.products {
 				}
 			}
 
+			/*
 			&.featured {
 				h2 {
 					a {
@@ -408,16 +408,17 @@ body.products {
 					}
 				}
 			}
+			*/
 
 			&.fullview {
 				h2 {
 					a {
-					  font-size: 100%;
+					  font-size: 1.3em;
 					}
 				}
 			}
 
-			time {
+			.byline {
 				color: #666666;
 				font-weight: 400;
 				font-size: .6em;
@@ -501,6 +502,9 @@ body.products {
 					
 					&.read-more {
 						background-image: url(../images/read-more-arrow.svg);
+						@include break(mobile){
+							display: none;
+						}
 					}
 					
 					&.comment-count {
@@ -556,7 +560,6 @@ body.products {
 	&.fullview {
 		max-width: 98%;
 		h2 {
-			font-size: 30px;
 		}
 		time {
 			font-size: 13px !important;
@@ -568,6 +571,7 @@ body.products {
 		}
 		img {
 			max-width: 100% !important;
+			padding-top: 20px;
 		}
 	}
 }
@@ -804,9 +808,9 @@ h3.longtype {
 	
 	
 	ul.teaser-list {
-		padding: 10px 0 15px;
+		padding: 0 0 28px;
 		li {
-			margin-bottom: 15px;
+			padding: 20px 0 0;
 			@include clearfix(before);
 			@include clearfix(after);
 			
@@ -815,14 +819,13 @@ h3.longtype {
 					img {
 						width: 100%;
 						height: auto;
-						padding: 8px 0 18px;
+						padding: 4px 0 6px;
 					}
 					@include col(5,11,5);
 				}
 				span {
-					font-size: .85em;
+					font-size: .80em;
 					font-weight: 500;
-					padding: 6px 0 0;
 					@include col-last(6,11,5);
 				}
 				
@@ -883,7 +886,21 @@ h3.longtype {
 		float: left;
 		padding-top: 5px;
 	}
-	
+
+	&.article-special {
+		padding-top: 5px;
+		margin-right: 66px;
+
+		@include break(big-desk){
+			margin-right: 0;
+		}
+		@include break(plus-desk){
+			margin-right: 50px;
+		}
+		@include break(tablet){
+			margin-right: 62px;
+		}
+	}
 }
 
 .related-products {
@@ -944,6 +961,7 @@ h3.longtype {
       a {
         display: block;
         padding: 12px;
+        background: white;
         
         &:hover {
           h3 {
@@ -1023,6 +1041,9 @@ h3.longtype {
 }
 
 #comments {
+
+  background: white;
+
   & > .wrapper {
     padding: 30px 0 10px 8px;
     position: relative;
@@ -1059,9 +1080,12 @@ h3.longtype {
   h3 {
     color: #4484D0;
     font-size: 1.2em;
-    
+
+	span.small {
+		font-size: 0.55em;
+	}
+
   }
-  background: white;
   
   a.post-new-comment {
 		display: inline-block;
@@ -1218,11 +1242,19 @@ h3.longtype {
 			width: 300px;
 			text-align: center;
 			float: left;
-			position: absolute;
-			margin-top: 40px;
+			margin-top: 10px;
 			color: black;
 			text-shadow: 0 1px 0 rgba(255,255,255,0.9);
 			cursor: pointer;
+
+	  	 	padding-top: 5px;
+	  	 	height: 30px;
+	  	 	line-height: 25px;
+	  	 	font-weight: 700;
+	  	 	font-family: $f-helvetica;
+	  	 	border: solid 1px #AAAAAA;
+	  	 	@include border-radius(5px);
+	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
 
 			&.post {
 				height: 36px;
@@ -1847,8 +1879,8 @@ ul.category-chicklets {
 		@include col-last(2,3,8);
 	}
 	&.special{
-		width: 100%;
-		article {
+		width: 100% !important;
+		.articleBody {
 			width: 94% !important;
 		}		
 	}
@@ -2693,6 +2725,9 @@ ul.category-chicklets {
 	#content {
     	#pros_cons {
        		padding-top: 70px !important;
+			@include break(mobile){
+				padding-top: 0px !important;
+			}
 		}
 		#pros_cons.collapsed li:nth-child(n+6){
 			display: none;

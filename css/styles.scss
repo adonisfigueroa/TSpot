@@ -6,7 +6,7 @@
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-"_home.scss",	
+"_home.scss",
 "_interior.scss",
 "_download.scss",
 "_input-n-button.scss",
@@ -203,7 +203,6 @@ h1 {
 
 #content {
 	background-color: $light-grey;
-	font-weight: 200;
 	z-index: 1;
 
 	.wrapper {
@@ -265,6 +264,11 @@ body.reviews {
 	  background-image: url(../images/reviewmasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
+
+    .wrapper {
+      padding: 0 !important;
+    }
+
   }
   #content {
     .wrapper {
@@ -279,6 +283,10 @@ body.features {
 	  background-image: url(../images/featuremasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
+    .wrapper {
+      padding: 0 !important;
+    }
+
   }
   #content {
     .wrapper {
@@ -289,7 +297,10 @@ body.features {
 
 body.products {
   #masthead{
-	  background: $dark-blue2;
+	background: $dark-blue2;
+    .wrapper {
+      padding: 0 !important;
+    }
   }
   #content {
     .wrapper {
@@ -303,7 +314,7 @@ body.products {
 
 // Styling title for article & news
 .article, .news { 
- 	article {
+ 	.articleBody {
 	    h2 {
 			padding: 10px 0 20px;
 
@@ -356,6 +367,7 @@ body.products {
 				margin-top: 0px;
 			}
 */
+
 			img {
 				max-width: 100%;
 				height: auto;
@@ -1329,7 +1341,7 @@ span._bar {
 		background: $purple;
 	}			
 }
-hgroup.featured-image {
+#content-header.featured-image {
 	display: block;
 	min-height: 70vh;
 	max-height: 600px;
@@ -1880,8 +1892,8 @@ ul.category-chicklets {
 		@include col-last(2,3,8);
 	}
 	&.special{
-		width: 100%;
-		article {
+		width: 100% !important;
+		.articleBody {
 			width: 94% !important;
 		}		
 	}
@@ -1979,11 +1991,11 @@ ul.category-chicklets {
     .flex-control-nav {
 			width: 100%;
 			position: absolute;
-			bottom: -40px;
+			bottom: -45px;
 			text-align: center;
 			cursor: pointer;
 			@include break(mobile){
-				bottom: -25px;
+				bottom: -35px;
 			}
 			li {
 				margin: 0 6px;
@@ -2716,28 +2728,6 @@ ul.category-chicklets {
 	*/
 	
 }
-.product {
-	#sidebar {
-		margin-top: 40px !important;
-		@include break(tablet){
-			margin-top: 50px !important;
-		}
-	}
-	#content {
-    	#pros_cons {
-       		padding-top: 70px !important;
-			@include break(mobile){
-				padding-top: 0px !important;
-			}
-		}
-		#pros_cons.collapsed li:nth-child(n+6){
-			display: none;
-		}
-		@include break(mobile){
-			margin-top: 0px !important;
-		}
-	}
-}
 .products-cat time{
 	display: block !important;
 }
@@ -2958,7 +2948,7 @@ ul.pills {
 		background-color: #1e2933;
 	}	
 	.wrapper {
-		padding: 20px 0 15px;
+		padding: 20px 0 15px !important;
 		text-align: center;
 	}
 
