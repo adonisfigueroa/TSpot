@@ -447,6 +447,10 @@ body.interior {
 			
 			.wrapper {
 				padding: 25px 0 35px;
+
+				@include break(mobile) {
+					width: 96%;
+				}
 			}
 			
 			.title-group {
@@ -498,6 +502,9 @@ body.interior {
 				line-height: 1.4;
 				margin-top: 15px;
 				letter-spacing: -0.333px;
+					@include break(mobile) {
+			        	font-size: 1.6em;
+		        	}
 			}
 
 			.page-intro {
@@ -507,9 +514,14 @@ body.interior {
 			}
 
 			.downloads-table {
-				margin: 25px 3px 25px;
+				margin: 15px auto 25px;
 				color: #05408F;
 				font-size: 0.9em;
+				width: 100%;
+
+				@include break(v-mobile) {
+					margin: 25px auto;
+				}
 
 				td {
 					height: 48px;
@@ -520,15 +532,17 @@ body.interior {
 					font-weight: 500;
 					padding-left: 12px;
 
+					@include break(v-mobile) {
+			        	font-size: .85em;
+			        	line-height: 1.2;
+			        	padding-left: 7px;
+		        	}
+
 					a {
 						&:hover {
 							border-bottom: 1px solid #3470AA;
 							padding-bottom: 1px;
 						}
-
-						@include break(v-mobile) {
-				        	font-size: .75em;
-			        	}
 					}
 				}
 			}
@@ -737,6 +751,10 @@ body.interior {
 			
 			.wrapper {
 				padding: 25px 0 50px;
+
+				@include break(mobile) {
+					width: 96%;
+				}
 			}
 			
 			.title-group {
@@ -827,6 +845,7 @@ body.interior {
 
 				@include break(mobile){
 					border: none;
+					margin-bottom: 25px;
 				}
 			}
 			
@@ -998,7 +1017,11 @@ body.interior {
 	&.download {
     	#content-header {
 	      	.title-group {
-				margin-top: 30px !important;
+				margin-top: 30px;
+
+				@include break(mobile){
+					margin-top: 15px;
+				}
 
 				.wrapper {
 						padding: 25px 0 35px;
@@ -1040,6 +1063,10 @@ body.interior {
   		#content-header {
 			.wrapper {
 			  	padding: 20px 0 50px;
+
+				@include break(mobile){
+					padding: 20px 0 30px;
+				}
 			}
 
 			h1.large {
@@ -1128,13 +1155,15 @@ body.interior {
 	        	line-height: 50px;
 	        	text-align: center;
 	        	border: 1px solid #DDDDDD;
-	        	color: black;
-	        	font-weight: 300;
+	        	color: #333;
 	        	font-size: 1.1em;
-	        	
-	        	
+
+				@include break(mobile){
+					font-size: 0.9em;
+		        }
+
 	        	&:hover {
-	          	background: darken(#F8F8F8,5%);
+		          	background: darken(#F8F8F8,5%);
 	        	}
 	      	}
         
@@ -1249,9 +1278,10 @@ body.interior {
 						font-size:1em;
 						margin-top: 8px;
 					}
+
 					@include break(v-mobile){
-						font-size:0.85em;
-						margin-top: 8px;
+						font-size: 0.9em;
+						margin-top: 12px;
 					}
 
 				}
@@ -1298,7 +1328,7 @@ body.interior {
 					}
 					@media screen and (max-width:530px){
 						position: absolute;
-						margin-top: 11px;
+						margin-top: 6px;
 						display: none;
 					}
 					
@@ -1730,9 +1760,12 @@ body.interior {
 				padding: 0;
 				margin: 0;
 				li {
-					h3{
+					h3 {
 						line-height: 1.5;
-						font-size: 1.05;
+
+						@include break(v-mobile){
+							font-size: 0.9em;
+						}
 					}
 					p {
 						font-weight: 400;
@@ -1745,6 +1778,9 @@ body.interior {
 						padding: 5px 0 !important;
 						font-weight: 400;
 						color: #333; 
+						@include break(mobile){
+							display: none;
+						}
 					}
 					.more_info {
 						float: right;
@@ -1801,11 +1837,13 @@ body.interior {
 					@include break(mobile){
 						left: 3%;
 					}
+					/*
 					@include break(v-mobile){
 						position: relative;
 						width: 100%;
 						left: 0;
 					}
+					*/
 				}
 				.img{
 					width: 180px;
@@ -1813,6 +1851,11 @@ body.interior {
 					line-height: 120px;
 					text-align: center;
 					overflow: hidden;
+					@include break(v-mobile){
+						width: 150px;
+						height: 100px;
+					}
+					/*
 					@include break(v-mobile){
 						width: 100%;
 						height: auto;
@@ -1822,6 +1865,7 @@ body.interior {
 							height: auto;
 						}
 					}
+					*/
 				}
 			}
 		}
@@ -1829,12 +1873,15 @@ body.interior {
 			ul {
 				li {
 					padding: 20px 100px 20px 215px; 
-					@include break(mobile){
+					@include break(mobile) {
 						padding: 14px 20px 14px 215px; 
 					}
-					@include break(v-mobile){
-						padding: 14px 14px 14px 14px; 
+					@include break(v-mobile) {
+						padding: 12px 15px 12px 180px;
 					}
+					/*@include break(v-mobile){
+						padding: 14px 14px 14px 14px; 
+					}*/
 				}
 			}
 		}
@@ -1845,9 +1892,12 @@ body.interior {
 					@include break(mobile){
 						padding: 14px 20px 14px 215px; 
 					}
-					@include break(v-mobile){
-						padding: 14px 14px 14px 14px; 
+					@include break(v-mobile) {
+						padding: 12px 15px 12px 180px;
 					}
+					/*@include break(v-mobile){
+						padding: 14px 14px 14px 14px; 
+					}*/
 				}
 			}
 		}
@@ -1858,9 +1908,6 @@ body.interior {
 			font-family: "Roboto Condensed", sans-serif;
 			font-size: 0.7em;
 
-			@include break(v-tablet){
-				font-size: 0.6em;
-			}
 			@include break(mobile){
 				width: 100%;
 				padding: 10px 3% 0px 3%;
@@ -2143,14 +2190,14 @@ body.interior {
 		
 		#content {
 			position: relative;
+
 			.wrapper {
 				overflow: visible;
 				padding: 40px 0;
 				@include break(mobile) {
-					padding: 25px 0 0;
+					padding: 25px 0 30px;
 				}
 			}
-			padding-bottom: 30px;
 			.social-column {
 				position: absolute;
 				right: 0;
@@ -2299,8 +2346,9 @@ body.interior {
 
 				}
 
-				.article {
+				article {
 					width: 94%;
+					font-size: 0.9em;
 
 					@include break(mobile){
 						font-size: 0.8em;
@@ -2320,6 +2368,8 @@ body.interior {
 				}
 				h2 {
 					font-size: 1.4em;
+					font-weight: 500;
+					padding: 20px 0 15px;
 				}
 
 				.index-mobile {
@@ -2332,8 +2382,9 @@ body.interior {
 						width: 100%;
 
 						.pad ul {
-							font-size: 1.1em;
-							margin: 5% 0 0 14%;
+							font-size: 1.2em;
+							margin: 4% 0 0 14%;
+							line-height: 1.8;
 						}
 					}
 					@include break(mobile){
@@ -2436,7 +2487,7 @@ body.interior {
 	.arrow{
   	width: 10px;
   	height: 10px;
-  	background: url(http://static.techspot.com/images/pf_show_sorter.png);
+  	background: url(/images/pf_show_sorter.png);
   	display: inline-block;
   	zoom: 1; 
   	display: inline;

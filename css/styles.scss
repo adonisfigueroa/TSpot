@@ -917,7 +917,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 35px 0 10px;
+  margin: 0 0 10px;
   @include break(v-tablet){
 	  display: none;
   }
@@ -1315,7 +1315,7 @@ h3.longtype {
 		zoom: 1;
 		vertical-align: middle;
 		margin-right: 10px;
-		background: url(http://static.techspot.com/images/staff_badge.png) no-repeat;
+		background: url(/images/staff_badge.png) no-repeat;
 		width: 59px;
 		height: 22px;
 		overflow: hidden;
@@ -1539,14 +1539,14 @@ ul.category-chicklets {
 	margin: 0 auto;
 	background: white;
 	border-bottom: 5px solid $orange;
+
 	@include break(mobile){
-		width: 100%;
+		width: 98%;
 		height: 35px;
 		border-bottom: 0px solid $orange;
-		margin: 0px 0px 0px 1px;
 	} 
-	li {
-	
+
+	li {	
 		&.social-count {
 			background-color: $orange;
 			color: white;
@@ -1852,7 +1852,7 @@ ul.category-chicklets {
 			}
 		}
 		@include break(v-mobile){
-			display: none;
+			display: none !important;
 		}
 	}
 }
@@ -1943,7 +1943,7 @@ ul.category-chicklets {
     @include break(tablet){
     	margin-right: 2%;
 	    img{
-		    width: 100%;
+		    width: 96%;
 		    height: auto;
 	    }
     }
@@ -2440,14 +2440,16 @@ ul.category-chicklets {
 
 .also-looked-at,
 .expert-reviews-and-ratings {
-  margin-bottom: 25px;
+	margin-bottom: 25px;
+
+	@include break(mobile){
+		margin-bottom: 55px;
+	}
+
   & > h3 {
     font-weight: 400;
     border-bottom: 2px solid $blue;
     line-height: 230%;
-    @include break(v-mobile){
-	     line-height: 130%;
-    }
     
     span {
       position: relative;
@@ -2953,11 +2955,7 @@ ul.pills {
 	}
 
 	@include break(mobile){
-		.wrapper {
-			padding: 0;
-			text-align: center;
-			width: 100%;
-		}
+		display: none;
 	}
 }
 
