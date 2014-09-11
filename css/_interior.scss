@@ -2114,8 +2114,8 @@ body.interior {
     		}
 
     		&.second-page {
-    			min-height: 300px;
-    			max-height: 300px;
+    			min-height: 400px;
+    			max-height: 400px;
 
     			@include break(mobile){
 	    			min-height: 120px;
@@ -2127,8 +2127,8 @@ body.interior {
     			}
 
     			.wrapper {
-    		    	min-height: 300px;
-    				max-height: 300px;
+    		    	min-height: 400px;
+    				max-height: 400px;
 
 	    			@include break(mobile){
 		    			min-height: 120px;
