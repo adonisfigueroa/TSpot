@@ -1511,26 +1511,28 @@ ul.category-chicklets {
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: .55em;
-			font-weight: 400;
+			font-weight: 500;
 			letter-spacing: 0.50px;
-			-webkit-font-smoothing: subpixel-antialiased;
+
+			&.black { color: #000; }
 		}
-		
-		&.apple 					{ background-color: #7d9dca; &:hover { background-color: lighten(#7d9dca,7%); } } 
-		&.gaming 					{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
-		&.hardware, &.drivers		{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
-		&.industry					{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
-		&.security 					{ background-color: #CBA746; &:hover { background-color: lighten(#CBA746,10%); } }
-		&.microsoft					{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
-		&.mobile 					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,10%); } }
-		&.software, &.electronics	{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
-		&.web, &.home, &.blog		{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
-		&.techspot 					{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
-		&.dotw, &.pc, &.driverscat	{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
-		&.natw	 					{ background-color: #BBBBBB; &:hover { background-color: lighten(#BBBBBB,10%); } }
-		&.deals 					{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
-		&.wof	 					{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
-		&.products, &.downloads		{ background-color: #00366F; &:hover { background-color: lighten(#00366F,10%); } }
+	
+		&.blue2, &.apple						{ background-color: #08c; &:hover { background-color: lighten(#08c,7%); } } 
+		&.red, &.gaming 						{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
+		&.green, &.hardware, &.drivers			{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
+		&.navy2, &.industry						{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
+		&.green2, &.security 					{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,10%); } }
+		&.microsoft								{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
+		&.red2, &.mobile						{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,10%); } }
+		&.purple, &.software, &.electronics		{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
+		&.orange, &.web, &.home, &.blog			{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
+		&.blue, &.techspot						{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
+		&.dotw, &.pc							{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
+		&.grey, &.natw							{ background-color: #888888; &:hover { background-color: lighten(#888888,10%); } }
+		&.deals 								{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
+		&.wof	 								{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
+		&.navy, &.products, &.downloads			{ background-color: #00366F; &:hover { background-color: lighten(#00366F,10%); } }
+		&.yellow 								{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,7%); } } 
 	}
 }
 
@@ -2806,6 +2808,55 @@ ul.pills {
     }
     
   }
+}
+
+table {
+	&.big {
+		/* margin-left: -350px; */
+		max-width: none;
+		width: 1020px;
+
+		@include break(big-desk){
+			width: 1100px;
+		}
+		
+		@include break(v-tablet){
+			margin-left: 0 !important;
+			max-width: 100%;
+			width: 100% !important;
+		}
+	}
+
+	&.article-table {
+	  margin: 15px 0 30px;
+	  font-size: 0.9em;
+	  tr {
+	    padding: 3px 0 3px 10px;
+	  }
+	  td {
+	    padding: inherit;
+	    text-align: center;
+	  }
+	  tr {
+	    &.title {
+	      background-color: #105ab2;
+	      color: #ffffff;
+	      a {
+	        color: #ffffff;
+	      }
+	    }
+	    &.alt {
+	      background-color: white;
+	    }
+	    &.sub {
+	      background-color: #ddd;
+	    }
+	  }
+	  td.cat {
+	    font-weight: 500;
+	    text-align: left;
+	  }
+	}
 }
 
 /* PF widgets para noticias y reviews */

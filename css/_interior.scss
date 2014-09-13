@@ -370,37 +370,6 @@ body.interior {
 		}
 	}
 
-	.article-table {
-	  margin: 15px 0 30px;
-	  font-size: 0.9em;
-	  tr {
-	    padding: 3px 0 3px 10px;
-	  }
-	  td {
-	    padding: inherit;
-	    text-align: center;
-	  }
-	  tr {
-	    &.title {
-	      background-color: #105ab2;
-	      color: #ffffff;
-	      a {
-	        color: #ffffff;
-	      }
-	    }
-	    &.alt {
-	      background-color: white;
-	    }
-	    &.sub {
-	      background-color: #ddd;
-	    }
-	  }
-	  td.cat {
-	    font-weight: 500;
-	    text-align: left;
-	  }
-	}
-
 	&.white {
 		#content {
 			background: white;
@@ -2104,6 +2073,11 @@ body.interior {
     		.title-group {
 	      		h1.large {
 					font-weight: 500;
+					padding-top: 15px;
+
+	    			@include break(mobile){
+		    			padding-top: 0px;
+	    			}
 	      		}
 	      		
 	      		em {
