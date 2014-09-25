@@ -824,7 +824,7 @@ h3.section-header {
 	text-align: center;
 	padding-left: 20px;
 	text-indent: -25px;
-	font-size: 1.7em;
+	font-size: 1.7em !important;
 	@include break(tablet) {
 		font-size: 150%;
 	}

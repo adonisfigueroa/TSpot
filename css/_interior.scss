@@ -1078,8 +1078,10 @@ body.interior {
 	        	
 	        	h3.section-header {
 		          	text-transform: none;
-		          	font-size: 2.2em;
+		          	font-size: 2.0em !important;
+		          	font-weight: 600;
 		          	line-height: 140%;
+
 		          	@include break(mobile){
 			          	font-size: 1.8em;
 		          	}
