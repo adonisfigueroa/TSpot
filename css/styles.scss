@@ -1254,6 +1254,10 @@ h3.longtype {
 			p {
 				font-size: 13px;		
 			}
+
+			img {
+				max-height: 100px;
+			}
 	    }
     }
     
@@ -2548,7 +2552,7 @@ ul.category-chicklets {
       font-size: .8em;
       background: #2D3842;
       @include col(1,4,2);
-      @include outer-glow();
+      @include outer-glow(10,0,.2);
       
       &:nth-child(4) {
         @include col-last(1,4,2);
@@ -2558,7 +2562,7 @@ ul.category-chicklets {
         color: white;
       }
       .img-wrap {
-        background-size: cover;
+        background-size: 110%;
         background-repeat: no-repeat;
         background-color: white;
         background-position: center center;
@@ -2598,6 +2602,8 @@ ul.category-chicklets {
       h3 {
         text-align: center;
         padding: 10px;
+        min-height: 42px;
+		max-height: 42px;
       }
       
     }
