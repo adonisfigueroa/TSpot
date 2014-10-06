@@ -362,6 +362,17 @@ body.products {
 // Styling title for article & news
 .article, .news { 
  	.articleBody {
+ 		a {
+ 			border-bottom: 0px solid #D0DCEB;
+			box-shadow: inset 0 -4px 0 #D0DCEB;
+			color: inherit;
+
+			&:hover {
+				border-bottom: 0px solid #FBBB76;
+				box-shadow: inset 0 -4px 0 #FBBB76;
+				color: inherit;
+			}
+ 		}
 	    h2 {
 			padding: 10px 0 20px;
 
@@ -1277,6 +1288,9 @@ h3.longtype {
         }
         a {
           color: $blue;
+          &:hover {
+          	color: #c00;
+          }
         }
       }
     }
@@ -2905,6 +2919,10 @@ table {
 	&.article-table {
 	  margin: 15px 0 30px;
 	  font-size: 0.9em;
+	  a {
+	  	color: #105ab2;
+	  	box-shadow: none !important;
+	  }
 	  tr {
 	    padding: 3px 0 3px 10px;
 	  }
