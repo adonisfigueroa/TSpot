@@ -47,7 +47,11 @@ body.interior {
 		font-size: .9em;
 		font-weight: 400;
 		color: #222;
-    
+
+		@include break(mobile){
+			font-size: 0.95em;
+		}
+
 	    h2 {
 	    	font-weight: 500;
 			font-size: 1.8em;
@@ -802,8 +806,8 @@ body.interior {
 			@include break(mobile) {
 				width: 100%;
 				.wrapperMobileOnly {
-					width:  96%;
-					padding: 0 2%;
+					width:  94%;
+					padding: 0 3%;
 				}
 			}
 		}
@@ -1995,8 +1999,11 @@ body.interior {
 			font-weight: 400;
 			line-height: 2 !important;
 			height: 100px;
-			/* padding-bottom: 10px; */
 
+			@include break(mobile) {
+				height: inherit;
+			}
+			
 			.count {
 				font-size: 1.2em;
 				font-weight: 500;
@@ -2039,24 +2046,20 @@ body.interior {
 		}
 
 		@include break(mobile) {
-			display: none;
-		}
-
-		/*
-		@include break(mobile) {
-			background-position: 3px 0px;
-			background-size: contain;
-			height: 25px;
+			margin-bottom: 30px;
+/*
+			background-position: left 2px;
+			background-size: 30px;
+			padding-bottom: 3px;
 
 			a {
-				padding-left: 48px;
+				padding-left: 40px;
 
 				span {
 					&.comment-count {
 						color: #105ab2;
-						line-height: 1.4em;
 						font-size: 0.9em;
-						font-weight: 500;
+						font-weight: 400;
 					}
 					
 					&.interactions-count {
@@ -2064,9 +2067,9 @@ body.interior {
 					}
 				}
 			}
+*/
 		}
-		*/
-
+		
 	}
 	
 

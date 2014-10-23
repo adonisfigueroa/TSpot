@@ -71,13 +71,6 @@ body {
 .rating {
 	font-family: $f-helvetica-roboto;
 }
-.mobile-only-social {
-	display: none !important;
-	@include break(mobile){
-		display: block !important;
-		margin-bottom:45px !important;
-	}
-}
 #GlobalWrapper {
 	width: 100%;
     left:0px;
@@ -1355,9 +1348,9 @@ h3.longtype {
 	  	 	padding-top: 5px;
 	  	 	height: 30px;
 	  	 	line-height: 25px;
-	  	 	font-weight: 700;
-	  	 	font-family: $f-helvetica;
-	  	 	border: solid 1px #AAAAAA;
+	  	 	font-weight: 500;
+	  	 	font-family: $f-primary;
+	  	 	border: solid 1px #ccc;
 	  	 	@include border-radius(5px);
 	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
 
@@ -1628,6 +1621,11 @@ ul.category-chicklets {
 	}
 }
 
+.mobile-only-social {
+		display: block !important;
+		margin-bottom:45px !important;
+}
+
 .social-widget {
 	width: 60px;
 	margin: 0 auto;
@@ -1638,7 +1636,33 @@ ul.category-chicklets {
 		width: 98%;
 		height: 35px;
 		border-bottom: 0px solid $orange;
-	} 
+
+		&.zero {
+			border-right: 7px solid $orange;
+			li {
+				&.social {
+					&.facebook {
+						margin-left: 12.5%;
+					}
+					&.twitter {
+						margin-left: 12.5%+17*1;
+					}
+					
+					&.google_plus {
+						margin-left: 12.5%+17*2;
+					}
+					
+					&.rss {
+						margin-left: 12.5%+17*3;
+					}
+					
+					&.comments {
+						margin-left: 12.5%+17*4;
+					}
+				}
+			}
+		}
+	}
 
 	li {	
 		&.social-count {
@@ -1648,6 +1672,7 @@ ul.category-chicklets {
 			text-align: center;
 			font-size: 0.7em;
 			line-height: 25px;
+
 			@include break(mobile) {
 				display: inline-block;
 				height: inherit;
@@ -1662,9 +1687,9 @@ ul.category-chicklets {
 				@include break(mobile) {
 					border-top: none;
 					display: block;
+					width: 7px;
 				}
 			}
-
 		}
 		
 		&.social {
@@ -1673,7 +1698,7 @@ ul.category-chicklets {
 			background-position: center top;
 			line-height: 16px;
 			position: relative;
-			@include break (mobile){
+			@include break(mobile){
 				background-image: url(/images/social-widget-bg-90.svg);
 				margin-left: 30%;
 				margin-top: -30px;
@@ -1968,14 +1993,14 @@ ul.category-chicklets {
 	@include break(v-tablet){
 		width: 100% !important;
 		.wrapperMobileOnly {
-			width:  96%;
+			width:  94%;
 		}
 	}
 	@include break(mobile){
 		width: 100%;
 		.wrapperMobileOnly {
-			width:  96%;
-			padding: 0 2%;
+			width:  94%;
+			padding: 0 3%;
 		}
 	}
 }
@@ -1997,8 +2022,8 @@ ul.category-chicklets {
 	@include break(mobile){
 		width: 100%;
 		.wrapperMobileOnly {
-			width:  96%;
-			padding: 0 2%;
+			width:  94%;
+			padding: 0 3%;
 			}
 	}
 }
@@ -2716,8 +2741,8 @@ ul.category-chicklets {
 .article #content {
 	@include break(mobile){
 	.wrapperMobileOnly {
-		width:  96%;
-		padding: 0 2%;
+		width:  94%;
+		padding: 0 3%;
 		}
 	}
 }
