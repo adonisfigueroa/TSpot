@@ -36,8 +36,8 @@
 			top: 0;
 			left: 0;
 			position: absolute;
-			background-size: cover !important; 
-			background-position: center center !important;
+			background-size: cover !important;
+			background-position: center center;
 			@include transitions(0);
 			
 			&.tall {
@@ -1816,6 +1816,7 @@
 			height: 270px;
 			overflow: scroll;
 			-webkit-overflow-scrolling: touch;
+			overflow-y: hidden;
 		}
 		ul.featured-posts {
 			li {
@@ -2019,7 +2020,28 @@
 							}
 						}
 					}
-				}	
+				}
+				
+				&:nth-child(8) {
+					left: 80%*7;
+					top: 0;
+					border-bottom: 0px solid white;
+					border-left: 1px solid $mast-border;
+					border-top: 0px solid white;
+					display: block;
+					height: 270px;
+					a {
+						height: 270px - 30px;
+						hgroup {
+							h2 {
+								font-size: 1.2em;
+								@include break(v-mobile){
+									font-size: 1.1em;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
