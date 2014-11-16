@@ -991,7 +991,12 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 0 0 10px;
+  margin: 30px 0 10px;
+
+	&.related-stories {
+  		margin: 0px 0 10px;
+	}
+  
   @include break(v-tablet){
 	  display: none;
   }
