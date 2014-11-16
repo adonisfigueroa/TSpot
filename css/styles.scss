@@ -1072,7 +1072,7 @@ h3.longtype {
 			background-position: center center;
 			background-repeat: no-repeat;
 			overflow: hidden;
-			background-size: 120% auto;
+			background-size: cover;
         }
 
         img {
@@ -1114,6 +1114,7 @@ h3.longtype {
       h3 {
         font-size: 1.1em;
         padding: 2px;
+        font-weight: 500;
       }
       
       .reviews {
@@ -1623,7 +1624,6 @@ ul.category-chicklets {
 
 .mobile-only-social {
 		display: block !important;
-		margin-bottom:45px !important;
 }
 
 .social-widget {
@@ -2256,7 +2256,7 @@ ul.category-chicklets {
 		margin: 0px 0px 0px 1px;
 		border-bottom: 0px solid $orange;
 		@include break(mobile) {
-			margin-bottom: 130px;
+			margin-bottom: 100px;
 		}
 		.social-count {
 			display: inline-block;
@@ -3147,7 +3147,7 @@ table {
 	margin-top: 15px;
 
 	@include break(mobile){
-		margin: -25px auto 35px;
+		margin: -25px auto 25px;
 		text-align: center;
 	}
 }

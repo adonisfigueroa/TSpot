@@ -6,7 +6,7 @@
 "_base-mixins.scss",
 "_mixin.scss",
 "_slider.scss",
-"_home.scss",	
+"_home.scss",
 "_interior.scss",
 "_header.scss",
 "_masthead.scss",
@@ -68,13 +68,6 @@ body {
 }
 .rating {
 	font-family: $f-helvetica-roboto;
-}
-.mobile-only-social {
-	display: none !important;
-	@include break(mobile){
-		display: block !important;
-		margin-bottom:45px !important;
-	}
 }
 #GlobalWrapper {
 	width: 100%;
@@ -201,7 +194,6 @@ h1 {
 
 #content {
 	background-color: $light-grey;
-	font-weight: 200;
 	z-index: 1;
 
 	.wrapper {
@@ -232,10 +224,9 @@ h1 {
 			color: #555;
 			a {
 				color: #555;
-				padding-bottom: 1px;
-				border-bottom: 1px solid #555;
+				border-bottom: 1px solid #D0DCEB;
+				box-shadow: inset 0 -2px 0 #D0DCEB;
 			}
-			
 		}
 
 		&.img-white {
@@ -248,6 +239,53 @@ h1 {
 
 			img {
 				max-width: 92% !important;
+			}
+		}
+
+		&.side-quote {
+			font-size: 1.45em;
+			line-height: 1.4em;
+			margin: 5px auto 25px;
+			padding: 10px;
+			text-align: center;
+			color: #105ab2;
+
+			@include break(v-mobile) {
+				margin: -5px auto 25px;
+			}
+		}
+
+		&.side-quote-right {
+			float: right;
+			width: 270px;
+			margin: 5px 0 10px 10px;
+			font-size: 1.45em;
+			line-height: 1.4em;
+			padding: 10px;
+			color: #105ab2;
+
+			@include break(v-mobile) {
+				width: auto;
+				float: none;
+				text-align: center;
+				margin: -5px auto 25px;
+			}
+		}
+
+		&.side-quote-left {
+			float: left;
+			width: 270px;
+			margin: 5px 10px 10px 0;
+			font-size: 1.45em;
+			line-height: 1.4em;
+			padding: 10px;
+			color: #105ab2;
+
+			@include break(v-mobile) {
+				width: auto;
+				float: none;
+				text-align: center;
+				margin: -5px auto 25px;
 			}
 		}
 		
@@ -263,6 +301,11 @@ body.reviews {
 	  background-image: url(../images/reviewmasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
+
+    .wrapper {
+      padding: 0 !important;
+    }
+
   }
   #content {
     .wrapper {
@@ -277,6 +320,10 @@ body.features {
 	  background-image: url(../images/featuremasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
+    .wrapper {
+      padding: 0 !important;
+    }
+
   }
   #content {
     .wrapper {
@@ -287,7 +334,10 @@ body.features {
 
 body.products {
   #masthead{
-	  background: $dark-blue2;
+	background: $dark-blue2;
+    .wrapper {
+      padding: 0 !important;
+    }
   }
   #content {
     .wrapper {
@@ -302,6 +352,23 @@ body.products {
 // Styling title for article & news
 .article, .news { 
  	.articleBody {
+ 		p {
+	 		a {
+	 			/* border-bottom: 0px solid #D0DCEB; */
+				box-shadow: inset 0 -4px 0 #D0DCEB;
+				color: inherit;
+
+				&:hover {
+					/* border-bottom: 0px solid #FBBB76; */
+					box-shadow: inset 0 -4px 0 #FBBB76;
+					color: inherit;
+				}
+
+				.itxtrst, .itxtrstspan, .itxtrst span {
+				    color: #333 !important;
+				}
+	 		}
+	 	}
 	    h2 {
 			padding: 10px 0 20px;
 
@@ -400,15 +467,14 @@ body.products {
 				}
 			}
 
-			/*
+
 			&.featured {
-				h2 {
-					a {
-					  font-size: 120%;
+				.post-meta {
+					@include break(mobile){
+						margin-top: -5px;
 					}
 				}
 			}
-			*/
 
 			&.fullview {
 				h2 {
@@ -440,6 +506,9 @@ body.products {
 						display: none;
 					}
 				}
+				@include break(v-mobile){
+					font-size: .55em;
+				}				
 			}
 			
 			.intro{
@@ -478,10 +547,12 @@ body.products {
 				line-height: 25px;
 
 				@include break(mobile){
-					line-height: 18px;
+					line-height: 12px;
+					float: right;
+					margin-top: -20px;
+					margin-right: -5px;
 				}
 
-				padding: 0;
 				a {
 					display: inline-block;
 					color: #4e5a66;
@@ -510,6 +581,10 @@ body.products {
 					&.comment-count {
 						background-image: url(../images/comment-icon.svg);
 						padding-left: 20px;
+
+						@include break(mobile){
+							padding-left: 15px;
+						}
 						
 						span {
 							display: inline-block;
@@ -572,6 +647,16 @@ body.products {
 		img {
 			max-width: 100% !important;
 			padding-top: 20px;
+		}
+
+		ul {
+			margin-left: 5%;
+			margin-bottom: 25px;
+			font-size: 0.85em;
+			li {
+				list-style-type: square;
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
@@ -746,7 +831,7 @@ h3.section-header {
 	text-align: center;
 	padding-left: 20px;
 	text-indent: -25px;
-	font-size: 1.7em;
+	font-size: 1.7em !important;
 	@include break(tablet) {
 		font-size: 150%;
 	}
@@ -904,7 +989,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 35px 0 10px;
+  margin: 0 0 10px;
   @include break(v-tablet){
 	  display: none;
   }
@@ -1130,6 +1215,10 @@ h3.longtype {
 		margin-right: 5px;
 
 		a { color:#888; }
+
+		@include break(mobile) {
+			float: left;
+		}
     }
     
     img.user-avatar {
@@ -1172,6 +1261,10 @@ h3.longtype {
 			p {
 				font-size: 13px;		
 			}
+
+			img {
+				max-height: 100px;
+			}
 	    }
     }
     
@@ -1191,6 +1284,9 @@ h3.longtype {
         }
         a {
           color: $blue;
+          &:hover {
+          	color: #c00;
+          }
         }
       }
     }
@@ -1250,9 +1346,9 @@ h3.longtype {
 	  	 	padding-top: 5px;
 	  	 	height: 30px;
 	  	 	line-height: 25px;
-	  	 	font-weight: 700;
-	  	 	font-family: $f-helvetica;
-	  	 	border: solid 1px #AAAAAA;
+	  	 	font-weight: 500;
+	  	 	font-family: $f-primary;
+	  	 	border: solid 1px #ccc;
 	  	 	@include border-radius(5px);
 	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
 
@@ -1302,7 +1398,7 @@ h3.longtype {
 		zoom: 1;
 		vertical-align: middle;
 		margin-right: 10px;
-		background: url(http://static.techspot.com/images/staff_badge.png) no-repeat;
+		background: url(/images/staff_badge.png) no-repeat;
 		width: 59px;
 		height: 22px;
 		overflow: hidden;
@@ -1328,7 +1424,7 @@ span._bar {
 		background: $purple;
 	}			
 }
-hgroup.featured-image {
+#content-header.featured-image {
 	display: block;
 	min-height: 70vh;
 	max-height: 600px;
@@ -1498,27 +1594,33 @@ ul.category-chicklets {
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: .55em;
-			font-weight: 400;
+			font-weight: 500;
 			letter-spacing: 0.50px;
-			-webkit-font-smoothing: subpixel-antialiased;
+
+			&.black { color: #000; }
 		}
-		
-		&.apple 					{ background-color: #7d9dca; &:hover { background-color: lighten(#7d9dca,7%); } } 
-		&.gaming 					{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
-		&.hardware, &.drivers		{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
-		&.industry					{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
-		&.security 					{ background-color: #CBA746; &:hover { background-color: lighten(#CBA746,10%); } }
-		&.microsoft					{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
-		&.mobile 					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,10%); } }
-		&.software, &.electronics	{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
-		&.web, &.home, &.blog		{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
-		&.techspot 					{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
-		&.dotw, &.pc, &.driverscat	{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
-		&.natw	 					{ background-color: #BBBBBB; &:hover { background-color: lighten(#BBBBBB,10%); } }
-		&.deals 					{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
-		&.wof	 					{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
-		&.products, &.downloads		{ background-color: #00366F; &:hover { background-color: lighten(#00366F,10%); } }
+	
+		&.blue2, &.apple						{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
+		&.red, &.gaming 						{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
+		&.green, &.hardware, &.drivers			{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,5%); } }
+		&.navy2, &.industry						{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,10%); } }
+		&.green2, &.security 					{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,10%); } }
+		&.microsoft								{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,10%); } }
+		&.red2, &.mobile						{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,10%); } }
+		&.purple, &.software, &.electronics		{ background-color: #50039C; &:hover { background-color: lighten(#50039C,6%); } }
+		&.orange, &.web, &.home, &.blog, &.pc	{ background-color: #FF7F00; &:hover { background-color: lighten(#FF7F00,7%); } }
+		&.blue, &.techspot						{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,10%); } }
+		&.dotw									{ background-color: #B25900; &:hover { background-color: lighten(#B25900,10%); } }
+		&.grey, &.natw							{ background-color: #888888; &:hover { background-color: lighten(#888888,10%); } }
+		&.deals 								{ background-color: #779954; &:hover { background-color: lighten(#779954,10%); } }
+		&.wof	 								{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
+		&.navy, &.products, &.downloads			{ background-color: #00366F; &:hover { background-color: lighten(#00366F,10%); } }
+		&.yellow 								{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,7%); } } 
 	}
+}
+
+.mobile-only-social {
+		display: block !important;
 }
 
 .social-widget {
@@ -1526,14 +1628,40 @@ ul.category-chicklets {
 	margin: 0 auto;
 	background: white;
 	border-bottom: 5px solid $orange;
+
 	@include break(mobile){
-		width: 100%;
+		width: 98%;
 		height: 35px;
 		border-bottom: 0px solid $orange;
-		margin: 0px 0px 0px 1px;
-	} 
-	li {
-	
+
+		&.zero {
+			border-right: 7px solid $orange;
+			li {
+				&.social {
+					&.facebook {
+						margin-left: 12.5%;
+					}
+					&.twitter {
+						margin-left: 12.5%+17*1;
+					}
+					
+					&.google_plus {
+						margin-left: 12.5%+17*2;
+					}
+					
+					&.rss {
+						margin-left: 12.5%+17*3;
+					}
+					
+					&.comments {
+						margin-left: 12.5%+17*4;
+					}
+				}
+			}
+		}
+	}
+
+	li {	
 		&.social-count {
 			background-color: $orange;
 			color: white;
@@ -1541,6 +1669,7 @@ ul.category-chicklets {
 			text-align: center;
 			font-size: 0.7em;
 			line-height: 25px;
+
 			@include break(mobile) {
 				display: inline-block;
 				height: inherit;
@@ -1555,9 +1684,9 @@ ul.category-chicklets {
 				@include break(mobile) {
 					border-top: none;
 					display: block;
+					width: 7px;
 				}
 			}
-
 		}
 		
 		&.social {
@@ -1566,7 +1695,7 @@ ul.category-chicklets {
 			background-position: center top;
 			line-height: 16px;
 			position: relative;
-			@include break (mobile){
+			@include break(mobile){
 				background-image: url(/images/social-widget-bg-90.svg);
 				margin-left: 30%;
 				margin-top: -30px;
@@ -1839,7 +1968,7 @@ ul.category-chicklets {
 			}
 		}
 		@include break(v-mobile){
-			display: none;
+			display: none !important;
 		}
 	}
 }
@@ -1861,14 +1990,14 @@ ul.category-chicklets {
 	@include break(v-tablet){
 		width: 100% !important;
 		.wrapperMobileOnly {
-			width:  96%;
+			width:  94%;
 		}
 	}
 	@include break(mobile){
 		width: 100%;
 		.wrapperMobileOnly {
-			width:  96%;
-			padding: 0 2%;
+			width:  94%;
+			padding: 0 3%;
 		}
 	}
 }
@@ -1890,8 +2019,8 @@ ul.category-chicklets {
 	@include break(mobile){
 		width: 100%;
 		.wrapperMobileOnly {
-			width:  96%;
-			padding: 0 2%;
+			width:  94%;
+			padding: 0 3%;
 			}
 	}
 }
@@ -1930,7 +2059,7 @@ ul.category-chicklets {
     @include break(tablet){
     	margin-right: 2%;
 	    img{
-		    width: 100%;
+		    width: 96%;
 		    height: auto;
 	    }
     }
@@ -1978,11 +2107,11 @@ ul.category-chicklets {
     .flex-control-nav {
 			width: 100%;
 			position: absolute;
-			bottom: -40px;
+			bottom: -45px;
 			text-align: center;
 			cursor: pointer;
 			@include break(mobile){
-				bottom: -25px;
+				bottom: -35px;
 			}
 			li {
 				margin: 0 6px;
@@ -2124,7 +2253,7 @@ ul.category-chicklets {
 		margin: 0px 0px 0px 1px;
 		border-bottom: 0px solid $orange;
 		@include break(mobile) {
-			margin-bottom: 130px;
+			margin-bottom: 100px;
 		}
 		.social-count {
 			display: inline-block;
@@ -2427,14 +2556,16 @@ ul.category-chicklets {
 
 .also-looked-at,
 .expert-reviews-and-ratings {
-  margin-bottom: 25px;
+	margin-bottom: 25px;
+
+	@include break(mobile){
+		margin-bottom: 55px;
+	}
+
   & > h3 {
     font-weight: 400;
     border-bottom: 2px solid $blue;
     line-height: 230%;
-    @include break(v-mobile){
-	     line-height: 130%;
-    }
     
     span {
       position: relative;
@@ -2462,7 +2593,7 @@ ul.category-chicklets {
       font-size: .8em;
       background: #2D3842;
       @include col(1,4,2);
-      @include outer-glow();
+      @include outer-glow(10,0,.2);
       
       &:nth-child(4) {
         @include col-last(1,4,2);
@@ -2472,7 +2603,7 @@ ul.category-chicklets {
         color: white;
       }
       .img-wrap {
-        background-size: cover;
+        background-size: 110%;
         background-repeat: no-repeat;
         background-color: white;
         background-position: center center;
@@ -2512,6 +2643,8 @@ ul.category-chicklets {
       h3 {
         text-align: center;
         padding: 10px;
+        min-height: 42px;
+		max-height: 42px;
       }
       
     }
@@ -2605,8 +2738,8 @@ ul.category-chicklets {
 .article #content {
 	@include break(mobile){
 	.wrapperMobileOnly {
-		width:  96%;
-		padding: 0 2%;
+		width:  94%;
+		padding: 0 3%;
 		}
 	}
 }
@@ -2715,28 +2848,6 @@ ul.category-chicklets {
 	*/
 	
 }
-.product {
-	#sidebar {
-		margin-top: 40px !important;
-		@include break(tablet){
-			margin-top: 50px !important;
-		}
-	}
-	#content {
-    	#pros_cons {
-       		padding-top: 70px !important;
-			@include break(mobile){
-				padding-top: 0px !important;
-			}
-		}
-		#pros_cons.collapsed li:nth-child(n+6){
-			display: none;
-		}
-		@include break(mobile){
-			margin-top: 0px !important;
-		}
-	}
-}
 .products-cat time{
 	display: block !important;
 }
@@ -2813,6 +2924,62 @@ ul.pills {
     }
     
   }
+}
+
+table {
+	&.big {
+		/* margin-left: -350px; */
+		max-width: none;
+		width: 1020px;
+
+		@include break(big-desk){
+			width: 1100px;
+		}
+		
+		@include break(v-tablet){
+			margin-left: 0 !important;
+			max-width: 100%;
+			width: 100% !important;
+		}
+	}
+
+	&.article-table {
+	  margin: 15px 0 30px;
+	  font-size: 0.9em;
+	  a {
+	  	color: #105ab2;
+	  	box-shadow: none !important;
+	  }
+	  tr {
+	    padding: 3px 0 3px 10px;
+	  }
+	  td, th {
+	    padding: inherit;
+	    text-align: center;
+	  }
+	  tr {
+	    &.title {
+	      background-color: #105ab2;
+	      color: #ffffff;
+	      a {
+	        color: #ffffff;
+	      }
+	      td, th {
+	      	font-weight: 500;
+	      }
+	    }
+	    &.alt {
+	      background-color: white;
+	    }
+	    &.sub {
+	      background-color: #ddd;
+	    }
+	  }
+	  td.cat {
+	    font-weight: 500;
+	    text-align: left;
+	  }
+	}
 }
 
 /* PF widgets para noticias y reviews */
@@ -2957,16 +3124,12 @@ ul.pills {
 		background-color: #1e2933;
 	}	
 	.wrapper {
-		padding: 20px 0 15px;
+		padding: 20px 0 15px !important;
 		text-align: center;
 	}
 
 	@include break(mobile){
-		.wrapper {
-			padding: 0;
-			text-align: center;
-			width: 100%;
-		}
+		display: none;
 	}
 }
 
@@ -2981,7 +3144,7 @@ ul.pills {
 	margin-top: 15px;
 
 	@include break(mobile){
-		margin: -25px auto 35px;
+		margin: -25px auto 25px;
 		text-align: center;
 	}
 }
