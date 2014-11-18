@@ -993,6 +993,11 @@ body.interior {
 
 	&.download {
     	#content-header {
+			.wrapper {
+				@include break(mobile){
+					padding: 20px 0 10px;
+				}
+			}
 	      	.title-group {
 				margin-top: 30px;
 
@@ -1002,11 +1007,6 @@ body.interior {
 
 				.wrapper {
 					padding: 25px 0 35px;
-
-					@include break(mobile){
-						padding: 20px 0 10px;
-					}
-
 				}
 
 	      	  	figure {
