@@ -810,7 +810,6 @@
 						display: block;
 						padding: 0 32px 0 15px;
 						margin-top: 0px;
-						border-bottom: solid 0px transparent;
 						
 						@include break(tablet){
 							padding: 0 32px 0 10px;
@@ -828,7 +827,6 @@
 						
 						&.active {
 							background: #777D82;
-							transition: 0.15s linear;
 							height: 43px;
 							line-height: 38px;
 							z-index: 10;
@@ -836,13 +834,15 @@
 							&:after {
   								margin-top: -5px;
 							}
-							
 						}
 						
 						&.activeFirst{
-							border-bottom: solid 5px #777D82;
+							height: 38px;
+							&:after{
+								margin-top: -2px;
+							}
 						}
-					
+						
 					}
 					
 					&:hover {

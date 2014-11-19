@@ -3,9 +3,17 @@ body.interior {
 		height: 47px !important;
 		line-height: 42px;
 		&:after {
-  			margin-top: -5px !important;
+  			margin-top: -5px;
   		}
 	}
+	
+	#header-ts .menu .wrapper > ul > li a.activeFirst {
+		height: 42px!important;
+		&:after{
+			margin-top: -2px;
+		}
+	}
+	
 	.score {
 		font-family: $f-helvetica-roboto !important;
 	}

@@ -8,6 +8,12 @@ body.home {
 			margin-top: -5px !important;
 		}
   }
+  #header-ts .menu .wrapper > ul > li a.activeFirst {
+	line-height: 38px !important;
+		&:after {
+		  margin-top: -2px !important;
+		}
+  }
   
   #content {
     .wrapper {
