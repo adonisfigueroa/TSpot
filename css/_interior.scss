@@ -836,7 +836,6 @@ body.interior {
 			
 			.social-column {
 				position: relative;
-				min-height: 400px;
 				z-index: 1;
 				@include col(1.85,10,0);
 				@include break(mobile){
@@ -2246,10 +2245,6 @@ body.interior {
 							display: none;
 						}
 					}					
-				}
-				&.mobile-only-social{display: none!important;}
-				@include break(v-mobile){
-					&.mobile-only-social{display: block!important; min-height: 25px!important;}
 				}
 			}
 			.index-mobile {
