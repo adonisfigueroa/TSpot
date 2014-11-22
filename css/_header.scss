@@ -1144,7 +1144,7 @@
 	display: none;
 	z-index: -1;
 	@include break(mobile){
-		display: block
+		//display: block
 	}
 	#flyout-main-menu {
 		padding: 0px 0px;
