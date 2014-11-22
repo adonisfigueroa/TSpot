@@ -1627,7 +1627,10 @@ ul.category-chicklets {
 }
 
 .mobile-only-social {
-		display: block !important;
+	display: block !important;
+	&.social-column{
+		height: auto!important; min-height: 200px!important;
+	}
 }
 
 .social-widget {
