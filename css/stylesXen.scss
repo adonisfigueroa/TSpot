@@ -280,7 +280,6 @@ h1 {
 			line-height: 1.4em;
 			padding: 10px;
 			color: #105ab2;
-
 			@include break(v-mobile) {
 				width: auto;
 				float: none;
@@ -989,7 +988,12 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 0 0 10px;
+  margin: 30px 0 10px;
+
+	&.related-stories {
+  		margin: 0px 0 10px;
+	}
+  
   @include break(v-tablet){
 	  display: none;
   }
@@ -1070,7 +1074,7 @@ h3.longtype {
 			background-position: center center;
 			background-repeat: no-repeat;
 			overflow: hidden;
-			background-size: 120% auto;
+			background-size: cover;
         }
 
         img {
@@ -1112,6 +1116,7 @@ h3.longtype {
       h3 {
         font-size: 1.1em;
         padding: 2px;
+        font-weight: 500;
       }
       
       .reviews {
