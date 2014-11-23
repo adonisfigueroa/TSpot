@@ -988,10 +988,23 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 30px 0 10px;
+  margin: 0px 0 10px;
 
 	&.related-stories {
-  		margin: 0px 0 10px;
+  		margin: 0px 0 30px;
+
+		ul.teaser-list {
+
+			li {
+				height: 220px;
+				
+				a {
+
+				}
+			}
+
+		}
+
 	}
   
   @include break(v-tablet){
@@ -1015,50 +1028,50 @@ h3.longtype {
   ul.teaser-list {
   	width: 100%;
   	height: 240px;
+
     li {
-      font-size: .7em;
-      background: white;
-      height: 235px;
-      @include border-radius(2px);
+		font-size: .7em;
+		background: white;
+		height: 210px;
+		@include border-radius(2px);
 
-      &.one {
-		@include col(1,1,0);
-      }
+		&.one {
+			@include col(1,1,0);
+		}
 
-      &.two {
+		&.two {
 		@include col(1,2,2);
-	    &:nth-child(2) {
-			@include col-last(1,2,2);
-      	}
-      }
+			&:nth-child(2) {
+				@include col-last(1,2,2);
+			}
+		}
 
-      &.three {
-      	@include col(1,3,1);
-      
-	    &:nth-child(3) {
-			@include col-last(1,3,1);
-      	}
-      }
+		&.three {
+			@include col(1,3,1.5);
 
-      &.four {
-		@include col(1,4,1);
-	    &:nth-child(4) {
-			@include col-last(1,4,1);
-      	}
-      }
-      
-      a {
-        display: block;
-        padding: 12px;
-        background: white;
-        
-        &:hover {
-          h3 {
-            color: $red;
-          }
-        }
-        
-      }
+			&:nth-child(3) {
+				@include col-last(1,3,1.5);
+			}
+		}
+
+		&.four {
+			@include col(1,4,1.5);
+			&:nth-child(4) {
+				@include col-last(1,4,1.5);
+			}
+		}
+
+		a {
+		display: block;
+		padding: 0;
+		background: white;
+
+			&:hover {
+				h3 {
+			    	color: $red;
+				}
+			}
+		}
       
       span.img-wrap {
         display: block;
@@ -1070,7 +1083,6 @@ h3.longtype {
 	        position: absolute;
 			width: 100%;
 			height: 140px;
-			border: 1px solid #ddd;
 			background-position: center center;
 			background-repeat: no-repeat;
 			overflow: hidden;
@@ -1091,7 +1103,7 @@ h3.longtype {
           display: inline-block;
           padding: 0 15px;
           line-height: 160%;
-          bottom: 0; right: 5px;
+          bottom: 0; right: 0;
 
           &.excellent {
             @include trans-bg($c-excellent,.8);
@@ -1115,7 +1127,7 @@ h3.longtype {
       
       h3 {
         font-size: 1.1em;
-        padding: 2px;
+        padding: 2px 8px;
         font-weight: 500;
       }
       
@@ -1123,7 +1135,7 @@ h3.longtype {
         color: #333;
 		font-size: 0.9em;
 		font-weight: 400;
-		padding-left: 2px;
+		padding: 2px 8px;
       }
     }
   }
@@ -1385,7 +1397,7 @@ h3.longtype {
 		line-height: 1.3;
 		font-size: 0.8em;
 		font-family: $f-primary;
-		border: 1px solid #AAAAAA;
+		border: 1px solid #AAA;
 		@include border-radius(5px);
 		-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2) inset;
 		-moz-box-shadow: 0 0 6px rgba(0,0,0,0.2) inset;
@@ -1625,7 +1637,13 @@ ul.category-chicklets {
 }
 
 .mobile-only-social {
-		display: block !important;
+	display: block !important;
+	&.social-column{
+		display: none!important; height: auto!important;
+	}
+	@include break(v-mobile){
+		&.social-column{display: block!important; min-height: 25px!important;}
+	}
 }
 
 .social-widget {
@@ -1908,7 +1926,7 @@ ul.category-chicklets {
 				text-shadow: 0 1px 0 #fff;
 				
 				a {
-					color: #AAA;
+					color: #999;
 					
 				}
 				
@@ -1937,7 +1955,7 @@ ul.category-chicklets {
 					display: block;
 					position: relative;
 					padding-left: 15px;
-					color: #999;
+					color: #666;
 					&:before {
 						content:"";
 						display: block;
@@ -1951,7 +1969,7 @@ ul.category-chicklets {
 			}
 			&.active {
 				a{
-					color: $dark-grey;
+					color: #222;
 				}
 			}
 			
@@ -2129,7 +2147,7 @@ ul.category-chicklets {
 		width: 5px;
 		height: 5px;
 		display: block;
-		background: #aaa;
+		background: #AAA;
 		cursor: pointer;
 		text-indent: -9999px;
 	}
@@ -3146,7 +3164,7 @@ table {
 }
 
 .ad_block_news {
-	margin-top: 15px;
+	margin-top: 20px;
 
 	@include break(mobile){
 		margin: -25px auto 25px;

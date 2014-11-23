@@ -282,7 +282,7 @@ body.interior.download {
 		border-left: 2px solid #dddddd;
 		@include col(1,3,0);
 		padding: 5px 0 0 50px;
-		@include break(mobile){
+		@include break(v-tablet){
 			padding: 5px 0 0 35px;
 			width: 43%;
 		}
