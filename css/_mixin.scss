@@ -317,3 +317,11 @@ $b-radius-default: 5px; //Default value
 	background: -ms-radial-gradient(center, ellipse cover, $inner-color 0%,$outer-color 100%); // IE10+
 	background: radial-gradient(ellipse at center, $inner-color 0%,$outer-color 100%); // W3C
 }
+
+@mixin mxAnim($time:100ms, $type:background, $ease:ease-out){
+	-webkit-transition: $type $time $ease;
+	-moz-transition: $type $time $ease;
+	-ms-transition: $type $time $ease;
+	-o-transition: $type $time $ease;
+	transition: $type $time $ease;
+}//mxAnim
