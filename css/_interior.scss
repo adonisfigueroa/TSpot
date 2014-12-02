@@ -2188,14 +2188,14 @@ body.interior {
 		#content-header.featured-image.second-page {
 			&:before {
 				top: 0; right: 0; bottom: 0; left: 0;
-				@include gradient-trans($start_color:#1E2933,$start_alpha:0.1,$end_color:#1E2933,$end_alpha:0.88);
+				@include gradient-trans-percent($start_color:#1E2933,$start_cent:25%,$start_alpha:0.1,$end_color:#1E2933,$end_cent:100%,$end_alpha:1);
 			}
 		}
 
 		#content-header.featured-image.index-page {
 			&:before {
 				top: 0; right: 0; bottom: 0; left: 0;
-				@include gradient-trans($start_color:#1E2933,$start_alpha:0.0,$end_color:#1E2933,$end_alpha:0.65);
+				@include gradient-trans-percent($start_color:#1E2933,$start_cent:25%,$start_alpha:0,$end_color:#1E2933,$end_cent:100%,$end_alpha:0.65);
 			}
 		}
 
@@ -2226,6 +2226,13 @@ body.interior {
 					padding: 25px 0 30px;
 				}
 			}
+
+			.cta {
+				.wrapper {
+					padding: 0 0 15px !important;
+				}
+			}
+
 			.social-column {
 				position: absolute;
 				right: 0;

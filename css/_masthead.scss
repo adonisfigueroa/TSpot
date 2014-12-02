@@ -985,6 +985,8 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
+
+/*
 				@include transitions();
 				@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.65);
 				
@@ -994,7 +996,8 @@
 						//bottom: 25px;
 					}
 				}
-				
+*/
+
 				hgroup {
 					width: 90%;
 					position: absolute;
@@ -1842,11 +1845,12 @@
 					color: white;
 					height: 270px - 30px;
 					@include transitions();
-					@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.65);
+					@include gradient-trans-percent($start_color:#13191F,$start_cent:20%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
 				
-				&:hover {
-					@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:60%,$end_alpha:.85);			
-				hgroup {
+					&:hover {
+						@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:60%,$end_alpha:.85);			
+
+						hgroup {
 							//bottom: 25px;
 						}
 					}
