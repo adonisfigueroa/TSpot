@@ -2413,7 +2413,7 @@
 	}
 }
 }
-.features, .reviews {
+.features, .reviews, .slide-article{
 .featured-posts-title {
 	h1 {
 		font-size: 1.4em;
@@ -2634,7 +2634,7 @@
 				&:nth-child(5) {
 					top: 168px;
 					left: 2/3*100%;
-					
+					border-left: 2px solid $dark-green;
 				}	
 			}
 		}	
