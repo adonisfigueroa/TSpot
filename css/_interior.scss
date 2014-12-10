@@ -2718,10 +2718,10 @@ body.interior.slide-article{
 		background:white;
 		.wrapper{
 			padding: 20px 0 20px;
-			.page-nav{display: none;}
+			.comment-count-block, .page-nav{display: none;}
 		}//wrapper
 	}//content
-	#comments{background: #f5f5f5;}
+	//#comments{background: #fff;}
 	.owl-controls{
 		width: 58%;
 		@include break(mobile) {
@@ -2756,13 +2756,44 @@ body.interior.slide-article{
 .addRelativeM{position: relative;}
 .slideArticle{ position: relative; }
 
-.slideShowTitle{
-	font-weight: 500; font-size: 2.4em; letter-spacing: -0.333px;
-	margin: 15px 0; position: relative; padding-right: 185px;
-	@include break(mobile){
-		padding-right: 0;
+.title-group {
+
+	.slideShowTitle{
+		font-weight: 500; font-size: 2.4em; letter-spacing: -0.333px;
+		margin: 15px 0 0; position: relative; padding-right: 185px;
+
+        @include break(mobile) {
+	        margin: 0;
+			padding-right: 0;
+	        font-size: 1.9em;
+        }
+        @include break(v-mobile) {
+	        font-size: 1.6em;
+        }
 	}
-}//slideShowTitle
+
+	em {
+		font-style: normal;
+		font-size: .7em;
+		line-height: 30px;
+		color: black;
+
+        @include break(v-mobile) {
+	        font-size: .65em;
+        }
+
+		a {
+			color: black;
+			font-weight: 500;
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 3px;	
+
+            &:hover {
+              border-bottom: 1px solid #ff7f00;
+            }
+		}
+	}
+}
 
 .owlNavArea{
 	display: block; position: absolute; top: 0; right: 0; margin-top: -50px;
@@ -2822,7 +2853,7 @@ body.interior.slide-article{
 }//owlNavArea
 
 .col-2-3-last.special .articleBody{
-	&.slideArticle{width: 100%!important;}
+	&.slideArticle{ width: 100%!important; margin-top: 25px; }
 }
 
 .slideshow{
@@ -2845,8 +2876,21 @@ body.interior.slide-article{
 			}//after
 		}//slide-image
 		
-		h2{padding: 5px 100px 10px 63%; font-size: 1.5em; line-height: 1em;}
-		p{padding: 5px 0 0 63%!important; font-size: 1.1em!important; font-weight:400 }
+		h2 {
+			padding: 5px 100px 20px 63%;
+			font-size: 1.8em;
+			line-height: 1em;
+			color: #105ab2;
+			text-decoration: none;
+		}
+		
+		p {
+			padding: 0 0 15px 63% !important;
+			font-size: 1.1em !important;
+			font-weight: 400;
+			line-height: 1.4em;
+		}
+		
 		span,strong,b{font-size: 1.1em!important;}
 		
 		@include break(tablet) {
