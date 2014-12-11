@@ -3291,7 +3291,7 @@ table {
 		display: block; text-align: center; padding-top: 5px;
 		.owl-dot{
 			display: inline-block; margin: 0 6px;
-			span{display: block; width: 5px; height: 5px; background: #AAA;}
+			span{display: block; width: 5px; height: 5px; background: #ddd;}
 			&.active{
 				span{background: #ff7f00;}
 			}//active
@@ -3328,6 +3328,9 @@ table {
 	
 	&.grey {
 		background-color: #F5F5F5;
+	}
+	&.grey2 {
+		background-color: #BBB;
 	}
 	&.dark {
 		background-color: #1e2933;
