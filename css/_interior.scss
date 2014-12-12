@@ -2713,12 +2713,16 @@ body.interior {
 .slide-image{padding: 0 0 25px;}
 
 //Clase principal del slide
-body.interior.slide-article{
+body.interior.slide-article {
+	background: #1e2933;
+	#GlobalWrapper {
+		background: #1e2933;	
+	}
 	#content{
 		background: #1e2933;
 		.wrapper{
 			padding: 20px 0 20px;
-			.comment-count-block, .page-nav{display: none;}
+			.comment-count-block, .page-nav { display: none; }
 		}//wrapper
 	}//content
 	
@@ -2733,8 +2737,8 @@ body.interior.slide-article{
 	}
 
 	#grid-below{
-		background: #ddd;
-		padding: 25px 0;
+		background: #ccc;
+		padding: 25px 0 50px;
 
 		@include break(mobile){
 			padding: 1px 0;

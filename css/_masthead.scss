@@ -2497,10 +2497,11 @@
 				color: white;
 				height: 166px - 30px;
 				@include transitions(0);
-				@include gradient-trans($start_color:#1E2933,$start_alpha:.1,$end_color:#1E2933,$end_alpha:.66);
+				@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.1,$end_color:#1E2933,$end_cent:90%,$end_alpha:.85);
 				
 				&:hover {
-					@include gradient-trans($start_color:#1E2933,$start_alpha:.3,$end_color:#1E2933,$end_alpha:.6);
+					@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.3,$end_color:#1E2933,$end_cent:80%,$end_alpha:.9);
+
 					hgroup {
 						//bottom: 25px;
 					}
