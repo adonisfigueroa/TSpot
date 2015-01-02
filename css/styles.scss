@@ -825,18 +825,19 @@ h3.section-header {
 	border-left: 15px solid $red;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-size: 180%;
 	white-space: nowrap;
 	line-height: 45px;
 	text-align: center;
 	padding-left: 20px;
 	text-indent: -25px;
-	font-size: 1.7em !important;
+	font-size: 1.7em;
+
 	@include break(tablet) {
 		font-size: 150%;
 	}
+
 	a {
-  	color: #333;
+		color: #333;
 	}
 	
 	span {
@@ -2477,13 +2478,13 @@ ul.category-chicklets {
 	  @include break(mobile){
 		  width: 20%;
 		  max-width: 100px;
-		  min-width: 88px;
+		  min-width: 86px;
 		  float: left;
-		  line-height: 78px;
+		  line-height: 77px;
 		  height: 78px;
 	  }
 	  @include break(v-mobile){
-		  font-size: 38px;
+		  font-size: 40px;
 	  }
     }
     .excellent {

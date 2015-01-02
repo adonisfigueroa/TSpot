@@ -1096,7 +1096,7 @@ body.interior {
 	        	
 	        	h3.section-header {
 		          	text-transform: none;
-		          	font-size: 2.0em !important;
+		          	font-size: 2.0em;
 		          	font-weight: 600;
 		          	line-height: 140%;
 
@@ -1220,22 +1220,23 @@ body.interior {
 				border-top: 1px solid #EAEAEA;
 
 				@include break(v-mobile){
-					padding: 7px 1%
+					padding: 5px 0
 				}
 			}
 			.product-img {
 				margin-top: 8px;
 				float: left;
-			    width: 77px;
+			    width: 65px;
 			    border: 1px solid #DCDCDC;
 			    overflow: hidden;
 			    text-align: center;
 			    height: 50px;
 			    line-height: 50px;
 			    background: #fff;
-				img{
-					max-width: 100%;
-  					max-height: 100%;
+
+				@include break(v-mobile){
+					width: 60px;
+					margin-right: 8px;
 				}
 			}
 			.ProdListInfo {
@@ -1250,10 +1251,8 @@ body.interior {
 					max-width: 52%;
 				}
 				@include break(v-mobile){
-					max-width: 56%;
-				}
-				@include break(sm-mobile){
-					max-width: 39%;
+					max-width: 100%;
+					float: none;
 				}
 
 				h4 {
@@ -1324,18 +1323,20 @@ body.interior {
 					@include break(v-tablet){
 						font-size: 0.6em;
 					}
-					@media screen and (max-width:530px){
-						position: absolute;
-						margin-top: 6px;
-						display: none;
-					}
-					
+					@include break(v-mobile){
+						position: relative;
+					}					
 				}
 			}
 			.prod-meta{
 				float: right;
 				display: inline-block;
 				height: 70px;
+
+				@include break(v-mobile){
+					display: none;
+				}
+
 				.intRank{
 					color:$purple;
 					font-weight: 500;
@@ -1389,25 +1390,31 @@ body.interior {
 			}
 		}
 		#LookUpMobile {
+			display: none;
+			margin-bottom:20px;
+			text-decoration: none;
+
+			@include break(mobile){
+				display: block;
+			}
+
 			.SideTitle{
 				line-height: 31px;
 				background-color: $blue;
-				padding: 0px 17px;
+				padding: 0px 14px;
+
 				@include break(v-tablet){
 					padding: 0px 10px;
 				}
 			}
-			display: none;
+
 			h3{
 				color: white;
 				line-height: 35px;
 				font-family: Roboto Condensed;
 				font-size: 0.9em;
 			}
-			text-decoration: none;
-			@include break(mobile){
-				display: block;
-			}
+
 			input[type=text] {
 				border: none;
 				height: 45px;
@@ -1422,11 +1429,11 @@ body.interior {
 				padding: 0px 2%;
 				color: #333;
 			}
-			margin-bottom:10px;
 		}
+
 		#CategoryListMobile {
 			background: #304456;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 			display: none;
 			width: 100%;
 			text-transform: uppercase;
@@ -1442,6 +1449,7 @@ body.interior {
 			li {
 				padding: 0px 0px;
 				line-height: 40px;
+				border: 1px solid #ddd;
 				a {
 					color: white;
 					display: block;
@@ -1511,6 +1519,7 @@ body.interior {
 				li {
 					line-height: 10px;
 					margin-bottom: 14px;
+					border: none;
 					a {
 						.arrow {
 						margin: 0 !important;
@@ -1626,7 +1635,7 @@ body.interior {
 					line-height: 64px;
 					font-size: 2em;
 					font-weight: 500;
-					padding: 0px 17px;
+					padding: 0px 12px;
 					color: #333;
 					
 					&::-webkit-input-placeholder { /* WebKit browsers */
@@ -2310,6 +2319,7 @@ body.interior {
 				img {
 					/* padding: 0 0 25px; */
 				}
+				.slide-image{padding: 0 0 25px;}
 
 				blockquote {
 					background: white;
