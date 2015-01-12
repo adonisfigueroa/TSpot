@@ -396,6 +396,16 @@ body.products {
 				font-size: 1.1em !important;
 			}
 	    }
+
+	    table {
+			margin-bottom: 30px;
+			overflow-x: auto;
+
+			@include break(v-mobile) {
+				display: block;
+			}	
+	    }
+	    
 	}
 }
 
@@ -1145,53 +1155,55 @@ h3.longtype {
 }
 
 #comments {
+	background: white;
 
-  background: white;
+	& > .wrapper {
+	padding: 30px 0 10px 8px;
+	position: relative;
 
-  & > .wrapper {
-    padding: 30px 0 10px 8px;
-    position: relative;
-    
-    &:before {
-      position: absolute;
-      background-image: url(/images/icon-comments-lg.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      content:"";
-      display: block;
-      width: 55px; height: 45px;
-      top: 35px; left: -63px;
-      @include break(tablet){
+	&:before {
+	  position: absolute;
+	  background-image: url(/images/icon-comments-lg.svg);
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  content:"";
+	  display: block;
+	  width: 55px; height: 45px;
+	  top: 35px; left: -63px;
+	  @include break(tablet){
 	      background-image: none;
-      }
-      
-    }
-    
-  }
-  .col-2-3 {
+	  }
+	  
+	}
+
+	}
+	.col-2-3 {
 	  width: 69%;
 	  @include break(v-tablet) {
 		  width: 100%;
 	  }
-  }
-  .col-1-3-last {
+	}
+	.col-1-3-last {
 	  width: 28%;
 	  @include break(v-tablet) {
 		  display:none;
 	  }
-  }
-  
-  h3 {
-    color: #4484D0;
-    font-size: 1.2em;
-
-	span.small {
-		font-size: 0.55em;
 	}
 
-  }
+	h3 {
+	color: #4484D0;
+	font-size: 1.2em;
+
+		span.small {
+			font-size: 0.55em;
+		}
+	}
+
+	h3.section-header {
+		font-size: 1.7em;
+	}
   
-  a.post-new-comment {
+	a.post-new-comment {
 		display: inline-block;
 		background-image: url(/images/glyph-orange.svg);
 		background-position: left center;
@@ -1201,33 +1213,33 @@ h3.longtype {
 		margin-bottom: 10px;
 		padding: 15px 0 15px 28px;
 		font-family: Roboto Condensed;
-  }
-  
-  .comment {
-    font-size: .7em;
-    border-top: 1px solid #eee !important;
-    padding: 0 0 15px 0;
-    
-    cite {
-      display: block;
-      line-height: 50px;
-      font-style: normal;
-      padding-top: 10px;
-    }
-    
-    time {
-      display: inline-block;
-      float: right;
-      font-size: .9em;
-      color: #888;
-      
-      a {
-      	color: #888;
-      }
-    }
+	}
 
-    span.comment_likes {
-    	float: right;
+	.comment {
+	font-size: .7em;
+	border-top: 1px solid #eee !important;
+	padding: 0 0 15px 0;
+
+	cite {
+	  display: block;
+	  line-height: 50px;
+	  font-style: normal;
+	  padding-top: 10px;
+	}
+
+	time {
+	  display: inline-block;
+	  float: right;
+	  font-size: .9em;
+	  color: #888;
+	  
+	  a {
+	  	color: #888;
+	  }
+	}
+
+	span.comment_likes {
+		float: right;
 		display: inline-block;
 		font-size: 0.9em;
 		color: #888;
@@ -1238,23 +1250,23 @@ h3.longtype {
 		@include break(mobile) {
 			float: left;
 		}
-    }
-    
-    img.user-avatar {
-      background: #eaeaea;
-      width: 32px; height: 32px;
-      border: 1px solid #ddd;
-      @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
+	}
+
+	img.user-avatar {
+	  background: #eaeaea;
+	  width: 32px; height: 32px;
+	  border: 1px solid #ddd;
+	  @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
 	  margin: 0 10px 5px 0px;
-    }
-    
-    a.user {
-      color: $blue;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    
-    .commentText {
+	}
+
+	a.user {
+	  color: $blue;
+	  font-weight: bold;
+	  font-size: 1.1em;
+	}
+
+	.commentText {
 		display: block;
 		margin-top: 5px;
 		font-size: 14px;
@@ -1285,38 +1297,38 @@ h3.longtype {
 				max-height: 100px;
 			}
 	    }
-    }
-    
-    ul.action-links {
-      text-align: right;
-      margin-top: 10px;
-      li {
-        display: inline-block;
-        line-height: 100%;
-        padding: 0 5px;
-        text-transform: uppercase;
-        font-size: .8em;
-        font-weight: bold;
-        
-        &:first-child {
-          /* border-right: 1px solid #ccc; */
-        }
-        a {
-          color: $blue;
-          &:hover {
-          	color: #c00;
-          }
-        }
-      }
-    }
-  }
-  
-  .recently-commented-stories {
-    background-color: #fff;
-    height: 50px;
-    ul {
-    	text-align: center;
-    	li {
+	}
+
+	ul.action-links {
+	  text-align: right;
+	  margin-top: 10px;
+	  li {
+	    display: inline-block;
+	    line-height: 100%;
+	    padding: 0 5px;
+	    text-transform: uppercase;
+	    font-size: .8em;
+	    font-weight: bold;
+	    
+	    &:first-child {
+	      /* border-right: 1px solid #ccc; */
+	    }
+	    a {
+	      color: $blue;
+	      &:hover {
+	      	color: #c00;
+	      }
+	    }
+	  }
+	}
+	}
+
+	.recently-commented-stories {
+	background-color: #fff;
+	height: 50px;
+	ul {
+		text-align: center;
+		li {
 	    display: inline-block;
 	    color: $blue;
 	    font-size: 0.7em;
@@ -1328,12 +1340,12 @@ h3.longtype {
 		    }
 		}
 	}
-  }
-  .CommentOpt {
-  	font-size: 0.7em;
-  	position: relative;
-  	height: 100px;
-  	color: #444;
+	}
+	.CommentOpt {
+		font-size: 0.7em;
+		position: relative;
+		height: 100px;
+		color: #444;
 		.ontheleft {
 			float: left;
 			display: inline-block;
@@ -1380,20 +1392,20 @@ h3.longtype {
 			}
 		}
 	}
-  
-  #add-new-comment {
-    background-color: #F5F5F5;
-    
-    h3 {
-      line-height: 200%;
-      font-weight: 500;
-    }
-    
-    .wrapper {
-      padding: 25px 0 50px;
-    }
-    
-    .textarea {
+
+	#add-new-comment {
+	background-color: #F5F5F5;
+
+	h3 {
+	  line-height: 200%;
+	  font-weight: 500;
+	}
+
+	.wrapper {
+	  padding: 25px 0 50px;
+	}
+
+	.textarea {
 		min-height: 150px;
 		padding: 8px;
 		line-height: 1.3;
@@ -1409,10 +1421,10 @@ h3.longtype {
 			width: 94% !important;
 		}
 	}
-    
-  }
 
-  .staff {
+	}
+
+	.staff {
 		display: inline-block;
 		zoom: 1;
 		vertical-align: middle;
@@ -1424,7 +1436,7 @@ h3.longtype {
 		text-indent: -1000px;
 		float: right;
 		margin-top: 15px;
-  }
+	}
 }
 
 span._bar {
