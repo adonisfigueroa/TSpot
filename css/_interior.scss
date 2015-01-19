@@ -754,6 +754,7 @@ body.interior {
 			        }
 			        @include break(v-mobile) {
 				        font-size: 1.6em;
+				        line-height: 1.3;
 			        }
 				}
 
