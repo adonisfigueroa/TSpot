@@ -550,7 +550,7 @@ body.products {
 					}
 				}
 
-				p { padding: 0 0 15px !important; }
+				p { padding: 0 0 15px !important; line-height: 1.5 !important; }
 				p:last-child { padding: 0 !important; }
 			}
 			
@@ -1707,7 +1707,6 @@ ul.category-chicklets {
 		&.social-count {
 			background-color: $orange;
 			color: white;
-			font-weight: 600;
 			text-align: center;
 			font-size: 0.7em;
 			line-height: 25px;
@@ -2258,8 +2257,8 @@ ul.category-chicklets {
 		}
     }
     .imgwrap .flex-viewport ul li::after {
-	    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
-	    box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    // -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    // box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
 	    position: absolute;
 	    top: 0;
 	    left: 0;
@@ -2314,13 +2313,12 @@ ul.category-chicklets {
 			border-left: 10px solid $grey; 
 			padding: 5px 0px 5px 10px;
 			font-size: 0.8em;
-			font-weight: 300;
+			color: #333;
 		}
 		&.editorial p {
 			border-left: none;
 			padding: 0;
 			font-size: 0.85em;
-			font-weight: 300;
 		}
     	ul {
         	li {
@@ -2516,6 +2514,8 @@ ul.category-chicklets {
       background-color: #999;
     }
     .breakdown {
+      margin-left: 110px;
+      font-size: 12px;
 	  @include break(v-tablet){
 	  	//margin-left: 90px;
 	  }    
@@ -2524,10 +2524,8 @@ ul.category-chicklets {
 		  float: left;
 		  margin-left: 6%;
 	  }
-      margin-left: 110px;
-      font-size: 12px;
       a {
-        font-weight: bold;
+        font-weight: 500;
       }
       ul {
         list-style: none;
