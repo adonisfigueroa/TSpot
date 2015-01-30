@@ -2689,7 +2689,7 @@ body.interior {
 	  .others_said {
 	    clear: both;
 	    height: 50px;
-	    line-height: 50px;
+	    line-height: 50px !important;
 	    font-size: 0.9em;
 	    color: #444;
 	    text-align: right;
