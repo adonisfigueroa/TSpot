@@ -1004,7 +1004,7 @@ h3.longtype {
   margin: 0px 0 10px;
 
 	&.related-stories {
-  		margin: 10px 0 30px;
+  		margin: 10px 0 10px;
 
 		ul.teaser-list {
 
@@ -1610,7 +1610,7 @@ span._bar {
 }
 
 ul.category-chicklets {
-	line-height: 20px;
+	
 	@include break(mobile){
 		margin: 20px 0 10px;
 	}
@@ -1628,6 +1628,7 @@ ul.category-chicklets {
 			font-size: .55em;
 			font-weight: 500;
 			letter-spacing: 0.50px;
+			line-height: 21px;
 
 			&.black { color: #000; }
 		}
@@ -3386,12 +3387,14 @@ table {
 }
 
 .ad_block_news {
-	margin-top: 20px;
+	margin-left: 750px;
+	position: absolute;
+	padding: 61px 0 0 20px;
+}
 
-	@include break(mobile){
-		margin: -25px auto 25px;
-		text-align: center;
-	}
+.ad_block_news_mob {
+	margin: -25px auto 25px;
+	text-align: center;
 }
 
 .ad_block_leader2 {
