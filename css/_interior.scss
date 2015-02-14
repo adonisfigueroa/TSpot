@@ -1136,7 +1136,7 @@ body.interior {
 	&.news {
   		#content {
     		.articleBody {
-	      		margin-bottom: 25px;
+	      		margin-bottom: 25px; min-height: 300px;
 	      		@include break(mobile) {
 		      		margin-bottom: 5px;
 	      		}
