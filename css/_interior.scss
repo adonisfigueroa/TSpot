@@ -474,7 +474,7 @@ body.interior {
 				&.prev {
 					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
 					background-repeat: no-repeat;
-					background-size: cover;
+					background-size: cover !important;
 					background-position: center center;
 					@include col(1,2,2);
 					
@@ -522,7 +522,7 @@ body.interior {
 				&.next {
 					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
 					background-repeat: no-repeat;
-					background-size: cover;
+					background-size: cover !important;
 					background-position: center center;
 					@include col-last(1,2,2);
 
