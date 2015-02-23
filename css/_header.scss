@@ -745,12 +745,12 @@
 		}
 		#download {
 			li:first-child {
-				margin-left: 180px;
+				margin-left: -200px;
 				@include break(tablet){
-					margin-left: 580px;
+					margin-left: 225px;
 				}
 				@include break(v-tablet){
-					margin-left: 0
+					margin-left: 0;
 				}
 			}
 			li:last-child {
@@ -768,12 +768,12 @@
 		}
 		#forums {
 			li:first-child {
-				margin-left: -50px;
+				margin-left: 217px;
 				@include break(tablet){
-					margin-left: 450px;
+					margin-left: 515px;
 				}
 				@include break(v-tablet){
-					margin-left: 390px;
+					margin-left: 500px;
 				}
 			}
 			@include break (tablet){
