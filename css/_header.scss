@@ -850,6 +850,15 @@
 						background-color: #777D82;
 						transition: 0.3s linear;
 					}
+
+					&.NoArrow {
+						a {
+							padding: 0 15px 0 15px;
+							&:after {
+								border: 0;
+							}
+						}						
+					}
 					
 					.nav-submenu {
 						position: absolute;
