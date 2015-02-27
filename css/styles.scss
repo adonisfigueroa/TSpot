@@ -2175,6 +2175,15 @@ ul.category-chicklets {
 	    background-size: cover;
 	    background-position: center center;
 
+	    .product_images {
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-position: center center;
+	    }
+
 	    img{
 		  max-height: 100%;
 		  max-width: 100%;
