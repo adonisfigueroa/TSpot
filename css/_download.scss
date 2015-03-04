@@ -339,7 +339,7 @@ body.interior.download {
           }
         }
 
-        div.download-warning {
+        .download_warning {
           border: 1px solid #ddd;
           background-color: #feefb3;
           width: 95%;
@@ -354,8 +354,15 @@ body.interior.download {
             margin-top: 10px;
           }
 
+          label {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
           &.alert {
             background-color: #feefb3;
+
             label {
               color: #fff;
               font-weight: 500;
@@ -364,6 +371,7 @@ body.interior.download {
               background-color: #c00;
               padding: 3px 6px 5px 4px;
               border-radius: 5px;
+
               &:hover {
                 cursor: pointer;
               }
