@@ -3213,6 +3213,44 @@ table {
 .mStuckSearch{padding: 25px 0 0px 0; background: #f5f5f5;}
 .mStuckForceTopForum{top: 100px!important;}
 
+.nIndexLayout{
+	display: block;
+	
+	.nCol{
+		display: block; float: left; position: relative;
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+		padding-left: 15px; padding-right: 15px;
+		border-bottom: dashed 1px red; padding-bottom: 10px;
+	}//nCol
+	.nCol-1-2{width: 50%;}
+	.ncol-1-1{width: 100%;}
+	
+	.photoArticle{
+		
+	}//photoArticle
+	
+	.simpleArticle{
+		
+	}//simpleArticle
+	
+	.entry{
+		.entryMedia{
+			
+		}//entryMedia
+		.entryHeader{
+			
+		}//entryHeader
+		.entryBody{
+			
+		}//entryBody
+	}//entry
+}//nIndexLayout
+
+
+
+
+
+
 //Slide section
 .owl-carousel .animated {
 	-webkit-animation-duration: 1000ms;
