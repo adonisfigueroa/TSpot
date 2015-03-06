@@ -443,8 +443,8 @@ body.interior {
 				&.prev, &.next{
 					&:hover {
 						span {
-							background-color: rgba(16, 90, 178, 0.9);
-							@include transitions(0.2s);
+							background-color: rgba(16, 90, 178, 0.95);
+							@include transitions(0.1s);
 						}
 					}
 				}
@@ -454,7 +454,7 @@ body.interior {
 						span {
 							&:after {
 								@include triangle(left,#ff7f00,8,10);
-								@include transitions(0.2s);
+								@include transitions(0.1s);
 							}
 						}
 					}
@@ -465,7 +465,7 @@ body.interior {
 						span {
 							&:after {
 								@include triangle(right,#ff7f00,8,10);
-								@include transitions(0.2s);
+								@include transitions(0.1s);
 							}
 						}
 					}
@@ -2913,8 +2913,8 @@ body.interior {
 	  }
 	  .others_said {
 	    clear: both;
-	    height: 50px;
-	    line-height: 50px !important;
+	    height: 30px;
+	    line-height: 30px !important;
 	    font-size: 0.9em;
 	    color: #444;
 	    text-align: right;
@@ -2941,9 +2941,9 @@ body.interior {
 	      height: 32px;
 	      line-height: 32px;
 	      color: #fff !important;
-	      margin: 10px 10px 0 5px;
-	      @include border-radius(2px);
+	      margin: -5px 10px 0 5px;
 	      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	      @include border-radius(2px);
 	    }
 	  }
 }
