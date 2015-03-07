@@ -33,7 +33,7 @@
 		height: 42px;
 		margin-left: -10px;
 		@include break(tablet){
-			margin-left: -4px;
+			margin-left: -6px;
 		}
 	}
 	#main-menu #dk_menu > li {
@@ -773,7 +773,7 @@
 					margin-left: 515px;
 				}
 				@include break(v-tablet){
-					margin-left: 500px;
+					margin-left: 370px;
 				}
 			}
 			@include break (tablet){
@@ -793,17 +793,20 @@
 					text-transform: uppercase;
 					font-weight: 400;
 
+					/*
 					&:first-child{
-						a{
-						}
+						a {}
 						.nav-submenu li a{
 							padding: 0 30px 0 15px;
 						}
 						
 					}
+					*/
+
 					@include break(v-tablet) {
 						margin-right: 0px;
 					}
+					
 					a {
 						color: white;
 						position: relative;
@@ -811,8 +814,8 @@
 						padding: 0 32px 0 15px;
 						margin-top: 0px;
 						
-						@include break(tablet){
-							padding: 0 32px 0 10px;
+						@include break(v-tablet){
+							padding: 0 28px 0 12px;
 						}
 						
 						&:after {
@@ -930,9 +933,13 @@
 							display: block;
 							font-weight: 500;
 							//position: relative;
+
+							/*
 							&:first-child a {
 								padding: 0 30px 0 15px;
 							}
+							*/
+
 							a {
 								text-transform: none;
 								&:after {
