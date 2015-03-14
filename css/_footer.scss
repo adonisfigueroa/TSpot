@@ -4,7 +4,7 @@ footer {
 	z-index: 2;
 	
 	.wrapper {
-		padding: 80px 0 30px;
+		padding: 50px 0 35px;
 		@include break(v-mobile){
 			padding: 30px 0px 10px 0px; 
 		}
@@ -19,7 +19,7 @@ footer {
 		display: none !important;
 		@include break(v-mobile){
 			display: block!important;
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 		}
 	}
 	
@@ -54,7 +54,7 @@ footer {
 				border: none;
 				width: 100%;
 				padding: 0 5%;
-				margin-top: 3px;
+				margin-top: 1px;
 				font-size: 0.8em;
 				cursor: pointer;
 
@@ -74,16 +74,15 @@ footer {
 		@include col(2.2,14,5);
 		font-size: .8em;
 		ul {
-			margin-top: 15px;
+			margin-top: 10px;
 			font-size: .8em;
 			li {
 				line-height: 25px;
 				a {
 					font-weight: 200;
-					/* @include transitions(); */
 					&:hover {
-						border-bottom: 1px solid #3470AA;
-						padding-bottom: 1px;
+						border-bottom: 1px solid #5D8DBB;
+						padding-bottom: 3px;
 						color: #105ab2;
 					}
 				}
@@ -107,6 +106,7 @@ footer {
 		@include col(3,14,5);	
 		}
 	}
+/*
 	@include break(mobile){
 		#Main {
 			display: none;
@@ -123,7 +123,8 @@ footer {
 		@include col(1,1,0);	
 		}
 	}
-	
+*/
+
 	.follow-subscribe {
 		@include col-last(4.3,14,5);
 		.menu {
@@ -165,6 +166,10 @@ footer {
 					&.youtube {
 						background-image: url('/images/social/18-youtube.svg');
 						background-color: #E63D28;
+						background-size: 28px 28px;
+						&:hover {
+							background-size: 80%;
+						}
 					}
 					
 					&.instagram {
@@ -225,9 +230,20 @@ footer {
 	}
 	
 	.copyright {
-		margin-top: 65px;
 		font-size: .6em;
 		font-weight: 100;
+		background: #d1d1d1;
+
+		@include break(v-mobile){
+			background: #e0e0e0;
+		}
+
+		.wrapper {
+			padding: 25px 0;
+			@include break(v-mobile){
+				padding: 10px 0;
+			}
+		}
 		
 		p {
 			margin: 10px 0;
