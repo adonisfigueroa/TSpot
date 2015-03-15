@@ -5,8 +5,8 @@ input[type=password] {
 	border: none;
 	line-height: 18px;
 	padding: 6px 8px;
-	@include outer-glow(5);
-	@include border-radius(0px);
+	@include outer-glow(3);
+	@include border-radius(2px);
 	font-style: normal!important;
 	
 	&:focus {
@@ -19,14 +19,18 @@ input[type=submit] {
 	display: inline-block;
 	background: $blue;
 	line-height: 14px;
-	padding: 6px 20px;
+	padding: 5px 16px;
 	color: white;
 	text-align: center;
 	border: none;
-	@include border-radius(0px);
+	@include border-radius(2px);
 
 	&:hover {
 		background: lighten($blue,6%);
+	}
+	&:active {
+		position: relative;
+		top: 1px;
 	}
 }
 

@@ -422,11 +422,6 @@ body.interior {
 			display: table;
 			height: 140px;
 			overflow: hidden;
-
-			@include break(mobile){
-				height: 120px;
-			}
-			
 		}
 		.page-nav-interior {
 			display: table-cell; 
@@ -480,7 +475,6 @@ body.interior {
 					
 					span {
 						background-color: rgba(16, 90, 178, 0.8);
-						/* background: #B2B9BE; */
 						@include border-radius(1px);
 						@include transitions(0.1s);
 						@include col(1,6,0);
@@ -495,28 +489,14 @@ body.interior {
 						}
 						@include break(mobile){
 							font-size: 0;
-							height: 120px;
 						}
 					}
 					strong {
 						background: linear-gradient(to bottom, rgba(31,41,51,0.1) 10%, rgba(31,41,51,0.72) 70%);
 						@include col-last(5,6,0);
-						@include break(mobile){
-							height: 120px;
-						}
 					}
 					.page-nav-wrapper {
-						@include break(mobile){
-							height: 120px;
-						}
-					}
-
-					@include break(v-tablet){
-					}
-
-					@include break(mobile){
-					}
-					
+					}					
 				}
 				
 				&.next {
@@ -544,21 +524,11 @@ body.interior {
 						}
 						@include break(mobile){
 							font-size: 0;
-							height: 120px;
 						}
 					}
 					strong {
 						background: linear-gradient(to bottom, rgba(31,41,51,0.1) 10%, rgba(31,41,51,0.72) 70%);
 						@include col-last(5,6,0);
-						@include break(mobile){
-							height: 120px;
-						}
-					}
-
-					@include break(v-tablet) {
-					}
-
-					@include break(mobile){
 					}
 				}
 				
@@ -570,7 +540,6 @@ body.interior {
 					background: #676767;
 					
 					&:after {
-						//display: none;
 						margin-top: -7px;
 					}
 				}
@@ -619,7 +588,6 @@ body.interior {
 			}
 		}
 	}
-
 
 	&.category {
 		article {
@@ -1188,10 +1156,9 @@ body.interior {
 	  	 	padding-top: 5px;
 	  	 	height: 30px;
 	  	 	line-height: 25px;
-	  	 	font-weight: 700;
-	  	 	font-family: $f-helvetica;
-	  	 	border: solid 1px #AAAAAA;
-	  	 	@include border-radius(5px);
+	  	 	font-weight: 600;
+	  	 	border: solid 1px #aaa;
+	  	 	@include border-radius(3px);
 	  	 	@include gradient-trans($start_color:#1E2933,$start_alpha:0,$end_color:#1E2933,$end_alpha:0.1);
 	
 			span {
@@ -1200,13 +1167,15 @@ body.interior {
 			}
 	  	 	
 	  	 	span.count {
-		  	 	background: grey;
+				background: grey;
 				border-radius: 100px;
 				min-width: 15px;
 				display: inline-block;
 				color: white;
 				padding-left: 5px;
 				padding-right: 5px;
+				line-height: 24px;
+				margin-left: 5px;
 	  	 	}
   		}
 	}
@@ -1359,18 +1328,19 @@ body.interior {
 	        a.wide-button {
 	        	display: block;
 	        	background: #F8F8F8;
+	        	letter-spacing: -0.5px;
 	        	line-height: 50px;
 	        	text-align: center;
 	        	border: 1px solid #DDDDDD;
-	        	color: #333;
-	        	font-size: 1.1em;
+	        	border-style: none solid solid solid;
 
 				@include break(mobile){
 					font-size: 0.9em;
 		        }
 
 	        	&:hover {
-		          	background: darken(#F8F8F8,5%);
+					background: #f6f6f6;
+					border: 1px solid #ccc;
 	        	}
 	      	}
         

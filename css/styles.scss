@@ -365,7 +365,11 @@ body.products {
 					box-shadow: inset 0 -5px 0 #FBBB76;
 					color: inherit;
 				}
-
+				&:active {
+					position: relative;
+					top: 1px;
+				}
+				
 				.itxtrst, .itxtrstspan, .itxtrst span {
 				    color: #333 !important;
 				}
@@ -1178,6 +1182,13 @@ h3.longtype {
         font-size: 1.1em;
         padding: 2px 8px 8px;
         font-weight: 500;
+
+        @include break(mobile){
+        	padding: 2px 0 8px;
+        }
+        @include break(v-mobile){
+        	font-size: 1.2em;
+        }
       }
       
       .reviews {
@@ -2361,7 +2372,7 @@ ul.category-chicklets {
 			padding: 5px 0px 5px 10px;
 			font-size: 0.8em;
 			color: #333;
-			font-weight: 1.4;
+			line-height: 1.4;
 		}
 		&.editorial p {
 			border-left: none;
@@ -2993,13 +3004,13 @@ ul.category-chicklets {
 }
 
 .search-box {
-	margin: 35px 0;
-	padding: 15px 0;
-	border: 1px solid #dcdcdc;
+	margin: 25px 0;
 	background-color: #F8F8F8;
+	padding: 25px 0;
+	border: 2px solid #eee;
+	border-style: solid none solid none;
 	line-height: 45px;
 	font-weight: 400;
-	width: 98%;
 
 	@include break(v-mobile) {
     	display: none;
