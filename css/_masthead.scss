@@ -2741,7 +2741,7 @@
 }
 }
 .products-cat #masthead {
-	min-height: 248px;
+	/* min-height: 248px; */
 	@include break(tablet){
 		.wrapper {
 			position: relative;
