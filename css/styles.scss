@@ -3095,41 +3095,49 @@ table {
 	}
 
 	&.article-table {
-	  margin: 15px 0 30px;
-	  font-size: 0.9em;
-	  a {
-	  	color: #105ab2;
-	  	box-shadow: none !important;
-	  }
-	  tr {
-	    padding: 3px 0 3px 10px;
-	  }
-	  td, th {
-	    padding: inherit;
-	    text-align: center;
-	  }
-	  tr {
-	    &.title {
-	      background-color: #105ab2;
-	      color: #ffffff;
-	      a {
-	        color: #ffffff;
-	      }
-	      td, th {
-	      	font-weight: 500;
-	      }
-	    }
-	    &.alt {
-	      background-color: white;
-	    }
-	    &.sub {
-	      background-color: #ddd;
-	    }
-	  }
-	  td.cat {
-	    font-weight: 500;
-	    text-align: left;
-	  }
+		margin: 15px 0 30px;
+		font-size: 0.9em;
+
+		a {
+			color: #105ab2;
+			box-shadow: none !important;
+		}
+		td, th {
+			padding: inherit;
+			text-align: center;
+		}
+
+		tr {
+			padding: 3px 0 3px 10px;
+
+			&.title {
+			  background-color: #105ab2;
+			  color: #ffffff;
+			  a {
+			    color: #ffffff;
+			  }
+			  td, th {
+			  	font-weight: 500;
+			  }
+			}
+			&.alt {
+			  background-color: white;
+			}
+			&.sub {
+			  background-color: #ddd;
+			}
+		}
+		td.cat {
+			font-weight: 500;
+			text-align: left;
+		}
+		&.alt {
+			tr {
+				&:nth-child(even) {
+					background: white;
+				}
+			}
+		}
 	}
 }
 
@@ -3257,7 +3265,7 @@ table {
 }
 
 .mClear{clear: both;}
-.products .ProdSearch{width: 94.1%!important; padding: 0px 3%!important; font-size: 1.6em!important;}
+.products .ProdSearch{width: 94.1%!important; font-size: 1.6em!important;}
 .mStuckSearch{padding: 25px 0 0px 0; background: #f5f5f5;}
 .mStuckForceTopForum{top: 100px!important;}
 
@@ -3487,7 +3495,7 @@ table {
 }
 
 .ad_block_news_mob {
-	margin: -25px auto 25px;
+	margin: 0 auto;
 	text-align: center;
 }
 

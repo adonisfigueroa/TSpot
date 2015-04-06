@@ -394,6 +394,10 @@ body.interior {
 		float:right;
 		padding-bottom: 10px;
 
+	    @include break(mobile){
+		    margin-top: 25px;
+	    }
+
 		a {
 			font-weight: 400;
 			font-size: 1.8em;
@@ -1594,11 +1598,11 @@ body.interior {
 				}
 			}
 
-			h3{
+			h3 {
 				color: white;
 				line-height: 35px;
 				font-family: Roboto Condensed;
-				font-size: 0.9em;
+				font-size: 0.8em;
 			}
 
 			input[type=text] {
@@ -1610,9 +1614,9 @@ body.interior {
 				box-shadow: none;
 				font-family: "Roboto Condensed", sans-serif;
 				line-height: 30px;
-				font-size: 0.9em;
+				font-size: 1em !important;
 				font-weight: 500;
-				padding: 0px 2%;
+				padding: 0px 2% !important;
 				color: #333;
 			}
 		}
@@ -1627,7 +1631,7 @@ body.interior {
 			color: white;
 			font-size: 0.7em;
 			@include break(v-tablet){
-				font-size: 0.6em;
+				font-size: 0.65em;
 			}
 			#CategoryList{
 				background: #304456;
@@ -1730,9 +1734,9 @@ body.interior {
 				}
 			}
 			.computer-hardware {
-				height: 185px;
+				height: 160px;
 			}
-			.pcs-laptops-tablets {
+			.pcs-devices {
 				height: 40px;
 			}
 			.electronics {
@@ -1821,7 +1825,7 @@ body.interior {
 					line-height: 64px;
 					font-size: 2em;
 					font-weight: 500;
-					padding: 0px 12px;
+					padding: 0px 15px;
 					color: #333;
 					
 					&::-webkit-input-placeholder { /* WebKit browsers */
@@ -1891,9 +1895,9 @@ body.interior {
 				}
 			}
 			.computer-hardware {
-				height: 185px;
+				height: 160px;
 			}
-			.pcs-laptops-tablets {
+			.pcs-devices {
 				height: 40px;
 			}
 			.electronics {

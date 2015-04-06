@@ -1,16 +1,20 @@
 #header-ts {
-	.hoverOrange {
-		background-color: $orange;
-	}
-	$line-height: 43px;
+	$header-height: 84px;
+	$header-top-line-height: 43px;
+
 	-webkit-transition: 0;
 	transition: 0;
 	position: fixed;
 	z-index: 1100001;
 	width: 100%;
 	top: 0;
-	line-height: $line-height;
-	height: $line-height;
+	line-height: $header-height;
+	height: $header-height;
+
+	.hoverOrange {
+		background-color: $orange;
+	}
+
 	#main-menu #dk_menu{
 		#SpecialHeightF {
 			.nav-submenu {
@@ -51,16 +55,16 @@
 		}
 		.wrapper {
 			padding: 0;
-			line-height: $line-height;
+			line-height: $header-top-line-height;
 		}
 		.right-links {
 			float: right;
-			line-height: $line-height;
+			line-height: $header-top-line-height;
 
 			ul {
 				li {
 					display: inline-block;
-					line-height: $line-height;
+					line-height: $header-top-line-height;
 					@include break(mobile){
 						line-height: 52px;
 					}
@@ -501,9 +505,9 @@
 								display: none;
 								position: absolute;
 								right: 0;
-								top: $line-height;
+								top: $header-top-line-height;
 								width: 220px;
-								height: $line-height;
+								height: $header-top-line-height;
 								z-index: 100;
 								input {
 									display: block;
@@ -550,29 +554,33 @@
 	}
 	
 	&.interior{
-		$small-line-height: 32px;
-		$small-line-height-mobile: 43px;
-		line-height: $small-line-height;
-		height: $small-line-height;
+		$header-interior-height: 78px;
+		$header-mobile-height: 57px;
+		$header-interior-line-height: 32px;
+		$header-interior-line-height-mobile: 43px;
+
+		line-height: $header-interior-height;
+		height: $header-interior-height;
+
 		@include break(mobile){
-			line-height: $small-line-height-mobile;
-			height: $small-line-height-mobile;
+			line-height: $header-mobile-height;
+			height: $header-mobile-height;
 		}
 		.header-top {
 			.wrapper {
-				line-height: $small-line-height;
+				line-height: $header-interior-line-height;
 			    @include break(mobile){
-				    line-height: $small-line-height-mobile;
+				    line-height: $header-interior-line-height-mobile;
 			    }
 			}
 			.right-links {
-				line-height: $small-line-height;
+				line-height: $header-interior-line-height;
 				@include break(mobile){
-					line-height: $small-line-height-mobile;
+					line-height: $header-interior-line-height-mobile;
 				}
 				ul {
 					li {
-						line-height: $small-line-height;
+						line-height: $header-interior-line-height;
 						@include break(mobile){
 							line-height: 52px;
 						}
@@ -591,9 +599,9 @@
 									line-height:52px ;
 								}
 								form {
-									top: $small-line-height;
+									top: $header-interior-line-height;
 									@include break(mobile){
-										top: $small-line-height-mobile;
+										top: $header-interior-line-height-mobile;
 									}
 									
 								}
@@ -622,8 +630,8 @@
 				text-decoration: none;
 				fill: white;
 				float: left;
-				height: $small-line-height;
-				line-height:$small-line-height; 
+				height: $header-interior-line-height;
+				line-height:$header-interior-line-height; 
 				margin-top:3px;
 				width: 13px;
 				height: 30px;
@@ -637,12 +645,12 @@
 		}
 		h1#logo {
 			background-size: 175px;
-			line-height: $small-line-height;
-			height: $small-line-height;
+			line-height: $header-interior-line-height;
+			height: $header-interior-line-height;
 			padding-bottom: 3px;
 			width: 160px;
 			a {
-				line-height: $small-line-height;
+				line-height: $header-interior-line-height;
 			}
 		    @include break(mobile){
 			    margin-left: 32px;
@@ -1102,8 +1110,8 @@
 			text-decoration: none;
 			fill: white;
 			float: left;
-			height: $line-height;
-			line-height:$line-height; 
+			height: $header-top-line-height;
+			line-height:$header-top-line-height; 
 			margin-top:2px;
 			width: 13px;
 			@include transitions (0.1s);
@@ -1125,7 +1133,7 @@
 		background-image: url(../images/logo-techspot.svg);
 		background-repeat: no-repeat;
 		background-position: -8px center;
-		line-height: $line-height;
+		line-height: $header-top-line-height;
 	    background-size: 200px;
 	    height: 45px;
 	    line-height: 45px;
@@ -1144,8 +1152,8 @@
 	    }
 		a {
 			display: block;
-			width: 189px; height: $line-height;
-			line-height: $line-height;
+			width: 189px; height: $header-top-line-height;
+			line-height: $header-top-line-height;
 		}
 		
 	}
@@ -1207,4 +1215,19 @@
 .CoverEntirePage {
 	height: 10000px !important;
 	width: 100%;
+}
+
+@include break(mobile){
+	@media screen and (orientation:landscape) {
+		#header-ts {
+			position: static !important;
+		}
+		.menuSpacerHome {
+			margin-top: -85px;
+		}
+		.menuSpacerFeat, .menuSpacerNormal {
+			height: 1px !important;
+			margin-top: -28px;
+		}
+	}
 }
