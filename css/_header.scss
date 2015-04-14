@@ -35,7 +35,7 @@
 	}
 	#dk_menu {
 		height: 42px;
-		margin-left: -10px;
+		margin-left: -8px;
 		@include break(tablet){
 			margin-left: -6px;
 		}
@@ -703,17 +703,17 @@
 			li {
 				text-align: center;
 				margin: 0px 15px;
-				padding-bottom: 0!important;
+				padding-bottom: 0 !important;
 				display: inline-block;
 				text-transform: none;
 				color: white;
 				line-height: 20px;
 				a:after {
 					left: 0;
-					top: 7px!important;
+					top: 7px !important;
 				}
 				a {
-					padding: 0 0 0 15px!important;
+					padding: 0 0 0 15px !important;
 				}
 			}
 			li:hover {
@@ -747,7 +747,7 @@
 					padding: 0 0 0 0 !important;
 				}
 				a:after {
-					border: 0!important;
+					border: 0 !important;
 				}
 			}	
 		}
@@ -819,21 +819,21 @@
 						color: white;
 						position: relative;
 						display: block;
-						padding: 0 32px 0 15px;
+						padding: 0 27px 0 14px;
 						margin-top: 0px;
 						
 						@include break(v-tablet){
-							padding: 0 28px 0 12px;
+							padding: 0 25px 0 12px;
 						}
 						
 						&:after {
 							content:"";
 							position: absolute;
-							right: 15px;
+							right: 12px;
 							top: 50%;
-							margin-top: -2px;
+							margin-top: -1px;
 							width: 15px; height: 15px;
-							@include triangle(down,white,5,5);
+							@include triangle(down,white,4,4);
 						}
 						
 						&.active {
