@@ -3147,10 +3147,10 @@ body.interior.slide-article {
 				font-size: 1.15em;
 				font-weight: 400;
 				line-height: 1.4em;
-				color: #fff;
+				color: #fff !important;
 			
 				@include break(tablet) {
-					p { padding: 0 0 15px 60%!important; }
+					p { padding: 0 0 15px 60% !important; }
 				}
 
 				@include break(mobile) {
