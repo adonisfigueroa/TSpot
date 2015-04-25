@@ -395,7 +395,8 @@ body.interior {
 		padding-bottom: 10px;
 
 	    @include break(mobile){
-		    margin-top: 25px;
+			margin-top: 5px;
+  			margin-bottom: 20px;
 	    }
 
 		a {
