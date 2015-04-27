@@ -784,7 +784,17 @@ body.interior {
 					padding: 12px 0 0 10px;
 					min-height: 40px;
 					line-height: 1.7;
-					font-size: .9em;
+					font-size: .95em;
+
+					.outof {
+			            font-size: .85em;
+			            letter-spacing: 2px;
+			            padding-left: 2px;
+					}
+
+					.votes {
+						font-size: .9em;
+					}
 				}
 
 			  }
