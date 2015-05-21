@@ -56,7 +56,12 @@
 				@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.77);
 				
 				&:hover {
-					@include gradient-trans-percent($start_color:#1F2933,$start_cent:15%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:70%,$end_alpha:.9);
+
+					// Gris
+					// @include gradient-trans-percent($start_color:#1F2933,$start_cent:15%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:70%,$end_alpha:.9);
+
+					// Orange
+					@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
 					hgroup {
 						//bottom: 25px;
 					}
@@ -80,7 +85,7 @@
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 4px #444;
+						text-shadow: 1px 1px 3px #222;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;
@@ -893,7 +898,7 @@
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 4px #444;
+						text-shadow: 1px 1px 3px #222;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;
@@ -2089,41 +2094,43 @@
 	ul.featured-posts {
 		position: absolute;
 		.rating {
-		font-family: $f-helvetica;
-		position: absolute;
-		bottom: 0px;
-		right: 0;
-		font-size: 1.8em;
-		font-weight: 500;
-		color: white;
-		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 73px;
-		padding: 0 25px;
-		@include break(tablet){
-			padding: 0 17px;
-			line-height: 60px;
-			font-size: 1.4em;
+			font-family: $f-helvetica;
+			position: absolute;
+			bottom: 0px;
+			right: 0;
+			font-size: 1.8em;
+			font-weight: 500;
+			color: white;
+			text-shadow: 1px 1px 5px rgba(0,0,0,.5);
+			line-height: 66px;
+			padding: 0 19px;
+
+			@include break(tablet){
+				padding: 0 17px;
+				line-height: 60px;
+				font-size: 1.4em;
 			}	
-		@include break(mobile){
-			padding: 0 18px;
-			line-height: 60px;
-			font-size: 1.4em;
-			}		
+			
+			@include break(mobile){
+				padding: 0 18px;
+				line-height: 60px;
+				font-size: 1.4em;
+			}
 		}
 		.excellent {
-	      background-color: rgba(0,191,23,0.8);
+	      background-color: rgba(0,191,23,0.65);
 	    }
 	    .good {
-		    background-color: rgba(7,91,192,0.8);
+		    background-color: rgba(7,91,192,0.65);
 	    }
 	    .average {
-	      background-color: rgba(112,33,161,0.8);
+	      background-color: rgba(112,33,161,0.65);
 	    }
 	    .bad {
-	      background-color: rgba(204,0,0,0.8);
+	      background-color: rgba(204,0,0,0.65);
 	    }
 	    .none {
-	      background-color: rgba(153,153,153,0.8);
+	      background-color: rgba(153,153,153,0.65);
 	    }
 		li {
 			width: 366px;
@@ -2141,10 +2148,10 @@
 				color: white;
 				height: 166px - 30px;
 				@include transitions();
-				@include gradient-trans-percent($start_color:#1E2933,$start_cent:0%,$start_alpha:0,$end_color:#1E2933,$end_cent:30%,$end_alpha:0.6);
+				@include gradient-trans-percent($start_color:#1E2933,$start_cent:40%,$start_alpha:0.3,$end_color:#1E2933,$end_cent:90%,$end_alpha:0.95);
 				
 				&:hover {
-					@include gradient-trans($start_color:#1E2933,$start_alpha:.2,$end_color:#1E2933,$end_alpha:.4);
+					@include gradient-trans-percent($start_color:#1E2933,$start_cent:40%,$start_alpha:0.15,$end_color:#1E2933,$end_cent:90%,$end_alpha:0.95);
 					hgroup {
 						//bottom: 25px;
 					}
@@ -2168,7 +2175,7 @@
 					h2 {
 						font-size: 1.4em;
 						font-weight: 500;
-						text-shadow: 1px 1px 4px #444;
+						text-shadow: 1px 1px 3px #222;
 						max-height: 100px;
 						overflow: hidden;
 					}
@@ -2269,7 +2276,7 @@
 					h2 {
 						font-size: 1.2em;
 						font-weight: 500;
-						text-shadow: 1px 1px 4px #444;
+						text-shadow: 1px 1px 3px #222;
 						@include break(v-tablet){
 							font-size: 1.0em;
 						}
@@ -2525,7 +2532,7 @@
 					h2 {
 						font-size: 1.05em;
 						font-weight: 500;
-						text-shadow: 1px 1px 4px #444;
+						text-shadow: 1px 1px 3px #222;
 
 						@include break(v-tablet) {
 							font-size: 0.95em;

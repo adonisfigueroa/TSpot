@@ -363,7 +363,11 @@ body.products {
 					box-shadow: inset 0 -5px 0 #FBBB76;
 					color: inherit;
 				}
-
+				&:active {
+					position: relative;
+					top: 1px;
+				}
+				
 				.itxtrst, .itxtrstspan, .itxtrst span {
 				    color: #333 !important;
 				}
@@ -1007,7 +1011,7 @@ h3.longtype {
   }
 
 	&.related-stories {
-  		margin: 10px 0 10px;
+  		margin: 15px 0 15px;
   		display: block !important;
 
 		ul.teaser-list {
@@ -1176,6 +1180,13 @@ h3.longtype {
         font-size: 1.1em;
         padding: 2px 8px 8px;
         font-weight: 500;
+
+        @include break(mobile){
+        	padding: 2px 0 8px;
+        }
+        @include break(v-mobile){
+        	font-size: 1.2em;
+        }
       }
       
       .reviews {
@@ -1561,7 +1572,7 @@ span._bar {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px #222;
+			text-shadow: 1px 1px 2px #333;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -2169,6 +2180,7 @@ ul.category-chicklets {
   figure {
   	max-height: 435px;
   	background: white;
+
     @include col(6,10,5);
     @include break(tablet){
     	margin-right: 2%;
@@ -2177,15 +2189,54 @@ ul.category-chicklets {
 		    height: auto;
 	    }
     }
+
     .imgwrap ul li {
     	img {
-	    	max-height: 100%;
 			max-width: 100%;
+	    	max-height: 100%;
 			width: auto;
 			margin: 0 auto;
 			display: block;
     	}
     }
+
+    .imgwrap .flex-viewport {
+	    overflow: hidden;    	
+    }
+
+    .imgwrap .flex-viewport ul li {
+   	    display: block;
+	    position: relative;
+	    height: 435px;
+	    padding: 0;
+	    text-align: center;
+	    vertical-align: middle;
+	    overflow: hidden;
+
+	    img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			margin: 0 auto;
+			display: block;
+	    }
+
+		@include break(mobile){
+			height: 300px;
+		}
+    }
+/*
+    .imgwrap .flex-viewport ul li::after {
+	    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    content: "";
+	}
+*/
 
     .imgwrap .flex-direction-nav a{
 	    opacity: 0;
@@ -2199,37 +2250,7 @@ ul.category-chicklets {
 	    opacity: 0.9;
 	   	@include transitions(0.1s);
     }
-    
-    .imgwrap .flex-viewport ul li{
-	    display: block;
-	    height: 435px;
-	    padding: 0;
-	    position: relative;
-	    overflow: hidden;
-	    background-size: cover;
-	    background-position: center center;
 
-	    .product_images {
-			background-size: cover;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			background-repeat: no-repeat;
-			background-position: center center;
-	    }
-
-	    img{
-		  max-height: 100%;
-		  max-width: 100%;
-		  width: auto;
-		  margin: 0 auto; 
-		  display: block;
-	    }
-
-		@include break(mobile){
-			height: 300px;
-		}
-    }
     .flex-control-nav {
 			width: 100%;
 			position: absolute;
@@ -2240,7 +2261,7 @@ ul.category-chicklets {
 				bottom: -35px;
 			}
 			li {
-				margin: 0 6px;
+				margin: 0 3px;
 				display: inline-block;
 				zoom: 1;
 				cursor: pointer;
@@ -2253,6 +2274,7 @@ ul.category-chicklets {
 		background: #AAA;
 		cursor: pointer;
 		text-indent: -9999px;
+		border: 4px solid #fff;
 	}
 	.flex-active{
 		background: $orange !important;
@@ -2301,30 +2323,19 @@ ul.category-chicklets {
 			right: 2%;
 		}
     }
-    .imgwrap .flex-viewport ul li::after {
-	    // -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
-	    // box-shadow: 0 0 30px rgba(0,0,0,0.05) inset;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    height: 100%;
-	    content: "";
-	}
 
-   	    @include break(v-tablet){
-	    @include col(1,2,5);
+	@include break(v-tablet){
+		@include col(1,2,5);
     }
     @include break(mobile){
 	    width: 100%;
     }
   }
- @include break(mobile){
-	 background: white;
- }
   
   .product-desc {
     @include col-last(4,10,5);
+	margin-top: 15px;
+    
     @include break(tablet){
 	  width: 40%;
     }
@@ -2335,6 +2346,7 @@ ul.category-chicklets {
 	    width: 100%;
 	    margin-top: 40px;
     }
+    
     .Prodcomment {
     	margin-top: 25px;
     	@include break(mobile){
@@ -2355,11 +2367,11 @@ ul.category-chicklets {
 			padding-left: 0 !important;
 		}
 		p {
-			border-left: 10px solid $grey; 
-			padding: 5px 0px 5px 10px;
+			border-left: 5px solid $grey; 
+			padding: 5px 0px 5px 15px;
 			font-size: 0.8em;
 			color: #333;
-			font-weight: 1.4;
+			line-height: 1.4;
 		}
 		&.editorial p {
 			border-left: none;
@@ -2520,15 +2532,16 @@ ul.category-chicklets {
     .number {
       float: left;
       font-size: 46px;
-      color: #fff;
-      text-align: center;
       font-weight: 500;
-      height: 80px;
-      line-height: 80px;
-      width: 100px;
+      color: #fff;
+      width: 97px;
+      height: 83px;
+      line-height: 83px;
       background: #075BC0;
-      @include border-radius(3px);
+      text-align: center;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      @include border-radius(3px);
+
       @include break(v-tablet){
 	      width: 95px;
 	  }
@@ -2991,13 +3004,13 @@ ul.category-chicklets {
 }
 
 .search-box {
-	margin: 35px 0;
-	padding: 15px 0;
-	border: 1px solid #dcdcdc;
+	margin: 25px 0;
 	background-color: #F8F8F8;
+	padding: 25px 0;
+	border: 2px solid #eee;
+	border-style: solid none solid none;
 	line-height: 45px;
 	font-weight: 400;
-	width: 98%;
 
 	@include break(v-mobile) {
     	display: none;
@@ -3082,41 +3095,49 @@ table {
 	}
 
 	&.article-table {
-	  margin: 15px 0 30px;
-	  font-size: 0.9em;
-	  a {
-	  	color: #105ab2;
-	  	box-shadow: none !important;
-	  }
-	  tr {
-	    padding: 3px 0 3px 10px;
-	  }
-	  td, th {
-	    padding: inherit;
-	    text-align: center;
-	  }
-	  tr {
-	    &.title {
-	      background-color: #105ab2;
-	      color: #ffffff;
-	      a {
-	        color: #ffffff;
-	      }
-	      td, th {
-	      	font-weight: 500;
-	      }
-	    }
-	    &.alt {
-	      background-color: white;
-	    }
-	    &.sub {
-	      background-color: #ddd;
-	    }
-	  }
-	  td.cat {
-	    font-weight: 500;
-	    text-align: left;
-	  }
+		margin: 15px 0 30px;
+		font-size: 0.9em;
+
+		a {
+			color: #105ab2;
+			box-shadow: none !important;
+		}
+		td, th {
+			padding: inherit;
+			text-align: center;
+		}
+
+		tr {
+			padding: 3px 0 3px 10px;
+
+			&.title {
+			  background-color: #105ab2;
+			  color: #ffffff;
+			  a {
+			    color: #ffffff;
+			  }
+			  td, th {
+			  	font-weight: 500;
+			  }
+			}
+			&.alt {
+			  background-color: white;
+			}
+			&.sub {
+			  background-color: #ddd;
+			}
+		}
+		td.cat {
+			font-weight: 500;
+			text-align: left;
+		}
+		&.alt {
+			tr {
+				&:nth-child(even) {
+					background: white;
+				}
+			}
+		}
 	}
 }
 
@@ -3213,6 +3234,9 @@ table {
 .itxtrst, .itxtrstspan, .itxtrst span {
     text-decoration: none !important;
 }
+.adsnative-article {
+	font-size: 0.9em !important;
+}
 .loading {
 	background: #f5f5f5 url(http://static.techspot.com/images/loading_blue2.gif) no-repeat center top;
 	height: 50px;
@@ -3244,7 +3268,7 @@ table {
 }
 
 .mClear{clear: both;}
-.products .ProdSearch{width: 94.1%!important; padding: 0px 3%!important; font-size: 1.6em!important;}
+.products .ProdSearch{width: 94.1%!important; font-size: 1.6em!important;}
 .mStuckSearch{padding: 25px 0 0px 0; background: #f5f5f5;}
 .mStuckForceTopForum{top: 100px!important;}
 
@@ -3474,7 +3498,7 @@ table {
 }
 
 .ad_block_news_mob {
-	margin: -25px auto 25px;
+	margin: 0 auto;
 	text-align: center;
 }
 

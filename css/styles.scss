@@ -1154,7 +1154,7 @@ h3.longtype {
           font-size: 1.9em;
           position: absolute;
           display: inline-block;
-          padding: 0 15px;
+          padding: 0 13px;
           line-height: 160%;
           bottom: 0; right: 0;
 
@@ -1552,7 +1552,7 @@ span._bar {
 		display: block;
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		@include gradient-trans-percent($start_color:#1E2933,$start_cent:25%,$start_alpha:0,$end_color:#1E2933,$end_cent:100%,$end_alpha:1);
+		@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.03,$end_color:#1E2933,$end_cent:100%,$end_alpha:1,$degree:180deg);
 	}
 	
 	.title-group {
@@ -1574,7 +1574,7 @@ span._bar {
 		
 		h1.large {
 			color: white;
-			text-shadow: 1px 1px 5px #222;
+			text-shadow: 1px 1px 2px #333;
 			font-size: 3em;
 			@include break(tablet){
 				font-size: 2.5em;
@@ -2336,6 +2336,8 @@ ul.category-chicklets {
   
   .product-desc {
     @include col-last(4,10,5);
+	margin-top: 15px;
+    
     @include break(tablet){
 	  width: 40%;
     }
@@ -2346,6 +2348,7 @@ ul.category-chicklets {
 	    width: 100%;
 	    margin-top: 40px;
     }
+    
     .Prodcomment {
     	margin-top: 25px;
     	@include break(mobile){
@@ -2366,8 +2369,8 @@ ul.category-chicklets {
 			padding-left: 0 !important;
 		}
 		p {
-			border-left: 10px solid $grey; 
-			padding: 5px 0px 5px 10px;
+			border-left: 5px solid $grey; 
+			padding: 5px 0px 5px 15px;
 			font-size: 0.8em;
 			color: #333;
 			line-height: 1.4;
@@ -2531,15 +2534,16 @@ ul.category-chicklets {
     .number {
       float: left;
       font-size: 46px;
-      color: #fff;
-      text-align: center;
       font-weight: 500;
-      height: 80px;
-      line-height: 80px;
-      width: 100px;
+      color: #fff;
+      width: 97px;
+      height: 83px;
+      line-height: 83px;
       background: #075BC0;
-      @include border-radius(3px);
+      text-align: center;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      @include border-radius(3px);
+
       @include break(v-tablet){
 	      width: 95px;
 	  }
@@ -2755,7 +2759,7 @@ ul.category-chicklets {
           font-size: 1.9em;
           position: absolute;
           display: inline-block;
-          padding: 0 15px;
+          padding: 0 13px;
           line-height: 160%;
           bottom: 0; right: 0px;
           @include border-radius(2px);
@@ -2772,7 +2776,7 @@ ul.category-chicklets {
           &.bad {
             @include trans-bg($c-bad,.9);
           }
-          &.perfect { padding: 0 8px !important }
+          &.perfect { padding: 0 5px !important }
           
         }
       }
@@ -2837,7 +2841,7 @@ ul.category-chicklets {
       &.bad {
         @include trans-bg($c-bad,.9);
       }
-      &.perfect { padding: 0 8px !important }
+      &.perfect { padding: 0 5px !important }
       
     }
     
@@ -2906,6 +2910,7 @@ ul.category-chicklets {
 .post-load-more:hover {
 	background: #f6f6f6;
 	border: 1px solid #ccc;
+	margin-top: -1px;
 }
 
 .comments-pager{
