@@ -3270,10 +3270,15 @@ table {
 	}
 }
 
+//Extras
 .mClear{clear: both;}
 .products .ProdSearch{width: 94.1%!important; font-size: 1.6em!important;}
 .mStuckSearch{padding: 25px 0 0px 0; background: #f5f5f5;}
 .mStuckForceTopForum{top: 100px!important;}
+.mProdSlides{
+	background-repeat: no-repeat; background-position: center; background-size: contain;
+}
+
 
 .nIndexLayout{
 	display: block;
