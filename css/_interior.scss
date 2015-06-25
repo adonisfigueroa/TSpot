@@ -943,7 +943,7 @@ body.interior {
 				
 				h1.large {
 					font-weight: 500;
-					font-size: 2.4em;
+					font-size: 2.2em;
 			        line-height: 1.35;
 					margin: 15px 0 5px;
 			        letter-spacing: -0.333px;
@@ -1210,6 +1210,11 @@ body.interior {
 			}
 	      	.title-group {
 				margin-top: 30px;
+				margin-right: 330px;
+
+				@include break(tablet){
+					margin-right: 0;
+				}
 
 				@include break(mobile){
 					margin-top: 15px;
@@ -1222,7 +1227,7 @@ body.interior {
 	      	  	figure {
 	      	  		width: 100px !important;
 		      	  	float: left !important;
-		      	  	margin: 0 25px 0 -10px;
+		      	  	margin: 0 25px 0 -30px;
 
 		      	  	img {
 			      	  	max-width: 100%;
@@ -1246,6 +1251,14 @@ body.interior {
 	        	h2 {
 	          		font-size: 1em;
 	          		font-weight: 300;
+
+	          		&.hasfigure{
+	          			padding-left: 95px;
+
+						@include break(mobile){
+							padding-left: 0px;
+						}
+	          		}
 	        	}
 	      	}
     	}
