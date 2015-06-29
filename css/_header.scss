@@ -10,6 +10,8 @@
 	top: 0;
 	line-height: $header-height;
 	height: $header-height;
+	
+	&.forceFixed{ position: fixed!important; }
 
 	.hoverOrange {
 		background-color: $orange;
@@ -556,7 +558,7 @@
 	}
 	
 	&.interior{
-		$header-interior-height: 77px;
+		$header-interior-height: 76px;
 		$header-mobile-height: 57px;
 		$header-interior-line-height: 32px;
 		$header-interior-line-height-mobile: 43px;
