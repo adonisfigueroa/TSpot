@@ -1302,8 +1302,8 @@ h3.longtype {
 
 	img.user-avatar {
 	  background: #eaeaea;
-	  width: 32px; height: 32px;
-	  border: 1px solid #ddd;
+	  width: 28px; height: 28px;
+	  //border: 1px solid #ddd;
 	  @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
 	  margin: 0 10px 5px 0px;
 	}
@@ -1314,6 +1314,12 @@ h3.longtype {
 	  font-size: 1.1em;
 	}
 
+	span.user_title {
+		font-size: .9em;
+		padding-left: 3px;
+		color: #444;
+	}
+
 	.commentText {
 		display: block;
 		margin-top: 5px;
@@ -1321,7 +1327,7 @@ h3.longtype {
 		line-height: 1.5;
 
 		p {
-			padding: 3px 0;
+			padding: 3px 0 5px;
 		}
 
 		img {
@@ -1348,26 +1354,29 @@ h3.longtype {
 	}
 
 	ul.action-links {
-	  text-align: right;
-	  margin-top: 10px;
-	  li {
-	    display: inline-block;
-	    line-height: 100%;
-	    padding: 0 5px;
-	    text-transform: uppercase;
-	    font-size: .8em;
-	    font-weight: bold;
-	    
-	    &:first-child {
-	      /* border-right: 1px solid #ccc; */
-	    }
-	    a {
-	      color: $blue;
-	      &:hover {
-	      	color: #c00;
-	      }
-	    }
-	  }
+		text-align: right;
+		margin: 12px 0 3px;
+
+		li {
+			display: inline-block;
+			line-height: 100%;
+			padding: 0 5px;
+			text-transform: uppercase;
+			font-size: .8em;
+			font-weight: bold;
+
+			&:first-child {
+			  /* border-right: 1px solid #ccc; */
+			}
+
+			a {
+				color: $blue;
+				
+				&:hover {
+					color: #c00;
+				}
+			}
+		}
 	}
 	}
 
