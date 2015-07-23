@@ -3497,26 +3497,25 @@ table {
 		display: none;
 	}
 }
-
-.adblock {
+.adContainerSide {
 	width: 300px;
 	margin-bottom: 25px;
 	text-align: center;
 	background-color: transparent;
 }
 
-.ad_block_news {
+.adContainerNews {
 	margin-left: 750px;
 	position: absolute;
 	padding: 67px 0 0 20px;
 }
 
-.ad_block_news_mob {
+.adContainerNewsMob {
 	margin: 0 auto;
 	text-align: center;
 }
 
-.ad_block_leader2 {
+.adContainerLeader2 {
 	background-color: $light-grey;
 	@include break(tablet){
 		display: none;
