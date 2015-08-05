@@ -503,7 +503,8 @@ body.products {
 			.byline {
 				color: #666666;
 				font-weight: 400;
-				font-size: .6em;
+				font-size: .65em;
+				letter-spacing: -0.333px;
 				line-height: 2.5;
 				em {
 					font-style: normal;
@@ -531,6 +532,7 @@ body.products {
 				font-size: .75em;
 		        font-weight: 400;
 		        line-height: 1.5;
+		        letter-spacing: -0.333px;
 		        padding: 2px 0 !important;
 		        color: #333;
 		        @include break(mobile){
@@ -1677,14 +1679,14 @@ ul.category-chicklets {
 		display: inline-block;
 		a {
 			display: block;
-			padding: 0 7px;
+			padding: 4px 7px 3px;
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: .55em;
 			font-weight: 500;
 			letter-spacing: 0.50px;
-			line-height: 20px;
+			//line-height: 20px;
 
 			&.black { color: #000; }
 		}
@@ -1989,7 +1991,7 @@ ul.category-chicklets {
 			li {
 				list-style-type: decimal-leading-zero;
 				font-weight: 400;
-				font-size: 1.05em;
+				font-size: 1.1em;
 				line-height: 1.6;
 				padding-bottom: 5px;
 
@@ -2063,7 +2065,7 @@ ul.category-chicklets {
 	.layout-selector {
 		float: right;
 		li {
-			font-size: .6em;
+			font-size: .66em;
 			font-weight: 400;
 			//position: relative;
 			
