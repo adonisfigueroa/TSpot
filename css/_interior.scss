@@ -419,15 +419,19 @@ body.interior {
 			}
 		}
 		.page-nav-wrapper {
-			font-size: 1.15em;
+			font-size: 1.1em;
 			font-weight: 500;
 			line-height: 1.3em;
 			text-shadow: 1px 1px 4px #444;
 			color: white;
-
 			display: table;
-			height: 140px;
+			height: 100px;
 			overflow: hidden;
+
+			@include break(mobile){
+				font-size: 1.15em;
+				height: 140px;
+			}
 		}
 		.page-nav-interior {
 			display: table-cell; 
@@ -435,17 +439,20 @@ body.interior {
 		}
 		&.prev-next {
 			a {
-				line-height: 140px;
+				line-height: 100px;
 				background: white;
 				font-size: 0.8em;
 				color: #666666;
 				@include border-radius(2px);
 
+				@include break(mobile){
+					line-height: 140px;
+				}
+
 				&.prev, &.next{
 					&:hover {
 						span {
 							background-color: rgba(16, 90, 178, 0.95);
-							@include transitions(0.1s);
 						}
 					}
 				}
@@ -455,7 +462,6 @@ body.interior {
 						span {
 							&:after {
 								@include triangle(left,#ff7f00,8,10);
-								@include transitions(0.1s);
 							}
 						}
 					}
@@ -466,7 +472,6 @@ body.interior {
 						span {
 							&:after {
 								@include triangle(right,#ff7f00,8,10);
-								@include transitions(0.1s);
 							}
 						}
 					}
@@ -482,7 +487,6 @@ body.interior {
 					span {
 						background-color: rgba(16, 90, 178, 0.8);
 						@include border-radius(1px);
-						@include transitions(0.1s);
 						@include col(1,6,0);
 						&:after {
 								right: 0;

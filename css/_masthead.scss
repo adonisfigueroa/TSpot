@@ -23,7 +23,6 @@
 			position: absolute;
 			background-size: cover !important;
 			background-position: center center;
-			@include transitions(0);
 			
 			&.tall {
 				height: 333px;
@@ -48,7 +47,6 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions(0);
 
 				// original TS 3.0:
 				// @include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.72);
@@ -72,7 +70,6 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
 					
 					h3 {
 						text-transform: uppercase;
@@ -870,7 +867,6 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions(0);
 				@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.65);
 				
 				&:hover {
@@ -885,7 +881,6 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
 					
 					h3 {
 						text-transform: uppercase;
@@ -967,7 +962,6 @@
 			position: absolute;
 			background-size: cover;
 			background-position: center center;
-			@include transitions();
 			background: white;
 			
 			&.tall {
@@ -992,7 +986,7 @@
 				height: 166px - 30px;
 
 /*
-				@include transitions();
+				
 				@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.65);
 				
 				&:hover {
@@ -1008,7 +1002,6 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
 					
 								
 							}	
@@ -1019,13 +1012,11 @@
 							left: 0;
 							border-bottom: 1px solid $mast-border;
 							border-right: 0 solid white;
-							@include transitions(0);
 						}
 						
 						&:nth-child(2) {
 							bottom: 0;
 							border-right: 0 solid white;
-							@include transitions(0);
 						}
 						
 						&:nth-child(3) {
@@ -1033,7 +1024,6 @@
 							border-bottom: 1px solid $mast-border;
 							border-right: 0 solid white;
 							border-left: 1px solid $mast-border;
-							@include transitions(0);
 						}
 						
 						&:nth-child(4) {
@@ -1041,7 +1031,6 @@
 							bottom: 0;
 							border-right: 0 solid white;
 							border-left: 1px solid $mast-border;
-							@include transitions(0);
 						}
 						
 						&:nth-child(5) {
@@ -1049,7 +1038,6 @@
 							top: 0;
 							border-bottom: 0px solid white;
 							border-left: 1px solid $mast-border;
-							@include transitions(0);
 						}
 						
 						&:nth-child(6) {
@@ -1060,14 +1048,12 @@
 							border-bottom: 1px solid $mast-border;
 							border-left: 1px solid $mast-border;
 							border-top: 1px solid $mast-border;
-							@include transitions(0);
 						}
 						
 						&:nth-child(7) {
 							left: 2/3*100%;
 							bottom: 0;
 							border-left: 1px solid $mast-border;
-							@include transitions(0);
 						}
 						
 				}
@@ -1824,7 +1810,6 @@
 				position: absolute;
 				background-size: cover;
 				background-position: center center;
-				@include transitions();
 				
 				&.tall {
 					height: 270px;
@@ -1849,7 +1834,6 @@
 					padding: 15px;
 					color: white;
 					height: 270px - 30px;
-					@include transitions();
 					@include gradient-trans-percent($start_color:#13191F,$start_cent:20%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
 				
 					&:hover {
@@ -1865,7 +1849,6 @@
 						position: absolute;
 						bottom: 15px;
 						display: block;
-						@include transitions(200ms);
 						
 					}	
 				}
@@ -2140,14 +2123,14 @@
 			position: absolute;
 			background-size: cover !important;
 			background-position: center center !important;
-			@include transitions(0);
+
 			a {
 				position: relative;
 				display: block;
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions();
+				
 				@include gradient-trans-percent($start_color:#1E2933,$start_cent:40%,$start_alpha:0.3,$end_color:#1E2933,$end_cent:90%,$end_alpha:0.95);
 				
 				&:hover {
@@ -2162,7 +2145,7 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
+					
 					
 					h3 {
 						text-transform: uppercase;
@@ -2237,7 +2220,7 @@
 			position: absolute;
 			background-size: cover;
 			background-position: center center;
-			@include transitions(0);
+			
 			background: $dark-blue2;
 			a {
 				position: relative;
@@ -2245,7 +2228,7 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions();
+				
 				@include gradient-trans-percent($start_color:#1E2933,$start_cent:0%,$start_alpha:0,$end_color:#1E2933,$end_cent:30%,$end_alpha:0.6);
 				
 				&:hover {
@@ -2260,7 +2243,6 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
 					
 					h3 {
 						text-transform: uppercase;
@@ -2347,7 +2329,7 @@
 				position: absolute;
 				background-size: cover;
 				background-position: center center;
-				@include transitions();				
+								
 				a {
 					position: relative;
 					display: block;
@@ -2362,7 +2344,7 @@
 						position: absolute;
 						bottom: 15px;
 						display: block;
-						@include transitions(200ms);
+						
 						
 					}	
 				}
@@ -2483,7 +2465,7 @@
 			position: absolute;
 			background-size: cover !important;
 			background-position: center center !important;
-			@include transitions(0);
+			
 			&.tall {
 				height: 334px;
 				
@@ -2503,7 +2485,7 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions(0);
+				
 				@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.1,$end_color:#1E2933,$end_cent:90%,$end_alpha:.85);
 				
 				&:hover {
@@ -2519,7 +2501,7 @@
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
+					
 					
 					h3 {
 						text-transform: uppercase;
@@ -2593,7 +2575,7 @@
 			position: absolute;
 			background-size: cover;
 			background-position: center center;
-			@include transitions(0);
+			
 			background: #1E2832;
 			a {
 				position: relative;
@@ -2601,13 +2583,13 @@
 				padding: 15px;
 				color: white;
 				height: 166px - 30px;
-				@include transitions(0);
+				
 				hgroup {
 					width: 90%;
 					position: absolute;
 					bottom: 15px;
 					display: block;
-					@include transitions(200ms);
+					
 					
 								
 							}	
@@ -2664,7 +2646,7 @@
 				position: absolute;
 				background-size: cover;
 				background-position: center center;
-				@include transitions();	
+					
 				&.tall {
 					height: 270px;
 					
@@ -2689,7 +2671,7 @@
 						position: absolute;
 						bottom: 15px;
 						display: block;
-						@include transitions(200ms);
+						
 					}	
 				}
 				
