@@ -419,7 +419,8 @@ body.interior {
 			}
 		}
 		.page-nav-wrapper {
-			font-size: 1.1em;
+			font-size: 1.15em;
+		    letter-spacing: -.333px;
 			font-weight: 500;
 			line-height: 1.3em;
 			text-shadow: 1px 1px 4px #444;
@@ -482,7 +483,7 @@ body.interior {
 					background-repeat: no-repeat;
 					background-size: cover !important;
 					background-position: center center;
-					@include col(1,2,2);
+					@include col(1,2,1.5);
 					
 					span {
 						background-color: rgba(16, 90, 178, 0.8);
@@ -563,7 +564,6 @@ body.interior {
 
 					@include break(mobile){
 						line-height: 125%;
-						font-family: Roboto Condensed;
 						font-size: 0.85em;
 					}
 				}

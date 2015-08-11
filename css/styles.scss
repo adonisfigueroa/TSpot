@@ -1008,7 +1008,7 @@ h3.longtype {
 }
 
 .related-products {
-  margin: 0px 0 35px;
+  margin: -5px 0 35px;
 
 	&.related-stories {
   		margin: 15px 0 15px;
@@ -1176,6 +1176,7 @@ h3.longtype {
       h3 {
         font-size: 1.25em;
 	    font-weight: 500;
+		letter-spacing: -0.333px;
 	    line-height: 1.3em;
 	    text-shadow: 1px 1px 4px #444;
 	    color: white !important;
