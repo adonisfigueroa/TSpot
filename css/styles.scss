@@ -1260,7 +1260,7 @@ h3.longtype {
 	.comment {
 	font-size: .7em;
 	border-top: 1px solid #eee !important;
-	padding: 0 0 15px 0;
+	padding: 0 5px 15px 5px;
 
 	cite {
 	  display: block;
@@ -1317,8 +1317,9 @@ h3.longtype {
 	.commentText {
 		display: block;
 		margin-top: 5px;
-		font-size: 14px;
+		font-size: 15px;
 		line-height: 1.5;
+		padding-right: 100px;
 
 		p {
 			padding: 3px 0 5px;
@@ -1338,7 +1339,8 @@ h3.longtype {
 			line-height: 1.5;
 
 			p {
-				font-size: 13px;		
+				font-size: 13px;
+				padding: 0 !important;		
 			}
 
 			img {
@@ -1349,7 +1351,7 @@ h3.longtype {
 
 	ul.action-links {
 		text-align: right;
-		margin: 12px 0 3px;
+		margin: 0px 0 3px;
 
 		li {
 			display: inline-block;

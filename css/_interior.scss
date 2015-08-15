@@ -1109,6 +1109,18 @@ body.interior {
 					padding: 15px 10px 0px 15px;
 					border-left: 3px solid #ccc;
 				}
+
+				blockquote.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+				}
+
+				iframe {
+					&.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+					}
+				}
 			}
 			
 		}
