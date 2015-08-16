@@ -1109,6 +1109,18 @@ body.interior {
 					padding: 15px 10px 0px 15px;
 					border-left: 3px solid #ccc;
 				}
+
+				blockquote.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+				}
+
+				iframe {
+					&.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+					}
+				}
 			}
 			
 		}
@@ -2540,7 +2552,10 @@ body.interior {
 			}
 			.articleBody {
 				width: 100%;
+<<<<<<< HEAD
 				//float: left;
+=======
+>>>>>>> origin/master
 
 				@include break(big-desk){
 					width: 100%
@@ -3125,7 +3140,7 @@ body.interior.slide-article {
 
 	.col-2-3-last.special .articleBody{
 		&.slideArticle{
-			width: 100%!important;
+			width: 100% !important;
 			margin-top: 25px;
 			
 			@include break(mobile) {
