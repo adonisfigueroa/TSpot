@@ -851,7 +851,7 @@ h3.section-header {
 	font-size: 1.7em;
 
 	@include break(tablet) {
-		font-size: 150%;
+		font-size: 1.5em;
 	}
 
 	a {
@@ -884,9 +884,9 @@ h3.section-header {
 	
 }
 h3.longtype {
-	font-size: 130%;
+	font-size: 1.3em;
 	@include break (v-tablet){
-		font-size: 100%;
+		font-size: 1em;
 	}
 }
 
@@ -1232,17 +1232,13 @@ h3.longtype {
 	  }
 	}
 
-	h3 {
+	h3.title {
 	color: #4484D0;
 	font-size: 1.2em;
 
 		span.small {
 			font-size: 0.55em;
 		}
-	}
-
-	h3.section-header {
-		font-size: 1.7em;
 	}
   
 	a.post-new-comment {

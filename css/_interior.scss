@@ -2551,8 +2551,7 @@ body.interior {
 				}
 			}
 			.articleBody {
-				width: 94%;
-				float: left;
+				width: 100%;
 
 				@include break(big-desk){
 					width: 100%
@@ -3137,7 +3136,7 @@ body.interior.slide-article {
 
 	.col-2-3-last.special .articleBody{
 		&.slideArticle{
-			width: 100%!important;
+			width: 100% !important;
 			margin-top: 25px;
 			
 			@include break(mobile) {
