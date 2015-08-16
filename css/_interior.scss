@@ -2552,11 +2552,8 @@ body.interior {
 			}
 			.articleBody {
 				width: 100%;
-<<<<<<< HEAD
 				//float: left;
-=======
->>>>>>> origin/master
-
+				
 				@include break(big-desk){
 					width: 100%
 				}
