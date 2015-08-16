@@ -2539,8 +2539,8 @@ body.interior {
 				}
 			}
 			.articleBody {
-				width: 94%;
-				float: left;
+				width: 100%;
+				//float: left;
 
 				@include break(big-desk){
 					width: 100%

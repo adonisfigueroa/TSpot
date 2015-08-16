@@ -1003,8 +1003,13 @@ h3.longtype {
 		}
 		@include break(tablet){
 			margin-right: 62px;
+			&.article-special{margin-right: 0;}
 		}
 	}
+}
+
+.wrapper-sticky{
+	@include break(tablet){ margin-right: 30px!important; }
 }
 
 .related-products {
