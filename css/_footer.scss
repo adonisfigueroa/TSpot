@@ -1,5 +1,6 @@
 footer {
-	background: #e0e0e0;
+	//background: #e0e0e0;
+	background: #1e2933;
 	position: relative;
 	z-index: 2;
 	
@@ -66,8 +67,8 @@ footer {
 	}
 	
 	h3 {
-		//font-size: .8em;
-		font-weight: 100;
+		color: white;
+		font-weight: 200;
 	}
 	
 	.menu {
@@ -81,10 +82,14 @@ footer {
 				line-height: 25px;
 				a {
 					font-weight: 200;
+					color: white;
+
 					&:hover {
-						border-bottom: 1px solid #5D8DBB;
-						padding-bottom: 3px;
-						color: #105ab2;
+					    color: #ff7f00;
+
+						//border-bottom: 1px solid #5D8DBB;
+						//padding-bottom: 3px;
+						//color: #105ab2;
 					}
 				}
 			}
@@ -145,10 +150,6 @@ footer {
 					
 					&:hover {
 						background-size: 75%;
-						/* @include opacity(.9); 
-						-webkit-transform: rotate(-10deg);
-						-moz-transform: rotate(-10deg);
-						transform: rotate(-10deg);*/
 					}
 					&.facebook {
 						background-image: url('/images/social/06-facebook.svg');
@@ -231,8 +232,9 @@ footer {
 	}
 	
 	.copyright {
-		font-size: .6em;
-		font-weight: 100;
+		font-size: .7em;
+		font-weight: 200;
+		letter-spacing: -0.5px;
 		background: #d1d1d1;
 
 		@include break(v-mobile){
