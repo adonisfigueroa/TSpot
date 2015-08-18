@@ -501,7 +501,8 @@ body.products {
 			.byline {
 				color: #666666;
 				font-weight: 400;
-				font-size: .6em;
+				font-size: .65em;
+				letter-spacing: -0.333px;
 				line-height: 2.5;
 				em {
 					font-style: normal;
@@ -529,6 +530,7 @@ body.products {
 				font-size: .75em;
 		        font-weight: 400;
 		        line-height: 1.5;
+		        letter-spacing: -0.333px;
 		        padding: 2px 0 !important;
 		        color: #333;
 		        @include break(mobile){
@@ -847,7 +849,7 @@ h3.section-header {
 	font-size: 1.7em;
 
 	@include break(tablet) {
-		font-size: 150%;
+		font-size: 1.5em;
 	}
 
 	a {
@@ -880,9 +882,9 @@ h3.section-header {
 	
 }
 h3.longtype {
-	font-size: 130%;
+	font-size: 1.3em;
 	@include break (v-tablet){
-		font-size: 100%;
+		font-size: 1em;
 	}
 }
 
@@ -990,7 +992,8 @@ h3.longtype {
 	&.article-special {
 		padding-top: 5px;
 		margin-right: 66px;
-
+		&.article-special{margin-right: 0;}
+		
 		@include break(big-desk){
 			margin-right: 0;
 		}
@@ -1003,30 +1006,33 @@ h3.longtype {
 	}
 }
 
-.related-products {
-  margin: 0px 0 10px;
+.wrapper-sticky{
+	@include break(tablet){ margin-right: 30px!important; }
+}
 
-  @include break(v-tablet){
-	  display: none;
-  }
+.related-products {
+  margin: -5px 0 35px;
 
 	&.related-stories {
   		margin: 15px 0 15px;
   		display: block !important;
 
 		ul.teaser-list {
+			height: 240px;
 
 			li {
-				height: 220px;
+				height: 240px;
+
+				span.img-wrap {
+					height: 240px;
+				}
 
 				@include break(mobile){
 					margin-bottom: 20px;
 				}
-				
-				a {
-					@include break(mobile){
-						background: #f5f5f5;
-					}
+
+				h3 {
+					bottom: 30px;
 				}
 			}
 
@@ -1050,12 +1056,15 @@ h3.longtype {
   
   ul.teaser-list {
   	width: 100%;
-  	height: 240px;
+  	height: 140px;
 
     li {
 		font-size: .7em;
-		background: white;
-		height: 210px;
+		height: 140px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		background-size: cover;
 		@include border-radius(2px);
 
 		&.one {
@@ -1113,32 +1122,21 @@ h3.longtype {
 		}
 
 		a {
-		display: block;
-		padding: 0;
-		background: white;
-
-			&:hover {
-				h3 {
-			    	color: $red;
-				}
-			}
+			display: block;
+			padding: 0;
 		}
       
       span.img-wrap {
         display: block;
-        padding-bottom: 135px;
-        margin-bottom: 10px;
         position: relative;
-        
-        .image {
-	        position: absolute;
-			width: 100%;
-			height: 140px;
-			background-position: center center;
-			background-repeat: no-repeat;
-			overflow: hidden;
-			background-size: cover;
-        }
+		height: 140px;
+		padding-bottom: 0;
+        margin-bottom: 10px;
+		background: linear-gradient(200deg, rgba(19,25,31,0) 15%, rgba(19,25,31,0.77) 90%);
+
+		&:hover {
+			background: linear-gradient(200deg, rgba(255,127,0,0.35) 25%, rgba(31,41,51,0.67) 70%);
+		}
 
         img {
           width: 100%;
@@ -1146,47 +1144,48 @@ h3.longtype {
         }
         
         .rating {
-          font-family: $f-helvetica-roboto;
-          font-weight: 500;
-          color: white;
-          font-size: 1.9em;
-          position: absolute;
-          display: inline-block;
-          padding: 0 13px;
-          line-height: 160%;
-          bottom: 0; right: 0;
+			font-family: $f-helvetica-roboto;
+			font-weight: 500;
+			color: white;
+			font-size: 1.9em;
+			position: absolute;
+			display: inline-block;
+			padding: 0 13px;
+			line-height: 160%;
+			top: 10px;
+			right: 10px;
+			border-radius: 2px;
 
-          &.excellent {
-            @include trans-bg($c-excellent,.8);
-          }
-          &.good {
-            @include trans-bg($c-good,.8);
-          }
-          &.average {
-            @include trans-bg($c-average,.8);
-          }
-          &.bad {
-            @include trans-bg($c-bad,.8);
-          }
-          &.none {
-            display: none;
-          }
+			&.excellent {
+				@include trans-bg($c-excellent,.8);
+			}
+			&.good {
+				@include trans-bg($c-good,.8);
+			}
+			&.average {
+				@include trans-bg($c-average,.8);
+			}
+			&.bad {
+				@include trans-bg($c-bad,.8);
+			}
+			&.none {
+				display: none;
+			}
 
         }
         
       }
       
       h3 {
-        font-size: 1.1em;
-        padding: 2px 8px 8px;
-        font-weight: 500;
-
-        @include break(mobile){
-        	padding: 2px 0 8px;
-        }
-        @include break(v-mobile){
-        	font-size: 1.2em;
-        }
+        font-size: 1.25em;
+	    font-weight: 500;
+		letter-spacing: -0.333px;
+	    line-height: 1.3em;
+	    text-shadow: 1px 1px 4px #444;
+	    color: white !important;
+	    padding: 0 15px;
+	    position: absolute;
+	    bottom: 15px;
       }
       
       .reviews {
@@ -1236,17 +1235,13 @@ h3.longtype {
 	  }
 	}
 
-	h3 {
+	h3.title {
 	color: #4484D0;
 	font-size: 1.2em;
 
 		span.small {
 			font-size: 0.55em;
 		}
-	}
-
-	h3.section-header {
-		font-size: 1.7em;
 	}
   
 	a.post-new-comment {
@@ -1264,7 +1259,7 @@ h3.longtype {
 	.comment {
 	font-size: .7em;
 	border-top: 1px solid #eee !important;
-	padding: 0 0 15px 0;
+	padding: 0 5px 15px 5px;
 
 	cite {
 	  display: block;
@@ -1300,8 +1295,8 @@ h3.longtype {
 
 	img.user-avatar {
 	  background: #eaeaea;
-	  width: 32px; height: 32px;
-	  border: 1px solid #ddd;
+	  width: 28px; height: 28px;
+	  //border: 1px solid #ddd;
 	  @include box-shadow($x:2,$y:2,$blur:0,$color:#ddd);
 	  margin: 0 10px 5px 0px;
 	}
@@ -1312,14 +1307,25 @@ h3.longtype {
 	  font-size: 1.1em;
 	}
 
+	span.user_title {
+		font-size: .9em;
+		padding-left: 3px;
+		color: #444;
+	}
+
 	.commentText {
 		display: block;
 		margin-top: 5px;
-		font-size: 14px;
+		font-size: 15px;
 		line-height: 1.5;
+		padding-right: 100px;
+
+		@include break(mobile){
+			padding-right: 0;
+		}
 
 		p {
-			padding: 3px 0;
+			padding: 3px 0 5px;
 		}
 
 		img {
@@ -1336,7 +1342,8 @@ h3.longtype {
 			line-height: 1.5;
 
 			p {
-				font-size: 13px;		
+				font-size: 13px;
+				padding: 0 !important;		
 			}
 
 			img {
@@ -1346,26 +1353,29 @@ h3.longtype {
 	}
 
 	ul.action-links {
-	  text-align: right;
-	  margin-top: 10px;
-	  li {
-	    display: inline-block;
-	    line-height: 100%;
-	    padding: 0 5px;
-	    text-transform: uppercase;
-	    font-size: .8em;
-	    font-weight: bold;
-	    
-	    &:first-child {
-	      /* border-right: 1px solid #ccc; */
-	    }
-	    a {
-	      color: $blue;
-	      &:hover {
-	      	color: #c00;
-	      }
-	    }
-	  }
+		text-align: right;
+		margin: 0px 0 3px;
+
+		li {
+			display: inline-block;
+			line-height: 100%;
+			padding: 0 5px;
+			text-transform: uppercase;
+			font-size: .8em;
+			font-weight: bold;
+
+			&:first-child {
+			  /* border-right: 1px solid #ccc; */
+			}
+
+			a {
+				color: $blue;
+				
+				&:hover {
+					color: #c00;
+				}
+			}
+		}
 	}
 	}
 
@@ -1673,7 +1683,7 @@ ul.category-chicklets {
 			font-size: .55em;
 			font-weight: 500;
 			letter-spacing: 0.50px;
-			line-height: 20px;
+			line-height: 21px;
 
 			&.black { color: #000; }
 		}
@@ -1978,7 +1988,7 @@ ul.category-chicklets {
 			li {
 				list-style-type: decimal-leading-zero;
 				font-weight: 400;
-				font-size: 1.05em;
+				font-size: 1.1em;
 				line-height: 1.6;
 				padding-bottom: 5px;
 
@@ -2052,8 +2062,9 @@ ul.category-chicklets {
 	.layout-selector {
 		float: right;
 		li {
-			font-size: .6em;
+			font-size: .66em;
 			font-weight: 400;
+			letter-spacing: -0.2px;
 			//position: relative;
 			
 			&.standard,
