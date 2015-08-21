@@ -361,9 +361,10 @@ body.products {
 				padding-bottom: 2px;
 
 				&:hover {
-					padding-bottom: 2px;
-					box-shadow: inset 0 -5px 0 #FBBB76;
 					color: inherit;
+					box-shadow: inset 0 -5px 0 #FBBB76;
+					padding-bottom: 2px;
+					transition: .2s ease;
 				}
 				&:active {
 					position: relative;

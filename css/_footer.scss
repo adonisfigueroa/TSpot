@@ -85,7 +85,8 @@ footer {
 					color: #eee;
 
 					&:hover {
-					    color: #ff7f00;
+					    color: $orange;
+					    transition: 0.1s ease;
 
 						//border-bottom: 1px solid #5D8DBB;
 						//padding-bottom: 3px;
@@ -143,7 +144,7 @@ footer {
 					width: 40px; height: 40px;
 					text-indent: -9999px;
 					margin: 0px 12.5px 12.5px 0px;
-					@include transitions(0.1s);
+					transition: 0.1s ease;
 					background-size: 25px 25px;
 					background-repeat: no-repeat;
 					background-position: center center;
@@ -232,7 +233,7 @@ footer {
 	}
 	
 	.copyright {
-		font-size: .7em;
+		font-size: .66em;
 		font-weight: 200;
 		letter-spacing: -0.5px;
 		background: #d1d1d1;
@@ -256,8 +257,8 @@ footer {
 			margin-left: 20px;
 			color: black;
 			&:hover {
-				border-bottom: 1px solid #555;
-				padding-bottom: 1px;
+				border-bottom: 1px solid #888;
+				padding-bottom: 2px;
 				text-decoration: none;
 			}
 		}

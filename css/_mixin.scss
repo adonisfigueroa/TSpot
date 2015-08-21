@@ -76,7 +76,7 @@
 	user-select: none;
 }
 
-@mixin transitions($selector:all, $animation:ease-in-out, $duration:.2s, $delay:0) {
+@mixin transitions($selector:all, $animation:ease-in-out, $duration:.2s, $delay:0s) {
 	-webkit-transition:$selector $animation $duration;
 	transition:$selector $animation $duration;
 	transition-delay: $delay;
