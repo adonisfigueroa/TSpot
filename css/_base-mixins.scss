@@ -4,6 +4,6 @@
 }
 
 @mixin transitions($time:200ms) {
-	-webkit-transition:all #{$time} ease-in-out;
-	transition:all #{$time} ease-in-out;
+	-webkit-transition:all #{$time} ease-out;
+	transition:all #{$time} ease-out;
 }

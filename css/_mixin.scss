@@ -76,10 +76,9 @@
 	user-select: none;
 }
 
-@mixin transitions($selector:all, $animation:ease-in-out, $duration:.2s, $delay:0s) {
+@mixin transitions($selector:all, $animation:ease-out, $duration:0.2s, $delay:0s) {
 	-webkit-transition:$selector $animation $duration;
 	transition:$selector $animation $duration;
-	transition-delay: $delay;
 }
 
 @mixin outer-glow($size:10,$spread:0,$blackn:.4) {

@@ -1706,7 +1706,6 @@ body.interior {
 				}
 				.arrow {
 					@include triangle(down,white,4,6);
-					@include transitions(0.1s);
 					float: right;
 					margin-right: 4px;
 					margin-top: 12px;
@@ -1717,7 +1716,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
 					@include triangle(left,white,4,6);
-					@include transitions(0.1s);
 					float: right;
 					margin-top: -18px;
 					}
@@ -1730,7 +1728,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
   					@include triangle(down,white,4,6);
-  					@include transitions(0.1s);
   					float: right;
   					margin-top: -18px;
 					}
@@ -1817,7 +1814,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
 					@include triangle(left,white,4,6);
-					@include transitions(0.1s);
 					float: right;
 					margin-top: -18px;
 					}
@@ -1830,7 +1826,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
   					@include triangle(down,white,4,6);
-  					@include transitions(0.1s);
   					float: right;
   					margin-top: -18px;
 					}
@@ -1911,10 +1906,12 @@ body.interior {
 			}
 			.SideProdContent {
 				padding: 17px;
+				background-color:#324455;
+
 				@include break(v-tablet){
 						padding: 10px 0px 10px 10px;
 				}
-				background-color:#324455;
+
 				li {
 					line-height: 10px;
 					margin-bottom: 14px;
@@ -2171,7 +2168,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
 					@include triangle(left,white,4,6);
-					@include transitions(0.1s);
 					float: right;
 					margin-top: -19px;
 					display: none;
@@ -2190,7 +2186,6 @@ body.interior {
 				.SideTitle{
 					.arrow{
   					@include triangle(down,white,4,6);
-  					@include transitions(0.1s);
   					float: right;
   					margin-top: -18px;
   					display: none;
@@ -2228,7 +2223,6 @@ body.interior {
 					}
 					.arrow{
 					@include triangle(right,$orange,4,6);
-					@include transitions(0.1s);
 					float: right;
 					margin-top: 15px;
 					opacity: 1;
@@ -2248,7 +2242,6 @@ body.interior {
 				}
 				.arrow {
 					@include triangle(down,white,4,6);
-					@include transitions(0.1s);
 					float: right;
 					
 					margin-top: -18px;
