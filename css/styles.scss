@@ -2370,7 +2370,7 @@ ul.category-chicklets {
     }
     
     .Prodcomment {
-    	margin-top: 25px;
+
     	@include break(mobile){
 	    	margin-top: 100px; 
     	}
@@ -2389,11 +2389,25 @@ ul.category-chicklets {
 			padding-left: 0 !important;
 		}
 		p {
-			border-left: 5px solid $grey; 
-			padding: 5px 0px 5px 15px;
-			font-size: 0.8em;
+			border-left: 5px solid #ddd;
+			padding: 0px 0px 0px 15px;
+			margin: 0;
+			font-size: 0.85em;
 			color: #333;
-			line-height: 1.4;
+
+			&.reviewed_by {
+				border-left: none;
+				font-size: .75em;
+				font-family: Roboto Condensed;
+				padding-left: 20px;
+				margin: 5px 0;
+
+				a {
+					border-bottom: solid 1px;
+					padding-bottom: 3px;
+				}
+			}
+
 		}
 		&.editorial p {
 			border-left: none;
@@ -2408,6 +2422,84 @@ ul.category-chicklets {
 			}
 		}
 	}
+	.price-widget {
+		width: 100%;
+		margin: 0px 0px 0px 1px;
+		border-bottom: 0px solid #339933;
+		@include break(mobile) {
+			margin-bottom: 100px;
+		}
+		.price-count {
+		    display: inline-block;
+		    background-color: #339933;
+		    color: white;
+		    width: 23%;
+		    margin-bottom: 0px;
+		    font-size: .7em;
+			line-height: 34px;
+			padding: 8px 0;
+			font-weight: 600;
+			float: left;
+			height: 34px;
+			text-align: center;
+
+			@include break(mobile){
+				width: 30%;
+				height: 17px;
+			}
+			@include break(v-mobile){
+				width: 20%;
+				height: inherit;
+			}
+		}
+		.price-int {
+			float: left;
+			width: 75%;
+			height: 50px;
+			display: inline;
+			background-color: #f5f5f5;
+			font-family: $f-condensed;
+			line-height: 50px;
+
+			@include break(mobile){
+				height: 33px;
+				width: 68%;
+			}
+			@include break(v-mobile){
+				height: 50px;
+				width: 78%;
+			}
+
+			a {
+				padding-left: 15px;
+				font-size: 1.4em;
+				color: #075BC0;
+
+				&:hover {
+					color: #c00;
+				}
+			}
+
+			span {
+				font-size: 0.75em;
+				position: absolute;
+				padding: 3px 0px 0px 5px;
+			}
+		}
+		#artificialBorder {
+			width: 2%;
+			height: 50px;
+			display: inline-block;
+			float: left;
+			background: #339933;
+			@include break(mobile){
+				height: 33px;
+			}
+			@include break(v-mobile){
+				height: 50px;
+			}
+		}
+	}
 	.social-widget {
 		width: 100%;
 		margin: 0px 0px 0px 1px;
@@ -2418,7 +2510,7 @@ ul.category-chicklets {
 		.social-count {
 			display: inline-block;
 			height: inherit;
-			width: 20%;
+			width: 23%;
 			margin-bottom: 0px;
 			font-size: 0.7em;
 			line-height: 17px;
@@ -2434,8 +2526,12 @@ ul.category-chicklets {
 			}
 		}
 		.social-int {
-			width: 78%;
+			width: 75%;
 			height: 50px;
+			display: inline;
+			float: left;
+			background-color: $light-grey;
+
 			@include break(mobile){
 				height: 33px;
 				width: 68%;
@@ -2444,9 +2540,7 @@ ul.category-chicklets {
 				height: 50px;
 				width: 78%;
 			}
-			display: inline;
-			float: left;
-			background-color: $light-grey;
+
 			span {
 				@include col(1,3,0);
 				display: block;
@@ -2513,7 +2607,7 @@ ul.category-chicklets {
       font-family: $f-condensed;
       font-size: .9em;
       text-align: left;
-	  padding: 25px 0px;
+	  padding: 18px 0px 25px;
       @include break(mobile){
 	      width: 100%;
 		  text-align: center;
