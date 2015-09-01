@@ -291,6 +291,20 @@ h1 {
 				margin: -5px auto 25px;
 			}
 		}
+
+		&.side-guest {
+			width: 220px;
+		    margin: 5px 0 10px 15px;
+		    float: right;
+		    background-color: #eee;
+		    padding: 15px;
+		    font-size: 13px;
+		    line-height: 23px;
+
+		    @include break(v-mobile) {
+				width: 130px;
+			}
+		}
 		
 	}
 }
@@ -2370,10 +2384,8 @@ ul.category-chicklets {
     }
     
     .Prodcomment {
+    	margin: 10px 0;
 
-    	@include break(mobile){
-	    	margin-top: 100px; 
-    	}
 		h3 {
 			padding-left: 20px;
 			margin-bottom: 5px;
@@ -2427,7 +2439,7 @@ ul.category-chicklets {
 		margin: 0px 0px 0px 1px;
 		border-bottom: 0px solid #339933;
 		@include break(mobile) {
-			margin-bottom: 100px;
+			margin: 20px 0;
 		}
 		.price-count {
 		    display: inline-block;
