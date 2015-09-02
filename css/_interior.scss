@@ -1494,9 +1494,10 @@ body.interior {
 
 				h4 {
 					margin-top: 16px;
-					font-size: 0.95em;
+					font-family: $f-primary;
+					font-size: 1em;
 					font-weight: 500;
-					font-family: $f-helvetica-roboto;
+					letter-spacing: -0.333px;
 
 					a {
 						white-space: nowrap;
@@ -1618,7 +1619,8 @@ body.interior {
 					}
 					.review{
 						color: white;
-						font-size: 0.6em;
+						font-size: 0.65em;
+    					letter-spacing: -.333px;
 						line-height: 5px;
 						display: block;
 					}
