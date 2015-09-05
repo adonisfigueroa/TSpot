@@ -3,9 +3,17 @@
 	background: $grey;
 	height: 500px;
 	position: relative;
+	left: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
 	@include break(mobile) {
 		height: 270px !important;
+		-webkit-transition: left 0.3s ease-in-out 0s;
+		transition: left 0.3s ease-in-out 0s;
 	}
+	
 	.FGheadCom {
 		display: none;
 	}

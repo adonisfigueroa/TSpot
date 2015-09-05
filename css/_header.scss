@@ -1,15 +1,18 @@
 #header-ts {
 	$header-height: 84px;
 	$header-top-line-height: 43px;
-
-	-webkit-transition: 0;
-	transition: 0;
 	position: fixed;
-	z-index: 1100001;
 	width: 100%;
-	top: 0;
+	z-index: 1100001;
 	line-height: $header-height;
 	height: $header-height;
+	top: 0;
+	left: 0;
+
+	@include break(mobile) {
+		-webkit-transition: left 0.3s ease-in-out 0s;
+		transition: left 0.3s ease-in-out 0s;
+	}
 	
 	&.forceFixed{ position: fixed!important; }
 
@@ -1165,15 +1168,18 @@
 #Mobileheader {
 	width: 250px;
 	height: 100%;
-	overflow: scroll;
-	overflow-x: hidden;
-	position: fixed;
+	overflow: hidden;
 	background: #2F373D;
-	display: none;
-	z-index: -1;
-	@include break(mobile){
-		//display: block
+	position: fixed;
+	z-index: 10;
+    top: 0;
+    left: -250px;
+
+	@include break(mobile) {
+		-webkit-transition: left 0.3s ease-in-out 0s;
+		transition: left 0.3s ease-in-out 0s;
 	}
+
 	#flyout-main-menu {
 		padding: 0px 0px;
 		#logo {
