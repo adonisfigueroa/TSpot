@@ -1605,7 +1605,7 @@ body.interior {
 						}
 					}
 
-					@include break(v-tablet){
+					@include break(v-mobile){
 						display: none;
 					}
 				}
