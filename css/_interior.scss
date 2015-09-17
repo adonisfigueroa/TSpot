@@ -1576,7 +1576,7 @@ body.interior {
 				}
 
 				.intRank{
-					color:$purple;
+					color: $purple;
 					font-weight: 500;
 					font-size: 0.7em;
 					float: left;
@@ -1588,13 +1588,24 @@ body.interior {
 						display: none;				
 					}
 				}
-				.price{
-					color: $red;
+				.price {
 					font-weight: 500;
 					font-size: 0.75em;
 					float: left;
 					line-height: 70px;
-					@include break(v-tablet){
+					padding-right: 10px;
+					text-align: left;
+					width: 45px;
+
+					a {
+						color: $red;
+
+						&:hover {
+							color: $orange;
+						}
+					}
+
+					@include break(v-mobile){
 						display: none;
 					}
 				}
