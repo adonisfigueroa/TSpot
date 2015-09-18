@@ -2388,7 +2388,8 @@ ul.category-chicklets {
     }
     
     .Prodcomment {
-    	margin: 25px 0px 15px;
+    	margin: 15px 0px 15px;
+    	letter-spacing: -.333px;
 
 		h3 {
 			padding-left: 20px;
@@ -2657,38 +2658,34 @@ ul.category-chicklets {
   }
   
   .score {
-    margin: 0 0 20px;
+    margin: 0 0 15px;
 
 	@include break(mobile){
-    	height: 85px;
+    	height: 125px;
     }
 
     .number {
       float: left;
+      margin: 25px 5px 0;
+      color: #fff;
+      background-color: #075BC0;
       font-size: 46px;
       font-weight: 500;
-      color: #fff;
-      width: 97px;
-      height: 83px;
-      line-height: 83px;
-      background: #075BC0;
       text-align: center;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      width: 90px;
+      height: 83px;
+      line-height: 83px;
       @include border-radius(3px);
 
-      @include break(v-tablet){
-	      width: 95px;
-	  }
 	  @include break(mobile){
-		  width: 20%;
-		  max-width: 100px;
-		  min-width: 86px;
-		  float: left;
-		  line-height: 77px;
+		  width: 86px;
+		  line-height: 78px;
 		  height: 78px;
 	  }
 	  @include break(v-mobile){
-		  font-size: 40px;
+		  font-size: 42px;
+		  margin: 15px 0 0;
 	  }
     }
     .excellent {
@@ -2706,80 +2703,147 @@ ul.category-chicklets {
     .none {
       background-color: #999;
     }
+
     .breakdown {
-      margin-left: 110px;
-      font-size: 12px;
-	  @include break(v-tablet){
-	  	//margin-left: 90px;
-	  }    
-	  @include break(mobile){
+		margin-left: 110px;
+		font-size: 13px;
+
+		@include break(v-tablet){
+			//margin-left: 90px;
+		}    
+		@include break(mobile){
+			width: 65%;
+			float: left;
+			margin-left: 5%;
+		}
+		a {
+			font-weight: 500;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 10px 20px 0 0;
+		}
+		li {
+			height: 16px;
+			overflow: hidden;
+		}
+		h3 {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 2em;
+		}
+		h5, .count, .bar {
+			float: left;
+			height: 20px;
+		}
+		h5 {
+			font-size: 11px;
+			margin: 0;
+			width: 60px;
+			font-weight: 500;
+
+			@include break(mobile){
+			    width: 20%;
+			}
+			@include break(v-mobile){
+			    width: 23%;
+			    min-width: 54px;
+			}
+		}
+		.count {
+	        margin-left: 5px;
+    	    font-size: 11px;
+        	text-align: right;
+        	float: right;
+	      	@include break(mobile){
+		    	margin-left: 0;
+		    	width: none;
+		    }
+		}
+		.bar {
+			width: 150px;
+			@include break(mobile){
+		    	width: 70%;
+			}
+			@include break(v-mobile){
+		    	width: 60%;
+			}
+		div {
+			background: $c-good;
+			height: 8px;
+			margin-top: 4px;
+		}
+		.excellent {
+			background: $c-excellent;
+		}
+		.average {
+			background: $c-average;
+		}
+		.bad {
+			background: $c-bad;
+		}
+      }
+    }
+  }
+
+  .score_users {
+    margin: 0 0 20px;
+    padding-top: 16px;
+    border-top: 2px solid #eee;
+
+	@include break(mobile){
+    	height: 60px;
+    }
+
+    .number {
+		float: left;
+	    margin: 0 14px;
+		background-color: #f08804;
+		font-size: 32px;
+		font-weight: 500;
+		color: #fff;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		letter-spacing: -1px;
+		width: 70px;
+		height: 70px;
+		line-height: 70px;
+		@include border-radius(70px);
+
+		@include break(v-mobile){
+			margin: 0 6px;
+		}
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+    }
+
+    .breakdown {
+		margin-left: 110px;
+		font-size: 13px;
+		line-height: 1.4em;
+
+		@include break(mobile){
 		  width: 65%;
 		  float: left;
-		  margin-left: 6%;
-	  }
-      a {
-        font-weight: 500;
-      }
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 5px 20px 0 0;
-      }
-      li {
-        height: 16px;
-        overflow: hidden;
-      }
-      h5, .count, .bar {
-        float: left;
-        height: 20px;
-      }
-      h5 {
-        font-size: 11px;
-        margin: 0;
-        width: 60px;
-        @include break(mobile){
-	        width: 20%;
-        }
-        @include break(v-mobile){
-	        width: 23%;
-	        min-width: 54px;
-        }
-      }
-      .count {
-        margin-left: 5px;
-        font-size: 11px;
-        text-align: right;
-        float: right;
-	      @include break(mobile){
-		      margin-left: 0;
-		      width: none;
-		      
-	      }
-      }
-      .bar {
-        width: 150px;
-        @include break(mobile){
-	        width: 70%;
-        }
-         @include break(v-mobile){
-	        width: 60%;
-        }
+		  margin-left: 5%;
+		}
 
-        div {
-          background: $c-good;
-          height: 8px;
-          margin-top: 4px;
-        }
-        .excellent {
-          background: $c-excellent;
-        }
-        .average {
-          background: $c-average;
-        }
-        .bad {
-          background: $c-bad;
-        }
-      }
+		a {
+			font-weight: 500;
+		}
+
+		h3 {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 2em;
+		}
     }
   }
   
