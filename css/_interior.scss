@@ -721,10 +721,6 @@ body.interior {
 					}
 				}
 			}
-
-			h3 {
-				color: #c00;
-			}
 		}
 	}
 
@@ -759,8 +755,21 @@ body.interior {
 			  padding: 0;
 
 			  li {
-			    margin-bottom: 25px;
+			    margin-bottom: 30px;
 			    line-height: 22px;
+
+			    .figure {
+			    	display: block;
+				    float: left;
+			    	width: 80px;
+				    height: 80px;
+				    background-repeat: no-repeat;
+				    background-size: contain;
+			    }
+
+			    .hasfigure {
+		    	    margin-left: 100px;
+			    }
 
 			    .title {
 				      a {
@@ -1042,7 +1051,15 @@ body.interior {
 			.social-column {
 				position: relative;
 				z-index: 1;
-				@include col(1.85,10,0);
+				width: 90px;
+			    display: inline-block;
+			    float: left;
+    			list-style-type: none;
+
+    			.social-widget {
+					margin: 0;
+				}
+
 				@include break(mobile){
 					@include col(1,1,0);
 					margin-bottom: 25px;
@@ -1050,12 +1067,18 @@ body.interior {
 				
 				.tags {
 					width: 60px;
-					margin: 25px auto;
+					margin: 25px 0 60px;
 					font-size: .7em;
 					line-height: 184%;
+
 					@include break(mobile){
 						display: none;
 					}
+
+					strong {
+						font-weight: 500;
+					}
+					
 					li {
 						overflow: visible;
 						display: none;
@@ -1097,8 +1120,9 @@ body.interior {
 			}
 			
 			.articleBody {
-				@include col-last(8.15,10,2);
+				//@include col-last(8.15,10,2);
 				margin-bottom: 30px;
+
 				@include break(mobile){
 					@include col-last(1,1,0);
 				}
@@ -1141,16 +1165,18 @@ body.interior {
 	&.news {
   		#content {
     		.articleBody {
-	      		margin-bottom: 25px; min-height: 300px;
+    			margin-left: 90px;
+	      		margin-bottom: 25px;
+	      		min-height: 300px;
+	      		
 	      		@include break(mobile) {
 		      		margin-bottom: 5px;
 	      		}
     		}
     		
     		.social-column {
-    		  z-index: 1;
     		  .tags {
-      		  	margin: 25px auto 60px;
+      		  	//margin: 25px auto 60px;
     		  }
 			  .social:hover {
 	      		  .SocialHover {
@@ -2505,17 +2531,21 @@ body.interior {
 				right: 0;
 				top: 50px;
 				z-index: 1;
+
 				@include break(mobile){
 					position: relative;
 					top: 0;
 					margin-bottom: 25px;
+
 					.article-index {
 						position: absolute;
 						right: 0;
+
 						strong {
 							line-height: 28px;
 							font-weight: 500;
 						}
+						
 						@include break(mobile){
 							display: none;
 						}

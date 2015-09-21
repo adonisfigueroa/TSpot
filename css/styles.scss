@@ -1028,7 +1028,7 @@ h3.longtype {
 					}
 					@include col(5,11,5);
 				}
-				span {
+				span, h3 {
 					font-size: .80em;
 					font-weight: 500;
 					@include col-last(6,11,5);
