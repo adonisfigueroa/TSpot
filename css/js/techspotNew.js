@@ -268,7 +268,7 @@ function fixSidebar(){
 				sticky2.hcSticky({
 					top: newSpacePx2,
 					stickTo: $('.wrapperMobileOnly'),
-					bottomEnd: sticky2H+850,
+					bottomEnd: sticky2H+1200,
 					followScroll:false,
 					onStart:function(){
 						sticky1.hcSticky('off');
