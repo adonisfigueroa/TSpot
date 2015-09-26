@@ -707,30 +707,30 @@ body.products {
 		font-size: 16px;
 		
 		@include break(v-tablet){
-			display: block; width: 100%; border-bottom: solid 1px lighten(grey,35);
+			display: block; width: 100%!important; border-bottom: solid 1px lighten(grey,35);
 			padding: 18px 0 25px 0;
 		}//tablet
 		@include break(mobile){
 			padding: 5px 0 10px 0;
 		}//mobile
 		
-		.content{
-			display: block; padding: 0 8px;
+		.article-content{
+			display: block; padding: 0 10px;
 			
 			.articleImg{
 				display: block; position: relative; width: 100%;
-				height: 250px; overflow: hidden; z-index: 1;
+				height: 200px; overflow: hidden; z-index: 1;
 				@include break(v-tablet){
-					width: 30%; height: 160px; float: left;
+					width: 30%!important; height: 160px!important; float: left;
 				}//tablet
 				@include break(mobile){
-					height: 80px;
+					height: 80px!important;
 				}
 				a{
 					display: block; position: relative; width: 100%;
 					height: 100%; background-repeat: no-repeat;
 					background-position: center; background-size: cover;
-					@include mxAnim(250ms,all);
+					@include mxAnim(100ms,all);
 					&:after{
 						content: ""; display: block; position: absolute; top: 0; left: 0;
 						width: 100%; height: 100%; @include opacity(0.25);
@@ -750,31 +750,98 @@ body.products {
 			}//articleImg
 			
 			.articleContent{
-				display: block; position: relative; padding: 10px 12px 15px 12px;
-				font-size: 90%; background: white; border: solid 1px lighten(grey,40);
+				display: block; position: relative; padding: 5px 0px 15px 0px;
+				font-size: 90%;
 				border-top: none;border-top: 0;
 				@include border-bottom-left-radius(5px);
 				@include border-bottom-right-radius(5px);
 				@include break(v-tablet){
-					width: 66%; float: right; border: none; padding: 0 5px 5px 5px;
+					width: 66%!important; float: right; border: none; padding: 0 5px 5px 5px;
 					background: none;
 				}//tablet
 				h2{
-					font-size: 120%; line-height: 110%;
+					font-size: 145%; padding-bottom: 5px; line-height: 130%;
+					a{
+						color: #444444;
+						&:hover{color:#c00;}
+					}//a
 				}//h2
+				.catCount{
+					display: block; position: relative; padding: 8px 0;
+					@include break(mobile){
+						display: none;
+					}//mobile
+					.category{font-weight: bold; text-transform: uppercase; font-size: 85%;}
+					.comment-count{
+						display: block; float: right; font-size: 80%;
+						span {
+							display: block; background: darken(#f0f0f0,5);
+							padding: 2px 4px; @include border-radius(3px);
+							
+							&.highlight {
+								background: #CCC; color: white;
+								
+								&.no { display: none; }
+								&.big { background: #0a5499; }
+								&.bigger { background: #075bc0; }
+								&.biggest { background: $red; }
+							}//highlight
+						}//span
+						
+						&:hover{span{background: darken(#f0f0f0,10);}}
+						&:hover{span.big{background: darken(#0a5499,10);}}
+						&:hover{span.bigger{background: darken(#075bc0,10);}}
+						&:hover{span.biggest{background: darken($red,10);}}
+						
+					}//comment-count
+				}//catCount
 				.byLine{
-					padding: 5px 0; color: grey;
+					padding: 5px 0; color: grey; font-size: 85%;
 				}//byLine
 				.intro{
-					padding: 5px 0;
+					padding: 5px 0; color: #555; letter-spacing: -0.2px;
 					@include break(mobile){ display: none; }
 				}//intro
-				.postMeta{
-					
-				}//postMeta
 			}//articleContent
 			
 		}//content
+		
+		&.layout-2-3{
+			width: 66%;
+			
+			.articleImg{ height: 300px; }
+			
+			&.vertical{
+				.content{
+					.articleImg{
+						float: left; width: 62%; height: 350px;
+					}//articleImg
+					.articleContent{
+						float: right; width: 35%;
+					}//articleContent
+				}//content
+			}//vertical
+			
+		}//layout-2-3
+		
+		&.layout-2-2{
+			width: 50%;
+			.articleImg{ height: 250px; }
+		}//layout-2-2
+		
+		&:first-child, &.first{
+			.article-content{
+				padding-left: 0;
+				@include break(v-tablet){padding: 0 10px;}
+			}//article-content
+		}//first
+		
+		&:last-child, &.last{
+			.article-content{
+				padding-right: 0;
+				@include break(v-tablet){padding: 0 10px;}
+			}//article-content
+		}//Last
 		
 	}//article
 	.clear{clear: both;}
