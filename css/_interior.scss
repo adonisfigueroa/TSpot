@@ -2475,6 +2475,23 @@ body.interior {
     			}
 	    	}
 
+    		&.best-of {
+    			min-height: 55vh;
+    			max-height: 400px;
+
+    			.wrapper {
+    		    	min-height: 55vh;
+    			}
+
+	    		.title-group {
+	    			bottom: 75px;
+			        @include break(mobile){
+		    			bottom: 25px;
+	    			}
+	    		}
+	    		.rating { display: none; }
+	    	}
+
   		 }
 		}
 
