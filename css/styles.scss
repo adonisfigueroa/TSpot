@@ -3884,7 +3884,6 @@ table {
 
 .adContainerLeader2 {
 	background-color: $light-grey;
-	@include break(tablet){
-		display: none;
-	}
+	padding: 20px 0 35px;
+    text-align: center;
 }
