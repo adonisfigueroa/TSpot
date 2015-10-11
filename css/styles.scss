@@ -845,19 +845,21 @@ body.products {
 		
 	}//article
 	
+	.sectionHeader{
+		display: block; background: white; border-left: solid 15px;
+		text-transform: uppercase; font-weight: 700; width: calc(99% - 25px);
+		font-family: $f-condensed; font-size: 160%; color: #444444;
+		padding: 5px; margin: 0 auto;
+		@include break(mobile){
+			padding: 3px 5px 2px 5px; width: calc(100% - 44px);
+			font-size: 150%;
+		}//mobile
+	}//h3
+	
 	.mustRead{
 		display: block; position: relative; font-size: 16px; text-align: left;
 		margin: 25px 0;
-		&>h3{
-			display: block; background: white; border-left: solid 15px $blue;
-			text-transform: uppercase; font-weight: 100; width: calc(99% - 25px);
-			font-family: $f-condensed; font-size: 160%; color: #444444;
-			padding: 3px 5px; margin: 0 auto;
-			@include break(mobile){
-				padding: 3px 5px 2px 5px; width: calc(100% - 44px);
-				font-size: 150%;
-			}//mobile
-		}//h3
+		.sectionHeader{border-color: $blue;}
 		.gridTeaser{
 			display:block; position: relative;
 			@include break(mobile){
@@ -918,6 +920,57 @@ body.products {
 			}//li
 		}//teaserList
 	}//mustRead
+	
+	.downloadArticle{
+		display: inline-block; position: relative; font-size: 16px; text-align: left;
+		width: 66%; margin: 10px 0;
+		.downloadSection{
+			display: block; padding: 0 10px;
+			.sectionHeader{
+				text-align: center; border-color: #5A01B5; width: auto;
+			}//sectionHeader
+			.downloadsList{
+				display: block; padding-top: 25px;
+				li{
+					display: block; clear: both; margin-bottom: 25px;
+					&>a{
+						display: block; float: left;
+					}//a
+					.figure{
+						display: block; width: 80px; height: 80px;
+						background-repeat: repeat; background-position: center;
+						background-size: cover;
+					}//figure
+					.softwareInfo{
+						margin-left: 100px;
+						.title{
+							a{
+								color: #05408f; font-weight: 500; font-size: 120%;
+								display: inline-block; border-bottom: solid 1px transparent;
+								&:hover{border-color:#05408f;}
+							}
+						}//title
+						.bio{
+							color: #282828; font-size: 90%; line-height: 1.2em;
+							padding: 3px 0;
+						}//bio
+						.subdown{
+							display: block; color: #888; font-size: 0px;
+							li{
+								display: inline-block; border-right: solid 1px #bbb;
+								font-size: 13px; padding: 0 14px; margin-bottom: 0;
+								&:first-child{padding-left: 0px;}
+								&:last-child{border-right: none; padding-right: 0px;}
+							}
+						}//subdown
+					}//softwareInfo
+					&:last-child{margin-bottom: 0px;}
+				}//li
+			}//downloadsList
+		}//downloadSection
+		&.first{ .downloadSection{padding-left: 0px;} }
+		&.last{ .downloadSection{padding-right: 0px;} }
+	}//downloadArticle
 	
 	.clear{clear: both;}
 }//newPostList
