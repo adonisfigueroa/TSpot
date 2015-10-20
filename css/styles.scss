@@ -3061,6 +3061,42 @@ ul.category-chicklets {
 		}
       }
     }
+
+    &.bestof {
+    	height: 110px;
+    	border-bottom: 2px solid #eee;
+
+   		a {
+	    	.award {
+	    		float: left;
+	    		img { width: 100px; }
+	    	}
+
+	    	&:hover {
+	    		h3 {
+		    		color: #c00;
+	    		}
+	    	}
+
+	    	.breakdown {
+	    		padding: 10px;
+    			color: #000;
+    			font-weight: 400;
+
+				&:hover {
+					color: #000;
+				}
+
+    			h3 {
+    				font-weight: 500;
+    				&:hover {
+    					color: #c00;
+    				}
+    			}
+    		}
+    	}
+    }
+
   }
 
   .score_users {
