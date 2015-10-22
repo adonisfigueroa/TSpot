@@ -1685,7 +1685,8 @@ body.interior {
 
 			h3 {
 				color: white;
-				line-height: 35px;
+				line-height: 34px;
+				font-size: 0.95em;
 			}
 
 			input[type=text] {
@@ -1702,6 +1703,15 @@ body.interior {
 				padding: 0px 2% !important;
 				color: #333;
 			}
+		}
+
+		.browse_cats {
+			text-transform: uppercase;
+			font-family: "Roboto Condensed", sans-serif;
+			font-size: 0.7em;
+			color: #555;
+			padding-left: 10px;
+			padding-bottom: 2px;
 		}
 
 		#CategoryListMobile {
@@ -2032,11 +2042,17 @@ body.interior {
 			}
 		}
 		.category {
-			ul{
+			ul {
+
 				list-style: none;
 				padding: 0;
 				margin: 0;
+
 				li {
+					min-height: 130px;
+					border-bottom: 1px solid #E5E5E5;
+					position: relative;
+
 					h3 {
 						line-height: 1.5;
 
@@ -2063,6 +2079,8 @@ body.interior {
 						float: right;
 						right: 20px;
 						top: 25px;
+						position: absolute;
+
 						@include break(mobile){
 							display: none;
 						}
@@ -2070,7 +2088,7 @@ body.interior {
 							right: 2%;
 							top: 19px;
 						}
-						position: absolute;
+						
 						.excellent {
 					      background-color: rgba(0,191,23,1);
 					    }
@@ -2099,9 +2117,6 @@ body.interior {
 							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 						}
 					}
-					min-height: 130px;
-					border-bottom: 1px solid #E5E5E5;
-					position: relative;
 				}
 				.alternate {
 					background-color: white;
@@ -2237,11 +2252,11 @@ body.interior {
 			#CategoryList{
 				background: #304456;
 				li {
-				padding: 0px 15px;
-				@include break(v-tablet){
-				padding: 0px 10px;
-				}
-				line-height: 40px;
+					padding: 0px 15px;
+					line-height: 40px;
+					@include break(v-tablet){
+						padding: 0px 10px;
+					}
 				a {
 					color: white;
 					display: block;
@@ -2258,28 +2273,29 @@ body.interior {
 						color: black;
 					}
 					.arrow{
-					@include triangle(right,$orange,4,6);
-					float: right;
-					margin-top: 15px;
-					opacity: 1;
+						@include triangle(right,$orange,4,6);
+						float: right;
+						margin-top: 15px;
+						opacity: 1;
 					}
 				}
 				
 			}
 			}
 			.SideTitle{
-				line-height: 31px;
+				line-height: 33px;
 				background-color: $blue;
 				color: white;
 				padding: 0px 15px;
 				margin-top: -5px;
+
 				@include break(v-tablet){
 					padding: 0px 10px;
 				}
+				
 				.arrow {
 					@include triangle(down,white,4,6);
 					float: right;
-					
 					margin-top: -18px;
 					opacity: 1;
 				}

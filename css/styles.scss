@@ -330,7 +330,11 @@ body.reviews {
   }
   #content {
     .wrapper {
-      padding: 40px 0;
+		padding: 40px 0;
+
+	    @include break(mobile) {
+			padding: 10px 0;
+		}
     }
   }
 }
@@ -1013,12 +1017,15 @@ body.products {
 			color: #333333;
 			font-weight: 400;
 			font-size: .8em;
+		    letter-spacing: -.333px;
+		
 			a {
 				color: inherit;
 				&.similar,
 				&.replies {
 					color: #7393C8;
-					font-weight: 500;
+					font-weight: 600;
+				    font-size: 1.1em;
 
 					&:hover { text-decoration: underline; }
 				}
@@ -1059,7 +1066,7 @@ body.products {
 .download-list {
 	li {
 		background-image: url(/images/download-arrow.svg);
-		background-position: 8% center;
+		background-position: 8% 10%;
 		background-repeat: no-repeat;
 		& > a {
   			&:hover { color: $red; }
@@ -1070,7 +1077,7 @@ body.products {
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 8% center;
+		background-position: 8% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
@@ -1210,23 +1217,59 @@ h3.longtype {
 	ul.teaser-list {
 		padding: 0 0 28px;
 		li {
-			padding: 20px 0 0;
-			@include clearfix(before);
-			@include clearfix(after);
+			padding: 15px 0 0;
+			//@include clearfix(before);
+			//@include clearfix(after);
 			
 			a {
-				span.img-wrap {
+				.img-wrap {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 125px;
+    				background-size: cover;
+   				    background-position: center;
+
+    				/*
 					img {
 						width: 100%;
 						height: auto;
 						padding: 4px 0 6px;
 					}
-					@include col(5,11,5);
+					*/
+					//@include col(5,11,5);
+
+					.comm {
+					    background-color: rgba(255, 127, 0, 0.8);
+					    padding: 4px 6px;
+					    right: 5px;
+					    bottom: 4px;
+					    position: absolute;
+					    font-size: .7em;
+					    font-weight: 600;
+
+						&:hover {
+							background-color: rgba(255, 127, 0, 0.9);
+							transition: linear 0.1s;
+						}
+
+						p {
+							color: white;
+							padding: 0;
+						}
+					}
+
 				}
-				span, h3 {
-					font-size: .80em;
+				h3 {
+					font-size: .85em;
 					font-weight: 500;
-					@include col-last(6,11,5);
+					width: 100%;
+					display: block;
+					list-style-type: none;
+					position: relative;
+					letter-spacing: -.333px;
+					padding-top: 5px;
+					//@include col-last(6,11,5);
 				}
 				
 				&:hover {
@@ -1234,6 +1277,7 @@ h3.longtype {
 				}
 				
 			}
+			/*
 			span {
 				a {
 					font-size: .7em;
@@ -1241,8 +1285,10 @@ h3.longtype {
 					color: #666;
 				}
 			}
+			*/
 		}
 		
+		/*
 		&.reviews {
 			li {
 				p {
@@ -1279,6 +1325,7 @@ h3.longtype {
 				}
 			}
 		}
+		*/
 		
 	}
 	
