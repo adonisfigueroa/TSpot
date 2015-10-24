@@ -1218,6 +1218,27 @@ h3.longtype {
 			padding: 15px 0 0;
 			//@include clearfix(before);
 			//@include clearfix(after);
+
+			.comm {
+			    background-color: rgba(255, 127, 0, 0.8);
+			    padding: 4px 6px;
+			    position: relative;
+			    font-size: .7em;
+			    font-weight: 600;
+			    z-index: 10;
+			    float: right;
+			    margin: 94px 5px 0px 0px;
+
+				&:hover {
+					background-color: rgba(255, 127, 0, 0.9);
+					transition: linear 0.1s;
+				}
+
+				a {
+					color: white !important;
+					padding: 0;
+				}
+			}
 			
 			a {
 				.img-wrap {
@@ -1236,27 +1257,6 @@ h3.longtype {
 					}
 					*/
 					//@include col(5,11,5);
-
-					.comm {
-					    background-color: rgba(255, 127, 0, 0.8);
-					    padding: 4px 6px;
-					    right: 5px;
-					    bottom: 4px;
-					    position: absolute;
-					    font-size: .7em;
-					    font-weight: 600;
-
-						&:hover {
-							background-color: rgba(255, 127, 0, 0.9);
-							transition: linear 0.1s;
-						}
-
-						p {
-							color: white;
-							padding: 0;
-						}
-					}
-
 				}
 				h3 {
 					font-size: .85em;
