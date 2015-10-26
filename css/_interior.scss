@@ -1301,6 +1301,12 @@ body.interior {
 							padding-left: 0px;
 						}
 	          		}
+
+	          		p {
+						@include break(mobile){
+							padding: 0px;
+						}
+	          		}
 	        	}
 	      	}
     	}
@@ -2460,9 +2466,15 @@ body.interior {
 
 		      		h1.large {
 		        		font-size: 2.4em;
+						@include break(tablet){
+							font-size: 2.1em;
+						}
 						@include break(mobile){
-							font-size: 1.5em;
-						}		        		
+							font-size: 1.3em;
+						}
+						@include break(v-mobile){
+							font-size: 1.15em;
+						}
 		        	}
 		        	em {
 				        @include break(mobile){

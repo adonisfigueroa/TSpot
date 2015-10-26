@@ -109,8 +109,10 @@ ul,ol {
 	}
 }
 .wrapper {
-	width: $desk;
+	width: 94%;
+	max-width: $desk;
 	margin: 0 auto;
+
 	.TopAd {
 		max-width: 970px;
 		width: 100%;
