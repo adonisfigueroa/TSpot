@@ -729,6 +729,10 @@ body.interior {
 		.downloads-list {
 			padding: 35px 0 0;
 
+			@include break(mobile) {
+				padding: 25px 25px 0 5px;
+		    }
+
 			.subcats {
 				margin-top: -20px;
 				padding: 0 0 25px 2px;
@@ -761,14 +765,23 @@ body.interior {
 			    .figure {
 			    	display: block;
 				    float: left;
-			    	width: 80px;
-				    height: 80px;
+			    	width: 65px;
+				    height: 65px;
 				    background-repeat: no-repeat;
 				    background-size: contain;
+
+					@include break(mobile) {
+						width: 60px;
+						height: 60px;
+				    }
 			    }
 
 			    .hasfigure {
-		    	    margin-left: 100px;
+		    	    margin-left: 85px;
+
+					@include break(mobile) {
+						margin-left: 80px;
+				    }
 			    }
 
 			    .title {
@@ -841,6 +854,17 @@ body.interior {
 				&.wide {
 				  width: 25% !important;
 				}
+
+				@include break(mobile) {
+					padding-left: 8px;
+    				padding-right: 8px;
+    				border: none;
+
+    				&.right {
+					  display: none;
+					}
+    			}
+
 			  }
 
 			  &.drivers {
