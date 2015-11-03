@@ -59,18 +59,15 @@
 				// original TS 3.0:
 				// @include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.72);
 
-				@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.77);
+				@include gradient-trans-percent($start_color:#13191F,$start_cent:45%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
 				
 				&:hover {
 
 					// Gris
-					// @include gradient-trans-percent($start_color:#1F2933,$start_cent:15%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:70%,$end_alpha:.9);
+					@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
 
 					// Orange
-					@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
-					hgroup {
-						//bottom: 25px;
-					}
+					//@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
 				}
 				
 				hgroup {
@@ -85,6 +82,7 @@
 						font-size: .65em;
 						text-shadow: 0px 0px 3px #333;
 						color: #FF9B37;
+						padding-bottom: 2px;
 					}
 					h2 {
 						font-size: 1.05em;
@@ -895,6 +893,7 @@
 						font-size: .65em;
 						text-shadow: 0px 0px 3px #333;
 						color: #FF9B37;
+						padding-bottom: 2px;
 					}
 					h2 {
 						font-size: 1.05em;
@@ -2159,6 +2158,7 @@
 						font-size: .65em;
 						text-shadow: 0px 0px 3px #333;
 						color: #FF9B37;
+						padding-bottom: 2px;
 					}
 					h2 {
 						font-size: 1.4em;
@@ -2255,6 +2255,7 @@
 						font-size: .65em;
 						text-shadow: 0px 0px 3px #333;
 						color: #FF9B37;
+						padding-bottom: 2px;
 			            @include break(v-tablet){
 							font-size: 0.6em;
 						}
@@ -2513,6 +2514,7 @@
 						font-size: .65em;
 						text-shadow: 0px 0px 3px #333;
 						color: #FF9B37;
+						padding-bottom: 2px;
 					}
 					h2 {
 						font-size: 1.05em;

@@ -59,7 +59,7 @@
 	background: -webkit-linear-gradient(top, $rgba_start 0%,$rgba_end 100%); // Chrome10+,Safari5.1+
 	background: linear-gradient(to bottom, $rgba_start 0%,$rgba_end 100%); // W3C
 }
-@mixin gradient-trans-percent($start_color:darken($grey,20%),$start_cent:0%,$start_alpha:0,$end_color:darken($grey,60%),$end_cent:100%,$end_alpha:.5,$degree:200deg) {
+@mixin gradient-trans-percent($start_color:darken($grey,20%),$start_cent:0%,$start_alpha:0,$end_color:darken($grey,60%),$end_cent:100%,$end_alpha:.5,$degree:195deg) {
   	$rgba_start: rgba($start_color,$start_alpha);
   	$rgba_end: rgba($end_color,$end_alpha);
 	background: -webkit-linear-gradient($degree, $rgba_start $start_cent,$rgba_end $end_cent); // Chrome10+,Safari5.1+
