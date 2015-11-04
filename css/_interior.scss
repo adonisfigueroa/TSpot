@@ -1300,6 +1300,10 @@ body.interior {
 			      	  	max-height: 110px;
 		      	  	}
 
+					@include break(tablet){
+						margin: 0 25px 0 -10px;
+					}
+
 					@include break(mobile){
 						margin: 0 15px 0 -10px;
 					}
