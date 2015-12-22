@@ -160,10 +160,12 @@ body.interior.download {
             margin-bottom: -2px;
 
             &:hover {
-              text-overflow:inherit;
-              overflow:visible;
-              background: #fff;
-              z-index: 100;
+              text-overflow: inherit;
+              overflow: visible;
+              width: 210px;
+              white-space: pre-line;
+              line-height: 1.4;
+              margin-top: 4px;
             }
           }
         }

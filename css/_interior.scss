@@ -1187,6 +1187,16 @@ body.interior {
 	}
 
 	&.news {
+		#billboard_placeholder {
+			padding: 20px 0 0;
+		}
+
+		#content-header {
+			.wrapper {
+				padding: 20px 0 50px;
+			}
+		}
+
 		#content {
 			.articleBody {
 				margin-left: 90px;
@@ -2612,7 +2622,7 @@ body.interior {
 				}
 
 				.title-group {
-					bottom: 35px;
+					bottom: 55px;
 					@include break(mobile){
 						bottom: 25px;
 					}
@@ -2689,7 +2699,7 @@ body.interior {
 
 		.col-2-3-last{
 			float: left !important;
-			width: 66%;
+			width: 68%;
 			padding-bottom: 20px;
 
 			@include break(big-desk){
@@ -2708,7 +2718,7 @@ body.interior {
 
 			.wrapper {
 				overflow: visible;
-				padding: 40px 0;
+				padding: 15px 0 40px;
 				@include break(mobile) {
 					width: 94%;
 					padding: 25px 0 30px;
@@ -3154,6 +3164,7 @@ body.interior {
 		@include break(mobile){
 			padding-left: 0;
 			font-size: .95em;
+			margin-top: 140px;
 		}
 	  }
 	  .label {

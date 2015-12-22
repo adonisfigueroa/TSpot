@@ -2072,7 +2072,7 @@
 	}
  }
   #masthead {
-	min-height: 416px;
+	min-height: 440px;
 	position: relative;
 	@include break(mobile) {
 		min-height: 270px;
@@ -2435,7 +2435,7 @@
 	}
 }
   #masthead {
-	min-height: 416px;
+	min-height: 440px;
 	position: relative;
 	@include break(mobile) {
 		min-height: 270px;
@@ -2740,7 +2740,6 @@
 }
 }
 .products-cat #masthead {
-	/* min-height: 248px; */
 	@include break(tablet){
 		.wrapper {
 			position: relative;
@@ -2757,7 +2756,7 @@
 	}
 }
 .reviews-cat #masthead, .features-cat #masthead {
-	min-height: 248px;
+	min-height: 265px;
 	@include break(tablet){
 		.wrapper {
 			position: relative;
