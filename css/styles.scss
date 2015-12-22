@@ -1876,14 +1876,6 @@ span._bar {
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	@media screen and (min-height: 950px) {
-		min-height: 75vh;
-
-		.wrapper {
-			min-height: 70vh !important;
-		}
-	}
-
 	@include break(tablet){
 		min-height: 600px;
 	}
@@ -1916,6 +1908,14 @@ span._bar {
 		}
 		@include break(v-mobile){
 			min-height: 355px;
+		}
+	}
+
+	@media screen and (min-height: 950px) {
+		min-height: 75vh;
+
+		.wrapper {
+			min-height: 70vh;
 		}
 	}
 	
