@@ -292,11 +292,13 @@ h1 {
 		&.side-quote-left {
 			float: left;
 			width: 270px;
-			margin: 5px 10px 10px 0;
+			margin: 5px 13px 10px 0;
 			font-size: 1.45em;
 			line-height: 1.4em;
 			padding: 10px;
+			padding-left: 0;
 			color: #105ab2;
+
 			@include break(v-mobile) {
 				width: auto;
 				float: none;
