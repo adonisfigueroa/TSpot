@@ -290,11 +290,13 @@ h1 {
 		&.side-quote-left {
 			float: left;
 			width: 270px;
-			margin: 5px 10px 10px 0;
+			margin: 5px 13px 10px 0;
 			font-size: 1.45em;
 			line-height: 1.4em;
 			padding: 10px;
+			padding-left: 0;
 			color: #105ab2;
+
 			@include break(v-mobile) {
 				width: auto;
 				float: none;
@@ -1098,17 +1100,17 @@ body.products {
 	background: #888;
 	text-align: center;
 	color: #fff;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	font-weight: 400;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.333px;
 	line-height: 34px;
-	padding-top: 1px;
+	padding-top: 2px;
 	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.4);
 	z-index: 5;
 	@include transitions (0.25s);
 
 	&:hover {
-		background: #ff7f00;
+		background: #e67200;
 		text-decoration: none !important;
 		@include transitions (0.25s);
 	}
@@ -1131,7 +1133,7 @@ body.products {
 	}
 
 	&.orange {
-		background: #ff7f00;
+		background: #e67200;
 		&:hover {
 			background: #B20000;
 			@include transitions (0.25s);
@@ -1908,6 +1910,14 @@ span._bar {
 			min-height: 355px;
 		}
 	}
+
+	@media screen and (min-height: 950px) {
+		min-height: 75vh;
+
+		.wrapper {
+			min-height: 70vh;
+		}
+	}
 	
 	&:before {
 		content:"";
@@ -1915,7 +1925,9 @@ span._bar {
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
 		//OLDER @include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.03,$end_color:#1E2933,$end_cent:100%,$end_alpha:1,$degree:180deg);
-		@include gradient-trans-percent($start_color:#1E2933,$start_cent:15%,$start_alpha:0.40,$end_color:#1E2933,$end_cent:120%,$end_alpha:1,$degree:210deg);
+		
+		//darker@include gradient-trans-percent($start_color:#1E2933,$start_cent:15%,$start_alpha:0.40,$end_color:#1E2933,$end_cent:120%,$end_alpha:1,$degree:210deg);
+		@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.20,$end_color:#1E2933,$end_cent:95%,$end_alpha:1,$degree:200deg);
 	}
 	
 	.title-group {
@@ -2106,7 +2118,7 @@ ul.category-chicklets {
 
 		&.blue2, &.apple																									{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
 		&.navy2, &.industry																									{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,8%); } }
-		&.green2, &.security																								{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,8%); } }
+		&.green2, &.security, &.science																						{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,8%); } }
 		&.microsoft, &.windows, &.tips-tricks																				{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
 		&.red2, &.buying-guides																								{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
 
