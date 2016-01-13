@@ -3438,6 +3438,7 @@ body.interior.slide-article {
 				font-weight: 400;
 				line-height: 1.4em;
 				color: #fff !important;
+				text-align: justify;
 			
 				@include break(tablet) {
 					p { padding: 0 0 15px 60% !important; }
