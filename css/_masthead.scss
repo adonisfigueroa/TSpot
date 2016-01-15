@@ -1,7 +1,11 @@
+$tile-height: 180px;
+$tall-tile-height: ($tile-height * 2) + 1;
+$tile-width: 367px;
+
 .home {
 #masthead {
 	background: $grey;
-	height: 500px;
+	height: ($tile-height * 3) + 2;
 	position: relative;
 	left: 0;
     width: 100%;
@@ -24,8 +28,8 @@
 	
 	ul.featured-posts {
 		li {
-			width: 366px;
-			height: 166px;
+			width: $tile-width - 1;
+			height: $tile-height;
 			top: 0;
 			left: 0;
 			position: absolute;
@@ -33,9 +37,9 @@
 			background-position: center center;
 			
 			&.tall {
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -54,7 +58,7 @@
 				display: block;
 				padding: 15px;
 				color: white;
-				height: 166px - 30px;
+				height: $tile-height - 30px;
 
 				// original TS 3.0:
 				// @include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.72);
@@ -100,6 +104,7 @@
 				}	
 			}
 			
+			/*
 			&:nth-child(1) {
 				top: 0;
 				left: 0;
@@ -108,42 +113,43 @@
 			}
 			
 			&:nth-child(2) {
-				top: 334px;
+				top: ($tall-tile-height + 1);
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(3) {
-				left: 367px;
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(4) {
-				left: 367px;
-				top: 167px;
+				left: $tile-width;
+				top: ($tile-height + 1);
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(5) {
-				left: 367px*2;
+				left: $tile-width*2;
 				border-bottom: 1px solid $mast-border;
 			}
 			
 			&:nth-child(6) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}
 			
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 			}
 			
 			&:nth-child(8) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 			}
+			*/
 			
 		}
 	}
@@ -151,9 +157,9 @@
 	ul.variation-1 {
 		li {
 			&.tall {
-				height: 166px;
+				height: $tile-height;
 				a {
-					height: 166px - 30px;
+					height: $tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1em;
@@ -167,9 +173,9 @@
 				left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -179,36 +185,36 @@
 			}//nth
 			&:nth-child(2) {
 				top: 0;
-				left: 367px;
+				left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 167px;
-				left: 367px;
+				top: ($tile-height + 1);
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
 				top: 0;
-				left: 367px*2;
+				left: $tile-width*2;
 				border-right: 0px solid white;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 				display: none;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 				display: none;
 			}//nth
 			&:nth-child(8) {display: none;}
@@ -218,9 +224,9 @@
 	ul.variation-2 {
 		li {
 			&.tall {
-				height: 166px;
+				height: $tile-height;
 				a {
-					height: 166px - 30px;
+					height: $tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1em;
@@ -235,36 +241,36 @@
 				border-right: 1px solid $mast-border; 
 			}//nth
 			&:nth-child(2) {
-				top: 167px;
+				top: ($tile-height + 1);
 				left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
 				top: 0;
-				left: 367px;
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px;
-				left: 367px;
+				top: ($tile-height + 1);
+				left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2;
+				left: $tile-width*2;
 				top: 0;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 				display: none;
 			}//nth
 			&:nth-child(8) {display: none;}
@@ -274,9 +280,9 @@
 	ul.variation-3 {
 		li {
 			&.tall {
-				height: 166px;
+				height: $tile-height;
 				a {
-					height: 166px - 30px;
+					height: $tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1em;
@@ -289,9 +295,9 @@
 				left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border; 
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -301,12 +307,12 @@
 			}//nth
 			&:nth-child(2) {
 				top: 0;
-				left: 367px;
+				left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -316,12 +322,12 @@
 			}//nth
 			&:nth-child(3) {
 				top: 0;
-				left: 367px*2;
+				left: $tile-width*2;
 				border-bottom: 1px solid $mast-border;
 				border-right: 0px solid white;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -330,28 +336,28 @@
 				}
 			}//nth
 			&:nth-child(4) {
-				top: 167px;
-				left: 367px;
+				top: ($tile-height + 1);
+				left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 				display: none;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2;
+				left: $tile-width*2;
 				top: 0;
 				border-bottom: 1px solid $mast-border;
 				display: none;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 				display: none;
 				
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 				display: none;
 			}//nth
 			&:nth-child(8) {display: none;}
@@ -361,9 +367,9 @@
 	ul.variation-4 {
 		li {
 			&.tall {
-				height: 166px;
+				height: $tile-height;
 				a {
-					height: 166px - 30px;
+					height: $tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1em;
@@ -376,9 +382,9 @@
 				left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -387,40 +393,40 @@
 				}
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2;
+				top: ($tile-height + 1)*2;
 				left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
 				top: 0;
-				left: 367px;
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px;
-				left: 367px;
+				top: ($tile-height + 1);
+				left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px;
-				top: 167px*2;
+				left: $tile-width;
+				top: ($tile-height + 1)*2;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2;
+				left: $tile-width*2;
 				top: 0;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px;
-				height: 333px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -432,12 +438,13 @@
 		}//li
 	}//variation-4
 	
+	/*
 	ul.variation-5 {
 		li {
 			&.tall {
-				height: 166px;
+				height: $tile-height;
 				a {
-					height: 166px - 30px;
+					height: $tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1em;
@@ -450,10 +457,10 @@
 				left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				width: 366px*2+1;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -462,31 +469,31 @@
 				}
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2;
+				top: ($tile-height + 1)*2;
 				left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 167px*2;
-				left: 367px;
+				top: ($tile-height + 1)*2;
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
 				top: 0;
-				left: 367px*2;
+				left: $tile-width*2;
 				border-right: 0px solid white;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -495,18 +502,18 @@
 				}
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2;
+				left: $tile-width*2;
 				top: 0;
 				border-bottom: 1px solid $mast-border;
 				display: none;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px;
-				height: 333px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
+				height: $tall-tile-height;
 				display: none;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup {
 						h2 {
 							font-size: 1.4em;
@@ -517,40 +524,41 @@
 			&:nth-child(8) {display: none;}
 		}//li
 	}//variation-5
-	
+	*/
 	/*Edit*/
+
 	ul.variation-5 {
 		li{
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px; width: 366px*2+1;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height; width: 366px*2+1;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 167px*2; left: 367px;
+				top: ($tile-height + 1)*2; left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 0; left: 367px*2;
+				top: 0; left: $tile-width*2;
 				border-right: 0px solid white;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2; top: 167px;
+				left: $tile-width*2; top: ($tile-height + 1);
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				height: 333px;
+				height: $tall-tile-height;
 				a {
-					height: 333px - 30px;
+					height: $tall-tile-height - 30px;
 					hgroup { h2 { font-size: 1.4em; } }
 				}
 			}//nth
@@ -559,33 +567,34 @@
 			&:nth-child(8) {display: none;}
 		}//li
 	}//variation-5
+
 	ul.variation-5a {
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 0; left: 367px;
+				top: 0; left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 167px; left: 367px;
+				top: ($tile-height + 1); left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 0; left: 367px*2;
+				top: 0; left: $tile-width*2;
 				border-right: 0px solid white;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2; top: 167px;
+				left: $tile-width*2; top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) { display: none; }
@@ -594,165 +603,202 @@
 		}//li
 	}//variation-5a
 	
+
 	ul.variation-6{
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 0; left: 367px;
+				top: 0; left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px; left: 367px; height: 333px;
+				top: ($tile-height + 1); left: $tile-width; height: $tall-tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2; top: 0; height: 333px;
+				left: $tile-width*2; top: 0; height: $tall-tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 167px*2;
+				left: $tile-width*2; top: ($tile-height + 1)*2;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) { display: none; }
 			&:nth-child(8) {display: none;}
 		}//li
 	}//variation-6
+
 	ul.variation-6a{
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 0; left: 367px; height: 333px;
+				top: 0; left: $tile-width; height: $tall-tile-height;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(4) {
-				top: 167px*2; left: 367px; height: 166px;
+				top: ($tile-height + 1)*2; left: $tile-width; height: $tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2; top: 0; height: 333px;
+				left: $tile-width*2; top: 0; height: $tall-tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 167px*2;
+				left: $tile-width*2; top: ($tile-height + 1)*2;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) { display: none; }
 			&:nth-child(8) {display: none;}
 		}//li
 	}//variation-6a
-	
-	ul.variation-7{
-		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+
+	ul.variation-6b {
+		li{
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height; width: 366px*2+1;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 0; left: 367px;
+				top: ($tile-height + 1)*2; left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px; left: 367px;
+				left: $tile-width*2; top: 0;
+				border-bottom: 1px solid $mast-border;
+			}//nth
+			&:nth-child(5) {
+				left: $tile-width*2; top: ($tile-height + 1);
+			}
+			&:nth-child(6) {
+				left: $tile-width*2; top: ($tile-height + 1)*2;
+			}
+			&:nth-child(7) {display: none;}
+			&:nth-child(8) {display: none;}
+		}//li
+	}//variation-6b
+	
+	ul.variation-7{
+		li {
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&:nth-child(1) {
+				top: 0; left: 0;
+				border-bottom: 1px solid $mast-border;
+				border-right: 1px solid $mast-border;
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
+			}//nth
+			&:nth-child(2) {
+				top: ($tile-height + 1)*2; left: 0;
+				border-right: 1px solid $mast-border;
+				border-bottom: 1px solid $mast-border;
+			}//nth
+			&:nth-child(3) {
+				top: 0; left: $tile-width;
+				border-bottom: 1px solid $mast-border;
+				border-right: 1px solid $mast-border;
+			}//nth
+			&:nth-child(4) {
+				top: ($tile-height + 1); left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px; top: 167px*2;
+				left: $tile-width; top: ($tile-height + 1)*2;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 0;
+				left: $tile-width*2; top: 0;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2; top: 167px; height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				left: $tile-width*2; top: ($tile-height + 1); height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(8) {display: none;}
 		}//li
 	}//variation-7
 	ul.variation-7a{
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 0; left: 367px;
+				top: 0; left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px; left: 367px; height: 333px;
+				top: ($tile-height + 1); left: $tile-width; height: $tall-tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(5) {
-				left: 367px*2; top: 0;
+				left: $tile-width*2; top: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 167px;
+				left: $tile-width*2; top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2; top: 167*2;
+				left: $tile-width*2; top: ($tile-height + 1)*2;
 			}
 			&:nth-child(8) {display: none;}
 		}//li
@@ -760,84 +806,84 @@
 	
 	ul.variation-8{
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
-				height: 333px;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				height: $tall-tile-height;
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(2) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 0; left: 367px;
+				top: 0; left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 167px; left: 367px;
+				top: ($tile-height + 1); left: $tile-width;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(5) {
-				left: 367px; top: 167px*2;
+				left: $tile-width; top: ($tile-height + 1)*2;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 0;
+				left: $tile-width*2; top: 0;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2; top: 167px;
+				left: $tile-width*2; top: ($tile-height + 1);
 			}
 			&:nth-child(8) {
-				left: 367px*2; top: 167px*2;
+				left: $tile-width*2; top: ($tile-height + 1)*2;
 			}
 		}//li
 	}//variation-8
 	ul.variation-8a{
 		li {
-			&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
+			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(2) {
-				top: 167px; left: 0;
+				top: ($tile-height + 1); left: 0;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(3) {
-				top: 167px*2; left: 0;
+				top: ($tile-height + 1)*2; left: 0;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}//nth
 			&:nth-child(4) {
-				top: 0; left: 367px; height: 333px;
+				top: 0; left: $tile-width; height: $tall-tile-height;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
-				a { height: 333px - 30px; hgroup { h2 { font-size: 1.4em; } } }
+				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: 1.4em; } } }
 			}//nth
 			&:nth-child(5) {
-				left: 367px; top: 167px*2;
+				left: $tile-width; top: ($tile-height + 1)*2;
 				border-right: 1px solid $mast-border;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(6) {
-				left: 367px*2; top: 0;
+				left: $tile-width*2; top: 0;
 				border-bottom: 1px solid $mast-border;
 			}//nth
 			&:nth-child(7) {
-				left: 367px*2; top: 167px;
+				left: $tile-width*2; top: ($tile-height + 1);
 			}
 			&:nth-child(8) {
-				left: 367px*2; top: 167px*2;
+				left: $tile-width*2; top: ($tile-height + 1)*2;
 			}
 		}//li
 	}//variation-8a
@@ -872,7 +918,7 @@
 				display: block;
 				padding: 15px;
 				color: white;
-				height: 166px - 30px;
+				height: $tile-height - 30px;
 				@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.65);
 				
 				&:hover {
@@ -920,36 +966,36 @@
 			}
 			
 			&:nth-child(2) {
-				top: 334px;
+				top: ($tall-tile-height + 1);
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(3) {
-				left: 367px;
+				left: $tile-width;
 				border-bottom: 1px solid $mast-border;
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(4) {
-				left: 367px;
-				top: 167px;
+				left: $tile-width;
+				top: ($tile-height + 1);
 				border-right: 1px solid $mast-border;
 			}
 			
 			&:nth-child(5) {
-				left: 367px*2;
+				left: $tile-width*2;
 				border-bottom: 1px solid $mast-border;
 			}
 			
 			&:nth-child(6) {
-				left: 367px*2;
-				top: 167px;
+				left: $tile-width*2;
+				top: ($tile-height + 1);
 				border-bottom: 1px solid $mast-border;
 			}
 			
 			&:nth-child(7) {
-				left: 367px*2;
-				top: 167px * 2;
+				left: $tile-width*2;
+				top: ($tile-height + 1) * 2;
 			}
 	}
 	
@@ -2035,13 +2081,16 @@
 	}
 }
 .BigHead {
-	height: 500px !important;
+	height: ($tile-height * 3) + 2 !important;
+	@include break (tablet){
+		height: 500px !important;
+	}
 	@include break (mobile){
 		height: 270px !important;
 	}
 }
 .SmallHead {
-	height: 333px !important;
+	height: $tall-tile-height !important;
 	@include break (mobile){
 		height: 270px !important;
 	}

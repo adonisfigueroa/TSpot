@@ -454,8 +454,8 @@ body.products {
 	background-color: $light-grey;
 
 	article {
-		padding-bottom: 20px;
-		margin-bottom: 25px;
+	    padding-bottom: 26px;
+	    margin-bottom: 23px;
 		border-bottom: 1px solid #DDD;
 		z-index: 1;
 		
@@ -464,25 +464,26 @@ body.products {
 			width: 30%;
 			margin-top: 3px;
 
-/*			
-// Homepage movil con imagenes grandes
-			@include break (v-mobile){
-				width: 100%;
-				margin-bottom: 15px;
-				margin-top: 0px;
-			}
-*/
+			/*			
+			// Homepage movil con imagenes grandes
+						@include break (v-mobile){
+							width: 100%;
+							margin-bottom: 15px;
+							margin-top: 0px;
+						}
+			*/
 
 			img {
 				max-width: 100%;
 				height: auto;
 				width: 230px;
-/*				
-// Homepage movil con imagenes grandes
-				@include break(v-mobile){
-					width: 100%;
-				}
-*/
+
+				/*				
+				// Homepage movil con imagenes grandes
+								@include break(v-mobile){
+									width: 100%;
+								}
+				*/
 			}
 		}
 		
@@ -494,22 +495,24 @@ body.products {
 				padding-left: 5px;
 			}
 
-/*				
-// Homepage movil con imagenes grandes
-			@include break(v-mobile) {
-				width: 100%;
-			}
-*/
+			/*				
+			// Homepage movil con imagenes grandes
+						@include break(v-mobile) {
+							width: 100%;
+						}
+			*/
 
 			h2 {
+			    padding: 8px 0 2px;
 				a {
-				  font-family: $f-helvetica;
-				  line-height: 1.4;
-				  font-size: 110%;
-				  color: #0a5499;
+					font-family: $f-helvetica-roboto;
+					line-height: 1.4;
+					font-size: 105%;
+					color: #1e2833;
+					font-weight: 500;
 					
 					&:hover {
-						color: $red;
+						color: #0a5499;
 					}
 
 					@include break(v-mobile) {
@@ -535,32 +538,15 @@ body.products {
 				}
 			}
 
-			.byline {
-				color: #666666;
-				font-weight: 400;
-				font-size: .65em;
-				letter-spacing: -0.333px;
-				line-height: 2.5;
-				em {
-					font-style: normal;
-					padding-left: 5px;
-					margin-left: 3px;
-					border-left: 1px solid #7d7d7d;
-					display: inline-block;
-					line-height: 11px;
-					@include break(mobile){
-						display: block;
-						border-left: none;
-						padding-left: 0px;
-						margin: 0;
-					}
-					@include break(v-mobile){
-						display: none;
+			.article-category {
+				font-size: .7em;
+				letter-spacing: -.333px;
+
+				a {
+					&.cat2 {
+						padding-left: 10px;
 					}
 				}
-				@include break(v-mobile){
-					font-size: .55em;
-				}				
 			}
 			
 			.intro{
@@ -568,7 +554,7 @@ body.products {
 		        font-weight: 400;
 		        line-height: 1.5;
 		        letter-spacing: -0.333px;
-		        padding: 2px 0 !important;
+		        padding: 7px 0 3px !important;
 		        color: #333;
 		        @include break(mobile){
 					display: none;		
@@ -595,14 +581,49 @@ body.products {
 				p { padding: 0 0 15px !important; line-height: 1.5 !important; }
 				p:last-child { padding: 0 !important; }
 			}
+
+			.byline {
+				float: left;
+				color: #666666;
+				font-weight: 400;
+				font-size: .65em;
+				letter-spacing: -0.333px;
+				line-height: 2.5;
+
+				em {
+					font-style: normal;
+					padding-left: 11px;
+					margin-left: 8px;
+					border-left: 1px solid #aaa;
+					display: inline-block;
+					line-height: 9px;
+
+					a {
+						&.cat2 {
+							padding-left: 10px;
+						}
+					}
+
+					@include break(mobile){
+						display: block;
+						border-left: none;
+						padding-left: 0px;
+						margin: 0;
+					}
+					@include break(v-mobile){
+						display: none;
+					}
+				}
+				@include break(v-mobile){
+					font-size: .55em;
+				}				
+			}
 			
 			.post-meta {
 				line-height: 25px;
+				float: right;
 
 				@include break(mobile){
-					line-height: 12px;
-					float: right;
-					margin-top: -20px;
 					margin-right: -5px;
 				}
 
@@ -624,16 +645,18 @@ body.products {
 						font-size: .6em;
 					}
 					
+					/*
 					&.read-more {
 						background-image: url(../images/read-more-arrow.svg);
 						@include break(mobile){
 							display: none;
 						}
 					}
+					*/
 					
 					&.comment-count {
 						background-image: url(../images/comment-icon.svg);
-						padding-left: 20px;
+						padding-left: 15px;
 
 						@include break(mobile){
 							padding-left: 15px;
@@ -1009,7 +1032,6 @@ body.products {
 .download-list,
 .forum-list {
 	margin: 0 5px 10px -5px;
-	padding: 10px 0;
 	
 	li {
 		font-size: .8em;
@@ -1035,7 +1057,7 @@ body.products {
 				&.similar,
 				&.replies {
 					color: #7393C8;
-					font-weight: 600;
+					font-weight: 500;
 				    font-size: 1.1em;
 
 					&:hover { text-decoration: underline; }
@@ -1075,6 +1097,8 @@ body.products {
 }
 
 .download-list {
+	padding: 10px 0;
+
 	li {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 8% 10%;
@@ -1086,13 +1110,15 @@ body.products {
 }
 
 .forum-list {
+	padding: 10px 0 15px;
+
 	li {
 		background-image: url(/images/forum-icon.svg);
 		background-position: 8% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
-  		color: #333;
+  			color: #555;
   			&:hover { color: $red; }
 		}
 	}
