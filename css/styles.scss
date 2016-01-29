@@ -2296,7 +2296,7 @@ ul.category-chicklets {
 			line-height: 16px;
 			position: relative;
 			@include break(mobile){
-				background-image: url(/images/social-widget-bg-90.svg);
+				background-image: url(/images/social-widget-bg-90min.svg);
 				margin-left: 30%;
 				margin-top: -30px;
 				width: 32px;
@@ -2409,41 +2409,41 @@ ul.category-chicklets {
 					width: 32px;
 					margin-left: 30%;
 					background-position: 0px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				&.twitter {
 					width: 32px;
 					margin-left: 30%+13.5*1;
 					background-position: -32px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				
 				&.google_plus {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				
 				&.rss {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 
 				&.whatsapp {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -158px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				
 				&.comments {
 					width: 32px;
 					margin-left: 30%+13.5*4;
 					background-position: -125px 2px;
-					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				
 				a {
@@ -3058,7 +3058,7 @@ ul.category-chicklets {
 			}
 		}
 		.social {
-			background-image: url(/images/social-widget-bg-90.svg);
+			background-image: url(/images/social-widget-bg-90min.svg);
 			position: relative;
 			left: 50%;
 			margin-left: -16px;
