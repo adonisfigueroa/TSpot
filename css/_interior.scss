@@ -2282,7 +2282,7 @@ body.interior {
 							height: 55px;
 							line-height: 55px;
 							width: 65px;
-							@include border-radius(2px);
+							@include border-radius(3px);
 							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 						}
 					}
