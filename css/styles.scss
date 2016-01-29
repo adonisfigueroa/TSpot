@@ -2241,6 +2241,10 @@ ul.category-chicklets {
 					&.rss {
 						margin-left: 12.5%+17*3;
 					}
+
+					&.whatsapp {
+						margin-left: 12.5%+17*3; 
+					}
 					
 					&.comments {
 						margin-left: 12.5%+17*4;
@@ -2347,6 +2351,16 @@ ul.category-chicklets {
 					a{ background-position: right -105px; }
 				}
 			}
+
+			&.whatsapp {
+				background-position: center -163px;
+				a{display: block; background-image: url(/images/btnShare.svg); background-position: left -175px;}
+				&:hover {
+					background-color: #f07422;
+					background-image: none;
+					a{ background-position: right -175px; }
+				}
+			}
 			
 			&.comments {
 				background-position: center -130px;
@@ -2410,6 +2424,13 @@ ul.category-chicklets {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
+					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
+				}
+
+				&.whatsapp {
+					width: 30px;
+					margin-left: 30%+13.5*3;
+					background-position: -158px 1px;
 					&:hover{background-image: url(/images/social-widget-bg-90.svg);}
 				}
 				
