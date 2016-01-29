@@ -512,7 +512,7 @@ body.products {
 					font-weight: 500;
 					
 					&:hover {
-						color: #0a5499;
+						color: #105ab2;
 					}
 
 					@include break(v-mobile) {
@@ -604,6 +604,7 @@ body.products {
 						}
 					}
 
+					/*
 					@include break(mobile){
 						display: block;
 						border-left: none;
@@ -613,9 +614,10 @@ body.products {
 					@include break(v-mobile){
 						display: none;
 					}
+					*/
 				}
 				@include break(v-mobile){
-					font-size: .55em;
+					font-size: .6em;
 				}				
 			}
 			
@@ -1032,6 +1034,7 @@ body.products {
 .download-list,
 .forum-list {
 	margin: 0 5px 10px -5px;
+	padding: 10px 0;
 	
 	li {
 		font-size: .8em;
@@ -1040,13 +1043,14 @@ body.products {
 		line-height: 150%;
 		
 		& > a {
-			line-height: 120%;
-			font-weight: 500;
-			color: $blue;
 			display: block;
+			color: $blue;
+			line-height: 1.2;
+			font-weight: 500;
+			padding-bottom: 2px;
 		}
 		span {
-			line-height: 150%;
+			line-height: 1.5;
 			color: #333333;
 			font-weight: 400;
 			font-size: .8em;
@@ -1060,7 +1064,11 @@ body.products {
 					font-weight: 500;
 				    font-size: 1.1em;
 
-					&:hover { text-decoration: underline; }
+					&:hover { 
+						text-decoration: none;
+						padding-bottom: 1px;
+						border-bottom: 1px solid #7393C8;
+					}
 				}
 			}
 		}
@@ -1068,8 +1076,8 @@ body.products {
 		em {
 			display: inline-block;
 			font-style: normal;
-			padding: 0 3px;
-			font-weight: normal;
+			padding: 1px 4px;
+
 			&.editors-pick {
 				background-color: #FFCA00;
 				font-weight: 500;
@@ -1097,8 +1105,6 @@ body.products {
 }
 
 .download-list {
-	padding: 10px 0;
-
 	li {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 8% 10%;
@@ -1110,15 +1116,14 @@ body.products {
 }
 
 .forum-list {
-	padding: 10px 0 15px;
-
 	li {
 		background-image: url(/images/forum-icon.svg);
 		background-position: 8% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
-  			color: #555;
+  			color: #111;
+  			font-weight: 400;
   			&:hover { color: $red; }
 		}
 	}
