@@ -59,14 +59,9 @@ $tile-width: 367px;
 				padding: 15px;
 				color: white;
 				height: $tile-height - 30px;
-
-				// original TS 3.0:
-				// @include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.1,$end_color:#1F2933,$end_cent:60%,$end_alpha:.72);
-
 				@include gradient-trans-percent($start_color:#13191F,$start_cent:40%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
 				
 				&:hover {
-
 					// Gris
 					@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
 
@@ -102,6 +97,26 @@ $tile-width: 367px;
 						}
 					}
 				}	
+			}
+
+			&.bgc-dark {
+				a {
+					@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+
+					&:hover {
+						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.5,$end_color:#13191F,$end_cent:60%,$end_alpha:.85);
+					}
+				}
+			}
+
+			&.bgc-light {
+				a {
+					@include gradient-trans-percent($start_color:#13191F,$start_cent:45%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.55);
+
+					&:hover {
+						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+					}
+				}
 			}
 			
 			/*

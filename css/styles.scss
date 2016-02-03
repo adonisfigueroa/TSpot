@@ -736,6 +736,11 @@ body.products {
 				margin-bottom: 10px;
 			}
 		}
+
+		.video-container {
+		    clear: both;
+		    margin-top: 45px;
+		}
 	}
 }
 
@@ -1076,7 +1081,7 @@ body.products {
 		em {
 			display: inline-block;
 			font-style: normal;
-			padding: 1px 4px;
+			padding: 0px 4px;
 
 			&.editors-pick {
 				background-color: #FFCA00;
