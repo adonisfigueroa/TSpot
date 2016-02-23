@@ -698,7 +698,8 @@
 		line-height: 50px;
 		position: relative;
 		z-index: 1;
-		box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
+		//box-shadow: 0 2px 3px rgba(34, 25, 25, 0.4);
+		box-shadow: 0 3px 0px rgba(34,25,25,0.1);
 		font-size: .70em;
 		line-height: 38px;
 		@include break(mobile) {
@@ -707,7 +708,8 @@
 		.SubHeader {
 			background: #777D82; 
 			text-align: center;
-			box-shadow: inset 0px 3px 2px 0px rgba(0,0,0,0.15);
+			//box-shadow: inset 0px 3px 2px 0px rgba(0,0,0,0.15);
+			box-shadow: inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 			li {
 				text-align: center;
 				margin: 0px 15px;
@@ -887,7 +889,8 @@
 						
 						background: #777D82;
 						height: 240px;
-						box-shadow:0 2px 2px rgba(34, 25, 25, 0.20),inset 0px 3px 2px 0px rgba(0,0,0,0.15);
+						box-shadow: 0 3px 0px rgba(34,25,25,0.10),inset 0px 3px 0px 0px rgba(0,0,0,0.15);
+						//box-shadow:0 2px 2px rgba(34, 25, 25, 0.20),inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 						
 						.wrapper {
 							padding: 20px 0;
