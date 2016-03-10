@@ -76,9 +76,11 @@ body {
     left:0px;
     overflow-x: hidden;
     background-color: $light-grey;
+    /*
     @include break(mobile){
-	    //position: absolute;
+		position: absolute;
     }
+    */
 }
 
 .flyout {
@@ -111,7 +113,7 @@ ul,ol {
 	}
 }
 .wrapper {
-	width: 94%;
+	width: 90%;
 	max-width: $desk;
 	margin: 0 auto;
 
@@ -209,6 +211,10 @@ h1 {
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
 		transition: left 0.3s ease-in-out 0s;
+	}
+
+	&.white {
+		background-color: white;
 	}
 
 	.wrapper {
@@ -451,7 +457,6 @@ body.products {
 }
 
 .post-list {
-	background-color: $light-grey;
 
 	article {
 	    padding-bottom: 26px;
@@ -1245,7 +1250,7 @@ body.products {
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
-	border-left: 15px solid $red;
+	border-bottom: 3px solid $red;
 	font-weight: 600 !important;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -1268,23 +1273,31 @@ h3.section-header {
 	}
 	
 	&.green {
-		border-left: 15px solid $green;
+		border-bottom: 3px solid $green;
 	}
 	
 	&.red {
-		border-left: 15px solid $red;
+		border-bottom: 3px solid $red;
 	}
 	
 	&.orange {
-		border-left: 15px solid $orange;
+		border-bottom: 3px solid $orange;
 	}
 	
 	&.purple {
-		border-left: 15px solid #5A00B5;
+		border-bottom: 3px solid #5A00B5;
 	}
 	
 	&.blue {
-  	border-left: 15px solid #0250C5;
+  		border-bottom: 3px solid #0250C5;
+	}
+
+	&.top {
+		border-bottom: none;
+
+		&.red {
+			border-top: 3px solid $red;
+		}
 	}
 	
 }
@@ -3536,6 +3549,7 @@ ul.category-chicklets {
         padding: 10px;
         min-height: 42px;
 		max-height: 42px;
+		font-weight: 500;
       }
       
     }
@@ -3560,7 +3574,7 @@ ul.category-chicklets {
   .comment {
     position: relative;
     padding: 15px 100px 0px 10px;
-    border-bottom: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #eee !important;
     min-height: 100px;
     
     &:nth-child(odd) {
@@ -3835,7 +3849,7 @@ table {
 		width: 1020px;
 
 		@include break(big-desk){
-			width: 1100px;
+			width: 1200px;
 		}
 		
 		@include break(v-tablet){
@@ -4289,7 +4303,7 @@ table {
 }
 
 .adContainerNews {
-	margin-left: 750px;
+	margin-left: 850px;
 	position: absolute;
 	padding: 67px 0 0 20px;
 }
@@ -4300,7 +4314,7 @@ table {
 }
 
 .adContainerLeader2 {
-	background-color: $light-grey;
+	//background-color: $light-grey;
 	padding: 20px 0 35px;
     text-align: center;
 }
