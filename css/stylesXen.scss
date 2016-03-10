@@ -74,9 +74,11 @@ body {
     left:0px;
     overflow-x: hidden;
     background-color: $light-grey;
+    /*
     @include break(mobile){
-	    //position: absolute;
+		position: absolute;
     }
+    */
 }
 
 .flyout {
@@ -109,7 +111,7 @@ ul,ol {
 	}
 }
 .wrapper {
-	width: 94%;
+	width: 90%;
 	max-width: $desk;
 	margin: 0 auto;
 
@@ -207,6 +209,10 @@ h1 {
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
 		transition: left 0.3s ease-in-out 0s;
+	}
+
+	&.white {
+		background-color: white;
 	}
 
 	.wrapper {
@@ -449,7 +455,6 @@ body.products {
 }
 
 .post-list {
-	background-color: $light-grey;
 
 	article {
 	    padding-bottom: 26px;
@@ -738,6 +743,25 @@ body.products {
 		.video-container {
 		    clear: both;
 		    margin-top: 45px;
+		}
+
+		blockquote {
+			background: white;
+			margin: 5px 20px 25px 0px;
+			padding: 15px 10px 0px 15px;
+			border-left: 3px solid #ccc;
+		}
+
+		blockquote.twitter-tweet {
+			margin: 7px auto !important;
+			margin-bottom: 25px !important;
+		}
+
+		iframe {
+			&.twitter-tweet {
+			margin: 7px auto !important;
+			margin-bottom: 25px !important;
+			}
 		}
 	}
 }
@@ -1041,8 +1065,8 @@ body.products {
 	
 	li {
 		font-size: .8em;
-		padding: 0 0 0 20%;
-		margin: 10px 0;
+		padding: 0 0 0 18%;
+		margin: 5px 0 12px;
 		line-height: 150%;
 		
 		& > a {
@@ -1110,7 +1134,7 @@ body.products {
 .download-list {
 	li {
 		background-image: url(/images/download-arrow.svg);
-		background-position: 8% 10%;
+		background-position: 5% 10%;
 		background-repeat: no-repeat;
 		& > a {
   			&:hover { color: $red; }
@@ -1121,7 +1145,7 @@ body.products {
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 8% 20%;
+		background-position: 5% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
@@ -1224,7 +1248,7 @@ body.products {
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
-	border-left: 15px solid $red;
+	border-bottom: 5px solid $red;
 	font-weight: 600 !important;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -1247,23 +1271,31 @@ h3.section-header {
 	}
 	
 	&.green {
-		border-left: 15px solid $green;
+		border-bottom: 5px solid $green;
 	}
 	
 	&.red {
-		border-left: 15px solid $red;
+		border-bottom: 5px solid $red;
 	}
 	
 	&.orange {
-		border-left: 15px solid $orange;
+		border-bottom: 5px solid $orange;
 	}
 	
 	&.purple {
-		border-left: 15px solid #5A00B5;
+		border-bottom: 5px solid #5A00B5;
 	}
 	
 	&.blue {
-  	border-left: 15px solid #0250C5;
+  		border-bottom: 5px solid #0250C5;
+	}
+
+	&.top {
+		border-bottom: none;
+
+		&.red {
+			border-top: 5px solid $red;
+		}
 	}
 	
 }
@@ -1632,6 +1664,7 @@ h3.longtype {
 	padding: 30px 0 10px 8px;
 	position: relative;
 
+	/*
 	&:before {
 	  position: absolute;
 	  background-image: url(/images/icon-comments-lg.svg);
@@ -1640,12 +1673,12 @@ h3.longtype {
 	  content:"";
 	  display: block;
 	  width: 55px; height: 45px;
-	  top: 35px; left: -63px;
+	  top: 35px; left: -10px;
 	  @include break(tablet){
 	      background-image: none;
 	  }
-	  
 	}
+	*/
 
 	}
 	.col-2-3 {
@@ -1663,7 +1696,7 @@ h3.longtype {
 
 	h3.title {
 	color: #4484D0;
-	font-size: 1.2em;
+	font-size: 1.3em;
 
 		span.small {
 			font-size: 0.55em;
@@ -1672,14 +1705,14 @@ h3.longtype {
   
 	a.post-new-comment {
 		display: inline-block;
+		font-family: $f-condensed;
 		background-image: url(/images/glyph-orange.svg);
-		background-position: left center;
+		background-position: left 10px;
 		background-repeat: no-repeat;
 		font-size: .80em;
 		color: $dark-grey;
 		margin-bottom: 10px;
-		padding: 15px 0 15px 28px;
-		font-family: Roboto Condensed;
+		padding: 10px 0 15px 28px;
 	}
 
 	.comment {
@@ -3515,6 +3548,7 @@ ul.category-chicklets {
         padding: 10px;
         min-height: 42px;
 		max-height: 42px;
+		font-weight: 500;
       }
       
     }
@@ -3539,11 +3573,11 @@ ul.category-chicklets {
   .comment {
     position: relative;
     padding: 15px 100px 0px 10px;
-    border-bottom: 1px solid #DDDDDD !important;
+    border-bottom: 1px solid #eee !important;
     min-height: 100px;
     
-    &:nth-child(odd) {
-      background: white;
+    &:nth-child(even) {
+      background: #f5f5f5;
     }
     
     .rating {
@@ -3814,7 +3848,7 @@ table {
 		width: 1020px;
 
 		@include break(big-desk){
-			width: 1100px;
+			width: $desk;
 		}
 		
 		@include break(v-tablet){
@@ -4268,7 +4302,7 @@ table {
 }
 
 .adContainerNews {
-	margin-left: 750px;
+	margin-left: 813px;
 	position: absolute;
 	padding: 67px 0 0 20px;
 }
@@ -4279,7 +4313,7 @@ table {
 }
 
 .adContainerLeader2 {
-	background-color: $light-grey;
+	//background-color: $light-grey;
 	padding: 20px 0 35px;
     text-align: center;
 }

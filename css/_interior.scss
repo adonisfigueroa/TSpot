@@ -104,7 +104,7 @@ body.interior {
 			width: 1020px;
 
 			@include break(big-desk){
-				width: 1200px;
+				width: $desk;
 			}
 			
 			@include break(v-tablet){
@@ -1304,7 +1304,7 @@ body.interior {
 				figure {
 					width: 100px !important;
 					float: left !important;
-					margin: 0 25px 0 -30px;
+					margin: 0 25px 0 -20px;
 
 					img {
 						max-width: 100%;
@@ -1354,11 +1354,7 @@ body.interior {
 	&.product {
 		#content-header {
 			.wrapper {
-				padding: 20px 0 50px;
-
-				@include break(mobile){
-					padding: 20px 0 10px;
-				}
+				padding: 20px 0 10px;
 			}
 
 			h1.large {
@@ -1390,10 +1386,11 @@ body.interior {
 
 			.articleBody {
 				padding-top: 15px;
-				width: 100%;
-				float: none;
+				margin-right: 350px;
+
 				@include break(mobile){
 					padding-top: 10px;
+					margin-right: 0px;
 				}
 				
 				h3.section-header {
@@ -3322,7 +3319,7 @@ body.interior.slide-article {
 	}
 
 	.owlNavArea{
-		display: block; position: absolute; top: 0; right: 0; margin-top: -50px;
+		display: block; position: absolute; top: 0; right: 0; margin-top: -50px; margin-right: 2%;
 		.btnNav{
 			display: block; float: left; width: auto; height: auto;
 			@include mxAnim; cursor: pointer;
@@ -3400,7 +3397,7 @@ body.interior.slide-article {
 			
 			.slide-image{
 				display: block; float: left; width: 58%;
-				margin: 0 5% 0 0; padding: 0; position: relative;
+				margin: 0 3% 0 0; padding: 0; position: relative;
 
 				@include break(mobile) {
 					margin: 0 0 20px 0;
@@ -3434,7 +3431,7 @@ body.interior.slide-article {
 			}
 			
 			p {
-				padding: 0 0 15px 63% !important;
+				padding: 0 2% 15px 63% !important;
 				font-size: 1.15em;
 				font-weight: 400;
 				line-height: 1.4em;

@@ -1067,8 +1067,8 @@ body.products {
 	
 	li {
 		font-size: .8em;
-		padding: 0 0 0 20%;
-		margin: 10px 0;
+		padding: 0 0 0 18%;
+		margin: 5px 0 12px;
 		line-height: 150%;
 		
 		& > a {
@@ -1136,7 +1136,7 @@ body.products {
 .download-list {
 	li {
 		background-image: url(/images/download-arrow.svg);
-		background-position: 8% 10%;
+		background-position: 5% 10%;
 		background-repeat: no-repeat;
 		& > a {
   			&:hover { color: $red; }
@@ -1147,7 +1147,7 @@ body.products {
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 8% 20%;
+		background-position: 5% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
 		& > a {
@@ -1250,7 +1250,7 @@ body.products {
 h3.section-header {
 	font-family: $f-condensed;
 	background: white;
-	border-bottom: 3px solid $red;
+	border-bottom: 5px solid $red;
 	font-weight: 600 !important;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -1273,30 +1273,30 @@ h3.section-header {
 	}
 	
 	&.green {
-		border-bottom: 3px solid $green;
+		border-bottom: 5px solid $green;
 	}
 	
 	&.red {
-		border-bottom: 3px solid $red;
+		border-bottom: 5px solid $red;
 	}
 	
 	&.orange {
-		border-bottom: 3px solid $orange;
+		border-bottom: 5px solid $orange;
 	}
 	
 	&.purple {
-		border-bottom: 3px solid #5A00B5;
+		border-bottom: 5px solid #5A00B5;
 	}
 	
 	&.blue {
-  		border-bottom: 3px solid #0250C5;
+  		border-bottom: 5px solid #0250C5;
 	}
 
 	&.top {
 		border-bottom: none;
 
 		&.red {
-			border-top: 3px solid $red;
+			border-top: 5px solid $red;
 		}
 	}
 	
@@ -1666,6 +1666,7 @@ h3.longtype {
 	padding: 30px 0 10px 8px;
 	position: relative;
 
+	/*
 	&:before {
 	  position: absolute;
 	  background-image: url(/images/icon-comments-lg.svg);
@@ -1674,12 +1675,12 @@ h3.longtype {
 	  content:"";
 	  display: block;
 	  width: 55px; height: 45px;
-	  top: 35px; left: -63px;
+	  top: 35px; left: -10px;
 	  @include break(tablet){
 	      background-image: none;
 	  }
-	  
 	}
+	*/
 
 	}
 	.col-2-3 {
@@ -1697,7 +1698,7 @@ h3.longtype {
 
 	h3.title {
 	color: #4484D0;
-	font-size: 1.2em;
+	font-size: 1.3em;
 
 		span.small {
 			font-size: 0.55em;
@@ -1706,14 +1707,14 @@ h3.longtype {
   
 	a.post-new-comment {
 		display: inline-block;
+		font-family: $f-condensed;
 		background-image: url(/images/glyph-orange.svg);
-		background-position: left center;
+		background-position: left 10px;
 		background-repeat: no-repeat;
 		font-size: .80em;
 		color: $dark-grey;
 		margin-bottom: 10px;
-		padding: 15px 0 15px 28px;
-		font-family: Roboto Condensed;
+		padding: 10px 0 15px 28px;
 	}
 
 	.comment {
@@ -3577,8 +3578,8 @@ ul.category-chicklets {
     border-bottom: 1px solid #eee !important;
     min-height: 100px;
     
-    &:nth-child(odd) {
-      background: white;
+    &:nth-child(even) {
+      background: #f5f5f5;
     }
     
     .rating {
@@ -3849,7 +3850,7 @@ table {
 		width: 1020px;
 
 		@include break(big-desk){
-			width: 1200px;
+			width: $desk;
 		}
 		
 		@include break(v-tablet){
@@ -4303,7 +4304,7 @@ table {
 }
 
 .adContainerNews {
-	margin-left: 850px;
+	margin-left: 813px;
 	position: absolute;
 	padding: 67px 0 0 20px;
 }

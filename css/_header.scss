@@ -786,7 +786,7 @@
 		}
 		#forums {
 			li:first-child {
-				margin-left: 217px;
+				margin-left: 330px;
 				@include break(tablet){
 					margin-left: 515px;
 				}
@@ -906,13 +906,12 @@
 						li {
 							line-height: 240%;
 							font-weight: 500;	
-							width: 89px;
+							width: 90px;
 							height: 115px;
 							float: left;
 							text-align: center;
 							display: inline-block;	
-							padding: 5px 10px 0px 10px;
-							margin-left: 10px;
+							padding: 5px 25px 0px 0px;
 							&:hover {
 								background-color: rgba(0, 0, 0, 0);
 								img {
