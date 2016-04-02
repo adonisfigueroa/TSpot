@@ -786,7 +786,7 @@
 		}
 		#forums {
 			li:first-child {
-				margin-left: 330px;
+				margin-left: 350px;
 				@include break(tablet){
 					margin-left: 515px;
 				}
@@ -949,10 +949,15 @@
 						position: relative;
 						
 						li {
-							width: 21%;
+							width: 17%;
 							line-height: 240%;
 							display: block;
 							font-weight: 500;
+
+							@include break(v-tablet){
+								display: none;
+							}
+
 							//position: relative;
 
 							/*
@@ -963,13 +968,15 @@
 
 							a {
 								text-transform: none;
+								padding: 0 12px 0 14px;
+
 								&:after {
 									display: none;
 								}
 							}
 							
 							&.active {
-								@include trans-bg(black,.7);
+								background-color: rgba(30,41,51,0.75);
 								transition: 0.1s linear;
 								& > a {
 									position: relative;
@@ -990,15 +997,27 @@
 									display: block;
 								}	
 							}
-
-
 							
 							ul.recent-items {
 								display: none;
 								position: absolute;
-								left: 21%;
+								left: 17%;
 								top: 0;
-								width: 79%;
+								width: 83%;
+
+								@include break(v-tablet){
+									left: 0;
+									width: 100%;
+								}
+
+								&.wide {
+									left: 0;
+									width: 100%;
+
+									li {
+										@include col(1,5,2);
+									}
+								}
 								
 								li {
 									@include col(1,4,2);

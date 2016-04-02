@@ -354,48 +354,99 @@ body.interior.download {
         .download-warning {
           border: 1px solid #ddd;
           background-color: #feefb3;
-          width: 95%;
+          width: 90%;
           padding: 10px;
-          margin: 15px 0 20px;
+          margin: 10px 0 5px;
           color: #9f6000;
+          font-size: 1em;
+          line-height: 1.4em;
+          letter-spacing: -.2px;
 
           @include break(mobile){
             width: 90%;
           }
 
+          a {
+            color: #9f6000;
+            text-decoration: none;
+            border-bottom: 1px dotted #9f6000;
+
+            &:hover {
+              color: #105ab2;
+              border-bottom: 1px dotted #105ab2;
+              transition: linear .2s;
+            }
+          }
+
           span {
             font-weight: bold;
           }
-          div {
-            margin-top: 10px;
-          }
 
-          label {
-            &:hover {
-              cursor: pointer;
+          div {
+            margin: 18px 0 8px;
+
+            &.clean {
+             margin: 18px 0 20px;
+
+             label {
+                  background: white;
+
+                    &:hover {
+                      color: white;
+                    }
+
+                  a {
+                    border: none;
+
+                    &:hover {
+                      color: white;
+                      border: none;
+                    }
+                  }
+             }
+            }
+
+            label {
+              border: 1px dotted #9f6000;
+              padding: 6px;
+              border-radius: 4px;
+
+              a {
+                color: #9f6000;
+                text-decoration: none;
+              }
+
+              &:hover {
+                cursor: pointer;
+                color: #fff !important;
+                text-decoration: none;
+                transition: linear .2s;
+                background-color: #FF7F00;
+                border: 1px dotted #FF7F00;
+                padding: 6px;
+                border-radius: 4px;
+              }
             }
           }
 
           &.alert {
-            background-color: #c00;
-            color: #fff;
             transition: linear .2s;
-
+            border: 1px dotted #9f6000;
 
             label {
-              color: #fff;
-              font-weight: 500;
-              font-size: 14px;
+              color: #fff !important;
               transition: linear .3s;
               background-color: #FF7F00;
-              padding: 4px 6px 6px 4px;
-              border-radius: 3px;
+              border: 1px dotted #FF7F00;
+              padding: 6px;
+              border-radius: 4px;
 
               &:hover {
                 cursor: pointer;
               }
             }
           }
+
         }
 
         .facebook-like {
