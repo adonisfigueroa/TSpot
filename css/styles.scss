@@ -2280,6 +2280,10 @@ ul.category-chicklets {
 					&.google_plus {
 						margin-left: 12.5%+17*2;
 					}
+
+					&.reddit {
+						margin-left: 12.5%+17*2;
+					}
 					
 					&.rss {
 						margin-left: 12.5%+17*3;
@@ -2460,6 +2464,13 @@ ul.category-chicklets {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+				}
+
+				&.reddit {
+					width: 32px;
+					margin-left: 30%+13.5*2;
+					background-position: -189px 1px;
 					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
 				}
 				

@@ -1543,6 +1543,13 @@ body.interior {
 					width: 60px;
 					margin-right: 8px;
 				}
+
+				div {
+					background-repeat: no-repeat;
+					background-size: auto 100%;
+					background-position: center;
+					height: 100%;
+				}
 			}
 			.ProdListInfo {
 				float: left;
