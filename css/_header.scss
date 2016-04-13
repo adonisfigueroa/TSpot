@@ -32,7 +32,7 @@
 		}	
 		#SpecialHeightD {
 			.nav-submenu {
-				height: 270px
+				height: 315px
 			}
 		}
 	}
@@ -888,7 +888,7 @@
 						margin-left: -5%;
 						
 						background: #777D82;
-						height: 240px;
+						height: 285px;
 						box-shadow: 0 3px 0px rgba(34,25,25,0.10),inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 						//box-shadow:0 2px 2px rgba(34, 25, 25, 0.20),inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 						
@@ -1009,15 +1009,6 @@
 									left: 0;
 									width: 100%;
 								}
-
-								&.wide {
-									left: 0;
-									width: 100%;
-
-									li {
-										@include col(1,5,2);
-									}
-								}
 								
 								li {
 									@include col(1,4,2);
@@ -1038,13 +1029,14 @@
 											text-align: center;
 											max-height: 54px;
 											overflow: hidden;
+											letter-spacing: -0.2px;
 										}
 										
 									}
 
 									.img-wrap {
 										display: block;
-										padding-bottom: 140px;
+										padding-bottom: 185px;
 										margin-bottom: 10px;
 										position: relative;
 
@@ -1064,7 +1056,7 @@
 										.image {
 										    position: absolute;
 											width: 100%;
-											height: 140px;
+											height: 185px;
 											background-position: center center;
 											background-repeat: no-repeat;
 											overflow: hidden;
@@ -1117,6 +1109,17 @@
 									}
 									
 								}
+
+								&.wide {
+									left: 0;
+									width: 100%;
+
+									li {
+										@include col(1,5,2);
+										width: 18% !important;
+									}
+								}
+
 							}
 							
 						}
