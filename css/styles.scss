@@ -2338,7 +2338,7 @@ ul.category-chicklets {
 			line-height: 16px;
 			position: relative;
 			@include break(mobile){
-				background-image: url(/images/social-widget-bg-90min2.svg);
+				background-image: url(/images/social-widget-bg-90min3.svg);
 				margin-left: 30%;
 				margin-top: -30px;
 				width: 32px;
@@ -2386,6 +2386,16 @@ ul.category-chicklets {
 					background-color: #dd4b39;
 					background-image: none;
 					.btnShare{ background-position: right -70px; }
+				}
+			}
+
+			&.reddit {
+				background-position: center -163px;
+				.btnShare{ background-position: left -175px; }
+				&:hover{
+					background-color: #FF4500;
+					background-image: none;
+					.btnShare{ background-position: right -175px; }
 				}
 			}
 			
@@ -2451,48 +2461,48 @@ ul.category-chicklets {
 					width: 32px;
 					margin-left: 30%;
 					background-position: 0px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 				&.twitter {
 					width: 32px;
 					margin-left: 30%+13.5*1;
 					background-position: -32px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 				
 				&.google_plus {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 
 				&.reddit {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -189px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 				
 				&.rss {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 
 				&.whatsapp {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -158px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 				
 				&.comments {
 					width: 32px;
 					margin-left: 30%+13.5*4;
 					background-position: -125px 2px;
-					&:hover{background-image: url(/images/social-widget-bg-90min2.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min3.svg);}
 				}
 				
 				a {
@@ -3107,7 +3117,7 @@ ul.category-chicklets {
 			}
 		}
 		.social {
-			background-image: url(/images/social-widget-bg-90min2.svg);
+			background-image: url(/images/social-widget-bg-90min3.svg);
 			position: relative;
 			left: 50%;
 			margin-left: -16px;
