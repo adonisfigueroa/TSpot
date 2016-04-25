@@ -2324,7 +2324,7 @@ ul.category-chicklets {
 		}
 		
 		&.social {
-			background-image: url(/images/social-widget-bg.svg);
+			background-image: url(/images/social-widget-bg.svg?v=#{$social-icons-version});
 			background-repeat: no-repeat;
 			background-position: center top;
 			background-color: white;
@@ -2332,7 +2332,7 @@ ul.category-chicklets {
 			line-height: 16px;
 			position: relative;
 			@include break(mobile){
-				background-image: url(/images/social-widget-bg-90min.svg);
+				background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});
 				margin-left: 30%;
 				margin-top: -30px;
 				width: 32px;
@@ -2351,7 +2351,7 @@ ul.category-chicklets {
 				}
 			}
 			.btnShare{
-				display: block; background-image: url(/images/btnShare.svg);
+				display: block; background-image: url(/images/btnShare.svg?v=#{$social-icons-version});
 			}//btnShare
 			&.facebook {
 				background-position: center 9px;
@@ -2385,7 +2385,7 @@ ul.category-chicklets {
 			
 			&.rss {
 				background-position: center -93px;
-				a{display: block; background-image: url(/images/btnShare.svg); background-position: left -105px;}
+				a{display: block; background-image: url(/images/btnShare.svg?v=#{$social-icons-version}); background-position: left -105px;}
 				&:hover {
 					background-color: #f07422;
 					background-image: none;
@@ -2395,7 +2395,7 @@ ul.category-chicklets {
 
 			&.whatsapp {
 				background-position: center -163px;
-				a{display: block; background-image: url(/images/btnShare.svg); background-position: left -175px;}
+				a{display: block; background-image: url(/images/btnShare.svg?v=#{$social-icons-version}); background-position: left -175px;}
 				&:hover {
 					background-color: #f07422;
 					background-image: none;
@@ -2405,7 +2405,7 @@ ul.category-chicklets {
 			
 			&.comments {
 				background-position: center -130px;
-				a{display: block; background-image: url(/images/btnShare.svg); background-position: left -140px;}
+				a{display: block; background-image: url(/images/btnShare.svg?v=#{$social-icons-version}); background-position: left -140px;}
 				&:hover {
 					background-color: #4b75b7;
 					background-image: none;
@@ -2445,41 +2445,41 @@ ul.category-chicklets {
 					width: 32px;
 					margin-left: 30%;
 					background-position: 0px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 				&.twitter {
 					width: 32px;
 					margin-left: 30%+13.5*1;
 					background-position: -32px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 				
 				&.google_plus {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 				
 				&.rss {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 
 				&.whatsapp {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -158px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 				
 				&.comments {
 					width: 32px;
 					margin-left: 30%+13.5*4;
 					background-position: -125px 2px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg);}
+					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
 				}
 				
 				a {
@@ -3094,7 +3094,7 @@ ul.category-chicklets {
 			}
 		}
 		.social {
-			background-image: url(/images/social-widget-bg-90min.svg);
+			background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});
 			position: relative;
 			left: 50%;
 			margin-left: -16px;
