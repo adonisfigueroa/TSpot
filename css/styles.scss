@@ -1331,7 +1331,11 @@ h3.longtype {
 	ul.teaser-list {
 		padding: 0 0 28px;
 		li {
-			padding: 15px 0 0;
+			padding: 22px 0 0;
+
+			&:first-child {
+				padding: 16px 0 0;
+			}
 			//@include clearfix(before);
 			//@include clearfix(after);
 
@@ -1491,7 +1495,8 @@ h3.longtype {
 				}
 
 				h3 {
-					bottom: 30px;
+					font-size: 1.4em;
+					bottom: 20px;
 				}
 			}
 
@@ -4318,7 +4323,7 @@ table {
 .adContainerSide {
 	width: 300px;
 	min-height: 250px;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	text-align: center;
 	background-color: transparent;
 }
