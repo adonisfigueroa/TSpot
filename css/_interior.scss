@@ -2927,10 +2927,15 @@ body.interior {
 
 						.pad ul {
 							font-size: 1.2em;
-							margin: 4% 0 0 14%;
+							margin: 4% 0 0 10%;
 							line-height: 1.8;
 						}
 					}
+
+					b, strong {
+						font-weight: 500;
+					}
+					
 					@include break(mobile){
 						display: none;
 					}

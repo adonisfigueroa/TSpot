@@ -12,7 +12,6 @@
 "_masthead.scss",
 "_footer.scss";
 
-
 // ! Basic/Generic Styles ===========================================
 
 body {
@@ -1330,7 +1329,11 @@ h3.longtype {
 	ul.teaser-list {
 		padding: 0 0 28px;
 		li {
-			padding: 15px 0 0;
+			padding: 22px 0 0;
+
+			&:first-child {
+				padding: 16px 0 0;
+			}
 			//@include clearfix(before);
 			//@include clearfix(after);
 
@@ -1490,7 +1493,8 @@ h3.longtype {
 				}
 
 				h3 {
-					bottom: 30px;
+					font-size: 1.4em;
+					bottom: 20px;
 				}
 			}
 
@@ -2214,28 +2218,33 @@ ul.category-chicklets {
 		}
 
 		&.blue, &.reviews, &.techspot																						{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,8%); } }
-		&.green3, &.features, &.google																						{ background-color: #237A3C; &:hover { background-color: lighten(#237A3C,6%); } }
-		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.storage, &.input-devices, &.cases							{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,4%); } }	
-		&.orange, &.guides, &.web, &.home, &.blog, &.pc, &.smartphones, &.laptops, &.desktop-pcs, &.tablets					{ background-color: #e67200; &:hover { background-color: #FF7F00; } }
+		&.blue2, &.apple, &.storage, &.laptops																				{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
+		&.blue3, &.microsoft, &.windows, &.tips-tricks																		{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
 		&.navy, &.products, &.downloads																						{ background-color: #00366F; &:hover { background-color: lighten(#00366F,8%); } }
-		&.purple, &.software, &.electronics, &.audio, &.culture																{ background-color: #69008C; &:hover { background-color: lighten(#69008C,6%); } }
-		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
-
-		&.blue2, &.apple																									{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
 		&.navy2, &.industry																									{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,8%); } }
-		&.green2, &.security, &.science																						{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,8%); } }
-		&.microsoft, &.windows, &.tips-tricks																				{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
-		&.red2, &.buying-guides																								{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
 
-		&.dotw, &.wearables																									{ background-color: #B25900; &:hover { background-color: lighten(#B25900,8%); } }
+		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,4%); } }	
+		&.green2, &.science																									{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,8%); } }
+		&.green3, &.features, &.google																						{ background-color: #237A3C; &:hover { background-color: lighten(#237A3C,6%); } }
+		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887; &:hover { background-color: lighten(#24a887,6%); } }
+
+		&.purple, &.software, &.culture																						{ background-color: #69378c; &:hover { background-color: lighten(#69378c,6%); } }
+		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac; &:hover { background-color: lighten(#5353ac,5%); } }
+
+		&.orange, &.guides, &.web, &.home, &.blog, &.pc																		{ background-color: #e67200; &:hover { background-color: #FF7F00; } }
+		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
+		&.red2, &.buying-guides, &.bestof																					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
+		&.red3, &.security																									{ background-color: #ac5353; &:hover { background-color: lighten(#ac5353,5%); } }
+
+		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #cc9900; &:hover { background-color: lighten(#cc9900,8%); } }
 		&.grey, &.natw																										{ background-color: #888888; &:hover { background-color: lighten(#888888,8%); } }
-		&.deals, &.car-tech																									{ background-color: #779954; &:hover { background-color: lighten(#779954,8%); } }
+		&.deals 																											{ background-color: #779954; &:hover { background-color: lighten(#779954,8%); } }
 		&.wof	 																											{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
 
-		&.yellow, &.mobile																									{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,6%); } } 
+		&.yellow, &.wearables																								{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,6%); } } 
 
 		// Texto negro
-		&.yellow, &.mobile {
+		&.yellow, &.wearables {
 			a {
 				color: #1e2933;
 			}
@@ -2276,6 +2285,10 @@ ul.category-chicklets {
 					}
 					
 					&.google_plus {
+						margin-left: 12.5%+17*2;
+					}
+
+					&.reddit {
 						margin-left: 12.5%+17*2;
 					}
 					
@@ -2332,7 +2345,7 @@ ul.category-chicklets {
 			line-height: 16px;
 			position: relative;
 			@include break(mobile){
-				background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});
+				background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});
 				margin-left: 30%;
 				margin-top: -30px;
 				width: 32px;
@@ -2380,6 +2393,16 @@ ul.category-chicklets {
 					background-color: #dd4b39;
 					background-image: none;
 					.btnShare{ background-position: right -70px; }
+				}
+			}
+
+			&.reddit {
+				background-position: center -169px;
+				.btnShare{ background-position: left -175px; }
+				&:hover{
+					background-color: #ff5700;
+					background-image: none;
+					.btnShare{ background-position: right -175px; }
 				}
 			}
 			
@@ -2445,41 +2468,48 @@ ul.category-chicklets {
 					width: 32px;
 					margin-left: 30%;
 					background-position: 0px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 				&.twitter {
 					width: 32px;
 					margin-left: 30%+13.5*1;
 					background-position: -32px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 				
 				&.google_plus {
 					width: 32px;
 					margin-left: 30%+13.5*2;
 					background-position: -65px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
+				}
+
+				&.reddit {
+					width: 32px;
+					margin-left: 30%+13.5*2;
+					background-position: -189px 1px;
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 				
 				&.rss {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -97px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 
 				&.whatsapp {
 					width: 30px;
 					margin-left: 30%+13.5*3;
 					background-position: -158px 1px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 				
 				&.comments {
 					width: 32px;
 					margin-left: 30%+13.5*4;
 					background-position: -125px 2px;
-					&:hover{background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});}
+					&:hover{background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});}
 				}
 				
 				a {
@@ -3019,7 +3049,7 @@ ul.category-chicklets {
 				}
 			}
 
-			span {
+			span.onamazon {
 				font-size: 0.75em;
 				position: absolute;
 				padding: 3px 0px 0px 5px;
@@ -3094,7 +3124,7 @@ ul.category-chicklets {
 			}
 		}
 		.social {
-			background-image: url(/images/social-widget-bg-90min.svg?v=#{$social-icons-version});
+			background-image: url(/images/social-widget-bg-90.svg?v=#{$social-icons-version});
 			position: relative;
 			left: 50%;
 			margin-left: -16px;
@@ -3139,6 +3169,12 @@ ul.category-chicklets {
 			}
 		}
 		
+	}
+	.last-updated {
+	    margin: 15px 10px 0 15px;
+	    text-align: right;
+	    color: #666;
+	    font-size: .65em;
 	}
     nav {
       font-family: $f-condensed;
@@ -4296,7 +4332,7 @@ table {
 .adContainerSide {
 	width: 300px;
 	min-height: 250px;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	text-align: center;
 	background-color: transparent;
 }
@@ -4304,7 +4340,8 @@ table {
 .adContainerNews {
 	margin-left: 813px;
 	position: absolute;
-	padding: 67px 0 0 20px;
+    padding: 67px 20px 40px 20px;
+    background-color: #f5f5f5;
 }
 
 .adContainerNewsMob {
