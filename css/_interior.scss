@@ -1045,6 +1045,11 @@ body.interior {
 		}
 		.col-2-3{
 			width: 69%;
+
+			@include break(big-desk) {
+				width: 70%;
+			}
+
 			@include break(v-tablet) {
 				width: 100%;
 			}
@@ -1157,7 +1162,7 @@ body.interior {
 					border-left: 3px solid #ccc;
 				}
 
-				blockquote.twitter-tweet {
+				blockquote.twitter-tweet, twitterwidget.twitter-tweet {
 					margin: 7px auto !important;
 					margin-bottom: 25px !important;
 				}
@@ -1198,7 +1203,7 @@ body.interior {
 
 		#content {
 			.articleBody {
-				margin-left: 90px;
+				margin-left: 95px;
 				margin-bottom: 25px;
 				min-height: 300px;
 				

@@ -753,7 +753,7 @@ body.products {
 			border-left: 3px solid #ccc;
 		}
 
-		blockquote.twitter-tweet {
+		blockquote.twitter-tweet, twitterwidget.twitter-tweet {
 			margin: 7px auto !important;
 			margin-bottom: 25px !important;
 		}
@@ -1072,10 +1072,12 @@ body.products {
 		
 		& > a {
 			display: block;
-			color: $blue;
+			color: #111;
 			line-height: 1.2;
-			font-weight: 500;
+			font-weight: 400;
 			padding-bottom: 2px;
+
+			&:hover { color: $red; }
 		}
 		span {
 			line-height: 1.5;
@@ -1137,9 +1139,6 @@ body.products {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 5% 10%;
 		background-repeat: no-repeat;
-		& > a {
-  			&:hover { color: $red; }
-		}
 	}
 }
 
@@ -1149,11 +1148,6 @@ body.products {
 		background-position: 5% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
-		& > a {
-  			color: #111;
-  			font-weight: 400;
-  			&:hover { color: $red; }
-		}
 	}
 }
 
@@ -1379,7 +1373,7 @@ h3.longtype {
 					//@include col(5,11,5);
 				}
 				h3 {
-					font-size: .85em;
+					font-size: .78em;
 					font-weight: 500;
 					width: 100%;
 					display: block;
@@ -1387,6 +1381,7 @@ h3.longtype {
 					position: relative;
 					letter-spacing: -.333px;
 					padding-top: 5px;
+					color: #444;
 					//@include col-last(6,11,5);
 				}
 				

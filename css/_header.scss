@@ -1174,13 +1174,16 @@
 	    line-height: 45px;
 	    width: 185px;
 	    margin-left: 5px;
+
 	    @include transitions (0.1s);
+
 	    @include break(mobile){
 		    margin-left: 32px;
 		    width: 160px;
 		    height: 52px;
-		    background-size: 175px;
+		    background-size: 165px;
 	    }
+
 	    @include break(v-mobile){
 		    width: 160px;
 		    height: 52px;

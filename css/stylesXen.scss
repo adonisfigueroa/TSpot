@@ -751,7 +751,7 @@ body.products {
 			border-left: 3px solid #ccc;
 		}
 
-		blockquote.twitter-tweet {
+		blockquote.twitter-tweet, twitterwidget.twitter-tweet {
 			margin: 7px auto !important;
 			margin-bottom: 25px !important;
 		}
@@ -1377,7 +1377,7 @@ h3.longtype {
 					//@include col(5,11,5);
 				}
 				h3 {
-					font-size: .85em;
+					font-size: .78em;
 					font-weight: 500;
 					width: 100%;
 					display: block;
@@ -1385,6 +1385,7 @@ h3.longtype {
 					position: relative;
 					letter-spacing: -.333px;
 					padding-top: 5px;
+					color: #444;
 					//@include col-last(6,11,5);
 				}
 				
