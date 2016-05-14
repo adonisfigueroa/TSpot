@@ -55,9 +55,7 @@
 		z-index: 2;
 		@include break(v-mobile){
 			border-bottom: 5px solid #105ab2;
-		}
-		@include break(mobile){
-			border-bottom: 5px solid #105ab2;
+			box-shadow: 0 4px 0px rgba(34,25,25,0.1);
 		}
 		.wrapper {
 			padding: 0;
@@ -618,12 +616,6 @@
 					}
 				}
 			}
-		    @include break(mobile){
-			    border-bottom: 5px solid #105ab2;
-		    }
-		    @include break(v-mobile){
-			    border-bottom: 5px solid #105ab2;
-		    }
 		}
 		#MobileMenu a {
 			padding-left:15px;
@@ -660,11 +652,12 @@
 			a {
 				line-height: $header-interior-line-height;
 			}
-		    @include break(mobile){
+		    @include break(mobile) {
+				background-size: 165px;
 			    margin-left: 32px;
 			    height: 49px !important;
 		    }
-		    @include break(v-mobile){
+		    @include break(v-mobile) {
 			    height: 49px !important;
 		    }
 		}
@@ -1181,9 +1174,8 @@
 		    margin-left: 32px;
 		    width: 160px;
 		    height: 52px;
-		    background-size: 165px;
+		    background-size: 170px;
 	    }
-
 	    @include break(v-mobile){
 		    width: 160px;
 		    height: 52px;
