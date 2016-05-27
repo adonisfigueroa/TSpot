@@ -650,6 +650,10 @@
 			padding-bottom: 3px;
 			width: 160px;
 
+			&:hover{
+				padding-bottom: 3px;
+			}
+
 			a {
 				line-height: $header-interior-line-height;
 			}
@@ -1172,9 +1176,9 @@
 
 		&:hover{
 			background-color: #0c468d;
-			padding: 0 18px 3px 0px;
-			margin-left: -13px;
-			border-left: 18px solid #0c468d;
+			padding: 0 14px 0px 0px;
+		    margin-left: -9px;
+    		border-left: 14px solid #0c468d;
 		}
 
 	    @include break(mobile){
