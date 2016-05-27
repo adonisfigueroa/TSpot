@@ -60,6 +60,10 @@ body.interior {
 			font-size: 0.95em;
 		}
 
+		b, strong {
+			font-weight: 500;
+		}
+
 		h2 {
 			font-weight: 500;
 			font-size: 1.8em;
@@ -3474,7 +3478,7 @@ body.interior.slide-article {
 					}
 				}
 
-				.itxtrst, .itxtrstspan, .itxtrst span {
+				.vm-hook, .itxtrst, .itxtrstspan, .itxtrst span {
 						color: #fff !important;
 				}
 			}

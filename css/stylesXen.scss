@@ -408,7 +408,7 @@ body.products {
 					top: 1px;
 				}
 				
-				.itxtrst, .itxtrstspan, .itxtrst span {
+				.vm-hook, .itxtrst, .itxtrstspan, .itxtrst span {
 				    color: #333 !important;
 				}
 	 		}
@@ -1070,10 +1070,12 @@ body.products {
 		
 		& > a {
 			display: block;
-			color: $blue;
+			color: #111;
 			line-height: 1.2;
-			font-weight: 500;
+			font-weight: 400;
 			padding-bottom: 2px;
+
+			&:hover { color: $red; }
 		}
 		span {
 			line-height: 1.5;
@@ -1135,9 +1137,6 @@ body.products {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 5% 10%;
 		background-repeat: no-repeat;
-		& > a {
-  			&:hover { color: $red; }
-		}
 	}
 }
 
@@ -1147,11 +1146,6 @@ body.products {
 		background-position: 5% 20%;
 		background-repeat: no-repeat;
 		background-size: 26px;
-		& > a {
-  			color: #111;
-  			font-weight: 400;
-  			&:hover { color: $red; }
-		}
 	}
 }
 
@@ -1359,6 +1353,12 @@ h3.longtype {
 			}
 			
 			a {
+				color: #444;
+
+				&:hover {
+					color: $red;
+				}
+
 				.img-wrap {
 					display: block;
 					position: relative;
@@ -1385,14 +1385,8 @@ h3.longtype {
 					position: relative;
 					letter-spacing: -.333px;
 					padding-top: 5px;
-					color: #444;
 					//@include col-last(6,11,5);
 				}
-				
-				&:hover {
-					color: $red;
-				}
-				
 			}
 			/*
 			span {
@@ -4032,11 +4026,12 @@ table {
 		display: none;
 	}
 }
-.itxtrst, .itxtrstspan, .itxtrst span {
+.vm-hook, .itxtrst, .itxtrstspan, .itxtrst span {
     text-decoration: none !important;
 }
 
 // Nativo ads
+/*
 .col-2-3 {
 	#ntvBox {
 	    margin: 45px 0px 0 !important;
@@ -4064,7 +4059,7 @@ table {
 	    margin-top: 20px !important;
 	}
 }
-
+*/
 
 .loading {
 	background: #f5f5f5 url(http://static.techspot.com/images/loading_blue2.gif) no-repeat center top;
@@ -4140,11 +4135,6 @@ table {
 		}//entryBody
 	}//entry
 }//nIndexLayout
-
-
-
-
-
 
 //Slide section
 .owl-carousel .animated {

@@ -649,9 +649,11 @@
 			height: $header-interior-line-height;
 			padding-bottom: 3px;
 			width: 160px;
+
 			a {
 				line-height: $header-interior-line-height;
 			}
+
 		    @include break(mobile) {
 				background-size: 165px;
 			    margin-left: 32px;
@@ -1168,7 +1170,12 @@
 	    width: 185px;
 	    margin-left: 5px;
 
-	    @include transitions (0.1s);
+		&:hover{
+			background-color: #0c468d;
+			padding: 0 18px 3px 0px;
+			margin-left: -13px;
+			border-left: 18px solid #0c468d;
+		}
 
 	    @include break(mobile){
 		    margin-left: 32px;
