@@ -2214,22 +2214,22 @@ ul.category-chicklets {
 			&.black { color: #000; }
 		}
 
-		&.blue, &.reviews, &.techspot																						{ background-color: #105AB2; &:hover { background-color: lighten(#105AB2,8%); } }
+		&.blue, &.reviews, &.techspot																						{ background-color: $blue; &:hover { background-color: lighten($blue,8%); } }
 		&.blue2, &.apple, &.storage, &.laptops																				{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
 		&.blue3, &.microsoft, &.windows, &.tips-tricks																		{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
 		&.navy, &.products, &.downloads																						{ background-color: #00366F; &:hover { background-color: lighten(#00366F,8%); } }
 		&.navy2, &.industry																									{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,8%); } }
 
-		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: #00B22D; &:hover { background-color: lighten(#00B22D,4%); } }	
-		&.green2, &.science																									{ background-color: #576C2F; &:hover { background-color: lighten(#576C2F,8%); } }
+		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: $green; &:hover { background-color: lighten($green,4%); } }	
+		&.green2, &.science																									{ background-color: $dark-green; &:hover { background-color: lighten($dark-green,8%); } }
 		&.green3, &.features, &.google																						{ background-color: #237A3C; &:hover { background-color: lighten(#237A3C,6%); } }
 		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887; &:hover { background-color: lighten(#24a887,6%); } }
 
-		&.purple, &.software, &.culture																						{ background-color: #69378c; &:hover { background-color: lighten(#69378c,6%); } }
+		&.purple, &.software, &.culture																						{ background-color: $purple; &:hover { background-color: lighten($purple,6%); } }
 		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac; &:hover { background-color: lighten(#5353ac,5%); } }
 
-		&.orange, &.guides, &.web, &.home, &.blog, &.pc																		{ background-color: #e67200; &:hover { background-color: #FF7F00; } }
-		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: #CC0000; &:hover { background-color: lighten(#CC0000,5%); } }
+		&.orange, &.guides, &.web, &.home, &.blog, &.pc																		{ background-color: #e67200; &:hover { background-color: $orange; } }
+		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: $red; &:hover { background-color: lighten($red,5%); } }
 		&.red2, &.buying-guides, &.bestof																					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
 		&.red3, &.security																									{ background-color: #ac5353; &:hover { background-color: lighten(#ac5353,5%); } }
 

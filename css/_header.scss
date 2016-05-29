@@ -53,7 +53,7 @@
 		background: $dark-blue;
 		position: relative;
 		z-index: 2;
-		@include break(v-mobile){
+		@include break(mobile){
 			border-bottom: 5px solid #105ab2;
 			box-shadow: 0 4px 0px rgba(34,25,25,0.1);
 		}
@@ -1186,7 +1186,14 @@
 		    width: 160px;
 		    height: 52px;
 		    background-size: 170px;
+
+			&:hover{
+				padding: 0 4px 0px 0px;
+			    margin-left: 26px;
+			    border-left: 6px solid #0c468d;
+			}
 	    }
+
 	    @include break(v-mobile){
 		    width: 160px;
 		    height: 52px;
@@ -1203,7 +1210,7 @@
 	width: 250px;
 	height: 100%;
 	overflow: hidden;
-	background: #2F373D;
+	background: #263340;
 	position: fixed;
 	z-index: 10;
     top: 0;
@@ -1226,8 +1233,8 @@
 		    height: 52px;
 		    line-height: 45px;
 		    width: 160px;
-		    margin-left: 14px;
-		    margin-bottom: 6px;
+		    margin-left: 10px;
+		    margin-bottom: 0px;
 			a {
 				display: block;
 				width: 189px; height: 40px;
@@ -1237,20 +1244,78 @@
 		.wrapper {
 			width: 100%;
 		}
-    		.wrapper ul li{
-			line-height: 50px;
+		.wrapper ul li{
+			line-height: 40px;
 			width: 100%;
-			border-top: 1px solid #555;
+			border-top: 1px solid #394d60;
+
 			a {
 				color: white;
 				text-transform: uppercase;
-				font-size: 0.95em;
+				font-size: 0.85em;
 				font-family: Roboto Condensed;
 				width: 100%;
 				display: block;
 				padding-left: 15px;
+
+				/*
+				&.blue {
+					border-left: 4px solid $blue;
+				}
+				&.orange {
+					border-left: 4px solid $orange;
+				}
+				&.red {
+					border-left: 4px solid $red;
+				}
+				&.green {
+					border-left: 4px solid $green;
+				}
+				&.purple {
+					border-left: 4px solid $purple;
+				}
+				*/
 			}
 		}
+		.social {
+			width: 100%;
+			float: none;
+			margin: 13px 0 0 13px;
+			
+			ul {
+				li {
+				    display: inline-block;
+				    width: 30px;
+				    height: 30px;
+				    text-indent: -9999px;
+				    margin: 3px 12px 0px 0px;
+				    background-size: 22px;
+				    background-repeat: no-repeat;
+				    background-position: center center;
+				    opacity: 0.85;
+
+					&.facebook {
+						background-image: url('/images/social/06-facebook.svg');
+						background-color: #39559F;
+					}
+					&.twitter {
+						background-image: url('/images/social/03-twitter.svg');
+						background-color: #1DA0D7;
+					}
+					&.rss {
+						background-image: url('/images/social/20-rss.svg');
+						background-color: #FF7F00;
+					}
+					a {
+						display: block;
+						line-height: 40px;
+						border-bottom: none;
+					}
+				}
+			}
+			
+		}
+
 	}
 }
 .activebar #MobileMenu a {

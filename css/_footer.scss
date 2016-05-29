@@ -163,12 +163,10 @@ footer {
 						background-image: url('/images/social/03-twitter.svg');
 						background-color: #1DA0D7;
 					}
-					
 					&.google-plus {
 						background-image: url('/images/social/40-google-plus.svg');
 						background-color: #E63D28;
 					}
-					
 					&.youtube {
 						background-image: url('/images/social/18-youtube.svg');
 						background-color: #E63D28;
@@ -177,16 +175,18 @@ footer {
 							background-size: 80%;
 						}
 					}
-					
-					&.instagram {
-						background-image: url('/images/social/38-instagram.svg');
-						background-color: #C0B09F;
-					}
 					&.rss {
 						background-image: url('/images/social/20-rss.svg');
 						background-color: #FF7F00;
 					}
-					/*&.steam {
+
+					/*
+
+					&.instagram {
+						background-image: url('/images/social/38-instagram.svg');
+						background-color: #C0B09F;
+					}
+					&.steam {
 						background-image: url('/images/social/steam.svg');
 						background-color: #444444;
 					}
