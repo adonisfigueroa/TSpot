@@ -34,7 +34,7 @@ $tile-width-sec: 380px;
 			top: 0;
 			left: 0;
 			position: absolute;
-			background-size: cover !important;
+			background-size: cover;
 			background-position: center center;
 			
 			&.tall {
@@ -1238,7 +1238,7 @@ $tile-width-sec: 380px;
 			top: 0;
 			left: 0;
 			position: absolute;
-			background-size: cover !important;
+			background-size: cover;
 			background-position: center center !important;
 
 			a {
@@ -1587,7 +1587,7 @@ $tile-width-sec: 380px;
 			top: 0;
 			left: 0;
 			position: absolute;
-			background-size: cover !important;
+			background-size: cover;
 			background-position: center center !important;
 			
 			&.tall {

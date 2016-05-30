@@ -423,7 +423,7 @@ body.products {
 			}
 
 			@include break(mobile) {
-				font-size: 1.5em !important;
+				font-size: 1.4em !important;
 			}
 	    }
 
@@ -439,7 +439,7 @@ body.products {
 			padding: 6px 0 12px;
 
 			@include break(mobile) {
-				font-size: 1.1em !important;
+				font-size: 1.15em !important;
 			}
 	    }
 
@@ -2074,10 +2074,10 @@ span._bar {
 				font-size: 2.5em !important;
 			}
 			@include break(mobile){
-				font-size: 1.6em !important;
+				font-size: 1.5em !important;
 			}
 			@include break(v-mobile){
-				font-size: 1.4em !important;
+				font-size: 1.3em !important;
 			}
 		}
 		
@@ -2233,7 +2233,7 @@ ul.category-chicklets {
 		&.red2, &.buying-guides, &.bestof																					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
 		&.red3, &.security																									{ background-color: #ac5353; &:hover { background-color: lighten(#ac5353,5%); } }
 
-		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #cc9900; &:hover { background-color: lighten(#cc9900,8%); } }
+		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #cc9900; &:hover { background-color: lighten(#cc9900,4%); } }
 		&.grey, &.natw																										{ background-color: #888888; &:hover { background-color: lighten(#888888,8%); } }
 		&.deals 																											{ background-color: #779954; &:hover { background-color: lighten(#779954,8%); } }
 		&.wof	 																											{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }

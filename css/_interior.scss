@@ -2617,8 +2617,8 @@ body.interior {
 					max-height: 120px;
 				}
 				@include break(v-mobile){
-					min-height: 180px;
-					max-height: 180px;
+					min-height: 200px;
+					max-height: 200px;
 				}
 
 				.wrapper {
@@ -2630,8 +2630,8 @@ body.interior {
 						max-height: 120px;
 					}
 					@include break(v-mobile){
-						min-height: 180px;
-						max-height: 180px;
+						min-height: 200px;
+						max-height: 200px;
 					}
 				}
 
@@ -2643,6 +2643,16 @@ body.interior {
 
 					h1.large {
 						font-size: 2.4em;
+
+						&.medium {
+							font-size: 2.2em;
+						}
+
+						&.small {
+							font-size: 2em;
+						}
+
+						/*
 						@include break(tablet){
 							font-size: 2.1em;
 						}
@@ -2650,8 +2660,9 @@ body.interior {
 							font-size: 1.3em;
 						}
 						@include break(v-mobile){
-							font-size: 1.15em;
+							font-size: 1.2em;
 						}
+						*/
 					}
 					em {
 						@include break(mobile){
@@ -2672,8 +2683,8 @@ body.interior {
 					max-height: 120px;
 				}
 				@include break(v-mobile){
-					min-height: 180px;
-					max-height: 180px;
+					min-height: 200px;
+					max-height: 200px;
 				}
 			}
 
@@ -2808,21 +2819,13 @@ body.interior {
 			}
 			.articleBody {
 				width: 100%;
-				//float: left;
 				
-				@include break(big-desk){
-					width: 100%
-				}
 				@include break(v-tablet){
 					width: 90%
 				}
 				@include break(mobile){
 					width: 100%
 				}
-				img {
-					/* padding: 0 0 25px; */
-				}
-				.slide-image{padding: 0 0 25px;}
 
 				blockquote {
 					background: white;
@@ -2839,6 +2842,13 @@ body.interior {
 					margin: 20px 10px 40px;
 				}
 
+				.slide-image { padding: 0 0 25px; }				
+
+				/*
+				img {
+					padding: 0 0 25px;
+				}
+				*/
 
 				/*
 				.side-object {

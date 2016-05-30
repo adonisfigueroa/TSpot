@@ -160,7 +160,7 @@
 							
 							.pad {
 								display: block;
-								padding: 10px 13px;
+								padding: 10px 20px;
 
 								&.header {
 									padding-right: 68px;
@@ -329,7 +329,8 @@
 							}
 							
 							small {
-								font-size: .55em;
+								font-size: .6em;
+								letter-spacing: -.2px;
 							}
 							
 							a {

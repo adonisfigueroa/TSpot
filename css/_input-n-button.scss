@@ -23,10 +23,14 @@ input[type=submit] {
 	color: white;
 	text-align: center;
 	border: none;
+    font-weight: 500;
+    letter-spacing: -0.333px;
+    font-size: .6em;
+    text-transform: uppercase;
 	@include border-radius(2px);
 
 	&:hover {
-		background: lighten($blue,6%);
+		background: lighten($blue,8%);
 	}
 	&:active {
 		position: relative;
