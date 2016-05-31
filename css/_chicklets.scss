@@ -1,0 +1,58 @@
+ul.category-chicklets {
+	
+	@include break(mobile){
+		margin: 20px 0 10px;
+	}
+	@include break(v-mobile){
+		margin: 20px 0 10px;
+	}
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			padding: 0 7px;
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: .55em;
+			font-weight: 500;
+			letter-spacing: 0.50px;
+			line-height: 21px;
+
+			&.black { color: #000; }
+		}
+
+		&.blue, &.reviews, &.techspot																						{ background-color: $blue; &:hover { background-color: lighten($blue,8%); } }
+		&.blue2, &.apple, &.storage, &.laptops																				{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
+		&.blue3, &.microsoft, &.windows, &.tips-tricks																		{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
+		&.navy, &.products, &.downloads																						{ background-color: #00366F; &:hover { background-color: lighten(#00366F,8%); } }
+		&.navy2, &.industry																									{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,8%); } }
+
+		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: $green; &:hover { background-color: lighten($green,4%); } }	
+		&.green2, &.science																									{ background-color: $dark-green; &:hover { background-color: lighten($dark-green,8%); } }
+		&.green3, &.features, &.google																						{ background-color: #237A3C; &:hover { background-color: lighten(#237A3C,6%); } }
+		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887; &:hover { background-color: lighten(#24a887,6%); } }
+
+		&.purple, &.software, &.culture																						{ background-color: $purple; &:hover { background-color: lighten($purple,6%); } }
+		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac; &:hover { background-color: lighten(#5353ac,5%); } }
+
+		&.orange, &.guides, &.web, &.home, &.blog, &.pc																		{ background-color: #e67200; &:hover { background-color: $orange; } }
+		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: $red; &:hover { background-color: lighten($red,5%); } }
+		&.red2, &.buying-guides, &.bestof																					{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
+		&.red3, &.security																									{ background-color: #ac5353; &:hover { background-color: lighten(#ac5353,5%); } }
+
+		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #cc9900; &:hover { background-color: lighten(#cc9900,4%); } }
+		&.grey, &.natw																										{ background-color: #888888; &:hover { background-color: lighten(#888888,8%); } }
+		&.deals 																											{ background-color: #779954; &:hover { background-color: lighten(#779954,8%); } }
+		&.wof	 																											{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
+
+		&.yellow, &.wearables																								{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,6%); } } 
+
+		// Texto negro
+		&.yellow, &.wearables {
+			a {
+				color: #1e2933;
+			}
+		}
+	}
+}
