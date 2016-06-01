@@ -28,9 +28,6 @@ body {
 	overflow: visible;
 }
 
-.activebar #MobileMenu a svg {
-	fill: $orange !important;
-}
 .scroll {
 	-webkit-transform: translateZ(0); 
 	transform: translateZ(0);
@@ -1940,6 +1937,18 @@ h3.longtype {
 			margin: 15px 10px 0 0;
 			font-size: 15px;
 			line-height: 22px;
+		}
+
+		.social-login {
+			margin: 12px 0 0;
+
+			a {
+				img {
+					&:hover {
+						opacity: 0.9;
+					}
+				}
+			}
 		}
 
 		.textarea {

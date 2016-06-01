@@ -1074,6 +1074,15 @@ body.interior {
 				width: 100%;
 				height: auto;
 
+				&.modgrey {
+					padding-top: 40px;
+    				margin-top: -26px;
+				}
+
+				&.modwhite {
+    				border: 4px solid #eee;
+				}
+
 				@include break(mobile){
 					border: none;
 					margin-bottom: 25px;
