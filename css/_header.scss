@@ -1,6 +1,4 @@
 #header-ts {
-	$header-height: 84px;
-	$header-top-line-height: 43px;
 	position: fixed;
 	width: 100%;
 	z-index: 1100001;
@@ -571,11 +569,6 @@
 	}
 	
 	&.interior{
-		$header-interior-height: 76px;
-		$header-mobile-height: 57px;
-		$header-interior-line-height: 32px;
-		$header-interior-line-height-mobile: 43px;
-
 		line-height: $header-interior-height;
 		height: $header-interior-height;
 
@@ -626,32 +619,6 @@
 						}
 					}
 				}
-			}
-		}
-		#MobileMenu a {
-			padding-left:15px;
-			padding-right: 15px;
-			margin-left: -15px;
-			position: relative;
-			float: left;
-			cursor: pointer;
-		    svg {
-		    	@include opacity(0);
-		    	display: none;
-				text-decoration: none;
-				fill: white;
-				float: left;
-				height: $header-interior-line-height;
-				line-height:$header-interior-line-height; 
-				margin-top:3px;
-				width: 13px;
-				height: 30px;
-				@include transitions (0.1s);
-				@include break(mobile){
-					display: block;
-					@include opacity(1);
-					height: 49px;
-				}	
 			}
 		}
 		h1#logo {
@@ -1138,40 +1105,7 @@
 					
 				}
 			}
-		}
-		
-		
-	}
-	#MobileMenu a {
-		padding-left:15px;
-		padding-right: 15px;
-		margin-left: -15px;
-		position: relative;
-		float: left;
-		cursor: pointer;
-	    svg {
-	    	@include opacity(0);
-	    	display: none;
-			text-decoration: none;
-			fill: white;
-			float: left;
-			height: $header-top-line-height;
-			line-height:$header-top-line-height; 
-			margin-top:2px;
-			width: 13px;
-			@include transitions (0.1s);
-			@include break(mobile){
-				height: 47px !important;
-				display: block;
-				@include opacity(1);
-			}
-			@include break(mobile){
-				height: 47px !important;
-			}
-			/*&:hover {
-				fill: $orange;
-			}*/
-		}
+		}	
 	}
 	h1#logo {
 		text-indent: -9999px;
@@ -1328,9 +1262,6 @@
 		}
 
 	}
-}
-.activebar #MobileMenu a {
-	position: absolute !important;
 }
 .CoverEntirePage {
 	height: 10000px !important;

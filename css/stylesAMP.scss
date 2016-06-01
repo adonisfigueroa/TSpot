@@ -8,15 +8,13 @@
 
 $isAMP: 'true';
 @import
-
+"_mobileMenu.scss",
 "_chicklets.scss",
 "_footer.scss";
 
 
 /**** HEADER ****/
 #header-ts {
-	$header-height: 52px;
-	$header-top-line-height: 43px;
 	position: fixed;
 	width: 100%;
 	z-index: 1100001;
@@ -40,11 +38,6 @@ $isAMP: 'true';
 	}
 
 	&.interior{
-		$header-interior-height: 76px;
-		$header-mobile-height: 57px;
-		$header-interior-line-height: 32px;
-		$header-interior-line-height-mobile: 43px;
-
 		line-height: $header-interior-height;
 		height: $header-interior-height;
 
@@ -58,31 +51,6 @@ $isAMP: 'true';
 			    //@include break(mobile){
 				    line-height: $header-interior-line-height-mobile;
 			    //}
-			}
-		}
-		#MobileMenu a {
-			padding-left:15px;
-			padding-right: 15px;
-			margin-left: -15px;
-			position: relative;
-			float: left;
-			cursor: pointer;
-		    svg {
-		    	@include opacity(0);
-		    	display: block;
-				text-decoration: none;
-				fill: white;
-				float: left;
-				height: $header-interior-line-height;
-				line-height:$header-interior-line-height; 
-				margin-top:3px;
-				width: 13px;
-				height: 30px;
-				@include transitions (0.1s);
-				@include opacity(1);
-				@include break(mobile){
-					height: 49px;
-				}	
 			}
 		}
 		h1#logo {
@@ -108,30 +76,6 @@ $isAMP: 'true';
 		    @include break(v-mobile) {
 			    height: 49px;
 		    }
-		}
-	}
-	#MobileMenu a {
-		padding-left:15px;
-		padding-right: 15px;
-		margin-left: -15px;
-		position: relative;
-		float: left;
-		cursor: pointer;
-	    svg {
-	    	@include opacity(0);
-	    	display: block;
-			text-decoration: none;
-			fill: white;
-			float: left;
-			height: $header-top-line-height;
-			line-height:$header-top-line-height; 
-			margin-top:2px;
-			width: 13px;
-			@include transitions (0.1s);
-			@include opacity(1);
-			@include break(mobile){
-				height: 47px;
-			}
 		}
 	}
 	h1#logo {
