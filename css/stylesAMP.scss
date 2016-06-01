@@ -15,8 +15,6 @@ $isAMP: 'true';
 
 /**** HEADER ****/
 #header-ts {
-	$header-height: 52px;
-	$header-top-line-height: 43px;
 	position: fixed;
 	width: 100%;
 	z-index: 1100001;
@@ -40,11 +38,6 @@ $isAMP: 'true';
 	}
 
 	&.interior{
-		$header-interior-height: 76px;
-		$header-mobile-height: 57px;
-		$header-interior-line-height: 32px;
-		$header-interior-line-height-mobile: 43px;
-
 		line-height: $header-interior-height;
 		height: $header-interior-height;
 
