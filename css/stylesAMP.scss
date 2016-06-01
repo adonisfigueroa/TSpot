@@ -8,7 +8,7 @@
 
 $isAMP: 'true';
 @import
-
+"_mobileMenu.scss",
 "_chicklets.scss",
 "_footer.scss";
 
@@ -60,31 +60,6 @@ $isAMP: 'true';
 			    //}
 			}
 		}
-		#MobileMenu a {
-			padding-left:15px;
-			padding-right: 15px;
-			margin-left: -15px;
-			position: relative;
-			float: left;
-			cursor: pointer;
-		    svg {
-		    	@include opacity(0);
-		    	display: block;
-				text-decoration: none;
-				fill: white;
-				float: left;
-				height: $header-interior-line-height;
-				line-height:$header-interior-line-height; 
-				margin-top:3px;
-				width: 13px;
-				height: 30px;
-				@include transitions (0.1s);
-				@include opacity(1);
-				@include break(mobile){
-					height: 49px;
-				}	
-			}
-		}
 		h1#logo {
 			background-size: 175px;
 			line-height: $header-interior-line-height;
@@ -108,30 +83,6 @@ $isAMP: 'true';
 		    @include break(v-mobile) {
 			    height: 49px;
 		    }
-		}
-	}
-	#MobileMenu a {
-		padding-left:15px;
-		padding-right: 15px;
-		margin-left: -15px;
-		position: relative;
-		float: left;
-		cursor: pointer;
-	    svg {
-	    	@include opacity(0);
-	    	display: block;
-			text-decoration: none;
-			fill: white;
-			float: left;
-			height: $header-top-line-height;
-			line-height:$header-top-line-height; 
-			margin-top:2px;
-			width: 13px;
-			@include transitions (0.1s);
-			@include opacity(1);
-			@include break(mobile){
-				height: 47px;
-			}
 		}
 	}
 	h1#logo {

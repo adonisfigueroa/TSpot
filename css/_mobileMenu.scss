@@ -1,0 +1,89 @@
+@if $isAMP != 'true' {
+	.activebar #MobileMenu a {
+		position: absolute !important;
+	}
+	.activebar #MobileMenu a svg {
+		fill: $orange !important;
+	}
+}
+#header-ts {
+	#MobileMenu a {
+		padding-left:15px;
+		padding-right: 15px;
+		margin-left: -15px;
+		position: relative;
+		float: left;
+		cursor: pointer;
+	    svg {
+			text-decoration: none;
+			fill: white;
+			float: left;
+			line-height:$header-top-line-height; 
+			margin-top:2px;
+			width: 13px;
+			@include transitions (0.1s);
+
+			@if $isAMP == 'true' {
+				display: block;
+				height: 47px;
+				@include opacity(1);
+			} @else {
+				@include opacity(0);
+				display: none;
+				height: $header-top-line-height;
+				@include break(mobile){
+					height: 47px !important;
+					display: block;
+					@include opacity(1);
+				}
+			}
+
+			@include break(mobile){
+				//height: 47px !important;
+				height: 47px;
+			}
+			/*&:hover {
+				fill: $orange;
+			}*/
+		}
+	}
+
+	&.interior{
+		#MobileMenu a {
+			padding-left:15px;
+			padding-right: 15px;
+			margin-left: -15px;
+			position: relative;
+			float: left;
+			cursor: pointer;
+		    svg {
+				text-decoration: none;
+				fill: white;
+				float: left;
+				
+				line-height:$header-interior-line-height; 
+				margin-top:3px;
+				width: 13px;
+				height: 30px;
+				@include transitions (0.1s);
+
+				@if $isAMP == 'true' {
+					display: block;
+					@include opacity(1);
+				} @else {
+					@include opacity(0);
+					display: none;
+					height: $header-interior-line-height;
+					@include break(mobile){
+						@include opacity(1);
+						display: block;
+					}	
+				}
+
+				@include break(mobile){
+					height: 49px;
+				}
+			}
+		}
+	}
+}
