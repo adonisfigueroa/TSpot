@@ -4303,6 +4303,30 @@ table {
 	min-height: 90px;
 }
 
+.contentAd, {
+    text-align: center;
+    margin: 30px 0;
+    min-height: 250px;
+    max-height: 300px;
+
+	.ad-left, .ad-right {
+	    width: 48%;
+	    margin: 0;
+	}
+	.ad-left {
+	    float: left;
+	    padding-right: 0.5%;
+	}
+	.ad-right {
+	    float: right;
+	    padding-left: 0.5%;
+	}
+	&:before, &:after {
+	    content: "";
+	    display: table;
+	}
+}
+
 .adContainerSide {
 	width: 300px;
 	min-height: 250px;
@@ -4314,7 +4338,7 @@ table {
 .adContainerNews {
 	margin-left: 813px;
 	position: absolute;
-    padding: 67px 20px 40px 20px;
+    padding: 52px 20px 40px 20px;
     background-color: #f5f5f5;
 }
 
