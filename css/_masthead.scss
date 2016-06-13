@@ -12,12 +12,6 @@ $tile-width-sec: 380px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
-
-	@include break(mobile) {
-		height: 270px !important;
-		-webkit-transition: left 0.3s ease-in-out 0s;
-		transition: left 0.3s ease-in-out 0s;
-	}
 	
 	.FGheadCom {
 		display: none;
@@ -122,6 +116,7 @@ $tile-width-sec: 380px;
 			}
 			
 		}
+
 	}
 
 	ul.variation-5 {
@@ -502,7 +497,7 @@ $tile-width-sec: 380px;
 				top: 0;
 				left: 0;
 				position: absolute;
-				background-size: cover;
+				background-size: cover !important;
 				background-position: center center;
 				background: white;
 				
@@ -897,6 +892,8 @@ $tile-width-sec: 380px;
 	}//Tablet
 	
 	@include break(mobile){
+		height: 270px !important;
+
 		.wrapper {
 			position: relative;
 			width: 100%;
@@ -912,7 +909,7 @@ $tile-width-sec: 380px;
 				top: 0;
 				left: 0;
 				position: absolute;
-				background-size: cover;
+				background-size: cover !important;
 				background-position: center center;
 				
 				&.tall {

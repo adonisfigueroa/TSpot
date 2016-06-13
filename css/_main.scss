@@ -443,6 +443,10 @@ body.products {
 		border-bottom: 1px solid #DDD;
 		z-index: 1;
 
+		&.two {
+			padding-bottom: 5px;
+		}
+
 		center {
 			width: 90%;
 			margin: 0 auto;
@@ -1483,7 +1487,7 @@ h3.longtype {
 
 				h3 {
 					font-size: 1.4em;
-					bottom: 35px;
+					top: 35px;
 				}
 			}
 
@@ -1583,10 +1587,12 @@ h3.longtype {
 		height: 140px;
 		padding-bottom: 0;
         margin-bottom: 10px;
-		background: linear-gradient(200deg, rgba(19,25,31,0) 15%, rgba(19,25,31,0.77) 90%);
+		//background: linear-gradient(200deg, rgba(19,25,31,0) 15%, rgba(19,25,31,0.77) 90%);
+		background: linear-gradient(305deg, rgba(19,25,31,0) 10%, rgba(13,72,142,0.6) 45%);
 
 		&:hover {
-			background: linear-gradient(200deg, rgba(255,127,0,0.35) 25%, rgba(31,41,51,0.67) 70%);
+			//background: linear-gradient(200deg, rgba(255,127,0,0.35) 25%, rgba(31,41,51,0.67) 70%);
+			background: linear-gradient(345deg, rgba(255,127,0,0.45) 15%, rgba(13,72,142,0.7) 45%);
 		}
 
         img {
@@ -1630,8 +1636,8 @@ h3.longtype {
       h3 {
         font-size: 1.25em;
 	    font-weight: 500;
-		letter-spacing: -0.333px;
-	    line-height: 1.3em;
+		letter-spacing: -0.25px;
+		line-height: 1.4em;
 	    text-shadow: 1px 1px 4px #444;
 	    color: white !important;
 	    padding: 0px 20px;
