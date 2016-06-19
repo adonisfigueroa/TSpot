@@ -133,11 +133,10 @@ img.responsive {
 }
 
 .menuSpacerHome {
-	height: 82px; display:block;
+	height: 82px;
+	display:block;
+	
 	@include break(mobile){
-		height: 5px;
-	}
-	@include break(v-mobile){
 		height: 55px;
 	}
 }
@@ -145,9 +144,6 @@ img.responsive {
 .menuSpacerFeat {
 	height: 76px;
 	@include break(mobile){
-		height: 55px;
-	}
-	@include break(v-mobile){
 		height: 55px;
 	}
 }
@@ -213,9 +209,15 @@ h1 {
 	}
 	
 	p {
-		padding: 0 0 25px;
+		color: #222;
+		font-family: $f-paragraph;
 		line-height: 1.5;
-		color: #282828;
+		padding: 0 0 25px;
+
+		em {
+			font-family: $f-helvetica;
+			letter-spacing: -.333px;
+		}
 
 		&.small, &.byline {
 			font-size: 0.8em;
@@ -437,6 +439,22 @@ body.products {
 
 .post-list {
 
+	.ad_to_list {
+	    padding-bottom: 26px;
+	    margin-bottom: 23px;
+		border-bottom: 1px solid #DDD;
+		z-index: 1;
+
+		&.two {
+			padding-bottom: 5px;
+		}
+
+		center {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
 	article {
 	    padding-bottom: 26px;
 	    margin-bottom: 23px;
@@ -450,11 +468,11 @@ body.products {
 
 			/*			
 			// Homepage movil con imagenes grandes
-						@include break (v-mobile){
-							width: 100%;
-							margin-bottom: 15px;
-							margin-top: 0px;
-						}
+				@include break (v-mobile){
+					width: 100%;
+					margin-bottom: 15px;
+					margin-top: 0px;
+				}
 			*/
 
 			img {
@@ -464,9 +482,9 @@ body.products {
 
 				/*				
 				// Homepage movil con imagenes grandes
-								@include break(v-mobile){
-									width: 100%;
-								}
+						@include break(v-mobile){
+							width: 100%;
+						}
 				*/
 			}
 		}
@@ -481,9 +499,9 @@ body.products {
 
 			/*				
 			// Homepage movil con imagenes grandes
-						@include break(v-mobile) {
-							width: 100%;
-						}
+					@include break(v-mobile) {
+						width: 100%;
+					}
 			*/
 
 			h2 {
@@ -537,7 +555,7 @@ body.products {
 				font-size: .75em;
 		        font-weight: 400;
 		        line-height: 1.5;
-		        letter-spacing: -0.333px;
+		        font-family: $f-paragraph;
 		        padding: 7px 0 3px !important;
 		        color: #333;
 		        @include break(mobile){
@@ -1061,13 +1079,16 @@ body.products {
 		}
 		span {
 			line-height: 1.5;
-			color: #333333;
+			color: #555;
 			font-weight: 400;
 			font-size: .8em;
 		    letter-spacing: -.333px;
 		
 			a {
 				color: inherit;
+
+				&:hover { color: $red; }
+
 				&.similar,
 				&.replies {
 					color: #7393C8;
@@ -1471,7 +1492,7 @@ h3.longtype {
 
 				h3 {
 					font-size: 1.4em;
-					bottom: 35px;
+					top: 35px;
 				}
 			}
 
@@ -1571,10 +1592,12 @@ h3.longtype {
 		height: 140px;
 		padding-bottom: 0;
         margin-bottom: 10px;
-		background: linear-gradient(200deg, rgba(19,25,31,0) 15%, rgba(19,25,31,0.77) 90%);
+		//background: linear-gradient(200deg, rgba(19,25,31,0) 15%, rgba(19,25,31,0.77) 90%);
+		background: linear-gradient(305deg, rgba(19,25,31,0) 10%, rgba(13,72,142,0.6) 45%);
 
 		&:hover {
-			background: linear-gradient(200deg, rgba(255,127,0,0.35) 25%, rgba(31,41,51,0.67) 70%);
+			//background: linear-gradient(200deg, rgba(255,127,0,0.35) 25%, rgba(31,41,51,0.67) 70%);
+			background: linear-gradient(345deg, rgba(255,127,0,0.45) 15%, rgba(13,72,142,0.7) 45%);
 		}
 
         img {
@@ -1618,8 +1641,8 @@ h3.longtype {
       h3 {
         font-size: 1.25em;
 	    font-weight: 500;
-		letter-spacing: -0.333px;
-	    line-height: 1.3em;
+		letter-spacing: -0.25px;
+		line-height: 1.4em;
 	    text-shadow: 1px 1px 4px #444;
 	    color: white !important;
 	    padding: 0px 20px;
@@ -1755,9 +1778,10 @@ h3.longtype {
 
 	.commentText {
 		display: block;
-		margin-top: 5px;
+		font-family: $f-paragraph;
 		font-size: 15px;
 		line-height: 1.5;
+		margin-top: 5px;
 		padding-right: 100px;
 
 		@include break(mobile){
@@ -1892,7 +1916,7 @@ h3.longtype {
 	}
 
 	#add-new-comment {
-	background-color: #F5F5F5;
+		background-color: #F5F5F5;
 
 		h3 {
 		  line-height: 200%;
@@ -2279,7 +2303,7 @@ span._bar {
 			text-align: center;
 			font-size: 0.7em;
 			line-height: 25px;
-			font-weight: 600;
+			font-weight: 500;
 
 			@include break(mobile) {
 				display: inline-block;
@@ -2527,6 +2551,7 @@ span._bar {
 			line-height: 200%;
 			li {
 				list-style-type: decimal-leading-zero;
+				font-family: $f-paragraph;
 				font-weight: 400;
 				font-size: 1.1em;
 				line-height: 1.6;
@@ -2579,7 +2604,8 @@ span._bar {
 		float: left;
 		ul {
 			li {
-			  font-weight: 500;
+				font-family: $f-primary;
+				font-weight: 500;
 				font-size: 0.9em;
 				margin-right: 30px;
 				text-shadow: 0 1px 0 #fff;
@@ -2912,7 +2938,7 @@ span._bar {
 		h3 {
 			padding-left: 20px;
 			margin-bottom: 5px;
-			font-family: "Roboto Condensed", sans-serif;
+			font-family: $f-condensed;
 			font-weight: 400;
 			
 			a {
@@ -2924,16 +2950,17 @@ span._bar {
 			padding-left: 0 !important;
 		}
 		p {
+			font-family: $f-primary;
+			font-size: 0.85em;
 			border-left: 5px solid #ddd;
 			padding: 0px 0px 0px 15px;
 			margin: 0;
-			font-size: 0.85em;
 			color: #333;
 
 			&.reviewed_by {
 				border-left: none;
 				font-size: .75em;
-				font-family: Roboto Condensed;
+				font-family: $f-condensed;
 				padding-left: 20px;
 				margin: 5px 0;
 
@@ -4281,7 +4308,11 @@ table {
 		background-color: #BBB;
 	}
 	&.dark {
-		background-color: #1e2933;
+		//background-color: #1e2933;
+		background-color: rgb(30,41,51);
+	}
+	&.dark2 {
+		background-color: rgba(30,41,51,0.6);
 	}
 	&.trans {
 		background-color: transparent;
@@ -4290,7 +4321,6 @@ table {
 		padding: 20px 0 15px !important;
 		text-align: center;
 	}
-
 	@include break(mobile){
 		display: none;
 	}
@@ -4301,6 +4331,30 @@ table {
 	margin: auto; 
 	text-align: center;
 	min-height: 90px;
+}
+
+.contentAd, {
+    text-align: center;
+    margin: 30px 0;
+    min-height: 250px;
+    max-height: 300px;
+
+	.ad-left, .ad-right {
+	    width: 48%;
+	    margin: 0;
+	}
+	.ad-left {
+	    float: left;
+	    padding-right: 0.5%;
+	}
+	.ad-right {
+	    float: right;
+	    padding-left: 0.5%;
+	}
+	&:before, &:after {
+	    content: "";
+	    display: table;
+	}
 }
 
 .adContainerSide {
@@ -4314,7 +4368,7 @@ table {
 .adContainerNews {
 	margin-left: 813px;
 	position: absolute;
-    padding: 67px 20px 40px 20px;
+    padding: 52px 20px 40px 20px;
     background-color: #f5f5f5;
 }
 
