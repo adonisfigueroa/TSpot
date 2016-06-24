@@ -5,9 +5,9 @@
 "_base-mixins.scss",
 "_mixin.scss";
 
-
 $isAMP: 'true';
 @import
+"_header-featured.scss",
 "_mobileMenu.scss",
 "_chicklets.scss",
 "_footer.scss";
@@ -80,7 +80,7 @@ $isAMP: 'true';
 	}
 	h1#logo {
 		text-indent: -9999px;
-		background-image: url(../images/logo-techspot.svg);
+		background-image: url(/images/logo-techspot.svg);
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $header-top-line-height;
@@ -141,7 +141,7 @@ $isAMP: 'true';
 		padding: 0px 0px;
 		#logo {
 			text-indent: -9999px;
-			background-image: url(../images/logo-techspot.svg);
+			background-image: url(/images/logo-techspot.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
@@ -244,7 +244,7 @@ h1 {
 	
 	&.badge {
 		line-height: 50px;
-		background-image: url(../images/badge.svg);
+		background-image: url(/images/badge.svg);
 		background-repeat: no-repeat;
 		background-position: 25px top;
 		padding-left: 110px;
@@ -256,6 +256,13 @@ h1 {
 	@include clearfix(before);
 	@include clearfix(after);
 }
+.jumpFix {
+    display: block;
+    height: 140px;
+    margin: -140px 0 0;
+    visibility: hidden;
+}
+
 body.interior {
 	.articleBody {
 		font-size: .9em;
@@ -467,7 +474,196 @@ body.interior {
 			}
 		}
 	}
+
+	nav.page-nav {
+		@include col(1,1,0);
+		margin-left: 0px;
+		margin-top: 0px;
+		float:right;
+		padding-bottom: 10px;
+
+		@include break(mobile){
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			font-weight: 400;
+			font-size: 1.8em;
+			span {
+				display: block;
+				color: #333;
+				font-weight: 500;
+				position: relative;
+				text-transform: none;
+				padding-right: 20px;
+				font-size: 0.8em;	
+			}
+			strong {
+				display: block;
+				color: $blue;
+				font-weight: 400;
+			}
+		}
+	}
+
+	&.article {
+		#content {
+			.index-mobile {
+				.article-index {
+					display: block;
+					margin: 30px 0 0;
+					width: 94%;
+
+					@include break(big-desk){
+						width: 100%;
+					}
+
+					@include break(mobile){
+						margin: 20px 0 15px;
+						width: 100%;
+					}
+
+					strong {
+						line-height: 25px;
+						padding-bottom: 5px;
+						background: #ff7f00;
+						font-size: 0.9em;
+						color: white;
+					}
+					section {
+						display: block;
+						width: 100%;
+						position:relative;
+						left: 0;
+						z-index: 0;
+						h3 {
+							display: none;
+						}
+					}
+				}
+			}
+			.page-nav{
+				@include break(mobile){
+					a {
+					font-size: 1.4em;
+					}
+				}
+			}
+		}
+	}
+
+	.comment-count-block {
+		background-image: url(/images/icon-comments-lg.svg);
+		background-repeat: no-repeat;
+		background-position: left 5px;
+		height: 42px;
+		overflow: visible;
+		letter-spacing: -.333px;
+		font-family: $f-primary;
+
+		&.features {
+			font-size: 0.8em;
+			font-weight: 400;
+			line-height: 2;
+			height: 100px;
+
+			@include break(mobile) {
+				height: 42px;
+				margin-bottom: 15px;
+			}
+			
+			.count {
+				font-size: 1.2em;
+				font-weight: 500;
+			}
+
+			a {
+				display: inline;
+				padding-left: 0;
+			}
+
+			ul {
+				li {
+					padding-left: 60px;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			line-height: 140%;
+			padding-left: 60px;
+			box-shadow: none;
+			
+			span {
+				display: block;
+				font-size: 1.1em;
+				
+				&.comment-count {
+					color: $red;
+					&:hover {
+						font-weight: 500;
+					}
+				}
+				&.interactions-count {
+					color: #39579D;
+					font-size: .9em;
+					line-height: 1.75;
+				}
+			}
+		}
+
+		@include break(mobile) {
+			margin-bottom: 30px;
+		}
+		
+	}
 }
+.article nav.page-nav {
+	text-align: right;
+	float: left;
+	width: 94%;
+	margin: 0;
+
+	@include break(big-desk){
+		width: 100%;
+	}
+	@include break(mobile){
+		padding-bottom: 10px;
+	}
+
+	a span {
+		font-size: 0.75em;
+		&:after {
+					content:"";
+					display: block;
+					position: absolute;
+					right: 0; top: 50%;
+					margin-top: -5px;
+					width: 10px; height: 7px;
+					@include triangle(right,black,8,10);
+				}
+	}
+	a:hover {
+		span {
+		&:after {
+					content:"";
+					display: block;
+					position: absolute;
+					right: 0; top: 50%;
+					margin-top: -5px;
+					width: 10px; height: 7px;
+					@include triangle(right,$orange,8,10);
+				}
+			}
+	}
+	a strong {
+		font-size: 0.85em;
+	}
+	
+}
+
 .menuSpacerNormal {
 	height: 44px;
 	@include break(mobile){
@@ -688,5 +884,325 @@ body.interior {
 			}	
 	    }
 	    
+	}
+}
+
+.video-container amp-youtube,
+.video-container amp-vimeo {
+	margin: 20px 0;
+}
+
+.wrapperMobileOnly {
+	width: 94%;
+	padding: 0 3%;
+}
+
+.article-index {
+	width: 60px;
+	border-top: 5px solid $orange;
+	background: white;
+	margin-bottom: 50px;
+	position: relative;
+	
+	strong {
+		display: block;
+		line-height: 35px;
+		text-align: center;
+		font-size: .7em;
+		cursor: pointer;
+	}
+	
+	section {
+		display: none;
+		width: 300px;
+		position: absolute;
+		left: -300px; top: -5px;
+		background: white;
+		border-top: 5px solid $orange;
+		font-size: .7em;
+		z-index: 10;
+		.pad {
+			padding: 10px 20px 20px 20px;
+		}
+		
+		h3 {
+			font-size: 1.5em;
+			line-height: 180%;
+			font-weight: 400;
+		}
+		
+		ol {
+			margin: 10px 10px 0 12%;
+			line-height: 200%;
+			li {
+				list-style-type: decimal-leading-zero;
+				font-family: $f-paragraph;
+				font-weight: 400;
+				font-size: 1.1em;
+				line-height: 1.6;
+				padding-bottom: 5px;
+
+				a {
+					&:hover {	color: $red;	}
+				}
+			}
+		}
+	} 
+	
+	&:hover {
+		strong {
+			color: white;
+			background: $orange;
+			transition: background 0.1s;
+		}
+		section {
+			display: block;
+		}
+	}
+	
+}
+
+
+/* Review box */
+.review_box {
+		margin: 20px 0 40px;
+		font-size: 0.9em;
+		background: #fff;
+		padding: 30px 20px 15px;
+		border-top: 4px solid #eee;
+		border-bottom: 4px solid #eee;
+
+	  .pf_score {
+		font-family: $f-helvetica-roboto;
+		font-size: 45px;
+		height: 65px;
+		line-height: 75px;
+		width: 110px;
+		margin: 0;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		@include border-radius(3px);
+	  }
+
+	  .ts_brand {
+		font-family: Roboto;
+		font-size: 0.80em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #fff;
+		text-align: center;
+		line-height: 1.2;
+		padding-bottom: 10px;
+		@include border-radius(3px);
+	  }
+	  ul {
+		margin: 0 0 10px;
+		padding-left: 25px;
+	  }
+	  .two_column {
+		float: left;
+		width: 50%;
+		margin-bottom: 20px;
+		ul {
+		  margin-right: 10px;
+		}
+	  }
+	  .score_box {
+		float: left;
+		width: 110px;
+		height: 120px;
+		position: relative;
+
+		@include break(mobile){
+			float: none;
+			margin: 0 auto 10px;
+		}
+	  }
+	  .outstanding .frame {
+		/*
+		background: url(http://static.techspot.com/images/outstanding_score.png) no-repeat;
+		height: 86px;
+		width: 83px;
+		position: absolute;
+		left: -4px;
+		top: 1px;
+		*/
+	  }
+	  .content_box {
+		padding-left: 130px;
+		font-size: 1.05em;
+		padding-top: 2px;
+
+		@include break(mobile){
+			padding-left: 0;
+			font-size: .95em;
+			margin-top: 140px;
+		}
+	  }
+	  .label {
+		color: $blue;
+		font-weight: bold;
+	  }
+	  h3 {
+		margin-bottom: 0;
+	  }
+	  .others_said {
+		clear: both;
+		height: 30px;
+		line-height: 30px;
+		font-size: 0.9em;
+		color: #444;
+		text-align: right;
+		a {
+		  color: #444444;
+		  box-shadow: none;
+		}
+		p {
+		  margin: 0;
+		}
+		a:hover {
+		  text-decoration: none;
+		  .pf_score {
+			text-decoration: none;
+		  }
+		}
+		.pf_score_o {
+		  float: right;
+		  margin-top: -5px;
+		  font-family: $f-helvetica-roboto;
+		  font-size: 17px;
+		  font-weight: 500;
+		  text-align: center;
+		  width: 40px;
+		  height: 32px;
+		  line-height: 32px;
+		  color: #fff;
+		  margin: -5px 10px 0 5px;
+		  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		  @include border-radius(2px);
+		}
+	  }
+}
+
+/* PF widgets para noticias y reviews */
+.pf_score {
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background: #075BC0;
+  text-align: center;
+  float: left;
+}
+
+.pf_bad {
+  background-color: #cc0000;
+}
+
+.pf_average {
+  background-color: #6f22a0;
+}
+
+.pf_excellent {
+  background-color: #00be15;
+}
+
+.pf_good {
+  background-color: #075bc0;
+}
+
+.pf_none {
+  background-color: #999999;
+}
+
+
+
+.bestof_product {
+	h2 {
+		margin-top: -50px;
+		color: #105ab2;
+		font-size: 1.7em;
+	}
+	.description {
+		padding-left: 0;
+	  	min-height: 500px;
+
+	  	.key strong{
+	    	font-weight: 500;
+		}
+	}
+	.image {
+	    float: none;
+	    width: 100%;
+	    height: 300px;
+	    margin-right: 0;
+	    overflow: hidden;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	    box-shadow: inset 0 0 50px rgba(0,0,0,0.25);
+	}
+	.numbers {
+		float: none;
+		text-align: center;
+		width: 100%;
+	    margin: 20px 0 30px;
+		font-size: .75em;
+		background-color: white;
+		font-family: Roboto Condensed;
+		border-bottom: none;
+
+		a.withTooltip {
+			color: #333;
+		}
+		.label {
+			text-transform: uppercase;
+			color: #666;
+			background: #ddd;
+			padding: 5px;
+			font-size: 90%;
+		}
+		.price .price_tag {
+			padding: 3px 0 3px;
+		    margin-top: 2px;
+			font-size: 2.7em;
+		    background-color: green;
+		    cursor: pointer;
+		    line-height: 1.6em;
+
+		    a {
+		    	color: white;
+			}
+		}
+		.meta .score {
+		    text-align: center;
+		    margin: 2px auto 0;
+		    background-color: #105ab2;
+
+		    .number{
+			    color: white;
+			    line-height: 1.8em;
+			    font-size: 2.6em;
+			    font-weight: 500;
+			}
+		}
+		.user_score .score {
+		    text-align: center;
+		    margin: 2px auto 5px;
+		    background-color: #f08804;
+
+		    .number{
+			    color: white;
+			    line-height: 1.8em;
+			    font-size: 2.6em;
+			    font-weight: 500;
+			}
+		}
+
+		.price,
+		.meta,
+		.user_score {
+			width: 28%;
+			padding: 5px 5px 0;
+			display: inline-block;
+		}
 	}
 }
