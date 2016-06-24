@@ -695,3 +695,10 @@ body.interior {
 	width: 94%;
 	padding: 0 3%;
 }
+
+amp-social-share[type=whatsapp] {
+  	width: 60;
+  	height: 44;
+  	background-image: url(/images/social_share_ws.svg);
+  	background-color: #25d366;
+}
