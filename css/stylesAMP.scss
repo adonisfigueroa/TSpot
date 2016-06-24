@@ -48,9 +48,9 @@ $isAMP: 'true';
 		.header-top {
 			.wrapper {
 				line-height: $header-interior-line-height;
-			    //@include break(mobile){
-				    line-height: $header-interior-line-height-mobile;
-			    //}
+				//@include break(mobile){
+					line-height: $header-interior-line-height-mobile;
+				//}
 			}
 		}
 		h1#logo {
@@ -68,14 +68,14 @@ $isAMP: 'true';
 				line-height: $header-interior-line-height;
 			}
 
-		    @include break(mobile) {
+			@include break(mobile) {
 				background-size: 165px;
-			    margin-left: 32px;
-			    height: 49px;
-		    }
-		    @include break(v-mobile) {
-			    height: 49px;
-		    }
+				margin-left: 32px;
+				height: 49px;
+			}
+			@include break(v-mobile) {
+				height: 49px;
+			}
 		}
 	}
 	h1#logo {
@@ -84,36 +84,36 @@ $isAMP: 'true';
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $header-top-line-height;
-	    background-size: 200px;
-	    height: 45px;
-	    line-height: 45px;
-	    width: 185px;
-	    margin-left: 30px;
+		background-size: 200px;
+		height: 45px;
+		line-height: 45px;
+		width: 185px;
+		margin-left: 30px;
 
 		&:hover{
 			background-color: #0c468d;
 			padding: 0 14px 0px 0px;
-		    margin-left: 16px;
-    		border-left: 14px solid #0c468d;
+			margin-left: 16px;
+			border-left: 14px solid #0c468d;
 		}
 
-	    @include break(mobile){
-		    margin-left: 32px;
-		    width: 160px;
-		    height: 52px;
-		    background-size: 170px;
+		@include break(mobile){
+			margin-left: 32px;
+			width: 160px;
+			height: 52px;
+			background-size: 170px;
 
 			&:hover{
 				padding: 0 4px 0px 0px;
-			    margin-left: 26px;
-			    border-left: 6px solid #0c468d;
+				margin-left: 26px;
+				border-left: 6px solid #0c468d;
 			}
-	    }
+		}
 
-	    @include break(v-mobile){
-		    width: 160px;
-		    height: 52px;
-	    }
+		@include break(v-mobile){
+			width: 160px;
+			height: 52px;
+		}
 		a {
 			display: block;
 			width: 189px; height: $header-top-line-height;
@@ -129,8 +129,8 @@ $isAMP: 'true';
 	background: #263340;
 	position: fixed;
 	z-index: 10;
-    top: 0;
-    //left: -250px;
+	top: 0;
+	//left: -250px;
 
 	//@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
@@ -145,12 +145,12 @@ $isAMP: 'true';
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
-		    background-size: contain;
-		    height: 52px;
-		    line-height: 45px;
-		    width: 160px;
-		    margin-left: 10px;
-		    margin-bottom: 0px;
+			background-size: contain;
+			height: 52px;
+			line-height: 45px;
+			width: 160px;
+			margin-left: 10px;
+			margin-bottom: 0px;
 			a {
 				display: block;
 				width: 189px; height: 40px;
@@ -257,10 +257,10 @@ h1 {
 	@include clearfix(after);
 }
 .jumpFix {
-    display: block;
-    height: 140px;
-    margin: -140px 0 0;
-    visibility: hidden;
+	display: block;
+	height: 140px;
+	margin: -140px 0 0;
+	visibility: hidden;
 }
 
 body.interior {
@@ -692,9 +692,9 @@ body.interior {
 	z-index: 1;
 	position: relative;
 	left: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
 
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
@@ -799,14 +799,14 @@ body.interior {
 
 		&.side-guest {
 			width: 220px;
-		    margin: 5px 0 10px 15px;
-		    float: right;
-		    background-color: #eee;
-		    padding: 15px;
-		    font-size: 13px;
-		    line-height: 23px;
+			margin: 5px 0 10px 15px;
+			float: right;
+			background-color: #eee;
+			padding: 15px;
+			font-size: 13px;
+			line-height: 23px;
 
-		    @include break(v-mobile) {
+			@include break(v-mobile) {
 				width: 130px;
 			}
 		}
@@ -817,9 +817,9 @@ body.interior {
 
 // Styling title for article & news
 .article, .news { 
- 	.articleBody {
- 		p {
-	 		a {
+	.articleBody {
+		p {
+			a {
 				box-shadow: inset 0 -5px 0 #D0DCEB;
 				color: inherit;
 				padding-bottom: 2px;
@@ -834,9 +834,9 @@ body.interior {
 					position: relative;
 					top: 1px;
 				}
-	 		}
-	 	}
-	    h2 {
+			}
+		}
+		h2 {
 			padding: 10px 0 20px;
 
 			&.subtitle {
@@ -847,33 +847,33 @@ body.interior {
 			@include break(mobile) {
 				font-size: 1.4em;
 			}
-	    }
+		}
 
-	    h3 {
+		h3 {
 			padding: 10px 0 20px;
 
 			@include break(mobile) {
 				font-size: 1.25em;
 			}
-	    }
+		}
 
-	    h4 {
+		h4 {
 			padding: 6px 0 12px;
 
 			@include break(mobile) {
 				font-size: 1.15em;
 			}
-	    }
+		}
 
-	    table {
+		table {
 			margin-bottom: 30px;
 			overflow-x: auto;
 
 			@include break(v-mobile) {
 				display: block;
 			}	
-	    }
-	    
+		}
+		
 	}
 }
 
@@ -962,112 +962,112 @@ body.interior {
 	border-top: 4px solid #eee;
 	border-bottom: 4px solid #eee;
 
-  .pf_score {
-	font-family: $f-helvetica-roboto;
-	font-size: 45px;
-	height: 65px;
-	line-height: 75px;
-	width: 110px;
-	margin: 0;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-	@include border-radius(3px);
-  }
+	.pf_score {
+		font-family: $f-helvetica-roboto;
+		font-size: 45px;
+		height: 65px;
+		line-height: 75px;
+		width: 110px;
+		margin: 0;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		@include border-radius(3px);
+	}
 
-  .ts_brand {
-	font-family: $f-primary;
-	font-size: 0.80em;
-	text-transform: uppercase;
-	font-weight: 500;
-	color: #fff;
-	text-align: center;
-	line-height: 1.2;
-	padding-bottom: 10px;
-	@include border-radius(3px);
-  }
-  ul {
-	margin: 0 0 10px;
-	padding-left: 25px;
-  }
-  .two_column {
-	float: left;
-	width: 50%;
-	margin-bottom: 20px;
+	.ts_brand {
+		font-family: $f-primary;
+		font-size: 0.80em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #fff;
+		text-align: center;
+		line-height: 1.2;
+		padding-bottom: 10px;
+		@include border-radius(3px);
+	}
 	ul {
-	  margin-right: 10px;
+		margin: 0 0 10px;
+		padding-left: 25px;
 	}
-  }
-  .score_box {
-	float: left;
-	width: 110px;
-	height: 120px;
-	position: relative;
+	.two_column {
+		float: left;
+		width: 50%;
+		margin-bottom: 20px;
+		ul {
+			margin-right: 10px;
+		}
+	}
+	.score_box {
+		float: left;
+		width: 110px;
+		height: 120px;
+		position: relative;
 
-	@include break(mobile){
-		float: none;
-		margin: 0 auto 10px;
+		@include break(mobile){
+			float: none;
+			margin: 0 auto 10px;
+		}
 	}
-  }
-  .outstanding .frame {
-	/*
-	background: url(http://static.techspot.com/images/outstanding_score.png) no-repeat;
-	height: 86px;
-	width: 83px;
-	position: absolute;
-	left: -4px;
-	top: 1px;
-	*/
-  }
-  .content_box {
-	padding-left: 130px;
-	font-size: 1.05em;
-	padding-top: 2px;
+	.outstanding .frame {
+		/*
+		background: url(http://static.techspot.com/images/outstanding_score.png) no-repeat;
+		height: 86px;
+		width: 83px;
+		position: absolute;
+		left: -4px;
+		top: 1px;
+		*/
+	}
+	.content_box {
+		padding-left: 130px;
+		font-size: 1.05em;
+		padding-top: 2px;
 
-	@include break(mobile){
-		padding-left: 0;
-		font-size: .95em;
-		margin-top: 140px;
+		@include break(mobile){
+			padding-left: 0;
+			font-size: .95em;
+			margin-top: 140px;
+		}
 	}
-  }
-  .label {
-	color: $blue;
-	font-weight: bold;
-  }
-  h3 {
-	margin-bottom: 0;
-  }
-  .others_said {
-	display: none;
-  }
+	.label {
+		color: $blue;
+		font-weight: bold;
+	}
+	h3 {
+		margin-bottom: 0;
+	}
+	.others_said {
+		display: none;
+	}
 }
 
 /* PF widgets para noticias y reviews */
 .pf_score {
-  color: #fff;
-  font-weight: 500;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  background: #075BC0;
-  text-align: center;
-  float: left;
+	color: #fff;
+	font-weight: 500;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	background: #075BC0;
+	text-align: center;
+	float: left;
 }
 
 .pf_bad {
-  background-color: #cc0000;
+	background-color: #cc0000;
 }
 
 .pf_average {
-  background-color: #6f22a0;
+	background-color: #6f22a0;
 }
 
 .pf_excellent {
-  background-color: #00be15;
+	background-color: #00be15;
 }
 
 .pf_good {
-  background-color: #075bc0;
+	background-color: #075bc0;
 }
 
 .pf_none {
-  background-color: #999999;
+	background-color: #999999;
 }
 
 
@@ -1080,28 +1080,28 @@ body.interior {
 	}
 	.description {
 		padding-left: 0;
-	  	min-height: 500px;
+		min-height: 500px;
 
-	  	.key strong{
-	    	font-weight: 500;
+		.key strong{
+			font-weight: 500;
 		}
 	}
 	.image {
-	    float: none;
-	    width: 100%;
-	    height: 300px;
-	    margin-right: 0;
-	    overflow: hidden;
-	    background-repeat: no-repeat;
-	    background-position: center;
-	    background-size: cover;
-	    box-shadow: inset 0 0 50px rgba(0,0,0,0.25);
+		float: none;
+		width: 100%;
+		height: 300px;
+		margin-right: 0;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		box-shadow: inset 0 0 50px rgba(0,0,0,0.25);
 	}
 	.numbers {
 		float: none;
 		text-align: center;
 		width: 100%;
-	    margin: 20px 0 30px;
+		margin: 20px 0 30px;
 		font-size: .75em;
 		background-color: white;
 		font-family: Roboto Condensed;
@@ -1119,38 +1119,38 @@ body.interior {
 		}
 		.price .price_tag {
 			padding: 3px 0 3px;
-		    margin-top: 2px;
+			margin-top: 2px;
 			font-size: 2.7em;
-		    background-color: green;
-		    cursor: pointer;
-		    line-height: 1.6em;
+			background-color: green;
+			cursor: pointer;
+			line-height: 1.6em;
 
-		    a {
-		    	color: white;
+			a {
+				color: white;
 			}
 		}
 		.meta .score {
-		    text-align: center;
-		    margin: 2px auto 0;
-		    background-color: #105ab2;
+			text-align: center;
+			margin: 2px auto 0;
+			background-color: #105ab2;
 
-		    .number{
-			    color: white;
-			    line-height: 1.8em;
-			    font-size: 2.6em;
-			    font-weight: 500;
+			.number{
+				color: white;
+				line-height: 1.8em;
+				font-size: 2.6em;
+				font-weight: 500;
 			}
 		}
 		.user_score .score {
-		    text-align: center;
-		    margin: 2px auto 5px;
-		    background-color: #f08804;
+			text-align: center;
+			margin: 2px auto 5px;
+			background-color: #f08804;
 
-		    .number{
-			    color: white;
-			    line-height: 1.8em;
-			    font-size: 2.6em;
-			    font-weight: 500;
+			.number{
+				color: white;
+				line-height: 1.8em;
+				font-size: 2.6em;
+				font-weight: 500;
 			}
 		}
 
@@ -1169,6 +1169,13 @@ footer {
 }
 
 .amp-ads {
-    margin: 10px auto 20px;
-    text-align: center;
+	margin: 10px auto 20px;
+	text-align: center;
+}
+
+amp-social-share[type=whatsapp] {
+	width: 60;
+	height: 44;
+	background-image: url(/images/social_share_ws.svg);
+	background-color: #25d366;
 }
