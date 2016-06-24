@@ -140,22 +140,28 @@ $isAMP: 'true';
 	#flyout-main-menu {
 		padding: 0px 0px;
 		#logo {
+			/*
+			// QUEDA ESCONDIDO
 			text-indent: -9999px;
 			background-image: url(/images/logo-techspot.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
 			background-size: contain;
-			height: 52px;
 			line-height: 45px;
 			width: 160px;
 			margin-left: 10px;
-			margin-bottom: 0px;
+			*/
+			height: 52px;
+			margin-bottom: 7px;
+			
+			/*
 			a {
 				display: block;
 				width: 189px; height: 40px;
 			}
-	
+			*/
+
 		}
 		.wrapper {
 			width: 100%;
@@ -163,7 +169,7 @@ $isAMP: 'true';
 		.wrapper ul li{
 			line-height: 40px;
 			width: 100%;
-			border-top: 1px solid #394d60;
+			border-bottom: 1px solid #394d60;
 
 			a {
 				color: white;
