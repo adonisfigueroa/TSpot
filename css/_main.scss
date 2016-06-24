@@ -792,7 +792,7 @@ body.products {
 				@include break(mobile){
 					height: 80px!important;
 				}
-				a{
+				a {
 					display: block; position: relative; width: 100%;
 					height: 100%; background-repeat: no-repeat;
 					background-position: center; background-size: cover;
@@ -800,13 +800,8 @@ body.products {
 					&:after{
 						content: ""; display: block; position: absolute; top: 0; left: 0;
 						width: 100%; height: 100%; @include opacity(0.25);
-						background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.4) 0%, rgba(255,127,0,0.4) 100%); /* FF3.6+ */
 						background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(255,127,0,0.4))); /* Chrome,Safari4+ */
-						background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.4) 0%,rgba(255,127,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
-						background: -o-linear-gradient(45deg,  rgba(0,0,0,0.4) 0%,rgba(255,127,0,0.4) 100%); /* Opera 11.10+ */
-						background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.4) 0%,rgba(255,127,0,0.4) 100%); /* IE10+ */
 						background: linear-gradient(45deg,  rgba(0,0,0,0.4) 0%,rgba(255,127,0,0.4) 100%); /* W3C */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66ff7f00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 						@include mxAnim(200ms,opacity);
 					}//after
 					&:hover{
@@ -947,13 +942,8 @@ body.products {
 					&:after{
 						content: ""; display: block; position: absolute; width: 100%; height: 100%;
 						top: 0; left: 0;
-						background: -moz-linear-gradient(top,  rgba(255,127,0,0.4) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6+ */
 						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,127,0,0.4)), color-stop(100%,rgba(0,0,0,0.8))); /* Chrome,Safari4+ */
-						background: -webkit-linear-gradient(top,  rgba(255,127,0,0.4) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
-						background: -o-linear-gradient(top,  rgba(255,127,0,0.4) 0%,rgba(0,0,0,0.8) 100%); /* Opera 11.10+ */
-						background: -ms-linear-gradient(top,  rgba(255,127,0,0.4) 0%,rgba(0,0,0,0.8) 100%); /* IE10+ */
 						background: linear-gradient(to bottom,  rgba(255,127,0,0.4) 0%,rgba(0,0,0,0.8) 100%); /* W3C */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ff7f00', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
 						@include opacity(0.5); @include mxAnim(200ms,opacity);
 					}//after
 					span{
@@ -2896,8 +2886,6 @@ span._bar {
 		.flex-prev{
 			transform: rotate(180deg);
 			-webkit-transform: rotate(180deg);
-			-moz-transform: rotate(180deg);
-			-ms-transform: rotate(180deg);
 			display: block;	
 			width: 18%;
 			left: 2%;
