@@ -1173,9 +1173,12 @@ footer {
 	text-align: center;
 }
 
+.social-share {
+	margin: 35px auto 25px;
+    text-align: center;
+    padding: 5px 0;
+}
 amp-social-share[type=whatsapp] {
-	width: 60;
-	height: 44;
 	background-image: url(/images/social_share_ws.svg);
 	background-color: #25d366;
 }
