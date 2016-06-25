@@ -1179,3 +1179,11 @@ amp-social-share[type=whatsapp] {
 	background-image: url(/images/social_share_ws.svg);
 	background-color: #25d366;
 }
+
+.related-stories-amp {
+  margin-top: 12px;
+  > a {
+	text-decoration: none;
+	color: #F75A44;
+  }
+}
