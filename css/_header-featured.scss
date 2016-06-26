@@ -87,10 +87,10 @@
 	
 	.title-group {
 		position: absolute;
-		bottom: 50px;
+		bottom: 80px;
 		width: 85%;
 		@include break(tablet){
-			bottom: 50px;
+			bottom: 100px;
 		}
 		@include break(mobile){
 			width: 90%;

@@ -1189,10 +1189,20 @@ amp-social-share[type=whatsapp] {
 	background-color: #25d366;
 }
 
-.related-stories-amp {
-  margin-top: 12px;
-  > a {
-	text-decoration: none;
-	color: #F75A44;
-  }
+.related-stories {
+	h3 {
+		font-weight: 500;
+		font-family: $f-primary;
+	}
+
+	ul {
+		li {
+			margin-top: 15px;
+			  > a {
+				text-decoration: none;
+				color: #105ab2;
+				font-size: .9em;
+			  }
+		}
+	}
 }
