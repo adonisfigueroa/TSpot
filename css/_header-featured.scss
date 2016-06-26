@@ -6,7 +6,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-  	margin-top: -4px;
 
 	@if $isAMP == 'true' {
 		@include break(tablet){
