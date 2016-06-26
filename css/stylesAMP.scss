@@ -140,22 +140,28 @@ $isAMP: 'true';
 	#flyout-main-menu {
 		padding: 0px 0px;
 		#logo {
+			/*
+			// QUEDA ESCONDIDO
 			text-indent: -9999px;
 			background-image: url(/images/logo-techspot.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
 			background-size: contain;
-			height: 52px;
 			line-height: 45px;
 			width: 160px;
 			margin-left: 10px;
-			margin-bottom: 0px;
+			*/
+			height: 52px;
+			margin-bottom: 7px;
+			
+			/*
 			a {
 				display: block;
 				width: 189px; height: 40px;
 			}
-	
+			*/
+
 		}
 		.wrapper {
 			width: 100%;
@@ -163,7 +169,7 @@ $isAMP: 'true';
 		.wrapper ul li{
 			line-height: 40px;
 			width: 100%;
-			border-top: 1px solid #394d60;
+			border-bottom: 1px solid #394d60;
 
 			a {
 				color: white;
@@ -1173,17 +1179,30 @@ footer {
 	text-align: center;
 }
 
+.social-share {
+	margin: 35px auto 25px;
+    text-align: center;
+    padding: 5px 0;
+}
 amp-social-share[type=whatsapp] {
-	width: 60;
-	height: 44;
 	background-image: url(/images/social_share_ws.svg);
 	background-color: #25d366;
 }
 
-.related-stories-amp {
-  margin-top: 12px;
-  > a {
-	text-decoration: none;
-	color: #F75A44;
-  }
+.related-stories {
+	h3 {
+		font-weight: 500;
+		font-family: $f-primary;
+	}
+
+	ul {
+		li {
+			margin-top: 15px;
+			  > a {
+				text-decoration: none;
+				color: #105ab2;
+				font-size: .9em;
+			  }
+		}
+	}
 }
