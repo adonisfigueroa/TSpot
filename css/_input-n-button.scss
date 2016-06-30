@@ -3,11 +3,12 @@ input[type=password] {
 	width: 100%;
 	background: white;
 	border: none;
-	line-height: 18px;
+	font-size: 0.65em;
+	font-style: normal !important;
+	line-height: 1.5;
 	padding: 6px 8px;
 	@include outer-glow(3);
 	@include border-radius(2px);
-	font-style: normal!important;
 	
 	&:focus {
 		outline: none;

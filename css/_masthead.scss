@@ -1,4 +1,4 @@
-$tile-height: 180px;
+$tile-height: 190px;
 $tall-tile-height: ($tile-height * 2) + 1;
 $tile-width: 381px;
 $tile-width-sec: 380px;
@@ -59,7 +59,10 @@ $tile-font-size: 1.1em;
 				height: $tile-height - 30px;
 
 				//top text, gradient black/blue
-				background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
+				background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+
+				// mas azul
+				//background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
 
 				//default bottom text, gris TS
 				//@include gradient-trans-percent($start_color:#13191F,$start_cent:40%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
