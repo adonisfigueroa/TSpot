@@ -446,6 +446,12 @@ body.interior {
 			display: table-cell; 
 			vertical-align: middle;
 		}
+
+		&.prev-next { 
+			display: none;
+		}
+
+		/*
 		&.prev-next {
 			a {
 				line-height: 100px;
@@ -487,7 +493,7 @@ body.interior {
 				}
 				
 				&.prev {
-					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
+					// background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg');
 					background-repeat: no-repeat;
 					background-size: cover !important;
 					background-position: center center;
@@ -519,7 +525,7 @@ body.interior {
 				}
 				
 				&.next {
-					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
+					// background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg');
 					background-repeat: no-repeat;
 					background-size: cover !important;
 					background-position: center center;
@@ -527,7 +533,7 @@ body.interior {
 
 					span {
 						background-color: rgba(16, 90, 178, 0.8);
-						/* background: #B2B9BE; */
+						// background: #B2B9BE;
 						@include border-radius(1px);
 						@include col-last(1,6,0);
 						&:after {		
@@ -579,6 +585,8 @@ body.interior {
 			}
 			
 		}
+		*/
+
 	}
 
 	&.white {
@@ -1273,7 +1281,7 @@ body.interior {
 			display: none;
 			text-align: center;
 			padding-top: 20px;
-			padding-bottom: 50px;
+			padding-bottom: 60px;
 			background-color: $light-grey;
 			@include break(mobile){
 				display: block;
@@ -1283,8 +1291,8 @@ body.interior {
 			font-size: 0.9em;
 			display: block;
 			padding-top: 5px;
-			height: 30px;
-			line-height: 25px;
+			height: 35px;
+			line-height: 30px;
 			font-weight: 600;
 			border: solid 1px #aaa;
 			@include border-radius(3px);
@@ -1296,7 +1304,7 @@ body.interior {
 			}
 			
 			span.count {
-				background: grey;
+				background: #7393C8;
 				border-radius: 100px;
 				min-width: 15px;
 				display: inline-block;
@@ -1305,6 +1313,10 @@ body.interior {
 				padding-right: 5px;
 				line-height: 24px;
 				margin-left: 5px;
+
+				&.many {
+					background: #c00;
+				}
 			}
 		}
 	}

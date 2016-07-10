@@ -1493,6 +1493,10 @@ h3.longtype {
 	&.related-query {
 	    margin: 15px 0 15px;
 
+		@include break(mobile){
+			margin: 0 0 20px;
+		}
+
 		ul {
 			font-family: $f-paragraph;
 		    font-size: .85em;

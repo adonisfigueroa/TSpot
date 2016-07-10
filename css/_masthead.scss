@@ -116,27 +116,25 @@ $tile-font-size: 1.1em;
 				}	
 			}
 
-			/*
 			&.bgc-dark {
 				a {
-					@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+					background: linear-gradient(345deg, rgba(21, 76, 143, 0.55) 45%, rgba(30, 41, 51, 0.75) 85%);
 
 					&:hover {
-						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.5,$end_color:#13191F,$end_cent:60%,$end_alpha:.85);
+						background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 35%, rgba(30, 41, 51, 0.75) 65%);
 					}
 				}
 			}
 
 			&.bgc-light {
 				a {
-					@include gradient-trans-percent($start_color:#13191F,$start_cent:45%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.55);
+					background: linear-gradient(345deg, rgba(21, 76, 143, 0.15) 45%, rgba(30, 41, 51, 0.65) 85%);
 
 					&:hover {
-						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+						background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
 					}
 				}
 			}
-			*/
 			
 		}
 
