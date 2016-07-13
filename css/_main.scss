@@ -132,6 +132,21 @@ img.responsive {
     visibility: hidden;
 }
 
+.b-lazy {
+	-webkit-transition: ease .4s;
+	-moz-transition: ease .4s;
+	-o-transition: ease .4s;
+	transition: ease .4s;
+	max-width: 100%;
+	opacity: 0;
+}
+.b-lazy {
+    will-change: opacity;
+}
+.b-lazy.b-loaded {
+	opacity: 1;
+}
+
 .menuSpacerHome {
 	height: 82px;
 	display:block;
@@ -3887,6 +3902,14 @@ table {
 	.group-left {
 		margin: 50px 0 0 0;
 		//@include col(2,3,0);
+	}
+}
+
+.form-email {
+	input {
+		width: 90%;
+	    font-size: .85em;
+	    margin-top: 5px;
 	}
 }
 
