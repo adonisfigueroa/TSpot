@@ -1151,6 +1151,11 @@
 		
 	}
 }
+amp-sidebar{
+  width:250px;
+  display: none;
+}
+
 #Mobileheader {
 	width: 250px;
 	height: 100%;
@@ -1159,7 +1164,6 @@
 	position: fixed;
 	z-index: 10;
     top: 0;
-    left: -250px;
 
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
