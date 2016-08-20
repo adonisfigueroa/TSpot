@@ -813,6 +813,41 @@ body.interior {
 							padding-bottom: 1px;
 						}
 					  }
+
+					em {
+						display: inline-block;
+						margin-left: 10px;
+						font-family: $f-helvetica-roboto;
+						font-size: .6em;
+						font-style: normal;
+						padding: 0px 6px;
+						color: white;
+						text-transform: lowercase;
+
+						&:hover {
+							text-decoration: none;
+							border: none !important;
+						}
+
+						&.editors-pick {
+							background-color: #0088CC;
+
+							&:hover {
+								background-color: #00a0f0;
+								text-decoration: none;
+							}
+						}
+						
+						&.popular {
+							background-color: #e67200;
+
+							&:hover {
+								background-color: #ff7f00;
+								text-decoration: none;
+							}
+						}
+					}
+
 				}
 
 				.bio {
@@ -2632,7 +2667,7 @@ body.interior {
 			.title-group {
 				h1.large {
 					font-weight: 500;
-					padding-top: 15px;
+					padding: 15px 0 8px;
 
 					@include break(mobile){
 						padding-top: 0px;

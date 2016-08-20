@@ -1091,14 +1091,12 @@ body.products {
 		
 			a {
 				color: inherit;
+				font-weight: 500;
 
 				&:hover { color: $red; }
 
-				&.similar,
-				&.replies {
+				&.similar {
 					color: #7393C8;
-					font-weight: 500;
-				    font-size: 1.1em;
 
 					&:hover { 
 						text-decoration: none;
@@ -1124,7 +1122,7 @@ body.products {
 				color: white;
 				font-weight: 500;
 				a {
-  				color: white;
+  					color: white;
 				}
 			}
 			&.popular-topic {
@@ -1132,7 +1130,7 @@ body.products {
 				color: white;
 				font-weight: 500;
 				a {
-  				color: white;
+  					color: white;
 				}
 			}
 			
@@ -1145,15 +1143,33 @@ body.products {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 5% 10%;
 		background-repeat: no-repeat;
+
+		span {
+			a {
+			    font-size: 1.1em;
+			}
+		}
 	}
 }
 
 .forum-list {
 	li {
 		background-image: url(/images/forum-icon.svg);
-		background-position: 5% 20%;
+		background-position: 5% 15%;
 		background-repeat: no-repeat;
 		background-size: 26px;
+		min-height: 45px;
+
+		span {
+			a {
+			    font-size: 1.05em;
+			}
+		}
+
+		.count {
+			margin: 20px 0 0 -35px;
+			float: left;
+		}
 	}
 }
 
