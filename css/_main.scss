@@ -457,7 +457,7 @@ body.products {
 	.ad_to_list {
 	    padding-bottom: 26px;
 	    margin-bottom: 23px;
-		border-bottom: 1px solid #DDD;
+		border-bottom: 2px solid #e7e9ee;
 		z-index: 1;
 
 		&.two {
@@ -473,7 +473,7 @@ body.products {
 	article {
 	    padding-bottom: 26px;
 	    margin-bottom: 23px;
-		border-bottom: 1px solid #DDD;
+		border-bottom: 2px solid #e7e9ee;
 		z-index: 1;
 		
 		.article-img {
@@ -1534,7 +1534,7 @@ h3.longtype {
 		    line-height: 1.5;
 			
 			li {
-				padding-bottom: 15px;
+				padding-bottom: 10px;
 			}
 		}
 	}

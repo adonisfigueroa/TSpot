@@ -1154,59 +1154,6 @@ body.interior {
 					@include col(1,1,0);
 					margin-bottom: 25px;
 				}
-				
-				.tags {
-					width: 60px;
-					margin: 25px 0 60px;
-					font-size: .7em;
-					line-height: 184%;
-
-					@include break(mobile){
-						display: none;
-					}
-
-					strong {
-						font-weight: 500;
-					}
-					
-					li {
-						overflow: visible;
-						display: none;
-						a {
-							color: #AAAAAA;
-							font-weight: 400;
-						}
-						&:nth-child(2) {
-							a {
-								color: darken(#AAAAAA,30%);
-							}
-							display: block;
-						}
-						
-						&:nth-child(3) {
-							a {
-								color: darken(#AAAAAA,15%);
-							}
-							display: block;
-						}
-						&:nth-child(4) {
-							a {
-								color: darken(#AAAAAA,5%);
-							}
-							display: block;
-						}
-					}
-					&:hover {
-						li {
-							display: block;
-							a {
-								color: #000;
-							}
-						}
-					}
-					
-				}
-				
 			}
 			
 			.articleBody {
@@ -1284,18 +1231,84 @@ body.interior {
 			}
 			
 			.social-column {
-			  .tags {
-				//margin: 25px auto 60px;
-			  }
-			  .social:hover {
-				  .SocialHover {
-					right: -100px;
-					@include break(mobile){
-						right: 0 !important;
-						top:auto !important;
+				.social:hover {
+				  	.SocialHover {
+						right: -100px;
+						@include break(mobile){
+							right: 0 !important;
+							top:auto !important;
+						}
 					}
+			  	}
+
+				.tags {
+					width: 60px;
+					margin: 25px 0 60px;
+					font-size: .7em;
+					line-height: 184%;
+					overflow: hidden;
+
+					@include break(mobile){
+						display: none;
+					}
+
+					strong {
+						font-weight: 500;
+					}
+					
+					li {
+						overflow: visible;
+						display: none;
+						a {
+							color: #AAAAAA;
+							font-weight: 400;
+						}
+						&:nth-child(2) {
+							a {
+								color: darken(#AAAAAA,30%);
+							}
+							display: block;
+						}
+						
+						&:nth-child(3) {
+							a {
+								color: darken(#AAAAAA,15%);
+							}
+							display: block;
+						}
+						&:nth-child(4) {
+							a {
+								color: darken(#AAAAAA,5%);
+							}
+							display: block;
+						}
+					}
+
+					&:hover {
+						overflow: visible;
+						border-radius: 0px 0px 8px 0px;
+						background: #f5f5f5;
+						width: 150px;
+						padding: 0px 5px 15px 0px;
+						box-shadow: 3px 5px 5px #bbb;
+						color: #000;
+
+						li {
+							display: block;
+							//background-color: #fff;
+
+							a {
+								color: $blue;
+
+								&:hover {
+									font-weight: 500;									
+								}
+							}
+						}
+					}
+
 				}
-			  }
+
 			}
 			
 		}
