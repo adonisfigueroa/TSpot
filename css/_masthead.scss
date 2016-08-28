@@ -1588,7 +1588,7 @@ $tile-font-size: 1.1em;
 				height: 334px;
 				
 				a {
-					height: 334px - 30px;
+					height: 334px - 40px;
 					hgroup {
 						h2 {
 							font-size: 1.45em;
@@ -1602,7 +1602,7 @@ $tile-font-size: 1.1em;
 				display: block;
 				padding: 20px;
 				color: white;
-				height: 166px - 30px;
+				height: 166px - 40px;
 
 				background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
 
@@ -1886,7 +1886,7 @@ $tile-font-size: 1.1em;
 		height: 266px !important;
 
 		a {
-			height: 236px !important;
+			height: 226px !important;
 		}
 
 		&:nth-child(3) {
