@@ -82,7 +82,13 @@ a {
 	&:hover { color: $red; }
 }
 
-a.offset { display: block; position: relative; top: -90px; visibility: hidden; }
+a.offset {
+	display: block; position: relative; top: -90px; visibility: hidden;
+	
+	@include break(mobile){
+		top: -75px;
+	}
+}
 
 ul,ol {
 	margin: 0; padding: 0;
@@ -392,13 +398,17 @@ body.products {
 	.articleBody {
 		p {
 			a {
-				box-shadow: inset 0 -5px 0 #D0DCEB;
+				box-shadow: inset 0 -3px 0 #D0DCEB;
 				color: inherit;
 				padding-bottom: 2px;
 
+				@include break(mobile) {
+					box-shadow: inset 0 -6px 0 #D0DCEB;
+				}
+
 				&:hover {
 					color: inherit;
-					box-shadow: inset 0 -5px 0 #FBBB76;
+					box-shadow: inset 0 -6px 0 #FBBB76;
 					padding-bottom: 2px;
 					//transition: ease 0.2s;
 				}
@@ -1455,7 +1465,7 @@ h3.longtype {
 				font-weight: 600;
 				z-index: 1;
 				float: right;
-				margin: 110px 25px 0px 0px;
+				margin: 130px 25px 0px 0px;
 
 				&:hover {
 					background-color: rgba(255, 127, 0, 0.9);
@@ -1479,7 +1489,7 @@ h3.longtype {
 					display: block;
 					position: relative;
 					width: 90%;
-					height: 145px;
+					height: 165px;
 					background-size: cover;
 					background-position: center;
 					margin: 0 auto;
@@ -2215,7 +2225,7 @@ span._bar {
 
 	li {	
 		&.social-count {
-			background-color: #f08804;
+			background-color: $orange;
 			color: white;
 			text-align: center;
 			font-size: 0.7em;
@@ -2232,7 +2242,7 @@ span._bar {
 			}
 
 			&.zero {
-				border-top: 5px solid #f08804;
+				border-top: 5px solid $orange;
 				@include break(mobile) {
 					border-top: none;
 					display: block;

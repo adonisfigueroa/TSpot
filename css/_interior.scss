@@ -3207,14 +3207,18 @@ body.interior {
 		margin: 20px 0 40px;
 		font-size: 0.9em;
 		background: #fff;
-		padding: 30px 20px 15px;
-		border-top: 4px solid #eee;
-		border-bottom: 4px solid #eee;
+	    padding: 35px 20px 15px;
+	    border-top: 20px solid #eee;
+	    border-bottom: 20px solid #eee;
+
+	    @include break(mobile){
+	    	padding: 15px 20px 15px;
+	    }
 
 	  .pf_score {
 		font-family: $f-helvetica-roboto;
 		font-size: 45px;
-		height: 65px;
+		height: 75px;
 		line-height: 75px;
 		width: 110px;
 		margin: 0;
@@ -3247,8 +3251,9 @@ body.interior {
 	  }
 	  .score_box {
 		float: left;
-		width: 110px;
+		width: 115px;
 		height: 120px;
+	    margin-top: 5px;
 		position: relative;
 
 		@include break(mobile){
@@ -3267,14 +3272,14 @@ body.interior {
 		*/
 	  }
 	  .content_box {
-		padding-left: 130px;
+		padding-left: 140px;
 		font-size: 1.05em;
 		padding-top: 2px;
 
 		@include break(mobile){
 			padding-left: 0;
 			font-size: .95em;
-			margin-top: 140px;
+			margin-top: 145px;
 		}
 	  }
 	  .label {
