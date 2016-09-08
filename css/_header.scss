@@ -13,7 +13,7 @@
 		transition: left 0.3s ease-in-out 0s;
 	}
 	
-	&.forceFixed{ position: fixed!important; }
+	&.forceFixed { position: fixed!important; }
 
 	.hoverOrange {
 		background-color: $orange;
@@ -685,7 +685,6 @@
 		.SubHeader {
 			background: #777D82; 
 			text-align: center;
-			//box-shadow: inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 			box-shadow: inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 			li {
 				text-align: center;
@@ -709,24 +708,25 @@
 			.PArrow{
 				a:after {
 					@include triangle(right,#99B3FF,5,5);
-				
+					opacity: 1;
 				}
 			}
 			.YArrow{
 				a:after {
 					@include triangle(right,#FFDC73,5,5);
-				
+					opacity: 1;
 				}
 			}	
 			.OArrow{
 				a:after {
 					@include triangle(right,$orange,5,5);
-				
+					opacity: 1;
 				}
 			}
 			.GArrow{
 				a:after {
 					@include triangle(right,#6DD900,5,5);
+					opacity: 1;
 				}
 			}
 			.NoArrow {
@@ -821,6 +821,7 @@
 							margin-top: -1px;
 							width: 15px; height: 15px;
 							@include triangle(down,white,4,4);
+							opacity: 0.4;
 						}
 						
 						&.active {
@@ -966,6 +967,7 @@
 										top: 50%; right: 5px;
 										margin-top: -5px;
 										@include triangle(right,$orange,5,7);
+										opacity: 0.85;
 									}
 
 								}
