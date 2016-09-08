@@ -1,4 +1,4 @@
-$tile-height: 180px;
+$tile-height: 190px;
 $tall-tile-height: ($tile-height * 2) + 1;
 $tile-width: 381px;
 $tile-width-sec: 380px;
@@ -59,7 +59,10 @@ $tile-font-size: 1.1em;
 				height: $tile-height - 30px;
 
 				//top text, gradient black/blue
-				background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
+				background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+
+				// mas azul
+				//background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
 
 				//default bottom text, gris TS
 				//@include gradient-trans-percent($start_color:#13191F,$start_cent:40%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
@@ -113,27 +116,25 @@ $tile-font-size: 1.1em;
 				}	
 			}
 
-			/*
 			&.bgc-dark {
 				a {
-					@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+					background: linear-gradient(345deg, rgba(21, 76, 143, 0.55) 45%, rgba(30, 41, 51, 0.75) 85%);
 
 					&:hover {
-						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.5,$end_color:#13191F,$end_cent:60%,$end_alpha:.85);
+						background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 35%, rgba(30, 41, 51, 0.75) 65%);
 					}
 				}
 			}
 
 			&.bgc-light {
 				a {
-					@include gradient-trans-percent($start_color:#13191F,$start_cent:45%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.55);
+					background: linear-gradient(345deg, rgba(21, 76, 143, 0.15) 45%, rgba(30, 41, 51, 0.65) 85%);
 
 					&:hover {
-						@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+						background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
 					}
 				}
 			}
-			*/
 			
 		}
 
@@ -1587,7 +1588,7 @@ $tile-font-size: 1.1em;
 				height: 334px;
 				
 				a {
-					height: 334px - 30px;
+					height: 334px - 40px;
 					hgroup {
 						h2 {
 							font-size: 1.45em;
@@ -1601,7 +1602,7 @@ $tile-font-size: 1.1em;
 				display: block;
 				padding: 20px;
 				color: white;
-				height: 166px - 30px;
+				height: 166px - 40px;
 
 				background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
 
@@ -1885,7 +1886,7 @@ $tile-font-size: 1.1em;
 		height: 266px !important;
 
 		a {
-			height: 236px !important;
+			height: 226px !important;
 		}
 
 		&:nth-child(3) {
