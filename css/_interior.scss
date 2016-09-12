@@ -678,6 +678,12 @@ body.interior {
 
 
 	&.download {
+		.download-index-wrapper {
+			@include break(mobile) {
+				width: 96%;
+				margin: 0 auto;
+			}
+		}
 		.download-index {
 			h1 {
 				color: #1e2833;
@@ -880,6 +886,7 @@ body.interior {
 			  font-size: 12px;
 			  font-weight: 400;
 			  color: #888;
+
 			  li {
 				display: inline;
 				border-right-width: 1px;
@@ -901,10 +908,7 @@ body.interior {
 					padding-left: 8px;
 					padding-right: 8px;
 					border: none;
-
-					&.right {
-					  display: none;
-					}
+					width: 28% !important;
 				}
 
 			  }
