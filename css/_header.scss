@@ -20,17 +20,17 @@
 	}
 
 	#main-menu #dk_menu{
+		.withSubmenu {
+			.nav-submenu {
+				height: 315px
+			}
+		}
 		#SpecialHeightF {
 			.nav-submenu {
 				height: 315px;
 				@include break(tablet) {
 					height: 435px;
 				}
-			}
-		}	
-		#SpecialHeightD {
-			.nav-submenu {
-				height: 315px
 			}
 		}
 	}
@@ -866,6 +866,7 @@
 					}
 					
 					.nav-submenu {
+						display: none;
 						position: absolute;
 						left: 0; top: 38px;
 						width: 110%;
