@@ -705,6 +705,12 @@
 			li:hover {
 				border-bottom: 1px solid white;
 			}
+			.DefArrow{
+				a:after {
+					@include triangle(right,#bbb,5,5);
+					opacity: 1;
+				}
+			}
 			.PArrow{
 				a:after {
 					@include triangle(right,#99B3FF,5,5);
@@ -1018,6 +1024,7 @@
 										padding-bottom: 185px;
 										margin-bottom: 10px;
 										position: relative;
+										border-radius: 3px;
 
 										&.back1 {
 											background-image: url(http://www.techspot.com/images/menu/back1.png);
