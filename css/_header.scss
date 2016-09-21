@@ -1047,7 +1047,8 @@
 											background-position: center center;
 											background-repeat: no-repeat;
 											overflow: hidden;
-											background-size: 120% auto;
+											//background-size: 120% auto;
+											background-size: cover;
 
 											&.icon {
 												background-size: 120px auto;
