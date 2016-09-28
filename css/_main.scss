@@ -792,7 +792,12 @@ body.products {
 
 .dl-tabs {
 	margin: -30px 0 20px 0;
+
+	@include break(mobile){
+		margin: -15px 0 0px -5px;
+	}
 }
+
 .pf-tabs {
 	margin: 30px 0 20px 0;
 }
@@ -849,6 +854,7 @@ body.products {
 				background-color: #339933;
 		  	}
 		}
+
 		span.number {
 			background: #0557B5;
 			border-radius: 14px;
@@ -862,6 +868,21 @@ body.products {
 			margin-left: 2px;
 			font-weight: 500;
 			font-family: Roboto;
+		}
+
+		span.number.large {
+			line-height: 20px;
+			width: 22px;
+			height: 20px;
+		}
+	}
+
+	&.single {
+		h3 {
+			text-transform: none;
+			font-weight: 400;
+			font-size: 15px;
+			padding-top: 4px;
 		}
 	}
 
@@ -880,6 +901,7 @@ body.products {
 		height: 5px;
 		background-color: #F2F4F8;
 	}
+
 }
 
 .nPostList{
