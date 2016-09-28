@@ -852,6 +852,10 @@ body.interior {
 					color: #333;
 
 					p { padding: 0 !important; }
+
+					@include break(mobile){
+						width: 100% !important;
+					}
 				}
 
 				i {
@@ -876,6 +880,11 @@ body.interior {
 					.votes {
 						font-size: .9em;
 					}
+
+					@include break(v-mobile){
+						display: none;
+					}
+
 				}
 
 			  }
