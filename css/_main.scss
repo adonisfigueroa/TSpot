@@ -833,7 +833,7 @@ body.products {
 		}
 
 		@include break(v-mobile){
-			padding: 0 4%;
+			padding: 0 3.5%;
 		}
 		@include break(sm-mobile){
 			padding: 0 2%;

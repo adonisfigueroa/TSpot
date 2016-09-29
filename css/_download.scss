@@ -490,7 +490,7 @@ body.interior.download {
           padding: 8px 0 0 15px;
 
           @include break(mobile){
-            width: 50%;
+            width: 35%;
           }
 
           a {
@@ -532,6 +532,11 @@ body.interior.download {
 	  background-size: 120%;
 	  background-position: center;
 	  background-repeat: no-repeat;
+
+    @include break(mobile){
+      width: 150px;
+      margin: 15px 2% 15px;
+    }
 
 	  a {
 	    width: 100%;
