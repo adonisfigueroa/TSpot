@@ -317,202 +317,202 @@ body.interior.download {
 
     .download-product {
 
-		@include col(1,2,0);
-		width: 43%;
-		padding: 5px 10px 0 0;
+  		@include col(1,2,0);
+  		width: 43%;
+  		padding: 5px 10px 0 0;
 
-		@include break(v-tablet){
-			padding: 5px 0 0 35px;
-			width: 43%;
-		}
+  		@include break(v-tablet){
+  			padding: 5px 0 0 35px;
+  			width: 43%;
+  		}
 
-		@include break(mobile){
-			@include col(1,1,0);
-			border: 0;
-			padding: 0;
-			margin-top: 15px;
-			width: 100%;
-			float: none;
-		}
+  		@include break(mobile){
+  			@include col(1,1,0);
+  			border: 0;
+  			padding: 0;
+  			margin-top: 15px;
+  			width: 100%;
+  			float: none;
+  		}
 
-      .download-wrapper {
-        margin-bottom: 15px;
-        margin-top: 0px;
+      .download_options, .specs {
+        padding: 10px;
+        margin: 0 0 0 -10px;
+        width: 90%;
+        border-radius: 3px;
+      }
 
-        @include break(v-mobile){
-          position: relative;
-        }
+        .download-wrapper {
+          margin-bottom: 15px;
+          margin-top: 0px;
 
-        .download_options {
-			padding: 10px;
-			margin: 0 0 0 -10px;
-			width: 90%;
-			border-radius: 3px;
-        }
+          @include break(v-mobile){
+            position: relative;
+          }
 
-        .download_button {
-          float: left;
-          margin-bottom: 8px;
-          display: inline-block;
-          width: 170px;
-          height: 35px;
-          background: url(http://static.techspot.com/images/download_button_3h.png) no-repeat;
-          position: relative;
-          background-size: 170px 70px;
-          span {
-            text-indent: -1000px;
-            overflow: hidden;
-            position: absolute;
-            width: 32px;
-            left: 8px;
+          .download_button {
+            float: left;
+            margin-bottom: 8px;
+            display: inline-block;
+            width: 170px;
             height: 35px;
-            background: url(http://static.techspot.com/images/download_button_arrow3.png) 0 0;
-            background-size: contain;
-            -webkit-transition: all 0.15s linear;
-            -moz-transition: all 0.15s linear;
-            -ms-transition: all 0.15s linear;
-            -o-transition: all 0.15s linear;
-            transition: all 0.15s linear;
-          }
-          &:hover {
-            background-position: left bottom;
+            background: url(http://static.techspot.com/images/download_button_3h.png) no-repeat;
+            position: relative;
+            background-size: 170px 70px;
             span {
-              background-position: 0 35px;
+              text-indent: -1000px;
+              overflow: hidden;
+              position: absolute;
+              width: 32px;
+              left: 8px;
+              height: 35px;
+              background: url(http://static.techspot.com/images/download_button_arrow3.png) 0 0;
+              background-size: contain;
+              -webkit-transition: all 0.15s linear;
+              -moz-transition: all 0.15s linear;
+              -ms-transition: all 0.15s linear;
+              -o-transition: all 0.15s linear;
+              transition: all 0.15s linear;
             }
-          }
-        }
-
-        .download-warning {
-          border: 1px solid #ddd;
-          background-color: #feefb3;
-          width: 90%;
-          padding: 10px;
-          margin: 10px 0 15px;
-          color: #9f6000;
-          font-size: 1em;
-          line-height: 1.4em;
-          letter-spacing: -.2px;
-
-          @include break(mobile){
-            width: 90%;
-          }
-
-          a {
-            color: #9f6000;
-            text-decoration: none;
-            border-bottom: 1px dotted #9f6000;
-
             &:hover {
-              color: #105ab2;
-              border-bottom: 1px dotted #105ab2;
-              transition: linear .2s;
-            }
-          }
-
-          span {
-            font-weight: bold;
-          }
-
-          div {
-            margin: 18px 0 8px;
-
-            &.clean {
-             margin: 18px 0 20px;
-
-             label {
-                  background: white;
-
-                    &:hover {
-                      color: white;
-                    }
-
-                  a {
-                    border: none;
-
-                    &:hover {
-                      color: white;
-                      border: none;
-                    }
-                  }
-             }
-            }
-
-            label {
-              border: 1px dotted #9f6000;
-              padding: 6px;
-              border-radius: 4px;
-
-              a {
-                color: #9f6000;
-                text-decoration: none;
+              background-position: left bottom;
+              span {
+                background-position: 0 35px;
               }
+            }
+          }
+
+          .download-warning {
+            border: 1px solid #ddd;
+            background-color: #feefb3;
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0 15px;
+            color: #9f6000;
+            font-size: 1em;
+            line-height: 1.4em;
+            letter-spacing: -.2px;
+
+            @include break(mobile){
+              width: 90%;
+            }
+
+            a {
+              color: #9f6000;
+              text-decoration: none;
+              border-bottom: 1px dotted #9f6000;
 
               &:hover {
-                cursor: pointer;
-                color: #fff !important;
-                text-decoration: none;
+                color: #105ab2;
+                border-bottom: 1px dotted #105ab2;
                 transition: linear .2s;
+              }
+            }
+
+            span {
+              font-weight: bold;
+            }
+
+            div {
+              margin: 18px 0 8px;
+
+              &.clean {
+               margin: 18px 0 20px;
+
+               label {
+                    background: white;
+
+                      &:hover {
+                        color: white;
+                      }
+
+                    a {
+                      border: none;
+
+                      &:hover {
+                        color: white;
+                        border: none;
+                      }
+                    }
+               }
+              }
+
+              label {
+                border: 1px dotted #9f6000;
+                padding: 6px;
+                border-radius: 4px;
+
+                a {
+                  color: #9f6000;
+                  text-decoration: none;
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  color: #fff !important;
+                  text-decoration: none;
+                  transition: linear .2s;
+                  background-color: #FF7F00;
+                  border: 1px dotted #FF7F00;
+                  padding: 6px;
+                  border-radius: 4px;
+                }
+              }
+            }
+
+            &.alert {
+              transition: linear .2s;
+              border: 1px dotted #9f6000;
+
+              label {
+                color: #fff !important;
+                transition: linear .3s;
                 background-color: #FF7F00;
                 border: 1px dotted #FF7F00;
                 padding: 6px;
                 border-radius: 4px;
+
+                &:hover {
+                  cursor: pointer;
+                }
               }
             }
+
           }
 
-          &.alert {
-            transition: linear .2s;
-            border: 1px dotted #9f6000;
-
-            label {
-              color: #fff !important;
-              transition: linear .3s;
-              background-color: #FF7F00;
-              border: 1px dotted #FF7F00;
-              padding: 6px;
-              border-radius: 4px;
-
-              &:hover {
-                cursor: pointer;
-              }
-            }
-          }
-
-        }
-
-        .facebook-like {
-          margin-right: 0%;
-          display: block;
-          float: left;
-          list-style-type: none;
-          position: relative;  
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          padding: 8px 0 0 15px;
-
-          @include break(mobile){
-            width: 35%;
-          }
-
-          a {
+          .facebook-like {
+            margin-right: 0%;
             display: block;
-            width: 77px;
-            height: 20px;
-            background: url('../images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
+            float: left;
+            list-style-type: none;
+            position: relative;  
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 8px 0 0 15px;
+
+            @include break(mobile){
+              width: 35%;
+            }
+
+            a {
+              display: block;
+              width: 77px;
+              height: 20px;
+              background: url('../images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
+            }
           }
-        }
 
-        .editors_pick {
-	        width:260px; height:78px; padding: 10px 0;        	
-        }
+          .editors_pick {
+  	        width:260px; height:78px; padding: 10px 0;        	
+          }
 
-        #dw_vote {
-        	font-size: 11px;
-        }
+          #dw_vote {
+          	font-size: 11px;
+          }
 
+        }
       }
-    }
   }
 }
 
