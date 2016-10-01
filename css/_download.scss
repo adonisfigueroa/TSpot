@@ -132,7 +132,7 @@ body.interior.download {
             font-weight: 500;
             margin-right: 10px;
             text-align: left;
-            width: 120px;
+            width: 105px;
         }
 
         .item {
@@ -338,8 +338,10 @@ body.interior.download {
       .download_options, .specs {
         padding: 10px;
         margin: 0 0 0 -10px;
-        width: 90%;
         border-radius: 3px;
+      }
+      .download_options {
+        width: 90%;
       }
 
         .download-wrapper {
@@ -504,7 +506,11 @@ body.interior.download {
           }
 
           .editors_pick {
-  	        width:260px; height:78px; padding: 10px 0;        	
+            margin: 20px 0 0;
+
+            img {
+              width:260px; height:78px;         
+            }
           }
 
           #dw_vote {
