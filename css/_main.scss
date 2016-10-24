@@ -3430,10 +3430,14 @@ span._bar {
   }
 }
 
-.also-looked-at,
+.also-looked-at {
+	margin-bottom: 25px;
+}
 .expert-reviews-and-ratings {
 	margin-bottom: 45px;
-
+}
+.also-looked-at,
+.expert-reviews-and-ratings {
 	@include break(mobile){
 		margin-bottom: 35px;
 	}
@@ -3468,6 +3472,7 @@ span._bar {
 	li {
 	  font-size: .8em;
 	  background: #2D3842;
+	  margin-bottom: 20px;
 	  @include col(1,4,2);
 	  @include outer-glow(10,0,.2);
 	  
