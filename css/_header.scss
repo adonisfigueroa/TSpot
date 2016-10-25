@@ -13,24 +13,29 @@
 		transition: left 0.3s ease-in-out 0s;
 	}
 	
-	&.forceFixed{ position: fixed!important; }
+	&.forceFixed { position: fixed!important; }
 
 	.hoverOrange {
 		background-color: $orange;
 	}
 
 	#main-menu #dk_menu{
+		.withSubmenu {
+			.nav-submenu {
+				height: 315px
+			}
+		}
+		.withSubmenuT {
+			.nav-submenu {
+				height: 335px
+			}
+		}
 		#SpecialHeightF {
 			.nav-submenu {
 				height: 315px;
 				@include break(tablet) {
 					height: 435px;
 				}
-			}
-		}	
-		#SpecialHeightD {
-			.nav-submenu {
-				height: 315px
 			}
 		}
 	}
@@ -685,7 +690,6 @@
 		.SubHeader {
 			background: #777D82; 
 			text-align: center;
-			//box-shadow: inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 			box-shadow: inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 			li {
 				text-align: center;
@@ -706,27 +710,34 @@
 			li:hover {
 				border-bottom: 1px solid white;
 			}
+			.DefArrow{
+				a:after {
+					@include triangle(right,#bbb,5,5);
+					opacity: 1;
+				}
+			}
 			.PArrow{
 				a:after {
 					@include triangle(right,#99B3FF,5,5);
-				
+					opacity: 1;
 				}
 			}
 			.YArrow{
 				a:after {
 					@include triangle(right,#FFDC73,5,5);
-				
+					opacity: 1;
 				}
 			}	
 			.OArrow{
 				a:after {
 					@include triangle(right,$orange,5,5);
-				
+					opacity: 1;
 				}
 			}
 			.GArrow{
 				a:after {
 					@include triangle(right,#6DD900,5,5);
+					opacity: 1;
 				}
 			}
 			.NoArrow {
@@ -821,6 +832,7 @@
 							margin-top: -1px;
 							width: 15px; height: 15px;
 							@include triangle(down,white,4,4);
+							opacity: 0.4;
 						}
 						
 						&.active {
@@ -859,6 +871,7 @@
 					}
 					
 					.nav-submenu {
+						display: none;
 						position: absolute;
 						left: 0; top: 38px;
 						width: 110%;
@@ -867,10 +880,10 @@
 						background: #777D82;
 						height: 285px;
 						box-shadow: 0 3px 0px rgba(34,25,25,0.10),inset 0px 3px 0px 0px rgba(0,0,0,0.15);
-						//box-shadow:0 2px 2px rgba(34, 25, 25, 0.20),inset 0px 3px 2px 0px rgba(0,0,0,0.15);
 						
 						.wrapper {
 							padding: 20px 0;
+
 							@include break(tablet){
 								width: 85%;
 							}
@@ -966,6 +979,7 @@
 										top: 50%; right: 5px;
 										margin-top: -5px;
 										@include triangle(right,$orange,5,7);
+										opacity: 0.85;
 									}
 
 								}
@@ -1016,6 +1030,7 @@
 										padding-bottom: 185px;
 										margin-bottom: 10px;
 										position: relative;
+										border-radius: 3px;
 
 										&.back1 {
 											background-image: url(http://www.techspot.com/images/menu/back1.png);
@@ -1037,7 +1052,9 @@
 											background-position: center center;
 											background-repeat: no-repeat;
 											overflow: hidden;
-											background-size: 120% auto;
+											//background-size: 120% auto;
+											background-size: cover;
+											border-radius: 3px;
 
 											&.icon {
 												background-size: 120px auto;
@@ -1155,11 +1172,14 @@
 #Mobileheader {
 	width: 250px;
 	height: 100%;
-	overflow: hidden;
+	//overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
 	background: #263340;
 	position: fixed;
 	z-index: 10;
     top: 0;
+    //left: -250px;
 
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;

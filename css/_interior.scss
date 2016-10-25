@@ -446,6 +446,12 @@ body.interior {
 			display: table-cell; 
 			vertical-align: middle;
 		}
+
+		&.prev-next { 
+			display: none;
+		}
+
+		/*
 		&.prev-next {
 			a {
 				line-height: 100px;
@@ -487,7 +493,7 @@ body.interior {
 				}
 				
 				&.prev {
-					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
+					// background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg');
 					background-repeat: no-repeat;
 					background-size: cover !important;
 					background-position: center center;
@@ -519,7 +525,7 @@ body.interior {
 				}
 				
 				&.next {
-					/* background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg'); */
+					// background: url('http://www.techspot.com/images2/news/ts3_thumbs/2014-08-18-ts3_thumbsfeb.jpg');
 					background-repeat: no-repeat;
 					background-size: cover !important;
 					background-position: center center;
@@ -527,7 +533,7 @@ body.interior {
 
 					span {
 						background-color: rgba(16, 90, 178, 0.8);
-						/* background: #B2B9BE; */
+						// background: #B2B9BE;
 						@include border-radius(1px);
 						@include col-last(1,6,0);
 						&:after {		
@@ -579,6 +585,8 @@ body.interior {
 			}
 			
 		}
+		*/
+
 	}
 
 	&.white {
@@ -669,16 +677,14 @@ body.interior {
 	}
 
 
-	&.download-index {
-		#content {
-			.wrapper{
-				.col-2-3 {
-					@include break(mobile) {
-						width: 96%;
-						margin: 0 2%;
-					}
-				}
+	&.download {
+		.download-index-wrapper {
+			@include break(mobile) {
+				width: 96%;
+				margin: 0 auto;
 			}
+		}
+		.download-index {
 			h1 {
 				color: #1e2833;
 				font-weight: 500;
@@ -732,10 +738,7 @@ body.interior {
 				}
 			}
 		}
-	}
 
-	&.download-index,
-	&.download {
 		.downloads-list {
 			padding: 35px 0 0;
 
@@ -805,6 +808,41 @@ body.interior {
 							padding-bottom: 1px;
 						}
 					  }
+
+					em {
+						display: inline-block;
+						margin-left: 10px;
+						font-family: $f-helvetica-roboto;
+						font-size: .6em;
+						font-style: normal;
+						padding: 0px 6px;
+						color: white;
+						text-transform: lowercase;
+
+						&:hover {
+							text-decoration: none;
+							border: none !important;
+						}
+
+						&.editors-pick {
+							background-color: #0088CC;
+
+							&:hover {
+								background-color: #00a0f0;
+								text-decoration: none;
+							}
+						}
+						
+						&.popular {
+							background-color: #e67200;
+
+							&:hover {
+								background-color: #ff7f00;
+								text-decoration: none;
+							}
+						}
+					}
+
 				}
 
 				.bio {
@@ -848,6 +886,7 @@ body.interior {
 			  font-size: 12px;
 			  font-weight: 400;
 			  color: #888;
+
 			  li {
 				display: inline;
 				border-right-width: 1px;
@@ -869,10 +908,7 @@ body.interior {
 					padding-left: 8px;
 					padding-right: 8px;
 					border: none;
-
-					&.right {
-					  display: none;
-					}
+					width: 28% !important;
 				}
 
 			  }
@@ -1019,6 +1055,11 @@ body.interior {
 					}
 				}
 
+				.subver {
+					font-size: 0.75em;
+				    color: #777;
+				}
+
 				em {
 					font-style: normal;
 					font-size: .7em;
@@ -1111,12 +1152,103 @@ body.interior {
 					@include col(1,1,0);
 					margin-bottom: 25px;
 				}
+			}
+			
+			.articleBody {
+				//@include col-last(8.15,10,2);
+				margin-bottom: 30px;
+
+				@include break(mobile){
+					@include col-last(1,1,0);
+				}
+
+				blockquote {
+					background: white;
+					margin: 5px 20px 25px 0px;
+					padding: 15px 10px 0px 15px;
+					border-left: 3px solid #ccc;
+				}
+
+				blockquote.twitter-tweet, twitterwidget.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+				}
+
+				iframe {
+					&.twitter-tweet {
+					margin: 7px auto !important;
+					margin-bottom: 25px !important;
+					}
+				}
+			}
+			
+		}
+		
+		#sidebar {
+			@include break(v-tablet) {
+				display: none !important;
+				@include col-last(1,3,3);
+			}
+			@include break(mobile){
+				display: none;
+			}
+		}
+	}
+
+	&.news {
+		#sidebar {
+			margin-top: -50px;
+		}
+
+		#billboard_placeholder {
+			padding: 20px 0 0;
+		}
+
+		#content-header {
+			.wrapper {
+				padding: 20px 0 50px;
+			}
+			/*
+			.title-group {
+				h1.large {
+					margin-right: 200px;
+
+					@include break(v-tablet) {
+						margin-right: 0;
+					}
+				}
+			}
+			*/
+		}
+
+		#content {
+			.articleBody {
+				margin-left: 95px;
+				margin-bottom: 25px;
+				min-height: 300px;
 				
+				@include break(mobile) {
+					margin-bottom: 5px;
+				}
+			}
+			
+			.social-column {
+				.social:hover {
+				  	.SocialHover {
+						right: -100px;
+						@include break(mobile){
+							right: 0 !important;
+							top:auto !important;
+						}
+					}
+			  	}
+
 				.tags {
 					width: 60px;
 					margin: 25px 0 60px;
 					font-size: .7em;
 					line-height: 184%;
+					overflow: hidden;
 
 					@include break(mobile){
 						display: none;
@@ -1153,106 +1285,32 @@ body.interior {
 							display: block;
 						}
 					}
+
 					&:hover {
+						overflow: visible;
+						border-radius: 0px 0px 8px 0px;
+						background: #f5f5f5;
+						width: 150px;
+						padding: 0px 5px 15px 0px;
+						box-shadow: 3px 5px 5px #bbb;
+						color: #000;
+
 						li {
 							display: block;
+							//background-color: #fff;
+
 							a {
-								color: #000;
+								color: $blue;
+
+								&:hover {
+									font-weight: 500;									
+								}
 							}
 						}
 					}
-					
-				}
-				
-			}
-			
-			.articleBody {
-				//@include col-last(8.15,10,2);
-				margin-bottom: 30px;
 
-				@include break(mobile){
-					@include col-last(1,1,0);
 				}
 
-				blockquote {
-					background: white;
-					margin: 5px 20px 25px 0px;
-					padding: 15px 10px 0px 15px;
-					border-left: 3px solid #ccc;
-				}
-
-				blockquote.twitter-tweet, twitterwidget.twitter-tweet {
-					margin: 7px auto !important;
-					margin-bottom: 25px !important;
-				}
-
-				iframe {
-					&.twitter-tweet {
-					margin: 7px auto !important;
-					margin-bottom: 25px !important;
-					}
-				}
-			}
-			
-		}
-		
-		#sidebar {
-			margin-top: -50px;
-
-			@include break(v-tablet) {
-				display: none !important;
-				@include col-last(1,3,3);
-			}
-			@include break(mobile){
-				display: none;
-			}
-		}
-	}
-
-	&.news {
-		#billboard_placeholder {
-			padding: 20px 0 0;
-		}
-
-		#content-header {
-			.wrapper {
-				padding: 20px 0 50px;
-			}
-			.title-group {
-				h1.large {
-					margin-right: 200px;
-
-					@include break(v-tablet) {
-						margin-right: 0;
-					}
-				}
-			}
-		}
-
-		#content {
-			.articleBody {
-				margin-left: 95px;
-				margin-bottom: 25px;
-				min-height: 300px;
-				
-				@include break(mobile) {
-					margin-bottom: 5px;
-				}
-			}
-			
-			.social-column {
-			  .tags {
-				//margin: 25px auto 60px;
-			  }
-			  .social:hover {
-				  .SocialHover {
-					right: -100px;
-					@include break(mobile){
-						right: 0 !important;
-						top:auto !important;
-					}
-				}
-			  }
 			}
 			
 		}
@@ -1273,7 +1331,7 @@ body.interior {
 			display: none;
 			text-align: center;
 			padding-top: 20px;
-			padding-bottom: 50px;
+			padding-bottom: 60px;
 			background-color: $light-grey;
 			@include break(mobile){
 				display: block;
@@ -1283,8 +1341,8 @@ body.interior {
 			font-size: 0.9em;
 			display: block;
 			padding-top: 5px;
-			height: 30px;
-			line-height: 25px;
+			height: 35px;
+			line-height: 30px;
 			font-weight: 600;
 			border: solid 1px #aaa;
 			@include border-radius(3px);
@@ -1296,7 +1354,7 @@ body.interior {
 			}
 			
 			span.count {
-				background: grey;
+				background: #7393C8;
 				border-radius: 100px;
 				min-width: 15px;
 				display: inline-block;
@@ -1305,6 +1363,10 @@ body.interior {
 				padding-right: 5px;
 				line-height: 24px;
 				margin-left: 5px;
+
+				&.many {
+					background: #c00;
+				}
 			}
 		}
 	}
@@ -1356,10 +1418,6 @@ body.interior {
 						float: right !important;
 						margin: 0 0 0 10px;
 					}
-				}
-
-				h1 {
-					line-height: 120%;
 				}
 				
 				h2 {
@@ -1497,11 +1555,6 @@ body.interior {
 					border: 1px solid #ccc;
 				}
 			}
-		
-		}
-
-		#sidebar {
-			margin-top: 0;
 		}
 	}
 
@@ -1926,11 +1979,13 @@ body.interior {
 			}
 		}
 		#sidebar {
+			//@include col-last(1,3,0);
+			//width: 27%;
+
 			@include break(mobile){
 				display: none;
 			}
-			@include col-last(1,3,0);
-			width: 27%;
+
 			.SideTitle{
 				line-height: 31px;
 				background-color: $blue;
@@ -2620,7 +2675,7 @@ body.interior {
 			.title-group {
 				h1.large {
 					font-weight: 500;
-					padding-top: 15px;
+					padding: 15px 0 8px;
 
 					@include break(mobile){
 						padding-top: 0px;
@@ -3158,30 +3213,55 @@ body.interior {
 		margin: 20px 0 40px;
 		font-size: 0.9em;
 		background: #fff;
-		padding: 30px 20px 15px;
-		border-top: 4px solid #eee;
-		border-bottom: 4px solid #eee;
+	    padding: 32px 20px 15px;
+	    border-top: 20px solid #eaeaea;
+	    border-bottom: 20px solid #eaeaea;
+
+	    @include break(mobile){
+	    	padding: 15px 20px 15px;
+	    }
+
+	    &.outstanding {
+	    	border-top: 80px solid #eaeaea;
+	    	.frame { margin-top: 25px; }
+
+		    @include break(mobile){
+		    	border-top: 65px solid #eaeaea;
+		    	.frame { margin: 8px 0 0; }
+		    }
+	    }
+
+	  .score_box {
+		float: left;
+		width: 115px;
+		height: 120px;
+		position: relative;
+
+		@include break(mobile){
+			float: none;
+			margin: 0 auto 10px;
+		}
+	  }
 
 	  .pf_score {
 		font-family: $f-helvetica-roboto;
-		font-size: 45px;
-		height: 65px;
-		line-height: 75px;
-		width: 110px;
+		font-size: 50px;
+		width: 115px;
+		padding: 10px 0 6px;
 		margin: 0;
 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 		@include border-radius(3px);
 	  }
 
 	  .ts_brand {
-		font-family: Roboto;
+		font-family: $f-primary;
 		font-size: 0.80em;
 		text-transform: uppercase;
 		font-weight: 500;
 		color: #fff;
 		text-align: center;
 		line-height: 1.2;
-		padding-bottom: 10px;
+		padding-bottom: 14px;
 		@include border-radius(3px);
 	  }
 	  ul {
@@ -3196,36 +3276,40 @@ body.interior {
 		  margin-right: 10px;
 		}
 	  }
-	  .score_box {
-		float: left;
-		width: 110px;
-		height: 120px;
-		position: relative;
+
+	  .outstanding {
+		display: block;
+		height: 80px;
+		width: 305px;
+		margin: -105px 0 0;
+		background: url('http://www.techspot.com/images/outstanding-reviewbox_big1.png');
+		background-size: cover;
 
 		@include break(mobile){
-			float: none;
-			margin: 0 auto 10px;
+			height: 65px;
+			width: 250px;
+			margin: -75px 0 0 -75px;
 		}
-	  }
-	  .outstanding .frame {
+
 		/*
-		background: url(http://static.techspot.com/images/outstanding_score.png) no-repeat;
-		height: 86px;
-		width: 83px;
-		position: absolute;
-		left: -4px;
-		top: 1px;
+			display: block;
+			height: 68px;
+			width: 300px;
+			margin: -105px 0 0;
+			background: url('http://www.techspot.com/images/outstanding-reviewbox_big2.png');
+			background-size: cover;
 		*/
 	  }
+
 	  .content_box {
-		padding-left: 130px;
+		padding-left: 140px;
 		font-size: 1.05em;
 		padding-top: 2px;
 
 		@include break(mobile){
 			padding-left: 0;
 			font-size: .95em;
-			margin-top: 140px;
+			margin-top: 145px;
 		}
 	  }
 	  .label {
@@ -3495,12 +3579,13 @@ body.interior.slide-article {
 				}
 
 				a {
-					box-shadow: inset 0 -3px 0 #FBBB76;
+					box-shadow: inset 0 -2px 0 #FBBB76;
 					padding-bottom: 1px;
 
 					&:hover {
-						box-shadow: inset 0 -1px 0 #FBBB76;
+						box-shadow: inset 0 -2px 0 #FBBB76;
 						padding-bottom: 1px;
+						color: #FBBB76;
 					}
 				}
 
