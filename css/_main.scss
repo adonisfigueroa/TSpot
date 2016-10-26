@@ -3476,7 +3476,7 @@ span._bar {
 	  @include col(1,4,2);
 	  @include outer-glow(10,0,.2);
 	  
-	  &:nth-child(4) {
+	  &:nth-child(4),&:nth-child(8) {
 		@include col-last(1,4,2);
 	  }
 	  
@@ -3621,7 +3621,7 @@ span._bar {
 		@include col(1,1,0);
 		margin-bottom: 15px;
 	}
-	&:nth-child(4){
+	&:nth-child(4), &:nth-child(8){
 	@include break(v-mobile){
 		@include col(1,1,0);
 		}
