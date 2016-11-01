@@ -1391,7 +1391,6 @@ body.interior {
 			}
 			.title-group {
 				margin-top: 30px;
-				margin-right: 330px;
 
 				@include break(tablet){
 					margin-right: 0;
@@ -1435,10 +1434,10 @@ body.interior {
 					font-family: $f-primary;
 
 					&.hasfigure {
-						padding-left: 105px;
+						padding: 2px 300px 0 106px;
 
 						@include break(mobile){
-							padding-left: 0px;
+							padding: 0px;
 						}
 					}
 
