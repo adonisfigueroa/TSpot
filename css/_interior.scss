@@ -1064,6 +1064,15 @@ body.interior {
 					}
 				}
 
+				h2 {
+					color: #999;
+					font-size: 1.1em;
+					font-weight: 500;
+					font-family: Roboto;
+					letter-spacing: -.333px;
+					padding: 5px 0px 5px 0px;
+				}
+
 				.subver {
 					font-size: 0.75em;
 				    color: #777;
@@ -2578,6 +2587,23 @@ body.interior {
 		}
 	}
 
+	.related-query {
+		margin: -10px 0 20px;
+
+		h3 {
+		    font-size: 1.1em !important;
+		    font-weight: 400;
+	        padding: 10px 0 15px;
+		}
+
+		ul {
+			margin: 0 0 35px 0;
+			
+			li {
+				list-style-type: none;
+			}
+		}
+	}
 
 	.comment-count-block {
 		background-image: url(../images/icon-comments-lg.svg);
@@ -2642,27 +2668,6 @@ body.interior {
 
 		@include break(mobile) {
 			margin-bottom: 30px;
-/*
-			background-position: left 2px;
-			background-size: 30px;
-			padding-bottom: 3px;
-
-			a {
-				padding-left: 40px;
-
-				span {
-					&.comment-count {
-						color: #105ab2;
-						font-size: 0.9em;
-						font-weight: 400;
-					}
-					
-					&.interactions-count {
-						display: none;
-					}
-				}
-			}
-*/
 		}
 		
 	}
