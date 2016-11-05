@@ -8,7 +8,8 @@ $tile-font-size: 1.1em;
 
 .home {
 #masthead {
-	background: rgba(30, 41, 51, 0.5);
+	//0.5 grey, 1 dark
+	background: rgba(30, 41, 51, 0.95);
 	height: ($tile-height * 3) + 2;
 	position: relative;
 	left: 0;

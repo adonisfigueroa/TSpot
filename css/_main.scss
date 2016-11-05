@@ -2535,7 +2535,7 @@ span._bar {
 	
 	li {
 		display: inline-block;
-		line-height: 50px;
+		line-height: 45px;
 		
 		&.indicator {
 			margin: 0 !important;
@@ -2552,9 +2552,10 @@ span._bar {
 		float: left;
 		ul {
 			li {
-				font-family: $f-primary;
-				font-weight: 500;
-				font-size: 0.9em;
+				font-family: $f-condensed;
+				font-weight: 600;
+				font-size: 0.95em;
+				text-transform: uppercase;
 				margin-right: 30px;
 				text-shadow: 0 1px 0 #fff;
 				
@@ -2565,7 +2566,7 @@ span._bar {
 				
 				&.active {
 					a {
-						color: $dark-grey !important;
+						color: #4b4b4b !important;
 						text-shadow: none !important;
 					}
 				}
@@ -2576,10 +2577,11 @@ span._bar {
 	.layout-selector {
 		float: right;
 		li {
-			font-size: .66em;
-			font-weight: 400;
-			letter-spacing: -0.2px;
-			//position: relative;
+			font-size: .55em;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: -0.333px;
+			color: #4b4b4b;
 			
 			&.standard,
 			&.full {
@@ -2589,7 +2591,7 @@ span._bar {
 					display: block;
 					position: relative;
 					padding-left: 15px;
-					color: #666;
+					color: #888;
 					&:before {
 						content:"";
 						display: block;
@@ -4266,6 +4268,9 @@ table {
 	&.dark {
 		//background-color: #1e2933;
 		background-color: rgb(30,41,51);
+	}
+	&.darkb {
+		background-color: rgba(30,41,51,0.95);
 	}
 	&.dark2 {
 		background-color: rgba(30,41,51,0.6);
