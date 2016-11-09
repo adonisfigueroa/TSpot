@@ -638,7 +638,7 @@ body.interior {
 			background-color: white;
 			
 			.wrapper {
-				padding: 25px 0 35px;
+				padding: 35px 0 45px;
 
 				@include break(mobile) {
 					width: 96%;
@@ -1521,15 +1521,17 @@ body.interior {
 				ul.cons {
 				  padding: 15px 15px 15px 10px;
 				  margin-bottom: 0;
-				  font-size: 0.80em;
+				  font-size: 0.85em;
+
 					@include break(v-mobile){
 						height: inherit !important;
 					}
+					
 					li {
-					  list-style-type: none;
-					  position: relative;
-					  margin-bottom: 5px;
-						line-height: 200%;
+						list-style-type: none;
+						position: relative;
+						margin-bottom: 10px;
+						line-height: 150%;
 						padding-left: 10px;
 					
 						&:before {
