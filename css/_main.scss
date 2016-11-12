@@ -1620,7 +1620,7 @@ h3.longtype {
   margin: -5px 0 35px;
 
 	&.related-stories {
-		margin: 15px 0 15px;
+		margin: 15px 0 30px;
 		display: block !important;
 
 		ul.teaser-list {
@@ -4330,7 +4330,11 @@ table {
 	position: absolute;
 	padding: 35px 20px 40px 20px;
 	background-color: #f5f5f5;
-	margin-top: 15px;
+	margin-top: 66px; //15px to align with native ad
+}
+
+.adContainerNewsLeadMid {
+	margin: -5px 0 15px;
 }
 
 .adContainerNewsMob {
