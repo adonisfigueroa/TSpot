@@ -1099,6 +1099,17 @@ body.interior {
 						}
 					}
 
+					span.numCom {
+						padding-left: 12px;
+						margin-left: 10px;
+						border-left: 2px solid #ccc;
+
+						a {
+							font-weight: 400;
+							color: #5a6169;
+						}
+					}
+
 					span.sponsored {
 						background-color: #495693;
 						margin: 0 4px 0 0;
@@ -1226,22 +1237,11 @@ body.interior {
 			.wrapper {
 				padding: 20px 0 50px;
 			}
-			/*
-			.title-group {
-				h1.large {
-					margin-right: 200px;
-
-					@include break(v-tablet) {
-						margin-right: 0;
-					}
-				}
-			}
-			*/
 		}
 
 		#content {
 			.articleBody {
-				margin-left: 95px;
+				/* margin-left: 95px; */
 				margin-bottom: 25px;
 				min-height: 300px;
 				
@@ -1485,9 +1485,12 @@ body.interior {
 					padding-top: 0px !important;
 				}
 			}
+			
+			/*
 			#pros_cons.collapsed li:nth-child(n+6){
 				display: none;
 			}
+			*/
 
 			@include break(mobile){
 				margin-top: 0px !important;
@@ -2696,9 +2699,26 @@ body.interior {
 						padding-top: 0px;
 					}
 				}
+
+				h2 {
+					color: #eee;
+					font-size: 1.5em;
+					font-weight: 400;
+					padding: 0px 0px 5px 0;
+
+					@include break(mobile){
+						font-size: .85em;
+						padding: 0px 0px 5px 0;
+						margin-top: -3px;
+					}
+				}
 				
 				em {
 					font-size: 0.75em;
+
+					@include break(mobile){
+						font-size: .65em;
+					}
 
 					time {
 						a {
@@ -2752,23 +2772,26 @@ body.interior {
 						&.small {
 							font-size: 2em;
 						}
-
-						/*
-						@include break(tablet){
-							font-size: 2.1em;
-						}
-						@include break(mobile){
-							font-size: 1.3em;
-						}
-						@include break(v-mobile){
-							font-size: 1.2em;
-						}
-						*/
 					}
-					em {
-						@include break(mobile){
+
+					h4 {
+						color: #fff;
+						font-size: .75em;
+						font-weight: 400;
+						padding: 5px 0px 5px 5px;
+						text-shadow: 1px 1px 5px black;
+
+						/* @include break(mobile){
 							display: none;
-						}
+						} */
+					}
+
+					em {
+						font-size: 0.7em;
+
+						/* @include break(mobile){
+							display: none;
+						} */
 					}
 				}
 

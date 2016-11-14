@@ -47,7 +47,7 @@ body {
 	}
 }
 .rating {
-	font-family: $f-helvetica-roboto;
+	font-family: $f-helvetica;
 }
 #GlobalWrapper {
 	width: 100%;
@@ -1771,7 +1771,7 @@ h3.longtype {
 		}
 		
 		.rating {
-			font-family: $f-helvetica-roboto;
+			font-family: $f-helvetica;
 			font-weight: 500;
 			color: white;
 			font-size: 1.9em;
@@ -3494,7 +3494,7 @@ span._bar {
 		position: relative;
 		
 		.rating {
-		  font-family: $f-helvetica-roboto;
+		  font-family: $f-helvetica;
 		  font-weight: 500;
 		  color: white;
 		  font-size: 1.9em;
@@ -3560,7 +3560,7 @@ span._bar {
 	}
 	
 	.rating {
-	  font-family: $f-helvetica-roboto;
+	  font-family: $f-helvetica;
 	  font-weight: 500;
 	  color: white;
 	  font-size: 1.5em;
