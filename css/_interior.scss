@@ -2618,6 +2618,7 @@ body.interior {
 		overflow: visible;
 		letter-spacing: -.333px;
 		font-family: $f-primary;
+		float: left;
 
 		&.features {
 			font-size: 0.8em;
@@ -2676,7 +2677,75 @@ body.interior {
 		}
 		
 	}
-	
+
+	.social-share-svg {
+	    margin-left: 220px;
+	    float: right;
+	    font-family: Roboto;
+	    letter-spacing: -.333px;
+
+   		.social-share-text {
+			float: left;
+		    font-size: .8em;
+		    margin: 15px 10px 0 0;
+		    color: #444;
+		}
+
+		.resp-sharing-button__link {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			margin: 0.5em;
+			cursor: pointer;
+		}
+
+		.resp-sharing-button__icon {
+			display: inline-block;
+			stroke: #fff;
+			fill: none;
+			svg {
+				width: 1em;
+				height: 1em;
+			}
+		}
+
+		.resp-sharing-button {
+			border-radius: 5px;
+			transition: 25ms ease-out;
+			padding: 7px 12px 4px;
+
+			span {
+				padding-left: 0.4em;
+			}
+		}
+
+		.resp-sharing-button__icon--solid {
+			fill: #fff;
+			stroke: none;
+		}
+		.resp-sharing-button__icon--solidcircle {
+			fill: #fff;
+			stroke: none;
+		}
+		.resp-sharing-button--twitter {
+			background-color: #55acee;
+			&:hover {
+				background-color: #2795e9;
+			}
+		}
+		.resp-sharing-button--facebook {
+			background-color: #3b5998;
+			&:hover {
+				background-color: #2d4373;
+			}
+		}
+		.resp-sharing-button--reddit {
+			background-color: #fd7524;
+			&:hover {
+				background-color: #ff6000;
+			}
+		}
+	}
 
 	&.article {
 		#content-header {
