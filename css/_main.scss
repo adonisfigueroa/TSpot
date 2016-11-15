@@ -430,7 +430,7 @@ body.products {
 			}
 
 			@include break(mobile) {
-				font-size: 1.4em !important;
+				font-size: 1.3em !important;
 			}
 		}
 
@@ -438,7 +438,7 @@ body.products {
 			padding: 10px 0 20px;
 
 			@include break(mobile) {
-				font-size: 1.25em !important;
+				font-size: 1.2em !important;
 			}
 		}
 
@@ -446,7 +446,7 @@ body.products {
 			padding: 6px 0 12px;
 
 			@include break(mobile) {
-				font-size: 1.15em !important;
+				font-size: 1.1em !important;
 			}
 		}
 
