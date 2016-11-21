@@ -652,6 +652,16 @@ body.interior {
 				figure {
 					float: left !important;
 					padding-right: 10px;
+
+					@include break(mobile) {
+						padding-right: 6px;					
+
+						img {
+							width: 50px;
+							height: 39px;
+							margin-top: -2px;
+						}
+					}
 				}
 				
 				h1.large {
@@ -670,11 +680,13 @@ body.interior {
 				}
 
 				h2 {
-					font-size: 0.9em;
-					font-weight: 300;
+					font-size: 0.85em;
+					font-weight: 400;
+				    color: #222;
+				    font-family: $f-paragraph;
 
 					@include break(mobile) {
-						font-size: 0.8em;
+						font-size: 0.75em;
 					}
 				}
 			}
