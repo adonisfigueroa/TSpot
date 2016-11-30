@@ -620,6 +620,75 @@ body.interior {
 		}
 	}
 
+	&.dark {
+		.cta {
+		    background-color: #333c46 !important;
+		}
+
+		#content {
+			background: #1e2933 !important;
+
+			#content-header {
+				background-color: #333c46;
+
+				h1 {
+					color: #fff !important;
+				}
+
+				h2, em, em a {
+					color: #eee !important;
+				}
+			}
+
+			p {
+			    color: #eee !important;
+
+				a {
+					box-shadow: inset 0 -2px 0 #FBBB76;
+					padding-bottom: 1px;
+
+					&:hover {
+						box-shadow: inset 0 -2px 0 #FBBB76;
+						padding-bottom: 1px;
+						color: #FBBB76;
+					}
+				}
+			}
+
+			.comment-count-block a span.comment-count {
+			    color: #629dca;
+			}
+			.comment-count-block a span.interactions-count {
+			    color: rgba(98, 157, 202, 0.74);
+			}
+			.social-share-svg .social-share-text {
+			    color: #ddd;
+			}
+			.adContainerNews {
+				background: #1e2933 !important;
+			}
+
+
+			.related-query, .related-products {
+				h3 {
+					color: #eee !important;
+				}
+				a {
+					color: #ccc !important;
+				}
+			}
+		}
+
+		#comments #add-new-comment {
+		    background-color: !important;
+		    padding-top: 40px;
+		}
+
+		#sidebar ul.teaser-list li a h3 {
+		    color: #ccc;
+		}
+	}
+
 	&.category {
 		article {
 			h2 {
