@@ -7,10 +7,17 @@
 
 $isAMP: 'true';
 @import
-"_header-featured.scss",
 "_mobileMenu.scss",
-"_chicklets.scss",
-"_footer.scss";
+"_footer.scss",
+
+//Home
+"_carousel-amp.scss",
+"_news-list.scss",
+"_slide-sort-selector.scss",
+
+//Story + Featured
+"_header-featured.scss",
+"_chicklets.scss";
 
 
 /**** HEADER ****/
