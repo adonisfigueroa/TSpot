@@ -11,17 +11,17 @@ $isAMP: 'true';
 "_footer.scss",
 
 //Home
-"_carousel-amp.scss",
+"components/_carousel-amp.scss",
+"components/_slide-sort-selector.scss",
 "_home.scss",
-"_news-list.scss",
-"_slide-sort-selector.scss",
+"news/_news-list.scss",
 
 //Downloads
-"_interior_download.scss",
+"downloads/_interior_download.scss",
 
 //Story + Featured
 "_header-featured.scss",
-"_chicklets.scss";
+"components/_chicklets.scss";
 
 
 /**** HEADER ****/
