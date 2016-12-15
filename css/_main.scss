@@ -893,7 +893,8 @@ body.products {
     -moz-transition: .4s all;
     transition: .4s all;
     &:hover {
-      -webkit-filter: brightness(75%);
+	  -webkit-filter: saturate(3);
+      // -webkit-filter: brightness(75%);
     }
   }
   .play {
