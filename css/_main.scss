@@ -912,7 +912,6 @@ body.products {
 
 .download-list,
 .forum-list {
-	margin: 0 5px 10px -5px;
 	padding: 10px 0;
 	
 	li {
@@ -923,7 +922,7 @@ body.products {
 		
 		& > a {
 			display: block;
-			color: #111;
+			color: #444;
 			line-height: 1.2;
 			font-weight: 400;
 			padding-bottom: 2px;
@@ -987,6 +986,7 @@ body.products {
 }
 
 .download-list {
+	margin: 0 5px 10px -5px;
 	li {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 5% 10%;
@@ -1001,6 +1001,7 @@ body.products {
 }
 
 .forum-list {
+	margin: 0 10px 0px 5px;
 	li {
 		background-image: url(/images/forum-icon.svg);
 		background-position: 5% 15%;
@@ -1010,12 +1011,12 @@ body.products {
 
 		span {
 			a {
-				font-size: 1.05em;
+				font-size: 1em;
 			}
 		}
 
 		.count {
-			margin: 20px 0 0 -35px;
+			margin: 20px 0 0 -30px;
 			float: left;
 		}
 	}

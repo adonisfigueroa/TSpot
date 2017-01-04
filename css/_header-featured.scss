@@ -89,6 +89,7 @@
 		position: absolute;
 		bottom: 80px;
 		width: 85%;
+
 		@include break(tablet){
 			bottom: 100px;
 		}
@@ -100,6 +101,15 @@
 		}
 		@include break(v-mobile){
 			bottom: 75px;
+		}
+
+		&.centered {
+			text-align: center;
+			width: 100%;
+
+			.rating {
+				bottom: 35px;
+			}
 		}
 		
 		h1.large {
@@ -171,13 +181,13 @@
 		position: absolute;
 		bottom: 55px;
 		right: 0;
-		font-size: 2.8em;
+		font-size: 2.5em;
 		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 70px;
+		line-height: 60px;
 		padding: 5px;
-		width: 100px;
+		width: 90px;
 		text-align: center;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);
