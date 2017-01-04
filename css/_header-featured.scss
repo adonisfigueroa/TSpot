@@ -90,6 +90,18 @@
 		bottom: 80px;
 		width: 85%;
 
+		&.centered {
+			text-align: center;
+			width: 100%;
+		    bottom: 150px;
+
+			@include break(tablet){
+				width: 85%;
+				text-align: left;
+				bottom: 100px;
+			}
+		}
+
 		@include break(tablet){
 			bottom: 100px;
 		}
@@ -101,15 +113,6 @@
 		}
 		@include break(v-mobile){
 			bottom: 75px;
-		}
-
-		&.centered {
-			text-align: center;
-			width: 100%;
-
-			.rating {
-				bottom: 35px;
-			}
 		}
 		
 		h1.large {
