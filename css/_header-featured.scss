@@ -79,11 +79,15 @@
 		display: block;
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		//OLDER @include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.03,$end_color:#1E2933,$end_cent:100%,$end_alpha:1,$degree:180deg);
-		
-		//darker@include gradient-trans-percent($start_color:#1E2933,$start_cent:15%,$start_alpha:0.40,$end_color:#1E2933,$end_cent:120%,$end_alpha:1,$degree:210deg);
 		@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.20,$end_color:#1E2933,$end_cent:95%,$end_alpha:1,$degree:200deg);
 	}
+
+	&.centered {
+		&:before {
+			@include gradient-trans-percent($start_color:#1E2933,$start_cent:25%,$start_alpha:0.20,$end_color:#1E2933,$end_cent:90%,$end_alpha:1,$degree:200deg);
+		}
+	}
+
 	
 	.title-group {
 		position: absolute;
@@ -93,7 +97,7 @@
 		&.centered {
 			text-align: center;
 			width: 100%;
-		    bottom: 150px;
+		    bottom: 180px;
 
 			@include break(tablet){
 				width: 85%;

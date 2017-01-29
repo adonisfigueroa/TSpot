@@ -3,7 +3,7 @@ $tall-tile-height: ($tile-height * 2) + 1;
 $tile-width: 381px;
 $tile-width-sec: 380px;
 
-$tall-tile-font-size: 1.6em;
+$tall-tile-font-size: 1.5em;
 $tile-font-size: 1.1em;
 
 .home {
@@ -119,10 +119,20 @@ $tile-font-size: 1.1em;
 
 			&.bgc-dark {
 				a {
-					background: linear-gradient(345deg, rgba(21, 76, 143, 0.55) 45%, rgba(30, 41, 51, 0.75) 85%);
+					background: linear-gradient(335deg, rgba(21,76,143,0.45) 30%, rgba(30,41,51,0.85) 85%);
 
 					&:hover {
-						background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 35%, rgba(30, 41, 51, 0.75) 65%);
+						background: linear-gradient(335deg, rgba(21,76,143,0.6) 20%, rgba(30,41,51,0.85) 85%);
+					}
+				}
+			}
+
+			&.bgc-darker {
+				a {
+					background: linear-gradient(335deg, rgba(21,76,143,0.6) 20%, rgba(30,41,51,0.85) 85%);
+
+					&:hover {
+						background: linear-gradient(335deg, rgba(21,76,143,0.8) 10%, rgba(30,41,51,0.80) 85%);
 					}
 				}
 			}
@@ -133,6 +143,16 @@ $tile-font-size: 1.1em;
 
 					&:hover {
 						background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+					}
+				}
+			}
+
+			&.bgc-blue {
+				a {
+					background: linear-gradient(345deg, rgba(21,76,143,0.65) 35%, rgba(30,41,51,0.75) 95%);
+
+					&:hover {
+						background: linear-gradient(345deg, rgba(21,76,143,0.75) 35%, rgba(30,41,51,0.8) 95%);
 					}
 				}
 			}
