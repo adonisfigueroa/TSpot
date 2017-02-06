@@ -94,12 +94,14 @@
 							}
 						
 						&.hover {
-							background-image: url(/images/badge-right-active.svg);
 							background-color: $orange;
+							/*
+							background-image: url(/images/badge-right-active.svg);
 							.login-dropdown {
-								//display: block;
+								display: block;
 							}
-							.loginEspBlock{display: block;}
+							*/
+							.loginEspBlock {display: block;}
 						}
 
 						a {
@@ -814,7 +816,8 @@
 					}
 					
 					a {
-						color: white;
+						color: rgba(255, 255, 255, 0.96);
+						font-weight: 500;
 						position: relative;
 						display: block;
 						padding: 0 27px 0 14px;

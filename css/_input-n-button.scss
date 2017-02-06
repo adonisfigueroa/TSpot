@@ -12,8 +12,7 @@ input[type=password] {
 	
 	&:focus {
 		outline: none;
-	}
-	
+	}	
 }
 
 input[type=submit] {
@@ -62,6 +61,5 @@ input[type=submit] {
 	
 	&.purple {
 		@include gradient(#9b448c,#843d77);
-	}
-	
+	}	
 }

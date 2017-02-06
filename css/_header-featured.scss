@@ -153,7 +153,7 @@
 
 			.author {
 				a {
-					color: white;
+					color: #eee;
 					border-bottom: 1px solid #ccc;
 					padding-bottom: 3px;
 
@@ -167,9 +167,9 @@
 	}
 	
 	.rating {
-		font-family: $f-helvetica-roboto;
+		font-family: $f-helvetica;
 		position: absolute;
-		bottom: 45px;
+		bottom: 55px;
 		right: 0;
 		font-size: 2.8em;
 		font-weight: 500;

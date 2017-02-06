@@ -620,6 +620,75 @@ body.interior {
 		}
 	}
 
+	&.dark {
+		.cta {
+		    background-color: #333c46 !important;
+		}
+
+		#content {
+			background: #1e2933 !important;
+
+			#content-header {
+				background-color: #333c46;
+
+				h1 {
+					color: #fff !important;
+				}
+
+				h2, em, em a {
+					color: #eee !important;
+				}
+			}
+
+			p {
+			    color: #eee !important;
+
+				a {
+					box-shadow: inset 0 -2px 0 #FBBB76;
+					padding-bottom: 1px;
+
+					&:hover {
+						box-shadow: inset 0 -2px 0 #FBBB76;
+						padding-bottom: 1px;
+						color: #FBBB76;
+					}
+				}
+			}
+
+			.comment-count-block a span.comment-count {
+			    color: #629dca;
+			}
+			.comment-count-block a span.interactions-count {
+			    color: rgba(98, 157, 202, 0.74);
+			}
+			.social-share-svg .social-share-text {
+			    color: #ddd;
+			}
+			.adContainerNews {
+				background: #1e2933 !important;
+			}
+
+
+			.related-query, .related-products {
+				h3 {
+					color: #eee !important;
+				}
+				a {
+					color: #ccc !important;
+				}
+			}
+		}
+
+		#comments #add-new-comment {
+		    background-color: !important;
+		    padding-top: 40px;
+		}
+
+		#sidebar ul.teaser-list li a h3 {
+		    color: #ccc;
+		}
+	}
+
 	&.category {
 		article {
 			h2 {
@@ -638,9 +707,10 @@ body.interior {
 			background-color: white;
 			
 			.wrapper {
-				padding: 25px 0 35px;
+				padding: 45px 0;
 
 				@include break(mobile) {
+					padding: 25px 0;
 					width: 96%;
 				}
 			}
@@ -651,6 +721,16 @@ body.interior {
 				figure {
 					float: left !important;
 					padding-right: 10px;
+
+					@include break(mobile) {
+						padding-right: 6px;					
+
+						img {
+							width: 50px;
+							height: 39px;
+							margin-top: -2px;
+						}
+					}
 				}
 				
 				h1.large {
@@ -669,343 +749,16 @@ body.interior {
 				}
 
 				h2 {
-					font-size: 0.9em;
-					font-weight: 300;
-				}
-			}
-		}
-	}
-
-
-	&.download {
-		.download-index-wrapper {
-			@include break(mobile) {
-				width: 96%;
-				margin: 0 auto;
-			}
-		}
-		.download-index {
-			h1 {
-				color: #1e2833;
-				font-weight: 500;
-				font-size: 2em;
-				line-height: 1.4;
-				margin-top: 15px;
-				letter-spacing: -0.333px;
-
-				@include break(mobile) {
-					font-size: 1.5em;
-				}
-			}
-
-			.page-intro {
-				font-size: 0.8em;
-				//font-weight: 300;
-				margin: 10px 0;
-			}
-
-			.downloads-table {
-				margin: 15px auto 25px;
-				color: #05408F;
-				font-size: 0.9em;
-				width: 100%;
-
-				@include break(v-mobile) {
-					margin: 25px auto;
-				}
-
-				td {
-					height: 48px;
-				}
-
-				h2 {
-					line-height: 35px;
-					font-weight: 500;
-					padding-left: 12px;
-
-					@include break(v-mobile) {
-						font-size: .85em;
-						line-height: 1.2;
-						padding-left: 7px;
-					}
-
-					a {
-						&:hover {
-							border-bottom: 1px solid #3470AA;
-							padding-bottom: 1px;
-						}
-					}
-				}
-			}
-		}
-
-		.downloads-list {
-			padding: 35px 0 0;
-
-			@include break(mobile) {
-				padding: 25px 25px 0 5px;
-			}
-
-			.subcats {
-				margin-top: -20px;
-				padding: 0 0 40px 2px;
-
-				h4 {
+					font-size: 0.85em;
 					font-weight: 400;
-					font-size: 0.7em;
-					line-height: 1;
-				}
-
-				ul {
-					font-size: 1.25em;
-					li {
-						margin-bottom: 5px;
-					}
-				}
-			}
-
-			ul {
-			  list-style-image: none;
-			  list-style-type: none;
-			  font-size: 13px;
-			  margin: 0;
-			  padding: 0;
-
-			  li {
-				margin-bottom: 30px;
-				line-height: 22px;
-
-				.figure {
-					display: block;
-					float: left;
-					width: 65px;
-					height: 65px;
-					background-repeat: no-repeat;
-					background-size: contain;
+				    color: #222;
+				    font-family: $f-paragraph;
 
 					@include break(mobile) {
-						width: 60px;
-						height: 60px;
+						font-size: 0.75em;
 					}
 				}
-
-				.hasfigure {
-					margin-left: 85px;
-
-					@include break(mobile) {
-						margin-left: 80px;
-					}
-				}
-
-				.title {
-					  a {
-						color: #05408f;
-						font-weight: 500;
-						font-size: 1.5em;
-
-						&:hover {
-							border-bottom: 1px solid #3470AA;
-							padding-bottom: 1px;
-						}
-					  }
-
-					em {
-						display: inline-block;
-						margin-left: 10px;
-						font-family: $f-helvetica-roboto;
-						font-size: .6em;
-						font-style: normal;
-						padding: 0px 6px;
-						color: white;
-						text-transform: lowercase;
-
-						&:hover {
-							text-decoration: none;
-							border: none !important;
-						}
-
-						&.editors-pick {
-							background-color: #0088CC;
-
-							&:hover {
-								background-color: #00a0f0;
-								text-decoration: none;
-							}
-						}
-						
-						&.popular {
-							background-color: #e67200;
-
-							&:hover {
-								background-color: #ff7f00;
-								text-decoration: none;
-							}
-						}
-					}
-
-				}
-
-				.bio {
-					line-height: 1.6;
-					padding: 3px 0;
-					font-weight: 400;
-					color: #333;
-
-					p { padding: 0 !important; }
-				}
-
-				i {
-				  font-style: normal;
-				  color: #555;
-				}
-
-				.download_rating {
-					float: right;
-					width: 100px;
-					padding: 12px 0 0 10px;
-					min-height: 40px;
-					line-height: 1.7;
-					font-size: .95em;
-
-					.outof {
-						font-size: .85em;
-						letter-spacing: 2px;
-						padding-left: 2px;
-					}
-
-					.votes {
-						font-size: .9em;
-					}
-				}
-
-			  }
 			}
-
-			.subdown {
-			  list-style-type: none;
-			  font-size: 12px;
-			  font-weight: 400;
-			  color: #888;
-
-			  li {
-				display: inline;
-				border-right-width: 1px;
-				border-right-style: solid;
-				border-right-color: #bbb;
-				padding-left: 14px;
-				padding-right: 14px;
-				&.left {
-				  padding-left: 0px;
-				}
-				&.right {
-				  border: none;
-				}
-				&.wide {
-				  width: 25% !important;
-				}
-
-				@include break(mobile) {
-					padding-left: 8px;
-					padding-right: 8px;
-					border: none;
-					width: 28% !important;
-				}
-
-			  }
-
-			  &.drivers {
-				background: white;
-				font-size: 13px;
-				margin: 8px 20px 2px 0px;
-				padding: 8px 5px;
-				border: 1px solid #eee;
-
-				li {
-					display: inline-block;
-					margin-bottom: 0;
-					text-align: center;
-					width: 19%;
-					border-right-color: #ddd;
-				}
-			  }
-
-			}
-
-		/*
-			.sorter {
-			  p {
-				padding: 0;
-			  }
-			  p a:hover {
-				background-color: #27333D;
-				text-decoration: none;
-			  }
-			  float: right;
-			  font-size: 12px;
-			  position: relative;
-			  color: #333;
-			  text-align: right;
-			  z-index: 999;
-			  #sorted_by {
-				font-weight: bold;
-				text-transform: lowercase;
-			  }
-			  ul {
-				position: absolute;
-				display: none;
-				right: 0;
-				top: 18px;
-				width: 120px;
-				background: #F4F5F7;
-				text-align: left;
-				border: 1px solid #ccc;
-				@include border-radius(2px);
-				-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-				-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-			  }
-			  .arrow {
-				width: 10px;
-				height: 10px;
-				background: url(http://static.techspot.com/images/pf_show_sorter.png);
-				display: inline-block;
-				zoom: 1;
-				*display: inline;
-			  }
-			  a {
-				color: #333;
-				background: none !important;
-				padding: 0;
-				text-shadow: none !important;
-			  }
-			  li {
-				background: none;
-				display: block;
-				border: 0;
-				height: 25px;
-				line-height: 25px;
-				margin: 0;
-				padding: 0;
-				.smaller {
-				  font-size: 11px;
-				}
-				a {
-				  display: block;
-				  padding: 0 5px;
-				  -webkit-transition: none;
-				  -moz-transition: none;
-				  -ms-transition: none;
-				  -o-transition: none;
-				  transition: none;
-				  &:hover {
-					background: #32404D !important;
-					color: #fff;
-					text-decoration: none;
-				  }
-				}
-			  }
-			}
-			*/
 		}
 	}
 
@@ -1055,6 +808,15 @@ body.interior {
 					}
 				}
 
+				h2 {
+					color: #888;
+					font-size: 1.1em;
+					font-weight: 400;
+					font-family: Roboto;
+					letter-spacing: -.333px;
+					padding: 5px 0px 5px 0px;
+				}
+
 				.subver {
 					font-size: 0.75em;
 				    color: #777;
@@ -1078,6 +840,17 @@ body.interior {
 			
 						&:hover {
 						  border-bottom: 1px solid #ff7f00;
+						}
+					}
+
+					span.numCom {
+						padding-left: 12px;
+						margin-left: 10px;
+						border-left: 2px solid #ccc;
+
+						a {
+							font-weight: 400;
+							color: #5a6169;
 						}
 					}
 
@@ -1208,22 +981,11 @@ body.interior {
 			.wrapper {
 				padding: 20px 0 50px;
 			}
-			/*
-			.title-group {
-				h1.large {
-					margin-right: 200px;
-
-					@include break(v-tablet) {
-						margin-right: 0;
-					}
-				}
-			}
-			*/
 		}
 
 		#content {
 			.articleBody {
-				margin-left: 95px;
+				/* margin-left: 95px; */
 				margin-bottom: 25px;
 				min-height: 300px;
 				
@@ -1371,78 +1133,6 @@ body.interior {
 		}
 	}
 
-	&.download {
-		#content-header {
-			.wrapper {
-				padding: 25px 0;
-
-				@include break(mobile){
-					padding: 20px 0 10px;
-				}
-			}
-			.title-group {
-				margin-top: 30px;
-				margin-right: 330px;
-
-				@include break(tablet){
-					margin-right: 0;
-				}
-
-				@include break(mobile){
-					margin-top: 15px;
-				}
-
-				.wrapper {
-					padding: 25px 0 35px;
-				}
-
-				figure {
-					width: 100px !important;
-					float: left !important;
-					margin: 0 25px 0 -20px;
-
-					img {
-						max-width: 100%;
-						max-height: 110px;
-					}
-
-					@include break(tablet){
-						margin: 0 25px 0 -10px;
-					}
-
-					@include break(mobile){
-						margin: 0 15px 0 -10px;
-					}
-
-					@include break(v-mobile){
-						float: right !important;
-						margin: 0 0 0 10px;
-					}
-				}
-				
-				h2 {
-					font-size: .9em;
-					font-weight: 300;
-					font-family: $f-primary;
-
-					&.hasfigure {
-						padding-left: 105px;
-
-						@include break(mobile){
-							padding-left: 0px;
-						}
-					}
-
-					p {
-						@include break(mobile){
-							padding: 0px;
-						}
-					}
-				}
-			}
-		}
-	}
-
 	&.product {
 		#content-header {
 			.wrapper {
@@ -1468,9 +1158,12 @@ body.interior {
 					padding-top: 0px !important;
 				}
 			}
+			
+			/*
 			#pros_cons.collapsed li:nth-child(n+6){
 				display: none;
 			}
+			*/
 
 			@include break(mobile){
 				margin-top: 0px !important;
@@ -1504,15 +1197,17 @@ body.interior {
 				ul.cons {
 				  padding: 15px 15px 15px 10px;
 				  margin-bottom: 0;
-				  font-size: 0.80em;
+				  font-size: 0.85em;
+
 					@include break(v-mobile){
 						height: inherit !important;
 					}
+					
 					li {
-					  list-style-type: none;
-					  position: relative;
-					  margin-bottom: 5px;
-						line-height: 200%;
+						list-style-type: none;
+						position: relative;
+						margin-bottom: 10px;
+						line-height: 150%;
 						padding-left: 10px;
 					
 						&:before {
@@ -2570,6 +2265,23 @@ body.interior {
 		}
 	}
 
+	.related-query {
+		margin: -10px 0 20px;
+
+		h3 {
+		    font-size: 1.1em !important;
+		    font-weight: 400;
+	        padding: 10px 0 15px;
+		}
+
+		ul {
+			margin: 0 0 35px 0;
+			
+			li {
+				list-style-type: none;
+			}
+		}
+	}
 
 	.comment-count-block {
 		background-image: url(../images/icon-comments-lg.svg);
@@ -2579,6 +2291,11 @@ body.interior {
 		overflow: visible;
 		letter-spacing: -.333px;
 		font-family: $f-primary;
+		float: left;
+
+		&.article {
+			margin-top: 20px;
+		}
 
 		&.features {
 			font-size: 0.8em;
@@ -2633,32 +2350,83 @@ body.interior {
 		}
 
 		@include break(mobile) {
-			margin-bottom: 30px;
-/*
-			background-position: left 2px;
-			background-size: 30px;
-			padding-bottom: 3px;
-
-			a {
-				padding-left: 40px;
-
-				span {
-					&.comment-count {
-						color: #105ab2;
-						font-size: 0.9em;
-						font-weight: 400;
-					}
-					
-					&.interactions-count {
-						display: none;
-					}
-				}
-			}
-*/
+			margin: 0 0 30px 0;
 		}
 		
 	}
-	
+
+	.social-share-svg {
+	    margin-left: 220px;
+	    float: right;
+	    font-family: Roboto;
+	    letter-spacing: -.333px;
+
+		&.article {
+			margin-top: 20px;
+		}
+
+   		.social-share-text {
+			float: left;
+		    font-size: .8em;
+		    margin: 15px 10px 0 0;
+		    color: #444;
+		}
+
+		.resp-sharing-button__link {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			margin: 0.5em;
+			cursor: pointer;
+		}
+
+		.resp-sharing-button__icon {
+			display: inline-block;
+			stroke: #fff;
+			fill: none;
+			svg {
+				width: 1em;
+				height: 1em;
+			}
+		}
+
+		.resp-sharing-button {
+			border-radius: 5px;
+			transition: 25ms ease-out;
+			padding: 7px 12px 4px;
+
+			span {
+				padding-left: 0.4em;
+			}
+		}
+
+		.resp-sharing-button__icon--solid {
+			fill: #fff;
+			stroke: none;
+		}
+		.resp-sharing-button__icon--solidcircle {
+			fill: #fff;
+			stroke: none;
+		}
+		.resp-sharing-button--twitter {
+			background-color: #55acee;
+			&:hover {
+				background-color: #2795e9;
+			}
+		}
+		.resp-sharing-button--facebook {
+			background-color: #3b5998;
+			&:hover {
+				background-color: #2d4373;
+			}
+		}
+		.resp-sharing-button--reddit {
+			background-color: #fd7524;
+			&:hover {
+				background-color: #ff6000;
+			}
+		}
+	}
 
 	&.article {
 		#content-header {
@@ -2681,13 +2449,31 @@ body.interior {
 						padding-top: 0px;
 					}
 				}
+
+				h2 {
+					color: #eee;
+					font-size: 1.5em;
+					font-weight: 400;
+					padding: 0px 0px 5px 3px;
+
+					@include break(mobile){
+						font-size: .85em;
+						padding: 0px 0px 5px 0;
+						margin-top: -3px;
+					}
+				}
 				
 				em {
 					font-size: 0.75em;
+					color: #eee;
+
+					@include break(mobile){
+						font-size: .65em;
+					}
 
 					time {
 						a {
-							color: #fff;
+							color: #eee;
 						}
 					}
 				}
@@ -2737,20 +2523,23 @@ body.interior {
 						&.small {
 							font-size: 2em;
 						}
-
-						/*
-						@include break(tablet){
-							font-size: 2.1em;
-						}
-						@include break(mobile){
-							font-size: 1.3em;
-						}
-						@include break(v-mobile){
-							font-size: 1.2em;
-						}
-						*/
 					}
+
+					h4 {
+						color: #eee;
+						font-size: .75em;
+						font-weight: 400;
+						padding: 5px 0px 5px 5px;
+						text-shadow: 1px 1px 5px black;
+
+						/* @include break(mobile){
+							display: none;
+						} */
+					}
+
 					em {
+						font-size: 0.7em;
+
 						@include break(mobile){
 							display: none;
 						}
@@ -3210,7 +2999,7 @@ body.interior {
 
 /* Review box */
 .review_box {
-		margin: 20px 0 40px;
+		margin: 20px 0 20px;
 		font-size: 0.9em;
 		background: #fff;
 	    padding: 32px 20px 15px;
