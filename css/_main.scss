@@ -3439,6 +3439,7 @@ table {
 	&.article-table {
 		margin: 15px 0 30px;
 		font-size: 0.9em;
+		font-family: $f-primary;
 
 		a {
 			color: #105ab2;
@@ -3450,7 +3451,7 @@ table {
 		}
 
 		tr {
-			padding: 3px 0 3px 10px;
+			padding: 6px 0 6px 10px;
 
 			&.title {
 			  background-color: #105ab2;
