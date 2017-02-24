@@ -226,6 +226,7 @@ body.interior.download {
 					@include col(1,2,0);
 				}
 
+<<<<<<< HEAD
 				@include break(mobile){
 					@include col(1,1,0);
 					margin-top: 10px;
@@ -236,7 +237,7 @@ body.interior.download {
 				}
 
 				.long_description {
-					max-height: 650px;
+					max-height: 750px;
 						overflow: hidden;
 
 					/*
@@ -251,6 +252,21 @@ body.interior.download {
 					}
 					*/
 				}
+=======
+		.long_description {
+			max-height: 750px;
+				overflow: hidden;
+
+			/*
+			&:before {
+				content:'';
+				width:100%;
+				height:100%;    
+				position:absolute;
+				left:0;
+				top:0;
+				background:linear-gradient(transparent 550px, white);
+>>>>>>> 157fb09ba4f94863c285eaeb8c1784ba91660f59
 			}
 
 			.google-ads {
