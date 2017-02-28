@@ -786,9 +786,6 @@ amp-social-share[type=whatsapp] {
 }
 
 /* Donwload Individual Style */
-/*.hide_rating {
-  display: none;
-}*/
 /*.individual-download amp-accordion > section > .-amp-accordion-content, */
 amp-accordion > section > .-amp-accordion-header {
   padding: 15px;
@@ -817,4 +814,174 @@ span.number {
 	font-weight: 500;
 	font-family: Roboto;
 }
+body.interior.download {
+  #product_info .download-product .download-wrapper .download_button {
+	float: left;
+	margin-bottom: 8px;
+	display: inline-block;
+	width: 170px;
+	height: 35px;
+	background: url(http://static.techspot.com/images/download_button_3h.png) no-repeat;
+	position: relative;
+	background-size: 170px 70px;
+	span {
+	  text-indent: -1000px;
+	  overflow: hidden;
+	  position: absolute;
+	  width: 32px;
+	  left: 8px;
+	  height: 35px;
+	  background: url(http://static.techspot.com/images/download_button_arrow3.png) 0 0;
+	  background-size: contain;
+	  -webkit-transition: all 0.15s linear;
+	  -moz-transition: all 0.15s linear;
+	  -ms-transition: all 0.15s linear;
+	  -o-transition: all 0.15s linear;
+	  transition: all 0.15s linear;
+	}
+	&:hover {
+	  background-position: left bottom;
+	  span {
+		background-position: 0 35px;
+	  }
+	}
+  }
+  #content-header .title-group h2 {
+	font-size: .9em;
+	font-weight: 300;
+	font-family: "Roboto", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  body.interior.download #content-header .title-group figure {
+	margin: 0 25px 0 -10px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body.interior.download #content-header .title-group figure {
+	margin: 0 15px 0 -10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body.interior.download #content-header .title-group figure {
+	float: right;
+	margin: 0 0 0 10px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body.interior.download #content-header .title-group h2.hasfigure {
+	padding: 0px;
+  }
+}
+
+input {
+  &[type=text], &[type=password] {
+	width: 100%;
+	background: white;
+	border: none;
+	font-size: 0.65em;
+	line-height: 1.5;
+	padding: 6px 8px;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
+	border-radius: 2px 2px 2px 2px;
+  }
+  &[type=text]:focus, &[type=password]:focus {
+	outline: none;
+  }
+  &[type=submit] {
+	display: inline-block;
+	background: #105ab2;
+	line-height: 14px;
+	padding: 5px 16px;
+	color: white;
+	text-align: center;
+	border: none;
+	font-weight: 500;
+	font-size: .6em;
+	text-transform: uppercase;
+	border-radius: 2px 2px 2px 2px;
+	&:hover {
+	  background: #136dd7;
+	}
+	&:active {
+	  position: relative;
+	  top: 1px;
+	}
+  }
+}
+
+body.interior.download #product_info .download-product .download-wrapper .editors_pick {
+  margin: 20px 0 20px 0;
+}
+
+.editors_pick amp-img {
+  width: 260px;
+  height: 78px;
+}
+
+form {
+  &.amp-form-submit-error [submit-error] {
+	margin-top: 16px;
+	font-size: 0.85em;
+	margin-left: -9px;
+  }
+  &.amp-form-submit-success [submit-success] {
+	margin-top: 16px;
+	font-size: 0.85em;
+	margin-left: -9px;
+	color: green;
+  }
+  &.amp-form-submit-error [submit-error] {
+	color: red;
+  }
+}
+
+.specs div .stars {
+  padding-top: 7px;
+}
+
 /* End Donwload Individual Style */
+
+/* Driver Index Style */
+
+.downloads-list {
+  padding: 25px 0 0;
+}
+
+#content .driversTitle a {
+  color: #c00;
+  font-size: 22px;
+  &:hover {
+	padding-bottom: 1px;
+	border-bottom: 1px solid #c00;
+  }
+}
+
+.ad_home_driver {
+  padding: 10px 0 40px;
+}
+
+.ad_rectangle_mobile_driver {
+  margin: 15px 0 25px;
+  text-align: center;
+}
+
+.post-load-more {
+  margin: 20px 0px;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  line-height: 45px;
+  text-align: center;
+  font-weight: 400;
+  background-color: #F8F8F8;
+  &:hover {
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+  }
+}
+
+/* End Driver Index Style */
