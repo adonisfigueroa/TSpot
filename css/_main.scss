@@ -474,108 +474,6 @@ body.products {
 	margin: 30px 0 20px 0;
 }
 
-.tabbar {
-	height: 33px;
-  	line-height: 33px;
-  	position: relative;
-
-	.active {
-		bottom: 3px;
-		line-height: 33px;
-		height: 36px;
-		background-image: linear-gradient(to top, #F2F4F8, #e7e9ee 50%, #e7e9ee);
-  	}
-	h3 {
-		cursor: pointer;
-		background-color: #e7e9ee;
-		color: #1e2933;
-		font-weight: 500;
-		margin-right: 3px;
-		text-transform: uppercase;
-		float: left;
-		font-size: 14px;
-		padding: 0 16px;
-		text-align: center;
-		bottom: 3px;
-		position: relative;
-		height: 33px;
-
-		&:hover {
-		  background-color: #d3dce6;
-		}
-
-		@include break(v-mobile){
-			padding: 0 3.5%;
-		}
-		@include break(sm-mobile){
-			padding: 0 2%;
-		}
-
-		a {
-			color: #1e2933;
-		  	
-		  	&:hover {
-				color: #1e2933;
-		  	}
-		}
-		&.pricetab {
-			background-color: #59a059;
-			color: white;
-		
-			&:hover {
-				background-color: #339933;
-		  	}
-		}
-
-		span.number {
-			background: #0557B5;
-			border-radius: 14px;
-			text-align: center;
-			line-height: 18px;
-			color: #fff;
-			display: inline-block;
-			width: 18px;
-			height: 17px;
-			font-size: 0.85em;
-			margin-left: 2px;
-			font-weight: 500;
-			font-family: Roboto;
-		}
-
-		span.number.large {
-			line-height: 20px;
-			width: 22px;
-			height: 20px;
-		}
-	}
-
-	&.single {
-		h3 {
-			text-transform: none;
-			font-weight: 400;
-			font-size: 15px;
-			padding-top: 4px;
-		}
-	}
-
-	&:after {
-		height: 28px;
-		width: 100%;
-		position: absolute;
-		bottom: -28px;
-		left: 0;
-		display: block;
-		content: '';
-		background-image: linear-gradient(to top, #fff, #e7e9ee);
-		width: 100%;
-		background-image: none;
-		bottom: -5px;
-		height: 5px;
-		background-color: #F2F4F8;
-	}
-
-}
-
 .nPostList{
 	display: block; text-align: center; font-size: 0;
 	article{
@@ -893,7 +791,8 @@ body.products {
     -moz-transition: .4s all;
     transition: .4s all;
     &:hover {
-      -webkit-filter: brightness(75%);
+	  -webkit-filter: saturate(3);
+      // -webkit-filter: brightness(75%);
     }
   }
   .play {
@@ -911,7 +810,6 @@ body.products {
 
 .download-list,
 .forum-list {
-	margin: 0 5px 10px -5px;
 	padding: 10px 0;
 	
 	li {
@@ -922,7 +820,7 @@ body.products {
 		
 		& > a {
 			display: block;
-			color: #111;
+			color: #444;
 			line-height: 1.2;
 			font-weight: 400;
 			padding-bottom: 2px;
@@ -986,6 +884,7 @@ body.products {
 }
 
 .download-list {
+	margin: 0 5px 10px -5px;
 	li {
 		background-image: url(/images/download-arrow.svg);
 		background-position: 5% 10%;
@@ -1000,6 +899,7 @@ body.products {
 }
 
 .forum-list {
+	margin: 0 10px 0px 5px;
 	li {
 		background-image: url(/images/forum-icon.svg);
 		background-position: 5% 15%;
@@ -1009,12 +909,12 @@ body.products {
 
 		span {
 			a {
-				font-size: 1.05em;
+				font-size: 1em;
 			}
 		}
 
 		.count {
-			margin: 20px 0 0 -35px;
+			margin: 20px 0 0 -30px;
 			float: left;
 		}
 	}
@@ -3437,6 +3337,7 @@ table {
 	&.article-table {
 		margin: 15px 0 30px;
 		font-size: 0.9em;
+		font-family: $f-primary;
 
 		a {
 			color: #105ab2;
@@ -3448,7 +3349,7 @@ table {
 		}
 
 		tr {
-			padding: 3px 0 3px 10px;
+			padding: 6px 0 6px 10px;
 
 			&.title {
 			  background-color: #105ab2;

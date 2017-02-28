@@ -79,23 +79,40 @@
 		display: block;
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		//OLDER @include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.03,$end_color:#1E2933,$end_cent:100%,$end_alpha:1,$degree:180deg);
-		
-		//darker@include gradient-trans-percent($start_color:#1E2933,$start_cent:15%,$start_alpha:0.40,$end_color:#1E2933,$end_cent:120%,$end_alpha:1,$degree:210deg);
 		@include gradient-trans-percent($start_color:#1E2933,$start_cent:35%,$start_alpha:0.20,$end_color:#1E2933,$end_cent:95%,$end_alpha:1,$degree:200deg);
 	}
+
+	&.centered {
+		&:before {
+			@include gradient-trans-percent($start_color:#1E2933,$start_cent:25%,$start_alpha:0.20,$end_color:#1E2933,$end_cent:90%,$end_alpha:1,$degree:200deg);
+		}
+	}
+
 	
 	.title-group {
 		position: absolute;
 		bottom: 80px;
 		width: 85%;
+
+		&.centered {
+			text-align: center;
+			width: 100%;
+		    bottom: 180px;
+
+			@include break(tablet){
+				width: 85%;
+				text-align: left;
+				bottom: 100px;
+			}
+		}
+
 		@include break(tablet){
 			bottom: 100px;
+			text-align: left;
 		}
 		@include break(mobile){
 			width: 90%;
 			margin-left: 5%;
-			text-align: center;
 			bottom: 50px;
 		}
 		@include break(v-mobile){
@@ -171,13 +188,13 @@
 		position: absolute;
 		bottom: 55px;
 		right: 0;
-		font-size: 2.8em;
+		font-size: 2.5em;
 		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 70px;
+		line-height: 60px;
 		padding: 5px;
-		width: 100px;
+		width: 90px;
 		text-align: center;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(5px);

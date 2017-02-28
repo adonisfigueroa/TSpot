@@ -1,6 +1,17 @@
 body.home {
 
-	@if $isAMP != 'true' {
+	@if $isAMP == 'true' {
+		#content {
+			.wrapper {
+				@include break(v-mobile) {
+					padding: 15px 0;
+				}
+				padding: 15px 0 30px;
+			}
+		}
+
+	} @else {
+
 		#dk_menu {
 			height: 38px !important;
 		}
@@ -16,16 +27,14 @@ body.home {
 				margin-top: -1px !important;
 			}
 		}
-	}
 
-	#content {
-		.wrapper {
-			@include break(v-mobile) {
-				padding: 15px 0;
-			}
-			padding: 15px 0 30px;
+		#content {
+			.wrapper {
+				@include break(v-mobile) {
+					padding: 15px 0;
+				}
+				padding: 15px 0 30px;
 
-			@if $isAMP != 'true' {
 				.col-2-3 {
 					width: 70%;
 					@include break(tablet) {
@@ -43,9 +52,7 @@ body.home {
 					}
 				}
 			}
-		}
-	
-		@if $isAMP != 'true' {
+		
 			#sidebar {
 				padding-top: 50px;
 				@include break(tablet) {

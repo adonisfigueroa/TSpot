@@ -739,6 +739,12 @@ body.interior {
 					line-height: 1.2;
 					letter-spacing: -0.333px;
 					padding-bottom: 10px;
+
+					&.upper {
+						text-transform: uppercase;
+						font-family: Roboto Condensed;
+					}
+
 					@include break(mobile) {
 						margin-top: 0;
 						font-size: 1.75em;
@@ -2485,8 +2491,8 @@ body.interior {
 				max-height: 400px;
 
 				@include break(mobile){
-					min-height: 120px;
-					max-height: 120px;
+					min-height: 140px;
+					max-height: 140px;
 				}
 				@include break(v-mobile){
 					min-height: 200px;
@@ -2498,8 +2504,8 @@ body.interior {
 					max-height: 400px;
 
 					@include break(mobile){
-						min-height: 120px;
-						max-height: 120px;
+						min-height: 140px;
+						max-height: 140px;
 					}
 					@include break(v-mobile){
 						min-height: 200px;
@@ -2509,9 +2515,6 @@ body.interior {
 
 				.title-group {
 					bottom: 55px;
-					@include break(mobile){
-						bottom: 25px;
-					}
 
 					h1.large {
 						font-size: 2.4em;
@@ -2531,10 +2534,6 @@ body.interior {
 						font-weight: 400;
 						padding: 5px 0px 5px 5px;
 						text-shadow: 1px 1px 5px black;
-
-						/* @include break(mobile){
-							display: none;
-						} */
 					}
 
 					em {
@@ -2554,8 +2553,8 @@ body.interior {
 				max-height: 250px;
 
 				@include break(mobile){
-					min-height: 120px;
-					max-height: 120px;
+					min-height: 140px;
+					max-height: 140px;
 				}
 				@include break(v-mobile){
 					min-height: 200px;
@@ -2623,12 +2622,6 @@ body.interior {
 				@include break(mobile) {
 					width: 94%;
 					padding: 25px 0 30px;
-				}
-			}
-
-			.cta {
-				.wrapper {
-					padding: 0 !important;
 				}
 			}
 
