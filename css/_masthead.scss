@@ -6,6 +6,9 @@ $tile-width-sec: 380px;
 $tall-tile-font-size: 1.5em;
 $tile-font-size: 1.1em;
 
+$mast-border-width: 1px;
+$mast-border-col: #fff;
+
 .home {
 #masthead {
 	//0.5 grey, 1 dark
@@ -166,30 +169,30 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height; width: $tile-width*2-1;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: ($tile-height + 1)*2; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: 0; left: $tile-width*2;
-				/* border-right: 0px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 0px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: ($tile-height + 1);
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a {
 					height: $tall-tile-height - 30px;
@@ -207,29 +210,29 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: 0; left: $tile-width;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: ($tile-height + 1); left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: 0; left: $tile-width*2;
-				/* border-right: 0px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 0px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: ($tile-height + 1);
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(6) { display: none; }
 			&:nth-child(7) { display: none; }
@@ -243,36 +246,36 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: 0; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: ($tile-height + 1); left: $tile-width; height: $tall-tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: 0; height: $tall-tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: ($tile-height + 1)*2;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) { display: none; }
 			&:nth-child(8) {display: none;}
@@ -284,36 +287,36 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: 0; left: $tile-width; height: $tall-tile-height;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(4) {
 				top: ($tile-height + 1)*2; left: $tile-width; height: $tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: 0; height: $tall-tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: ($tile-height + 1)*2;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) { display: none; }
 			&:nth-child(8) {display: none;}
@@ -325,24 +328,24 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height; width: $tile-width*2-1;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: ($tile-height + 1)*2; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				left: $tile-width*2; top: 0;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: ($tile-height + 1);
@@ -360,34 +363,34 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: 0; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: ($tile-height + 1); left: $tile-width;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width; top: ($tile-height + 1)*2;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: 0;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) {
 				left: $tile-width*2; top: ($tile-height + 1); height: $tall-tile-height;
@@ -401,35 +404,34 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: 0; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: ($tile-height + 1); left: $tile-width; height: $tall-tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width*2; top: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: ($tile-height + 1);
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) {
 				left: $tile-width*2; top: ($tile-height + 1)*2;
@@ -443,34 +445,34 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 				height: $tall-tile-height;
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: 0; left: $tile-width;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: ($tile-height + 1); left: $tile-width;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width; top: ($tile-height + 1)*2;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: 0;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) {
 				left: $tile-width*2; top: ($tile-height + 1);
@@ -485,33 +487,33 @@ $tile-font-size: 1.1em;
 			&.tall { height: $tile-height; a { height: $tile-height - 30px; hgroup { h2 { font-size: 1em; } } } }
 			&:nth-child(1) {
 				top: 0; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(2) {
 				top: ($tile-height + 1); left: 0;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(3) {
 				top: ($tile-height + 1)*2; left: 0;
-				/* border-bottom: 1px solid $mast-border; */
-				/* border-right: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
+				/* border-right: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(4) {
 				top: 0; left: $tile-width; height: $tall-tile-height;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 				a { height: $tall-tile-height - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 			}//nth
 			&:nth-child(5) {
 				left: $tile-width; top: ($tile-height + 1)*2;
-				/* border-right: 1px solid $mast-border; */
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-right: 1px solid $mast-border-col; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(6) {
 				left: $tile-width*2; top: 0;
-				/* border-bottom: 1px solid $mast-border; */
+				/* border-bottom: 1px solid $mast-border-col; */
 			}//nth
 			&:nth-child(7) {
 				left: $tile-width*2; top: ($tile-height + 1);
@@ -580,31 +582,31 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; width: 2/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					height: 333px;
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 167px*2; margin-left: 2px; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-left: 0 solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-left: 0 solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 0; left: 2/3*100%;
-					/* border-right: 0px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 0px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 167px; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(6) {display: none;}
@@ -617,29 +619,29 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 0; left: 1/3*100%;
-					/* border-right: 1px solid $mast-border; */
-					/* border-left: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-left: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 167px; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 0; left: 2/3*100%;
-					/* border-right: 0px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 0px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 167px;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {display: none;}
 				&:nth-child(7) {display: none;}
@@ -652,35 +654,35 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 0; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 167px; left: 1/3*100%; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 0; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 167px*2;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) { display: none; }
 				&:nth-child(8) {display: none;}
@@ -691,36 +693,36 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					height: 333px;
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 0; left: 1/3*100%; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(4) {
 					top: 167px*2; left: 1/3*100%;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 0; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 167px*2;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) { display: none; }
 				&:nth-child(8) {display: none;}
@@ -732,30 +734,30 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; width: 2/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					height: 333px;
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 167px*2; margin-left: 2px; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-left: 0 solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-left: 0 solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					left: 2/3*100%; top: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 167px;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 167px*2;
@@ -770,33 +772,33 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 0; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 167px; left: 1/3*100%;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 1/3*100%; top: 167px*2;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 0;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) {
 					left: 2/3*100%; top: 167px; height: 333px;
@@ -810,34 +812,34 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 0; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 167px; left: 1/3*100%; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(5) {
 					left: 2/3*100%; top: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 167px;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) {
 					left: 2/3*100%; top: 167px*2;
@@ -851,40 +853,40 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0; height: 333px;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(2) {
 					top: 167px*2; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 0; left: 1/3*100%;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 167px; left: 1/3*100%;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(5) {
 					left: 1/3*100%; top: 167px*2;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 0;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) {
 					left: 2/3*100%; top: 167px;
 				}
 				&:nth-child(8) {
 					left: 2/3*100%; top: 167px*2;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 				}
 			}//li
 		}//variation-8
@@ -893,40 +895,40 @@ $tile-font-size: 1.1em;
 				&.tall { height: 166px; a { height: 166px - 30px; hgroup { h2 { font-size: 1em; } } } }
 				&:nth-child(1) {
 					top: 0; left: 0;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(2) {
 					top: 167px; left: 0;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(3) {
 					top: 167px*2; left: 0;
-					/* border-bottom: 1px solid $mast-border; */
-					/* border-right: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
+					/* border-right: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(4) {
 					top: 0; left: 1/3*100%; height: 333px;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 					a { height: 333px - 30px; hgroup { h2 { font-size: $tall-tile-font-size; } } }
 				}//nth
 				&:nth-child(5) {
 					left: 1/3*100%; top: 167px*2;
-					/* border-right: 1px solid $mast-border; */
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-right: 1px solid $mast-border-col; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(6) {
 					left: 2/3*100%; top: 0;
-					/* border-bottom: 1px solid $mast-border; */
+					/* border-bottom: 1px solid $mast-border-col; */
 				}//nth
 				&:nth-child(7) {
 					left: 2/3*100%; top: 167px;
 				}
 				&:nth-child(8) {
 					left: 2/3*100%; top: 167px*2;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 				}
 			}//li
 		}//variation-8a
@@ -1021,7 +1023,7 @@ $tile-font-size: 1.1em;
 				&:nth-child(2) {
 					top: 0;
 					left: 80%;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white;
 					*/
@@ -1040,7 +1042,7 @@ $tile-font-size: 1.1em;
 				&:nth-child(3) {
 					top: 0;
 					left: 80%*2;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
 					display: block;
@@ -1058,7 +1060,7 @@ $tile-font-size: 1.1em;
 				&:nth-child(4) {
 					left: 80%*3;
 					top: 0;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
 					display: block;
@@ -1078,7 +1080,7 @@ $tile-font-size: 1.1em;
 					top: 0;
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					display: block;
 					height: 270px;
 					a {
@@ -1095,7 +1097,7 @@ $tile-font-size: 1.1em;
 					left: 80%*5;
 					top: 0;
 					margin: 0;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
 					display: block;
@@ -1113,7 +1115,7 @@ $tile-font-size: 1.1em;
 				&:nth-child(7) {
 					left: 80%*6;
 					top: 0;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
 					display: block;
@@ -1131,7 +1133,7 @@ $tile-font-size: 1.1em;
 				&:nth-child(8) {
 					left: 80%*7;
 					top: 0;
-					/* border-left: 1px solid $mast-border; */
+					/* border-left: 1px solid $mast-border-col; */
 					/* border-bottom: 0px solid white;
 					border-top: 0px solid white; */
 					display: block;
