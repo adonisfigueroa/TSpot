@@ -74,7 +74,7 @@ body.interior {
 
 					@if $isAMP != 'true' {
 						&.hasfigure {
-							padding: 2px 300px 0 106px;
+							padding: 2px 300px 12px 106px;
 
 							@include break(mobile){
 								padding: 0px;
