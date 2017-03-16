@@ -82,9 +82,10 @@
 					}
 					
 					&.login {
-						background-image: url(/images/badge-right.svg);
+						background-image: url(/images/user-account.svg);
 						background-repeat: no-repeat;
 						background-position: 8px center;
+						background-size: 26px;
 						padding-right: 10px;
 						position: relative;
 						@include break(mobile) {
