@@ -665,7 +665,12 @@ body.interior.download {
 	overflow: hidden;
 
 	.downItem {
-		display: flex;
+		@if $isAMP == 'true' {
+		  display: block;
+		} @else {
+		  display: flex;
+		}
+
 		height: 150px;
 		min-width: 150px;
 		max-width: 200px;
@@ -690,7 +695,7 @@ body.interior.download {
 				height: 150px;
 				background: linear-gradient(35deg, rgba(21, 76, 143, 0.17) 0%, rgba(21, 76, 143, 0.75) 75%);
 				border-radius: 5px;
-
+			  	margin-top : -150px;
 				&:hover {
 					background: linear-gradient(25deg, rgba(255, 127, 0, 0.55) 0%, rgba(21, 76, 143, 0.8) 75%);
 				}
