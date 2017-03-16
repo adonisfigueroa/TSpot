@@ -136,6 +136,11 @@ body.interior.download {
 			margin: 5px 0 20px;
 			font-size: .7em;
 
+			.dw-desc {
+				padding-left: 15px;
+				padding-top: 10px;
+			}
+
 		} @else {
 
 			margin: 35px 0 20px;
@@ -579,11 +584,23 @@ body.interior.download {
 				}
 
 				.editors_pick {
-					margin: 20px 0 0;
+					@if $isAMP == 'true' {
+						margin: 20px 0 20px 0;
 
-					img {
-						width:260px; height:78px;         
+						amp-img {
+							width: 260px;
+							height: 78px;
+						}
+					} @else {
+						margin: 20px 0 0;
+
+						img {
+							width:260px;
+							height:78px;         
+						}
 					}
+
+					
 				}
 
 				#dw_vote {
@@ -749,3 +766,28 @@ body.interior.download {
 		color: #bd0707;
 	}
 }
+
+
+/* AMP */
+
+// Total of Alternatives
+span.number {
+	background: #0557B5;
+	border-radius: 19px;
+	text-align: center;
+	line-height: 19px;
+	color: #fff;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	font-size: 0.85em;
+	margin-left: 2px;
+	font-weight: 500;
+	font-family: Roboto;
+}
+
+// Don't show rating Value, just for bots
+.ratingValue {
+	display: none;
+}
+/* END - AMP*/

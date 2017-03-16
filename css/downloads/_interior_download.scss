@@ -42,28 +42,29 @@ body.interior {
 					} @else {
 						width: 100px !important;
 						float: left !important;
+						margin: 0 25px 0 -20px;
+
+						@include break(tablet){
+							margin: 0 25px 0 -10px;
+						}
 					}
 
-					margin: 0 25px 0 -20px;
+					@include break(mobile){
+						margin: 0 15px 0 -10px;
+					}
+
+					@include break(v-mobile){
+						@if $isAMP != 'true' {
+							float: right !important;
+						} @else {
+							float: right;
+						}
+						margin: 0 0 0 10px;
+					}
 
 					img {
 						max-width: 100%;
 						max-height: 110px;
-					}
-
-					@if $isAMP != 'true' {
-						@include break(tablet){
-							margin: 0 25px 0 -10px;
-						}
-
-						@include break(mobile){
-							margin: 0 15px 0 -10px;
-						}
-
-						@include break(v-mobile){
-							float: right !important;
-							margin: 0 0 0 10px;
-						}
 					}
 				}
 				
@@ -72,7 +73,11 @@ body.interior {
 					font-weight: 300;
 					font-family: $f-primary;
 
-					@if $isAMP != 'true' {
+					@if $isAMP == 'true' {
+						&.hasfigure {
+							padding: 0px;
+						}
+					} @else {
 						&.hasfigure {
 							padding: 2px 300px 12px 106px;
 
