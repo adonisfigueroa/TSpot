@@ -4,7 +4,7 @@ body.interior.download {
 			.title-group{
 				h2 {
 					@include break(mobile){
-						font-size: 0.8em !important;
+						font-size: 0.8em;
 						margin-top: 5px;
 					}
 				}
