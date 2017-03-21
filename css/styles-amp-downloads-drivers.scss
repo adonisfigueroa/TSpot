@@ -11,6 +11,7 @@ $isAMP: 'true';
 "_footer.scss",
 
 //Downloads
+"components/_accordion-amp.scss",
 "components/_search-box.scss",
 "components/_tabbar.scss",
 "downloads/_download.scss",
@@ -221,13 +222,6 @@ amp-sidebar {
 	//padding-right: 10px;
 }
 
-/**** ACCORDION ****/
-amp-accordion > section > .-amp-accordion-header {
-  padding: 15px;
-}
-.content_accordion {
-  background-color: white;
-}
 
 /**** GENERIC STYLES ****/
 body {
@@ -795,52 +789,6 @@ amp-social-share[type=whatsapp] {
 
 
 
-/* Driver Index Style */
-
-.downloads-list {
-  padding: 25px 0 0;
-}
-
-#content .driversTitle a {
-  color: #c00;
-  font-size: 22px;
-  &:hover {
-	padding-bottom: 1px;
-	border-bottom: 1px solid #c00;
-  }
-}
-
-.ad_home_driver {
-  padding: 10px 0 40px;
-}
-
-.ad_rectangle_mobile_driver {
-  margin: 15px 0 25px;
-  text-align: center;
-}
-
-.post-load-more {
-  margin: 20px 0px;
-  width: 100%;
-  border: 1px solid #dcdcdc;
-  line-height: 45px;
-  text-align: center;
-  font-weight: 400;
-  background-color: #F8F8F8;
-  &:hover {
-	background: #f6f6f6;
-	border: 1px solid #ccc;
-  }
-}
-
-/* End Driver Index Style */
-
-/*  Driver Individual Style */
-.browse_all{
-  margin: -20px 0 10px 0;
-}
-/* / Driver Individual Style */
-
 
 
 /* AMP FORMS*/
@@ -894,9 +842,4 @@ form {
   &.amp-form-submit-error [submit-error] {
 	color: red;
   }
-}
-
-body.interior.download #product_info .download-product .driver-content-accordion {
-  padding: 15px;
-  line-height: 1.7em;
 }

@@ -374,7 +374,6 @@ body.interior.download {
 		}
 
 		.download-product {
-
 			@if $isAMP != 'true' {
 				@include col(1,2,0);
 				width: 43%;

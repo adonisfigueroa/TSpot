@@ -163,11 +163,22 @@ body.interior {
 			}
 		}
 
-		@if $isAMP == 'true' {
-			.lastest-update-title {
-				font-size: 22px; color: #c00;
-			}
+		.subtitle, .subtitle a {
+			font-size: 22px;
+			color: #c00;
 		}
+		//For Drivers
+		.subtitle a:hover {
+			padding-bottom: 1px;
+			border-bottom: 1px solid #c00;
+		}
+		.ad_home_driver {
+			padding: 10px 0 40px;
+		}
+		.browse_all{
+			margin: -20px 0 10px 0;
+		}
+		//End
 
 		.downloads-list {
 			padding: 35px 0 0;
