@@ -55,11 +55,6 @@ body {
 	left:0px;
 	overflow-x: hidden;
 	background-color: $light-grey;
-	/*
-	@include break(mobile){
-		position: absolute;
-	}
-	*/
 }
 
 .flyout {
@@ -98,7 +93,7 @@ ul,ol {
 	}
 }
 .wrapper {
-	width: 98%;
+	width: 92%;
 	max-width: $desk;
 	margin: 0 auto;
 
@@ -113,7 +108,7 @@ ul,ol {
 		}
 	}
 	@include break(tablet) {
-		width: 96%;
+		width: 94%;
 	}
 }
 
