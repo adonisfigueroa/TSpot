@@ -275,7 +275,7 @@
 					
 					/*
 					&.read-more {
-						background-image: url(../images/read-more-arrow.svg);
+						background-image: url(/images/read-more-arrow.svg);
 						@include break(mobile){
 							display: none;
 						}
@@ -283,7 +283,7 @@
 					*/
 					
 					&.comment-count {
-						background-image: url(../images/comment-icon.svg);
+						background-image: url(/images/comment-icon.svg);
 						padding-left: 15px;
 
 						/*@include break(mobile){

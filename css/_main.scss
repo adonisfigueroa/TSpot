@@ -182,7 +182,7 @@ h1 {
 	
 	&.badge {
 		line-height: 50px;
-		background-image: url(../images/badge.svg);
+		background-image: url(/images/badge.svg);
 		background-repeat: no-repeat;
 		background-position: 25px top;
 		padding-left: 110px;
@@ -333,7 +333,7 @@ h1 {
 body.reviews {
   #masthead{
 	  background-color: #1E2933;
-	  background-image: url(../images/reviewmasthead.png);
+	  background-image: url(/images/reviewmasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
 
@@ -356,7 +356,7 @@ body.reviews {
 body.features {
   #masthead{
 	  background-color: #237A3C;
-	  background-image: url(../images/featuremasthead.png);
+	  background-image: url(/images/featuremasthead.png);
 	  background-position: center 28px;
 	  background-repeat: no-repeat;
 	.wrapper {
