@@ -69,15 +69,18 @@ body.interior {
 				}
 				
 				h2 {
-					font-size: .9em;
-					font-weight: 300;
+					font-weight: 400;
 					font-family: $f-primary;
 
 					@if $isAMP == 'true' {
-						&.hasfigure {
-							padding: 0px;
-						}
-					} @else {
+						color:#888;
+						padding-bottom:15px;
+						font-size: .8em;
+						letter-spacing: -.333px;
+					}
+					@else {
+						font-size: .9em;
+
 						&.hasfigure {
 							padding: 2px 300px 12px 106px;
 
