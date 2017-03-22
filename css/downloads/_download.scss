@@ -47,7 +47,7 @@ body.interior.download {
 				border-bottom: 2px solid $blue;
 			
 				span.number {
-					background: url('../images/blue-ellipse.svg') no-repeat scroll 0 0 transparent;
+					background: url('/images/blue-ellipse.svg') no-repeat scroll 0 0 transparent;
 					text-align: center;
 					line-height: 26px;
 					color: #fff;
@@ -358,11 +358,7 @@ body.interior.download {
 					}
 
 					span {
-						@if $isAMP != 'true' {
-							background: url(../images/download-arrow-mirror.svg) no-repeat center center;
-						} @else {
-							background: url(../../images/download-arrow-mirror.svg) no-repeat center center;
-						}
+						background: url(/images/download-arrow-mirror.svg) no-repeat center center;
 						position: absolute;
 						display: block;
 						width: 10px;
@@ -580,7 +576,7 @@ body.interior.download {
 						display: block;
 						width: 77px;
 						height: 20px;
-						background: url('../images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
+						background: url('/images/tmp/facebook-link.png') no-repeat scroll 0 0 transparent;
 					}
 				}
 

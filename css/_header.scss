@@ -1187,7 +1187,7 @@
 	/**** LOGO ****/
 	h1#logo {
 		text-indent: -9999px;
-		background-image: url(../images/logo-techspot.svg);
+		background-image: url(/images/logo-techspot.svg);
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $header-top-line-height;
@@ -1266,7 +1266,7 @@
 		padding: 0px 0px;
 		#logo {
 			text-indent: -9999px;
-			background-image: url(../images/logo-techspot.svg);
+			background-image: url(/images/logo-techspot.svg);
 			background-repeat: no-repeat;
 			background-position: left center;
 			width: 189px; height: auto;
