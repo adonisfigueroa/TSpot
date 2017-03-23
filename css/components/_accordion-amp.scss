@@ -1,0 +1,14 @@
+/**** ACCORDION ****/
+amp-accordion > section > .-amp-accordion-header {
+	padding: 15px;
+	font-weight: 500;
+}
+
+.content_accordion {
+	background-color: white;
+
+	&.text{
+		padding: 15px;
+		line-height: 1.7em;
+	}
+}

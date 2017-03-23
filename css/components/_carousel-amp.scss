@@ -1,9 +1,9 @@
 .carousel {
-	margin: 16px 0 0 0;
+	margin: 16px 0 12px 0;
 }
 
 .carousel .slide > amp-img > img{
-	object-fit: contain;
+	object-fit: cover;
 }
 
 .carousel .group-caption {
@@ -11,18 +11,36 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 8px;
-	/*background: rgba(0, 0, 0, 0.6);*/
+	padding: 15px;
 	color: #ddd;
-	/*font-size: smaller;*/
-	/*max-height: 30%;*/
-	top: 50px;
+	top: 40px;
 }
 
-#masthead amp-carousel.featured-posts .slide .group-caption h3{
+.carousel .group-caption:before {
+	content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+}
+
+.carousel .caption-on-top {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	color: #ddd;
+	top: 40px;
+}
+
+#masthead amp-carousel.featured-posts .slide .caption-on-top h3{
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: .90em;
+	font-size: .6em;
 	-webkit-font-smoothing: subpixel-antialiased;
 	text-shadow: 0px 0px 3px #333;
 	color: #FF9B37;
@@ -30,11 +48,12 @@
 	letter-spacing: .25px;
 }
 
-#masthead amp-carousel.featured-posts .slide .group-caption h2{
-	font-size: 1.4em;
+#masthead amp-carousel.featured-posts .slide .caption-on-top h2{
+	font-size: 1.2em;
 	font-weight: 500;
 	text-shadow: 1px 1px 3px #222;
 	letter-spacing: -.2px;
 	line-height: 1.4;
 	padding-right: 10px;
+	color: white;
 }
