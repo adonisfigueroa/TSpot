@@ -193,15 +193,15 @@ h1 {
 			border-bottom: 4px solid #eee;
 
 			@if $isAMP == 'true' { //Only Amp
-				padding: 15px 0 !important;
-				img {
-					max-width: 98% !important;
-				}
-
-			} @else {
 				padding: 15px 0;
 				img {
 					max-width: 98%;
+				}
+
+			} @else {
+				padding: 15px 0 !important;
+				img {
+					max-width: 98% !important;
 				}
 			}
 		}
