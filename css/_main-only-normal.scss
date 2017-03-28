@@ -2424,7 +2424,7 @@ span._bar {
 	margin: 0 0 15px;
 
 	@include break(mobile){
-		height: 125px;
+		min-height: 125px;
 	}
 
 	.number {
@@ -2550,10 +2550,31 @@ span._bar {
 	}
 
 	&.bestof {
-		height: 105px;
 		border-bottom: 2px solid #eee;
 
 		a {
+			.awardlogo {
+				text-align:center;
+
+				img {
+					width: 300px;
+				}
+			}
+
+			.awardtext {
+				font-size: 0.75em;
+				text-align: center;
+				color: #222;
+				margin: -65px 45px 30px;
+				line-height: 1.3;
+
+				&:hover {
+					color: #222;
+				}
+
+				span { font-size: 0.95em; }
+			}
+
 			.award {
 				float: left;
 				img {
@@ -2572,7 +2593,7 @@ span._bar {
 			}
 
 			.breakdown {
-				padding: 8px 15px 0 0;
+				padding: 8px 15px 32px 0;
 				color: #000;
 				font-weight: 400;
 
