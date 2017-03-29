@@ -152,14 +152,18 @@ body.interior {
 
 					@include break(v-mobile) {
 						font-size: .85em;
-						line-height: 1.2;
-						padding-left: 7px;
+						line-height: 35px;
+    					padding-left: 10px;
+						letter-spacing: -0.2px;
 					}
 
 					a {
+						color: #05408f;
+
 						&:hover {
-							border-bottom: 1px solid #3470AA;
+							border-bottom: 1px dotted #075bc0;
 							padding-bottom: 1px;
+							color: #075bc0;
 						}
 					}
 				}
@@ -248,8 +252,9 @@ body.interior {
 							font-size: 1.5em;
 
 							&:hover {
-								border-bottom: 1px solid #3470AA;
+								border-bottom: 1px dotted #075bc0;
 								padding-bottom: 1px;
+								color: #075bc0;
 							}
 						  }
 
