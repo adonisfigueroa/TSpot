@@ -2995,7 +2995,7 @@ body.interior {
 		margin: 20px 0 20px;
 		font-size: 0.9em;
 		background: #fff;
-	    padding: 32px 20px 15px;
+	    padding: 32px 30px 15px 35px;
 	    border-top: 20px solid #eaeaea;
 	    border-bottom: 20px solid #eaeaea;
 
@@ -3015,7 +3015,7 @@ body.interior {
 
 	  .score_box {
 		float: left;
-		width: 115px;
+		width: 100px;
 		height: 120px;
 		position: relative;
 
@@ -3028,8 +3028,8 @@ body.interior {
 	  .pf_score {
 		font-family: $f-helvetica-roboto;
 		font-size: 50px;
-		width: 115px;
-		padding: 10px 0 6px;
+		width: 100px;
+		padding: 5px 0 3px;
 		margin: 0;
 		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 		@include border-radius(3px);
@@ -3037,13 +3037,13 @@ body.interior {
 
 	  .ts_brand {
 		font-family: $f-primary;
-		font-size: 0.80em;
+		font-size: 0.70em;
 		text-transform: uppercase;
 		font-weight: 500;
 		color: #fff;
 		text-align: center;
 		line-height: 1.2;
-		padding-bottom: 14px;
+		padding-bottom: 12px;
 		@include border-radius(3px);
 	  }
 	  ul {
@@ -3084,7 +3084,7 @@ body.interior {
 	  }
 
 	  .content_box {
-		padding-left: 140px;
+		padding-left: 130px;
 		font-size: 1.05em;
 		padding-top: 2px;
 

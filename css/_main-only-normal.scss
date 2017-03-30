@@ -3161,12 +3161,8 @@ table {
   float: left;
 }
 
-.pf_bad {
-  background-color: #cc0000;
-}
-
-.pf_average {
-  background-color: #6f22a0;
+.pf_award {
+  background-color: #ff7f00;
 }
 
 .pf_excellent {
@@ -3175,6 +3171,14 @@ table {
 
 .pf_good {
   background-color: #075bc0;
+}
+
+.pf_average {
+  background-color: #6f22a0;
+}
+
+.pf_bad {
+  background-color: #cc0000;
 }
 
 .pf_none {
