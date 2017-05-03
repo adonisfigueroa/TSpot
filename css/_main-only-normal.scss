@@ -84,46 +84,6 @@ img.responsive {
 
 
 // ! Special body styles ===========================================
-body.reviews {
-	#masthead{
-		background-color: #1E2933;
-		background-image: url(/images/reviewmasthead.png);
-		background-position: center 28px;
-		background-repeat: no-repeat;
-
-		.wrapper {
-			padding: 0 !important;
-		}
-	}
-	#content {
-		.wrapper {
-			padding: 40px 0;
-
-			@include break(mobile) {
-				padding: 10px 0;
-			}
-		}
-	}
-}
-
-body.features {
-	#masthead {
-		background-color: #237A3C;
-		background-image: url(/images/featuremasthead.png);
-		background-position: center 28px;
-		background-repeat: no-repeat;
-
-		.wrapper {
-			padding: 0 !important;
-		}
-	}
-	#content {
-		.wrapper {
-			padding: 20px 0;
-		}
-	}
-}
-
 body.products {
 	#masthead{
 		background: $dark-blue2;
