@@ -31,28 +31,6 @@ $isAMP: 'true';
 }
 
 
-/**** GENERIC STYLES ****/
-body.interior {
-	&.news,
-	&.product,
-	&.download {
-		#content {
-			amp-img.intro-image {
-				margin-top: -52px;
-				margin-bottom: 30px;
-				width: 100%;
-				height: auto;
-
-				@include break(mobile){
-					border: none;
-					margin-bottom: 25px;
-				}
-			}
-		}
-	}
-}
-
-
 
 
 /* AMP FORMS*/

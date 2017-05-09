@@ -246,27 +246,6 @@ body.interior {
 		}
 
 		#content {
-			img.intro-image {
-				margin-top: -52px;
-				margin-bottom: 30px;
-				width: 100%;
-				height: auto;
-
-				&.modgrey {
-					padding-top: 40px;
-					margin-top: -26px;
-				}
-
-				&.modwhite {
-					border: 4px solid #eee;
-				}
-
-				@include break(mobile){
-					border: none;
-					margin-bottom: 25px;
-				}
-			}
-			
 			.social-column {
 				position: relative;
 				z-index: 1;

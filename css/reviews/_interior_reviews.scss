@@ -177,10 +177,6 @@ body.interior {
 					} @else {
 						padding: 20px 100px 20px 215px; 
 
-						&:nth-child(even) {
-						  background: white;
-						}
-
 						@include break(mobile) {
 							padding: 14px 20px 14px 215px; 
 						}
@@ -190,6 +186,10 @@ body.interior {
 						/*@include break(v-mobile){
 							padding: 14px 14px 14px 14px; 
 						}*/
+					}
+
+					&:nth-child(even) {
+						background: white;
 					}
 				}
 			}

@@ -12,3 +12,25 @@ amp-accordion > section > .-amp-accordion-header {
 		line-height: 1.7em;
 	}
 }
+
+body.interior {
+	#sidebar amp-accordion section[expanded] .SideTitle .arrow {
+		width: 0;
+		height: 0;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 6px solid white;
+		float: right;
+		margin-top: -18px;
+		opacity: 1;
+	}
+	#sidebar section:not([expanded]) .SideTitle .arrow {
+		width: 0;
+		height: 0;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-right: 6px solid #fff;
+		float: right;
+		margin-top: -18px;
+	}
+}

@@ -7,7 +7,7 @@ body.interior {
 			line-height: 35px;		
 		}
 	}
-	
+
 	.articleBody {
 		font-weight: 400;
 		font-family: $f-paragraph;
@@ -263,6 +263,36 @@ body.interior {
 							color: white;
 							font-weight: 600 !important;
 						}
+					}
+				}
+			}
+		}
+
+		#content {
+			.intro-image {
+				margin-top: -52px;
+				width: 100%;
+				height: auto;
+
+				@if $isAMP == 'true' {
+					border: none;
+					margin-bottom: 25px;
+
+				} @else {
+					margin-bottom: 30px;
+
+					@include break(mobile){
+						border: none;
+						margin-bottom: 25px;
+					}
+
+					&.modgrey {
+						padding-top: 40px;
+						margin-top: -26px;
+					}
+
+					&.modwhite {
+						border: 4px solid #eee;
 					}
 				}
 			}
