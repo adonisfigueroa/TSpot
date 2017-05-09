@@ -51,6 +51,24 @@ body.interior {
 			}
 		}
 	}
+
+	&.news,
+	&.product,
+	&.download {
+		#content {
+			amp-img.intro-image {
+				margin-top: -52px;
+				margin-bottom: 30px;
+				width: 100%;
+				height: auto;
+
+				@include break(mobile){
+					border: none;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
 }
 
 /* PF widgets para noticias y reviews */
@@ -177,8 +195,55 @@ body.interior {
 	}
 }
 
-/* reviews Index */
-/*.reviews-carousel-image {
- 	opacity: 0.4;
-}*/
+body.interior .ListHeader {
+  &.reviews-categories {
+	margin-top: 8%;
+  }
+}
+
+body {
+  &.products #masthead {
+	background: #002040;
+	.wrapper {
+	  padding: 0 !important;
+	}
+  }
+}
+
+.reviews-carousel-image {
+  opacity: 0.4;
+}
+
+
+
+body.interior {
+  &.features #sidebar amp-accordion section[expanded] .SideTitle .arrow,
+  &.reviews #sidebar amp-accordion section[expanded] .SideTitle .arrow,
+  &.reviews-cat #sidebar amp-accordion section[expanded] .SideTitle .arrow,
+  &.features-cat #sidebar amp-accordion section[expanded] .SideTitle .arrow {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid white;
+	float: right;
+	margin-top: -18px;
+	opacity: 1;
+  }
+  &.features #sidebar section:not([expanded]) .SideTitle .arrow,
+  &.reviews #sidebar section:not([expanded]) .SideTitle .arrow,
+  &.reviews-cat #sidebar section:not([expanded]) .SideTitle .arrow,
+  &.features-cat #sidebar section:not([expanded]) .SideTitle .arrow {
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-right: 6px solid #fff;
+	float: right;
+	margin-top: -18px;
+  }
+  &.features #review ul li:nth-child(even), &.reviews #review ul li:nth-child(even), &.reviews-cat #review ul li:nth-child(even), &.features-cat #review ul li:nth-child(even) {
+	background: white;
+  }
+}
 /* End reviews Index */
