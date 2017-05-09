@@ -106,6 +106,18 @@ h1 {
 	}
 }
 
+@if $isAMP == 'true' {
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+} @else {
+	.hidden {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
 
 /**** Menu Spacer ****/
 @if $isAMP == 'true' { //Only Amp
