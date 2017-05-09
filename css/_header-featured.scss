@@ -8,8 +8,9 @@
 	background-position: center center;
 
 	@if $isAMP == 'true' {
-		@include break(tablet){
-			min-height: 600px;
+		@include break(mobile){
+			min-height: 260px;
+			max-height: 260px;
 		}
 		@include break(v-mobile){
 			min-height: 350px;
@@ -21,8 +22,9 @@
 			min-height: 80vh;
 			max-height: 600px;
 
-			@include break(tablet){
-				min-height: 600px;
+			@include break(mobile){
+				width: 100%;
+				min-height: 260px;
 			}
 			@include break(v-mobile){
 				min-height: 300px;
@@ -99,17 +101,22 @@
 			width: 100%;
 		    bottom: 150px;
 
-			@include break(tablet){
-				width: 90%;
-				text-align: left;
-				bottom: 100px;
+		    @if $isAMP != 'true' {
+				@include break(tablet){
+					width: 90%;
+					text-align: left;
+					bottom: 100px;
+				}
 			}
 		}
 
-		@include break(tablet){
-			bottom: 100px;
-			text-align: left;
+		@if $isAMP == 'true' {
+			@include break(tablet){
+				bottom: 100px;
+				text-align: left;
+			}
 		}
+
 		@include break(mobile){
 			width: 90%;
 			margin-left: 5%;
@@ -125,9 +132,6 @@
 			font-size: 2.5em;
 
 			@if $isAMP == 'true' {
-				@include break(tablet){
-					font-size: 2.4em;
-				}
 				@include break(mobile){
 					font-size: 1.5em;
 				}
@@ -186,18 +190,39 @@
 	.rating {
 		font-family: $f-helvetica;
 		position: absolute;
-		bottom: 55px;
-		right: 0;
-		font-size: 2.5em;
 		font-weight: 500;
 		color: white;
 		text-shadow: 1px 1px 5px rgba(0,0,0,.5);
-		line-height: 56px;
-		padding: 5px;
-		width: 85px;
 		text-align: center;
 		@include trans-bg(#16b029,.8);
 		@include border-radius(3px);
+
+		@if $isAMP == 'true' {
+			width: initial;
+			bottom: 10px;
+			right: 10px;
+			font-size: 1.7em;
+			line-height: 60px;
+			padding: 0 15px;
+
+		} @else {
+			width: 85px;
+			bottom: 55px;
+			right: 0;
+			font-size: 2.5em;
+			line-height: 56px;
+			padding: 5px;
+
+			@include break(mobile){
+				width: initial;
+				bottom: 10px;
+				right: 10px;
+				font-size: 1.7em;
+				line-height: 60px;
+				padding: 0 15px;
+				//@include border-radius(3px); //Included in father
+			}
+		}
 
 		&.award {
 			@include trans-bg(#ff7f00,.7);
@@ -240,29 +265,24 @@
 		}
 
 		.label {
-		    display: block;
-		    font-family: Roboto;
-		    font-size: 0.24em;
-		    text-transform: uppercase;
-		    font-weight: 500;
-		    color: #fff;
-		    text-align: center;
-		    line-height: 1.3;
-		    padding: 2px 0 4px;
+			@if $isAMP == 'true' {
+				display: none;
 
-		    @include break(mobile){
-		    	display: none;
-		    }
+			} @else {
+				display: block;
+				font-family: Roboto;
+				font-size: 0.24em;
+				text-transform: uppercase;
+				font-weight: 500;
+				color: #fff;
+				text-align: center;
+				line-height: 1.3;
+				padding: 2px 0 4px;
+
+				@include break(mobile){
+					display: none;
+				}
+			}
 		}
-
-		@include break(mobile){
-			width: initial;
-			bottom: 10px;
-			right: 10px;
-			font-size: 1.7em;
-			line-height: 60px;
-			padding: 0 15px;
-			@include border-radius(3px);
-		}	
 	}
 }

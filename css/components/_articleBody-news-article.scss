@@ -1,0 +1,87 @@
+// Styling title for article & news
+.article, .news { 
+	.articleBody {
+		p {
+			a {
+				box-shadow: inset 0 -3px 0 #D0DCEB;
+				color: inherit;
+				padding-bottom: 2px;
+
+				@if $isAMP != 'true' {
+					@include break(mobile) {
+						box-shadow: inset 0 -5px 0 #D0DCEB;
+					}
+				}
+
+				&:hover {
+					color: inherit;
+					box-shadow: inset 0 -5px 0 #FBBB76;
+					padding-bottom: 2px;
+					//transition: ease 0.2s;
+				}
+				&:active {
+					position: relative;
+					top: 1px;
+				}
+				
+				@if $isAMP != 'true' {
+					.vm-hook, .itxtrst, .itxtrstspan, .itxtrst span {
+						color: #333 !important;
+					}
+				}
+			}
+		}
+		h2 {
+			padding: 10px 0 20px;
+
+			&.subtitle {
+				padding: 0 0 20px;
+			}
+
+			@if $isAMP == 'true' {
+				font-size: 1.3em;
+
+			} @else {
+				@include break(mobile) {
+					font-size: 1.3em !important;
+				}
+			}
+		}
+
+		h3 {
+			padding: 10px 0 20px;
+
+			@if $isAMP == 'true' {
+				font-size: 1.2em;
+
+			} @else {
+				@include break(mobile) {
+					font-size: 1.2em !important;
+				}
+			}
+		}
+
+		h4 {
+			padding: 6px 0 12px;
+
+			@if $isAMP == 'true' {
+				font-size: 1.1em;
+
+			} @else {
+				@include break(mobile) {
+					font-size: 1.1em !important;
+				}
+			}
+		}
+
+		table {
+			margin-bottom: 30px;
+			overflow-x: auto;
+
+			@include break(v-mobile) {
+				display: block;
+			}	
+		}
+		
+	}
+}

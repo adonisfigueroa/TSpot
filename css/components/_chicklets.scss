@@ -1,8 +1,13 @@
 ul.category-chicklets {
 	
-	@include break(mobile){
+	@if $isAMP == 'true' {
 		margin: 20px 0 10px;
+	} @else {
+		@include break(mobile){
+			margin: 20px 0 10px;
+		}
 	}
+
 	@include break(v-mobile){
 		margin: 20px 0 10px;
 	}

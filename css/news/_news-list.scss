@@ -160,12 +160,16 @@
 					@if $isAMP == 'true' {
 						display: inline;
 						font-size: 0;
-						p { padding: 7px 0; }
+						p {
+							padding: 7px 0;
+						}
 					} @else {
 						@include break(mobile){
 							display: inline;
 							font-size: 0;
-							p { padding: 7px 0 !important; }
+							p {
+								padding: 7px 0 !important;
+							}
 						}
 					}
 				}
@@ -187,11 +191,21 @@
 				}
 
 				@if $isAMP == 'true' {
-					p { padding: 0 0 15px; line-height: 1.5; }
-					p:last-child { padding: 0; }
+					p {
+						padding: 0 0 15px;
+						line-height: 1.5;
+					}
+					p:last-child {
+						padding: 0;
+					}
 				} @else {
-					p { padding: 0 0 15px !important; line-height: 1.5 !important; }
-					p:last-child { padding: 0 !important; }
+					p {
+						padding: 0 0 15px !important;
+						line-height: 1.5 !important;
+					}
+					p:last-child {
+						padding: 0 !important;
+					}
 				}
 			}
 

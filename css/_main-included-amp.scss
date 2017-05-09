@@ -18,7 +18,9 @@ article, aside, section {
 a {
 	text-decoration: none;
 	color: #105ab2;
-	&:hover { color: $red; }
+	&:hover {
+		color: $red;
+	}
 }
 
 a.offset {
@@ -71,22 +73,36 @@ h1 {
 }
 
 .wrapper {
-	width: 92%;
 	max-width: $desk;
 	margin: 0 auto;
 
-	.TopAd {
-		max-width: 970px;
-		width: 100%;
-		height: auto;
-		@include break(mobile){
-			width: auto;
-			padding: 10px 0px;
-			
+	@if $isAMP == 'true' {
+		width: 94%;
+	} @else {
+		width: 92%;
+
+		@include break(tablet) {
+			width: 94%;
 		}
 	}
-	@include break(tablet) {
-		width: 94%;
+
+	.TopAd {
+		max-width: 970px;
+		height: auto;
+
+		@if $isAMP == 'true' {
+			width: auto;
+			padding: 10px 0px;
+
+		} @else {
+			width: 100%;
+			
+			@include break(mobile){
+				width: auto;
+				padding: 10px 0px;
+				
+			}
+		}
 	}
 }
 
@@ -135,9 +151,15 @@ h1 {
 	margin: 0 auto;
 	padding: 0;
 
-	@include break(mobile) {
+	@if $isAMP == 'true' { //Only Amp
 		-webkit-transition: left 0.3s ease-in-out 0s;
 		transition: left 0.3s ease-in-out 0s;
+
+	} @else { //Only Normal (Not Amp)
+		@include break(mobile) {
+			-webkit-transition: left 0.3s ease-in-out 0s;
+			transition: left 0.3s ease-in-out 0s;
+		}
 	}
 
 	&.white {
@@ -145,10 +167,16 @@ h1 {
 	}
 
 	.wrapper {
-		padding: 25px 0;
-		@include break(mobile) {
+		@if $isAMP == 'true' { //Only Amp
 			width: 100%;
 			padding: 25px 0px 0px 0px;
+			
+		} @else {
+			padding: 25px 0;
+			@include break(mobile) {
+				width: 100%;
+				padding: 25px 0px 0px 0px;
+			}
 		}
 	}
 	

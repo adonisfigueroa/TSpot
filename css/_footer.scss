@@ -96,62 +96,66 @@ footer {
 		font-weight: 200;
 	}
 	
-	.menu {
-		@include col(2.2,14,5);
-		font-size: .8em;
-		ul {
-			margin-top: 10px;
-			font-size: .85em;
-			letter-spacing: -0.5px;
-			li {
-				line-height: 25px;
-				a {
-					font-weight: 400;
-					color: #eee;
+	@if $isAMP != 'true' {
+		.menu {
+			@include col(2.2,14,5);
+			font-size: .8em;
+			ul {
+				margin-top: 10px;
+				font-size: .85em;
+				letter-spacing: -0.5px;
+				li {
+					line-height: 25px;
+					a {
+						font-weight: 400;
+						color: #eee;
 
-					&:hover {
-					    color: $orange;
-					    transition: ease 0.1s;
+						&:hover {
+						    color: $orange;
+						    transition: ease 0.1s;
+						}
 					}
 				}
 			}
 		}
-	}
-	@include break(tablet){
-		#Comm {
-			display: none;
+
+		@include break(tablet){
+			#Comm {
+				display: none;
+			}
+			.menu {
+				@include col(3,14,5);	
+			}
+			
 		}
-		.menu {
-		@include col(3,14,5);	
+		@include break(v-tablet){
+			#Usef {
+				display: none;
+			}
+			.menu{
+				@include col(3,14,5);	
+			}
 		}
 		
+		/*
+		@include break(mobile){
+			#Main {
+				display: none;
+			}
+			.menu{
+			@include col(1,3,0);	
+			}
+		}
+		@include break(v-mobile){
+			#Main {
+				display: none;
+			}
+			.menu{
+			@include col(1,1,0);	
+			}
+		}
+		*/
 	}
-	@include break(v-tablet){
-		#Usef {
-			display: none;
-		}
-		.menu{
-		@include col(3,14,5);	
-		}
-	}
-/*
-	@include break(mobile){
-		#Main {
-			display: none;
-		}
-		.menu{
-		@include col(1,3,0);	
-		}
-	}
-	@include break(v-mobile){
-		#Main {
-			display: none;
-		}
-		.menu{
-		@include col(1,1,0);	
-		}
-	}
-*/
 
 	.follow-subscribe {
 		@include col-last(4.3,14,5);

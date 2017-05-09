@@ -68,6 +68,7 @@
 		@if $isAMP == 'true' {
 			border-bottom: 5px solid #105ab2;
 			box-shadow: 0 4px 0px rgba(34,25,25,0.1);
+		
 		} @else {
 			@include break(mobile){
 				border-bottom: 5px solid #105ab2;
@@ -619,6 +620,7 @@
 			.wrapper {
 				@if $isAMP == 'true' { //Only Amp
 					line-height: $header-interior-line-height-mobile;
+				
 				} @else { //Only Normal (Not Amp)
 					line-height: $header-interior-line-height;
 					@include break(mobile){
@@ -626,6 +628,7 @@
 					}
 				}
 			}
+
 			//Only Normal (Not Amp)
 			@if $isAMP != 'true' {
 				.right-links {
@@ -683,21 +686,20 @@
 				line-height: $header-interior-line-height;
 			}
 
-			@include break(mobile) {
+			@if $isAMP == 'true' { //Only Amp
 				background-size: 165px;
 				margin-left: 32px;
-				
-				@if $isAMP == 'true' { //Only Amp
-					height: 49px;
-				} @else{ //Only Normal (Not Amp)
+				height: 49px;
+
+			} @else {
+				@include break(mobile) {
+					background-size: 165px;
+					margin-left: 32px;
 					height: 49px !important;
 				}
-			}
-			@include break(v-mobile) {
-				@if $isAMP == 'true' { //Only Amp
+
+				@include break(v-mobile) {
 					height: 49px;
-				} @else{ //Only Normal (Not Amp)
-					height: 49px !important;
 				}
 			}
 		}
@@ -1191,30 +1193,10 @@
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $header-top-line-height;
-		background-size: 200px;
-		height: 45px;
 		line-height: 45px;
-		width: 185px;
+		
 
 		@if $isAMP == 'true' { //Only Amp
-			margin-left: 30px;
-		} @else {
-			margin-left: 5px;
-		}
-
-		&:hover{
-			background-color: #0c468d;
-			padding: 0 14px 0px 0px;
-			border-left: 14px solid #0c468d;
-
-			@if $isAMP == 'true' { //Only Amp
-				margin-left: 16px;
-			} @else {
-				margin-left: -9px;
-			}
-		}
-
-		@include break(mobile){
 			margin-left: 32px;
 			width: 160px;
 			height: 52px;
@@ -1225,12 +1207,44 @@
 				margin-left: 26px;
 				border-left: 6px solid #0c468d;
 			}
+		
+		} @else {
+			width: 185px;
+			height: 45px;
+			margin-left: 5px;
+			background-size: 200px;
+
+			&:hover{
+				background-color: #0c468d;
+				padding: 0 14px 0px 0px;
+				border-left: 14px solid #0c468d;
+
+				@if $isAMP == 'true' { //Only Amp
+					margin-left: 16px;
+				} @else {
+					margin-left: -9px;
+				}
+			}
+
+			@include break(mobile){
+				margin-left: 32px;
+				width: 160px;
+				height: 52px;
+				background-size: 170px;
+
+				&:hover{
+					padding: 0 4px 0px 0px;
+					margin-left: 26px;
+					border-left: 6px solid #0c468d;
+				}
+			}
+
+			@include break(v-mobile){
+				width: 160px;
+				height: 52px;
+			}
 		}
 
-		@include break(v-mobile){
-			width: 160px;
-			height: 52px;
-		}
 		a {
 			display: block;
 			width: 189px; height: $header-top-line-height;
