@@ -237,13 +237,15 @@ footer {
 					}
 				}
 			}
-			
 		}
-		@include break(tablet){
-			@include col-last(5,14,5);
-		}
-		@include break(v-tablet) {
-			@include col-last(6,14,5);
+
+		@if $isAMP != 'true' {
+			@include break(tablet){
+				@include col-last(5,14,5);
+			}
+			@include break(v-tablet) {
+				@include col-last(6,14,5);
+			}
 		}
 		@include break(mobile) {
 			@include col-last(1,2,0);
@@ -286,7 +288,6 @@ footer {
 			    margin-bottom: -4px;
 			}
 		}
-		
 	}
 	
 	a.back-to-top {
