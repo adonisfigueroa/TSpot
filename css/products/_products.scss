@@ -1,0 +1,207 @@
+.also-looked-at {
+	margin-bottom: 25px;
+}
+
+.expert-reviews-and-ratings {
+	margin-bottom: 45px;
+}
+
+.also-looked-at,
+.expert-reviews-and-ratings {
+	@if $isAMP == 'true' {
+		margin-bottom: 35px;
+	} @else {
+		@include break(mobile){
+			margin-bottom: 35px;
+		}
+	}
+
+	& > h3 {
+		font-weight: 400;
+		border-bottom: 2px solid $blue;
+		line-height: 230%;
+		
+		span {
+			position: relative;
+			display: inline-block;
+
+			&:after {
+				position: absolute;
+				content:"";
+				display: block;
+				left: 50%; bottom: 0;
+				width: 5px; height: 7px;
+				margin-left: -5px;
+				@include triangle(up,$blue,4,6);
+				@include break (v-mobile){
+					display: none;
+				}
+			
+			}
+		}
+	}
+
+	ul.teaser-list {
+		padding: 20px 0;
+		
+		li {
+			font-size: .8em;
+			background: #2D3842;
+			margin-bottom: 20px;
+			@include col(1,4,2);
+			@include outer-glow(10,0,.2);
+
+			&:nth-child(4),&:nth-child(8) {
+				@include col-last(1,4,2);
+			}
+
+			a {
+				color: white;
+			}
+
+			.img-wrap {
+				background-size: 110%;
+				background-repeat: no-repeat;
+				background-color: white;
+				background-position: center center;
+				display: block;
+				height: 150px;
+				position: relative;
+			
+				.rating {
+					font-family: $f-helvetica;
+					font-weight: 500;
+					color: white;
+					font-size: 1.9em;
+					position: absolute;
+					display: inline-block;
+					padding: 0 13px;
+					line-height: 160%;
+					bottom: 0; right: 0px;
+					@include border-radius(2px);
+
+					&.excellent {
+						@include trans-bg($c-excellent,.9);
+					}
+					&.average {
+						@include trans-bg($c-average,.9);
+					}
+					&.good {
+						@include trans-bg($c-good,.9);
+					}
+					&.bad {
+						@include trans-bg($c-bad,.9);
+					}
+					&.perfect {
+						padding: 0 5px !important
+					}
+			  
+				}
+			}
+			
+			h3 {
+				text-align: center;
+				padding: 10px;
+				min-height: 42px;
+				max-height: 42px;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&.expert-reviews-and-ratings {
+		& > h3 {
+			position: relative;
+			margin-bottom: 10px;
+			&:after {
+				position: absolute;
+				content:"";
+				display: block;
+				left: 60px; bottom: -8px;
+				width: 5px; height: 7px;
+				margin-left: -5px;
+				@include triangle(down,$blue,4,6);
+			}
+		}
+	}
+
+	.comment {
+		position: relative;
+		padding: 15px 100px 0px 10px;
+		border-bottom: 1px solid #eee !important;
+		min-height: 100px;
+	
+		&:nth-child(even) {
+			background: #f5f5f5;
+		}
+	
+		.rating {
+			font-family: $f-helvetica;
+			font-weight: 500;
+			color: white;
+			font-size: 1.5em;
+			position: absolute;
+			display: inline-block;
+			padding: 0 15px;
+			line-height: 180%;
+			top: 30px; right: 15px;
+			@include border-radius(2px);
+
+			&.excellent {
+				@include trans-bg($c-excellent,.9);
+			}
+			&.average {
+				@include trans-bg($c-average,.9);
+			}
+			&.good {
+				@include trans-bg($c-good,.9);
+			}
+			&.bad {
+				@include trans-bg($c-bad,.9);
+			}
+			&.perfect {
+				padding: 0 5px !important;
+			}
+
+		}
+	
+		cite {
+			line-height: 220%;
+			font-style: normal;
+			font-size: .8em;
+
+			a {
+				font-weight: 500;
+			}
+
+			time {
+				@include break(mobile){
+					display: block;
+					margin-top: -10px;
+					font-size: 0.8em;
+					color: #888;
+				}
+			}
+		}
+	
+		p {
+			padding: 5px 0 15px;
+			line-height: 1.5;
+			font-size: .7em;
+			font-weight: 400;
+		}
+	} 
+}
+
+//Related products or Product.php
+.product .also-looked-at .teaser-list li{
+	@include break(v-mobile){
+		@include col(1,1,0);
+		margin-bottom: 15px;
+	}
+	&:nth-child(4), &:nth-child(8){
+		@include break(v-mobile){
+			@include col(1,1,0);
+		}
+	}
+}
