@@ -153,7 +153,7 @@ body.interior {
 					@include break(v-mobile) {
 						font-size: .85em;
 						line-height: 35px;
-    					padding-left: 10px;
+						padding-left: 10px;
 						letter-spacing: -0.2px;
 					}
 
@@ -246,7 +246,7 @@ body.interior {
 					}
 
 					.title {
-						  a {
+						a {
 							color: #05408f;
 							font-weight: 500;
 							font-size: 1.5em;
@@ -256,7 +256,7 @@ body.interior {
 								padding-bottom: 1px;
 								color: #075bc0;
 							}
-						  }
+						}
 
 						em {
 							display: inline-block;
@@ -454,7 +454,7 @@ body.interior {
 					background: none !important;
 					padding: 0;
 					text-shadow: none !important;
-			  	}
+				}
 				li {
 					background: none;
 					display: block;

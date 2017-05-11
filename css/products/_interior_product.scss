@@ -1,25 +1,35 @@
 body.interior {
 	&.products {
+
+		// ! Special body styles ===========================================
+		@if $isAMP != 'true' {
+			#content {
+				.wrapper {
+					padding: 20px 0;
+				}
+			}
+		}
+		// ! END Special body styles ===========================================
+
 		.excellent {
-		  background-color: rgba(0,191,23,1);
+			background-color: rgba(0,191,23,1);
 		}
 		.good {
 			background-color: rgba(7,91,192,1);
 		}
 		.average {
-		  background-color: rgba(112,33,161,1);
+			background-color: rgba(112,33,161,1);
 		}
 		.bad {
-		  background-color: rgba(204,0,0,1);
+			background-color: rgba(204,0,0,1);
 		}
 		.none {
-		  background-color: rgba(153,153,153,1);
-		  
+			background-color: rgba(153,153,153,1);
 		}
 		.alternate {
 			background: white;
 		}
-		.col-2-3{
+		.col-2-3 {
 			@if $isAMP == 'true' {
 				width: 100%;
 			} @else {
@@ -36,7 +46,7 @@ body.interior {
 			}
 		}
 		
-		.post-list-product{
+		.post-list-product {
 			width: 100%;
 
 			&.pfindex {
@@ -61,7 +71,7 @@ body.interior {
 				}
 
 				&:nth-child(even) {
-				  background: white;
+					background: white;
 				}
 
 				@include break(v-mobile){
@@ -216,16 +226,16 @@ body.interior {
 				}
 			}
 
-			.prod-meta{
+			.prod-meta {
 				float: right;
 				display: inline-block;
 				height: 70px;
 
-				@include break(v-mobile){
+				@include break(v-mobile) {
 					display: none;
 				}
 
-				.intRank{
+				.intRank {
 					color: $purple;
 					font-weight: 500;
 					font-size: 0.7em;
@@ -235,7 +245,7 @@ body.interior {
 					margin-right: 18px;
 					line-height: 70px;
 					
-					@include break(v-tablet){
+					@include break(v-tablet) {
 						display: none;				
 					}
 				}
@@ -265,7 +275,7 @@ body.interior {
 						display: none;
 					}
 				}
-				.review_score{
+				.review_score {
 					width: 65px;
 					margin-top: 7px;
 					height: 55px;
@@ -274,7 +284,7 @@ body.interior {
 					text-align: center;
 					@include border-radius(3px);
 					
-					@include break(v-mobile){
+					@include break(v-mobile) {
 						width: 60px;
 					}
 
@@ -295,48 +305,50 @@ body.interior {
 			}
 		}
 
-		#LookUpTop {
-			margin-bottom:20px;
-			text-decoration: none;
+		@if $isAMP != 'true' {
+			#LookUpTop {
+				margin-bottom:20px;
+				text-decoration: none;
 
-			.SideTitle{
-				background-color: $blue;
-				padding: 0px 2%;
-			}
-
-			.form_search {
-				overflow: hidden;
-			}
-
-			h3 {
-				color: white;
-				line-height: 34px;
-				font-size: 0.95em;
-			}
-
-			input[type=text] {
-				border: none;
-				height: 48px;
-				width: 100%;
-				border-radius: 0;
-				border: none;
-				box-shadow: none;
-				font-family: $f-condensed;
-				line-height: 30px;
-				font-weight: 500;
-				color: #333;
-
-				@if $isAMP == 'true' {
-					font-size: 1.1em;
+				.SideTitle{
+					background-color: $blue;
 					padding: 0px 2%;
-				} @else {
-					font-size: 1.1em !important;
-					padding: 0px 2% !important;
 				}
-			}
 
-			input#productsearch {
-				box-sizing: border-box;
+				.form_search {
+					overflow: hidden;
+				}
+
+				h3 {
+					color: white;
+					line-height: 34px;
+					font-size: 0.95em;
+				}
+
+				input[type=text] {
+					border: none;
+					height: 48px;
+					width: 100%;
+					border-radius: 0;
+					border: none;
+					box-shadow: none;
+					font-family: $f-condensed;
+					line-height: 30px;
+					font-weight: 500;
+					color: #333;
+
+					@if $isAMP == 'true' {
+						font-size: 1.1em;
+						padding: 0px 2%;
+					} @else {
+						font-size: 1.1em !important;
+						padding: 0px 2% !important;
+					}
+				}
+
+				input#productsearch {
+					box-sizing: border-box;
+				}
 			}
 		}
 
@@ -365,16 +377,16 @@ body.interior {
 				font-size: 0.7em;
 				display: none;
 
-				@include break(v-tablet){
+				@include break(v-tablet) {
 					font-size: 0.65em;
 				}
 				
-				@include break(mobile){
+				@include break(mobile) {
 					display: block;
 				}
 			}
 			
-			#CategoryList{
+			#CategoryList {
 				background: #304456;
 			}
 			
@@ -405,7 +417,7 @@ body.interior {
 				background-color: $blue;
 				padding: 0px 15px;
 				
-				@include break(v-tablet){
+				@include break(v-tablet) {
 					padding: 0px 10px;
 				}
 				
@@ -466,8 +478,8 @@ body.interior {
 
 			@if $isAMP != 'true' {
 				.has_more{
-					.SideTitle{
-						.arrow{
+					.SideTitle {
+						.arrow {
 							@include triangle(left,white,4,6);
 							float: right;
 							margin-top: -18px;
@@ -478,14 +490,14 @@ body.interior {
 					}
 				}
 				.open{
-					.SideTitle{
-						.arrow{
+					.SideTitle {
+						.arrow {
 							@include triangle(down,white,4,6);
 							float: right;
 							margin-top: -18px;
 						}
 					}
-					.SideProdContent{
+					.SideProdContent {
 						display: block;
 					}
 				}
@@ -514,7 +526,7 @@ body.interior {
 				} @else {
 					padding: 17px;
 
-					@include break(v-tablet){
+					@include break(v-tablet) {
 						padding: 10px 0px 10px 10px;
 					}
 				}
@@ -651,16 +663,16 @@ body.interior {
 						color: #333;
 						
 						&::-webkit-input-placeholder { /* WebKit browsers */
-							color:    #DFDFD0;
+							color: #DFDFD0;
 						}
 						&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-							color:    #DFDFD0;
+							color: #DFDFD0;
 						}
 						&::-moz-placeholder { /* Mozilla Firefox 19+ */
-							color:    #DFDFD0;
+							color: #DFDFD0;
 						}
 						&:-ms-input-placeholder { /* Internet Explorer 10+ */
-							color:    #DFDFD0;
+							color: #DFDFD0;
 						}
 						
 						@include break(v-tablet){
@@ -830,20 +842,20 @@ body.interior {
 						padding-left: 10px;
 					
 						&:before {
-						  content:"";
-						  position: absolute;
-						  width: 15px; height: 15px;
-						  left: -15px; top: 5px;
-						  background-image: url(/images/icons-pros-cons-hd.png);
-						  background-position: center left;
-						  background-size: 30px;
+							content:"";
+							position: absolute;
+							width: 15px; height: 15px;
+							left: -15px; top: 5px;
+							background-image: url(/images/icons-pros-cons-hd.png);
+							background-position: center left;
+							background-size: 30px;
 						}
 					}
 				
 					&.cons {
 						li {
 							&:before {
-							  background-position: center right;
+								background-position: center right;
 							}
 						} 
 					}

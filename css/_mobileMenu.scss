@@ -14,7 +14,7 @@
 		position: relative;
 		float: left;
 		cursor: pointer;
-	    svg {
+		svg {
 			text-decoration: none;
 			fill: white;
 			float: left;
@@ -54,7 +54,7 @@
 			position: relative;
 			float: left;
 			cursor: pointer;
-		    svg {
+			svg {
 				text-decoration: none;
 				fill: white;
 				float: left;
@@ -96,10 +96,10 @@
 		
 
 		-webkit-transition: -webkit-transform 0.3s;
-    	-moz-transition: transform 0.3s;
-    	-ms-transition: transform 0.3s; /* IE 9 -- does not exists? */
-    	-o-transition: transform 0.3s;
-    	transition: transform 0.3s;
+		-moz-transition: transform 0.3s;
+		-ms-transition: transform 0.3s; /* IE 9 -- does not exists? */
+		-o-transition: transform 0.3s;
+		transition: transform 0.3s;
 	}
 	.c-menu__close {
 		display: none;

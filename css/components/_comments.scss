@@ -43,7 +43,7 @@
 				font-size: 0.55em;
 			}
 		}
-	  
+
 		a.post-new-comment {
 			display: inline-block;
 			font-family: $f-condensed;
@@ -166,7 +166,7 @@
 					font-weight: bold;
 
 					&:first-child {
-					  /* border-right: 1px solid #ccc; */
+						/* border-right: 1px solid #ccc; */
 					}
 
 					a {
@@ -256,8 +256,8 @@
 			background-color: #F5F5F5;
 
 			h3 {
-			  line-height: 200%;
-			  font-weight: 500;
+				line-height: 200%;
+				font-weight: 500;
 			}
 
 			.tagline {

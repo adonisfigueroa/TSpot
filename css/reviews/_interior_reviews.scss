@@ -205,7 +205,7 @@ body.interior {
 						padding: 20px 20px 20px 215px;
 
 						&:nth-child(even) {
-						  background: white;
+							background: white;
 						}
 
 						@include break(mobile){

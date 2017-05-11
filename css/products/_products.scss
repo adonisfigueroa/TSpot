@@ -99,7 +99,6 @@
 							padding: 0 5px !important;
 						}
 					}
-			  
 				}
 			}
 
@@ -379,7 +378,7 @@
 			}
 		}
 	}
-  
+
 	.product-desc {
 		@include col-last(4,10,5);
 		margin-top: 15px;
@@ -734,7 +733,7 @@
 						padding-right: 15px;
 						margin-right: 10px;
 					}
-		  
+
 					a {
 						color: black;
 			
@@ -752,7 +751,7 @@
 			}
 		}
 	}
-  
+
 	.score {
 		margin: 0 0 15px;
 
@@ -1059,7 +1058,7 @@
 			}
 		}
 	}
-  
+
 	.pros,
 	.cons {
 		border-left: 15px solid $red;
@@ -1079,7 +1078,7 @@
 		&.pros {
 			border-left: 15px solid #0250C5;
 		}
-	}  
+	}
 	.pros {
 		@if $isAMP == 'true' {
 			@include col(1,2,5);

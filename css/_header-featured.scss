@@ -99,9 +99,9 @@
 		&.centered {
 			text-align: center;
 			width: 100%;
-		    bottom: 150px;
+			bottom: 150px;
 
-		    @if $isAMP != 'true' {
+			@if $isAMP != 'true' {
 				@include break(tablet){
 					width: 90%;
 					text-align: left;

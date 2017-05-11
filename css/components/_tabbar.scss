@@ -1,14 +1,14 @@
 .tabbar {
 	height: 33px;
-  	line-height: 33px;
-  	position: relative;
+	line-height: 33px;
+	position: relative;
 
 	.active {
 		bottom: 3px;
 		line-height: 33px;
 		height: 36px;
 		background-image: linear-gradient(to top, #F2F4F8, #e7e9ee 50%, #e7e9ee);
-  	}
+	}
 	h3 {
 		cursor: pointer;
 		background-color: #e7e9ee;
@@ -26,7 +26,7 @@
 
 		@if $isAMP != 'true' {
 			&:hover {
-			  background-color: #d3dce6;
+				background-color: #d3dce6;
 			}
 
 			@include break(v-mobile){
@@ -38,10 +38,10 @@
 
 			a {
 				color: #1e2933;
-			  	
-			  	&:hover {
+				
+				&:hover {
 					color: #1e2933;
-			  	}
+				}
 			}
 			&.pricetab {
 				background-color: #59a059;
@@ -49,7 +49,7 @@
 			
 				&:hover {
 					background-color: #339933;
-			  	}
+				}
 			}
 
 			span.number {

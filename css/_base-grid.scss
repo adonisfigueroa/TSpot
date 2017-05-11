@@ -7,7 +7,7 @@
 // options: @include break($point);
 // 		$point options: desk, tablet, v-tablet, mobile, v-mobile
 
-@mixin break($point) {  
+@mixin break($point) {
 	@if $point == big-desk {
 		@media screen and (min-width: $big-desk) { @content }
 	}
@@ -21,14 +21,14 @@
 		@media only screen and (max-width: $v-tablet) { @content }
 	}
 	@if $point == mobile {
-		@media only screen and (max-width: $mobile)  { @content }
+		@media only screen and (max-width: $mobile) { @content }
 	}
 	@else if $point == v-mobile {
-		@media only screen and (max-width: $v-mobile)  { @content }
+		@media only screen and (max-width: $v-mobile) { @content }
 	}
 }
 
-@mixin break-contain($pt-group) {  
+@mixin break-contain($pt-group) {
 	@if $pt-group == desk {
 		@media only screen and (min-width: $tablet) { @content }
 	}
@@ -54,7 +54,7 @@
 // Set before and after on any selector using the mixin below
 // options: @include clearfix(before); @include clearfix(after);
 
-@mixin clearfix($where) {  
+@mixin clearfix($where) {
 	@if $where == before {
 		&:before {
 			content: ' ';
@@ -262,7 +262,7 @@
 //	@include grid(v-mobile-mobile,1,0);
 
 
-@mixin grid($pt-group,$total-col,$gutter-width) {  
+@mixin grid($pt-group,$total-col,$gutter-width) {
 	@if $pt-group == desk {
 		@media only screen and (min-width: $tablet) {
 			@include col(1,$total-col,$gutter-width);

@@ -248,7 +248,7 @@ body.interior.download {
 					&:before {
 						content:'';
 						width:100%;
-						height:100%;    
+						height:100%;
 						position:absolute;
 						left:0;
 						top:0;
@@ -556,7 +556,7 @@ body.interior.download {
 					display: block;
 					float: left;
 					list-style-type: none;
-					position: relative;  
+					position: relative;
 					-webkit-box-sizing: border-box;
 					-moz-box-sizing: border-box;
 					box-sizing: border-box;
@@ -593,7 +593,7 @@ body.interior.download {
 
 						img {
 							width:260px;
-							height:78px;         
+							height:78px;
 						}
 					}
 
@@ -684,9 +684,9 @@ body.interior.download {
 
 	.downItem {
 		@if $isAMP == 'true' {
-		  display: block;
+			display: block;
 		} @else {
-		  display: flex;
+			display: flex;
 		}
 
 		height: 150px;
@@ -715,8 +715,8 @@ body.interior.download {
 				border-radius: 5px;
 
 				@if $isAMP == 'true' {
-			  		margin-top: -150px;
-			  	}
+					margin-top: -150px;
+				}
 
 				&:hover {
 					background: linear-gradient(25deg, rgba(255, 127, 0, 0.55) 0%, rgba(21, 76, 143, 0.8) 75%);

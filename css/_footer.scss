@@ -2,9 +2,9 @@ footer {
 	background: #1e2933;
 	z-index: 2;
 	left: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
 
 	@include break(mobile) {
 		-webkit-transition: left 0.3s ease-in-out 0s;
@@ -111,8 +111,8 @@ footer {
 						color: #eee;
 
 						&:hover {
-						    color: $orange;
-						    transition: ease 0.1s;
+							color: $orange;
+							transition: ease 0.1s;
 						}
 					}
 				}
@@ -282,10 +282,10 @@ footer {
 			margin-left: 20px;
 			color: black;
 			&:hover {
-			    border-bottom: 2px solid #AAA;
-			    padding-bottom: 2px;
-			    text-decoration: none;
-			    margin-bottom: -4px;
+				border-bottom: 2px solid #AAA;
+				padding-bottom: 2px;
+				text-decoration: none;
+				margin-bottom: -4px;
 			}
 		}
 	}
