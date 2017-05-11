@@ -478,11 +478,12 @@ body.interior {
 		overflow: visible;
 		letter-spacing: -.333px;
 		font-family: $f-primary;
-		float: left;
 
 		@if $isAMP == 'true' {
 			margin: 0 0 30px 0;
 		} @else {
+			float: left;
+			
 			@include break(mobile) {
 				margin: 0 0 30px 0;
 			}

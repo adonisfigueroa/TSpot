@@ -171,20 +171,3 @@ body.interior {
 		}
 	}
 }
-
-/* --> Not used???? No difference with and without style
-body.interior .ListHeader {
-  &.reviews-categories {
-	margin-top: 8%;
-  }
-}*/
-
-body {
-  &.products #masthead {
-	background: #002040;
-	.wrapper {
-	  padding: 0 !important;
-	}
-  }
-}
-/* End reviews Index */
