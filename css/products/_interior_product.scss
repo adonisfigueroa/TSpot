@@ -194,10 +194,10 @@ body.interior {
 								margin-top: 4px;
 								margin-bottom: 4px;
 							}
-						}
-						
-						&:hover {
-							background-color: darken(#61798E,10%);	
+
+							&:hover {
+								background-color: darken(#61798E,10%);	
+							}
 						}
 					}
 				}
@@ -235,18 +235,20 @@ body.interior {
 					display: none;
 				}
 
-				.intRank {
-					color: $purple;
-					font-weight: 500;
-					font-size: 0.7em;
-					float: left;
-					width: 50px;
-					text-align: right;
-					margin-right: 18px;
-					line-height: 70px;
-					
-					@include break(v-tablet) {
-						display: none;				
+				@if $isAMP != 'true' {
+					.intRank {
+						color: $purple;
+						font-weight: 500;
+						font-size: 0.7em;
+						float: left;
+						width: 50px;
+						text-align: right;
+						margin-right: 18px;
+						line-height: 70px;
+						
+						@include break(v-tablet) {
+							display: none;				
+						}
 					}
 				}
 				.award {
@@ -266,8 +268,10 @@ body.interior {
 					a {
 						color: $red;
 
-						&:hover {
-							color: $orange;
+						@if $isAMP != 'true' {
+							&:hover {
+								color: $orange;
+							}
 						}
 					}
 
@@ -415,10 +419,16 @@ body.interior {
 			.SideTitle{
 				line-height: 31px;
 				background-color: $blue;
-				padding: 0px 15px;
-				
-				@include break(v-tablet) {
+
+				@if $isAMP == 'true' {
 					padding: 0px 10px;
+				
+				} @else {
+					padding: 0px 15px;
+					
+					@include break(v-tablet) {
+						padding: 0px 10px;
+					}
 				}
 				
 				.arrow {
@@ -519,48 +529,49 @@ body.interior {
 			}
 
 			.SideProdContent {
-				background-color:#324455;
-
 				@if $isAMP == 'true' {
 					padding: 10px 0px 10px 10px;
 				} @else {
 					padding: 17px;
+					background-color:#324455;
 
 					@include break(v-tablet) {
 						padding: 10px 0px 10px 10px;
 					}
 				}
 				
-				li, section { // section tag used for AMP
-					line-height: 10px;
-					margin-bottom: 14px;
-					border: none;
-					a {
-						.arrow {
-							opacity: 0;
-							position: absolute;
-							left: -10px;
-							width: 6px; height: 4px;
-							@include triangle(right,$orange,4,6);
+				@if $isAMP != 'true' {
+					li {
+						line-height: 10px;
+						margin-bottom: 14px;
+						border: none;
+						a {
+							.arrow {
+								opacity: 0;
+								position: absolute;
+								left: -10px;
+								width: 6px; height: 4px;
+								@include triangle(right,$orange,4,6);
 
-							@if $isAMP == 'true' {
-								margin: 0;
-							} @else {
-								margin: 0 !important;
+								@if $isAMP == 'true' {
+									margin: 0;
+								} @else {
+									margin: 0 !important;
+								}
 							}
 						}
-					}
-					a:hover, a.active {
-						.arrow {
-							opacity: 1;
-							left: -10px;
-							width: 6px; height: 4px;
-							@include triangle(right,$orange,4,6);
+						a:hover, a.active {
+							.arrow {
+								opacity: 1;
+								left: -10px;
+								width: 6px; height: 4px;
+								@include triangle(right,$orange,4,6);
 
-							@if $isAMP == 'true' {
-								margin: 0;
-							} @else {
-								margin: 0 !important;
+								@if $isAMP == 'true' {
+									margin: 0;
+								} @else {
+									margin: 0 !important;
+								}
 							}
 						}
 					}
