@@ -192,12 +192,14 @@ h1 {
 		}
 	}
 	
-	.group-left {
-		@include col(2,3,2);
-	}
-	
-	.group-right {
-		@include col-last(1,3,2);
+	@if $isAMP != 'true' {
+		.group-left {
+			@include col(2,3,2);
+		}
+		
+		.group-right {
+			@include col-last(1,3,2);
+		}
 	}
 	
 	p {

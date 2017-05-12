@@ -27,33 +27,33 @@ ul.category-chicklets {
 			&.black { color: #000; }
 		}
 
-		&.blue, &.reviews, &.techspot																						{ background-color: $blue; &:hover { background-color: lighten($blue,8%); } }
-		&.blue2, &.apple, &.storage, &.laptops																				{ background-color: #0088CC; &:hover { background-color: lighten(#0088CC,7%); } } 
-		&.blue3, &.microsoft, &.windows, &.tips-tricks																		{ background-color: #00A2F2; &:hover { background-color: lighten(#00A2F2,8%); } }
-		&.blue4, &.tag1																										{ background-color: #05408f; &:hover { background-color: lighten(#05408f,8%); } }
-		&.navy, &.products, &.downloads																						{ background-color: #00366F; &:hover { background-color: lighten(#00366F,8%); } }
-		&.navy2, &.industry																									{ background-color: #2A288A; &:hover { background-color: lighten(#2A288A,8%); } }
+		&.blue, &.reviews, &.techspot																						{ background-color: $blue;		@if $isAMP != 'true' { &:hover { background-color: lighten($blue,8%); } } }
+		&.blue2, &.apple, &.storage, &.laptops																				{ background-color: #0088CC;	@if $isAMP != 'true' { &:hover { background-color: lighten(#0088CC,7%); } } }
+		&.blue3, &.microsoft, &.windows, &.tips-tricks																		{ background-color: #00A2F2;	@if $isAMP != 'true' { &:hover { background-color: lighten(#00A2F2,8%); } } }
+		&.blue4, &.tag1																										{ background-color: #05408f;	@if $isAMP != 'true' { &:hover { background-color: lighten(#05408f,8%); } } }
+		&.navy, &.products, &.downloads																						{ background-color: #00366F;	@if $isAMP != 'true' { &:hover { background-color: lighten(#00366F,8%); } } }
+		&.navy2, &.industry																									{ background-color: #2A288A;	@if $isAMP != 'true' { &:hover { background-color: lighten(#2A288A,8%); } } }
 
-		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: $green; &:hover { background-color: lighten($green,4%); } }	
-		&.green2, &.science																									{ background-color: $dark-green; &:hover { background-color: lighten($dark-green,8%); } }
-		&.green3, &.features, &.google																						{ background-color: #237A3C; &:hover { background-color: lighten(#237A3C,6%); } }
-		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887; &:hover { background-color: lighten(#24a887,6%); } }
+		&.green, &.hardware, &.drivers, &.cpu, &.motherboards, &.input-devices, &.cases										{ background-color: $green;		@if $isAMP != 'true' { &:hover { background-color: lighten($green,4%); } } }	
+		&.green2, &.science																									{ background-color: $dark-green;@if $isAMP != 'true' { &:hover { background-color: lighten($dark-green,8%); } } }
+		&.green3, &.features, &.google																						{ background-color: #237A3C;	@if $isAMP != 'true' { &:hover { background-color: lighten(#237A3C,6%); } } }
+		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887;	@if $isAMP != 'true' { &:hover { background-color: lighten(#24a887,6%); } } }
 
-		&.purple, &.software, &.culture																						{ background-color: $purple; &:hover { background-color: lighten($purple,6%); } }
-		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac; &:hover { background-color: lighten(#5353ac,5%); } }
+		&.purple, &.software, &.culture																						{ background-color: $purple;	@if $isAMP != 'true' { &:hover { background-color: lighten($purple,6%); } } }
+		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac;	@if $isAMP != 'true' { &:hover { background-color: lighten(#5353ac,5%); } } }
 
-		&.orange, &.guides, &.web, &.home, &.blog, &.desktop-pcs															{ background-color: #e67200; &:hover { background-color: $orange; } }
-		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: $red; &:hover 	{ background-color: lighten($red,5%); } }
-		&.red2, &.buying-guides, &.bestof, &.video																			{ background-color: #CC3333; &:hover { background-color: lighten(#CC3333,5%); } }
-		&.red3, &.security																									{ background-color: #ac5353; &:hover { background-color: lighten(#ac5353,5%); } }
-		&.red4, &.crimson, &.tag2																							{ background-color: #8f1515; &:hover { background-color: lighten(#8f1515,5%); } }
+		&.orange, &.guides, &.web, &.home, &.blog, &.desktop-pcs															{ background-color: #e67200;	@if $isAMP != 'true' { &:hover { background-color: $orange; } } }
+		&.red, &.gaming, &.graphics-cards, &.must-reads, &.games															{ background-color: $red;		@if $isAMP != 'true' { &:hover 	{ background-color: lighten($red,5%); } } }
+		&.red2, &.buying-guides, &.bestof, &.video																			{ background-color: #CC3333;	@if $isAMP != 'true' { &:hover { background-color: lighten(#CC3333,5%); } } }
+		&.red3, &.security																									{ background-color: #ac5353;	@if $isAMP != 'true' { &:hover { background-color: lighten(#ac5353,5%); } } }
+		&.red4, &.crimson, &.tag2																							{ background-color: #8f1515;	@if $isAMP != 'true' { &:hover { background-color: lighten(#8f1515,5%); } } }
 
-		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #DD9C08; &:hover { background-color: lighten(#DD9C08,4%); } }
-		&.grey, &.natw																										{ background-color: #888888; &:hover { background-color: lighten(#888888,8%); } }
-		&.deals 																											{ background-color: #779954; &:hover { background-color: lighten(#779954,8%); } }
-		&.wof	 																											{ background-color: #85B200; &:hover { background-color: lighten(#85B200,4%); } }
+		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #DD9C08;	@if $isAMP != 'true' { &:hover { background-color: lighten(#DD9C08,4%); } } }
+		&.grey, &.natw																										{ background-color: #888888;	@if $isAMP != 'true' { &:hover { background-color: lighten(#888888,8%); } } }
+		&.deals 																											{ background-color: #779954;	@if $isAMP != 'true' { &:hover { background-color: lighten(#779954,8%); } } }
+		&.wof	 																											{ background-color: #85B200;	@if $isAMP != 'true' { &:hover { background-color: lighten(#85B200,4%); } } }
 
-		&.yellow, &.wearables																								{ background-color: #f9d236; &:hover { background-color: lighten(#f9d236,6%); } } 
+		&.yellow, &.wearables																								{ background-color: #f9d236;	@if $isAMP != 'true' { &:hover { background-color: lighten(#f9d236,6%); } } }
 
 		// Texto negro
 		&.yellow, &.wearables {
