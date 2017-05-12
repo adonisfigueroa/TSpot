@@ -47,23 +47,27 @@
 				line-height: 1.6;
 				padding-bottom: 5px;
 
-				a {
-					&:hover {
-						color: $red;
+				@if $isAMP != 'true' {
+					a {
+						&:hover {
+							color: $red;
+						}
 					}
 				}
 			}
 		}
 	}
 	
-	&:hover {
-		strong {
-			color: white;
-			background: $orange;
-			transition: background 0.1s;
-		}
-		section {
-			display: block;
+	@if $isAMP != 'true' {
+		&:hover {
+			strong {
+				color: white;
+				background: $orange;
+				transition: background 0.1s;
+			}
+			section {
+				display: block;
+			}
 		}
 	}
 }
@@ -104,19 +108,23 @@
 			@include triangle(right,black,8,10);
 		}
 	}
-	a:hover {
-		span {
-			&:after {
-				content:"";
-				display: block;
-				position: absolute;
-				right: 0; top: 50%;
-				margin-top: -5px;
-				width: 10px; height: 7px;
-				@include triangle(right,$orange,8,10);
+
+	@if $isAMP != 'true' {
+		a:hover {
+			span {
+				&:after {
+					content:"";
+					display: block;
+					position: absolute;
+					right: 0; top: 50%;
+					margin-top: -5px;
+					width: 10px; height: 7px;
+					@include triangle(right,$orange,8,10);
+				}
 			}
 		}
 	}
+	
 	a strong {
 		font-size: 0.85em;
 	}	

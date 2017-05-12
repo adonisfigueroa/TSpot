@@ -178,9 +178,11 @@
 					border-bottom: 1px solid #ccc;
 					padding-bottom: 3px;
 
-					&:hover {
-						border-bottom: 1px solid $orange;
-						padding-bottom: 3px;
+					@if $isAMP != 'true' {
+						&:hover {
+							border-bottom: 1px solid $orange;
+							padding-bottom: 3px;
+						}
 					}
 				}
 			}
@@ -227,41 +229,50 @@
 		&.award {
 			@include trans-bg(#ff7f00,.7);
 
-			&:hover {
-				@include trans-bg(#ff7f00,.9);
+			@if $isAMP != 'true' {
+				&:hover {
+					@include trans-bg(#ff7f00,.9);
+				}
 			}
 		}		
 		&.excellent {
 			@include trans-bg($c-excellent,.7);
 			
-			&:hover {
-				@include trans-bg($c-excellent,.9);
+			@if $isAMP != 'true' {
+				&:hover {
+					@include trans-bg($c-excellent,.9);
+				}
 			}
 		}
 		&.good {
 			@include trans-bg($c-good,.7);
 
-			&:hover {
-				@include trans-bg($c-good,.9);
+			@if $isAMP != 'true' {
+				&:hover {
+					@include trans-bg($c-good,.9);
+				}
 			}
 		}
 		&.average {
 			@include trans-bg($c-average,.7);
 
-			&:hover {
-				@include trans-bg($c-average,.9);
+			@if $isAMP != 'true' {
+				&:hover {
+					@include trans-bg($c-average,.9);
+				}
 			}
 		}
 		&.bad {
 			@include trans-bg($c-bad,.7);
 
-			&:hover {
-				@include trans-bg($c-bad,.9);
+			@if $isAMP != 'true' {
+				&:hover {
+					@include trans-bg($c-bad,.9);
+				}
 			}
 		}
 		
 		span {
-			
 		}
 
 		.label {

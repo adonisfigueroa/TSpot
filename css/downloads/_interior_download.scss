@@ -160,10 +160,12 @@ body.interior {
 					a {
 						color: #05408f;
 
-						&:hover {
-							border-bottom: 1px dotted #075bc0;
-							padding-bottom: 1px;
-							color: #075bc0;
+						@if $isAMP != 'true' {
+							&:hover {
+								border-bottom: 1px dotted #075bc0;
+								padding-bottom: 1px;
+								color: #075bc0;
+							}
 						}
 					}
 				}
@@ -175,9 +177,11 @@ body.interior {
 			color: #c00;
 		}
 		//For Drivers
-		.subtitle a:hover {
-			padding-bottom: 1px;
-			border-bottom: 1px solid #c00;
+		@if $isAMP != 'true' {
+			.subtitle a:hover {
+				padding-bottom: 1px;
+				border-bottom: 1px solid #c00;
+			}
 		}
 		.ad_home_driver {
 			padding: 10px 0 40px;
@@ -251,10 +255,12 @@ body.interior {
 							font-weight: 500;
 							font-size: 1.5em;
 
-							&:hover {
-								border-bottom: 1px dotted #075bc0;
-								padding-bottom: 1px;
-								color: #075bc0;
+							@if $isAMP != 'true' {
+								&:hover {
+									border-bottom: 1px dotted #075bc0;
+									padding-bottom: 1px;
+									color: #075bc0;
+								}
 							}
 						}
 
@@ -268,12 +274,9 @@ body.interior {
 							color: white;
 							text-transform: lowercase;
 
-							&:hover {
-								text-decoration: none;
-
-								@if $isAMP == 'true' {
-									border: none;
-								} @else {
+							@if $isAMP != 'true' {
+								&:hover {
+									text-decoration: none;
 									border: none !important;
 								}
 							}
@@ -281,18 +284,22 @@ body.interior {
 							&.editors-pick {
 								background-color: #0088CC;
 
-								&:hover {
-									background-color: #00a0f0;
-									text-decoration: none;
+								@if $isAMP != 'true' {
+									&:hover {
+										background-color: #00a0f0;
+										text-decoration: none;
+									}
 								}
 							}
 							
 							&.popular {
 								background-color: #e67200;
 
-								&:hover {
-									background-color: #ff7f00;
-									text-decoration: none;
+								@if $isAMP != 'true' {
+									&:hover {
+										background-color: #ff7f00;
+										text-decoration: none;
+									}
 								}
 							}
 						}
@@ -413,9 +420,11 @@ body.interior {
 				p {
 					padding: 0;
 				}
-				p a:hover {
-					background-color: #27333D;
-					text-decoration: none;
+				@if $isAMP != 'true' {
+					p a:hover {
+						background-color: #27333D;
+						text-decoration: none;
+					}
 				}
 				float: right;
 				font-size: 12px;
@@ -474,10 +483,12 @@ body.interior {
 						-ms-transition: none;
 						-o-transition: none;
 						transition: none;
-						&:hover {
-							background: #32404D !important;
-							color: #fff;
-							text-decoration: none;
+						@if $isAMP != 'true' {
+							&:hover {
+								background: #32404D !important;
+								color: #fff;
+								text-decoration: none;
+							}
 						}
 					}
 				}

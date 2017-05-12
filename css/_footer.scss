@@ -173,9 +173,11 @@ footer {
 					background-repeat: no-repeat;
 					background-position: center center;
 					
-					&:hover {
-						background-size: 75%;
-						transition: ease 0.1s;
+					@if $isAMP != 'true' {
+						&:hover {
+							background-size: 75%;
+							transition: ease 0.1s;
+						}
 					}
 					&.facebook {
 						background-image: url('/images/social/06-facebook.svg');
@@ -193,8 +195,10 @@ footer {
 						background-image: url('/images/social/18-youtube.svg');
 						background-color: #E63D28;
 						background-size: 28px 28px;
-						&:hover {
-							background-size: 80%;
+						@if $isAMP != 'true' {
+							&:hover {
+								background-size: 80%;
+							}
 						}
 					}
 					&.rss {
@@ -281,11 +285,14 @@ footer {
 			display: inline-block;
 			margin-left: 20px;
 			color: black;
-			&:hover {
-				border-bottom: 2px solid #AAA;
-				padding-bottom: 2px;
-				text-decoration: none;
-				margin-bottom: -4px;
+
+			@if $isAMP != 'true' {
+				&:hover {
+					border-bottom: 2px solid #AAA;
+					padding-bottom: 2px;
+					text-decoration: none;
+					margin-bottom: -4px;
+				}
 			}
 		}
 	}
@@ -301,10 +308,10 @@ footer {
 		background-repeat: no-repeat;
 		z-index: 5;
 		
-		&:hover {
-			background-position: right top;
+		@if $isAMP != 'true' {
+			&:hover {
+				background-position: right top;
+			}
 		}
-		
 	}
-	
 }

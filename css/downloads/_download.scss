@@ -196,13 +196,15 @@ body.interior.download {
 						height: 12px;
 						margin-bottom: -2px;
 
-						&:hover {
-							text-overflow: inherit;
-							overflow: visible;
-							width: 210px;
-							white-space: pre-line;
-							line-height: 1.4;
-							margin-top: 4px;
+						@if $isAMP != 'true' {
+							&:hover {
+								text-overflow: inherit;
+								overflow: visible;
+								width: 210px;
+								white-space: pre-line;
+								line-height: 1.4;
+								margin-top: 4px;
+							}
 						}
 					}
 				}
@@ -335,15 +337,13 @@ body.interior.download {
 					background: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.05));
 					background-color: #fafafa;
 
-					&:hover {
-						@if $isAMP == 'true' {
-							text-decoration: none;
-						} @else {
+					@if $isAMP != 'true' {
+						&:hover {
 							text-decoration: none !important;
+							background-color: #fff;
+							border-color: #bbb;
+							box-shadow: 0 1px 0 rgba(0,0,0,0.1);
 						}
-						background-color: #fff;
-						border-color: #bbb;
-						box-shadow: 0 1px 0 rgba(0,0,0,0.1);
 					}
 
 					&:active {
@@ -436,10 +436,12 @@ body.interior.download {
 						-o-transition: all 0.15s linear;
 						transition: all 0.15s linear;
 					}
-					&:hover {
-						background-position: left bottom;
-						span {
-							background-position: 0 35px;
+					@if $isAMP != 'true' {
+						&:hover {
+							background-position: left bottom;
+							span {
+								background-position: 0 35px;
+							}
 						}
 					}
 				}
@@ -466,10 +468,12 @@ body.interior.download {
 						text-decoration: none;
 						border-bottom: 1px dotted #9f6000;
 
-						&:hover {
-							color: #105ab2;
-							border-bottom: 1px dotted #105ab2;
-							transition: linear .2s;
+						@if $isAMP != 'true' {
+							&:hover {
+								color: #105ab2;
+								border-bottom: 1px dotted #105ab2;
+								transition: linear .2s;
+							}
 						}
 					}
 
@@ -481,24 +485,28 @@ body.interior.download {
 						margin: 18px 0 8px;
 
 						&.clean {
-						 margin: 18px 0 20px;
+							margin: 18px 0 20px;
 
-						 label {
-									background: white;
+							label {
+								background: white;
 
-										&:hover {
-											color: white;
-										}
+								@if $isAMP != 'true' {
+									&:hover {
+										color: white;
+									}
+								}
 
-									a {
-										border: none;
+								a {
+									border: none;
 
+									@if $isAMP != 'true' {
 										&:hover {
 											color: white;
 											border: none;
 										}
 									}
-						 }
+								}
+							}
 						}
 
 						label {
@@ -511,19 +519,17 @@ body.interior.download {
 								text-decoration: none;
 							}
 
-							&:hover {
-								@if $isAMP == 'true' {
-									color: #fff;
-								} @else {
+							@if $isAMP != 'true' {
+								&:hover {
 									color: #fff !important;
+									cursor: pointer;
+									text-decoration: none;
+									transition: linear .2s;
+									background-color: #FF7F00;
+									border: 1px dotted #FF7F00;
+									padding: 6px;
+									border-radius: 4px;
 								}
-								cursor: pointer;
-								text-decoration: none;
-								transition: linear .2s;
-								background-color: #FF7F00;
-								border: 1px dotted #FF7F00;
-								padding: 6px;
-								border-radius: 4px;
 							}
 						}
 					}
@@ -544,8 +550,10 @@ body.interior.download {
 							padding: 6px;
 							border-radius: 4px;
 
-							&:hover {
-								cursor: pointer;
+							@if $isAMP != 'true' {
+								&:hover {
+									cursor: pointer;
+								}
 							}
 						}
 					}
@@ -718,8 +726,10 @@ body.interior.download {
 					margin-top: -150px;
 				}
 
-				&:hover {
-					background: linear-gradient(25deg, rgba(255, 127, 0, 0.55) 0%, rgba(21, 76, 143, 0.8) 75%);
+				@if $isAMP != 'true' {
+					&:hover {
+						background: linear-gradient(25deg, rgba(255, 127, 0, 0.55) 0%, rgba(21, 76, 143, 0.8) 75%);
+					}
 				}
 			}
 
@@ -744,23 +754,27 @@ body.interior.download {
 }
 
 .more_similars_dw {
-		margin: 0 35px 0 82px;
-		border: 1px solid #ddd;
-		line-height: 25px;
-		text-align: center;
-		font-weight: 400;
-		background-color: #F8F8F8;
-		color: #555;
+	margin: 0 35px 0 82px;
+	border: 1px solid #ddd;
+	line-height: 25px;
+	text-align: center;
+	font-weight: 400;
+	background-color: #F8F8F8;
+	color: #555;
 
+	@if $isAMP != 'true' {
 		&:hover {
 			background-color: #eee;
 			color: #05408f;
+		}
 	}
 }
 
-.more_similars_app {
-	&:hover	{
-		color: #bd0707;
+@if $isAMP != 'true' {
+	.more_similars_app {
+		&:hover	{
+			color: #bd0707;
+		}
 	}
 }
 

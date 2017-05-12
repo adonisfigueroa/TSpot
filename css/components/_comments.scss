@@ -439,9 +439,12 @@
 		padding-left: 10px;
 		border: 1px solid $grey;
 		text-align: left;
-		&:hover {
-			a{
-				color: white;
+
+		@if $isAMP != 'true' {
+			&:hover {
+				a{
+					color: white;
+				}
 			}
 		}
 		.triangle {
@@ -547,8 +550,11 @@ body.interior {
 				
 				&.comment-count {
 					color: $red;
-					&:hover {
-						font-weight: 500;
+
+					@if $isAMP != 'true' {
+						&:hover {
+							font-weight: 500;
+						}
 					}
 				}
 				&.interactions-count {

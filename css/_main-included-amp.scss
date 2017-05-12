@@ -18,8 +18,11 @@ article, aside, section {
 a {
 	text-decoration: none;
 	color: #105ab2;
-	&:hover {
-		color: $red;
+
+	@if $isAMP != 'true' {
+		&:hover {
+			color: $red;
+		}
 	}
 }
 

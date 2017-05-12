@@ -13,11 +13,13 @@
 					}
 				}
 
-				&:hover {
-					color: inherit;
-					box-shadow: inset 0 -5px 0 #FBBB76;
-					padding-bottom: 2px;
-					//transition: ease 0.2s;
+				@if $isAMP != 'true' {
+					&:hover {
+						color: inherit;
+						box-shadow: inset 0 -5px 0 #FBBB76;
+						padding-bottom: 2px;
+						//transition: ease 0.2s;
+					}
 				}
 				&:active {
 					position: relative;

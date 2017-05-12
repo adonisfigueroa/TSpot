@@ -102,8 +102,10 @@
 						}
 					}
 
-					&:hover {
-						color: #105ab2;
+					@if $isAMP != 'true' {
+						&:hover {
+							color: #105ab2;
+						}
 					}
 				}
 			}
@@ -283,8 +285,10 @@
 						}
 					}
 					
-					&:hover {
-						color: $red;
+					@if $isAMP != 'true' {
+						&:hover {
+							color: $red;
+						}
 					}
 					
 					/*

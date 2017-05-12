@@ -237,9 +237,11 @@ body.interior {
 						font-weight: 500;
 						border-bottom: 1px solid #ccc;
 						padding-bottom: 3px;	
-			
-						&:hover {
-							border-bottom: 1px solid #ff7f00;
+
+						@if $isAMP != 'true' {
+							&:hover {
+								border-bottom: 1px solid #ff7f00;
+							}
 						}
 					}
 

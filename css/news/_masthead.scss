@@ -60,19 +60,20 @@
 					//default bottom text, gris TS
 					//@include gradient-trans-percent($start_color:#13191F,$start_cent:40%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
 
-					
-					&:hover {
-						// top
-						background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 25%, rgba(30, 41, 51, 0.75) 85%);
+					@if $isAMP != 'true' {
+						&:hover {
+							// top
+							background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 25%, rgba(30, 41, 51, 0.75) 85%);
 
-						// Blue halo
-						// @include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#0D488E,$end_cent:95%,$end_alpha:.60);
+							// Blue halo
+							// @include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#0D488E,$end_cent:95%,$end_alpha:.60);
 
-						// Gris
-						//@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
+							// Gris
+							//@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
 
-						// Orange
-						//@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
+							// Orange
+							//@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
+						}
 					}
 					
 					hgroup {
@@ -113,8 +114,10 @@
 					a {
 						background: linear-gradient(335deg, rgba(21,76,143,0.45) 30%, rgba(30,41,51,0.85) 85%);
 
-						&:hover {
-							background: linear-gradient(335deg, rgba(21,76,143,0.6) 20%, rgba(30,41,51,0.85) 85%);
+						@if $isAMP != 'true' {
+							&:hover {
+								background: linear-gradient(335deg, rgba(21,76,143,0.6) 20%, rgba(30,41,51,0.85) 85%);
+							}
 						}
 					}
 				}
@@ -123,8 +126,10 @@
 					a {
 						background: linear-gradient(335deg, rgba(21,76,143,0.6) 20%, rgba(30,41,51,0.85) 85%);
 
-						&:hover {
-							background: linear-gradient(335deg, rgba(21,76,143,0.8) 10%, rgba(30,41,51,0.80) 85%);
+						@if $isAMP != 'true' {
+							&:hover {
+								background: linear-gradient(335deg, rgba(21,76,143,0.8) 10%, rgba(30,41,51,0.80) 85%);
+							}
 						}
 					}
 				}
@@ -133,8 +138,10 @@
 					a {
 						background: linear-gradient(345deg, rgba(21, 76, 143, 0.15) 45%, rgba(30, 41, 51, 0.65) 85%);
 
-						&:hover {
-							background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+						@if $isAMP != 'true' {
+							&:hover {
+								background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+							}
 						}
 					}
 				}
@@ -143,8 +150,10 @@
 					a {
 						background: linear-gradient(345deg, rgba(21,76,143,0.65) 35%, rgba(30,41,51,0.75) 95%);
 
-						&:hover {
-							background: linear-gradient(345deg, rgba(21,76,143,0.75) 35%, rgba(30,41,51,0.8) 95%);
+						@if $isAMP != 'true' {
+							&:hover {
+								background: linear-gradient(345deg, rgba(21,76,143,0.75) 35%, rgba(30,41,51,0.8) 95%);
+							}
 						}
 					}
 				}
@@ -966,12 +975,14 @@
 						
 						/*
 						@include gradient-trans-percent($start_color:#13191F,$start_cent:20%,$start_alpha:0.0,$end_color:#13191F,$end_cent:70%,$end_alpha:.75);
-					
-						&:hover {
-							@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:60%,$end_alpha:.85);			
+						
+						@if $isAMP != 'true' {
+							&:hover {
+								@include gradient-trans-percent($start_color:#1F2933,$start_cent:10%,$start_alpha:0.3,$end_color:#1F2933,$end_cent:60%,$end_alpha:.85);			
 
-							hgroup {
-								//bottom: 25px;
+								hgroup {
+									//bottom: 25px;
+								}
 							}
 						}
 						*/
