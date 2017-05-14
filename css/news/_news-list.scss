@@ -54,6 +54,11 @@
 				height: auto;
 				width: 230px;
 
+				@if $isAMP == 'true' {
+					min-height: initial;
+					margin: 0;
+				}
+
 				/*				
 				// Homepage movil con imagenes grandes
 				@if $isAMP == 'true' {
