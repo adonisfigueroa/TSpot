@@ -1,4 +1,4 @@
-.features, .reviews, .slide-article {
+.features, .reviews, .trivias, .slide-article {
 	.featured-posts-title {
 		@if $isAMP == 'true' {
 			padding: 0px 3%;
@@ -347,6 +347,56 @@
 					}
 				}
 			}
+
+			ul.featured-trivias {
+				position: absolute;
+			
+				li {
+					margin: 0px 0px 34px -15px;
+
+					a {
+						color: white;
+						padding: 10px 17px;
+						$opacity1: 0.45;
+						$opacity2: 0.78;
+
+						&.blue {
+							background-color: rgba(16, 90, 178, $opacity1);
+							&:hover { background-color: rgba(16, 90, 178, $opacity2); }
+						}
+
+						&.red {
+							background-color: rgba(204, 0, 0, $opacity1);
+							&:hover { background-color: rgba(204, 0, 0, $opacity2); }
+						}
+
+						&.yellow {
+							background-color: rgba(255, 193, 7, $opacity1);
+							&:hover { background-color: rgba(255, 193, 7, $opacity2); }
+						}
+
+						&.purple {
+							background-color: rgba(103, 58, 183, $opacity1);
+							&:hover { background-color: rgba(103, 58, 183, $opacity2); }
+						}
+
+						&.green {
+							background-color: rgba(76, 175, 80, $opacity1);
+							&:hover { background-color: rgba(76, 175, 80, $opacity2); }
+						}
+
+						&.orange {
+							background-color: rgba(255, 127, 0, $opacity1);
+							&:hover { background-color: rgba(255, 127, 0, $opacity2); }
+						}
+						
+					}
+
+
+
+				}
+			}
+
 		}
 	}
 }
