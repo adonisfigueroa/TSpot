@@ -418,22 +418,16 @@ body.interior {
 			}
 
 
-			.SideTitle{
-				line-height: 31px;
-				background-color: $blue;
-
-				@if $isAMP == 'true' {
-					padding: 0px 10px;
-				
-				} @else {
+			@if $isAMP != 'true' {
+				.SideTitle{
+					line-height: 31px;
+					background-color: $blue;
 					padding: 0px 15px;
 					
 					@include break(v-tablet) {
 						padding: 0px 10px;
 					}
-				}
-				
-				@if $isAMP != 'true' {
+					
 					.arrow {
 						@include triangle(down,white,4,6);
 						float: right;
@@ -443,6 +437,7 @@ body.interior {
 					}
 				}
 			}
+
 			@if $isAMP == 'true' {
 				amp-accordion section {
 					> h3 {
@@ -731,15 +726,6 @@ body.interior {
 			}
 		}
 
-		@if $isAMP == 'true' {
-			amp-accordion section {
-				> h3 {
-					padding: 10px;
-					background-color: #e7e9ee;
-				}
-			}
-		}
-
 		#content {
 			@if $isAMP == 'true' {
 				margin-top: 0px;
@@ -873,6 +859,15 @@ body.interior {
 					}
 				}
 			}
+		}
+	}
+
+	@if $isAMP == 'true' {
+		.SideTitle {
+			color: white;
+			line-height: 31px;
+			background-color: $blue;
+			padding: 0px 10px;
 		}
 	}
 }
