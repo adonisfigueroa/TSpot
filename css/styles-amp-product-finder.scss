@@ -13,6 +13,7 @@ $isAMP: 'true';
 "_main-included-amp.scss",
 "_interior-included-amp.scss",
 
+"components/_accordion-amp.scss",
 "components/_chicklets.scss",
 //"components/_page-nav.scss",
 
@@ -139,4 +140,56 @@ $isAMP: 'true';
 			display: inline-block;
 		}
 	}
+}
+
+body.interior.product #product_finder_info {
+  margin: 5px 0 20px;
+  font-size: .7em;
+}
+
+.col-1-2.wide-gut {
+  width: 47.5%;
+  margin-right: 5%;
+  display: block;
+  float: left;
+  list-style-type: none;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.col-1-2-last.wide-gut {
+  width: 47.5%;
+  margin-right: 0%;
+  display: block;
+  float: right;
+  list-style-type: none;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h3.section-header {
+  font-family: "Roboto Condensed", sans-serif;
+  background: white;
+  border-bottom: 5px solid #c00;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 45px;
+  text-align: center;
+  padding-left: 20px;
+  text-indent: -25px;
+  font-size: 1.7em;
+  &.blue {
+	border-bottom: 5px solid #0250C5;
+  }
+  a {
+	color: #333;
+  }
+  span {
+	font-weight: 100;
+  }
 }
