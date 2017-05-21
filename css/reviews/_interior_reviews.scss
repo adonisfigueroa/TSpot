@@ -305,46 +305,49 @@ body.interior {
 						width: 100%;
 						text-decoration: none;
 					}
-					.arrow {
-						opacity: 0;
-					}
-					&:hover, &.active {
-						background: white;
-						a {
-							color: black;
+					@if $isAMP != 'true' {
+						.arrow {
+							opacity: 0;
 						}
-						.arrow{
-							@include triangle(right,$orange,4,6);
-							float: right;
-							margin-top: 15px;
-							opacity: 1;
+
+						&:hover, &.active {
+							background: white;
+							a {
+								color: black;
+							}
+							.arrow{
+								@include triangle(right,$orange,4,6);
+								float: right;
+								margin-top: 15px;
+								opacity: 1;
+							}
 						}
 					}
-					
 				}
 			}
 			.SideTitle{
-				line-height: 33px;
-				background-color: $blue;
 				color: white;
-				margin-top: -5px;
 
 				@if $isAMP == 'true' {
 					padding: 0px 10px;
 					width: 100%;
+					line-height: 31px;
 
 				} @else {
+					background-color: $blue;
+					margin-top: -5px;
+					line-height: 33px;
 					padding: 0px 15px;
 					@include break(v-tablet){
 						padding: 0px 10px;
 					}
-				}
-				
-				.arrow {
-					@include triangle(down,white,4,6);
-					float: right;
-					margin-top: -18px;
-					opacity: 1;
+
+					.arrow {
+						@include triangle(down,white,4,6);
+						float: right;
+						margin-top: -18px;
+						opacity: 1;
+					}
 				}
 			}
 		}

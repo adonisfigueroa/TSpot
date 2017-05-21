@@ -1,40 +1,33 @@
 /**** ACCORDION ****/
-amp-accordion > section > h3 {
-	padding: 15px;
-	font-weight: 500;
-}
-
-#CategoryListMobile > amp-accordion > section > h3 {
-	padding: 0px;
-}
-
 .content_accordion {
 	background-color: white;
 
-	&.text{
+	/*&.text{
 		padding: 15px;
 		line-height: 1.7em;
-	}
+	}*/
 }
 
 body.interior {
-	#sidebar amp-accordion section[expanded] .SideTitle .arrow {
-		width: 0;
-		height: 0;
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 6px solid white;
-		float: right;
-		margin-top: -18px;
-		opacity: 1;
-	}
-	#sidebar section:not([expanded]) .SideTitle .arrow {
-		width: 0;
-		height: 0;
-		border-top: 4px solid transparent;
-		border-bottom: 4px solid transparent;
-		border-right: 6px solid #fff;
-		float: right;
-		margin-top: -18px;
+	amp-accordion section {
+		> h3 {
+			font-weight: 500;
+			background-color: #105ab2;
+		}
+
+		&:not([expanded]) {
+			.SideTitle .arrow {
+				@include triangle(left,white,4,6);
+				float: right;
+				margin-top: -18px;
+			}
+		}
+		&[expanded] {
+			.SideTitle .arrow {
+				@include triangle(down,white,4,6);
+				float: right;
+				margin-top: -18px;
+			}
+		}
 	}
 }

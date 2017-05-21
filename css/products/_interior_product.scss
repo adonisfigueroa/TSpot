@@ -410,8 +410,10 @@ body.interior {
 					width: 100%;
 					text-decoration: none;
 				}
-				.arrow {
-					opacity: 0;
+				@if $isAMP != 'true' {
+					.arrow {
+						opacity: 0;
+					}
 				}				
 			}
 
@@ -431,53 +433,18 @@ body.interior {
 					}
 				}
 				
-				.arrow {
-					@include triangle(down,white,4,6);
-					float: right;
-					
-					margin-top: 12px;
-					opacity: 1;
-
-					@if $isAMP == 'true' {
-						margin-right: -15px;
-					} @else {
+				@if $isAMP != 'true' {
+					.arrow {
+						@include triangle(down,white,4,6);
+						float: right;
+						margin-top: 12px;
+						opacity: 1;
 						margin-right: 4px;
 					}
 				}
 			}
 			@if $isAMP == 'true' {
 				amp-accordion section {
-					&:not([expanded]) {
-						.SideTitle .arrow {
-							width: 0;
-							height: 0;
-							float: right;
-							margin-top: -18px;
-
-							border-top: 4px solid transparent;
-							border-bottom: 4px solid transparent;
-							border-right: 6px solid #fff;
-						}
-						.SideProdContent {
-							display: none;
-						}
-					}
-					&[expanded] {
-						.SideTitle .arrow {
-							width: 0;
-							height: 0;
-							float: right;
-							margin-top: -18px;
-
-							border-left: 4px solid transparent;
-							border-right: 4px solid transparent;
-							border-top: 6px solid #fff;
-						}
-						.SideProdContent {
-							display: block;
-						}
-					}
-
 					> h3 {
 						border: 0px;
 					}
@@ -760,6 +727,15 @@ body.interior {
 
 				h1.large {
 					margin: 15px 0 !important;
+				}
+			}
+		}
+
+		@if $isAMP == 'true' {
+			amp-accordion section {
+				> h3 {
+					padding: 10px;
+					background-color: #e7e9ee;
 				}
 			}
 		}
