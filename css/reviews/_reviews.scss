@@ -185,3 +185,24 @@ body.features {
 		}
 	}
 }
+
+body.trivias {
+	#masthead {
+		background-color: rgba(30, 41, 51, 0.95);
+		// background-image: url(/images/trivia-back.png);
+
+		.wrapper {
+			@if $isAMP == 'true' {
+				padding: 0;
+			
+			} @else {
+				padding: 0 !important;
+			}
+		}
+	}
+	#content {
+		.wrapper {
+			padding: 20px 0;
+		}
+	}
+}
