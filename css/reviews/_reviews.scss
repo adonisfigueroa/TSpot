@@ -188,8 +188,8 @@ body.features {
 
 body.trivias {
 	#masthead {
-		background-color: rgba(30, 41, 51, 0.92);
-		background-image: url(/images/trivia-back.png);
+		background-color: rgba(30, 41, 51, 0.95);
+		// background-image: url(/images/trivia-back.png);
 
 		.wrapper {
 			@if $isAMP == 'true' {

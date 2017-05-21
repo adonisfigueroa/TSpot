@@ -300,4 +300,59 @@ body.interior {
 			}
 		}
 	}
+
+	&.trivia {
+		#content-header {
+			background-color: rgba(30,41,51,0.95);
+			
+			.wrapper {
+				padding: 25px 0 10px;
+
+				@if $isAMP == 'true' {
+					width: 96%;
+				} @else {
+					@include break(mobile) {
+						width: 96%;
+					}
+				}
+			}
+			
+			.title-group {
+
+				h1 {
+					background-color: rgba(16,90,178,0.45);
+					border-bottom: 4px solid #175294;
+					padding: 12px 0 12px 10px;
+					margin: 15px 0 10px -10px;
+					color: white;
+					font-size: 1.5em;
+					font-weight: 500;
+					line-height: 1.4;
+					letter-spacing: -0.333px;
+					width: 90%;
+
+					@if $isAMP == 'true' {
+						margin-top: 0;
+						font-size: 1.65em;
+
+					} @else {
+
+						@include break(mobile) {
+							margin-top: 0;
+							font-size: 1.65em;
+						}
+					}
+
+					@include break(v-mobile) {
+						font-size: 1.45em;
+					}
+				}
+			}
+		}
+
+		#content {
+
+		}
+	}
+
 }

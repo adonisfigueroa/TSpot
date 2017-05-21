@@ -224,7 +224,8 @@ body.interior {
 
 	&.news,
 	&.product,
-	&.download {
+	&.download,
+	&.trivia, &.trivias {
 		.col-2-3{
 			width: 69%;
 
