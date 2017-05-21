@@ -1409,6 +1409,26 @@ span._bar {
 	@include col-last(1,3,2);
 }
 
+.col-1-2 {
+	@include col(1,2,2);
+	&.wide-gut {
+	@include col(1,2,5);
+	@include break(v-mobile){
+		width: 100%;
+	}
+	}
+}
+
+.col-1-2-last {
+	@include col-last(1,2,2);
+	&.wide-gut {
+	@include col-last(1,2,5);
+	@include break(v-mobile){
+		width: 100%;
+	}
+	}
+}
+
 //Article Mobile
 .article #content {
 	@include break(mobile){
