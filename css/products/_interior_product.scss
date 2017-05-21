@@ -477,12 +477,10 @@ body.interior {
 							display: block;
 						}
 					}
-				}
 
-				.i-amphtml-accordion-header {
-					background-color: #105ab2;
-					height: 30px;
-					border: 0px;
+					> h3 {
+						border: 0px;
+					}
 				}
 			}
 
@@ -843,7 +841,11 @@ body.interior {
 					font-size: 0.85em;
 
 					@include break(v-mobile){
-						height: inherit !important;
+						@if $isAMP == 'true' {
+							height: inherit;
+						} @else {
+							height: inherit !important;
+						}
 					}
 					
 					li {

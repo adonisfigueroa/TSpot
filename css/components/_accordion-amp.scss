@@ -1,12 +1,11 @@
 /**** ACCORDION ****/
-amp-accordion > section > .i-amphtml-accordion-header {
-  padding: 15px;
-  font-weight: 500;
+amp-accordion > section > h3 {
+	padding: 15px;
+	font-weight: 500;
 }
 
-#CategoryListMobile > amp-accordion > section > .i-amphtml-accordion-header {
-  padding: 0px;
-  font-weight: 500;
+#CategoryListMobile > amp-accordion > section > h3 {
+	padding: 0px;
 }
 
 .content_accordion {
