@@ -771,4 +771,128 @@ body.interior {
 			}
 		}
 	}
+
+
+	@if $isAMP != 'true' {
+		&.trivias {
+			#trivias-list {
+				ul {
+					li {
+						padding: 20px 30px 20px 15px;
+						border-bottom: 1px solid #E5E5E5;
+
+						&:nth-child(even) {
+							background: white;
+						}
+
+						h3 {
+							font-size: 0.9em;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+
+			.ListHeader {
+				.page {
+					font-size: 0.7em;
+				}
+			}
+		}
+
+		&.trivia {
+			.articleBody {
+
+				h2 {
+					font-size: 1.5em;
+					color: #555;
+					line-height: 2em;
+				}
+
+				#trivia-options {
+					.option_box {
+						width: 50%;
+						float: left;
+						margin-bottom: 10px;
+
+						.option {
+							width: 90%;
+							border: 1px solid #aaa;
+							border-radius: 2px;
+							min-height: 40px;
+							padding: 16px 5px 15px 15px;
+							background-color: #eee;
+							font-size: 0.95em;
+							cursor: pointer;
+
+							&:hover {
+								background-color: #ddd;
+								border: 1px solid #000;
+							}
+						}
+					}
+				}
+
+				#next_question {
+					> div {
+						width: 50%;
+						float: right;
+						margin-bottom: 10px;
+					}
+
+					.question > div {
+						width: 90%;
+						border: 1px solid #075bc0;
+						border-radius: 4px;
+						min-height: 30px;
+						padding: 12px;
+						background-color: #105ab2;
+						cursor: pointer;
+						font-family: Roboto;
+						font-weight: 500;
+						letter-spacing: -.333px;
+
+						a {
+							color: white;
+							font-size: 1em;
+							cursor: pointer;
+						}
+					}
+
+					.next > div {
+						width: 90%;
+						min-height: 30px;
+						padding: 10px;
+						text-align: right;
+						font-size: 2em;
+						font-weight: 700;
+						cursor: pointer;
+						color: #105ab2;
+						font-family: Roboto Condensed;
+					}
+				}
+
+				#explanation {
+					.answer {
+						font-weight: 500;
+						font-family: Roboto;
+						margin-top: 10px;
+					}
+
+					.content {
+						img {
+							float: right;
+							max-width: 400px;
+							margin: 10px 0px 30px 30px;
+							border-radius: 6px;
+						}
+
+						p:first-child {
+							padding: 0 0 6px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
