@@ -8,6 +8,17 @@ body.interior {
 		}
 	}
 
+  	.takeshortcut {
+		background-color: #E87502;
+		margin-bottom: 25px;
+  	}
+
+  	.imgtakeshortcut {
+		float: left;
+		margin-top: -8px;
+		margin-right: 10px;
+  	}
+
 	.articleBody {
 		font-weight: 400;
 		font-family: $f-paragraph;
