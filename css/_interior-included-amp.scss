@@ -154,6 +154,7 @@ body.interior {
 
 	&.news,
 	&.product,
+	&.category,
 	&.download {
 		#content-header {
 			background-color: white;
@@ -186,6 +187,11 @@ body.interior {
 							margin: 0;
 							font-size: 1.75em;
 						}
+					}
+
+					&.upper {
+					  text-transform: uppercase;
+					  //font-family: Roboto Condensed;
 					}
 
 					@include break(v-mobile) {
