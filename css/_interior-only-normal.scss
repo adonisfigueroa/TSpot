@@ -194,11 +194,6 @@ body.interior {
 					letter-spacing: -0.333px;
 					padding-bottom: 10px;
 
-					&.upper {
-						text-transform: uppercase;
-						font-family: Roboto Condensed;
-					}
-
 					@include break(mobile) {
 						margin-top: 0;
 						font-size: 1.75em;

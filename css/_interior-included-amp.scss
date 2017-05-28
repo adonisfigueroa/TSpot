@@ -190,8 +190,11 @@ body.interior {
 					}
 
 					&.upper {
-					  text-transform: uppercase;
-					  //font-family: Roboto Condensed;
+						text-transform: uppercase;
+
+						@if $isAMP != 'true' {
+							font-family: Roboto Condensed;
+						}
 					}
 
 					@include break(v-mobile) {
