@@ -52,7 +52,7 @@
 					height: $tile-height - 30px;
 
 					//top text, gradient black/blue
-					background: linear-gradient(345deg, rgba(21,76,143,0.30) 40%, rgba(30,41,51,0.75) 85%);
+					background: linear-gradient(205deg, rgba(21,76,143,0.2) 40%, rgba(30,41,51,0.75) 85%);
 
 					// mas azul
 					//background: linear-gradient(345deg, rgba(21, 76, 143, 0.35) 25%, rgba(30, 41, 51, 0.75) 85%);
@@ -63,42 +63,40 @@
 					@if $isAMP != 'true' {
 						&:hover {
 							// top
-							background: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 25%, rgba(30, 41, 51, 0.75) 85%);
+							background: linear-gradient(205deg, rgba(21,76,143,0.4) 40%, rgba(30,41,51,0.75) 85%);
 
-							// Blue halo
-							// @include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#0D488E,$end_cent:95%,$end_alpha:.60);
-
-							// Gris
-							//@include gradient-trans-percent($start_color:#13191F,$start_cent:15%,$start_alpha:0.3,$end_color:#13191F,$end_cent:70%,$end_alpha:.80);
-
-							// Orange
-							//@include gradient-trans-percent($start_color:#ff7f00,$start_cent:25%,$start_alpha:0.40,$end_color:#1F2933,$end_cent:70%,$end_alpha:.77);
+							// default title on top: linear-gradient(345deg, rgba(21, 76, 143, 0.6) 25%, rgba(30, 41, 51, 0.75) 85%);
 						}
 					}
 					
 					hgroup {
 						width: 93%;
 						position: absolute;
-						top: 20px;
+						//top: 20px;
+						bottom: 35px;
 						display: block;
 						
 						h3 {
 							text-transform: uppercase;
-							font-weight: 500;
+							font-weight: 400;
 							font-size: .60em;
 							-webkit-font-smoothing: subpixel-antialiased;
 							text-shadow: 0px 0px 3px #333;
 							color: #FF9B37;
-							padding-bottom: 3px;
+							padding-bottom: 5px;
 							letter-spacing: .25px;
 						}
 						h2 {
 							font-size: $tile-font-size;
 							font-weight: 500;
-							text-shadow: 1px 1px 3px #222;
+							text-shadow: 1px 1px 3px #444;
 							letter-spacing: -.2px;
 							line-height: 1.4;
 							padding-right: 10px;
+							display: inline;
+							background: rgba(40, 51, 60, 0.6);
+							padding: 5px 9px 6px 18px;
+							margin: 6px 0px 0 -20px;
 
 							@include break(v-tablet) {
 								font-size: 0.95em;
@@ -110,6 +108,7 @@
 					}	
 				}
 
+/*
 				&.bgc-dark {
 					a {
 						background: linear-gradient(335deg, rgba(21,76,143,0.45) 30%, rgba(30,41,51,0.85) 85%);
@@ -157,7 +156,8 @@
 						}
 					}
 				}
-				
+*/
+
 			}
 
 		}
