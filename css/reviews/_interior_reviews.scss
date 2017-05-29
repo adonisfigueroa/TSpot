@@ -829,6 +829,18 @@ body.interior {
 								background-color: #ddd;
 								border: 1px solid #000;
 							}
+
+							&.incorrect {
+								background-color: #E59393;
+							}
+
+							&.correct {
+								background-color: #49E049;
+							}
+
+							&.user-answer {
+								box-shadow: 4px 4px rgba(34,25,25,0.1);
+							}
 						}
 					}
 				}
