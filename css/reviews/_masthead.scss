@@ -347,84 +347,6 @@
 					}
 				}
 			}
-
-			ul.featured-trivias {
-				position: absolute;
-			
-				li {
-					margin: 0px 0px 34px -15px;
-
-					a {
-						color: white;
-						padding: 10px 17px;
-						$opacity1: 0.45;
-						$opacity2: 0.78;
-
-						&.blue {
-							background-color: rgba(16, 90, 178, $opacity1);
-							border-bottom: 4px solid rgb(23, 82, 148);
-
-							&:hover { background-color: rgba(16, 90, 178, $opacity2); }
-						}
-
-						&.red {
-							background-color: rgba(204, 0, 0, $opacity1);
-							border-bottom: 4px solid rgb(134, 29, 35);
-
-							&:hover { background-color: rgba(204, 0, 0, $opacity2); }
-						}
-
-						&.yellow {
-							background-color: rgba(255, 193, 7, $opacity1);
-							border-bottom: 4px solid rgb(171, 144, 46);
-
-							&:hover { background-color: rgba(255, 193, 7, $opacity2); }
-						}
-
-						&.purple {
-							background-color: rgba(103, 58, 183, $opacity1);
-							border-bottom: 4px solid rgb(84, 62, 158);
-
-							&:hover { background-color: rgba(103, 58, 183, $opacity2); }
-						}
-
-						&.green {
-							background-color: rgba(76, 175, 80, $opacity1);
-							border-bottom: 4px solid rgb(61, 128, 78);
-
-							&:hover { background-color: rgba(76, 175, 80, $opacity2); }
-						}
-
-						&.orange {
-							background-color: rgba(255, 127, 0, $opacity1);
-							border-bottom: 4px solid rgb(167, 100, 33);
-
-							&:hover { background-color: rgba(255, 127, 0, $opacity2); }
-						}
-						
-					}
-
-				}
-
-				@include break(mobile){
-					margin-top: -10px;
-					
-					li {
-						margin: 15px 10px 0 5px;
-						font-size: 0.85em;
-						line-height: 1.5em;
-
-						a {
-							padding: 7px 5px 3px;
-							margin-bottom: 10px;
-							display: block;
-						}
-
-					}
-				}
-
-			}
-
 		}
 	}
 }
@@ -494,5 +416,85 @@
 
 			}
 		}	
+	}
+}
+
+
+@if $isAMP != 'true' {
+	ul.featured-trivias {
+		li {
+			margin: 0px 0px 10px -15px;
+
+			a {
+				color: white;
+				padding: 10px 17px;
+				line-height: 50px;
+			}
+		}
+
+		@include break(mobile){
+			margin-top: -10px;
+			
+			li {
+				margin: 15px 10px 0 5px;
+				font-size: 0.85em;
+				line-height: 1.5em;
+
+				a {
+					padding: 7px 5px 3px;
+					margin-bottom: 10px;
+					display: block;
+				}
+			}
+		}
+	}
+
+	.trivias, .trivia{
+		.title-group {
+			$opacity1: 0.45;
+			$opacity2: 0.78;
+
+			.blue {
+				background-color: rgba(16, 90, 178, $opacity1);
+				border-bottom: 4px solid rgb(23, 82, 148);
+
+				&:hover { background-color: rgba(16, 90, 178, $opacity2); }
+			}
+
+			.red {
+				background-color: rgba(204, 0, 0, $opacity1);
+				border-bottom: 4px solid rgb(134, 29, 35);
+
+				&:hover { background-color: rgba(204, 0, 0, $opacity2); }
+			}
+
+			.yellow {
+				background-color: rgba(255, 193, 7, $opacity1);
+				border-bottom: 4px solid rgb(171, 144, 46);
+
+				&:hover { background-color: rgba(255, 193, 7, $opacity2); }
+			}
+
+			.purple {
+				background-color: rgba(103, 58, 183, $opacity1);
+				border-bottom: 4px solid rgb(84, 62, 158);
+
+				&:hover { background-color: rgba(103, 58, 183, $opacity2); }
+			}
+
+			.green {
+				background-color: rgba(76, 175, 80, $opacity1);
+				border-bottom: 4px solid rgb(61, 128, 78);
+
+				&:hover { background-color: rgba(76, 175, 80, $opacity2); }
+			}
+
+			.orange {
+				background-color: rgba(255, 127, 0, $opacity1);
+				border-bottom: 4px solid rgb(167, 100, 33);
+
+				&:hover { background-color: rgba(255, 127, 0, $opacity2); }
+			}
+		}
 	}
 }
