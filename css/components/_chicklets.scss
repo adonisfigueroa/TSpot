@@ -48,17 +48,17 @@ ul.category-chicklets {
 		&.red3, &.security																									{ background-color: #ac5353;	@if $isAMP != 'true' { &:hover { background-color: lighten(#ac5353,5%); } } }
 		&.red4, &.crimson, &.tag2																							{ background-color: #8f1515;	@if $isAMP != 'true' { &:hover { background-color: lighten(#8f1515,5%); } } }
 
-		&.dotw, &.car-tech, &.yellow2, &.desktop-pcs																		{ background-color: #DD9C08;	@if $isAMP != 'true' { &:hover { background-color: lighten(#DD9C08,4%); } } }
+		&.dotw, &.car-tech, &.yellow2																						{ background-color: #DD9C08;	@if $isAMP != 'true' { &:hover { background-color: lighten(#DD9C08,4%); } } }
 		&.grey, &.natw																										{ background-color: #888888;	@if $isAMP != 'true' { &:hover { background-color: lighten(#888888,8%); } } }
 		&.deals 																											{ background-color: #779954;	@if $isAMP != 'true' { &:hover { background-color: lighten(#779954,8%); } } }
 		&.wof	 																											{ background-color: #85B200;	@if $isAMP != 'true' { &:hover { background-color: lighten(#85B200,4%); } } }
 
-		&.yellow, &.wearables																								{ background-color: #f9d236;	@if $isAMP != 'true' { &:hover { background-color: lighten(#f9d236,6%); } } }
+		&.yellow, &.wearables, &.desktop-pcs																				{ background-color: #f9d236;	@if $isAMP != 'true' { &:hover { background-color: lighten(#f9d236,6%); } } }
 
 		// Texto negro
-		&.yellow, &.wearables {
+		&.yellow, &.wearables, &.desktop-pcs {
 			a {
-				color: #1e2933;
+				color: #444;
 			}
 		}
 	}
