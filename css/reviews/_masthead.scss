@@ -421,6 +421,11 @@
 
 
 @if $isAMP != 'true' {
+
+	.trivias #masthead {
+		min-height: 465px;
+	}	
+
 	ul.featured-trivias {
 		li {
 			margin: 0px 0px 10px -15px;
@@ -449,7 +454,7 @@
 		}
 	}
 
-	.trivias, .trivia{
+	.trivias, .trivia {
 		.title-group {
 			$opacity1: 0.45;
 			$opacity2: 0.78;
