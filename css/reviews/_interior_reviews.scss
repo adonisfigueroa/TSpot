@@ -948,26 +948,35 @@ body.interior {
 			}
 
 			#sidebar {
-				@include break(mobile){
+				@include break(v-tablet){
 					display: block !important;
 					width: 100%;
 				}
 
 				.statistics_answers {
-					> div {
-						margin-bottom: 15px;
-						padding: 15px 0px 20px 20px;
+					.percentage {
+						font-size: 2.5em;
+						padding: 15px 0px 0px 20px;
 					}
 					.answers {
 						font-size: .70em;
 						font-weight: 500;
-					}
-					.percentage {
-						font-size: 2.5em;
+						padding: 0px 0px 20px 20px;
 					}
 					#answers_by_user {
 						background-color: #154c8f;
 						color: #fff;
+						margin-bottom: 15px;
+
+						@include break(v-tablet){
+							float: left;
+							width: 50%;
+						}
+
+						@include break(v-mobile){
+							float: none;
+							width: 100%;
+						}
 
 						.answers {
 							color: white;
@@ -976,6 +985,17 @@ body.interior {
 					#answers_all_users {
 						background-color: #dfdfd0;
 						color: #555;
+						margin-bottom: 15px;
+
+						@include break(v-tablet){
+							float: left;
+							width: 50%;
+						}
+
+						@include break(v-mobile){
+							float: none;
+							width: 100%;
+						}
 
 						.answers {
 							color: #777;
