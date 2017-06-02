@@ -907,6 +907,11 @@ body.interior {
 			}
 
 			#sidebar {
+				@include break(mobile){
+					display: block !important;
+					width: 100%;
+				}
+
 				.statistics_answers {
 					> div {
 						margin-bottom: 15px;
