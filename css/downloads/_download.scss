@@ -10,7 +10,22 @@ body.interior.download {
 			letter-spacing: -0.333px;
 		  }
 		}
+		.downloads-list {
+			ul {
+			  list-style-image: none;
+			  list-style-type: none;
+			  font-size: 13px;
+			  margin: 0;
+			  padding: 0;
+			}
+		}
 	  	#content {
+		  	h4{
+			  color: #4484D0;
+			  font-size: 1.2em;
+			  margin: 25px 0 25px;
+			}
+
 			.slide-sort-selector {
 				border-bottom: 2px solid $blue;
 			  	margin-bottom: 25px;
