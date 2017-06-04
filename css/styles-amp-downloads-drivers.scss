@@ -78,3 +78,144 @@ form {
 		color: red;
 	}
 }
+
+.shortcuts li {
+  display: inline-block;
+  margin-right: 25px;
+  font-weight: 500;
+  border: 1px solid #105ab2;
+  padding: 0px 16px 2px 14px;
+  font-size: 1.25em;
+  color: #444;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 5px;
+  min-width: 100px;
+  &:hover {
+	color: #fff;
+	background-color: $blue;
+  }
+}
+
+.search-box-driver {
+  border: 0;
+  background-color: transparent;
+  font-size: 0.85em;
+  margin: 15px 0 30px;
+  padding: 0;
+  input[type=text] {
+	margin-top: 0px;
+	width: 95%;
+  }
+}
+
+.inputDeg {
+  border: 1px solid silver;
+  background: url(http://static.techspot.com/images2/form-grad.png) repeat-x #ffffff;
+  height: 20px;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#new_social_box {
+  margin: 0 25px 0 0;
+  padding: 20px 0 45px;
+  position: relative;
+  #close_social {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 999;
+  }
+  h2, h3 {
+	margin: 0 0 5px 0;
+	padding-bottom: 5px;
+  }
+  p {
+	margin: 0 0 5px 0;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 0.85em;
+  }
+  h2, h3 {
+	color: #021d42;
+  }
+  h2 {
+	font-size: 18px;
+  }
+  h3 {
+	font-size: 18px;
+	font-weight: 500;
+  }
+  form {
+	padding: 0;
+	height: 35px;
+	line-height: 35px;
+  }
+  .fluid {
+	padding-right: 105px;
+  }
+  input {
+	width: 98%;
+	border: 1px solid #a3b6cf;
+	font-size: 15px;
+	height: 20px;
+	padding-left: 5px;
+	margin: 0;
+	border-radius: 2px;
+  }
+  button {
+	float: right;
+	font-size: 13px;
+	height: 35px;
+  }
+  iframe {
+	border: 1px solid #a3b6cf;
+  }
+  .gplus {
+	margin: 5px 0 5px 10px;
+  }
+  .ts_button span {
+	padding: 0 15px 0 5px;
+  }
+  .follow_twitter {
+	margin-top: 5px;
+	font-size: 11px;
+	img {
+	  float: left;
+	  margin-right: 3px;
+	}
+  }
+  .col_left {
+	padding-right: 300px;
+  }
+  .col_right {
+	width: 260px;
+	float: right;
+	padding-left: 15px;
+	border-left: 2px solid #ddd;
+  }
+  &.alt {
+	.col_right {
+	  float: left;
+	  padding-right: 15px;
+	  padding-left: 0;
+	  border-left: 0;
+	  border-right: 2px solid #ddd;
+	}
+	.col_left {
+	  padding-left: 300px;
+	  padding-right: 20px;
+	}
+  }
+}
+
+article h4 {
+  color: #1e2933;
+  font-weight: 500;
+}
+
+.lineblock{
+  display: block;
+}
