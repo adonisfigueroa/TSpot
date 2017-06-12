@@ -110,25 +110,28 @@ body.interior {
 		}
 
 		.download-index {
-			@if $isAMP != 'true' {
-				h1 {
-					color: #1e2833;
-					font-weight: 500;
-					font-size: 2em;
-					line-height: 1.4;
-					margin-top: 15px;
-					letter-spacing: -0.333px;
+			h1 {
+				color: #1e2833;
+				font-weight: 500;
+				line-height: 1.4;
+				margin-top: 15px;
+				letter-spacing: -0.333px;
 
+				@if $isAMP == 'true' {
+					font-size: 1.5em;
+				
+				} @else {
+					font-size: 2em;
 					@include break(mobile) {
 						font-size: 1.5em;
 					}
 				}
+			}
 
-				.page-intro {
-					font-size: 0.8em;
-					//font-weight: 300;
-					margin: 10px 0;
-				}
+			.page-intro {
+				font-size: 0.8em;
+				//font-weight: 300;
+				margin: 10px 0;
 			}
 
 			.downloads-table {
@@ -494,6 +497,81 @@ body.interior {
 				}
 			}
 			*/
+		}
+
+		//For drivers
+		.shortcuts {
+			a {
+				li {
+					display: inline-block;
+					margin-right: 25px;
+					font-weight: 500;
+					border: 1px solid $blue;
+					padding: 0px 16px 2px 14px;
+					font-size: 1.25em;
+					color: #444;
+					text-align: center;
+					border-radius: 5px;
+					min-width: 100px;
+
+					@if $isAMP == 'true' {
+						line-height: 31px;
+					
+					} @else {
+						line-height: 31px !important;
+
+						&:hover {
+							color: #fff;
+							background-color: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//For drivers
+	&.driver {
+		&.category {
+			@if $isAMP != 'true' {
+				.search-box {
+					border: 0;
+					background-color: transparent;
+					font-size: 0.85em;
+					margin: 15px 0 30px;
+					padding: 0;
+				}
+				.search-box input[type=text] {
+					margin-top: 8px;
+				}
+			}
+
+			.downloads-list, .downloads-list {
+				padding: 0;
+			}
+			#content {
+				h4 {
+					color: #4484D0;
+					font-size: 1.2em;
+					margin: 25px 0 25px;
+				}
+			}
+		}
+
+		@if $isAMP == 'true' {
+			#content {
+				background-color: white;
+
+				amp-accordion {
+					margin-bottom: 20px;
+					
+					h4 {
+						font-size: 1.2em;
+						margin: 25px 0 0 0;
+						padding: 5px;
+					}
+				}
+			}
 		}
 	}
 }

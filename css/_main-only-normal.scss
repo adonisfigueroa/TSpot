@@ -628,60 +628,7 @@ img.responsive {
 
 }
 
-h3.section-header {
-	font-family: $f-condensed;
-	background: white;
-	border-bottom: 5px solid $red;
-	font-weight: 600 !important;
-	text-transform: uppercase;
-	white-space: nowrap;
-	line-height: 42px;
-	text-align: center;
-	padding-left: 20px;
-	text-indent: -25px;
-	font-size: 1.55em;
 
-	@include break(tablet) {
-		font-size: 1.5em;
-	}
-
-	a {
-		color: #333;
-	}
-	
-	span {
-		font-weight: 100;
-	}
-	
-	&.green {
-		border-bottom: 5px solid $green;
-	}
-	
-	&.red {
-		border-bottom: 5px solid $red;
-	}
-	
-	&.orange {
-		border-bottom: 5px solid $orange;
-	}
-	
-	&.purple {
-		border-bottom: 5px solid #5A00B5;
-	}
-	
-	&.blue {
-		border-bottom: 5px solid #0250C5;
-	}
-
-	&.top {
-		border-bottom: none;
-
-		&.red {
-			border-top: 5px solid $red;
-		}
-	}
-	
-}
 h3.longtype {
 	font-size: 1.3em;
 	@include break (v-tablet){
@@ -1409,26 +1356,6 @@ span._bar {
 	@include col-last(1,3,2);
 }
 
-.col-1-2 {
-	@include col(1,2,2);
-	&.wide-gut {
-	@include col(1,2,5);
-	@include break(v-mobile){
-		width: 100%;
-	}
-	}
-}
-
-.col-1-2-last {
-	@include col-last(1,2,2);
-	&.wide-gut {
-	@include col-last(1,2,5);
-	@include break(v-mobile){
-		width: 100%;
-	}
-	}
-}
-
 //Article Mobile
 .article #content {
 	@include break(mobile){
@@ -1558,84 +1485,6 @@ table {
 				}
 			}
 		}
-	}
-}
-
-/* PF widgets para noticias y reviews */
-.pf_score {
-	color: #fff;
-	font-weight: 500;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-	background: #075BC0;
-	text-align: center;
-	float: left;
-}
-
-.pf_award {
-	background-color: #ff7f00;
-}
-
-.pf_excellent {
-	background-color: #00be15;
-}
-
-.pf_good {
-	background-color: #075bc0;
-}
-
-.pf_average {
-	background-color: #6f22a0;
-}
-
-.pf_bad {
-	background-color: #cc0000;
-}
-
-.pf_none {
-	background-color: #999999;
-}
-
-.pf_widget_small a, .pf_widget_normal a {
-	text-decoration: none !important;
-}
-
-.pf_widget_small {
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-	.pf_score {
-		-moz-box-shadow: 0 -1px 0 white;
-		-webkit-box-shadow: 0 -1px 0 white;
-		box-shadow: 0 -1px 0 white;
-		float: none;
-		padding: 0 5px;
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
-		font-size: 13px;
-	}
-}
-
-.pf_widget_normal {
-	font-size: 26px;
-	display: block;
-	overflow: auto;
-	.pf_score {
-		height: 50px;
-		width: 65px;
-		line-height: 37px;
-		position: relative;
-		line-height: 37px;
-	}
-	.pf_reviews {
-		font-size: 9px;
-		position: absolute;
-		left: 0;
-		width: 65px;
-		bottom: 3px;
-		line-height: 15px;
-		display: block;
-		text-transform: lowercase;
 	}
 }
 
@@ -1903,12 +1752,6 @@ table {
 .no-js .owl-carousel { display: block; }
 
 // ! ads ===========================================
-
-.mobile-hide {
-	@include break(mobile) {
-		display: none;
-	}
-}
 
 .cta {
 	text-align: center;
