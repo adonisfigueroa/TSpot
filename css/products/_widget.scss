@@ -80,87 +80,81 @@
 	}
 }
 
+@if $isAMP == 'true' {
 
-.bestof_product {
-	h2 {
-		margin-top: -50px;
-		color: #105ab2;
-		font-size: 1.7em;
-	}
-	.description {
-		padding-left: 0;
-		min-height: 500px;
-		.key strong {
-			font-weight: 500;
+	.bestof_product {
+		h2 {
+			margin-top: -50px;
+			color: #105ab2;
+			font-size: 1.7em;
 		}
-	}
-	.image {
-		float: none;
-		width: 100%;
-		height: 300px;
-		margin-right: 0;
-		overflow: hidden;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-	}
-	.numbers {
-		float: none;
-		text-align: center;
-		width: 100%;
-		margin: 20px 0 30px;
-		font-size: .75em;
-		background-color: white;
-		font-family: Roboto Condensed;
-		border-bottom: none;
-		a.withTooltip {
-			color: #333;
-		}
-		.label {
-			text-transform: uppercase;
-			color: #666;
-			background: #ddd;
-			padding: 5px;
-			font-size: 90%;
-		}
-		.price .price_tag {
-			padding: 3px 0 3px;
-			margin-top: 2px;
-			font-size: 2.7em;
-			background-color: green;
-			cursor: pointer;
-			line-height: 1.6em;
-			a {
-				color: white;
-			}
-		}
-		.meta .score {
-			text-align: center;
-			margin: 2px auto 0;
-			background-color: #105ab2;
-			.number {
-				color: white;
-				line-height: 1.8em;
-				font-size: 2.6em;
+		.description {
+			padding-left: 0;
+			min-height: 500px;
+			.key strong {
 				font-weight: 500;
 			}
 		}
-		.user_score .score {
-			text-align: center;
-			margin: 2px auto 5px;
-			background-color: #f08804;
-			.number {
-				color: white;
-				line-height: 1.8em;
-				font-size: 2.6em;
-				font-weight: 500;
-			}
+		.image {
+			display: none !important;
 		}
-		.price, .meta, .user_score {
-			width: 28%;
-			padding: 5px 5px 0;
-			display: inline-block;
+		.numbers {
+			float: none;
+			text-align: center;
+			width: 100%;
+			margin: 20px 0 30px;
+			font-size: .75em;
+			background-color: white;
+			font-family: Roboto Condensed;
+			border-bottom: none;
+			a.withTooltip {
+				color: #333;
+			}
+			.label {
+				text-transform: uppercase;
+				color: #666;
+				background: #ddd;
+				padding: 5px;
+				font-size: 90%;
+			}
+			.price .price_tag {
+				padding: 3px 0 3px;
+				margin-top: 2px;
+				font-size: 2.7em;
+				background-color: green;
+				cursor: pointer;
+				line-height: 1.6em;
+				a {
+					color: white;
+				}
+			}
+			.meta .score {
+				text-align: center;
+				margin: 2px auto 0;
+				background-color: #105ab2;
+				.number {
+					color: white;
+					line-height: 1.8em;
+					font-size: 2.6em;
+					font-weight: 500;
+				}
+			}
+			.user_score .score {
+				text-align: center;
+				margin: 2px auto 5px;
+				background-color: #f08804;
+				.number {
+					color: white;
+					line-height: 1.8em;
+					font-size: 2.6em;
+					font-weight: 500;
+				}
+			}
+			.price, .meta, .user_score {
+				width: 28%;
+				padding: 5px 5px 0;
+				display: inline-block;
+			}
 		}
 	}
 }
