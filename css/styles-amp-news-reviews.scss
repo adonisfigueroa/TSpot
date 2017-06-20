@@ -35,6 +35,8 @@ $isAMP: 'true';
 "components/_page-nav.scss",
 "reviews/_review_box.scss",
 
+"components/_slide-sort-selector.scss",
+
 "products/_widget.scss";
 
 
@@ -47,5 +49,12 @@ body.interior {
 				padding: 20px 0 50px;
 			}
 		}
+	}
+
+	.nodraft-story{
+	  color: #c00;
+	  text-decoration: none;
+	  font-weight: 600;
+	  padding: 0 8px 0 0;
 	}
 }
