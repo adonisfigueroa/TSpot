@@ -139,6 +139,7 @@
 			.article-category {
 				font-size: .7em;
 				letter-spacing: -.333px;
+				margin-top: 10px;
 
 				a {
 					&.cat2 {
@@ -226,7 +227,7 @@
 				@if $isAMP == 'true' {
 					font-size: .6em;
 				} @else {
-					font-size: .65em;
+					font-size: .7em;
 					@include break(v-mobile){
 						font-size: .6em;
 					}

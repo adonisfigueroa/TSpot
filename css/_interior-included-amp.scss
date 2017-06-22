@@ -16,7 +16,7 @@ body.interior {
 			font-size: 0.95em;
 
 		} @else {
-			font-size: .9em;
+			font-size: 0.95em;
 
 			@include break(mobile) {
 				font-size: 0.95em;
