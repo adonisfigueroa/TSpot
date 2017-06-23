@@ -27,14 +27,14 @@
 	}
 
 	article {
-		padding-bottom: 26px;
-		margin-bottom: 23px;
+		padding-bottom: 20px;
+		margin-bottom: 17px;
 		border-bottom: 2px solid #e7e9ee;
 		z-index: 1;
 		
 		.article-img {
 			@include col(2,5,0);
-			width: 30%;
+			width: 27%;
 			margin-top: 3px;
 
 			/*			
@@ -73,7 +73,7 @@
 		
 		.article-content {
 			@include col-last(3,5,2);
-			width: 68.2%;
+			width: 69.2%;
 
 			@if $isAMP == 'true' {
 				padding-left: 5px;
@@ -218,7 +218,6 @@
 			}
 
 			.byline {
-				float: left;
 				color: #666666;
 				font-weight: 400;
 				letter-spacing: -0.333px;
