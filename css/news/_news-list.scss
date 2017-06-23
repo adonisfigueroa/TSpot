@@ -141,6 +141,14 @@
 				letter-spacing: -.333px;
 				margin-top: 10px;
 
+				@if $isAMP == 'true' {
+					margin-top: 2px;
+				} @else {
+					@include break(mobile){
+						margin-top: 2px;
+					}
+				}
+
 				a {
 					&.cat2 {
 						padding-left: 10px;
@@ -267,14 +275,6 @@
 			.post-meta {
 				line-height: 25px;
 				float: right;
-
-				@if $isAMP == 'true' {
-					margin-right: -5px;
-				} @else {
-					@include break(mobile){
-						margin-right: -5px;
-					}
-				}
 
 				a {
 					display: inline-block;

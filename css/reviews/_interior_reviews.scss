@@ -44,22 +44,36 @@ body.interior {
 							}
 						}
 
-						@if $isAMP != 'true' {
+						@if $isAMP == 'true' {
+							font-size: 0.8em;
+							padding-top: 5px;
+						} @else {
 							@include break(v-mobile){
-								font-size: 0.9em;
+								font-size: 0.8em;
+								padding-top: 5px;
 							}
 						}
 					}
 					p {
 						font-weight: 400;
 						font-size: .6em;
-						color: #666;
 
 						@if $isAMP == 'true' {
-							padding: 2px 0;
+							padding: 5px 0;
+
+							time {
+								display: block;
+							}
 
 						} @else {
-							padding: 2px 0 !important;
+							padding: 5px 0 !important;
+							color: #666 !important;
+
+							@include break(v-mobile){
+								time {
+									display: block;
+								}
+							}
 						}
 					}
 					@if $isAMP != 'true' {
@@ -181,7 +195,7 @@ body.interior {
 				li {
 					@if $isAMP == 'true' {
 						//Default for AMP
-						padding: 12px 15px 12px 215px;
+						padding: 12px 15px 12px 210px;
 					
 					} @else {
 						padding: 20px 30px 20px 230px; 
