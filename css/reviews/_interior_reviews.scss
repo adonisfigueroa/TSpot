@@ -226,10 +226,8 @@ body.interior {
 						}
 					}
 
-						&:nth-child(even) {
-							background: white;
-						}
-
+					&:nth-child(even) {
+						background: white;
 					}
 				}
 			}
