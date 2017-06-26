@@ -10,21 +10,26 @@
 		display: inline-block;
 		line-height: 45px;
 		
-		@if $isAMP != 'true' {
+		//@if $isAMP != 'true' {
 			&.indicator {
-				margin: 0 !important;
+				@if $isAMP == 'true' {
+				  margin: 0;
+				}@else{
+				  margin: 0 !important;
+				}
 				display: block;
 				position: absolute;
-				left: 0; bottom: 0;
+				left: 0;
+			  	bottom: 0;
 				width: 5px; height: 7px;
 				@include triangle(up,$blue,5,7);
 			}
-		}
+		//}
 	}
 	
 	.post-type-selector {
 		float: left;
-		@if $isAMP != 'true' {
+		//@if $isAMP != 'true' {
 			ul {
 				li {
 					font-family: $f-condensed;
@@ -35,19 +40,24 @@
 					text-shadow: 0 1px 0 #fff;
 					
 					a {
-						color: #999;
+						color: $light-grey2;
 						
 					}
 					
 					&.active {
 						a {
-							color: #4b4b4b !important;
-							text-shadow: none !important;
+						  	@if $isAMP == 'true' {
+							  color: $dark-grey2;
+							  text-shadow: none;
+							}@else{
+							  color: $dark-grey2 !important;
+							  text-shadow: none !important;
+							}
 						}
 					}
 				}
 			}
-		}
+		//}
 	}
 	
 	@if $isAMP != 'true' {
