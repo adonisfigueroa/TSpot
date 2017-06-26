@@ -17,7 +17,7 @@ body.interior {
 			font-size: 0.95em;
 
 		} @else {
-			font-size: .9em;
+			font-size: 0.95em;
 
 			@include break(mobile) {
 				font-size: 0.95em;
@@ -170,9 +170,11 @@ body.interior {
 
 					@if $isAMP == 'true' {
 						margin: 0;
-						font-size: 1.75em;
+						font-size: 1.4em;
+						line-height: 1.3;
 					
-					} @else {
+					}
+					@else {
 						margin: 15px 0 5px;
 						font-size: 2.2em;
 
@@ -180,11 +182,11 @@ body.interior {
 							margin: 0;
 							font-size: 1.75em;
 						}
-					}
 
-					@include break(v-mobile) {
-						font-size: 1.5em;
-						line-height: 1.3;
+						@include break(v-mobile) {
+							font-size: 1.4em;
+							line-height: 1.3;
+						}
 					}
 
 					&.upper {
