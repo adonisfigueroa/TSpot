@@ -8,7 +8,8 @@ body.interior {
 		}
 	}
 
-	.articleBody {
+
+  	.articleBody {
 		font-weight: 400;
 		font-family: $f-paragraph;
 
@@ -149,6 +150,7 @@ body.interior {
 			background-color: white;
 			
 			.wrapper {
+			  	padding: 25px 0;
 				@if $isAMP == 'true' {
 					width: 96%;
 				} @else {
@@ -159,6 +161,8 @@ body.interior {
 			}
 			
 			.title-group {
+			  	margin-top: 25px;
+
 				h1.large {
 					font-weight: 500;
 					line-height: 1.35;
@@ -276,6 +280,34 @@ body.interior {
 						}
 					}
 				}
+
+				h2 {
+				  font-size: 0.85em;
+				  font-weight: 400;
+				  color: #222;
+				  font-family: Arimo, Helvetica, Arial, sans-serif;
+
+				  @include break(mobile) {
+					margin-top: 0;
+					font-size: 0.75em;
+				  }
+
+				}
+
+			  	figure {
+					float: left;
+					padding-right: 10px;
+
+					amp-img {
+					  width: 50px;
+					  height: 39px;
+					  margin-top: -2px;
+					}
+				}
+
+
+
+
 			}
 		}
 
@@ -307,6 +339,17 @@ body.interior {
 					}
 				}
 			}
+		}
+
+	  	article {
+		  h2 {
+			font-size: 20px;
+			font-weight: bold;
+		  }
+
+		  .byline {
+			font-size: 12px;
+		  }
 		}
 	}
 
