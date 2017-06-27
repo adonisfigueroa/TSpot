@@ -15,7 +15,6 @@ body.interior {
 
 		#content-header {
 			.wrapper {
-				padding: 45px 0;
 
 				@include break(mobile) {
 					padding: 25px 0;
@@ -23,7 +22,7 @@ body.interior {
 			}
 			
 			.title-group {
-				margin-top: 25px !important;
+				margin-top: 20px;
 
 				figure {
 					float: left !important;
@@ -48,8 +47,7 @@ body.interior {
 
 				h2 {
 					font-size: 0.85em;
-					color: #222;
-					font-family: $f-paragraph;
+					color: #555;
 
 					@include break(mobile) {
 						font-size: 0.75em;
