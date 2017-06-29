@@ -1,12 +1,11 @@
 $f-primary: 'Roboto', sans-serif;
 $f-condensed: 'Roboto Condensed', sans-serif;
-$f-secondary: 'Myriad Pro', Verdana, sans-serif;
-$f-paragraph: Arimo, Helvetica, Arial, sans-serif;
-$f-arial: Arial, Verdana, sans-serif;
+$f-paragraph: Arial, Helvetica, sans-serif;
+$f-arial: Arial, Helvetica, sans-serif;
 $f-helvetica: 'Helvetica Neue', Arial, Helvetica;
 $f-helvetica-roboto: 'Helvetica Neue', 'Roboto', sans-serif;
-// !GLOBAL RESPONSIVE VARIABLES
 
+// !GLOBAL RESPONSIVE VARIABLES
 $big-desk: 1250px;
 $desk: 1150px;
 $tablet: 1150px; // This number needs to be the same as $desk to prevent a "no-mans-land" in breakpoints
