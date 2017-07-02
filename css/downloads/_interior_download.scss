@@ -50,7 +50,9 @@ body.interior {
 					}
 
 					@include break(mobile){
+					  @if $isAMP != 'true' {
 						margin: 0 15px 0 -10px;
+					  }
 					}
 
 					@include break(v-mobile){

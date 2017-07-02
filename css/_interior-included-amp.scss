@@ -154,6 +154,7 @@ body.interior {
 
 				@if $isAMP == 'true' {
 					width: 96%;
+				  	padding: 25px 0;
 				} @else {
 					@include break(mobile) {
 						width: 96%;
@@ -162,6 +163,10 @@ body.interior {
 			}
 			
 			.title-group {
+
+			  	@if $isAMP == 'true'{
+					margin-top: 25px;
+				}
 
 				h1.large {
 					font-weight: 500;
@@ -234,6 +239,18 @@ body.interior {
 					.subver {
 						font-size: 0.75em;
 						color: #777;
+					}
+				}@else {
+					h2 {
+						font-size: 0.85em;
+						font-weight: 400;
+						color: #222;
+						font-family: Arimo, Helvetica, Arial, sans-serif;
+
+						@include break(mobile) {
+						  margin-top: 0;
+						  font-size: 0.75em;
+						}
 					}
 				}
 

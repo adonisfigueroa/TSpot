@@ -198,12 +198,13 @@ h3.section-header {
 	}
 }
 
-.col-2-3 {
-
-}
 
 
 @if $isAMP == 'true' {
+	.col-2-3 {
+	  padding: 0px 10px 0px 10px;
+	}
+
 	.hidden {
 		display: none;
 		visibility: hidden;

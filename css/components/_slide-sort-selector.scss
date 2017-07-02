@@ -3,6 +3,10 @@
 	margin-bottom: 25px;
 	
 	ul {
+	  	@if $isAMP == 'true'{
+		  font-size: 0.75em;
+		}
+
 		position: relative;
 	}
 	
