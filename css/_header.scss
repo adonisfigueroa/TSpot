@@ -1202,14 +1202,14 @@
 		
 		} @else {
 			width: 198px;
-			height: 48px;
+			height: $header-top-line-height;
 			margin-left: 5px;
 			background-size: 215px;
 
 			&:hover{
 				background-color: #0c468d;
 				padding: 0 14px 0px 0px;
-				border-left: 14px solid #0c468d;
+				border-left: 13.5px solid #0c468d;
 				margin-left: -9px;
 			}
 
@@ -1234,7 +1234,7 @@
 
 		a {
 			display: block;
-			width: 189px; height: $header-top-line-height;
+			width: 202px; height: $header-top-line-height;
 			line-height: $header-top-line-height;
 		}
 	}
@@ -1277,6 +1277,7 @@
 			width: 160px;
 			margin-left: 10px;
 			margin-bottom: 0px;
+			
 			a {
 				display: block;
 				width: 189px; height: 40px;
