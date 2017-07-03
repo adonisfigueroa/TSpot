@@ -1194,8 +1194,6 @@
 		background-repeat: no-repeat;
 		background-position: -8px center;
 		line-height: $header-top-line-height;
-		line-height: 45px;
-		
 
 		@if $isAMP == 'true' { //Only Amp
 			margin-left: 32px;
@@ -1204,16 +1202,15 @@
 			background-size: 170px;
 		
 		} @else {
-			width: 185px;
-			height: 45px;
+			width: 198px;
+			height: 48px;
 			margin-left: 5px;
-			background-size: 200px;
+			background-size: 215px;
 
 			&:hover{
 				background-color: #0c468d;
 				padding: 0 14px 0px 0px;
 				border-left: 14px solid #0c468d;
-				//margin-left: 16px;
 				margin-left: -9px;
 			}
 
