@@ -919,9 +919,8 @@
 						}
 						
 						&:hover {
-							/* background-color: #136BD7; */
 							background-color: #777D82;
-							transition: 0.1s linear;
+							transition: 0.1s ease-in-out;
 						}
 
 						&.NoArrow {
