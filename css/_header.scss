@@ -25,17 +25,17 @@
 		#main-menu #dk_menu{
 			.withSubmenu {
 				.nav-submenu {
-					height: 315px
+					height: 270px
 				}
 			}
 			.withSubmenuT {
 				.nav-submenu {
-					height: 335px
+					height: 270px
 				}
 			}
 			#SpecialHeightF {
 				.nav-submenu {
-					height: 315px;
+					height: 290px;
 					@include break(tablet) {
 						height: 435px;
 					}
@@ -768,6 +768,8 @@
 					}
 					a {
 						padding: 0 0 0 15px !important;
+						font-weight: 400 !important;
+    					font-size: .95em;
 					}
 				}
 				li:hover {
@@ -940,11 +942,11 @@
 							margin-left: -5%;
 							
 							background: #777D82;
-							height: 285px;
+							height: 235px;
 							box-shadow: 0 3px 0px rgba(34,25,25,0.10),inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 							
 							.wrapper {
-								padding: 20px 0;
+								padding: 17px 0;
 
 								@include break(tablet){
 									width: 85%;
@@ -961,12 +963,13 @@
 								line-height: 240%;
 								font-weight: 500;	
 								width: 90px;
-								height: 115px;
+								height: 110px;
 								float: left;
 								text-align: center;
 								display: inline-block;	
 								padding: 5px 10px 0px 5px;
 								margin-left: 10px;
+
 								&:hover {
 									background-color: rgba(0, 0, 0, 0);
 									img {
@@ -977,14 +980,15 @@
 									}
 								}
 								img {
-									@include border-radius(5px);
+									@include border-radius(4px);
 								}
 								h3 {
 									display: block;
 									font-family: $f-condensed;
-									line-height: 16px;
-									margin-top: 8px;
+									line-height: 15px;
+									margin-top: 6px;
 									font-weight: 500;
+									font-size: .95em;
 								}
 							}
 							
@@ -1076,13 +1080,21 @@
 											padding-bottom: 10px;
 											
 											h3 {
-												font-weight: 400;
-												padding: 0 5px;
-												line-height: 1.25;
 												text-align: center;
 												max-height: 54px;
 												overflow: hidden;
-												letter-spacing: -0.2px;
+												margin-top: -55px;
+												position: absolute;
+												font-weight: 400;
+												text-shadow: 1px 1px 3px #444;
+												letter-spacing: -0.25px;
+												font-size: .95em;
+												line-height: 1.4;
+												display: inline;
+												padding: 4px 10px 6px 8px;
+												background: rgba(51, 70, 95, 0.84);
+												bottom: 20px;
+												width: 189px;
 											}
 											
 										}
