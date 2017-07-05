@@ -464,7 +464,7 @@ img.responsive {
 
 					&:hover { 
 						text-decoration: none;
-						padding-bottom: 1px;
+						padding-bottom: 2px;
 						border-bottom: 1px solid #7393C8;
 					}
 				}
@@ -511,7 +511,7 @@ img.responsive {
 
 		span {
 			a {
-				font-size: 1.1em;
+				font-size: 1.05em;
 			}
 		}
 	}
@@ -539,6 +539,7 @@ img.responsive {
 	}
 }
 
+/*
 .special_message {
 	background: #888;
 	text-align: center;
@@ -627,7 +628,7 @@ img.responsive {
 	}
 
 }
-
+*/
 
 h3.longtype {
 	font-size: 1.3em;
@@ -1406,7 +1407,6 @@ ul.pills {
 
 table {
 	&.big {
-		/* margin-left: -350px; */
 		max-width: none;
 		width: 1020px;
 
@@ -1426,10 +1426,18 @@ table {
 		font-size: 0.9em;
 		font-family: $f-primary;
 
+		/*
 		a {
-			color: #105ab2;
-			box-shadow: none !important;
+			color: #075bc0;
+			box-shadow: none;
+
+			&:hover {
+				color: #105ab2;
+				box-shadow: none;
+			}
 		}
+		*/
+		
 		td, th {
 			padding: inherit;
 			text-align: center;
