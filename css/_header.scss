@@ -1,5 +1,5 @@
 #header-ts {
-	//Amp and Normal
+	// AMP and Normal
 	position: fixed;
 	width: 100%;
 	z-index: 1100001;
@@ -8,7 +8,7 @@
 	top: 0;
 	left: 0;
 
-	//Only Normal (Not Amp)
+	//Only Normal (Not AMP)
 	@if $isAMP != 'true' {
 		@include break(mobile) {
 			height: 58px;
@@ -23,16 +23,6 @@
 		}
 
 		#main-menu #dk_menu{
-			.withSubmenu {
-				.nav-submenu {
-					height: 270px
-				}
-			}
-			.withSubmenuT {
-				.nav-submenu {
-					height: 270px
-				}
-			}
 			#SpecialHeightF {
 				.nav-submenu {
 					height: 290px;
@@ -942,7 +932,7 @@
 							margin-left: -5%;
 							
 							background: #777D82;
-							height: 235px;
+							height: 270px;
 							box-shadow: 0 3px 0px rgba(34,25,25,0.10),inset 0px 3px 0px 0px rgba(0,0,0,0.15);
 							
 							.wrapper {
