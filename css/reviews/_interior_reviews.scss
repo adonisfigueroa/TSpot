@@ -799,8 +799,23 @@ body.interior {
 						h3 {
 							font-size: 0.9em;
 							font-weight: 400;
+							font-family: $f-paragraph;
+
+							span {
+								margin: 0px 12px 0px 0;
+								float: left;
+							}
 	
-							a { color: #333; }
+							a {
+								color: #333;
+
+								&:hover {
+								    color: #105ab2;
+								    padding-bottom: 2px;
+								    border-bottom: 1px dotted #105ab2;
+								    text-decoration: none;
+								}
+							}
 						}
 					}
 				}
@@ -1016,6 +1031,7 @@ body.interior {
 					#hard_question {
 						background-color: #777;
 						color: #fff;
+						margin-bottom: 15px;
 					}
 				}
 			}

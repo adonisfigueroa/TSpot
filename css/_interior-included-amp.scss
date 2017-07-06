@@ -4,7 +4,7 @@ body.interior {
 		padding: 0px 2%;
 		h3{
 			color: white;
-			line-height: 35px;		
+			line-height: 35px;
 		}
 	}
 
@@ -359,7 +359,7 @@ body.interior {
 					//background-color: rgba(16,90,178,0.45);
 					//border-bottom: 4px solid #175294;
 					padding: 12px 0 12px 10px;
-					margin: 15px 0 10px -10px;
+					margin: 15px 0 10px 0px;
 					color: white;
 					font-size: 1.5em;
 					font-weight: 500;
@@ -369,19 +369,16 @@ body.interior {
 
 					@if $isAMP == 'true' {
 						margin-top: 0;
-						font-size: 1.65em;
+						font-size: 1.4em;
 
 					} @else {
 
 						@include break(mobile) {
 							margin-top: 0;
-							font-size: 1.65em;
+							font-size: 1.4em;
 						}
 					}
 
-					@include break(v-mobile) {
-						font-size: 1.45em;
-					}
 				}
 			}
 		}

@@ -119,64 +119,6 @@ h1 {
 	}
 }
 
-h3.section-header {
-	font-family: $f-condensed;
-	background: white;
-	border-bottom: 5px solid $red;
-	text-transform: uppercase;
-	white-space: nowrap;
-	line-height: 42px;
-	text-align: center;
-	padding-left: 20px;
-	text-indent: -25px;
-	font-size: 1.55em;
-
-	@if $isAMP == 'true' {
-		font-weight: 600;
-	} @else {
-		font-weight: 600 !important;
-
-		@include break(tablet) {
-			font-size: 1.5em;
-		}
-	}
-
-	a {
-		color: #333;
-	}
-	
-	span {
-		font-weight: 100;
-	}
-	
-	&.green {
-		border-bottom: 5px solid $green;
-	}
-	
-	&.red {
-		border-bottom: 5px solid $red;
-	}
-	
-	&.orange {
-		border-bottom: 5px solid $orange;
-	}
-	
-	&.purple {
-		border-bottom: 5px solid #5A00B5;
-	}
-	
-	&.blue {
-		border-bottom: 5px solid #0250C5;
-	}
-
-	&.top {
-		border-bottom: none;
-
-		&.red {
-			border-top: 5px solid $red;
-		}
-	}
-}
 
 .col-1-2 {
 	@include col(1,2,2);

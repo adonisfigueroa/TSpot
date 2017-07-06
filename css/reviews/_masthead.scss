@@ -424,11 +424,15 @@
 
 	.trivias #masthead {
 		min-height: 465px;
+
+		@include break(mobile) {
+			min-height: 270px;
+		}
 	}	
 
 	ul.featured-trivias {
 		li {
-			margin: 0px 0px 10px -15px;
+			margin: 0px 0px 10px 0;
 
 			a {
 				color: white;
@@ -446,60 +450,59 @@
 				line-height: 1.5em;
 
 				a {
-					padding: 7px 5px 3px;
-					margin-bottom: 10px;
+					padding: 15px 15px 20px;
+					margin-bottom: -25px;
 					display: block;
+					line-height: 1.4;
 				}
 			}
 		}
 	}
 
 	.trivias, .trivia {
-		.title-group {
-			$opacity1: 0.45;
-			$opacity2: 0.78;
+		$opacity1: 0.45;
+		$opacity2: 0.78;
 
-			.blue {
-				background-color: rgba(16, 90, 178, $opacity1);
-				border-bottom: 4px solid rgb(23, 82, 148);
+		.blue {
+			background-color: rgba(16, 90, 178, $opacity1);
+			border-bottom: 4px solid rgb(23, 82, 148);
 
-				&:hover { background-color: rgba(16, 90, 178, $opacity2); }
-			}
+			&:hover { background-color: rgba(16, 90, 178, $opacity2); }
+		}
 
-			.red {
-				background-color: rgba(204, 0, 0, $opacity1);
-				border-bottom: 4px solid rgb(134, 29, 35);
+		.red {
+			background-color: rgba(204, 0, 0, $opacity1);
+			border-bottom: 4px solid rgb(134, 29, 35);
 
-				&:hover { background-color: rgba(204, 0, 0, $opacity2); }
-			}
+			&:hover { background-color: rgba(204, 0, 0, $opacity2); }
+		}
 
-			.yellow {
-				background-color: rgba(255, 193, 7, $opacity1);
-				border-bottom: 4px solid rgb(171, 144, 46);
+		.yellow {
+			background-color: rgba(255, 193, 7, $opacity1);
+			border-bottom: 4px solid rgb(171, 144, 46);
 
-				&:hover { background-color: rgba(255, 193, 7, $opacity2); }
-			}
+			&:hover { background-color: rgba(255, 193, 7, $opacity2); }
+		}
 
-			.purple {
-				background-color: rgba(103, 58, 183, $opacity1);
-				border-bottom: 4px solid rgb(84, 62, 158);
+		.purple {
+			background-color: rgba(103, 58, 183, $opacity1);
+			border-bottom: 4px solid rgb(84, 62, 158);
 
-				&:hover { background-color: rgba(103, 58, 183, $opacity2); }
-			}
+			&:hover { background-color: rgba(103, 58, 183, $opacity2); }
+		}
 
-			.green {
-				background-color: rgba(76, 175, 80, $opacity1);
-				border-bottom: 4px solid rgb(61, 128, 78);
+		.green {
+			background-color: rgba(76, 175, 80, $opacity1);
+			border-bottom: 4px solid rgb(61, 128, 78);
 
-				&:hover { background-color: rgba(76, 175, 80, $opacity2); }
-			}
+			&:hover { background-color: rgba(76, 175, 80, $opacity2); }
+		}
 
-			.orange {
-				background-color: rgba(255, 127, 0, $opacity1);
-				border-bottom: 4px solid rgb(167, 100, 33);
+		.orange {
+			background-color: rgba(255, 127, 0, $opacity1);
+			border-bottom: 4px solid rgb(167, 100, 33);
 
-				&:hover { background-color: rgba(255, 127, 0, $opacity2); }
-			}
+			&:hover { background-color: rgba(255, 127, 0, $opacity2); }
 		}
 	}
 }
