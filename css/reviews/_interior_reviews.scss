@@ -804,6 +804,16 @@ body.interior {
 							span {
 								margin: 0px 12px 0px 0;
 								float: left;
+								width: 25px;
+								height: 21px;
+								color: transparent;
+								text-align: center;
+
+								&:hover {
+									color: rgba(255, 255, 255, 0.8);
+									font-size: 0.85em;
+									line-height: 1.7;
+								}
 							}
 	
 							a {
@@ -835,6 +845,7 @@ body.interior {
 					font-size: 1.5em;
 					color: #555;
 					line-height: 2em;
+					padding-top: 10px;
 				}
 
 				#trivia-options {
@@ -901,16 +912,14 @@ body.interior {
 					.question > div {
 						width: 88%;
 						margin-left: -2%;
-						border: 1px solid #075bc0;
 						border-radius: 3px;
 						min-height: 30px;
 						padding: 12px;
-						background-color: #105ab2;
+						background: #154c8f;
 						cursor: pointer;
 						font-family: Roboto;
-						font-weight: 500;
 						letter-spacing: -.333px;
-						transition: linear 0.2s;
+						transition: linear 0.15s;
 
 						a {
 							color: white;
@@ -919,8 +928,8 @@ body.interior {
 						}
 
 						&:hover {
-							transition: linear 0.2s;
-							background-color: #1161bf;
+							transition: linear 0.15s;
+							background: #105ab2;
 						}
 					}
 
@@ -942,9 +951,16 @@ body.interior {
 						font-weight: 500;
 						font-family: Roboto;
 						margin-top: 10px;
+
+						span.label {
+							background: rgba(134, 206, 69, 0.5);
+							padding: 4px 5px;
+						}
 					}
 
 					.content {
+					    margin-bottom: -20px;
+
 						img {
 							float: right;
 							max-width: 400px;
