@@ -806,13 +806,13 @@ body.interior {
 								float: left;
 								width: 25px;
 								height: 21px;
-								color: transparent;
+								font-size: 0.75em;
+								line-height: 1.7;
+								color: rgba(255,255,255,0.9);
 								text-align: center;
-
+								
 								&:hover {
-									color: rgba(255, 255, 255, 0.8);
-									font-size: 0.85em;
-									line-height: 1.7;
+
 								}
 							}
 	
@@ -856,12 +856,12 @@ body.interior {
 
 						@include break(mobile){
 							width: 42%;
-							margin: 3%;
+							margin: 2% 3%;
 						}
 
 						.option {
 							width: 88%;
-							border: 1px solid #aaa;
+							border: 2px solid #dedede;
 							border-radius: 2px;
 							min-height: 40px;
 							padding: 16px 15px 15px 15px;
@@ -870,28 +870,36 @@ body.interior {
 							cursor: pointer;
 
 							&:hover {
-								background-color: #ddd;
-								border: 1px solid #000;
+								background-color: #dadada;
+								border: 2px solid #ccc;
+							}
+
+							&:active {
+								box-shadow: inset 0px 0px 15px #aaa;
 							}
 
 							&.incorrect {
-								//background-color: #c35151;
-								//color: rgba(255, 255, 255, 0.9);
-								background-color: #ce7070;
+								background-color: #bb4040;
+								color: white;
 							}
 
 							&.correct {
-								background-color: #86ce45;
+								background-color: #21A240;
+								color: white;
 							}
 
 							&.user-answer {
-								box-shadow: 4px 4px rgba(106, 125, 179, 0.39)
+								box-shadow: 4px 4px rgba(58, 76, 130, 0.39);
+								border: 2px solid rgba(76, 88, 125, 0.39);
 							}
 						}
 					}
 				}
 
 				#next_question {
+
+					margin: 10px 0;
+
 					> div {
 						width: 50%;
 						float: right;
@@ -899,6 +907,9 @@ body.interior {
 					}
 
 					@include break(mobile){
+
+					    margin: 20px 0;
+
 						> div.question {
 							width: 60%;
 						}
@@ -953,8 +964,16 @@ body.interior {
 						margin-top: 10px;
 
 						span.label {
-							background: rgba(134, 206, 69, 0.5);
-							padding: 4px 5px;
+							background: rgba(33, 162, 64, 0.8);
+							padding: 5px 9px;
+							color: white;
+						}
+
+						span.ans {
+							@include break(v-mobile){
+								display: block;
+								margin-top: 10px;
+							}
 						}
 					}
 
