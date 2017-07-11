@@ -379,6 +379,23 @@ body.interior {
 			color: #444;
 		}
 
+		.social-share-buttons {
+			display: inline-block;
+		}
+
+		@include break(v-mobile) {
+			margin-left: 0;
+			float: none;
+
+			.social-share-text {
+				float: none;
+			}
+
+			.social-share-buttons {
+				margin: 5px 0 0px -8px;
+			}
+		}
+
 		.resp-sharing-button__link {
 			display: inline-block;
 			text-decoration: none;
