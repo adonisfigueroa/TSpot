@@ -983,6 +983,11 @@ span.number {
 				}
 			}
 		}
+
+		//Extra for bio padding (interior doesn't work)
+		#content .bio p {
+			padding: 0;
+		}
 	}
 }
 
