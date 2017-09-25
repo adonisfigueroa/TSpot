@@ -39,7 +39,7 @@ ul.category-chicklets {
 		&.green3, &.features, &.google																						{ background-color: #237A3C;	@if $isAMP != 'true' { &:hover { background-color: lighten(#237A3C,6%); } } }
 		&.green4, &.mobile, &.smartphones																					{ background-color: #24a887;	@if $isAMP != 'true' { &:hover { background-color: lighten(#24a887,6%); } } }
 
-		&.purple, &.software, &.culture																						{ background-color: $purple;	@if $isAMP != 'true' { &:hover { background-color: lighten($purple,6%); } } }
+		&.purple, &.software, &.culture, &.tech-culture																		{ background-color: $purple;	@if $isAMP != 'true' { &:hover { background-color: lighten($purple,6%); } } }
 		&.purple2, &.electronics, &.audio, &.tablets																		{ background-color: #5353ac;	@if $isAMP != 'true' { &:hover { background-color: lighten(#5353ac,5%); } } }
 
 		&.orange, &.guides, &.web, &.home, &.blog, &.desktop-pcs															{ background-color: #e67200;	@if $isAMP != 'true' { &:hover { background-color: $orange; } } }

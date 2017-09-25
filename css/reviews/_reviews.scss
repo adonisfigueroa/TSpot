@@ -135,7 +135,6 @@
 body.reviews {
 	#masthead{
 		background-color: #1E2933;
-		background-image: url(/images/reviewmasthead.png);
 		background-position: center 28px;
 		background-repeat: no-repeat;
 
@@ -166,7 +165,6 @@ body.reviews {
 body.features {
 	#masthead {
 		background-color: #237A3C;
-		background-image: url(/images/featuremasthead.png);
 		background-position: center 28px;
 		background-repeat: no-repeat;
 
@@ -189,7 +187,6 @@ body.features {
 body.trivias {
 	#masthead {
 		background-color: rgba(30, 41, 51, 0.95);
-		// background-image: url(/images/trivia-back.png);
 
 		.wrapper {
 			@if $isAMP == 'true' {

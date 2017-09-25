@@ -164,9 +164,10 @@ body.interior {
 				}
 
 				blockquote {
-					background: white;
+					background: #f9f9f9;
 					margin: 5px 20px 25px 0px;
-					padding: 15px 10px 0px 15px;
+					padding: 20px 10px 0px 20px;
+					font-size: 0.96em;
 					border-left: 3px solid #ccc;
 				}
 
@@ -377,6 +378,23 @@ body.interior {
 			font-size: .8em;
 			margin: 15px 10px 0 0;
 			color: #444;
+		}
+
+		.social-share-buttons {
+			display: inline-block;
+		}
+
+		@include break(v-mobile) {
+			margin-left: 0;
+			float: none;
+
+			.social-share-text {
+				float: none;
+			}
+
+			.social-share-buttons {
+				margin: 5px 0 0px -8px;
+			}
 		}
 
 		.resp-sharing-button__link {

@@ -4,7 +4,7 @@ body.interior {
 		padding: 0px 2%;
 		h3{
 			color: white;
-			line-height: 35px;		
+			line-height: 35px;
 		}
 	}
 
@@ -66,6 +66,7 @@ body.interior {
 			li {
 				list-style-type: square;
 				margin-bottom: 10px;
+				font-size: 0.95em;
 			}
 		}
 		
@@ -76,7 +77,6 @@ body.interior {
 
 		@if $isAMP != 'true' {
 			img.big {
-				/* margin-left: -350px; */
 				max-width: none;
 				width: 1020px;
 
@@ -345,12 +345,7 @@ body.interior {
 
 	  	article {
 		  h2 {
-			font-size: 20px;
-			font-weight: bold;
-		  }
-
-		  .byline {
-			font-size: 12px;
+			font-size: 1.3em;
 		  }
 		}
 	}
@@ -360,11 +355,13 @@ body.interior {
 			background-color: rgba(30,41,51,0.95);
 			
 			.wrapper {
-				padding: 25px 0 10px;
 
 				@if $isAMP == 'true' {
 					width: 96%;
-				} @else {
+				}
+				@else {
+					padding: 25px 0 10px !important;
+
 					@include break(mobile) {
 						width: 96%;
 					}
@@ -373,32 +370,42 @@ body.interior {
 			
 			.title-group {
 				h1 {
-					//background-color: rgba(16,90,178,0.45);
-					//border-bottom: 4px solid #175294;
-					padding: 12px 0 12px 10px;
-					margin: 15px 0 10px -10px;
-					color: white;
-					font-size: 1.5em;
-					font-weight: 500;
-					line-height: 1.4;
-					letter-spacing: -0.333px;
-					width: 90%;
+				    padding: 22px 10px 22px 21px;
+				    margin: 20px 300px 10px -5px;
+				    color: white;
+				    font-size: 1.5em;
+				    font-weight: 500;
+				    line-height: 1.5;
+				    letter-spacing: -0.333px;
+				    border-radius: 8px;
 
 					@if $isAMP == 'true' {
-						margin-top: 0;
-						font-size: 1.65em;
-
-					} @else {
-
+						margin: 0 0 5px 0;
+						font-size: 1.25em;
+						padding: 10px 10px 12px 12px;
+						width: 95%;
+						line-height: 1.4;
+					}
+					@else {
+						@include break(v-tablet) {
+							width: 95%;
+						}
 						@include break(mobile) {
-							margin-top: 0;
-							font-size: 1.65em;
+							margin: 0 0 5px 0;
+							font-size: 1.25em;
+							padding: 10px 10px 12px 12px;
+							width: 95%;
+							line-height: 1.4;
 						}
 					}
 
-					@include break(v-mobile) {
-						font-size: 1.45em;
-					}
+				}
+			}
+		}
+		#content {
+			.wrapper {
+				@include break(mobile) {
+					padding: 10px 0px 0px 0px;
 				}
 			}
 		}

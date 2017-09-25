@@ -1,12 +1,11 @@
 $f-primary: 'Roboto', sans-serif;
 $f-condensed: 'Roboto Condensed', sans-serif;
-$f-secondary: 'Myriad Pro', Verdana, sans-serif;
-$f-paragraph: Arimo, Helvetica, Arial, sans-serif;
-$f-arial: Arial, Verdana, sans-serif;
+$f-paragraph: Arial, Helvetica, sans-serif;
+$f-arial: Arial, Helvetica, sans-serif;
 $f-helvetica: 'Helvetica Neue', Arial, Helvetica;
 $f-helvetica-roboto: 'Helvetica Neue', 'Roboto', sans-serif;
-// !GLOBAL RESPONSIVE VARIABLES
 
+// !GLOBAL RESPONSIVE VARIABLES
 $big-desk: 1250px;
 $desk: 1150px;
 $tablet: 1150px; // This number needs to be the same as $desk to prevent a "no-mans-land" in breakpoints
@@ -65,8 +64,8 @@ $b-radius: 6px;
 $speed: 1500ms;
 
 
-$header-height: 84px;
-$header-top-line-height: 43px;
+$header-height: 88px;
+$header-top-line-height: 48px;
 $header-interior-height: 76px;
 $header-mobile-height: 57px;
 $header-interior-line-height: 32px;
@@ -85,6 +84,8 @@ $tile-width-sec: 380px;
 
 $tall-tile-font-size: 1.4em;
 $tile-font-size: 1.05em;
+
+$tile-padding: 5;
 
 $mast-border-width: 1px;
 $mast-border-col: #fff;
