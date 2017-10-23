@@ -379,7 +379,6 @@ h1 {
 	/**** SIDEBAR ****/
 	amp-sidebar {
 		width: 250px;
-		//padding-right: 10px;
 	}
 
 	.amp-ads {
@@ -393,17 +392,16 @@ h1 {
 		padding: 5px 0;
 	}
 
-	.amp-social-share {
+	.social-share .socialbut {
 		background-size: 50%;
 		border-radius: 4px;
-	}
-
-	amp-social-share[type=whatsapp] {
-		background-image: url(/images/social_share_ws.svg);
-		background-color: #25d366;
+	    width: 60px;
+	    height: 35px;
 	}
 
 	.related-stories {
+		margin: 0 0 35px 0;
+
 		h3 {
 			font-weight: 400;
 			font-family: $f-primary;
