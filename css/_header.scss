@@ -804,32 +804,36 @@
 					}
 				}	
 			}
-			#download {
+			#trending {
 				li:first-child {
-					margin-left: -200px;
-					@include break(tablet){
-						margin-left: 225px;
-					}
-					@include break(v-tablet){
-						margin-left: 0;
-					}
+					margin-left: -400px;
 				}
-				li:last-child {
-					@include break(v-tablet){
-						margin-right: 8%;
-					}
-						
+			}
+			#reviews {
+				li:first-child {
+					margin-left: -430px;
 				}
-				@include break (tablet){
-					text-align: left;
+			}
+			#bestof {
+				li:first-child {
+					margin-left: -150px;
 				}
-				@include break (v-tablet){
-					text-align: right;
+			}
+			/*
+			#pf {
+				li:first-child {
+					margin-left: -20px;
+				}
+			}
+			*/
+			#features, #downloads {
+				li:first-child {
+					margin-left: -205px;
 				}
 			}
 			#forums {
 				li:first-child {
-					margin-left: 350px;
+					margin-left: 380px;
 					@include break(tablet){
 						margin-left: 515px;
 					}
