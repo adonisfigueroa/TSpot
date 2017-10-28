@@ -1575,7 +1575,6 @@ table {
 	margin: 10px 5px 0 0;
 	display: block;
 	border: 1px solid #eee;
-	line-height: 27px;
 	text-align: center;
 	font-weight: 400;
 	color: #888;
@@ -1588,6 +1587,14 @@ table {
 	@include break(mobile){
 		margin: -25px 5px 45px 0;
 	}
+}
+.more_description_dw {
+	line-height: 27px;
+
+}
+.morecommentquotes {
+	line-height: 23px;
+	font-size: 0.85em
 }
 
 //Extras
