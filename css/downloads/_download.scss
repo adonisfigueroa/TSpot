@@ -685,25 +685,6 @@ body.interior.download {
 		padding: 45px 0 0;
 	}
 
-	.more_description_dw {
-		margin: 10px 5px 0 0;
-		display: block;
-		border: 1px solid #eee;
-		line-height: 27px;
-		text-align: center;
-		font-weight: 400;
-		color: #888;
-
-		&:hover{
-			color: #05408f;
-			background-color: #eee;
-		}
-
-		@include break(mobile){
-			margin: -25px 5px 45px 0;
-		}
-	}
-
 	body.interior.download #sidebar {
 		@include break(v-tablet){
 			display: none;
